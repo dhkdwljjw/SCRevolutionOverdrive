@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade default="1" id="TaldarimShields">
+        <Name value="Upgrade/Name/TaldarimShields"/>
+        <WebPriority value="0"/>
+        <Race value="Prot"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,ProbeTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ProbeTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Monitor,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Monitor,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,StalkerTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,StalkerTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ImmortalTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ImmortalTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,HighTemplarTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,HighTemplarTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,DarkTemplarTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DarkTemplarTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ObserverTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ObserverTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ObserverSiegeModeTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ObserverSiegeModeTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarpPrismTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,WarpPrismTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarpPrismPhasingTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,WarpPrismPhasingTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ColossusTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ColossusTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,PhoenixTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,PhoenixTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Harbinger,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Harbinger,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,HarbingerDisruptionTrap,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,HarbingerDisruptionTrap,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,VoidRayTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,VoidRayTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,TempestTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,TempestTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,CarrierTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,CarrierTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,InterceptorTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,InterceptorTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,SOAMothershipv4,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,SOAMothershipv4,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,NexusTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,NexusTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorTaldarimRich,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AssimilatorTaldarimRich,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,PylonTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,PylonTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,GatewayTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,GatewayTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarpGateTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,WarpGateTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ForgeTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ForgeTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,PhotonCannonTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,PhotonCannonTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,CyberneticsCoreTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,CyberneticsCoreTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ShieldBatteryTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ShieldBatteryTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,TwilightCouncilTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,TwilightCouncilTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,TemplarArchivesTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,TemplarArchivesTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,DarkShrineTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DarkShrineTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,RoboticsFacilityTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,RoboticsFacilityTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,RoboticsBayTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,RoboticsBayTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,StargateTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,StargateTaldarim,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,FleetBeaconTaldarim,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FleetBeaconTaldarim,ShieldArmor" Value="1"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:ArmorBonus"/>
+        <AffectedUnitArray value="ProbeTaldarim"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <AffectedUnitArray value="StalkerTaldarim"/>
+        <AffectedUnitArray value="Monitor"/>
+        <AffectedUnitArray value="HighTemplarTaldarim"/>
+        <AffectedUnitArray value="DarkTemplarTaldarim"/>
+        <AffectedUnitArray value="ImmortalTaldarim"/>
+        <AffectedUnitArray value="ColossusTaldarim"/>
+        <AffectedUnitArray value="InterceptorTaldarim"/>
+        <AffectedUnitArray value="SOAMothershipv4"/>
+        <AffectedUnitArray value="PhoenixTaldarim"/>
+        <AffectedUnitArray value="Harbinger"/>
+        <AffectedUnitArray value="HarbingerDisruptionTrap"/>
+        <AffectedUnitArray value="VoidRayTaldarim"/>
+        <AffectedUnitArray value="TempestTaldarim"/>
+        <AffectedUnitArray value="CarrierTaldarim"/>
+        <AffectedUnitArray value="WarpPrismTaldarim"/>
+        <AffectedUnitArray value="WarpPrismPhasingTaldarim"/>
+        <AffectedUnitArray value="ObserverTaldarim"/>
+        <AffectedUnitArray value="ObserverSiegeModeTaldarim"/>
+        <AffectedUnitArray value="NexusTaldarim"/>
+        <AffectedUnitArray value="PylonTaldarim"/>
+        <AffectedUnitArray value="AssimilatorTaldarim"/>
+        <AffectedUnitArray value="AssimilatorTaldarimRich"/>
+        <AffectedUnitArray value="GatewayTaldarim"/>
+        <AffectedUnitArray value="WarpGateTaldarim"/>
+        <AffectedUnitArray value="ForgeTaldarim"/>
+        <AffectedUnitArray value="PhotonCannonTaldarim"/>
+        <AffectedUnitArray value="CyberneticsCoreTaldarim"/>
+        <AffectedUnitArray value="ShieldBatteryTaldarim"/>
+        <AffectedUnitArray value="RoboticsFacilityTaldarim"/>
+        <AffectedUnitArray value="RoboticsBayTaldarim"/>
+        <AffectedUnitArray value="StargateTaldarim"/>
+        <AffectedUnitArray value="FleetBeaconTaldarim"/>
+        <AffectedUnitArray value="TwilightCouncilTaldarim"/>
+        <AffectedUnitArray value="TemplarArchivesTaldarim"/>
+        <AffectedUnitArray value="DarkShrineTaldarim"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TaldarimAirArmors">
+        <Name value="Upgrade/Name/TaldarimAirArmors"/>
+        <WebPriority value="0"/>
+        <Race value="Prot"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyCount"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,SOAMothershipv4,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,SOAMothershipv4,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,PhoenixTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,PhoenixTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Harbinger,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Harbinger,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,VoidRayTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,VoidRayTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,TempestTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,TempestTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,CarrierTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,CarrierTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,InterceptorTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,InterceptorTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,WarpPrismTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarpPrismTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,WarpPrismPhasingTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarpPrismPhasingTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ObserverTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ObserverTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ObserverSiegeModeTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ObserverSiegeModeTaldarim,LifeArmorLevel" Value="1"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:ArmorBonus"/>
+        <AffectedUnitArray value="InterceptorTaldarim"/>
+        <AffectedUnitArray value="SOAMothershipv4"/>
+        <AffectedUnitArray value="PhoenixTaldarim"/>
+        <AffectedUnitArray value="Harbinger"/>
+        <AffectedUnitArray value="VoidRayTaldarim"/>
+        <AffectedUnitArray value="TempestTaldarim"/>
+        <AffectedUnitArray value="CarrierTaldarim"/>
+        <AffectedUnitArray value="WarpPrismTaldarim"/>
+        <AffectedUnitArray value="WarpPrismPhasingTaldarim"/>
+        <AffectedUnitArray value="ObserverTaldarim"/>
+        <AffectedUnitArray value="ObserverSiegeModeTaldarim"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TaldarimAirWeapons">
+        <Name value="Upgrade/Name/TaldarimAirWeapons"/>
+        <WebPriority value="0"/>
+        <Race value="Prot"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,InterceptorsTaldarimDummy,Level" Value="1"/>
+        <EffectArray Reference="Weapon,InterceptorTaldarimBeam,Level" Value="1"/>
+        <EffectArray Reference="Weapon,InterceptorTaldarimLaunch,Level" Value="1"/>
+        <EffectArray Reference="Effect,InterceptorTaldarimBeamDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,VoidRayChargeBeamBounce,Level" Value="1"/>
+        <EffectArray Reference="Effect,VoidRayChargeBeamBounce1Damage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,VoidRayChargeBeamBounce2Damage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,VoidRayChargeBeamBounce3Damage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,VoidRayChargeBeamBounceDamageCharge1,Amount" Value="1"/>
+        <EffectArray Reference="Effect,VoidRayChargeBeamBounceDamageCharge2,Amount" Value="1"/>
+        <EffectArray Reference="Effect,VoidRayChargeBeamBounceDamageCharge3,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,IonCannonsTaldarim,Level" Value="1"/>
+        <EffectArray Reference="Weapon,IonCannonsGround,Level" Value="1"/>
+        <EffectArray Reference="Effect,PhoenixBomberCarpetBombDamageLeft,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PhoenixBomberCarpetBombDamageRight,Amount" Value="1"/>
+        <EffectArray Reference="Effect,IonCannonsTaldarimU,Amount" Value="1"/>
+        <EffectArray Reference="Effect,IonCannonsTaldarimULeft,Amount" Value="1"/>
+        <EffectArray Reference="Effect,IonCannonsTaldarimURight,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,SOAMothershipv4Weapon,Level" Value="1"/>
+        <EffectArray Reference="Effect,SOAMothershipv4BeamDamage,Amount" Value="4"/>
+        <EffectArray Reference="Weapon,WarpPrismTaldarimWeapon,Level" Value="1"/>
+        <EffectArray Reference="Effect,WarpPrismTaldarimWeaponDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,TempestTaldarim,Level" Value="1"/>
+        <EffectArray Reference="Effect,TempestTaldarimDamage,Amount" Value="4"/>
+        <EffectArray Reference="Effect,TempestTaldarimDamage,AttributeBonus[Massive]" Value="2"/>
+        <EffectArray Reference="Weapon,TempestTaldarimGround,Level" Value="1"/>
+        <EffectArray Reference="Effect,TempestTaldarimDamageGround,Amount" Value="6"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:AttackBonus"/>
+        <AffectedUnitArray value="InterceptorTaldarim"/>
+        <AffectedUnitArray value="SOAMothershipv4"/>
+        <AffectedUnitArray value="PhoenixTaldarim"/>
+        <AffectedUnitArray value="VoidRayTaldarim"/>
+        <AffectedUnitArray value="WarpPrismTaldarim"/>
+        <AffectedUnitArray value="TempestTaldarim"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TaldarimGroundArmor">
+        <Name value="Upgrade/Name/TaldarimGroundArmor"/>
+        <WebPriority value="0"/>
+        <Race value="Prot"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,ProbeTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ProbeTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Supplicant,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Monitor,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Monitor,LifeArmor" Value="1.000000"/>
+        <EffectArray Reference="Unit,StalkerTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,StalkerTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ImmortalTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ImmortalTaldarim,LifeArmor" Value="1.000000"/>
+        <EffectArray Reference="Unit,HighTemplarTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,HighTemplarTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DarkTemplarTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DarkTemplarTaldarim,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ColossusTaldarim,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ColossusTaldarim,LifeArmor" Value="1"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:ArmorBonus"/>
+        <AffectedUnitArray value="ProbeTaldarim"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <AffectedUnitArray value="StalkerTaldarim"/>
+        <AffectedUnitArray value="Monitor"/>
+        <AffectedUnitArray value="HighTemplarTaldarim"/>
+        <AffectedUnitArray value="DarkTemplarTaldarim"/>
+        <AffectedUnitArray value="ImmortalTaldarim"/>
+        <AffectedUnitArray value="ColossusTaldarim"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TaldarimGroundWeapons">
+        <Name value="Upgrade/Name/TaldarimGroundWeapons"/>
+        <WebPriority value="0"/>
+        <Race value="Prot"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,SupplicantWeapon,Level" Value="1"/>
+        <EffectArray Reference="Effect,SupplicantDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,ParticleDisruptorsTaldarim,Level" Value="1"/>
+        <EffectArray Reference="Effect,ParticleDisruptorsTaldarimU,Amount" Value="1"/>
+        <EffectArray Reference="Effect,ParticleDisruptorsTaldarimU,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Weapon,AscendantWeapon,Level" Value="1"/>
+        <EffectArray Reference="Effect,AscendantWeaponDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,DarkTemplarTaldarim,Level" Value="1"/>
+        <EffectArray Reference="Effect,WarpBlades,Amount" Value="5"/>
+        <EffectArray Reference="Weapon,ImmortalTaldarim,Level" Value="1"/>
+        <EffectArray Reference="Effect,ImmortalTaldarimWeaponDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,ImmortalTaldarimWeaponDamageUpgraded,Amount" Value="1"/>
+        <EffectArray Reference="Effect,ImmortalTaldarimWeaponDamageUpgraded,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Weapon,ColossusTaldarimChargedBeam,Level" Value="1"/>
+        <EffectArray Reference="Weapon,ColossusTaldarimChargedBeamFast,Level" Value="1"/>
+        <EffectArray Reference="Effect,ColossusTaldarimDamage,Amount" Value="10"/>
+        <EffectArray Reference="Effect,ColossusTaldarimDamage,AttributeBonus[Structure]" Value="10"/>
+        <EffectArray Reference="Effect,ColossusTaldarimSplashDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,AlarakStructureOvercharge,Level" Value="1"/>
+        <EffectArray Reference="Effect,AlarakStructureOverchargeDamage,Amount" Value="2"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:AttackBonus"/>
+        <AffectedUnitArray value="Supplicant"/>
+        <AffectedUnitArray value="StalkerTaldarim"/>
+        <AffectedUnitArray value="HighTemplarTaldarim"/>
+        <AffectedUnitArray value="DarkTemplarTaldarim"/>
+        <AffectedUnitArray value="ImmortalTaldarim"/>
+        <AffectedUnitArray value="ColossusTaldarim"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakSupplicantShieldArmor">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-supplicantarmor.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmor" Value="2"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldArmorLevel" Value="2"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Supplicant"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakSupplicantMaxShields">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-supplicantextrashields.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldsMax" Value="25"/>
+        <EffectArray Reference="Unit,Supplicant,ShieldsStart" Value="25"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Supplicant"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakStalkerPhasingArmor">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-stalkerphasingarmor.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakVanguardIncreaseSplashArea">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-vanguard-aoeradiusincreased.dds"/>
+        <EffectArray Operation="Set" Reference="Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius" Value="1.8"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ImmortalTaldarim"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="CarrierTaldarimInterceptorUpgrade">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-gravitoncatapult.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="CarrierTaldarim"/>
+    </CUpgrade>
+    <CUpgrade id="ColossusTaldarimThermalExplosion">
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-colossuschampionslowbeam.dds"/>
+        <Alert value="ResearchComplete"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ColossusTaldarim"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimGraviticBooster">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-graviticbooster.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,ObserverTaldarim,Speed" Value="1.007800"/>
+        <EffectArray Reference="Unit,ObserverTaldarim,Acceleration" Value="1.0625"/>
+        <EffectArray Reference="Unit,WarpPrismTaldarim,Speed" Value="0.875000"/>
+        <EffectArray Reference="Unit,WarpPrismTaldarim,Acceleration" Value="1.125"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ObserverTaldarim"/>
+        <AffectedUnitArray value="WarpPrismTaldarim"/>
+    </CUpgrade>
+    <CUpgrade id="PhaseBlink">
+        <Icon value="Assets\Textures\btn-ability-protoss-blink-red.dds"/>
+        <Alert value="ResearchComplete"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="StalkerTaldarim"/>
+    </CUpgrade>
+    <CUpgrade id="PhoenixTaldarimGroundAttackUpgrade">
+        <InfoTooltipPriority value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-phoenixattackspeed.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,IonCannonsTaldarim,Range" Value="2"/>
+        <EffectArray Reference="Abil,PhoenixBomberGround,Range[0]" Value="2"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="PhoenixTaldarim"/>
+    </CUpgrade>
+    <CUpgrade id="ResearchSacrifice">
+        <Icon value="Assets\Textures\btn-ability-protoss-sacrifice.dds"/>
+        <Alert value="ResearchComplete"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimAirArmorLevel1" parent="TaldarimAirArmors">
+        <Name value="Upgrade/Name/TaldarimAirArmorLevel1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Actor,InterceptorTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SOAMothershipv4,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhoenixTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidRayTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Harbinger,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TempestTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CarrierTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismPhasingTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ObserverTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel1.dds"/>
+        <LeaderAlias value="TaldarimAirArmors"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimAirArmorLevel2" parent="TaldarimAirArmors">
+        <Name value="Upgrade/Name/TaldarimAirArmorLevel2"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <ScoreAmount value="350"/>
+        <EffectArray Operation="Set" Reference="Actor,InterceptorTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SOAMothershipv4,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhoenixTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidRayTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Harbinger,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TempestTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CarrierTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismPhasingTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ObserverTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel2.dds"/>
+        <LeaderAlias value="TaldarimAirArmors"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimAirArmorLevel3" parent="TaldarimAirArmors">
+        <Name value="Upgrade/Name/TaldarimAirArmorLevel3"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <ScoreAmount value="500"/>
+        <EffectArray Operation="Set" Reference="Actor,InterceptorTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SOAMothershipv4,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhoenixTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidRayTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Harbinger,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TempestTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CarrierTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismPhasingTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ObserverTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-airarmorlevel3.dds"/>
+        <LeaderAlias value="TaldarimAirArmors"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimAirWeaponsLevel1" parent="TaldarimAirWeapons">
+        <Name value="Upgrade/Name/TaldarimAirWeaponsLevel1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Weapon,InterceptorTaldarimBeam,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VoidRayChargeBeamBounce,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,IonCannonsTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,IonCannonsGround,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,SOAMothershipv4Weapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarpPrismTaldarimWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TempestTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TempestTaldarimGround,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel1.dds"/>
+        <LeaderAlias value="TaldarimAirWeapons"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimAirWeaponsLevel2" parent="TaldarimAirWeapons">
+        <Name value="Upgrade/Name/TaldarimAirWeaponsLevel2"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <ScoreAmount value="350"/>
+        <EffectArray Operation="Set" Reference="Weapon,InterceptorTaldarimBeam,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VoidRayChargeBeamBounce,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,IonCannonsTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,IonCannonsGround,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,SOAMothershipv4Weapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarpPrismTaldarimWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TempestTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TempestTaldarimGround,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel2.dds"/>
+        <LeaderAlias value="TaldarimAirWeapons"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimAirWeaponsLevel3" parent="TaldarimAirWeapons">
+        <Name value="Upgrade/Name/TaldarimAirWeaponsLevel3"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <ScoreAmount value="500"/>
+        <EffectArray Operation="Set" Reference="Weapon,InterceptorTaldarimBeam,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VoidRayChargeBeamBounce,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,IonCannonsTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,IonCannonsGround,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,SOAMothershipv4Weapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarpPrismTaldarimWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TempestTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TempestTaldarimGround,Icon" Value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel3.dds"/>
+        <LeaderAlias value="TaldarimAirWeapons"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimGroundArmorLevel1" parent="TaldarimGroundArmor">
+        <Name value="Upgrade/Name/TaldarimGroundArmorLevel1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Actor,ProbeTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Monitor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StalkerTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HighTemplarTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplarTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImmortalTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ColossusTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel1.dds"/>
+        <LeaderAlias value="TaldarimGroundArmor"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimGroundArmorLevel2" parent="TaldarimGroundArmor">
+        <Name value="Upgrade/Name/TaldarimGroundArmorLevel2"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <ScoreAmount value="350"/>
+        <EffectArray Operation="Set" Reference="Actor,ProbeTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Monitor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StalkerTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HighTemplarTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplarTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImmortalTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ColossusTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel2.dds"/>
+        <LeaderAlias value="TaldarimGroundArmor"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimGroundArmorLevel3" parent="TaldarimGroundArmor">
+        <Name value="Upgrade/Name/TaldarimGroundArmorLevel3"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <ScoreAmount value="500"/>
+        <EffectArray Operation="Set" Reference="Actor,ProbeTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Monitor,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StalkerTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HighTemplarTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplarTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImmortalTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ColossusTaldarim,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-groundarmorlevel3.dds"/>
+        <LeaderAlias value="TaldarimGroundArmor"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimIcons">
+        <EffectArray Operation="Set" Reference="Button,ChronoBoostEnergyCost,Icon" Value="Assets\Textures\btn-ability-protoss-chronoboost-taldarim.dds"/>
+        <EffectArray Operation="Set" Reference="Button,NexusMassRecall,AlertIcon" Value="Assets\Textures\btn-ability-taldarim-massrecall.dds"/>
+        <EffectArray Operation="Set" Reference="Button,NexusMassRecall,Icon" Value="Assets\Textures\btn-ability-taldarim-massrecall.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,PhotonCannon,Icon" Value="Assets\Textures\btn-unit-protoss-alarak-taldarim-photoncannon.dds"/>
+        <EffectArray Operation="Set" Reference="Button,ShieldBatteryRecharge,Icon" Value="Assets\Textures\btn-ability-taldarim-shieldbattery-color.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimShieldsLevel1" parent="TaldarimShields">
+        <Name value="Upgrade/Name/TaldarimShieldsLevel1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ProbeTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Monitor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StalkerTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImmortalTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HighTemplarTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplarTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ObserverTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismPhasingTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ColossusTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhoenixTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Harbinger,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HarbingerDisruptionTrap,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidRayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TempestTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CarrierTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,InterceptorTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SOAMothershipv4,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,NexusTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorTaldarimRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PylonTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,GatewayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpGateTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ForgeTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhotonCannonTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CyberneticsCoreTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShieldBatteryTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TwilightCouncilTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TemplarArchiveTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkShrineTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RoboticsBayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RoboticsFacilityTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StargateTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FleetBeaconTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <LeaderAlias value="TaldarimShields"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimShieldsLevel2" parent="TaldarimShields">
+        <Name value="Upgrade/Name/TaldarimShieldsLevel2"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <ScoreAmount value="350"/>
+        <EffectArray Operation="Set" Reference="Actor,ProbeTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Monitor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StalkerTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImmortalTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HighTemplarTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplarTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ObserverTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismPhasingTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ColossusTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhoenixTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Harbinger,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HarbingerDisruptionTrap,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidRayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TempestTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CarrierTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,InterceptorTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SOAMothershipv4,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,NexusTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorTaldarimRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PylonTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,GatewayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpGateTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ForgeTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhotonCannonTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CyberneticsCoreTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShieldBatteryTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TwilightCouncilTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TemplarArchiveTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkShrineTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RoboticsBayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RoboticsFacilityTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StargateTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FleetBeaconTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel2.dds"/>
+        <LeaderAlias value="TaldarimShields"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimShieldsLevel3" parent="TaldarimShields">
+        <Name value="Upgrade/Name/TaldarimShieldsLevel3"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <ScoreAmount value="500"/>
+        <EffectArray Operation="Set" Reference="Actor,ProbeTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Supplicant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Monitor,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StalkerTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImmortalTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HighTemplarTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkTemplarTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ObserverTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpPrismPhasingTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ColossusTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhoenixTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Harbinger,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,HarbingerDisruptionTrap,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidRayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TempestTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CarrierTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,InterceptorTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SOAMothershipv4,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,NexusTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AssimilatorTaldarimRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PylonTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,GatewayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarpGateTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ForgeTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PhotonCannonTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CyberneticsCoreTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShieldBatteryTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TwilightCouncilTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TemplarArchiveTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DarkShrineTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RoboticsBayTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RoboticsFacilityTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StargateTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FleetBeaconTaldarim,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-taldarim-shieldslevel3.dds"/>
+        <LeaderAlias value="TaldarimShields"/>
+    </CUpgrade>
+    <CUpgrade id="TempestTaldarimGroundAttackUpgrade">
+        <Icon value="Assets\Textures\btn-ability-taldarim-disruptionblast.dds"/>
+        <Alert value="ResearchComplete"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="TempestTaldarim"/>
+    </CUpgrade>
+    <CUpgrade id="VanguardArmoredDamage">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-vanguard-increasedarmordamage.dds"/>
+        <EffectArray Operation="Set" Reference="Effect,ImmortalTaldarimWeaponDamageSet,EffectArray[0]" Value="ImmortalTaldarimWeaponDamageUpgraded"/>
+        <EffectArray Operation="Set" Reference="Effect,ImmortalTaldarimWeaponDamageSet,EffectArray[1]" Value="ImmortalTaldarimWeaponDamageUpgraded"/>
+        <EffectArray Operation="Set" Reference="Effect,ImmortalTaldarimWeaponDamageSet,EffectArray[2]" Value="ImmortalTaldarimWeaponDamageUpgraded"/>
+        <EffectArray Operation="Set" Reference="Effect,ImmortalTaldarimWeaponLMNoSearch,ImpactEffect" Value="ImmortalTaldarimWeaponDamageUpgraded"/>
+        <EffectArray Operation="Set" Reference="Weapon,ImmortalTaldarim,DisplayEffect" Value="ImmortalTaldarimWeaponDamageUpgraded"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ImmortalTaldarim"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakColossusChargedBlastChargeTime">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-wrathwalker-chargetimeimproved.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeam,Options[Disabled]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeam,Options[Hidden]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeamFast,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeamFast,Options[Hidden]" Value="0"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ColossusTaldarim"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakColossusChargedBlastAirAttack">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-wrathwalker-cantargetairunits.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeam,TargetFilters" Value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeamFast,TargetFilters" Value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <EffectArray Operation="Set" Reference="Button,ColossusTaldarim,Tooltip" Value="Button/Tooltip/ColossusTaldarimAA"/>
+        <EffectArray Operation="Set" Reference="Button,ColossusTaldarim,AlertTooltip" Value="Button/Tooltip/ColossusTaldarimAA"/>
+        <EffectArray Operation="Set" Reference="Unit,ColossusTaldarim,Description" Value="Button/Tooltip/ColossusTaldarimAA"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ColossusTaldarim"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakHavocAbilityRange">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-rangeincrease.dds"/>
+        <EffectArray Reference="Abil,ObserverTargetLock,Range[0]" Value="3"/>
+        <EffectArray Reference="Weapon,MonitorFakeWeapon,Range" Value="3"/>
+        <EffectArray Reference="Weapon,MonitorFakeWeapon,MinScanRange" Value="3"/>
+        <EffectArray Reference="Abil,ForceFieldMonitor,Range[0]" Value="3"/>
+        <EffectArray Reference="Effect,ObserverSquadSightSearch,AreaArray[0].Radius" Value="3"/>
+        <!--EffectArray Reference="Actor,SquadSightAttachment,Scale" Value="0.75"/-->
+        <EffectArray Reference="Actor,SquadSightRange,Range" Value="3.000000"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Monitor"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="AlarackHavocPermanentCloak">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-permanentcloak.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakHavocTargetLockBuff">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-havoctargetlockbuffed.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Behavior,ObserverTargetLock,Modification.DamageTakenFraction[Melee]" Value="0.15"/>
+        <EffectArray Reference="Behavior,ObserverTargetLock,Modification.DamageTakenFraction[NoProc]" Value="0.15"/>
+        <EffectArray Reference="Behavior,ObserverTargetLock,Modification.DamageTakenFraction[Ranged]" Value="0.15"/>
+        <EffectArray Reference="Behavior,ObserverTargetLock,Modification.DamageTakenFraction[Spell]" Value="0.15"/>
+        <EffectArray Reference="Behavior,ObserverTargetLock,Modification.DamageTakenFraction[Splash]" Value="0.15"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Monitor"/>
+    </CUpgrade>
+    <CUpgrade id="VoidHighTemplarMindBlast">
+        <Icon value="Assets\Textures\btn-ability-protoss-mindblast.dds"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="AlarakHighTemplarPsionicOrbTravelDistance">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-alarak-ascendant&apos;spsiorbtravelsfurther.dds"/>
+        <EffectArray Operation="Set" Reference="Effect,VoidHighTemplarPsiOrbInitialPersistent,InitialOffset" Value="0,-12.5,0"/>
+        <EffectArray Reference="Actor,VoidHighTemplarPsiOrbAttackGuide,Height" Value="2.5"/>
+        <EffectArray Reference="Abil,VoidHighTemplarPsiOrb,Range[0]" Value="2.5"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="HighTemplarTaldarim"/>
+        <Alert value="ResearchComplete"/>
+    </CUpgrade>
+    <CUpgrade id="VoidRayTaldarimSpeedUpgrade">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-fluxvanes.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Unit,VoidRayTaldarim,Speed" Value="3.320300"/>
+        <EffectArray Operation="Set" Reference="Unit,VoidRayTaldarim,Acceleration" Value="2.687500"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="VoidRayTaldarim"/>
+    </CUpgrade>
+    <CUpgrade id="VoidStasis">
+        <Icon value="Assets\Textures\BTN-Ability-Protoss-VoidStasis.dds"/>
+        <Alert value="ResearchComplete"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+    </CUpgrade>
+    <CUpgrade id="WarpGateResearchTaldarim">
+        <Icon value="Assets\Textures\btn-unit-protoss-alarak-taldarim-warpgate.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Gateway"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimGroundWeaponsLevel1" parent="TaldarimGroundWeapons">
+        <Name value="Upgrade/Name/TaldarimGroundWeaponsLevel1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray index="17" Reference="Effect,ColossusTaldarimSplashDamage,Amount" Value="3"/>
+        <EffectArray Operation="Set" Reference="Weapon,SupplicantWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ParticleDisruptorsTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,AscendantWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DarkTemplarTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ImmortalTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeam,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeamFast,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[0].Effect" Value="AlarakStructureOverchargePriority1Upgrade1"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[1].Effect" Value="AlarakStructureOverchargePriority2Upgrade1"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[2].Effect" Value="AlarakStructureOverchargePriority3Upgrade1"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[3].Effect" Value="AlarakStructureOverchargePriority4Upgrade1"/>
+        <LeaderAlias value="TaldarimGroundWeapons"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimGroundWeaponsLevel2" parent="TaldarimGroundWeapons">
+        <Name value="Upgrade/Name/TaldarimGroundWeaponsLevel2"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel2.dds"/>
+        <ScoreAmount value="350"/>
+        <EffectArray index="17" Reference="Effect,ColossusTaldarimSplashDamage,Amount" Value="3"/>
+        <EffectArray Operation="Set" Reference="Weapon,SupplicantWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ParticleDisruptorsTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,AscendantWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DarkTemplarTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ImmortalTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeam,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeamFast,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[0].Effect" Value="AlarakStructureOverchargePriority1Upgrade2"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[1].Effect" Value="AlarakStructureOverchargePriority2Upgrade2"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[2].Effect" Value="AlarakStructureOverchargePriority3Upgrade2"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[3].Effect" Value="AlarakStructureOverchargePriority4Upgrade2"/>
+        <LeaderAlias value="TaldarimGroundWeapons"/>
+    </CUpgrade>
+    <CUpgrade id="TaldarimGroundWeaponsLevel3" parent="TaldarimGroundWeapons">
+        <Name value="Upgrade/Name/TaldarimGroundWeaponsLevel3"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel3.dds"/>
+        <ScoreAmount value="500"/>
+        <EffectArray index="17" Reference="Effect,ColossusTaldarimSplashDamage,Amount" Value="3"/>
+        <EffectArray Operation="Set" Reference="Weapon,SupplicantWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ParticleDisruptorsTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,AscendantWeapon,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DarkTemplarTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ImmortalTaldarim,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeam,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ColossusTaldarimChargedBeamFast,Icon" Value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[0].Effect" Value="AlarakStructureOverchargePriority1Upgrade3"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[1].Effect" Value="AlarakStructureOverchargePriority2Upgrade3"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[2].Effect" Value="AlarakStructureOverchargePriority3Upgrade3"/>
+        <EffectArray Operation="Set" Reference="Effect,AlarakStructureOverchargeSearch,AreaArray[3].Effect" Value="AlarakStructureOverchargePriority4Upgrade3"/>
+        <LeaderAlias value="TaldarimGroundWeapons"/>
+    </CUpgrade>
+</Catalog>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAlert id="AddOnComplete_Tal">
+        <Sound value="AlarakA_AddOnComplete"/>
+        <Text value="Alert/Text/AddOnComplete"/>
+    </CAlert>
+    <CAlert id="AmmoComplete_Tal">
+        <Voice value="Ready"/>
+    </CAlert>
+    <CAlert id="AttackTownAlly_Tal" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="AlarakA_AllyBaseUnderAttack"/>
+        <Text value="Alert/Text/AttackTownAlly"/>
+        <Peripheral value="AllyBaseUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackTown_Tal" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <PingModel value="PingBaseAttack"/>
+        <Sound value="AlarakA_BaseUnderAttack"/>
+        <Text value="Alert/Text/AttackTown"/>
+        <Voice value="Help"/>
+        <Peripheral value="SelfBaseUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackUnitAlly_Tal" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="AlarakA_AllyUnderAttack"/>
+        <Text value="Alert/Text/AttackUnitAlly"/>
+        <Peripheral value="AllyUnitUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackUnit_Tal" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="AlarakA_ForcesUnderAttack"/>
+        <Text value="Alert/Text/AttackUnit"/>
+        <Voice value="Help"/>
+        <Peripheral value="SelfUnitUnderAttack"/>
+    </CAlert>
+    <CAlert id="BuildComplete_Tal">
+        <Voice value="Ready"/>
+        <Peripheral value="BuildingComplete"/>
+    </CAlert>
+    <CAlert id="CalldownLaunch_Tal" parent="Global">
+        <Flags index="SoundFromLocalPlayer" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-terran-nuclearstrike.dds"/>
+        <QueueTime value="10.000000"/>
+        <Sound value="AlarakA_CalldownLaunch"/>
+        <Text value="Alert/Text/CalldownLaunch"/>
+        <Peripheral value="CalldownLaunch"/>
+    </CAlert>
+    <CAlert id="CommandCenterUpgradeComplete_Tal">
+        <Sound value="AlarakA_CommandCenterUpgraded"/>
+        <Peripheral value="UpgradeComplete"/>
+    </CAlert>
+    <CAlert id="MergeComplete_Tal">
+        <Voice value="Ready"/>
+    </CAlert>
+    <CAlert id="MorphComplete_Tal">
+        <Voice value="Ready"/>
+        <Peripheral value="MorphComplete"/>
+    </CAlert>
+    <CAlert id="ResearchComplete_Tal">
+        <Sound value="AlarakA_ResearchComplete"/>
+        <Peripheral value="ResearchComplete"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_HighYieldMineral_Tal">
+        <Icon value="Assets\Textures\icon-highyieldmineral-protoss.dds"/>
+        <Sound value="AlarakA_MineralsDepleted"/>
+        <Peripheral value="ResourceExhausted"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_Mineral_Tal">
+        <Icon value="Assets\Textures\icon-mineral-protoss.dds"/>
+        <Sound value="AlarakA_MineralsDepleted"/>
+        <Text value="Alert/Text/ResourceExhausted_Mineral"/>
+        <Peripheral value="ResourceExhausted"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_Vespene_Tal">
+        <Icon value="Assets\Textures\icon-gas-protoss.dds"/>
+        <Sound value="AlarakA_GeyserExhausted"/>
+        <Text value="Alert/Text/ResourceExhausted_Vespene"/>
+        <Peripheral value="ResourceExhausted"/>
+    </CAlert>
+    <CAlert id="SpecializeComplete_Tal">
+        <Peripheral value="SpecializationComplete"/>
+    </CAlert>
+    <CAlert id="TrainComplete_Tal">
+        <Voice value="Ready"/>
+        <Peripheral value="TrainComplete"/>
+    </CAlert>
+    <CAlert id="TrainError_Tal">
+        <Display index="Self" value="0"/>
+        <Icon value="Assets\Textures\icon-supply-protoss.dds"/>
+        <QueueTime value="4.000000"/>
+    </CAlert>
+    <CAlert id="TrainWorkerComplete_Tal">
+        <Flags index="Hide" value="1"/>
+        <Voice value="Ready"/>
+    </CAlert>
+    <CAlert id="UpgradeComplete_Tal">
+        <Sound value="AlarakA_UpgradeComplete"/>
+        <Peripheral value="UpgradeComplete"/>
+    </CAlert>
+    <CAlert id="WarpTrainComplete_Tal">
+        <Sound value=""/>
+        <Voice value="Ready"/>
+        <Peripheral value="WarpInComplete"/>
+    </CAlert>
+</Catalog>

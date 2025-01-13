@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade id="DehakaAirAttackUpgrade">
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaCoop,TargetFilters" Value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AffectedUnitArray value="DehakaCoop"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade id="DehakaBonusSkillPoint">
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
+        <EffectArray Reference="Abil,DehakaLearn,Points" Value="1"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade id="DehakaCoopStage2">
+        <LeaderAlias value=""/>
+        <AffectedUnitArray value="DehakaCoop"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaCoopStage3">
+        <LeaderAlias value=""/>
+        <AffectedUnitArray value="DehakaCoop"/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaCoop,VisionHeight" Value="4"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaColossusLegs">
+        <Flags index="UpgradeCheat" value="0"/>
+        <LeaderAlias value=""/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaCoop,Collide[Air1]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaCoop,Collide[Land5]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaCoop,Collide[Land6]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaCoop,Collide[Land2]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaCoop,Collide[Land9]" Value="0"/>
+        <EffectArray Operation="Subtract" Reference="Unit,DehakaCoopReviveCocoon,Collide[Land6]" Value="1"/>
+        <EffectArray Reference="Unit,DehakaCoopReviveCocoon,Collide[Land2]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaCoop,Collide[Land16]" Value="0"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaUltraliskCrashingCharge">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-ultralisk-brutalcharge.dds"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2Burrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaUltraliskRegen">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-ultralisk-healingadaptation.dds"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel2,LifeRegenRate" Value="10.000000"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel2Burrowed,LifeRegenRate" Value="10.000000"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel2,LifeRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel2Burrowed,LifeRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel3,LifeRegenRate" Value="10.000000"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel3Burrowed,LifeRegenRate" Value="10.000000"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel3,LifeRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel3Burrowed,LifeRegenDelay" Value="10.000000"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3Burrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaUltraliskBash">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-ultralisk-impalingstrike.dds"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3Burrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaTyrannozorArmorAura">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-tyrannozor-tyrantprotection.dds"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3Burrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaTyrannozorFanOfKnives">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-tyrannozor-barrageofspikes.dds"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3Burrowed"/>
+    </CUpgrade>
+</Catalog>

@@ -1,0 +1,583 @@
+﻿Abil/Name/ArmExperimentalStrike=ArmExperimentalStrike
+Abil/Name/AssaultModeMengsk=돌격 모드
+Abil/Name/BarracksMengskLand=착륙
+Abil/Name/BarracksMengskLiftOff=이륙
+Abil/Name/CommandCenterMengskLand=착륙 (사령부)
+Abil/Name/CommandCenterMengskLiftOff=이륙
+Abil/Name/CommandCenterMengskTrain=훈련 (사령부)
+Abil/Name/DogsofWarReady=전쟁의 개 준비
+Abil/Name/EngineeringBayMengskResearch=연구 (공학 연구소)
+Abil/Name/FactoryMengskLand=착륙
+Abil/Name/FactoryMengskLiftOff=이륙
+Abil/Name/FighterModeMengsk=전투기 모드
+Abil/Name/FusionCoreMengskResearch=연구
+Abil/Name/GhostAcademyMengskResearch=유령 사관학교 연구
+Abil/Name/GhostMengskHoldFire=공격 중지
+Abil/Name/GhostMengskWeaponsFree=무기 사용
+Abil/Name/MedivacMengskDoubleBeamHeal=이중 광선 치료
+Abil/Name/MedivacMengskHeal=치료
+Abil/Name/MedivacMengskSpeedBoost=비상 추진기
+Abil/Name/SiegeModeMengsk=공성
+Abil/Name/StarportMengskLand=착륙
+Abil/Name/StarportMengskLiftOff=이륙
+Abil/Name/StarportMengskTrain=훈련 (우주공항)
+Abil/Name/TerranBuildMengsk=건설
+Abil/Name/UnsiegeMengsk=공성 모드 해제
+Alert/Text/AmmoComplete_Terr=장전 완료
+Alert/Text/BuildComplete_Terr=건설 완료
+Alert/Text/CommandCenterUpgradeComplete=업그레이드 완료
+Alert/Text/MergeComplete_Terr=합체 완료
+Alert/Text/MorphComplete_Terr=변형 완료
+Alert/Text/ResearchComplete_Terr=연구 완료
+Alert/Text/ResourceExhausted_HighYieldMineral_Terr=풍부한 광맥 고갈
+Alert/Text/SpecializeComplete_Terr=전문화 완료
+Alert/Text/TrainComplete_Terr=유닛 완성
+Alert/Text/TrainWorkerComplete_Terr=유닛 완성
+Alert/Text/UpgradeComplete_Terr=업그레이드 완료
+Alert/Text/WarpTrainComplete_Terr=소환 완료
+Behavior/Name/ArtilleryMengskCloudSickness=오염된 강타
+Behavior/Name/BattlecruiserMengskBonusRange=현장 지원 조준 시스템
+Behavior/Name/EMPMengskDecloak=EMP 은폐 해제
+Behavior/Name/GhostMengskHoldFire=공격 중지
+Behavior/Name/GhostMengskHoldFireB=공격 중지
+Behavior/Name/GhostMengskIrradiate=염화 제물
+Behavior/Name/GhostMengskSuperCloak=미로 은폐
+Behavior/Name/MarauderMengskAbsorb=이지스 방어막
+Behavior/Name/MarauderMengskAttackSpeedBoost=고급 전투 자극제
+Behavior/Name/MarauderMengskShrapnelSlow=감속
+Behavior/Name/MedivacMengskSpeedBoost=재연소 장치 활성화
+Behavior/Name/PropagandaBlastMengsk=세뇌당함
+Behavior/Name/ThorMengskArmorAuraTarget=방어장
+Behavior/Name/VikingMengskAirAttackDamage=전술 재편성
+Behavior/Name/VikingMengskCheatDeath=불사조 프로토콜
+Behavior/Name/VikingMengskGroundAttackDamage=전술 재편성
+Behavior/RankName/MengskRank0=등급: 0
+Behavior/RankName/MengskRank1=등급: 1
+Behavior/RankName/MengskRank2=등급: 2
+Behavior/RankName/MengskRank3=등급: 3
+Behavior/Tooltip/ArtilleryMengskCloudSickness=이 유닛은 오염된 강타의 영향으로 지속 피해를 받으며, 이동 속도와 공격 속도가 감소했습니다.
+Behavior/Tooltip/BattlecruiserMengskBonusRange=아우구스트그라드의 자랑의 영향으로 무기 사거리가 +<d ref="Behavior,BattlecruiserMengskBonusRange,Modification.RangedWeaponRange"/> 증가합니다.
+Behavior/Tooltip/EMPMengskDecloak=대상이 최근 EMP 폭발에 적중당해 잠시 동안 은폐할 수 없습니다.
+Behavior/Tooltip/GhostMengskEMPStun=충격과 공포
+Behavior/Tooltip/GhostMengskIrradiate=제물에 걸려 불타고 있습니다. 제물 지역 안이나 그 주위에 있는 모든 생체 유닛은 피해를 입습니다.
+Behavior/Tooltip/GhostMengskSuperCloak=이 유닛은 받는 피해를 50%만큼 흡수하며, 에너지를 빠르게 재생합니다.
+Behavior/Tooltip/MarauderMengskAbsorb=활성화된 이지스 방어막은 모든 피해를 최대 <d ref="Behavior,MarauderMengskAbsorb,DamageResponse.ModifyLimit"/>까지 막아냅니다.
+Behavior/Tooltip/MarauderMengskAttackSpeedBoost=고급 전투 자극제 효과가 지속되는 동안 유닛의 공격 속도가 증가합니다.
+Behavior/Tooltip/MarauderMengskShrapnelSlow=이동 속도 감소
+Behavior/Tooltip/MarauderMengskSlamSlow=이 유닛은 공격 및 이동 속도가 감소했습니다.
+Behavior/Tooltip/MedivacMengskSpeedBoost=이 유닛의 이동 속도가 <d ref="(Behavior,MedivacMengskSpeedBoost,Modification.MoveSpeedMultiplier-1)*100"/>% 증가합니다.
+Behavior/Tooltip/PropagandaBlastMengsk=이 유닛은 공격 및 이동 속도가 증가했습니다.
+Behavior/Tooltip/SiegeTankMengskSlowHeroic=대상의 이동 속도가 짧은 시간 동안 감소합니다.
+Behavior/Tooltip/SiegeTankMengskStun=충격과 공포
+Behavior/Tooltip/ThorMengskArmorAuraTarget=검은망치가 이 유닛의 방어력을 <d ref="Behavior,ThorMengskArmorAuraTarget,Modification.LifeArmorBonus"/>만큼 증가시킵니다.
+Behavior/Tooltip/VikingMengskAirAttackDamage=이 유닛은 공중 유닛에게 주는 피해가 증가했습니다.
+Behavior/Tooltip/VikingMengskCheatDeath=활성화되면 창공의 분노가 모든 피해를 최대 <d ref="Behavior,VikingMengskCheatDeath,DamageResponse.ModifyLimit"/>까지 막아냅니다.
+Behavior/Tooltip/VikingMengskGroundAttackDamage=이 유닛은 지상 유닛에게 주는 피해가 증가했습니다.
+Button/Name/ArmExperimentalStrike=오염된 강타 장전
+Button/Name/ArmoryMengsk=무기고 건설
+Button/Name/ArtilleryMengsk=대지파괴 포 건설
+Button/Name/ArtilleryMengskBombardment=폭격
+Button/Name/ArtilleryMengskLoad=들이기
+Button/Name/ArtilleryMengskPassive=대지파괴 포
+Button/Name/ArtilleryMengskRange=반구 촉매
+Button/Name/ArtilleryMengskRangeResearch=반구 촉매 연구
+Button/Name/ArtilleryMengskUnloadAll=모두 내보내기
+Button/Name/AssaultModeMengsk=돌격 모드
+Button/Name/BarracksMengsk=병영 건설
+Button/Name/BattlecruiserMengsk=아우구스트그라드의 자랑 생산
+Button/Name/BattlecruiserMengskHyperjump=전술 차원 도약
+Button/Name/BattlecruiserMengskImperialMandateGeneration=제국의 힘
+Button/Name/BattlecruiserMengskRangeAura=현장 지원 조준 시스템
+Button/Name/BattlecruiserMengskRangeAuraResearch=현장 지원 조준 시스템 연구
+Button/Name/BattlecruiserMengskVeterancy=자치령 근위대
+Button/Name/BlimpMengskTopbarRegen=공기 파장 증폭
+Button/Name/BlimpMengskTopbarRegenResearch=공기 파장 증폭 연구
+Button/Name/BunkerDepotMengskLoad=들이기
+Button/Name/BunkerDepotMengskRange=조준 지원 총안
+Button/Name/BunkerDepotMengskRangeResearch=조준 지원 총안 연구
+Button/Name/BunkerDepotMengskUnloadAll=모두 내보내기
+Button/Name/BunkerMengsk=보급 벙커 건설
+Button/Name/BunkerMengskSalvage=회수
+Button/Name/CommandCenterMengsk=징병소 건설
+Button/Name/CommanderPrestigeMengskArmamentStabilizersLocked=군비 안정판 연구
+Button/Name/CommanderPrestigeMengskMedivacLocked=황제의 중재선 생산
+Button/Name/CommanderPrestigeMengskNuclearAnnihilationLocked=핵 섬멸
+Button/Name/EngineeringBayMengsk=공학 연구소 건설
+Button/Name/FactoryMengsk=군수공장 건설
+Button/Name/FighterModeMengsk=전투기 모드
+Button/Name/FusionCoreMengsk=융합로 건설
+Button/Name/GatherMengsk=채취
+Button/Name/GhostAcademyMengsk=황실 사관학교 건설
+Button/Name/GhostMengsk=황제의 그림자 훈련
+Button/Name/GhostMengskEMP=EMP 폭발
+Button/Name/GhostMengskEMPLongStun=EMP 폭발
+Button/Name/GhostMengskGuidedStrike=통치자의 전술 미사일
+Button/Name/GhostMengskGuidedStrikeRessearch=통치자의 전술 미사일 연구
+Button/Name/GhostMengskHoldFire=공격 중지
+Button/Name/GhostMengskImperialMandateGeneration=제국의 힘
+Button/Name/GhostMengskIrradiate=염화 제물
+Button/Name/GhostMengskIrradiateBigDamage=염화 제물
+Button/Name/GhostMengskSuperCloak=미로 은폐
+Button/Name/GhostMengskVeterancy=자치령 근위대
+Button/Name/HealMengsk=치료
+Button/Name/IgniteAfterburnersMengsk=재연소 장치 점화
+Button/Name/InstantTrooperMengskTransform=현장 소생기 연구
+Button/Name/MarauderMengsk=이지스 근위대 훈련
+Button/Name/MarauderMengskAttackSpeedBoost=고급 전투 자극제
+Button/Name/MarauderMengskImperialMandateGeneration=제국의 힘
+Button/Name/MarauderMengskShield=이지스 방어막
+Button/Name/MarauderMengskSlow=무력화탄
+Button/Name/MarauderMengskSlowResearch=무력화탄 연구
+Button/Name/MarauderMengskVeterancy=자치령 근위대
+Button/Name/MaraurderMengskShield=이지스 방어막
+Button/Name/MechTransformationSpeedMengsk=지능형 제어 장치 연구
+Button/Name/MedivacMengsk=황제의 중재선 생산
+Button/Name/MedivacMengskDoubleHealBeam=이중 소생기
+Button/Name/MedivacMengskDoubleHealBeamResearch=이중 소생기 연구
+Button/Name/MedivacMengskPermanentCloak=장막 살포
+Button/Name/MedivacMengskPermanentCloakResearch=장막 살포 연구
+Button/Name/MedivacMengskSiegeTankAirlift=군비 안정판
+Button/Name/MedivacMengskSiegeTankAirliftResearch=군비 안정판 연구
+Button/Name/Mengsk12ZerglingCalldown=전쟁의 개 - 저글링 12기
+Button/Name/Mengsk12Zerglings=저글링 12기 준비
+Button/Name/Mengsk3Hydralisks=히드라리스크 3기 준비
+Button/Name/Mengsk3HydralisksCalldown=전쟁의 개 - 히드라리스크 3기
+Button/Name/Mengsk3Mutalisks=뮤탈리스크 3기 준비
+Button/Name/Mengsk3MutalisksCalldown=전쟁의 개 - 뮤탈리스크 3기
+Button/Name/MengskStructureArmorResearch=신소재 강화 장갑 연구
+Button/Name/MengskTrooperArmorLevel1=자치령 장갑 업그레이드 1단계
+Button/Name/MengskTrooperArmorLevel2=자치령 장갑 업그레이드 2단계
+Button/Name/MengskTrooperArmorLevel3=자치령 장갑 업그레이드 3단계
+Button/Name/MengskTrooperWeaponsLevel1=자치령 무기 업그레이드 1단계
+Button/Name/MengskTrooperWeaponsLevel2=자치령 무기 업그레이드 2단계
+Button/Name/MengskTrooperWeaponsLevel3=자치령 무기 업그레이드 3단계
+Button/Name/MengskUltralisk=울트라리스크 1기 준비
+Button/Name/MengskUltraliskCalldown=전쟁의 개 - 울트라리스크 1기
+Button/Name/MengskZergCalldownLevel1=전쟁의 개
+Button/Name/MengskZergCalldownLevel2=전쟁의 개
+Button/Name/MengskZergCalldownLevel3=전쟁의 개
+Button/Name/MengskZergCalldownLevel4=전쟁의 개 (4레벨)
+Button/Name/MissileTurretMengsk=미사일 포탑 건설
+Button/Name/MissileTurretMengskPassive=미사일 포탑
+Button/Name/MorphtoRavenMengsk=애국자 모드 취소
+Button/Name/MorphtoRavenMengskSieged=애국자 모드
+Button/Name/NukeCalldownMengsk=전술 미사일 공격
+Button/Name/NukeMengskArm=격납고 전술 미사일 배치
+Button/Name/PropagandaBlastMengsk=세뇌
+Button/Name/RavenMengsk=황제의 증인 생산
+Button/Name/RefineryMengsk=정제소 건설
+Button/Name/RoyalGuardMengsk=자치령 근위대
+Button/Name/SCVMengsk=자치령 인부 징집
+Button/Name/SCVMengskEnlist=노동 신고
+Button/Name/SCVMengskEnlistCC=인부 소집
+Button/Name/ScienceFacilityMengsk=과학 시설 건설
+Button/Name/SetArtilleryMengskRallyPoint=대지파괴 포 집결 지점 설정
+Button/Name/SetCommandCenterRallyPointLaborer=인부 집결 지점 설정
+Button/Name/SetCommandCenterRallyPointTrooper=부대원 집결 지점 설정
+Button/Name/SetSupplyBunkerRallyPoint=보급 벙커 집결 지점 설정
+Button/Name/SiegeModeMengsk=공성 모드
+Button/Name/SiegeTankMengsk=충격 전차 생산
+Button/Name/SiegeTankMengskAirlift=군비 안정판
+Button/Name/SiegeTankMengskImperialMandateGeneration=제국의 힘
+Button/Name/SiegeTankMengskStun=충격과 공포
+Button/Name/SiegeTankMengskVeterancy=자치령 근위대
+Button/Name/SnipeMengsk=저격
+Button/Name/StarportMengsk=우주공항 건설
+Button/Name/StructureArmorMengsk=신소재 강화 장갑
+Button/Name/StructureArmorMengskResearch=신소재 강화 장갑 연구
+Button/Name/TacNukeArm=전략 핵미사일 배치
+Button/Name/TacNukeMissileCalldown=전략 핵 공격
+Button/Name/ThorMengsk=검은망치 생산
+Button/Name/ThorMengskArmorAura=방어장
+Button/Name/ThorMengskArmorAuraResearch=방어장 연구
+Button/Name/ThorMengskImperialMandateGeneration=제국의 힘
+Button/Name/ThorMengskSiege=감시 모드
+Button/Name/ThorMengskUnsiege=보행 모드
+Button/Name/ThorMengskVeterancy=자치령 근위대
+Button/Name/TrooperMengsk=자치령 부대원 징집
+Button/Name/TrooperMengskBuild=전투 구조물 건설
+Button/Name/TrooperMengskDouble=자치령 부대원 2기 징집
+Button/Name/TrooperMengskDropTrain=신속 징집
+Button/Name/TrooperMengskDropTrainResearch=신속 징집 연구
+Button/Name/TrooperMengskEnlist=전투 신고
+Button/Name/TrooperMengskEnlistCC=부대원 소집
+Button/Name/TrooperMengskImperialMandateGeneration=시민의 의지
+Button/Name/TrooperMengskResearchAA=우박폭풍 발사기 연구
+Button/Name/TrooperMengskResearchFlamethrower=CPO-7 살라만더 화염방사기 연구
+Button/Name/TrooperMengskResearchImproved=B-2 대구경 경기관총 연구
+Button/Name/TrooperMengskSpecializeAA=우박폭풍 발사기 장착
+Button/Name/TrooperMengskSpecializeFlamethrower=CPO-7 살라만더 화염방사기 장착
+Button/Name/TrooperMengskSpecializeImproved=B-2 대구경 경기관총 장착
+Button/Name/UnsiegeMengsk=전차 모드
+Button/Name/VikingMengskAttackDamage=전술 재편성
+Button/Name/VikingMengskCheatDeath=불사조 프로토콜
+Button/Name/VikingMengskDodge=회피 기동
+Button/Name/VikingMengskFighter=창공의 분노 생산
+Button/Name/VikingMengskImperialMandateGeneration=제국의 힘
+Button/Name/VikingMengskSpeed=에이시어 터빈
+Button/Name/VikingMengskSpeedResearch=에이시어 터빈 연구
+Button/Name/VikingMengskVeterancy=자치령 근위대
+Button/Name/WeaponsFreeMengsk=무기 사용
+Button/Name/YamatoGunMengsk=야마토 포
+Button/Tooltip/AbilLockedLevel05=이 능력은 사령관이 5 레벨이 되면 사용할 수 있습니다.
+Button/Tooltip/AbilLockedLevel08=이 능력은 사령관이 8 레벨이 되면 사용할 수 있습니다.
+Button/Tooltip/ArmExperimentalStrike=대지파괴 포에 실험용 탄두를 장착하여, 다음 포격에 사용할 수 있게 합니다. 탄두는 대상 지점 근처에 무작위로 떨어져서 <d ref="Effect,ArtilleryMengskBombardmentDamage,Amount"/>의 피해를 주고, 적들의 이동속도와 공격 속도를 둔화시키며, <d time="5"/> 동안 방사성 물질로 해당 지역을 오염시킵니다. 오염된 지역의 모든 적은 초당 <d ref="Effect,ArtilleryMengskExperimentalStrikePeriodicDamage,Amount" precision="1"/>의 피해를 받습니다.
+Button/Tooltip/ArmoryMengsk=군수공장과 우주공항에서 생산하는 유닛을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 검은망치 (군수공장)
+Button/Tooltip/ArtilleryMengsk=목표 위치 근처에 무작위 폭격을 가하여 지상 유닛에게 피해를 줍니다. 상단 패널의 오염된 강타를 활성화합니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/ArtilleryMengskBombardment=대상 위치에 폭격을 가합니다. 무작위로 탄두를 날려 적 지상 유닛에게 <d ref="Effect,ArtilleryMengskBombardmentDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/ArtilleryMengskLoad=대지파괴 포에 인부와 부대원을 들입니다. 인부를 추가로 들일 때마다 대지파괴 포의 폭격 속도가 높아집니다.
+Button/Tooltip/ArtilleryMengskPassive=공학 연구소는 대지파괴 포를 건설할 수 있게 해줍니다.
+Button/Tooltip/ArtilleryMengskRange=대지파괴 포의 포격 사거리가 +<d ref="$UpgradeEffectArrayValue:ArtilleryMengskRange:Weapon,ArtilleryMengskBombardment,Range$"/> 증가합니다.
+Button/Tooltip/ArtilleryMengskRangeResearch=<c val="ffff8a">대지파괴 포</c>의 포격 사거리가 +<d ref="$UpgradeEffectArrayValue:ArtilleryMengskRange:Weapon,ArtilleryMengskBombardment,Range$"/> 증가합니다.
+Button/Tooltip/ArtilleryMengskUnloadAll=모든 유닛을 내보냅니다.
+Button/Tooltip/AssaultModeMengsk=창공의 분노가 돌격 모드로 전환합니다. 이 모드에서는 지상에서 이동하며 지상 대상만 공격할 수 있습니다.
+Button/Tooltip/BarracksMengsk=근위대 보병 생산 시설입니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 이지스 근위대
+Button/Tooltip/BarracksMengskFlying=병영에서 유닛을 생산하려면 지상에 착륙해야 합니다.
+Button/Tooltip/BattlecruiserMengsk=강력한 근위대 전함입니다. 야마토 포와 전술 차원 도약을 사용할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/BattlecruiserMengskHyperjump=대상 위치로 순간이동합니다. 순간이동 도중에는 무적 상태가 됩니다.
+Button/Tooltip/BattlecruiserMengskImperialMandateGeneration=<c val="#ColorAttackInfo">근위대</c>가 차지하는 보급품 비용 및 <c val="#ColorAttackInfo">등급</c>을 기반으로 <c val="#ColorAttackInfo">황제 지지</c>가 증가합니다. 황제 지지 1포인트당 <d time="240"/>마다 <c val="#ColorAttackInfo">황제의 통치력</c>이 1 생성됩니다.<n/><n/>이 유닛은 황제 지지를 <c val="#ColorAttackInfo"><d ref="$BehaviorStackCount:MengskVeterancyBattlecruiserMengsk$*Unit,BattlecruiserMengsk,Food*(-1)*Effect,RoyalGuardMengskTopbarRegenDummy,Amount" player="current" precision="0"/></c> 증가시킵니다.
+Button/Tooltip/BattlecruiserMengskRangeAura=주위 아군 원거리 지상 유닛의 사거리가 <d ref="Behavior,BattlecruiserMengskBonusRange,Modification.RangedWeaponRange"/> 증가합니다.
+Button/Tooltip/BattlecruiserMengskRangeAuraResearch=<c val="ffff8a">아우구스트그라드의 자랑</c>이 주위 아군 유닛의 사거리를 +<d ref="Behavior,BattlecruiserMengskBonusRange,Modification.RangedWeaponRange"/> 증가시킵니다.
+Button/Tooltip/BattlecruiserMengskRank1=<n/><c val="ffff8a">1등급:</c> 야마토 포와 전술 차원 도약이 1회 더 충전됩니다.
+Button/Tooltip/BattlecruiserMengskRank1Preview=<n/><c val="777777">1단계: 야마토 포와 전술 차원 도약이 1회 더 충전됩니다.</c>
+Button/Tooltip/BattlecruiserMengskRank2=<n/><c val="ffff8a">2등급:</c> 야마토 포가 대상 주위에 피해를 줍니다.
+Button/Tooltip/BattlecruiserMengskRank2Preview=<n/><c val="777777">2단계: 야마토 포가 대상 주위에 피해를 줍니다.</c>
+Button/Tooltip/BattlecruiserMengskRank3=<n/><c val="ffff8a">3등급: 야마토 포가 <d ref="Effect,BattlecruiserMengskYamatoMultiple,ValidateMax"/>회 추가로 발사됩니다.</c>
+Button/Tooltip/BattlecruiserMengskRank3Preview=<n/><c val="777777">3단계: 야마토 포가 <d ref="Effect,BattlecruiserMengskYamatoMultiple,ValidateMax"/>회 추가로 발사됩니다</c>
+Button/Tooltip/BlimpMengskTopbarRegen=세뇌된 인부와 부대원이 제공하는 황제 지지가 두 배로 증가합니다.
+Button/Tooltip/BlimpMengskTopbarRegenResearch=인부와 부대원이 <c val="ffff8a">황제의 증인</c>의 세뇌 능력의 영향을 받았을 때 제공하는 황제 지지가 두 배로 증가합니다.
+Button/Tooltip/BunkerDepotMengsk=보급품을 제공하는 방어 구조물입니다.<n/>보급품은 더 많은 유닛을 생산할 수 있게 해줍니다.<n/>부대원들이 안에서 전투를 펼칩니다.<n/><n/><c val="#ColorAttackInfo">보너스: 내부 유닛의 사거리가 <d ref="Behavior,BunkerMengskWeaponRangeBonus,Modification.WeaponRange"/>만큼 증가합니다.</c>
+Button/Tooltip/BunkerDepotMengskLoad=인부와 부대원을 보급 벙커로 들입니다.
+Button/Tooltip/BunkerDepotMengskRange=보급 벙커 안에 있는 유닛들의 사거리가 추가로 <d ref="$UpgradeEffectArrayValue:BunkerDepotMengskRange:Behavior,BunkerMengskWeaponRangeBonus,Modification.WeaponRange$"/>만큼 증가합니다.
+Button/Tooltip/BunkerDepotMengskRangeResearch=<c val="ffff8a">보급 벙커</c> 안에 있는 유닛들의 사거리가 추가로 <d ref="$UpgradeEffectArrayValue:BunkerDepotMengskRange:Behavior,BunkerMengskWeaponRangeBonus,Modification.WeaponRange$"/>만큼 증가합니다.
+Button/Tooltip/BunkerDepotMengskUnloadAll=모든 유닛을 내보냅니다.
+Button/Tooltip/BunkerMengsk=보급품을 제공하는 방어 구조물입니다.<n/>보급품은 더 많은 유닛을 생산할 수 있게 해줍니다.<n/>부대원들이 안에서 전투를 펼칩니다.<n/><n/><c val="#ColorAttackInfo">보너스: 내부 유닛의 사거리가 1만큼 증가합니다.</c>
+Button/Tooltip/BunkerMengskSalvage=해당 구조물을 철거하면서 건설 시 소비한 광물과 가스를 <d ref="Effect,SalvageSharedMengsk,SalvageFactor.Resource[Minerals]*(-100)"/>% 회수합니다. 회수 완료까지 <d ref="Behavior,SalvageSharedMengsk,Duration"/>초 가 소요됩니다. 주의 - 한번 시작한 회수 작업은 취소할 수 없습니다.
+Button/Tooltip/CommandCenterMengsk=주 건물입니다. 채취한 자원을 수집하고 자치령 인부와 자치령 부대원을 훈련합니다. 이륙 능력을 사용할 수 있습니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 자치령 인부<n/>- 자치령 부대원<n/>- 보급 벙커 (인부 및 부대원)
+Button/Tooltip/CommandCenterMengskFlying=주 건물입니다. 자원을 수집하거나, 유닛을 생산하거나, 능력을 사용하려면 착륙해야 합니다.
+Button/Tooltip/EngineeringBayMengsk=자치령 부대원과 구조물을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 미사일 포탑 (인부 및 부대원)<n/>- 대지파괴 포 (인부 및 부대원)
+Button/Tooltip/FactoryMengsk=근위대 차량 생산 시설입니다. <n/><n/><c val="ffff8a">사용 가능:</c><n/>- 충격 전차
+Button/Tooltip/FactoryMengskFlying=군수공장에서 유닛을 생산하려면 지상에 착륙해야 합니다.
+Button/Tooltip/FighterModeMengsk=창공의 분노가 전투기 모드로 전환합니다. 이 모드에서는 비행할 수 있지만 공중 유닛만 공격할 수 있습니다.
+Button/Tooltip/FusionCoreMengsk=우주공항에서 생산하는 유닛을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 아우구스트그라드의 자랑 (우주공항)
+Button/Tooltip/GatherMengsk=선택한 광물 지대나 베스핀 간헐천에서 인부가 자원을 채취합니다.
+Button/Tooltip/GhostAcademyMengsk=이지스 근위대와 황제의 그림자를 업그레이드합니다. 황제의 그림자가 사용하는 전술 미사일을 생산합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 황제의 그림자 (병영)
+Button/Tooltip/GhostMengsk=근위대 전문가입니다. 염화 제물과 EMP 폭발을 사용할 수 있습니다. 황실 사관학교에서 제작한 전술 미사일을 투하할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/GhostMengskEMP=대상 지역에 있는 적 유닛의 보호막에 <d ref="Effect,GhostMengskEMPDamage,ShieldBonus"/>의 피해를 주고 에너지를 고갈시킵니다. 기계 유닛을 <d ref="Effect,GhostMengskEMPStunShortAB,Duration"/>초 동안 기절시킵니다. 은폐한 유닛은 적중당한 후 <d ref="Behavior,EMPMengskDecloak,Duration"/>초 동안 모습이 드러납니다.
+Button/Tooltip/GhostMengskEMPLongStun=대상 지역에 있는 적 유닛의 보호막에 <d ref="Effect,GhostMengskEMPDamage,ShieldBonus"/>의 피해를 주고 에너지를 고갈시킵니다. 기계 유닛을 <d ref="Effect,GhostMengskEMPStunLongAB,Duration"/>초 동안 기절시킵니다. 은폐한 유닛은 적중당한 후 <d ref="Behavior,EMPMengskDecloak,Duration"/>초 동안 모습이 드러납니다.
+Button/Tooltip/GhostMengskGuidedStrike=전술 미사일에 집중 시간이 사라집니다.
+Button/Tooltip/GhostMengskGuidedStrikeRessearch=<c val="ffff8a">황제의 그림자</c>가 전술 미사일 공격 시 집중 시간이 필요하지 않습니다.
+Button/Tooltip/GhostMengskHoldFire=선택한 유닛이 무기를 집어넣고 직접 명령이 없는 한 교전하지 않게 합니다. 공격 중지 중인 유닛은 공격을 받으면 도망칩니다.
+Button/Tooltip/GhostMengskImperialMandateGeneration=<c val="#ColorAttackInfo">근위대</c>가 차지하는 보급품 비용 및 <c val="#ColorAttackInfo">등급</c>을 기반으로 <c val="#ColorAttackInfo">황제 지지</c>가 증가합니다. 황제 지지 1포인트당 <d time="240"/>마다 <c val="#ColorAttackInfo">황제의 통치력</c>이 1 생성됩니다.<n/><n/>이 유닛은 황제 지지를 <c val="#ColorAttackInfo"><d ref="$BehaviorStackCount:MengskVeterancyGhostMengsk$*Unit,GhostMengsk,Food*(-1)*Effect,RoyalGuardMengskTopbarRegenDummy,Amount" player="current" precision="0"/></c> 증가시킵니다.
+Button/Tooltip/GhostMengskIrradiate=대상 적 생체 유닛을 <d ref="Behavior,GhostMengskIrradiate,Duration"/>초 동안 불태워, 대상과 대상 주위의 적 생체 유닛에게 초당 <d ref="Effect,GhostMengskIrradiateSmallDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/GhostMengskIrradiateBigDamage=대상 적 생체 유닛을 <d ref="Behavior,GhostMengskIrradiate,Duration"/>초 동안 불태워, 대상과 대상 주위의 적 생체 유닛에게 초당 <d ref="Effect,GhostMengskIrradiateBigDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/GhostMengskRank1=<n/><c val="ffff8a">1등급:</c> 미로 은폐 능력을 획득합니다.
+Button/Tooltip/GhostMengskRank1Preview=<n/><c val="777777">1단계: 미로 은폐 능력을 획득합니다.</c>
+Button/Tooltip/GhostMengskRank2=<n/><c val="ffff8a">2단계:</c> 염화 제물의 주기 피해가 <d ref="(Effect,GhostMengskIrradiateBigDamage,Amount/Effect,GhostMengskIrradiateSmallDamage,Amount-1)*100" precision="0"/>% 증가합니다. EMP 폭발의 기절 지속 시간이 <d time="[d ref='Effect,GhostMengskEMPStunLongAB,Duration-Effect,GhostMengskEMPStunShortAB,Duration'/]" precision="0"/> 증가합니다.
+Button/Tooltip/GhostMengskRank2Preview=<n/><c val="777777">2단계: 염화 제물의 주기 피해가 <d ref="(Effect,GhostMengskIrradiateBigDamage,Amount/Effect,GhostMengskIrradiateSmallDamage,Amount-1)*100" precision="0"/>% 증가합니다. EMP 폭발의 기절 지속 시간이 <d time="[d ref='Effect,GhostMengskEMPStunLongAB,Duration-Effect,GhostMengskEMPStunShortAB,Duration'/]" precision="0"/> 증가합니다.</c>
+Button/Tooltip/GhostMengskRank3=<n/><c val="ffff8a">3단계:</c> 대상이 죽으면 염화 제물이 주위 적에게 <d ref="Effect,GhostMengskIrradiateDeathDamage,Amount"/>의 피해를 줍니다. EMP 폭발이 대상의 에너지를 모두 흡수하고 동일한 양의 피해를 줍니다.
+Button/Tooltip/GhostMengskRank3Preview=<n/><c val="777777">3단계: 대상이 죽으면 염화 제물이 주위 적에게 <d ref="Effect,GhostMengskIrradiateDeathDamage,Amount"/>의 피해를 줍니다. EMP 폭발이 대상의 에너지를 모두 흡수하고 동일한 양의 피해를 줍니다.</c>
+Button/Tooltip/GhostMengskSuperCloak=황제의 그림자가 <d ref="Behavior,GhostMengskSuperCloak,Duration"/>초 동안 받는 피해를 <d ref="(1--Behavior,GhostMengskSuperCloak,DamageResponse.ModifyFraction)*100"/>%만큼 흡수하며, 지속 시간에 걸쳐 에너지를 <d ref="Behavior,GhostMengskSuperCloak,Modification.VitalRegenArray[Energy]*Behavior,GhostMengskSuperCloak,Duration"/>만큼 추가로 회복합니다.
+Button/Tooltip/HealMengsk=아군 생체 유닛을 치료합니다.<n/><n/><c val="f078ff">에너지 <d ref="1/Effect,MedivacMengskHealLevel1,DrainVitalCostFactor"/>당 <d ref="Effect,MedivacMengskHealLevel1,RechargeVitalRate[0]"/>의 체력 회복</c>
+Button/Tooltip/HydraliskMengsk="고정 장치가 안전한지 반드시 확인하게. 이 녀석은 상당히 사나운데 내 소중한 인턴을 놈에게 잃을 순 없으니까. 셰릴이 이번 주에는 대체 인력을 지원해주지도 않을 테고."<n/><n/>- 서브소우리안 박사, 초기 히드라리스크 실험체에 관하여<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/IgniteAfterburnersMengsk=이 유닛의 이동 속도가 <d ref="Behavior,MedivacMengskSpeedBoost,Duration"/>초 동안 <d ref="(Behavior,MedivacMengskSpeedBoost,Modification.MoveSpeedMultiplier-1)*100"/>% 증가합니다.
+Button/Tooltip/InstantTrooperMengskTransform=<c val="ffff8a">인부</c>와 <c val="ffff8a">부대원</c>이 전장에서 모드를 즉시 전환합니다.
+Button/Tooltip/MarauderMengsk=근위대 중돌격 보병입니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/MarauderMengskAttackSpeedBoost=<d ref="Behavior,MarauderMengskAttackSpeedBoost,Duration"/> 초 동안 공격 속도가 <d ref="(Behavior,MarauderMengskAttackSpeedBoost,Modification.AttackSpeedMultiplier-1)*100"/>% 증가합니다.
+Button/Tooltip/MarauderMengskImperialMandateGeneration=<c val="#ColorAttackInfo">근위대</c>가 차지하는 보급품 비용 및 <c val="#ColorAttackInfo">등급</c>을 기반으로 <c val="#ColorAttackInfo">황제 지지</c>가 증가합니다. 황제 지지 1포인트당 <d time="240"/>마다 <c val="#ColorAttackInfo">황제의 통치력</c>이 1 생성됩니다.<n/><n/>이 유닛은 황제 지지를 <c val="#ColorAttackInfo"><d ref="$BehaviorStackCount:MengskVeterancyMarauderMengsk$*Unit,MarauderMengsk,Food*(-1)*Effect,RoyalGuardMengskTopbarRegenDummy,Amount" player="current" precision="0"/></c> 증가시킵니다.
+Button/Tooltip/MarauderMengskRank1=<n/><c val="ffff8a">1등급:</c> 이지스 방어막 능력을 획득합니다.
+Button/Tooltip/MarauderMengskRank1Preview=<n/><c val="777777">1단계: 이지스 방어막 능력을 획득합니다.</c>
+Button/Tooltip/MarauderMengskRank2=<n/><c val="ffff8a">2등급: 공격 시 부채꼴 범위로 파편이 생성되어 대상 뒤에 있는 적들에게 <d ref="Effect,MarauderMengskShrapnelDamage,Amount/Effect,PunisherGrenadesMengskU,Amount*100" precision="0"/>% 피해를 줍니다.</c>
+Button/Tooltip/MarauderMengskRank2Preview=<n/><c val="777777">2등급: 공격 시 부채꼴 범위로 파편이 생성되어 대상 뒤에 있는 적들에게 <d ref="Effect,MarauderMengskShrapnelDamage,Amount/Effect,PunisherGrenadesMengskU,Amount*100" precision="0"/>% 피해를 줍니다.</c>
+Button/Tooltip/MarauderMengskRank3=<n/><c val="ffff8a">3등급:</c> 고급 전투 자극제 능력을 획득합니다.
+Button/Tooltip/MarauderMengskRank3Preview=<n/><c val="777777">3등급: 고급 전투 자극제 능력을 획득합니다.</c>
+Button/Tooltip/MarauderMengskShield=이지스 근위대에게 <d ref="Behavior,MarauderMengskAbsorb,DamageResponse.ModifyLimit"/>의 피해를 흡수하는 보호막을 부여합니다. 보호막이 치명적인 피해를 받으면 에너지 파동을 방출해 주위 지상 유닛들을 밀쳐냅니다. 보호막은 <d ref="Behavior,MarauderMengskAbsorbReapplicator,Cost.Cooldown.TimeUse"/>초마다 온전히 충전됩니다.
+Button/Tooltip/MarauderMengskSlow=이지스 근위대가 명중시킨 대상의 움직임이 일시적으로 느려집니다.<n/><n/><c val="#ColorAttackInfo">거대 유닛은 면역</c>
+Button/Tooltip/MarauderMengskSlowResearch=<c val="ffff8a">이지스 근위대</c>의 공격이 적들을 느려지게 만듭니다.
+Button/Tooltip/MasteryMengskRoyalGuardMengskRanks=<n/><n/><c val="ffff8a">이 유닛은 등급이 오를 때마다 새로운 능력 또는 지속 능력 효과를 얻습니다.</c><n/>
+Button/Tooltip/MechTransformationSpeedMengsk=<c val="ffff8a">충격 전차</c>, <c val="ffff8a">검은망치</c>, 그리고 <c val="ffff8a">창공의 분노</c>의 변신 시간이 감소합니다.
+Button/Tooltip/MedivacMengsk=공중 수송기입니다. 주위 생체 유닛을 치료합니다. 재연소 장치 점화를 사용할 수 있습니다.
+Button/Tooltip/MedivacMengskDoubleHealBeam=황제의 중재선이 동시에 두 대상을 치유합니다.
+Button/Tooltip/MedivacMengskDoubleHealBeamResearch=<c val="ffff8a">황제의 중재선</c>이 동시에 두 대상을 치유합니다.
+Button/Tooltip/MedivacMengskPermanentCloak=황제의 중재선에 영구 은폐 능력과 <d ref="$UpgradeEffectArrayValue:MedivacMengskPermanentCloak:Unit,MedivacMengsk,ShieldsMax$"/>의 피해를 흡수하는 보호막을 부여합니다.
+Button/Tooltip/MedivacMengskPermanentCloakResearch=<c val="ffff8a">황제의 중재선</c>과 <c val="ffff8a">황제의 증인</c>에 영구 은폐 능력을 부여하고 <c val="ffff8a">황제의 중재선</c>에 <d ref="$UpgradeEffectArrayValue:MedivacMengskPermanentCloak:Unit,MedivacMengsk,ShieldsMax$"/>의 피해를 흡수하는 보호막을 부여합니다.
+Button/Tooltip/MedivacMengskSiegeTankAirlift=공성 모드의 충격 전차가 황제의 중재선을 타고 이동하는 동안에 감소한 공격 속도로 공중 유닛을 공격할 수 있습니다.
+Button/Tooltip/MedivacMengskSiegeTankAirliftResearch=공성 모드인 <c val="ffff8a">충격 전차</c>가 <c val="ffff8a">황제의 중재선</c>을 타고 이동하는 동안 감소한 공격 속도로 공중 유닛을 공격할 수 있습니다.
+Button/Tooltip/Mengsk12ZerglingCalldown=대상 위치에 <c val="ffff8a">사로집힌 저글링</c> <d ref="Effect,ZerglingMengskSpawnCP,PeriodCount*Effect,ZerglingMengskCU,SpawnCount" player="current"/>기를 배치합니다.
+Button/Tooltip/Mengsk12Zerglings=<c val="ffff8a">사로잡힌 저글링</c> 12기를 원할 때 원하는 위치에 배치할 수 있도록 준비합니다.
+Button/Tooltip/Mengsk3Hydralisks=<c val="ffff8a">사로잡힌 히드라리스크</c> 3기를 원할 때 원하는 위치에 배치할 수 있도록 준비합니다.
+Button/Tooltip/Mengsk3HydralisksCalldown=대상 위치에 <c val="ffff8a">사로집힌 히드라리스크</c> <d ref="Effect,HydraliskMengskSpawnCP,PeriodCount" player="current"/>기를 배치합니다.
+Button/Tooltip/Mengsk3HydralisksCalldownOff=<n/><c val="777777"><d ref="Abil,MengskZergCalldownLevel2,Cost[0].Vital[Energy]"/>%: 히드라리스크 <d ref="Effect,HydraliskMengskSpawnCP,PeriodCount" player="current"/>기를 추가 배치합니다.</c>
+Button/Tooltip/Mengsk3HydralisksCalldownOn=<n/><c val="ffff8a"><d ref="Abil,MengskZergCalldownLevel2,Cost[0].Vital[Energy]"/>%:</c> 히드라리스크 <d ref="Effect,HydraliskMengskSpawnCP,PeriodCount" player="current"/>기를 추가 배치합니다.
+Button/Tooltip/Mengsk3Mutalisks=<c val="ffff8a">사로잡힌 뮤탈리스크</c> 3기를 원할 때 원하는 위치에 배치할 수 있도록 준비합니다.
+Button/Tooltip/Mengsk3MutalisksCalldown=대상 위치에 <c val="ffff8a">사로집힌 뮤탈리스크</c> <d ref="Effect,MutaliskMengskSpawnCP,PeriodCount" player="current"/>기를 배치합니다.
+Button/Tooltip/MengskStructureArmorResearch=<c val="ffff8a">보급 벙커</c>, <c val="ffff8a">미사일 포탑</c>, <c val="ffff8a">대지파괴 포</c>의 체력과 방어력이 증가합니다.
+Button/Tooltip/MengskTrooperArmorLevel1=자치령 부대원, 황제의 함선, 사로잡힌 저그의 방어력을 업그레이드합니다.
+Button/Tooltip/MengskTrooperArmorLevel2=자치령 부대원, 황제의 함선, 사로잡힌 저그의 방어력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/MengskTrooperArmorLevel3=자치령 부대원, 황제의 함선, 사로잡힌 저그의 방어력을 최대로 업그레이드합니다.
+Button/Tooltip/MengskTrooperWeaponsLevel1=자치령 부대원과 사로잡힌 저그의 공격력을 업그레이드합니다.
+Button/Tooltip/MengskTrooperWeaponsLevel2=자치령 부대원과 사로잡힌 저그의 공격력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/MengskTrooperWeaponsLevel3=자치령 부대원과 사로잡힌 저그의 공격력을 최대로 업그레이드합니다.
+Button/Tooltip/MengskUltralisk=<c val="ffff8a">사로잡힌 울트라리스크</c> 1기를 원할 때 원하는 위치에 배치할 수 있도록 준비합니다.
+Button/Tooltip/MengskUltraliskCalldown=대상 위치에 <c val="ffff8a">사로집힌 울트라리스크</c> <d ref="Effect,UltraliskMengskCU,SpawnCount"/>기를 배치합니다.
+Button/Tooltip/MissileTurretMengsk=대공 방어 구조물입니다.<n/><n/><c val="#ColorAttackInfo">공중 유닛 공격 가능</c><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/MissileTurretMengsk2=대공 방어 구조물입니다.<n/><n/><c val="#ColorAttackInfo">공중 유닛 공격 가능</c><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/MissileTurretMengskPassive=공학 연구소는 미사일 포탑을 건설할 수 있게 해줍니다.
+Button/Tooltip/MorphtoRavenMengsk=세뇌를 중단하고 황제의 증인의 이동 능력을 복원시킵니다.
+Button/Tooltip/MorphtoRavenMengskSieged=황제의 증인에게 주위 아군을 세뇌하는 능력을 부여하지만 이동 능력이 사라집니다. 
+Button/Tooltip/MutaliskMengsk=과학자들은 뮤탈리스크의 자연스러운 행동을 연구할 수 있을 만큼 큰 새장을 요구했습니다. 곧 연구 시설에서는 하염없이 늘어만 가는 실종자 수가 문제로 대두되었습니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/NukeCalldownMengsk=선택한 지점에 전술 미사일을 떨어트립니다. 전술 미사일은 <d ref="Effect,GhostMengskNukeCP,InitialDelay + Effect,GhostMengskNukeCP,ExpireDelay + Effect,GhostMengskNukeDetonateCP,InitialDelay"/>초 후 투하되어 좁은 범위의 적에게 최대 <d ref="Effect,GhostMengskNukeDamage,Amount"/>(구조물에는 추가 <d ref="Effect,GhostMengskNukeDamage,AttributeBonus[Structure]"/>)의 피해를 줍니다.<n/><n/>황실 사관학교에서 충전할 수 있습니다.
+Button/Tooltip/NukeMengskArm=격납고에 전술 미사일을 배치합니다.<n/><n/>전술 미사일은 <d ref="Effect,GhostMengskNukeCP,InitialDelay + Effect,GhostMengskNukeCP,ExpireDelay + Effect,GhostMengskNukeDetonateCP,InitialDelay"/>초 후 투하되어 좁은 범위의 적에게 최대 <d ref="Effect,GhostMengskNukeDamage,Amount"/>(구조물에는 추가 <d ref="Effect,GhostMengskNukeDamage,AttributeBonus[Structure]"/>)의 피해를 줍니다.<n/><n/>황제의 그림자가 투하 위치를 정할 수 있습니다.
+Button/Tooltip/PromotionAllowed=<n/><c val="ffff8a">사용 효과 :</c> 이 유닛에 즉시 200의 경험치를 부여합니다.<n/>
+Button/Tooltip/PropagandaBlastMengsk=주위 아군 유닛의 이동 속도와 공격 속도가 <d ref="(Behavior,PropagandaBlastMengsk,Modification.AttackSpeedMultiplier-1)*100"/>% 증가합니다.
+Button/Tooltip/PropagandaBlastMengskUpgraded=주위 아군 유닛의 이동 속도와 공격 속도가 <d ref="(Behavior,PropagandaBlastMengsk,Modification.AttackSpeedMultiplier-1)*100"/>% 증가합니다. 세뇌된 인부와 부대원이 <c val="#ColorAttackInfo">황제 지지</c>를 제공하여 <c val="#ColorAttackInfo">황제의 통치력</c> 생성 속도를 증가시킵니다.
+Button/Tooltip/RaiseMengsk=지상 유닛이 통과할 수 없도록 구조물을 올립니다.
+Button/Tooltip/RavenMengsk=공중 지원 유닛입니다. 애국자 모드를 사용하여 주위 아군을 세뇌할 수 있습니다.<n/><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/RavenMengskSieged=공중 지원 유닛입니다.<n/><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/RefineryMengsk=베스핀 가스 채취를 위해 베스핀 간헐천 위에 건설하는 구조물입니다.
+Button/Tooltip/ResearchLockedLevel05=이 업그레이드는 사령관이 5 레벨이 되면 사용할 수 있습니다.
+Button/Tooltip/RoyalGuardMengsk=적 유닛을 처치하면 주위 <c val="ffff8a">근위대</c>가 경험치를 획득합니다. 적을 처치했을 때 주위에 근위대가 없으면, 복무 중인 모든 근위대에게 경험치가 분배됩니다. 경험치를 획득하면 <c val="ffff8a">등급</c>이 올라 공격력, 방어력, 체력을 높일 수 있습니다.
+Button/Tooltip/RoyalGuardMengskEnergy=적 유닛을 처치하면 주위 <c val="ffff8a">근위대</c>가 경험치를 획득합니다. 적을 처치했을 때 주위에 근위대가 없으면, 복무 중인 모든 근위대에게 경험치가 분배됩니다. 경험치를 획득하면 <c val="ffff8a">등급</c>이 올라 공격력, 방어력, 체력을 높일 수 있습니다.
+Button/Tooltip/RoyalGuardMengskRank3Locked=<n/><c val="ff0000">3등급: 사령관 레벨 15에 해제됩니다.</c>
+Button/Tooltip/RoyalGuardMengskRanks=<n/><n/><c val="ffff8a">이 유닛은 등급이 오를 때마다 새로운 능력 또는 지속 능력을 얻습니다.</c><n/>
+Button/Tooltip/RoyalGuardMengskTopBarEnergy=이 유닛은 보급품 비용과 등급을 기반으로 황제의 통치력에 기여합니다.
+Button/Tooltip/SCVMengsk=기본 일꾼 유닛입니다. 자원을 채취하고, 건물을 건설하며, 건물과 유닛을 수리할 수 있습니다. 부대원으로 전환할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/SCVMengskEnlist=부대원에게 명령을 내려 가장 가까운 징병소나 보급 벙커에서 인부복으로 갈아입게 합니다.
+Button/Tooltip/SCVMengskEnlistCC=부대원에게 명령을 내려 징병소나 보급 벙커에서 인부복으로 갈아입게 합니다.
+Button/Tooltip/ScienceFacilityMengsk=사로잡힌 저그 유닛들을 준비하여 전장에 배치합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 사로잡힌 저글링<n/>- 사로잡힌 히드라리스크<n/>- 사로잡힌 뮤탈리스크<n/>- 사로잡힌 울트라리스크
+Button/Tooltip/SetArtilleryMengskRallyPoint=내보낸 인부와 부대원을 지정한 지점으로 보냅니다.
+Button/Tooltip/SetCommandCenterRallyPointLaborer=징집한 인부를 지정한 지점으로 보냅니다. 광맥 또는 정제소로 보낸 인부는 자동으로 채취를 시작합니다.
+Button/Tooltip/SetCommandCenterRallyPointTrooper=징집한 부대원을 지정한 지점으로 보냅니다.
+Button/Tooltip/SetSupplyBunkerRallyPoint=내보낸 인부와 부대원을 지정한 지점으로 보냅니다.
+Button/Tooltip/SiegeModeMengsk=공성 모드로 전환합니다. 이 모드에서 충격 전차는 사거리가 증가하고 범위 피해를 줍니다. 이 모드의 충격 전차는 이동하거나 가까운 대상을 공격하지 못합니다.
+Button/Tooltip/SiegeTankMengsk=근위대 중전차입니다. 공성 모드로 전환하여 장거리 지원 포격을 할 수 있습니다.<n/><n/><c val="FFFF8A">지상 유닛 공격 가능</c>
+Button/Tooltip/SiegeTankMengskAirlift=공성 모드의 충격 전차가 황제의 중재선을 타고 이동하는 동안에 감소한 공격 속도로 공중 유닛을 공격할 수 있습니다.
+Button/Tooltip/SiegeTankMengskImperialMandateGeneration=<c val="#ColorAttackInfo">근위대</c>가 차지하는 보급품 비용 및 <c val="#ColorAttackInfo">등급</c>을 기반으로 <c val="#ColorAttackInfo">황제 지지</c>를 증가시킵니다. 황제 지지 1포인트당 <d time="240"/>마다 <c val="#ColorAttackInfo">황제의 통치력</c>이 1 생성됩니다.<n/><n/>이 유닛은 황제 지지를 <c val="#ColorAttackInfo"><d ref="$BehaviorStackCount:MengskVeterancySiegeTankMengsk$*Unit,SiegeTankMengsk,Food*(-1)*Effect,RoyalGuardMengskTopbarRegenDummy,Amount" player="current" precision="0"/></c> 증가시킵니다.
+Button/Tooltip/SiegeTankMengskRank1=<n/><c val="ffff8a">1등급:</c> 충격과 공포 능력을 획득합니다.
+Button/Tooltip/SiegeTankMengskRank1Preview=<n/><c val="777777">1단계: 충격과 공포 능력을 획득합니다.</c>
+Button/Tooltip/SiegeTankMengskRank2=<n/><c val="ffff8a">2등급:</c> 공성 모드의 시야와 공격 사거리가 2만큼 증가합니다.
+Button/Tooltip/SiegeTankMengskRank2Preview=<n/><c val="777777">2등급: 공성 모드의 시야와 공격 사거리가 2만큼 증가합니다.</c>
+Button/Tooltip/SiegeTankMengskRank3=<n/><c val="ffff8a">3등급: 공성 공격의 범위가 <d ref="(Effect,SiegeTankMengskSiegedImprovedAoEBlast,AreaArray[2].Radius/Effect,SiegeTankMengskSiegedBlast,AreaArray[2].Radius-1)*100" precision="0"/>% 증가합니다.</c>
+Button/Tooltip/SiegeTankMengskRank3Preview=<n/><c val="777777">3등급: 공성 공격의 범위가 <d ref="(Effect,SiegeTankMengskSiegedImprovedAoEBlast,AreaArray[2].Radius/Effect,SiegeTankMengskSiegedBlast,AreaArray[2].Radius-1)*100" precision="0"/>% 증가합니다.</c>
+Button/Tooltip/SiegeTankMengskSieged=근위대 중전차입니다. 전차 모드로 변환하면 이동 포격을 할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/SiegeTankMengskStun=공성 모드에서 이 유닛의 공격이 이제 적 유닛을 <d ref="Behavior,SiegeTankMengskStun,Duration"/>초 동안 기절시킵니다. 각 유닛에 <d ref="Behavior,SiegeTankMengskStunImmunity,Duration"/>초에 한 번만 발동합니다.<n/><n/><c val="#ColorAttackInfo">거대 유닛은 느려지지 않습니다.</c>
+Button/Tooltip/SnipeMengsk=정조준하여 <d ref="Effect,SnipeDamage,Amount"/>(사이오닉 상대로 <d ref="Effect,SnipeDamage,Amount + Effect,SnipeDamage,AttributeBonus[5]"/>)의 피해를 줍니다. 방어력을 무시합니다.<n/><n/><c val="#ColorAttackInfo">생체 유닛만 대상 지정 가능</c>
+Button/Tooltip/SnipeMengskNovaGhost=정조준하여 <d ref="Effect,SnipeDamage,Amount"/>의 피해를 줍니다. 방어력을 무시합니다.<n/><n/><c val="#ColorAttackInfo">생체 유닛만 대상 지정 가능</c>
+Button/Tooltip/StarportMengsk=제국 근위대의 공중 유닛 생산 시설입니다. <n/><n/><c val="ffff8a">사용 가능:</c><n/>- 황제의 중재선<n/>- 황제의 증인<n/>- 창공의 분노
+Button/Tooltip/StarportMengskFlying=우주공항에서 유닛을 생산하려면 지상에 착륙해야 합니다.
+Button/Tooltip/StructureArmorMengsk=이 구조물의 체력과 방어력이 증가합니다.
+Button/Tooltip/StructureArmorMengskResearch=<c val="ffff8a">보급 벙커</c>, <c val="ffff8a">미사일 포탑</c>, <c val="ffff8a">대지파괴 포</c>의 체력과 방어력이 증가합니다.
+Button/Tooltip/TacNukeArm=격납고에 전략 핵미사일을 배치합니다.<n/><n/>핵미사일은 <d time="4"/> 후 발사되어 대상 위치로 비행, 폭발하여 넓은 범위에 있는 모든 유닛의 보호막을 모두 소진시키며, 최대 체력의 2/3만큼의 피해를 줍니다. 최소 피해량은 500입니다.<n/><n/>황실 사관학교에서 타격 지점을 지정합니다.
+Button/Tooltip/TacNukeMissileCalldown=선택한 지점에 전략 핵미사일을 떨어트립니다. 전략 핵미사일은 <d time="4"/> 후 발사되어 대상 위치로 비행, 폭발하여 넓은 범위에 있는 모든 유닛의 보호막을 모두 소진시키며, 최대 체력의 2/3만큼의 피해를 줍니다. 최소 피해량은 500입니다.
+Button/Tooltip/ThorMengsk=근위대 중돌격 기계 유닛입니다. 감시 모드를 사용할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/ThorMengskArmorAura=다른 주위 아군 지상 유닛의 방어력이 <d ref="Behavior,ThorMengskArmorAuraTarget,Modification.LifeArmorBonus"/> 증가합니다.
+Button/Tooltip/ThorMengskArmorAuraResearch=<c val="ffff8a">검은망치</c>가 주위 아군 유닛의 방어력을 <d ref="Behavior,ThorMengskArmorAuraTarget,Modification.LifeArmorBonus"/> 증가시킵니다.
+Button/Tooltip/ThorMengskImperialMandateGeneration=<c val="#ColorAttackInfo">근위대</c>가 차지하는 보급품 비용 및 <c val="#ColorAttackInfo">등급</c>을 기반으로 <c val="#ColorAttackInfo">황제 지지</c>를 증가시킵니다. 황제 지지 1포인트당 <d time="240"/>마다 <c val="#ColorAttackInfo">황제의 통치력</c>이 1 생성됩니다.<n/><n/>이 유닛은 황제 지원을 <c val="#ColorAttackInfo"><d ref="$BehaviorStackCount:MengskVeterancyThorMengsk$*Unit,ThorMengsk,Food*(-1)*Effect,RoyalGuardMengskTopbarRegenDummy,Amount" player="current" precision="0"/></c> 증가시킵니다.
+Button/Tooltip/ThorMengskRank1=<n/><c val="ffff8a">1등급:</c> 감시 모드의 광역 피해 범위가 <d ref="(Effect,ThorMengskSiegeTargetLargeAoESearch,AreaArray[0].Radius/Effect,ThorMengskSiegeTargetSearch,AreaArray[0].Radius-1)*100" precision="0"/>% 증가합니다.
+Button/Tooltip/ThorMengskRank1Preview=<n/><c val="777777">1단계: 감시 모드의 광역 피해 범위가 <d ref="(Effect,ThorMengskSiegeTargetLargeAoESearch,AreaArray[0].Radius/Effect,ThorMengskSiegeTargetSearch,AreaArray[0].Radius-1)*100" precision="0"/>% 증가합니다.</c>
+Button/Tooltip/ThorMengskRank2=<n/><c val="ffff8a">2등급: 감시 모드의 사거리가 <d ref="Abil,ThorMengskSiegeTargetedIncreasedRange,Range[0]-Abil,ThorMengskSiegeTargeted,Range[0]"/>만큼 증가합니다.</c>
+Button/Tooltip/ThorMengskRank2Preview=<n/><c val="777777">2등급: 감시 모드의 사거리가 <d ref="Abil,ThorMengskSiegeTargetedIncreasedRange,Range[0]-Abil,ThorMengskSiegeTargeted,Range[0]"/>만큼 증가합니다.</c>
+Button/Tooltip/ThorMengskRank3=<n/><c val="ffff8a">3등급: 감시 모드 시 공격 속도가 <d ref="(Behavior,ThorMengskSiegeAttackRate,Modification.AttackSpeedMultiplier-1)*100" precision="0"/>% 증가합니다.</c>
+Button/Tooltip/ThorMengskRank3Preview=<n/><c val="777777">3등급: 감시 모드 시 공격 속도가 <d ref="(Behavior,ThorMengskSiegeAttackRate,Modification.AttackSpeedMultiplier-1)*100" precision="0"/>% 증가합니다.</c>
+Button/Tooltip/ThorMengskSiege=감시 모드를 실행합니다. 이 모드에서 검은망치는 공중 유닛에게 큰 범위 피해를 줍니다. 검은망치는 이 모드에서 움직일 수 없습니다.
+Button/Tooltip/ThorMengskSieged=이동 불가능한 근위병 중돌격 기계 유닛입니다. 공중 유닛에게 막대한 피해를 줍니다. 보행 모드로 전환하면 이동 가능합니다.<n/><n/><c val="#ColorAttackInfo">공중 유닛 공격 가능</c>
+Button/Tooltip/ThorMengskUnsiege=보행 모드로 전환합니다. 이 모드로 전환하면 검은망치가 이동할 수 있습니다.
+Button/Tooltip/TrooperMengsk=다용도 보병입니다. 다양한 전투 상황에 맞춰 무기를 장착할 수 있습니다. 인부복으로 갈아입을 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/TrooperMengskAA=대공 전문 공격 유닛입니다. 인부복으로 갈아입을 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/TrooperMengskBuild=전투 구조물 목록입니다.
+Button/Tooltip/TrooperMengskDropTrain=징병소에서 동시에 두 유닛을 생산할 수 있습니다.
+Button/Tooltip/TrooperMengskDropTrainResearch=<c val="ffff8a">징병소</c>에서 동시에 두 유닛을 징집할 수 있게 합니다. 또한, 병영에서 <c val="ffff8a">자치령 부대원</c>을 한 번에 2기씩 징집합니다.
+Button/Tooltip/TrooperMengskEnlist=인부에게 명령을 내려 가장 가까운 징병소나 보급 벙커에서 부대원 복장으로 갈아입게 합니다.
+Button/Tooltip/TrooperMengskEnlistCC=인부에게 명령을 내려 징병소나 보급 벙커에서 부대원 복장으로 갈아입게 합니다.
+Button/Tooltip/TrooperMengskFlamethrower=대보병 전문 공격 유닛입니다. 인부복으로 갈아입을 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/TrooperMengskImperialMandateGeneration=이 유닛이 황제의 증인으로 세뇌되면 <c val="#ColorAttackInfo">황제 지지</c>를 <c val="FFFF8A"><d ref="Effect,PropagandaMengskTopbarRegenDummy,Amount" player="current" precision="0"/></c> 증가시킵니다. 황제 지지 1포인트당 <c val="#ColorAttackInfo">황제의 통치력</c>이 <d time="240"/>마다 1 증가합니다.
+Button/Tooltip/TrooperMengskImproved=강화된 다목적 보병 유닛입니다. 인부복으로 갈아입을 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/TrooperMengskResearchAA=<c val="ffff8a">자치령 부대원</c>이 중장갑 공중 유닛에게 특히 효과적인 강력한 무기인 대공 미사일 발사기를 장착할 수 있도록 연구합니다. 해당 무기를 장착한 유닛이 죽으면 무기가 땅에 떨어져 다른 자치령 부대원이 획득할 수 있습니다.
+Button/Tooltip/TrooperMengskResearchFlamethrower=<c val="ffff8a">자치령 부대원</c>이 경장갑 지상 유닛에게 특히 효과적인 강력한 화염방사기를 장착할 수 있도록 연구합니다. 해당 무기를 장착한 유닛이 죽으면 무기가 땅에 떨어져 다른 자치령 부대원이 획득할 수 있습니다.
+Button/Tooltip/TrooperMengskResearchImproved=<c val="ffff8a">자치령 부대원</c>이 모든 유닛 유형에 효과적인 강력한 무기인 대구경 경기관총을 장착할 수 있도록 연구합니다. 해당 무기를 장착한 유닛이 죽으면 무기가 땅에 떨어져 다른 자치령 부대원이 획득할 수 있습니다.
+Button/Tooltip/TrooperMengskSpecializeAA=부대원이 중장갑 공중 유닛에게 특히 효과적인 강력한 무기를 장비합니다. 이 유닛이 죽으면 무기가 땅에 떨어져 다른 자치령 부대원이 획득할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/TrooperMengskSpecializeFlamethrower=부대원이 경장갑 지상 유닛에게 특히 효과적인 강력한 무기를 장비합니다. 이 유닛이 죽으면 무기가 땅에 떨어져 다른 자치령 부대원이 획득할 수 있습니다.<n/><n/><c val="FFFF8A">지상 유닛 공격 가능</c>
+Button/Tooltip/TrooperMengskSpecializeImproved=부대원이 모든 유닛 유형에 효과적인 강력한 무기를 장비합니다. 이 유닛이 죽으면 무기가 땅에 떨어져 다른 자치령 부대원이 획득할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/TrooperMengskWeaponRefundText=<s val="Kicker_Minerals">+<d ref="Effect,TrooperMengskWeaponRefund,Resources[0]"/> </s><IMG path="Assets\Textures\icon-mineral-terran.dds" alignment="absolutemiddle" height="28" width="28"/><s val="Kicker_Gas"><n/>+<d ref="Effect,TrooperMengskWeaponRefund,Resources[1]"/> <IMG path="Assets\Textures\icon-gas-terran.dds" alignment="absolutemiddle" height="28" width="28"/></s>
+Button/Tooltip/UltraliskMengsk="저기 올라가서 대가리 근처 뾰족한 부분에 장치를 설치해라. 그래, 그렇게. 그리고 허버트, 야수가 깨어나지 않게 조심해라. 놈이 자극을 받아서 광란에 빠지면, 오늘 밤에 통제할 수 있을 만큼 진정시킬 수 없게 될 테니."<n/><n/>- 서브소우리안 박사, 실험실 조교에게<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/UnsiegeMengsk=전차 모드로 돌아갑니다. 전차 모드인 충격 전차는 이동할 수 있으나 공격력이 감소합니다.
+Button/Tooltip/VikingMengskAssault=튼튼한 전투 지원 유닛입니다. 전투기 모드로 전환하여 공중 유닛을 공격할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/VikingMengskAttackDamage=변신하면 <d ref="Behavior,VikingMengskAirAttackDamage,Duration"/>초 동안 공격력이 <d ref="(Behavior,VikingMengskAirAttackDamage,DamageResponse.ModifyFraction-1)*100"/>% 증가합니다. <d ref="Behavior,VikingMengskAttackDamageCooldown,Cost.Cooldown.TimeUse"/>초에 한 번만 발동합니다.
+Button/Tooltip/VikingMengskCheatDeath=이 유닛이 치명적인 피해를 받으면 창공의 분노가 전투기 모드로 전환해서 일시적으로 <d ref="Behavior,VikingMengskCheatDeath,Duration"/>초 동안 <d ref="Behavior,VikingMengskCheatDeath,DamageResponse.ModifyLimit"/>의 피해를 흡수하는 방어막을 얻습니다. <d ref="Behavior,VikingMengskCheatDeathCooldown,Cost.Cooldown.TimeUse"/>초에 한 번만 발동합니다.
+Button/Tooltip/VikingMengskDodge=이 유닛은 <d ref="Behavior,VikingMengskFighterDodge,DamageResponse.Chance*100"/>% 확률로 공격을 회피합니다.
+Button/Tooltip/VikingMengskFighter=튼튼한 근위병 전투 지원기입니다. 강력한 대주력함 공중 미사일을 탑재하고 있습니다. 돌격 모드로 전환하여 지상 유닛을 공격할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">공중 유닛 공격 가능</c>
+Button/Tooltip/VikingMengskImperialMandateGeneration=<c val="#ColorAttackInfo">근위대</c>가 차지하는 보급품 비용 및 <c val="#ColorAttackInfo">등급</c>을 기반으로 <c val="#ColorAttackInfo">황제 지지</c>를 증가시킵니다. 황제 지지 1포인트당 <d time="240"/>마다 <c val="#ColorAttackInfo">황제의 통치력</c>이 1 생성됩니다.<n/><n/>이 유닛은 황제 지원을 <c val="#ColorAttackInfo"><d ref="$BehaviorStackCount:MengskVeterancyVikingMengsk$*Unit,VikingMengskFighter,Food*(-1)*Effect,RoyalGuardMengskTopbarRegenDummy,Amount" player="current" precision="0"/></c> 증가시킵니다.
+Button/Tooltip/VikingMengskRank1=<n/><c val="ffff8a">1등급:</c> 거대 유닛에게 추가 피해를 줍니다.
+Button/Tooltip/VikingMengskRank1Preview=<n/><c val="777777">1등급: 거대 유닛에 추가 피해를 줍니다.</c>
+Button/Tooltip/VikingMengskRank2=<n/><c val="ffff8a">2등급</c>: 전술 재편성 능력을 획득합니다.
+Button/Tooltip/VikingMengskRank2Preview=<n/><c val="777777">2등급: 전술 재편성 능력을 획득합니다.</c>
+Button/Tooltip/VikingMengskRank3=<n/><c val="ffff8a">3등급:</c> 회피 기동과 불사조 프로토콜 능력을 얻습니다.
+Button/Tooltip/VikingMengskRank3Preview=<n/><c val="777777">3등급: 회피 기동과 불사조 프로토콜 능력을 얻습니다.</c>
+Button/Tooltip/VikingMengskSpeed=이동 속도가 <d ref="$UpgradeEffectArrayValue:VikingMengskSpeed:Unit,VikingMengskFighter,Speed$/Unit,VikingMengskFighter,Speed*100" player="0"/>% 증가합니다.
+Button/Tooltip/VikingMengskSpeedResearch=<c val="ffff8a">창공의 분노</c>의 이동 속도가 <d ref="$UpgradeEffectArrayValue:VikingMengskSpeed:Unit,VikingMengskFighter,Speed$/Unit,VikingMengskFighter,Speed*100" player="0"/>% 증가합니다.
+Button/Tooltip/WeaponsFreeMengsk=선택한 유닛이 공격하도록 허용합니다. 사거리 안에 적이 들어오면 평소대로 그들과 교전을 벌이고 추적합니다.
+Button/Tooltip/YamatoGunMengsk=강력한 플라스마 포로 대상을 공격하여 <d ref="Effect,BattlecruiserMengskYamatoDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/ZerglingMengsk=아크튜러스 멩스크의 통치 기간 중에, 케르베로스 프로그램의 가장 뛰어난 박스들로 이루어진 비밀 집단은 고립된 마구로 무리로부터 여러 종의 저그를 확보하는 임무를 맡았습니다. 저글링은 그들이 확보한 첫 표본 중 하나였습니다.<n/><n/><c val="FFFF8A">지상 유닛 공격 가능</c>
+Commander/Name/UIMengsk=UIMengsk
+DocInfo/DescLong=Commander Mengsk Mod for SC: Revolution Overdrive
+DocInfo/Name=Mengsk Mod for SC: Revolution Overdrive
+Effect/Name/ATALaserBatteryMengskLM=공대공 레이저 포대
+Effect/Name/ATALaserBatteryMengskU=공대공 레이저 포대
+Effect/Name/ATSLaserBatteryMengskLM=공대지 레이저 포대
+Effect/Name/ATSLaserBatteryMengskU=공대지 레이저 포대
+Effect/Name/AmmoTimedLife=탄약 시한 생명
+Effect/Name/ArtilleryMengskBombardmentSwitch=ArtilleryMengskBombardmentSwitch
+Effect/Name/ArtilleryMengskExperimentalStrikeUM=ArtilleryMengskExperimentalStrikeUM
+Effect/Name/C10CanisterRifleMengsk=C-10 산탄 소총
+Effect/Name/PickupRemove=제거 획득
+Effect/Name/SCVMengskAttackDamage=SCVMengskAttackDamage
+Effect/Name/ScienceFacilityHydralisksSet=ScienceFacilityHydralisksSet
+Effect/Name/ScienceFacilityMutalisksSet=ScienceFacilityMutalisksSet
+Effect/Name/ScienceFacilityUltraliskSet=ScienceFacilityUltraliskSet
+Effect/Name/ScienceFacilityZerglingsSet=ScienceFacilityZerglingsSet
+Effect/Name/ThreatTest=ThreatTest
+Race/Name/TerM=테란 멩스크
+RequirementNode/Tooltip/CountBehaviorPropagandaBlastMengskCompleteOnlyAtUnit1474688104=황제의 증인에게 세뇌
+RequirementNode/Tooltip/CountUnitAlias_BarracksMengskCompleteOnly92025031TechTreeCheat=병영
+RequirementNode/Tooltip/CountUnitAlias_CommandCenterMengskCompleteOnly1787385606TechTreeCheat=징병소
+RequirementNode/Tooltip/CountUnitAlias_FactoryMengskCompleteOnly3975202633TechTreeCheat=군수공장
+RequirementNode/Tooltip/CountUnitAlias_StarportMengskCompleteOnly880601908TechTreeCheat=우주공항
+RequirementNode/Tooltip/CountUnitArtilleryMengskCompleteOnly2292951859TechTreeCheat=대지파괴 포
+RequirementNode/Tooltip/CountUnitBunkerDepotMengskCompleteOnly1297102915TechTreeCheat=보급 벙커
+RequirementNode/Tooltip/CountUnitEngineeringBayMengskCompleteOnly1938945142TechTreeCheat=공학 연구소
+RequirementNode/Tooltip/CountUnitFusionCoreMengskCompleteOnly203485344TechTreeCheat=융합로
+RequirementNode/Tooltip/CountUnitGhostAcademyMengskCompleteOnly2782960886=황실 사관학교
+RequirementNode/Tooltip/CountUnitNukeMengskCompleteOnly3727871538=황실 사관학교에서 전술 미사일 생산
+RequirementNode/Tooltip/CountUnitTacNukeMissileUnitCompleteOnlyAtUnit1351533016=황실 사관학교에서 전략 핵 생산
+RequirementNode/Tooltip/CountUpgradeArtilleryMengskRangeCompleteOnly3576403734=공학 연구소에서 반구 촉매 연구
+RequirementNode/Tooltip/CountUpgradeBattlecruiserMengskRangeAuraCompleteOnly2725800310=융합로에서 현장 지원 조준 시스템 연구
+RequirementNode/Tooltip/CountUpgradeBlimpMengskTopbarRegenCompleteOnly3221082208=융합로에서 공기 파장 증폭 연구
+RequirementNode/Tooltip/CountUpgradeBunkerDepotMengskRangeCompleteOnly3144739092=공학 연구소에서 조준 지원 총안 연구
+RequirementNode/Tooltip/CountUpgradeGhostMengskGuidedStrikeCompleteOnly989769884=황실 사관학교에서 통치자의 전술 미사일 연구
+RequirementNode/Tooltip/CountUpgradeMarauderMengskSlowCompleteOnly2342204682=황실 사관학교에서 무력화탄 연구
+RequirementNode/Tooltip/CountUpgradeMedivacMengskDoubleHealBeamCompleteOnly269547913=융합로에서 이중 소생기 연구
+RequirementNode/Tooltip/CountUpgradeMedivacMengskPermanentCloakCompleteOnly511910073=융합로에서 장막 살포 연구
+RequirementNode/Tooltip/CountUpgradeMedivacMengskSiegeTankAirliftCompleteOnly4291057663=무기고에서 군비 안정판 연구
+RequirementNode/Tooltip/CountUpgradeMedivacMengskSiegeTankAirliftQueuedOrBetter4291057663=무기고에서 군비 안정판 연구
+RequirementNode/Tooltip/CountUpgradeMengskStructureArmorCompleteOnly2054151329=공학 연구소에서 신소재 강화 장갑 연구
+RequirementNode/Tooltip/CountUpgradeThorMengskArmorAuraCompleteOnly618094651=무기고에서 방어장 연구
+RequirementNode/Tooltip/CountUpgradeTrooperMengskDropTrainCompleteOnly480319619=공학 연구소에서 부대원 궤도 낙하기 연구
+RequirementNode/Tooltip/CountUpgradeVikingMengskSpeedCompleteOnly1841791773=융합로에서 에이시어 터빈 연구
+RequirementNode/Tooltip/Eq1349852341CountUpgradeMengskTrooperArmorsLevel2CompleteOnly1=자치령 장갑 2단계
+RequirementNode/Tooltip/Eq2456287108CountUpgradeMengskTrooperArmorsLevel1CompleteOnly1=자치령 장갑 1단계
+RequirementNode/Tooltip/Eq3878729167CountUpgradeMengskTrooperWeaponsLevel2CompleteOnly1=지치령 무기 2단계
+RequirementNode/Tooltip/Eq843366628CountUpgradeMengskTrooperWeaponsLevel1CompleteOnly1=지치령 무기 1단계
+RequirementNode/Tooltip/GTE111485213CountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnit4=등급: 3
+RequirementNode/Tooltip/GTE111485213CountBehaviorMengskVeterancyVikingMengskCompleteOnlyAtUnit4=등급: 3
+RequirementNode/Tooltip/GTE1737461815CountBehaviorArtilleryMengskCargoCompleteOnlyAtUnit1=인부 들이기
+RequirementNode/Tooltip/GTE366229690CountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnit2=등급: 1
+RequirementNode/Tooltip/GTE366229690CountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnit2=등급: 1
+RequirementNode/Tooltip/GTE366229690CountBehaviorMengskVeterancySiegeTankMengskCompleteOnlyAtUnit2=등급: 1
+RequirementNode/Tooltip/GTE4126974048CountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnit3=등급: 2
+RequirementNode/Tooltip/GTE4126974048CountBehaviorMengskVeterancyVikingMengskCompleteOnlyAtUnit3=등급: 2
+RequirementNode/Tooltip/LT1117748507CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit1=전략 핵 없음
+RequirementNode/Tooltip/LT440745099CountUnitExperimentalStrikeUnitQueuedOrBetterAtUnit4=대지파괴 포에 3발 이하의 오염된 강타 장전
+RequirementNode/Tooltip/Not2895527276CountUnitNukeMengskQueuedOrBetterAtUnit=이 황실 사관학교에 전술 미사일 없음
+TrooperOrLaborer=부대원 또는 인부를 대상으로 해야 합니다.
+UI/MengskTopBarEnergyDesc=황제의 통치력은 위급 상황에서 비상 통치권을 발휘할 수 있게 해줍니다.<n/><n/>황제의 통치력은 <d time="[d ref='Effect,TopbarMengskBonusRegenFactorDummy,Amount'/]" player="current" precision="0"/>마다 <d ref="Unit,CoopCasterMengsk,EnergyRegenRate+Effect,MengskTopBarEnergyRegenRoyalGuardDummy,Amount+Effect,MengskTopBarEnergyRegenTrooperDummy,Amount" player="current" precision="0"/>의 비율로 생성됩니다.
+UI/MengskTopBarEnergyName=황제의 통치력
+UI/MengskTopBarEnergyRegenRoyalGuardName=제국의 힘
+UI/MengskTopBarEnergyRegenTrooperName=시민의 의지
+UI/ResourceName3=진영 고유 자원
+UI/ResourceNameMengsk=지지도
+UI/ResourceSupplyToolTip_TerM=살아있는 유닛은 보급품이 필요합니다. 보급 벙커를 건설하여 보급을 늘리십시오.
+Unit/Category/MengskUnits=테란 - 자치령
+Unit/Name/ATALaserBatteryMengskLMWeapon=공대공 레이저 포대 멩스크
+Unit/Name/ATSLaserBatteryMengskLMWeapon=공대지 레이저 포대 멩스크
+Unit/Name/ArmoryMengsk=무기고
+Unit/Name/ArtilleryMengsk=대지파괴 포
+Unit/Name/BarracksMengsk=병영
+Unit/Name/BattlecruiserMengsk=아우구스트그라드의 자랑
+Unit/Name/BunkerDepotMengsk=보급 벙커
+Unit/Name/CommandCenterMengsk=징병소
+Unit/Name/EMPMengskWeapon=EMP 멩스크
+Unit/Name/EngineeringBayMengsk=공학 연구소
+Unit/Name/FactoryMengsk=군수공장
+Unit/Name/FusionCoreMengsk=융합로
+Unit/Name/GhostAcademyMengsk=황실 사관학교
+Unit/Name/GhostMengsk=황제의 그림자
+Unit/Name/HydraliskMengsk=사로잡힌 히드라리스크
+Unit/Name/KhalenriLictorDummy=칼렌'리 근위병 더미
+Unit/Name/MarauderMengsk=이지스 근위대
+Unit/Name/MedivacMengsk=황제의 중재선
+Unit/Name/MissileTurretMengsk=미사일 포탑
+Unit/Name/MutaliskMengsk=사로잡힌 뮤탈리스크
+Unit/Name/NukeMengsk=전술 미사일
+Unit/Name/PunisherGrenadesMengskLMWeapon=응징자 유탄 멩스크
+Unit/Name/RavenMengsk=황제의 증인
+Unit/Name/RefineryMengsk=정제소
+Unit/Name/RefineryMengskRich=정제소
+Unit/Name/SCVMengsk=자치령 인부
+Unit/Name/ScienceFacilityMengsk=과학 시설
+Unit/Name/SiegeTank=공성 전차
+Unit/Name/SiegeTankMengsk=충격 전차
+Unit/Name/SiegeTankMengskSieged=공성 전차
+Unit/Name/StarportMengsk=우주공항
+Unit/Name/TacticalNukeMissile=전략 핵미사일
+Unit/Name/ThorMengsk=검은망치
+Unit/Name/ThorMengskAAWeapon=토르 멩스크 대공
+Unit/Name/TrooperMengsk=자치령 부대원
+Unit/Name/TrooperMengskAA=자치령 로켓 부대원
+Unit/Name/TrooperMengskFlamethrower=자치령 화염 부대원
+Unit/Name/TrooperMengskImproved=자치령 돌격병
+Unit/Name/TrooperMengskWeaponAAPickup=우박폭풍 발사기
+Unit/Name/TrooperMengskWeaponFlamethrowerPickup=CPO-7 살라만더 화염방사기
+Unit/Name/TrooperMengskWeaponImprovedPickup=B-2 대구경 경기관총
+Unit/Name/UltraliskMengsk=사로잡힌 울트라리스크
+Unit/Name/VikingMengskFighter=창공의 분노
+Unit/Name/ZerglingMengsk=사로잡힌 저글링
+Upgrade/Name/AnnouncerMengsk=멩스크 아나운서
+Upgrade/Name/ArtilleryMengskRange=반구 촉매
+Upgrade/Name/BattlecruiserMengskRangeAura=현장 지원 조준 시스템
+Upgrade/Name/BlimpMengskTopbarRegen=공기 파장 증폭
+Upgrade/Name/BunkerDepotMengskRange=조준 지원 총안
+Upgrade/Name/GhostMengskGuidedStrike=통치자의 전술 미사일
+Upgrade/Name/MarauderMengskSlow=무력화탄
+Upgrade/Name/MechTransformationSpeedMengsk=지능형 제어 장치
+Upgrade/Name/MedivacMengskDoubleHealBeam=이중 소생기
+Upgrade/Name/MedivacMengskPermanentCloak=장막 살포
+Upgrade/Name/MedivacMengskSiegeTankAirlift=군비 안정판
+Upgrade/Name/MengskStructureArmor=신소재 강화 장갑
+Upgrade/Name/MengskTrooperArmorsLevel1=자치령 장갑 1단계
+Upgrade/Name/MengskTrooperArmorsLevel2=자치령 장갑 2단계
+Upgrade/Name/MengskTrooperArmorsLevel3=자치령 장갑 3단계
+Upgrade/Name/MengskTrooperWeaponsLevel1=지치령 무기 1단계
+Upgrade/Name/MengskTrooperWeaponsLevel2=지치령 무기 2단계
+Upgrade/Name/MengskTrooperWeaponsLevel3=지치령 무기 3단계
+Upgrade/Name/ThorMengskArmorAura=방어장
+Upgrade/Name/TrooperMengskDropTrain=신속 징집
+Upgrade/Name/TrooperMengskSpecializeAA=우박폭풍 발사기 장착
+Upgrade/Name/TrooperMengskSpecializeFlamethrower=CPO-7 살라만더 화염방사기 장착
+Upgrade/Name/TrooperMengskSpecializeImproved=B-2 대구경 경기관총 장착
+Upgrade/Name/VikingMengskSpeed=에이시어 터빈
+Weapon/Name/ArtilleryMengskBombardment=포격
+Weapon/Name/C10CanisterRifleMengsk=C-10 산탄 소총
+Weapon/Name/FusionCutterMengsk=융합 절단기
+Weapon/Name/JavelinMissileLaunchersMengsk=재블린 미사일 발사기
+Weapon/Name/LanzerTorpedoesMengsk=랜저 유도탄
+Weapon/Name/MissileTurretMengskMissile=장거리 미사일
+Weapon/Name/MutaliskMengskGlaiveWurm=쐐기 벌레
+Weapon/Name/NeedleSpinesMengsk=바늘 가시뼈
+Weapon/Name/PunisherGrenadesMengsk=응징자 유탄
+Weapon/Name/SiegeTankMengsk=90mm 포
+Weapon/Name/SiegeTankMengskSieged=크루시오 충격포
+Weapon/Name/SwitchLaserBatteryMengsk=레이저 포
+Weapon/Name/ThorMengskSieged=불지옥포
+Weapon/Name/ThorsHammerMengsk=토르의 망치
+Weapon/Name/TrooperMengsk=페로막 기관단총
+Weapon/Name/TrooperMengskFlamethrower=CPO-7 살라만더 화염방사기
+Weapon/Name/TrooperMengskImproved=B-2 대구경 경기관총
+Weapon/Name/TrooperMengskRocket=우박폭풍 발사기
+Weapon/Name/TwinGatlingCannonMengks=개틀링 포
+Weapon/Name/UltraliskMengskKaiserBlades=카이저 칼날
+Weapon/Name/VikingMengskAir=랜저 유도탄
+Weapon/Name/VikingMengskAirMassive=랜저 유도탄
+Weapon/Name/VikingMengskGround=개틀링 포
+Weapon/Name/VikingMengskGroundMassive=개틀링 포
+Weapon/Name/ZerglingMengskClaws=발톱
+e_cmdNotEnoughCustom=진영 고유 자원이 부족합니다.

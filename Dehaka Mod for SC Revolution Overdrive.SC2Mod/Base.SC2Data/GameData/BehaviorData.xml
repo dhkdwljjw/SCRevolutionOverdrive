@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff default="1" id="DehakaConsumeEffectBase">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-consume.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <RemoveValidatorArray value="NoDehakaPrimalMutation"/>
+        <Duration value="15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="MurvarCreepSpawn">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="50"/>
+        <Duration value="2.3"/>
+        <DurationRandomMax value="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsume">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeDisableCommandCard">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="DehakaConsumeTargetNotDead"/>
+        <BuffFlags index="Channeled" value="1"/>
+        <Duration value="1.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeEffectAir" parent="DehakaConsumeEffectBase">
+        <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-AirAttack.dds"/>
+        <Modification>
+            <WeaponArray Link="DehakaCoopAirBeam"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeEffectArmored" parent="DehakaConsumeEffectBase">
+        <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-MoreArmorDamage.dds"/>
+        <Modification>
+            <DamageDealtAttributeMultiplier index="Armored" value="0.3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeEffectBiological" parent="DehakaConsumeEffectBase">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-Healing.dds"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeEffectDetector" parent="DehakaConsumeEffectBase">
+        <BehaviorCategories index="User14" value="1"/>
+        <Modification Detect="11" DetectFilters="-;Missile"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeEffectHeroic" parent="DehakaConsumeEffectBase"/>
+    <CBehaviorBuff id="DehakaConsumeEffectLight" parent="DehakaConsumeEffectBase">
+        <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-SpeedBoost.dds"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeEffectMassive" parent="DehakaConsumeEffectBase">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-kraith-thornsaura.dds"/>
+        <Modification>
+            <LifeArmorBonus value="3"/>
+        </Modification>
+        <DamageResponse Handled="DehakaConsumeReflectLaunchMissile" TargetFilters="-;Player,Ally,Neutral,Stasis,Invulnerable">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeEffectMechanical" parent="DehakaConsumeEffectBase">
+        <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-AttackSpeed.dds"/>
+        <BehaviorCategories index="Fast" value="1"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeEffectPsionic" parent="DehakaConsumeEffectBase">
+        <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-Psionic.dds"/>
+        <Modification>
+            <RateMultiplierArray index="Cooldown" value="2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumePrecursor">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <FinalEffect value="DehakaConsumeSuicideRemove"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeStunned">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Channeled" value="1"/>
+        <Duration value="2"/>
+        <Modification>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="SuppressPassenger" value="1"/>
+            <AbilClassDisableArray index="CAbilBuild" value="1"/>
+            <AbilLinkDisableArray value="WidowMineAttack"/>
+            <BehaviorClassDisableArray index="CBehaviorJump" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaConsumeTentacle">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaEssenceReviver">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaPrimalMutation">
+        <InfoIcon value="Assets\Textures\btn-ability-kerrigan-wildmutation.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <Duration value="60"/>
+        <Modification>
+            <VitalMaxFractionArray index="Life" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaLeapStompArmor">
+        <Alignment value="Positive"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="20"/>
+        <Duration value="2"/>
+        <Modification>
+            <LifeArmorBonus value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaLeapStompPrecursor">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.5"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+        <FinalEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaPlacementRemove">
+        <Duration value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <FinalEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaDeepTunnelStunCaster">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="4"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InstantUnburrowDehaka">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="5"/>
+        <Modification>
+            <StateFlags index="TransientMorph" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaIntimidatingRoar">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\fear_coop.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="-0.75"/>
+            <AdditiveAttackSpeedFactor value="-0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaIntimidatingRoarLv2">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\fear_coop.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <StateFlags index="SuppressEnergy" value="1"/>
+            <AdditiveMoveSpeedFactor value="-0.75"/>
+            <AdditiveAttackSpeedFactor value="-0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaIntimidatingRoarLv3">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\fear_coop.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <StateFlags index="SuppressEnergy" value="1"/>
+            <AdditiveMoveSpeedFactor value="-0.75"/>
+            <AdditiveAttackSpeedFactor value="-0.25"/>
+            <LifeArmorBonus value="-2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMendingAuraCaster">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="DehakaMendingAuraSearch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMendingAuraTarget">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-healingaura.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaArmorUpgrade1">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Modification>
+            <LifeArmorBonus value="3"/>
+        </Modification>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaAirAttackUpgrade">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <InitialEffect value="DehakaAirAttackUpgrade"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaDetectorPassive" parent="Detector">
+        <Alignment value="Positive"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Modification Detect="11"/>
+    </CBehaviorBuff>
+    <CBehaviorAttribute id="DehakaAttEssence">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-tips-sellzergbiosamples.dds"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <MaxPoints value="65535"/>
+        <Modification>
+            <VitalMaxArray index="Life" value="0.75"/>
+        </Modification>
+    </CBehaviorAttribute>
+    <CBehaviorBuff id="DehakaAirUnkillable">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="DehakaJumping"/>
+        <DamageResponse Fatal="1" Handled="SetMyHPto1" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaLocustTimedLife">
+        <Tooltip value="Behavior/Tooltip/BroodlingFate"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-explode.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="25"/>
+        <DurationRandomMax value="0.5"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <ExpireEffect value="TimedLifeFate"/>
+        <KillCredit Value="Caster"/>
+        <Modification>
+            <StateFlags index="Summoned" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreeperOwner">
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn00" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn00"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn01" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn01"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn02" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn02"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn03" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn03"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn04" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn04"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn05" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn05"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn06" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn06"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn07" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn07"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn08" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn08"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn09" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn09"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn10" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn10"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn11" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn11"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn12" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn12"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn13" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn13"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn14" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn14"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarCreepSpawn15" parent="MurvarCreepSpawn">
+        <FinalEffect value="MurvarCreepSpawn15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CoopMurvarPukePuddleDisable">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-slivan-disablingcloud.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="0.625"/>
+        <Modification MoveSpeedMultiplier="0.5">
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressEnergy" value="1"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TriggerInheritsParentBuffs">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaLocustStun">
+        <InfoFlags index="Hidden" value="1"/>
+        <FinalEffect value="DehakaLocustReady"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+        <BehaviorCategories index="Stun" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehhakaCreeperLocustDehakaDeathExplode">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Modification>
+            <DeathResponse Chance="1" Effect="DehakaCreeperExplodeSearch">
+                <Relationship index="Self" value="0"/>
+            </DeathResponse>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CreeperExplode">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <DeathResponse Chance="1" Effect="CreeperExplodeDelaySet"/>
+        </Modification>
+        <DamageResponse Fatal="1" Handled="CreeperExplodeDelaySet" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CreeperExplodeDelay">
+        <Duration value="0.03"/>
+        <FinalEffect value="CreeperExplodeSet"/>
+        <DamageResponse Fatal="1" ModifyFraction="0">
+            <Chance value="1"/>
+        </DamageResponse>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaBossesSummonDelay">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Duration value="1"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <AbilClassEnableArray index="CAbilBuildable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MurvarLairCheck">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="MurvarLairCheck"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <FinalEffect value="TimedLifeFate"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaDakrunCrashingChargePrecursor">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.75"/>
+        <FinalEffect value="SuicideRemove"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaDakrunThorns">
+        <InfoFlags index="Hidden" value="1"/>
+        <DamageResponse Handled="DehakaDakrunThornsLMSwitch">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DakrunLairCheck">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="DakrunLairCheck"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <FinalEffect value="TimedLifeFate"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NydusDestroyerDeepTunnelSuppressDetection">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="3"/>
+        <Modification>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <BehaviorLinkDisableArray value="Detector11"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NydusDestroyerDeepTunnelPlacementRemove">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.5"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+        </Modification>
+        <FinalEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GlevigLairCheck">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="GlevigLairCheck"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <FinalEffect value="TimedLifeFate"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImpalerDehakaTenderize">
+        <InfoIcon value="Assets\Textures\BTN-Ability-Zerg-Dehaka-Impaler-Tenderize.dds"/>
+        <Duration value="10"/>
+        <Period value="1"/>
+        <PeriodCount value="10"/>
+        <PeriodicEffect value="ImpalerDehakaTenderizeDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EssenceCreated">
+        <InfoFlags index="Hidden" value="1"/>
+        <Period value="0.1875"/>
+        <PeriodicEffect value="EssenceCreatedDummy"/>
+        <PeriodCount value="1"/>
+        <Duration value="0.25"/>
+        <Modification>
+            <AbilLinkDisableArray value="EssencePickup"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EssenceTravelling">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <AbilLinkDisableArray value="EssencePickup"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EssenceBuff1">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="120"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="EssenceBuff1To10Switch"/>
+        <PeriodCount value="1"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.01"/>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="0.03"/>
+            <VitalRegenMultiplier index="Energy" value="0.05"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="EssenceBuff100CountLT1"/>
+        <BehaviorCategories index="Fast" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EssenceBuff10">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="10"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="EssenceBuff10To100Switch"/>
+        <PeriodCount value="1"/>
+        <Modification RadiusMultiplier="1.025">
+            <AdditiveAttackSpeedFactor value="0.1"/>
+            <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="0.3"/>
+            <VitalRegenMultiplier index="Energy" value="0.5"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="EssenceBuff100CountLT1"/>
+        <BehaviorCategories index="Fast" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="EssenceBuff100">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification RadiusMultiplier="1.25">
+            <AdditiveAttackSpeedFactor value="1"/>
+            <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="3"/>
+            <VitalRegenMultiplier index="Energy" value="5"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+        <BehaviorCategories index="Fast" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMassive">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="UnitAttrOnMassive" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaCoopAirTargetable">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <PlaneDelta index="Air" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaModelSwapStun">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaTrainPrecursor">
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <RateMultiplierArray index="Progress" value="0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PrimalReconstitutionCooldownIndicator">
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMutaliskTimerBehavior">
+        <Alignment value="Negative"/>
+        <Cost>
+            <Cooldown TimeStart="60"/>
+        </Cost>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-mutalisk-primalreconstitution.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="60"/>
+    </CBehaviorBuff>
+    <CBehaviorVeterancy id="DehakaVeterancyCoopFullValues">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <VeterancyLevelArray/>
+        <VeterancyLevelArray MinVeterancyXP="15" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="30" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="45" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="60" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="75" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="90" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="105" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="120" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="135" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="150" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="165" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="180" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="195" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="210" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="225" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="240" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="255" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="270" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="285" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <XPFraction index="Kills" value="0"/>
+    </CBehaviorVeterancy>
+    <CBehaviorVeterancy id="DehakaVeterancyCoopLow">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <VeterancyLevelArray/>
+        <VeterancyLevelArray MinVeterancyXP="15" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="30" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="45" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="60" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="75" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="90" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="105" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="120" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="135" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <XPFraction index="Kills" value="0"/>
+    </CBehaviorVeterancy>
+    <CBehaviorVeterancy id="DehakaVeterancyCoopMedium">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <VeterancyLevelArray/>
+        <VeterancyLevelArray MinVeterancyXP="15" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="30" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="45" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="60" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="75" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="90" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="105" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="120" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="135" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="150" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="165" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <XPFraction index="Kills" value="0"/>
+    </CBehaviorVeterancy>
+    <CBehaviorVeterancy id="DehakaVeterancyCoopHigh">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <VeterancyLevelArray/>
+        <VeterancyLevelArray MinVeterancyXP="15" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="30" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="45" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="60" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="75" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="90" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="105" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="120" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="135" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="150" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="165" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="180" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="195" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <XPFraction index="Kills" value="0"/>
+    </CBehaviorVeterancy>
+    <CBehaviorVeterancy id="DehakaVeterancyCoopFinal">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <VeterancyLevelArray/>
+        <VeterancyLevelArray MinVeterancyXP="15" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="30" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="45" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="60" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="75" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="90" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="105" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="120" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="135" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="150" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="165" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="180" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="195" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <VeterancyLevelArray MinVeterancyXP="210" LevelGainEffect="DehakaLevelUpDummyMU"/>
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <XPFraction index="Kills" value="0"/>
+    </CBehaviorVeterancy>
+    <CBehaviorBuff id="DehakaAttEssenceUpdater">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Modification>
+            <AttributeChangeArray Attribute="DehakaAttEssence"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Unfollowable">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <StateFlags index="UnitAttrOnHover" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="COOPHeroJustRevive">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaCreeperStun">
+        <InfoFlags index="Hidden" value="1"/>
+        <FinalEffect value="DehakaCreeperReady"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="0.1"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+        <BehaviorCategories index="Stun" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaCreeperTimedLife">
+        <Tooltip value="Behavior/Tooltip/BroodlingFate"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-explode.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="25"/>
+        <DurationRandomMax value="0.5"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <ExpireEffect value="TimedLifeFate"/>
+        <KillCredit Value="Caster"/>
+        <Modification>
+            <StateFlags index="Summoned" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaLocustEggAnimation">
+        <Duration value="29"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGene4Creepers">
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SuppressCollisionRevive">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <BehaviorFlags index="EnabledWhileDead" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Countdown" value="0"/>
+        <BuffFlags index="RemoveDamageResponseExhausted" value="0"/>
+        <Duration value="0.25"/>
+        <Modification>
+            <StateFlags index="SuppressCollision" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaNormalReviveTimer">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <BuffFlags index="Countdown" value="0"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Modification>
+            <AbilLinkEnableArray value="DehakaConcoonEatLoadOrder"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneCarapace">
+        <Modification>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="0.5"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneAttackSpeed">
+        <Modification AttackSpeedMultiplier="1.2"/>
+        <BehaviorCategories index="Fast" value="1"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneLifeLeech">
+        <Modification>
+            <VitalDamageLeechArray index="Life">
+                <KindArray index="Spell" value="0.2"/>
+                <KindArray index="Melee" value="0.2"/>
+                <KindArray index="Ranged" value="0.2"/>
+                <KindArray index="Splash" value="0.2"/>
+                <KindArray index="NoProc" value="0.2"/>
+            </VitalDamageLeechArray>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+        <DamageResponse Handled="DehakaGeneLifeLeechDummy" Location="Attacker">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneThorns">
+        <InfoFlags index="Hidden" value="1"/>
+        <DamageResponse Handled="DehakaGeneThornsLMSwitch">
+            <ExcludeEffectArray value="DehakaGeneThornsDamage"/>
+            <Chance value="1"/>
+            <DamageType index="Magic" value="0"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneRavasaurGeneApply">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="NotUnderConstruction"/>
+        <FinalEffect value="DehakaGeneRavasaurGeneApplySet"/>
+        <Duration value="0.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneFireRoachGeneApply">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="NotUnderConstruction"/>
+        <FinalEffect value="DehakaGeneFireRoachGeneApplySet"/>
+        <Duration value="0.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneImpalerGeneApply">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="NotUnderConstruction"/>
+        <FinalEffect value="DehakaGeneImpalerGeneApplySet"/>
+        <Duration value="0.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneCreeperHostGeneApply">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="NotUnderConstruction"/>
+        <FinalEffect value="DehakaGeneCreeperHostGeneApplySet"/>
+        <Duration value="0.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneTyrannosaurGeneApply">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="NotUnderConstruction"/>
+        <FinalEffect value="DehakaGeneTyrannosaurGeneApplySet"/>
+        <Duration value="0.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneGuardianGeneApply">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="NotUnderConstruction"/>
+        <FinalEffect value="DehakaGeneGuardianGeneApplySet"/>
+        <Duration value="0.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGeneMutaliskGeneApply">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="NotUnderConstruction"/>
+        <FinalEffect value="DehakaGeneMutaliskGeneApplySet"/>
+        <Duration value="0.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaUltraliskCrashingChargePrecursor">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="0.5"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+        <FinalEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaUltraliskBash">
+        <DamageResponse Handled="DehakaUltraliskBashStunAB" Location="Attacker">
+            <RequireEffectArray value="DehakaKaiserBladesLevel2Damage"/>
+            <RequireEffectArray value="DehakaKaiserBladesLevel2SecondaryDamage"/>
+            <RequireEffectArray value="DehakaKaiserBladesLevel3Damage"/>
+            <RequireEffectArray value="DehakaKaiserBladesLevel3SecondaryDamage"/>
+            <Chance value="0.2"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="HaveDehakaUltraliskBash"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaUltraliskBashStun">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-ultralisk-impalingstrike.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaTyrannozorArmorAuraCaster">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-rapidregeneration.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="HaveDehakaTyrannozorArmorAura"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="DehakaTyrannozorArmorAuraSearch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaTyrannozorArmorAuraTarget">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-tyrannozor-tyrantprotection.dds"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="0.6"/>
+        <Modification>
+            <LifeArmorBonus value="2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImpalerWeaponDisabled">
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMutaliskFightMorphToDehakaMutalisk">
+        <InfoFlags index="Hidden" value="1"/>
+        <Period value="0.125"/>
+        <PeriodicEffect value="DehakaMutaliskFightMorphToDehakaMutalisk"/>
+        <InitialEffect value="DehakaMutaliskFightMorphToDehakaMutalisk"/>
+        <RemoveValidatorArray value="NotDehakaMutaliskLevel3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMutaliskDamageReduction">
+        <InfoIcon value="Assets\Textures\btn-ability-dehaka-damagereductionwhilemoving.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="DehakaMutaliskIsMoving"/>
+        <DisableValidatorArray value="HaveDehakaMutaliskDamageReduction"/>
+        <Modification>
+            <DamageTakenFraction index="Spell" value="-0.5"/>
+            <DamageTakenFraction index="Melee" value="-0.5"/>
+            <DamageTakenFraction index="Ranged" value="-0.5"/>
+            <DamageTakenFraction index="Splash" value="-0.5"/>
+            <DamageTakenFraction index="NoProc" value="-0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMutaliskReconstruction">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <Fatal value="1"/>
+            <Handled value="DehakaMutaliskReviveOrderSet"/>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <DisableValidatorArray value="DehakaMutaliskReviveCombine"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianMineChargeFate">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <MaxStackCount value="0"/>
+        <FinalEffect value="DehakaGuardianMineChargeInitialSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianMineKnockback">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianMinePrecursorUnitKnockback">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="1.0625"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+        <FinalEffect value="SuicideRemove"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianRage1">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-guardian-primordialfury.dds"/>
+        <BehaviorCategories index="Fast" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification AttackSpeedMultiplier="1.1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianRage2">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-guardian-primordialfury.dds"/>
+        <BehaviorCategories index="Fast" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification AttackSpeedMultiplier="1.2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianRage3">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-guardian-primordialfury.dds"/>
+        <BehaviorCategories index="Fast" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification AttackSpeedMultiplier="1.3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianRage4">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-guardian-primordialfury.dds"/>
+        <BehaviorCategories index="Fast" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification AttackSpeedMultiplier="1.4"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianRage5">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-guardian-primordialfury.dds"/>
+        <BehaviorCategories index="Fast" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <Modification AttackSpeedMultiplier="1.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGuardianFightMorphToDehakaGuardian">
+        <InfoFlags index="Hidden" value="1"/>
+        <Period value="0.125"/>
+        <PeriodicEffect value="DehakaGuardianFightMorphToDehakaGuardian"/>
+        <InitialEffect value="DehakaGuardianFightMorphToDehakaGuardian"/>
+        <RemoveValidatorArray value="NotDehakaGuardian"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaDakrunInPlay">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="DehakaDakrunInPlay"/>
+    </CBehaviorBuff>
+</Catalog>

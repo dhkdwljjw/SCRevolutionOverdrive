@@ -1,0 +1,502 @@
+﻿Abil/Name/BlinkTaldarim=위상 점멸
+Abil/Name/CarrierTaldarimHangar=격납고
+Abil/Name/CyberneticsCoreTaldarimResearch=연구
+Abil/Name/DarkShrineResearch2=암흑 성소 연구
+Abil/Name/FleetBeaconResearchTaldarim=연구
+Abil/Name/ForgeResearchTaldarim=연구 (제련소)
+Abil/Name/GatewayTrainTaldarim=훈련 (관문)
+Abil/Name/HarbingerDisruptionTrapBuild=분열 덫 건설
+Abil/Name/HarbingerDisruptoinTrapActivate=활성화
+Abil/Name/HarbingerForesee=선도자 간파
+Abil/Name/MorphBackToGatewayTaldarim=관문으로 되돌리기
+Abil/Name/NexusTaldarimTrain=훈련 (연결체)
+Abil/Name/NexusTrainTaldarimMothership=탈다림 모선 훈련
+Abil/Name/ObserverMorphtoObserverSiege2=관측선이 관측선 공성으로 변신
+Abil/Name/ObserverSiegeMorphtoObserver2=관측선 공성이 관측선으로 변신
+Abil/Name/PhasingModeTaldarim=위상 모드
+Abil/Name/ProbeHarvestTaldarim=채취 (탐사정)
+Abil/Name/PulsarBlast=펄서 폭탄
+Abil/Name/RoboticsBayTaldarimResearch=연구 (로봇공학 지원소)
+Abil/Name/RoboticsFacilityTaldarimTrain=훈련 (로봇공학 시설)
+Abil/Name/SOAMothershipBlink=SOA 모선 점멸
+Abil/Name/SOAMothershipLineAttack=SOA 모선 직선 공격
+Abil/Name/StargateTrainTaldarim=훈련 (우주관문)
+Abil/Name/StructureOvercharge=구조물 과충전
+Abil/Name/TaldarimBuild=건설 (탐사정)
+Abil/Name/TemplarArchivesTaldarimResearch=연구 (승천자 기록보관소)
+Abil/Name/TransportModeTaldarim=수송 모드
+Abil/Name/TwilightCouncilTaldarimResearch=연구
+Abil/Name/UpgradeToWarpGateTaldarim=건물 변형 (관문 -> 차원 관문)
+Abil/Name/VoidSentryBlackHole=공허 파수기 블랙홀
+Abil/Name/WarpGateTrainTaldarim=소환 (차원 관문)
+Alert/Text/AICommEarlyBuildingFoundProtoss2=적 구조물 발견 ( UNIT ).
+Alert/Text/AICommEarlyRaceFoundProtoss2=적은 프로토스, UNIT 포착.
+Alert/Text/AmmoComplete_Tal=장전 완료
+Alert/Text/BuildComplete_Tal=건설 완료
+Alert/Text/CommandCenterUpgradeComplete2=업그레이드 완료
+Alert/Text/CommandCenterUpgradeComplete_Tal=업그레이드 완료
+Alert/Text/MergeComplete_Tal=합체 완료
+Alert/Text/MorphComplete_Tal=변태 완료
+Alert/Text/ResearchComplete_Tal=연구 완료
+Alert/Text/ResourceExhausted_HighYieldMineral_Tal=풍부한 광맥 고갈
+Alert/Text/SpecializeComplete_Tal=전문화 완료
+Alert/Text/TrainComplete_Tal=유닛 완성
+Alert/Text/TrainWorkerComplete_Tal=유닛 완성
+Alert/Text/UpgradeComplete_Tal=업그레이드 완료
+Alert/Text/WarpTrainComplete_Tal=소환 완료
+Behavior/Name/AlarakStalkerPhasingArmorBuff=위상 장갑
+Behavior/Name/AlarakStructureOvercharge=구조물 과충전
+Behavior/Name/AlarakStructureOverchargeShield=과충전 증폭
+Behavior/Name/DarkTemplarVoidStasis=공허 정지장
+Behavior/Name/HarbingerForesee=간파
+Behavior/Name/LightningBombTaldarim=분해
+Behavior/Name/ObserverSquadSight=시야 공유
+Behavior/Name/ObserverTargetLock=목표 고정
+Behavior/Name/PhaseBlinkDamage=위상 점멸
+Behavior/Name/PowerUserWarpableAnywhere=소환 중
+Behavior/Name/PulsarBlastDamageIncrease=피해 증폭
+Behavior/Name/VoidSentryBlackHole=블랙홀
+Behavior/Tooltip/AlarakStalkerPhasingArmorBuff=이 유닛이 받는 피해가 50% 감소합니다.
+Behavior/Tooltip/AlarakStructureOvercharge=이 구조물은 적에게 강력한 원거리 공격을 합니다.
+Behavior/Tooltip/AlarakStructureOverchargeShield=이 구조물은 피해를 흡수하고 있습니다.
+Behavior/Tooltip/DarkTemplarVoidStasis=이 유닛 또는 구조물은 이동하거나 공격할 수 없으며, 공격당하지도 않습니다.
+Behavior/Tooltip/HarbingerForesee=이 유닛은 정지, 이동, 공격 외의 능력을 사용할 수 없습니다.
+Behavior/Tooltip/LightningBombTaldarim=지속 피해를 받고 있습니다.
+Behavior/Tooltip/ObserverSquadSight=이 유닛은 비근접 공격 사거리가 증가했습니다.
+Behavior/Tooltip/ObserverTargetLock=이 유닛은 받는 피해가 증가합니다.
+Behavior/Tooltip/PhaseBlinkDamage=이 유닛의 다음 공격은 공격력이 50% 증가합니다.
+Behavior/Tooltip/PowerUserWarpableAnywhere=유닛이 차원 관문을 건너오고 있습니다.
+Behavior/Tooltip/PulsarBlastDamageIncrease=이 유닛이 받는 피해가 증가합니다.
+Behavior/Tooltip/VoidSentryBlackHole=이 유닛은 이동하거나 공격할 수 없습니다.
+Button/Name/ActivateDisruptionTrap=분열 덫
+Button/Name/AlarakColossusAerialTracking=공중 추적
+Button/Name/AlarakColossusChargedBlastChargeTime=급속 동력 순환
+Button/Name/AlarakHavocAbilityRange=혈석 공명
+Button/Name/AlarakStalkerPhasingArmor=위상 장갑
+Button/Name/AlarakStructureOvercharge=구조물 과충전
+Button/Name/AlarakSupplicantMaxShields=영혼 증강
+Button/Name/AlarakTargetLockBuff=약점 탐지
+Button/Name/AlarakVanguardIncreaseSplashArea=물질 확산
+Button/Name/AnionPulseCrystalsTaldarim=음이온파 수정 연구
+Button/Name/ArmorResearchSupplicantShieldArmor=피의 보호막 연구
+Button/Name/AscendantSacrifice=제물
+Button/Name/AssimilatorTaldarim=융화소 소환
+Button/Name/BlinkTaldarim=위상 점멸
+Button/Name/CarrierTaldarim=하늘군주 소환
+Button/Name/CliffWalkTaldarim=언덕 걸음
+Button/Name/ColossusTaldarim=분노수호자 소환
+Button/Name/ColossusTaldarimThermalExplosion=열핵 폭발
+Button/Name/CyberneticsCoreTaldarim=인공제어소 소환
+Button/Name/DarkShrineTaldarim=사냥꾼의 은신처 소환
+Button/Name/DarkTemplarTaldarim=피의 사냥꾼 소환
+Button/Name/FleetBeaconTaldarim=함대 신호소 소환
+Button/Name/ForgeTaldarim=제련소 소환
+Button/Name/GatewayTaldarim=관문 소환
+Button/Name/Harbinger=선도자 소환
+Button/Name/HarbingerBuildDisruptionTrap=분열 덫
+Button/Name/HarbingerForesee=간파
+Button/Name/HavocPermanentCloak=은폐 모듈
+Button/Name/HighTemplarTaldarim=승천자 소환
+Button/Name/ImmortalTaldarim=선봉대 소환
+Button/Name/ImmortalTaldarimScatterCannon=확산포
+Button/Name/InterceptorTaldarim=요격기 생산
+Button/Name/Monitor=교란기 소환
+Button/Name/MorphBackToGatewayTaldarim=관문으로 전환
+Button/Name/NexusTaldarim=연결체 소환
+Button/Name/ObserverTaldarim=관측선 소환
+Button/Name/PHSupplicantShieldArmor=피의 보호막
+Button/Name/PermanentlyCloakedDisruption=영구 은폐
+Button/Name/PermanentlyCloakedTaldarim=영구 은폐
+Button/Name/PhasingModeTaldarim=위상 모드
+Button/Name/PhoenixBomberGround=학살 폭격
+Button/Name/PhoenixTaldarim=하늘발톱 소환
+Button/Name/PhotonCannonTaldarim=광자포 소환
+Button/Name/ProbeTaldarim=탐사정 소환
+Button/Name/PulsarBlast=펄서 폭탄
+Button/Name/PylonTaldarim=수정탑 소환
+Button/Name/ReleaseInterceptorsTaldarim=요격기 출격
+Button/Name/ResearchAlarakColossusChargedBlastAirAttack=공중 추적 연구
+Button/Name/ResearchAlarakColossusChargedBlastChargeTime=급속 동력 순환 연구
+Button/Name/ResearchAlarakHavocAbilityRange=혈석 공명 연구
+Button/Name/ResearchAlarakHighTemplarPsionicOrbTravelDistance=혼돈의 조율 연구
+Button/Name/ResearchAlarakHighTemplarPsionicOrbTravelDistancePassive=혼돈의 조율
+Button/Name/ResearchAlarakSupplicantMaxShields=영혼 증강 연구
+Button/Name/ResearchAlarakTargetLockBuff=약점 탐지 연구
+Button/Name/ResearchAlarakVanguardIncreaseSplashArea=물질 확산 연구
+Button/Name/ResearchAscendantSacrifice=제물 연구
+Button/Name/ResearchCarrierTaldarimInterceptorUpgrade=중력자 발사기 연구
+Button/Name/ResearchColossusTaldarimThermalExplosion=열핵 폭발 연구
+Button/Name/ResearchGraviticBoosterTaldarim=중력 가속기 연구
+Button/Name/ResearchHavocPermanentCloak=은폐 모듈 연구
+Button/Name/ResearchPhaseBlink=위상 점멸 연구
+Button/Name/ResearchPhasedArmor=위상 장갑 연구
+Button/Name/ResearchVanguardArmoredDamage=융합포 연구
+Button/Name/ResearchVoidHighTemplarMindBlast=정신 폭발 연구
+Button/Name/ResearchVoidRayTaldarimSpeedUpgrade=유동성 추진기 연구
+Button/Name/ResearchVoidStasis=공허 정지장 연구
+Button/Name/ResearchWarpGateTaldarim=차원 관문 연구
+Button/Name/RoboticsBayTaldarim=로봇공학 지원소 소환
+Button/Name/RoboticsFacilityTaldarim=로봇공학 시설 소환
+Button/Name/SOAMothershipBlink=점멸
+Button/Name/SOAMothershipLineAttack=열 광선
+Button/Name/SOAMothershipv4=탈다림 모선 소환
+Button/Name/SentryTaldarimForceField=역장
+Button/Name/ShieldBatteryTaldarim=보호막 충전소 소환
+Button/Name/SquadSight=시야 공유
+Button/Name/StalkerTaldarim=학살자 소환
+Button/Name/StargateTaldarim=우주관문 소환
+Button/Name/TaldarimAirArmorLevel1=공중 장갑 업그레이드 1단계
+Button/Name/TaldarimAirArmorLevel2=공중 장갑 업그레이드 2단계
+Button/Name/TaldarimAirArmorLevel3=공중 장갑 업그레이드 3단계
+Button/Name/TaldarimAirWeaponsLevel1=공중 무기 업그레이드 1단계
+Button/Name/TaldarimAirWeaponsLevel2=공중 무기 업그레이드 2단계
+Button/Name/TaldarimAirWeaponsLevel3=공중 무기 업그레이드 3단계
+Button/Name/TaldarimGroundArmorLevel1=지상 장갑 업그레이드 1단계
+Button/Name/TaldarimGroundArmorLevel2=지상 장갑 업그레이드 2단계
+Button/Name/TaldarimGroundArmorLevel3=지상 장갑 업그레이드 3단계
+Button/Name/TaldarimGroundWeaponsLevel1=지상 무기 업그레이드 1단계
+Button/Name/TaldarimGroundWeaponsLevel2=지상 무기 업그레이드 2단계
+Button/Name/TaldarimGroundWeaponsLevel3=지상 무기 업그레이드 3단계
+Button/Name/TaldarimShieldsLevel1=보호막 업그레이드 1단계
+Button/Name/TaldarimShieldsLevel2=보호막 업그레이드 2단계
+Button/Name/TaldarimShieldsLevel3=보호막 업그레이드 3단계
+Button/Name/TargetLock=목표 고정
+Button/Name/TempestTaldarim=정복함 소환
+Button/Name/TempestTaldarimGroundAttackUpgrade=구조 불안정장치
+Button/Name/TempestTaldarimResearchGroundAttackUpgrade=구조 불안정장치 연구
+Button/Name/TemplarArchivesTaldarim=승천자 기록보관소 소환
+Button/Name/TransportModeTaldarim=수송 모드
+Button/Name/TwilightCouncilTaldarim=죽음의 의회 소환
+Button/Name/UpgradeToWarpGateTaldarim=차원 관문으로 전환
+Button/Name/VanguardArmoredDamage=융합포
+Button/Name/VoidColossusChargedBlast=충전 폭발
+Button/Name/VoidHighTemplarMindBlast=정신 폭발
+Button/Name/VoidHighTemplarPsiOrb=사이오닉 구체
+Button/Name/VoidRayTaldarim=파멸자 소환
+Button/Name/VoidSentryBlackHole=블랙홀
+Button/Name/VoidStasis=공허 정지장
+Button/Name/VoidVoidRayBeamBounce=파멸 광선
+Button/Name/WarpInSupplicant=광신자 소환
+Button/Name/WarpInSupplicantHidden=광신자 소환
+Button/Name/WarpPrismTaldarim=전쟁 분광기 소환
+Button/Tooltip/ActivateDisruptionTrap=주위 적들에 <d ref="Effect,HarbingerDisruptionTrapDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/AlarakColossusAerialTracking=분노수호자가 공중 유닛을 공격할 수 있게 합니다.
+Button/Tooltip/AlarakColossusChargedBlastChargeTime=분노수호자의 충전 폭발의 충전 시간이 감소합니다.
+Button/Tooltip/AlarakHavocAbilityRange=시야 공유의 반경과, 목표 고정 및 역장의 사거리가 증가합니다.
+Button/Tooltip/AlarakStalkerPhasingArmor=학살자가 공격을 받은 후 <d ref="Behavior,AlarakStalkerPhasingArmorBuff,Duration"/>초 동안 피해를 50%만큼 줄여서 받습니다. <d ref="Behavior,AlarakStalkerPhasingArmor,DamageResponse.Cost.Cooldown.TimeUse"/>초에 한 번만 발동합니다.
+Button/Tooltip/AlarakStructureOvercharge=연결체 근처의 대상 구조물을 강화하여 주위의 적 지상 및 공중 유닛에게 <d ref="Effect,AlarakStructureOverchargeDamage,Amount[0]"/>의 피해를 주게 합니다. 이 효과는 <d ref="Behavior,AlarakStructureOvercharge,Duration[0]"/>초 동안 지속됩니다.
+Button/Tooltip/AlarakSupplicantMaxShields=광신자의 보호막이 2의 방어력을 얻습니다.
+Button/Tooltip/AlarakTargetLockBuff=목표 고정의 추가 피해가 15%만큼 증가합니다.
+Button/Tooltip/AlarakVanguardIncreaseSplashArea=확산포의 방사 피해 범위가 <d ref="($UpgradeEffectArrayValue:AlarakVanguardIncreaseSplashArea:Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius$/Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius-1)*100" player="0"/>%만큼 증가합니다.
+Button/Tooltip/AnionPulseCrystalsTaldarim=<c val="ffff8a">하늘발톱</c>의 공격과 학살 폭격 능력의 사거리가 2만큼 증가합니다.
+Button/Tooltip/ArmorResearchSupplicantShieldArmor=<c val="ffff8a">광신자</c>의 보호막이 25만큼 증가합니다.
+Button/Tooltip/AscendantSacrifice=대상 아군 유닛의 체력을 <d ref="Effect,AscendantSacrificeDamage,Amount"/>%로 감소시킵니다. 보호막에는 영향을 주지 않습니다.<n/><n/>승천자는 감소시킨 체력 1당 <d ref="Effect,AscendantSacrificeDamage25,LeechFraction[Energy]"/>의 에너지를 얻습니다. 상한은 자신의 최대 에너지양입니다.<n/><n/><c val="#ColorAttackInfo">아군 유닛에만 사용 가능</c>
+Button/Tooltip/AssimilatorTaldarim=베스핀 가스 채취를 위해 베스핀 간헐천 위에 건설하는 구조물입니다.
+Button/Tooltip/AssimilatorTaldarimRich=베스핀 가스 채취를 위해 베스핀 간헐천 위에 건설하는 구조물입니다.
+Button/Tooltip/BlinkTaldarim=학살자가 주위의 대상 위치로 순간 이동합니다. 이 능력은 <d ref="Abil,BlinkTaldarim,Cost[0].Cooldown.TimeUse"/>초에 한 번씩만 사용할 수 있습니다. 위상 점멸을 사용한 후 <d ref="Behavior,PhaseBlinkDamage,Duration"/>초 내에 공격을 하면 공격력이 50% 증가합니다.
+Button/Tooltip/CarrierTaldarim=주력함입니다. 요격기를 생산하고 출격시켜 적을 공격합니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/CliffWalkTaldarim=분노수호자는 언덕을 오르내릴 수 있습니다.
+Button/Tooltip/ColossusTaldarim=강력한 단일 대상 공격 능력을 갖춘 전투형 4족 보행 유닛입니다. 언덕을 오르내릴 수 있습니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/ColossusTaldarimAA=강력한 단일 대상 공격 능력을 갖춘 전투형 4족 보행 유닛입니다. 언덕을 오르내릴 수 있습니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/ColossusTaldarimThermalExplosion=분노수호자의 지상 공격이 폭발을 일으켜, 대상 주위의 적 지상 유닛에 <d ref="Effect,ColossusTaldarimSplashDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/CyberneticsCoreTaldarim=탈다림 공중 유닛과 교란기, 관문을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 학살자 (관문)<n/>- 교란기 (관문)<n/>- 보호막 충전소 (탐사정)
+Button/Tooltip/DarkShrineTaldarim=피의 사냥꾼을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 피의 사냥꾼 (관문)
+Button/Tooltip/DarkTemplarTaldarim=무시무시한 암살 전사입니다. 영구 은폐 상태입니다. 공허 정지장을 사용할 수 있습니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/FleetBeaconTaldarim=하늘발톱, 파멸자, 정복함과 하늘군주를 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 정복함 (우주관문)<n/>- 하늘군주 (우주관문)</n>- 탈다림 모선 (연결체)
+Button/Tooltip/ForgeTaldarim=탈다림 지상 유닛의 무기와 장갑, 모든 탈다림 유닛과 구조물의 보호막을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 광자포 (탐사정 소환)
+Button/Tooltip/GatewayTaldarim=탈다림 지상 유닛을 소환합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 광신자
+Button/Tooltip/Harbinger=특수 능력을 사용하는 비행 유닛입니다. 간파, 분열 덫, 펄서 폭탄을 사용할 수 있습니다.<n/><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/HarbingerBuildDisruptionTrap=대상 위치에 <d ref="Behavior,DisruptionTrapTimedLife,Duration"/>초 동안 지속되는 은폐 분열 덫을 놓습니다. 적의 지상 유닛이 덫을 발동시키면 주위 적들이 <d ref="Effect,HarbingerDisruptionTrapDamage,Amount"/>의 피해를 입습니다.
+Button/Tooltip/HarbingerDisruptionTrap=지상 유닛 덫입니다. 정지장 수호물은 은폐되어 탐지되기 전에는 적에게 보이지 않습니다.
+Button/Tooltip/HarbingerForesee=<d ref="Behavior,HarbingerForesee,Duration"/>초 동안 대상 지역 안에 있는 일꾼을 제외한 모든 유닛을 침묵시켜, 이들이 정지, 이동, 공격 외의 능력을 사용할 수 없게 합니다.
+Button/Tooltip/HavocPermanentCloak=교란기가 영구 은폐 상태가 됩니다.
+Button/Tooltip/HighTemplarTaldarim=강한 사이오닉 능력을 지니고 있습니다. 사이오닉 구체, 정신 폭발, 제물을 사용할 수 있습니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/ImmortalTaldarim=돌격형 4족 보행 유닛입니다. 공격 시 대상 적 유닛 주위에 피해를 줍니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/ImmortalTaldarimScatterCannon=공격 시 대상 적 지상 유닛 및 그 주위의 다른 적 지상 유닛에게 피해를 줍니다.<n/><n/><c val="ffff8a">적 지상 유닛에게만 피해</c>
+Button/Tooltip/InterceptorTaldarim=하늘군주의 대상을 자동으로 공격하는 요격기를 생산합니다. 생산된 요격기가 없는 하늘군주는 공격할 수 없습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/InterceptorTaldarimUnit=하늘군주의 공격 대상을 자동으로 타격하는 무인 전투기입니다. 생산된 요격기가 없는 우주모함은 공격할 수 없습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/Monitor=로봇 지원 유닛입니다. 목표 고정, 시야 공유, 역장을 사용할 수 있습니다.
+Button/Tooltip/MorphBackToGatewayTaldarim=차원 관문을 관문으로 되돌립니다.
+Button/Tooltip/NexusTaldarim=주 건물입니다. 채취한 자원을 수집합니다. 시간 증폭 및 대규모 귀환 능력을 사용할 수 있습니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 탐사정<n/>- 탈다림 모선
+Button/Tooltip/ObserverTaldarim=정찰용 비행 유닛입니다. 은폐 능력이 있으며, 탐지 능력이 없는 적에게는 보이지 않습니다.<n/><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/PHSupplicantShieldArmor=광신자의 보호막이 25만큼 증가합니다.
+Button/Tooltip/PermanentlyCloakedDisruption=분열 덫은 영구 은폐 상태입니다.
+Button/Tooltip/PermanentlyCloakedTaldarim=피의 사냥꾼은 영구 은폐 상태입니다.
+Button/Tooltip/PhasingModeTaldarim=전쟁 분광기를 위상 모드로 전환해 수정탑처럼 동력을 생성하게 합니다. 위상 모드에서는 이동하거나 공격할 수 없습니다.
+Button/Tooltip/PhoenixBomberGround=대상과 그 주변에 있는 총 4기의 지상 유닛에 번개를 쏘아, 각 번개가 떨어진 지점과 그 주변에 있는 모든 유닛에 <d ref="Effect,PhoenixBomberCarpetBombDamage,Amount"/>의 피해를 줍니다.</n></n><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/PhoenixTaldarim=제공 전투기입니다.<n/><n/><c val="ffff8a">공중 유닛 공격 가능</c>
+Button/Tooltip/PhoenixTaldarimAG=제공 전투기입니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/PhotonCannonTaldarim=주 방어 구조물입니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/ProbeTaldarim=기본 일꾼 유닛입니다. 자원을 채취하고 프로토스 건물을 소환합니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/PulsarBlast=적 유닛을 대상으로 펄서 폭탄을 발사합니다. 피격 대상은 불안정 상태가 되어 초 동안 모든 종류의 피해를 100%만큼 증폭해서 받으며, 영향을 받는 동안 처치되면 주변의 적 유닛에 <d ref="Effect,PulsarBlastDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/PylonTaldarim=보급품을 공급합니다.<n/>보급품을 늘리면 더 많은 유닛을 소환할 수 있습니다.<n/>주위 구조물에 동력을 공급합니다.
+Button/Tooltip/ReleaseInterceptorsTaldarim=하늘군주가 모든 요격기를 대상 지점으로 출격시킵니다. 요격기는 <d ref="Behavior,ReleaseInterceptorsTimedLife,Duration"/>초 동안 지속되며, 사라질 때까지 그 지역에 머뭅니다.
+Button/Tooltip/ResearchAlarakColossusChargedBlastAirAttack=<c val="ffff8a">분노수호자</c>가 공중 유닛을 공격할 수 있게 합니다.
+Button/Tooltip/ResearchAlarakColossusChargedBlastChargeTime=<c val="ffff8a">분노수호자</c>의 충전 폭발의 충전 시간이 감소합니다.
+Button/Tooltip/ResearchAlarakHavocAbilityRange=<c val="ffff8a">교란기</c>의 시야 공유의 반경과, 목표 고정과 역장의 사거리가 증가합니다.
+Button/Tooltip/ResearchAlarakHighTemplarPsionicOrbTravelDistance=<c val="ffff8a">승천자</c>의 사이오닉 구체 이동 거리가 25%만큼 증가합니다.
+Button/Tooltip/ResearchAlarakHighTemplarPsionicOrbTravelDistancePassive=사이오닉 구체의 이동 거리가 25%만큼 증가합니다.
+Button/Tooltip/ResearchAlarakSupplicantMaxShields=<c val="ffff8a">광신자</c>의 보호막이 2의 방어력을 얻습니다.
+Button/Tooltip/ResearchAlarakTargetLockBuff=<c val="ffff8a">교란기</c>의 목표 고정의 추가 피해가 15%만큼 증가합니다.
+Button/Tooltip/ResearchAlarakVanguardIncreaseSplashArea=<c val="ffff8a">선봉대</c>의 방사 피해 범위가 <d ref="($UpgradeEffectArrayValue:AlarakVanguardIncreaseSplashArea:Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius$/Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius-1)*100" player="0"/>%만큼 증가합니다. 
+Button/Tooltip/ResearchAscendantSacrifice=<c val="ffff8a">승천자</c>가 제물 능력을 사용하여, 아군 유닛의 체력을 흡수하여 에너지를 얻을 수 있게 합니다.
+Button/Tooltip/ResearchCarrierTaldarimInterceptorUpgrade=<c val="ffff8a">하늘군주</c>가 요격기 출격 능력을 사용해 모든 요격기를 대상 지점으로 출격시킬 수 있게 합니다. 출격한 요격기는 <d ref="Behavior,ReleaseInterceptorsTimedLife,Duration"/>초 동안 지속되며, 사라질 때까지 그 지역에 머뭅니다.
+Button/Tooltip/ResearchColossusTaldarimThermalExplosion=<c val="ffff8a">분노수호자</c>의 지상 공격이 폭발을 일으켜, 대상 주위의 적 지상 유닛에 <d ref="Effect,ColossusTaldarimSplashDamage,Amount"/>의 피해를 주게 합니다.
+Button/Tooltip/ResearchGraviticBoosterTaldarim=<c val="ffff8a">관측선</c>과 <c val="ffff8a">전쟁 분광기</c>의 이동 속도가 증가합니다.
+Button/Tooltip/ResearchHavocPermanentCloak=<c val="ffff8a">교란기</c>가 영구 은폐 상태가 됩니다.
+Button/Tooltip/ResearchPhaseBlink=<c val="ffff8a">학살자</c>가 주위의 대상 위치로 순간 이동할 수 있게 합니다. 학살자가 위상 점멸을 사용한 후 <d ref="Behavior,PhaseBlinkDamage,Duration"/>초 내에 공격을 하면 공격력이 50% 증가합니다.
+Button/Tooltip/ResearchPhasedArmor=<c val="ffff8a">학살자</c>가 공격을 받은 후 <d ref="Behavior,AlarakStalkerPhasingArmorBuff,Duration"/>초 동안 피해를 50%만큼 줄여서 받습니다. <d ref="Behavior,AlarakStalkerPhasingArmor,DamageResponse.Cost.Cooldown.TimeUse"/>초에 한 번만 발동합니다.
+Button/Tooltip/ResearchVanguardArmoredDamage=<c val="ffff8a">선봉대</c>가 중장갑 유닛에게 주는 피해가 증가합니다.
+Button/Tooltip/ResearchVoidHighTemplarMindBlast=<c val="ffff8a">승천자</c>가 정신 폭발을 사용하여 대상 적 유닛에게 <d ref="Effect,VoidHighTemplarMindBlastDamage,Amount"/>의 피해를 줄 수 있습니다.</n></n><c val="#ColorAttackInfo">지상 및 공중 유닛에 사용 가능</c>
+Button/Tooltip/ResearchVoidRayTaldarimSpeedUpgrade=<c val="ffff8a">파멸자</c>의 이동 속도와 이동 가속도가 증가합니다.
+Button/Tooltip/ResearchVoidStasis=<c val="ffff8a">피의 사냥꾼</c>이 공허 정지장 능력을 사용할 수 있게 합니다. 정지장은 대상이 모든 공격, 능력, 이동, 탐지, 생산, 기술을 사용하지 못하도록 합니다. 정지장에 갇힌 유닛과 구조물은 공격받거나 능력에 영향을 받지 않습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 및 구조물에 사용 가능</c>
+Button/Tooltip/ResearchWarpGateTaldarim=<c val="ffff8a">관문</c>을 차원 관문으로 업그레이드할 수 있습니다.
+Button/Tooltip/RoboticsBayTaldarim=선봉대와 분노수호자를 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 분노수호자 (로봇공학 시설)
+Button/Tooltip/RoboticsFacilityTaldarim=탈다림 로봇 유닛을 소환합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 관측선<n/>- 선봉대<n/>- 전쟁 분광기
+Button/Tooltip/SOAMothershipBlink=탈다림 모선이 대상 위치로 순간이동합니다.
+Button/Tooltip/SOAMothershipLineAttack=사거리 10인 직선 광선을 발사하여 광선에 맞은 모든 적에게 <d ref="Effect,SOAMothershipLineAttackDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/SOAMothershipv4=궁극의 프로토스 함선입니다. 블랙홀, 점멸, 열 광선을 사용할 수 있습니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/SentryTaldarimForceField=<d ref="Behavior,ForceFieldFate,Duration"/>초 동안 지속하는 벽을 생성하여 지상 유닛의 이동을 방해합니다.<n/><n/><c val="#ColorAttackInfo">거대 유닛과 부딪히면 역장이 부서짐</c>
+Button/Tooltip/ShieldBatteryTaldarim=방어 구조물입니다. 주위 유닛의 보호막을 재충전시킵니다.
+Button/Tooltip/SquadSight=주위 모든 아군 유닛의 비근접 공격 사거리가 <d ref="Behavior,ObserverSquadSight,Modification.RangedWeaponRange"/>만큼 증가합니다.
+Button/Tooltip/StalkerTaldarim=원거리 공격 능력을 갖춘 4족 보행 유닛입니다. 위상 점멸 및 위상 장갑을 사용할 수 있습니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/StargateTaldarim=탈다림 공중 유닛을 소환합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 하늘발톱<n/>- 선도자<n/>- 파멸자
+Button/Tooltip/TaldarimAirArmorLevel1=탈다림 공중 유닛의 방어력을 업그레이드합니다.
+Button/Tooltip/TaldarimAirArmorLevel2=탈다림 공중 유닛의 방어력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/TaldarimAirArmorLevel3=탈다림 공중 유닛의 방어력을 최대로 업그레이드합니다.
+Button/Tooltip/TaldarimAirWeaponsLevel1=탈다림 공중 유닛의 공격력을 업그레이드합니다.
+Button/Tooltip/TaldarimAirWeaponsLevel2=탈다림 공중 유닛의 공격력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/TaldarimAirWeaponsLevel3=탈다림 공중 유닛의 공격력을 최대로 업그레이드합니다.
+Button/Tooltip/TaldarimGroundArmorLevel1=탈다림 지상 유닛의 방어력을 업그레이드합니다.
+Button/Tooltip/TaldarimGroundArmorLevel2=탈다림 지상 유닛의 방어력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/TaldarimGroundArmorLevel3=탈다림 지상 유닛의 방어력을 최대로 업그레이드합니다.
+Button/Tooltip/TaldarimGroundWeaponsLevel1=탈다림 지상 유닛의 공격력을 업그레이드합니다.
+Button/Tooltip/TaldarimGroundWeaponsLevel2=탈다림 지상 유닛의 공격력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/TaldarimGroundWeaponsLevel3=탈다림 지상 유닛의 공격력을 최대로 업그레이드합니다.
+Button/Tooltip/TaldarimShieldsLevel1=모든 탈다림 유닛과 구조물의 보호막을 업그레이드합니다.
+Button/Tooltip/TaldarimShieldsLevel2=모든 탈다림 유닛과 구조물의 보호막을 한 단계 더 업그레이드합니다.
+Button/Tooltip/TaldarimShieldsLevel3=모든 탈다림 유닛과 구조물의 보호막을 최대로 업그레이드합니다.
+Button/Tooltip/TargetLock=대상 적 유닛이 받는 피해를 <d ref="Behavior,ObserverTargetLock,Modification.DamageTakenFraction[Splash]*100"/>% 증가시킵니다. 목표 고정 상태가 유지되는 동안 효과가 지속됩니다.
+Button/Tooltip/TempestTaldarim=공성 포함입니다. 장거리에서 공격합니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/TempestTaldarimGroundAttackUpgrade=정복함의 공진 코일이 <d ref="Behavior,LightningBombTaldarim,Duration"/>초에 걸쳐 대상 적 유닛에 총 <d ref="(Behavior,LightningBombTaldarim,Duration/Behavior,LightningBombTaldarim,Period)*Effect,LightningBombTaldarimDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/TempestTaldarimResearchGroundAttackUpgrade=<c val="ffff8a">정복함</c>의 공진 코일이 <d ref="Behavior,LightningBombTaldarim,Duration"/>초에 걸쳐 대상 적 유닛에 총 <d ref="(Behavior,LightningBombTaldarim,Duration/Behavior,LightningBombTaldarim,Period)*Effect,LightningBombTaldarimDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/TemplarArchivesTaldarim=승천자를 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 승천자 (관문)
+Button/Tooltip/TransportModeTaldarim=전쟁 분광기를 수송 모드로 되돌려, 이동하고 공격할 수 있게 합니다.
+Button/Tooltip/TwilightCouncilTaldarim=광신자와 학살자를 업그레이드합니다.
+Button/Tooltip/UpgradeToWarpGateTaldarim=이 관문을 차원 관문으로 업그레이드하여 유닛을 수정탑이나 전쟁 분광기의 동력장 내 원하는 위치에 소환할 수 있게 해줍니다.
+Button/Tooltip/VanguardArmoredDamage=중장갑 유닛에게 주는 피해가 증가합니다.
+Button/Tooltip/VoidColossusChargedBlast=하나의 유닛 또는 구조물을 공격해 큰 피해를 줍니다. 이동하면서 공격할 수 있습니다. 구조물에 추가 피해를 줍니다.
+Button/Tooltip/VoidHighTemplarMindBlast=대상 적 유닛에게 <d ref="Effect,VoidHighTemplarMindBlastDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/VoidHighTemplarPsiOrb=이동 경로에 있는 모든 적에게 초당 <d ref="Effect,VoidHighTemplarPsiOrbDamage,Amount/Effect,VoidHighTemplarPsiOrbPersistent,PeriodicPeriodArray[0]"/>의 피해를 주는 사이오닉 구체를 방출합니다.
+Button/Tooltip/VoidRayTaldarim=범위 돌격 함선입니다. 파멸 광선으로 다수의 유닛을 공격할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/VoidSentryBlackHole=대상 지역에 있는 적 유닛을 <d ref="Effect,VoidSentryBlackHolePersistent,PeriodCount*Effect,VoidSentryBlackHolePersistent,PeriodicPeriodArray[0]"/>초 동안 기절시킵니다.
+Button/Tooltip/VoidStasis=<d ref="Behavior,DarkTemplarVoidStasis,Duration"/>초 동안 대상이 모든 공격, 능력, 이동, 탐지, 생산, 기술을 사용하지 못하도록 합니다. 정지장에 갇힌 유닛과 구조물은 공격받거나 능력에 영향을 받지 않습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 및 구조물에 사용 가능</c>
+Button/Tooltip/VoidVoidRayBeamBounce=파멸자가 공격을 계속하면 분광 광선이 갈라져 주위 최대 3기의 추가 대상을 공격합니다.
+Button/Tooltip/WarpGateTaldarim=탈다림 지상 유닛을 소환할 수 있습니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 광신자
+Button/Tooltip/WarpInSupplicant=사거리가 짧은 전사 유닛입니다. 차원 관문을 통해 소환하면 한 번에 두 기씩 소환됩니다.<n/></n><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/WarpInSupplicantHidden=사거리가 짧은 전사 유닛입니다. 한 번에 두 기씩 소환됩니다.<n/></n><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/WarpPrismPhasingTaldarim=정지 상태로 에너지를 공급합니다. 유닛을 들이거나 내보낼 수 있습니다. 이동하는 수송 모드로 전환할 수 있습니다.
+Button/Tooltip/WarpPrismTaldarim=비행 수송기입니다. 떨어져 있는 유닛을 들일 수 있으며 동력장을 생성하도록 배치할 수 있습니다.
+Commander/Name/UITaldarim=UITaldarim
+DOCSTR_0000=사이오닉 에너지가 부족합니다.<n/>수정탑을 더 건설하십시오.
+DocInfo/DescLong=Taldarim Mod for SC: Revolution Overdrive
+DocInfo/DescShort=스타크래프트 II 섬멸전 플레이어
+DocInfo/HowToPlayAdvanced00=향후 Team Koprulu와의 협력을 통해 SC: Evo의 스타크래프트 1 종족을 가져올 계획입니다.
+DocInfo/HowToPlayAdvanced01=협동전을 비롯해, 스타크래프트의 이야기에서 소개된 여러 종족들과 진영들 역시 추가할 계획입니다.
+DocInfo/HowToPlayAdvanced02=이에 더해, 여러분이 구상한 진영 또한 제작하여 추가할 준비가 되어 있습니다!
+DocInfo/HowToPlayAdvanced03=버그 제보, 리플레이 파일 제공, 신규종족 제안 등의 기타 문의는 dhkdwljjw@gmail.com를 통해 보내주십시오.
+DocInfo/HowToPlayBasic00=유튜브 채널 '맹덕엄마 MM'님을 통해 제작하고 있는 스타크래프트 II 신규종족 모드입니다.
+DocInfo/HowToPlayBasic01=현재 개발 중인 모드입니다. 추가 종족 제작, 밸런스 기준 확립, 영어 지원 등을 계획하고 있습니다.
+DocInfo/Name=Taldarim Mod for SC: Revolution Overdrive
+DocInfo/Website=https://www.youtube.com/@maengduck2
+Effect/Name/CarrierTaldarimInterceptor=요격기 발사 (장전)
+Effect/Name/ColossusTaldarimSet=ColossusTaldarimSet
+Effect/Name/ColossusTaldarimSplashDamage=ColossusTaldarimSplashDamage
+Effect/Name/ColossusTaldarimSplashLM=ColossusTaldarimSplashLM
+Effect/Name/ColossusTaldarimSplashSearch=ColossusTaldarimSplashSearch
+Effect/Name/ForeseeSet=간파 (모음)
+Effect/Name/HarbingerDisruptionTrapActivateSearch=선도자 분열 덫 활성화 탐색
+Effect/Name/HarbingerDisruptionTrapActivateSet=Harbinger Disruption Trap Activate Set
+Effect/Name/HarbingerDisruptionTrapBuildBeamOff=Harbinger Disruption Trap Build Beam Off
+Effect/Name/HarbingerDisruptionTrapBuildBeamOn=Harbinger Disruption Trap Build Beam On
+Effect/Name/HarbingerDisruptionTrapDamage=Harbinger Disruption Trap Damage
+Effect/Name/HarbingerDisruptionTrapReveal=Harbinger Disruption Trap Reveal
+Effect/Name/HarbingerForeseeAB=선도자 간파 동작 적용
+Effect/Name/HarbingerForeseeDummyDamage=HarbingerForeseeDummyDamage
+Effect/Name/HarbingerForeseeSearch=선도자 간파 검색
+Effect/Name/ImmortalTaldarimWeaponDamageUpgraded=ImmortalTaldarimWeaponDamageUpgraded (이름 없음)
+Effect/Name/InterceptorTaldarimBeamDamage=파동포 (피해)
+Effect/Name/InterceptorTaldarimBeamPersistent=요격기 광선
+Effect/Name/InterceptorTaldarimLaunchPersistent=요격기
+Effect/Name/IonCannonsTaldarim=이온포
+Effect/Name/IonCannonsTaldarimGround=이온포
+Effect/Name/IonCannonsTaldarimGroundRight=이온포
+Effect/Name/IonCannonsTaldarimU=이온포
+Effect/Name/LightningBombTaldarimAB=Lightning Bomb Taldarim AB
+Effect/Name/LightningBombTaldarimDamage=Lightning Bomb Taldarim Damage
+Effect/Name/ParticleBeamTaldarim=입자 광선
+Effect/Name/ParticleDisruptorsTaldarim=엔트로피 광선 (모음)
+Effect/Name/ParticleDisruptorsTaldarimU=엔트로피 광선 (피해)
+Effect/Name/PhoenixBomberCarpetBombAutoSearchSet=PhoenixBomberCarpetBombAutoSearchSet
+Effect/Name/PhoenixBomberCarpetBombAutoSearchSetCooldown=PhoenixBomberCarpetBombAutoSearchSetCooldown
+Effect/Name/PhoenixBomberCarpetBombDamageLeft=PhoenixBomberCarpetBombDamageLeft (이름 없음)
+Effect/Name/PhoenixBomberCarpetBombPersistent=PhoenixBomberCarpetBombPersistent (이름 없음)
+Effect/Name/PhoenixBomberCarpetBombSearchArea=PhoenixBomberCarpetBombSearchArea
+Effect/Name/PhoenixBomberCarpetBombSearchTarget=PhoenixBomberCarpetBombSearchTarget
+Effect/Name/PhoenixBomberCarpetBombSearchTargetAutoCast=PhoenixBomberCarpetBombSearchTargetAutoCast
+Effect/Name/PhoenixBomberCarpetBombSet=PhoenixBomberCarpetBombSet
+Effect/Name/PulsarBlastAB=펄서 폭탄 (동작 적용)
+Effect/Name/PulsarBlastDamage=펄서 폭발 피해
+Effect/Name/PulsarBlastLM=펄서 폭탄 (미사일)
+Effect/Name/PulsarBlastSearch=펄서 폭발 검색
+Effect/Name/SOAMothershipLineAttackCasterImpactDummy=SOAMothershipLineAttackCasterImpactDummy
+Effect/Name/SOAMothershipLineAttackCasterLM=SOAMothershipLineAttackCasterLM
+Effect/Name/SOAMothershipLineAttackDamage=SOAMothershipLineAttackDamage
+Effect/Name/SOAMothershipLineAttackInitialCP=SOAMothershipLineAttackInitialCP
+Effect/Name/SOAMothershipLineAttackScanCP=SOAMothershipLineAttackScanCP
+Effect/Name/SOAMothershipLineAttackSearch=SOAMothershipLineAttackSearch
+Effect/Name/SOAMothershipv4BeamDamage=SOAMothershipv4BeamDamage
+Effect/Name/SOAMothershipv4BeamDummy=SOAMothershipv4BeamDummy
+Effect/Name/SOAMothershipv4BeamPersistent=SOAMothershipv4BeamPersistent
+Effect/Name/SOAMothershipv4BeamSet=SOAMothershipv4BeamSet
+Effect/Name/SOAMothershipv4SecondaryBeamPersistent=SOAMothershipv4SecondaryBeamPersistent
+Effect/Name/TempestTaldarimDamage=폭풍함 탈다림 피해
+Effect/Name/TempestTaldarimDamageGround=폭풍함 탈다림 피해 (지상)
+Effect/Name/TempestTaldarimGroundDamageSet=폭풍함 탈다림 피해 모음
+Effect/Name/TempestTaldarimLaunchMissile=폭풍함 탈다림 미사일 발사
+Effect/Name/TempestTaldarimLaunchMissileGround=폭풍함 탈다림 미사일 발사 (지상)
+Effect/Name/UpgradeToWarpGateAutoCastDisablerTaldarim=차원 관문 자동 시전 비활성화로 업그레이드 탈다림
+Effect/Name/UpgradeToWarpGateAutoCastOffTaldarim=차원 관문 자동 시전 꺼짐으로 업그레이드 탈다림
+Effect/Name/VoidSentryBlackHoleAB=VoidSentryBlackHoleAB
+Effect/Name/VoidSentryBlackHoleForce=VoidSentryBlackHoleForce
+Effect/Name/VoidSentryBlackHoleForceOffset=VoidSentryBlackHoleForceOffset
+Effect/Name/VoidSentryBlackHoleImpactSet=VoidSentryBlackHoleImpactSet
+Effect/Name/VoidSentryBlackHolePersistent=VoidSentryBlackHolePersistent
+Effect/Name/VoidSentryBlackHoleSearch=VoidSentryBlackHoleSearch
+Error/BatteryMustBeNearNexus=충전소가 연결체 근처에 있어야 합니다.
+Error/TargetIsUnpowered=대상의 동력이 끊겼습니다.
+Race/Name/Tal=탈다림
+RequirementNode/Tooltip/CountUnitAlias_Gateway_TaldarimCompleteOnly3321547334TechTreeCheat=관문
+RequirementNode/Tooltip/CountUpgradeCarrierTaldarimInterceptorUpgradeCompleteOnly2620646877=함대 신호소에서 요격기 출격 연구
+RequirementNode/Tooltip/CountUpgradeColossusTaldarimThermalExplosionCompleteOnly4213684408=로봇공학 지원소에서 열핵 폭발 연구
+RequirementNode/Tooltip/CountUpgradePhaseBlinkCompleteOnly1215822746=죽음의 의회에서 위상 점멸 연구
+RequirementNode/Tooltip/CountUpgradeResearchSacrificeCompleteOnly1308047646=승천자 기록보관소에서 제물 연구
+RequirementNode/Tooltip/CountUpgradeTempestTaldarimGroundAttackUpgradeCompleteOnly2179728934=함대 신호소에서 구조 불안정장치 연구
+RequirementNode/Tooltip/CountUpgradeVoidHighTemplarMindBlastCompleteOnly1522811427=승천자 기록보관소에서 정신 폭발 연구
+RequirementNode/Tooltip/CountUpgradeVoidStasisCompleteOnly619326569=사냥꾼의 은신처에서 공허 정지장 연구
+RequirementNode/Tooltip/CountUpgradeWarpGateResearchTaldarimCompleteOnly2487229854TechTreeCheat=인공제어소에서 차원 관문 연구
+RequirementNode/Tooltip/Eq1478448419CountUnitSOAMothershipv4QueuedOrBetter0=탈다림 모선 없음
+RequirementNode/Tooltip/LT4069678448CountUnitInterceptorTaldarimQueuedOrBetterAtUnit8=하늘군주가 보유한 요격기 8기 미만
+Text/Validator/Error/AlreadyHasStructureOvercharge=이미 구조물 과충전을 받고 있는 구조물입니다.
+UI/ResourceSupplyToolTip_Tal=살아있는 유닛은 보급품이 필요합니다. 수정탑을 소환하여 보급을 늘리십시오.
+Unit/Category/TaldarimUnits=탈다림
+Unit/Name/AssimilatorTaldarim=융화소
+Unit/Name/AssimilatorTaldarimRich=융화소
+Unit/Name/CarrierTaldarim=하늘군주
+Unit/Name/ColossusTaldarim=분노수호자
+Unit/Name/ColossusTaldarimRuptureMissile=Colossus Taldarim Rupture Missile
+Unit/Name/CyberneticsCoreTaldarim=인공제어소
+Unit/Name/DarkShrineTaldarim=사냥꾼의 은신처
+Unit/Name/DarkTemplarTaldarim=피의 사냥꾼
+Unit/Name/FleetBeaconTaldarim=함대 신호소
+Unit/Name/ForgeTaldarim=제련소
+Unit/Name/GatewayTaldarim=관문
+Unit/Name/Harbinger=선도자
+Unit/Name/HarbingerDisruptionTrap=분열 덫
+Unit/Name/HighTemplarTaldarim=승천자
+Unit/Name/ImmortalTaldarim=선봉대
+Unit/Name/InterceptorTaldarim=요격기
+Unit/Name/IonCannonsTaldarimWeapon=이온포 탈다림
+Unit/Name/IonCannonsWeaponTaldarimGround=이온포 탈다림 지상
+Unit/Name/Monitor=교란기
+Unit/Name/NexusTaldarim=연결체
+Unit/Name/ObserverTaldarim=관측선
+Unit/Name/PhoenixTaldarim=하늘발톱
+Unit/Name/PhotonCannonTaldarim=광자포
+Unit/Name/ProbeTaldarim=탐사정
+Unit/Name/PulsarBlastWeapon=펄서 폭탄
+Unit/Name/PylonTaldarim=수정탑
+Unit/Name/RoboticsBayTaldarim=로봇공학 지원소
+Unit/Name/RoboticsFacilityTaldarim=로봇공학 시설
+Unit/Name/SOAMothershipv4=탈다림 모선
+Unit/Name/ShieldBatteryTaldarim=보호막 충전소
+Unit/Name/StalkerTaldarim=학살자
+Unit/Name/StalkerTaldarimWeapon=학살자
+Unit/Name/StargateTaldarim=우주관문
+Unit/Name/Supplicant=광신자
+Unit/Name/TempestTaldarim=정복함
+Unit/Name/TempestTaldarimWeapon=폭풍함 탈다림 무기
+Unit/Name/TempestTaldarimWeaponGround=폭풍함 탈다림 무기 (지상)
+Unit/Name/TemplarArchivesTaldarim=승천자 기록보관소
+Unit/Name/TwilightCouncilTaldarim=죽음의 의회
+Unit/Name/VoidRayTaldarim=파멸자
+Unit/Name/WarpGateTaldarim=차원 관문
+Unit/Name/WarpPrismPhasingTaldarim=전쟁 분광기
+Unit/Name/WarpPrismTaldarim=전쟁 분광기
+Upgrade/Name/AlarackHavocPermanentCloak=은폐 모듈
+Upgrade/Name/AlarakAdvisor=알라라크 부관
+Upgrade/Name/AlarakColossusChargedBlastAirAttack=공중 추적
+Upgrade/Name/AlarakColossusChargedBlastChargeTime=급속 동력 순환
+Upgrade/Name/AlarakHavocAbilityRange=혈석 공명
+Upgrade/Name/AlarakHavocTargetLockBuff=약점 탐지
+Upgrade/Name/AlarakHighTemplarPsionicOrbTravelDistance=혼돈의 조율
+Upgrade/Name/AlarakStalkerPhasingArmor=위상 장갑
+Upgrade/Name/AlarakSupplicantMaxShields=피의 보호막
+Upgrade/Name/AlarakSupplicantShieldArmor=영혼 증강
+Upgrade/Name/AlarakVanguardIncreaseSplashArea=물질 확산
+Upgrade/Name/CarrierTaldarimInterceptorUpgrade=중력자 발사기
+Upgrade/Name/ColossusTaldarimThermalExplosion=열핵 폭발
+Upgrade/Name/PhaseBlink=위상 점멸
+Upgrade/Name/PhoenixTaldarimGroundAttackUpgrade=음이온파 수정
+Upgrade/Name/ResearchSacrifice=제물
+Upgrade/Name/TaldarimAirArmorLevel1=탈다림 공중 장갑 1단계
+Upgrade/Name/TaldarimAirArmorLevel2=탈다림 공중 장갑 2단계
+Upgrade/Name/TaldarimAirArmorLevel3=탈다림 공중 장갑 3단계
+Upgrade/Name/TaldarimAirArmors=탈다림 공중 장갑
+Upgrade/Name/TaldarimAirWeapons=탈다림 공중 무기
+Upgrade/Name/TaldarimAirWeaponsLevel1=탈다림 공중 무기 1단계
+Upgrade/Name/TaldarimAirWeaponsLevel2=탈다림 공중 무기 2단계
+Upgrade/Name/TaldarimAirWeaponsLevel3=탈다림 공중 무기 3단계
+Upgrade/Name/TaldarimGraviticBooster=중력 가속기
+Upgrade/Name/TaldarimGroundArmor=탈다림 지상 장갑
+Upgrade/Name/TaldarimGroundArmorLevel1=탈다림 지상 장갑 1단계
+Upgrade/Name/TaldarimGroundArmorLevel2=탈다림 지상 장갑 2단계
+Upgrade/Name/TaldarimGroundArmorLevel3=탈다림 지상 장갑 3단계
+Upgrade/Name/TaldarimGroundWeapons=탈다림 지상 무기
+Upgrade/Name/TaldarimGroundWeaponsLevel1=탈다림 지상 무기 1단계
+Upgrade/Name/TaldarimGroundWeaponsLevel2=탈다림 지상 무기 2단계
+Upgrade/Name/TaldarimGroundWeaponsLevel3=탈다림 지상 무기 3단계
+Upgrade/Name/TaldarimIcons=탈다림 아이콘
+Upgrade/Name/TaldarimShields=탈다림 보호막
+Upgrade/Name/TaldarimShieldsLevel1=탈다림 보호막 1단계
+Upgrade/Name/TaldarimShieldsLevel2=탈다림 보호막 2단계
+Upgrade/Name/TaldarimShieldsLevel3=탈다림 보호막 3단계
+Upgrade/Name/TempestTaldarimGroundAttackUpgrade=구조 불안정장치
+Upgrade/Name/VanguardArmoredDamage=융합포
+Upgrade/Name/VoidHighTemplarMindBlast=정신 폭발
+Upgrade/Name/VoidRayTaldarimSpeedUpgrade=유동성 추진기
+Upgrade/Name/VoidStasis=공허 정지장
+Upgrade/Name/WarpGateResearchTaldarim=차원 관문
+Weapon/Name/AlarakStructureOvercharge=구조물 과충전
+Weapon/Name/Ascendant=고통의 폭발
+Weapon/Name/ColossusTaldarimChargedBeam=충전 폭발
+Weapon/Name/ColossusTaldarimChargedBeamFast=충전 폭발
+Weapon/Name/DarkTemplarTaldarim=척살 검
+Weapon/Name/ImmortalTaldarim=확산포
+Weapon/Name/InterceptorTaldarimBeam=요격기 광선
+Weapon/Name/InterceptorTaldarimLaunch=요격기 발사
+Weapon/Name/InterceptorsTaldarimDummy=요격기
+Weapon/Name/IonCannonsGround=이온포
+Weapon/Name/IonCannonsTaldarim=이온포
+Weapon/Name/ParticleBeamTaldarim=입자 광선
+Weapon/Name/ParticleDisruptorsTaldarim=입자 분열기
+Weapon/Name/SOAMothershipv4Weapon=종결자 광선
+Weapon/Name/SupplicantWeapon=피의 보주
+Weapon/Name/TempestTaldarim=에너지 과부하
+Weapon/Name/TempestTaldarimGround=공진 코일
+Weapon/Name/VoidRayTaldarim=파멸 광선
+Weapon/Name/WarpPrismTaldarimWeapon=차원포
+e_cmdCantBuildOnThat_Tal=활동 중인 베스핀 간헐천에 배치해야 합니다.
+e_cmdFoodUsageImpossible_Tal=불가능한 요청<n/>보급품 한도에 도달했습니다.
+e_cmdMustBuildRefineryFirst_Tal=융화소를 먼저 건설해야 합니다.
+e_cmdNotEnoughFood_Tal=사이오닉 에너지가 부족합니다.<n/>수정탑을 더 건설하십시오.

@@ -1,0 +1,88 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Dehaka
+//--------------------------------------------------------------------------------------------------
+// Constants
+const int lib40BC87EB_gv_cM_DehakaEssenceIndex = 17;
+const string lib40BC87EB_gv_c_DehakaConsumeCooldownLink = "Abil/DehakaConsume";
+const string lib40BC87EB_gv_c_DehakaConsumeAbil = "DehakaConsume";
+const string lib40BC87EB_gv_c_DehakaConsumeEffect = "DehakaConsumeImpactEatDamage";
+const string lib40BC87EB_gv_c_DehakaConsumeEffectTriggerEffect = "DehakaConsumeImpactEatDamageReal";
+const string lib40BC87EB_gv_c_DehakaConsumeBehaviorDisable = "DehakaConsumeDisableCommandCard";
+const int lib40BC87EB_gv_c_DehakaConsumeEffectHeroicEssenceAmount = 20;
+const string lib40BC87EB_gv_c_DehakaConsumeEffectHeroicLink = "DehakaConsumeEffectHeroic";
+const string lib40BC87EB_gv_c_DehakaConsumeEffectUserType = "CoopAbilityDehakaConsumeEffects";
+const string lib40BC87EB_gv_c_DehakaConsumeEffectPsiExplodeWeaponDmgLink = "DehakaConsumeEffectPsionicDamage";
+const string lib40BC87EB_gv_cM_DehakaMutaliskReviveCooldownBehavior = "DehakaMutaliskTimerBehavior";
+const string lib40BC87EB_gv_cM_DehakaMutaliskReviveCooldownIndicator = "PrimalReconstitutionCooldownIndicator";
+const string lib40BC87EB_gv_cM_HeroReviveHealEffect = "KerriganReviveHealA";
+
+// Variable Declarations
+unit[16] lib40BC87EB_gv_cM_HeroDehaka;
+int[16] lib40BC87EB_gv_cM_DehakaLevelsMax;
+string[16] lib40BC87EB_gv_cM_DehakaVeterencyBehavior;
+int[16] lib40BC87EB_gv_cM_Dehaka_CurrentLevel;
+int[21] lib40BC87EB_gv_cM_DehakaNextLevelValueArray;
+int[16] lib40BC87EB_gv_cM_Dehaka_TotalEssence;
+fixed[16] lib40BC87EB_gv_cM_Dehaka_ReviverEssenceCount;
+string lib40BC87EB_gv_cM_Dehaka_EssenceAttribute;
+bool lib40BC87EB_gv_cM_DehakaLevelMaxMusicPlayed;
+fixed lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor;
+unitfilter lib40BC87EB_gv_c_DehakaConsumeCooldownFilter;
+abilcmd lib40BC87EB_gv_dataDehakaLearnAbilCmdLink;
+unit[16] lib40BC87EB_gv_cM_DehakaReviveFootprint;
+unit[16] lib40BC87EB_gv_cM_HeroUnit;
+unit[16] lib40BC87EB_gv_cM_HeroReviver;
+bool[16] lib40BC87EB_gv_cM_HeroDeathCount;
+
+// Function Declarations
+bool lib40BC87EB_gf_HeroCanSpendSkillPoint (unit lp_hero, string lp_learnAbility);
+void lib40BC87EB_gf_CM_Dehaka_EssenceSetStack (unit lp_essence, int lp_stack);
+void lib40BC87EB_gf_CM_Dehaka_SetLevelValues (int lp_player);
+void lib40BC87EB_gf_CM_Dehaka_LevelUp (int lp_dehakaPlayer, unit lp_dehakaUnit);
+int lib40BC87EB_gf_CM_Dehaka_EssenceGetStack (unit lp_essence);
+void lib40BC87EB_gf_CM_Dehaka_EssenceTransfer (int lp_indexPlayer, unit lp_trainUnit, int lp_essenceBuff100Count, int lp_essenceBuff10Count, int lp_essenceBuff1Count);
+void lib40BC87EB_gf_CM_Dehaka_EssenceScale (unit lp_essenceUnit, bool lp_instantScale);
+void lib40BC87EB_gf_CM_Dehaka_EssenceMerge (unit lp_essenceUnit, int lp_essenceUnitCount);
+void lib40BC87EB_gf_CM_DehakaConsumeFloatText (text lp_text, int lp_p, point lp_loc);
+void lib40BC87EB_gf_CM_DehakaConsumeUpdatePsiExplodeDamage (int lp_dehakaPlayer, unit lp_dehakaUnit, fixed lp_weaponDamage);
+void lib40BC87EB_gf_CM_HeroHandleDeath (int lp_player);
+void lib40BC87EB_gf_CM_HeroNormalReviveMsgPending (int lp_player, fixed lp_duration);
+void lib40BC87EB_gf_CM_HeroReviveMsgNoTownHall (int lp_player);
+void lib40BC87EB_gf_CM_HeroReviveMsgComplete (int lp_player);
+void lib40BC87EB_gf_CM_HeroWaitForRevive (int lp_player);
+
+// Trigger Declarations
+trigger lib40BC87EB_gt_CM_Dehaka_TriggersInit;
+trigger lib40BC87EB_gt_CM_Dehaka_EssenceDrop;
+trigger lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling;
+trigger lib40BC87EB_gt_CM_Dehaka_EssencePickup;
+trigger lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate;
+trigger lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs;
+trigger lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3;
+trigger lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off;
+trigger lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder;
+trigger lib40BC87EB_gt_CM_Dehaka_UnitCostRefund;
+trigger lib40BC87EB_gt_CM_DehakaConsumeExecuted;
+trigger lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe;
+trigger lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe;
+trigger lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic;
+trigger lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2;
+trigger lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3;
+trigger lib40BC87EB_gt_DehakaBossFacing;
+trigger lib40BC87EB_gt_DehakaMammothBreathLootAtStart;
+trigger lib40BC87EB_gt_DehakaMammothBreathLootAtStop;
+trigger lib40BC87EB_gt_CM_DehakaLearn;
+trigger lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn;
+trigger lib40BC87EB_gt_CM_DehakaDenReviveFootprintOn;
+trigger lib40BC87EB_gt_CM_DehakaDenReviveFootprintOff;
+trigger lib40BC87EB_gt_CM_DehakaDenConsumeEssence;
+trigger lib40BC87EB_gt_CM_HeroDied;
+trigger lib40BC87EB_gt_CM_HeroReviverDied;
+trigger lib40BC87EB_gt_CM_HeroSpawn;
+trigger lib40BC87EB_gt_CM_HeroReviverSpawn;
+
+// Library Initialization
+void lib40BC87EB_InitVariables ();
+

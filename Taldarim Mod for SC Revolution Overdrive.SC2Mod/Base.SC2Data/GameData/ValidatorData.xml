@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorLocationEnumArea id="ActivateDisruptionTrapTargetInRange">
+        <ResultFailed value="CantFindEnoughTargets"/>
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray>
+            <Compare value="GE"/>
+            <Count value="1"/>
+            <Radius value="3"/>
+            <Validator value="ActivateDisruptionTrapValidators"/>
+        </AreaArray>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Missile,Dead,Hidden"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorCombine id="ActivateDisruptionTrapValidators">
+        <Type value="And"/>
+        <CombineArray value="IsNotPhasedUnit"/>
+        <CombineArray value="TargetNotUntargetable"/>
+        <CombineArray value="IsNotDisguisedChangeling"/>
+        <CombineArray value="NotLarva"/>
+        <CombineArray value="NotLarvaEgg"/>
+        <CombineArray value="IsNotBanelingCocoon"/>
+        <CombineArray value="NotRavagerCocoon"/>
+        <CombineArray value="NotLurkerCocoon"/>
+        <CombineArray value="IsNotInfestedTerransEgg"/>
+        <CombineArray value="IsNotNexusMassRecallWarpingOut"/>
+    </CValidatorCombine>
+    <CValidatorUnitAbil id="CasterCanUseAbility">
+        <WhichUnit Value="Caster"/>
+        <Find value="1"/>
+        <AbilLink value="PhoenixBomberGround"/>
+    </CValidatorUnitAbil>
+    <CValidatorUnitOrderQueue id="GatewayMorphingTaldarim">
+        <AbilLink value="UpgradeToWarpGateTaldarim"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitCompareOrderCount id="HangarTaldarimQueueEmpty">
+        <AbilLink value="CarrierTaldarimHangar"/>
+    </CValidatorUnitCompareOrderCount>
+    <CValidatorCombine id="HasAtLeastNormalPowerOrNexusTaldarim">
+        <ResultFailed value="Error,Error/TargetIsUnpowered"/>
+        <CombineArray value="HasAtLeastNormalPower"/>
+        <CombineArray value="IsNexusTaldarim"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="HaveAlarakVanguardIncreaseSplashArea">
+        <Find value="1"/>
+        <Value value="HaveMatterDispersion"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="HaveNoStructureOvercharge">
+        <Behavior value="AlarakStructureOvercharge"/>
+        <ResultFailed value="Error,Text/Validator/Error/AlreadyHasStructureOvercharge"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="HaveVanguardArmoredDamage">
+        <Find value="1"/>
+        <Value value="HaveFusionMortars"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitType id="IsCarrierTaldarim">
+        <Value value="Carrier"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="IsCarrierOrCarrierTaldarim">
+        <CombineArray value="IsCarrier"/>
+        <CombineArray value="IsCarrierTaldarim"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="IsCyberneticsCoreTaldarim">
+        <Value value="CyberneticsCoreTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsDarkShrineTaldarim">
+        <Value value="DarkShrineTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsFleetBeaconTaldarim">
+        <Value value="FleetBeaconTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsForgeTaldarim">
+        <Value value="ForgeTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsGatewayTaldarim">
+        <Value value="GatewayTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsNexusTaldarim">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <Value value="NexusTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsRoboticsBayTaldarim">
+        <Value value="RoboticsBayTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsRoboticsFacilityTaldarim">
+        <Value value="RoboticsFacilityTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsStarGateTaldarim">
+        <Value value="StargateTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsTemplarArchivesTaldarim">
+        <Value value="TemplarArchivesTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsTwilightCouncilTaldarim">
+        <Value value="TwilightCouncilTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsWarpgateTaldarim">
+        <Value value="WarpGateTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorLocationEnumArea id="NexusStructureOvercharge8Range">
+        <ResultFailed value="TargetIsOutOfRange"/>
+        <AreaArray>
+            <Compare value="GE"/>
+            <Count value="1"/>
+            <Radius value="10"/>
+            <Validator value="NexusStructureOverchargeisNexus"/>
+        </AreaArray>
+        <Compare value="GE"/>
+        <Count value="1"/>
+        <SearchFilters value="Ground,Structure;Ally,Neutral,Enemy,Air,Worker,RawResource,HarvestableResource,Missile,Destructible,UnderConstruction,Dead"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitType id="NexusStructureOverchargeisNexus">
+        <ResultFailed value="Error,Error/IsNexus"/>
+        <Value value="NexusTaldarim"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveUpgradeToWarpGateAutoCastDisablerTaldarim">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="UpgradeToWarpGateAutoCastDisablerTaldarim"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="PhoenixTaldarimRangeUpgraded">
+        <WhichPlayer Value="Caster"/>
+        <ResultNoPlayer value="Error"/>
+        <Find value="1"/>
+        <Value value="HavePhoenixTaldarimGroundAttackUpgrade"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorLocationEnumArea id="PhoenixTaldarimGroundAttackAutoCastValidator">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray>
+            <Compare value="GE"/>
+            <Count value="4"/>
+            <Radius value="5"/>
+            <Validator value="TargetLifeGE20"/>
+        </AreaArray>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareCooldown id="PhoenixTaldarimGroundAttackAutoSearchValidator">
+        <CooldownLink value="Abil/PhoenixBomberGround"/>
+        <Location value="Unit"/>
+        <Ability value="PhoenixBomberGround"/>
+    </CValidatorUnitCompareCooldown>
+    <CValidatorUnitCompareField id="TargetRadiusLE0Dot125">
+        <Compare value="LE"/>
+        <Field value="Radius"/>
+        <Value value="0.125"/>
+    </CValidatorUnitCompareField>
+    <CValidatorCombine id="TaldarimMothershipRangeCheckCombine">
+        <Type value="And"/>
+        <CombineArray value="CasterNotDead"/>
+        <CombineArray value="TaldarimMothershipRangeCheck"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="TaldarimMothershipRangeCheck">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="10"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorPlayerRequirement id="TempestTaldarimGroundAttackUpgraded">
+        <WhichPlayer Value="Caster"/>
+        <Find value="1"/>
+        <Value value="HaveTempestTaldarimGroundAttackUpgrade"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="ColossusTaldarimThermalExplosionUpgraded">
+        <WhichPlayer Value="Caster"/>
+        <Find value="1"/>
+        <Value value="HaveColossusTaldarimThermalExplosion"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="TimewarpProduction">
+        <CombineArray value="IsNexusTaldarim"/>
+        <CombineArray value="IsRoboticsFacilityTaldarim"/>
+        <CombineArray value="IsStarGateTaldarim"/>
+        <CombineArray value="IsGatewayTaldarim"/>
+        <CombineArray value="IsWarpgateTaldarim"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="TimewarpResearch">
+        <CombineArray value="IsDarkShrineTaldarim"/>
+        <CombineArray value="IsCyberneticsCoreTaldarim"/>
+        <CombineArray value="IsForgeTaldarim"/>
+        <CombineArray value="IsRoboticsBayTaldarim"/>
+        <CombineArray value="IsTwilightCouncilTaldarim"/>
+        <CombineArray value="IsTemplarArchivesTaldarim"/>
+        <CombineArray value="IsFleetBeaconTaldarim"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="VoidSentryBlackHoleForceNotInCenter">
+        <WhichLocation Effect="VoidSentryBlackHoleSearch"/>
+        <Compare value="GT"/>
+        <Range value="0.25"/>
+        <Value Effect="VoidSentryBlackHoleImpactSet" Value="TargetUnit"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorCombine id="VoidRayChargeBeamCounterCheckPhase2Ready">
+        <Type value="And"/>
+        <CombineArray value="VoidRayChargeBeamCounterPhase2CountHigh"/>
+        <CombineArray value="VoidRayChargeBeamCounterPhase2CountLow"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="VoidRayChargeBeamCounterCheckPhase3Ready">
+        <Type value="And"/>
+        <CombineArray value="VoidRayChargeBeamCounterPhase3CountLow"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayChargeBeamCounterPhase1">
+        <WhichUnit Value="Caster"/>
+        <Compare value="LT"/>
+        <Value value="6"/>
+        <Behavior value="VoidRayChargeBeamCounter"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayChargeBeamCounterPhase2CountLow">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="6"/>
+        <Behavior value="VoidRayChargeBeamCounter"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayChargeBeamCounterPhase2CountHigh">
+        <WhichUnit Value="Caster"/>
+        <Compare value="LT"/>
+        <Value value="12"/>
+        <Behavior value="VoidRayChargeBeamCounter"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayChargeBeamCounterPhase3CountLow">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="12"/>
+        <Behavior value="VoidRayChargeBeamCounter"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoVoidRayChargeBeamPhase2">
+        <Behavior value="VoidRayChargeBeamPhase2"/>
+        <Compare value="LE"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoVoidRayChargeBeamPhase3">
+        <Behavior value="VoidRayChargeBeamPhase3"/>
+        <Compare value="LE"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="VoidRayChargeBeamPhase1">
+        <Type value="And"/>
+        <CombineArray value="NoVoidRayChargeBeamPhase2"/>
+        <CombineArray value="NoVoidRayChargeBeamPhase3"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayChargeBeamPhase2">
+        <Behavior value="VoidRayChargeBeamPhase2"/>
+        <Compare value="NE"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayChargeBeamPhase3">
+        <Behavior value="VoidRayChargeBeamPhase3"/>
+        <Compare value="NE"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="TargetLifeGreaterThanOrEqualTo2">
+        <ResultFailed value="Error,Error/SacrificeLifeValidator"/>
+        <Compare value="GE"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="DarkTemplarVoidStasis">
+        <CombineArray value="HasDetector9"/>
+        <CombineArray value="HasDetector10"/>
+        <CombineArray value="HasDetector11"/>
+        <CombineArray value="HasDetector12"/>
+        <CombineArray value="HasDetector13p75"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HasDetector9">
+        <Behavior value="Detector9"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HasDetector13p75">
+        <Behavior value="Detector13p75"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareField id="TargetLockUnitRadiusLarge">
+        <Compare value="GE"/>
+        <Field value="Radius"/>
+        <Value value="0.75"/>
+    </CValidatorUnitCompareField>
+    <CValidatorUnitCompareField id="TargetLockUnitRadiusSmall">
+        <Compare value="LT"/>
+        <Field value="Radius"/>
+        <Value value="0.75"/>
+    </CValidatorUnitCompareField>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveTargetLock">
+        <Behavior value="ObserverTargetLock"/>
+        <ResultFailed value="Error,Error\TargetLock"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CasterNotMaxTargetLocks">
+        <Behavior value="ObserverTargetLockCaster"/>
+        <Compare value="LT"/>
+        <Value value="2"/>
+        <WhichUnit Value="Caster"/>
+        <ResultFailed value="Error,Error\TooManyLockTargets"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="MonitorTargetLockChecks">
+        <Type value="And"/>
+        <CombineArray value="CasterNotDead"/>
+        <CombineArray value="CasterNotStunned"/>
+        <CombineArray value="TargetNotDead"/>
+        <CombineArray value="MonitorTargetLockRangeCheck"/>
+        <CombineArray value="HiddenCompareAB"/>
+        <CombineArray value="HiddenCompareBA"/>
+        <CombineArray value="NotInvulnerable"/>
+    </CValidatorCombine>
+    <CValidatorLocationCompareRange id="MonitorTargetLockRangeCheck">
+        <ResultFailed value="TargetIsOutOfRange"/>
+        <WhichLocation Value="CasterUnit"/>
+        <Compare value="LT"/>
+        <Range value="10"/>
+        <Value Value="TargetUnit"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareBehaviorCount id="NotWarpingInAnywhere">
+        <ResultFailed value="CantTargetThatUnit,Error/CantTargetWarpingInUnits"/>
+        <Behavior value="PowerUserWarpableAnywhere"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsSupplicantWarpingIn">
+        <Compare value="GT"/>
+        <Behavior value="PowerUserWarpableAnywhere"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="SupplicantPowerValidator">
+        <CombineArray value="CasterLocationHasPower"/>
+        <CombineArray value="TargetHasPower"/>
+    </CValidatorCombine>
+    <CValidatorLocationComparePower id="CasterLocationHasPower">
+        <WhichLocation Value="CasterPoint"/>
+        <PowerLink value="PowerSource"/>
+        <Compare value="GT"/>
+    </CValidatorLocationComparePower>
+    <CValidatorUnitComparePowerUserLevel id="TargetHasPower">
+        <Compare value="GE"/>
+        <Value value="1"/>
+    </CValidatorUnitComparePowerUserLevel>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthLTE20">
+        <Compare value="LE"/>
+        <Value value="20"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthLTE22">
+        <Compare value="LE"/>
+        <Value value="22"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthLTE24">
+        <Compare value="LE"/>
+        <Value value="24"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthLTE26">
+        <Compare value="LE"/>
+        <Value value="26"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthLTE88">
+        <Compare value="LE"/>
+        <Value value="88"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthLTE96">
+        <Compare value="LE"/>
+        <Value value="96"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthLTE104">
+        <Compare value="LE"/>
+        <Value value="104"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthLTE80">
+        <Compare value="LE"/>
+        <Value value="80"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetHasCurrentHealthGTE100">
+        <Compare value="GE"/>
+        <Value value="100"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="AlarakStructureOverchargePriority1">
+        <Type value="And"/>
+        <CombineArray value="TargetHasCurrentHealthLTE20"/>
+        <CombineArray value="TargetHasMaxHealthGTE100"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority1Upgrade1">
+        <Type value="And"/>
+        <CombineArray value="TargetHasCurrentHealthLTE22"/>
+        <CombineArray value="TargetHasMaxHealthGTE100"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority1Upgrade2">
+        <Type value="And"/>
+        <CombineArray value="TargetHasCurrentHealthLTE24"/>
+        <CombineArray value="TargetHasMaxHealthGTE100"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority1Upgrade3">
+        <Type value="And"/>
+        <CombineArray value="TargetHasCurrentHealthLTE26"/>
+        <CombineArray value="TargetHasMaxHealthGTE100"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority2">
+        <Type value="And"/>
+        <CombineArray value="TargetHasCurrentHealthLTE80"/>
+        <CombineArray value="TargetHasMaxHealthGTE100"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority2Upgrade1">
+        <Type value="And"/>
+        <CombineArray value="TargetHasCurrentHealthLTE88"/>
+        <CombineArray value="TargetHasMaxHealthGTE100"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority2Upgrade2">
+        <Type value="And"/>
+        <CombineArray value="TargetHasCurrentHealthLTE96"/>
+        <CombineArray value="TargetHasMaxHealthGTE200"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority2Upgrade3">
+        <Type value="And"/>
+        <CombineArray value="TargetHasCurrentHealthLTE104"/>
+        <CombineArray value="TargetHasMaxHealthGTE200"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority3">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+        <CombineArray value="TargetHasCurrentHealthLTE20"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority3Upgrade1">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+        <CombineArray value="TargetHasCurrentHealthLTE22"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority3Upgrade2">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+        <CombineArray value="TargetHasCurrentHealthLTE24"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority3Upgrade3">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+        <CombineArray value="TargetHasCurrentHealthLTE26"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority4">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+        <CombineArray value="TargetHasCurrentHealthLTE80"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority4Upgrade1">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+        <CombineArray value="TargetHasCurrentHealthLTE88"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority4Upgrade2">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+        <CombineArray value="TargetHasCurrentHealthLTE96"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority4Upgrade3">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+        <CombineArray value="TargetHasCurrentHealthLTE104"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AlarakStructureOverchargePriority5">
+        <Type value="And"/>
+        <CombineArray value="TargetIsEnemy"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareVital id="TargetHasMaxHealthGTE100">
+        <Compare value="GE"/>
+        <Type value="Maximum"/>
+        <Value value="100"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitType id="NotCreepTumor">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <ResultNoUnit value="CantTargetThatUnit"/>
+        <Value value="CreepTumor"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="NotCreepTumorBurrowed">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <Value value="CreepTumorBurrowed"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="NotCreepTumorUsed">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <ResultNoUnit value="CantTargetThatUnit"/>
+        <Value value="CreepTumorQueen"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareVital id="AscendantSacrificeCasterEnergyLE175">
+        <WhichUnit Value="Caster"/>
+        <Compare value="LE"/>
+        <Value value="175"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="AscendantSacrificeCasterEnergyLE195">
+        <WhichUnit Value="Caster"/>
+        <Compare value="LE"/>
+        <Value value="195"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="AscendantSacrificeTargetLifeGT25">
+        <Compare value="GT"/>
+        <Value value="25"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="AscendantSacrificeTargetLifeGT5">
+        <Compare value="GT"/>
+        <Value value="5"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="TargetLifeGreaterThan1">
+        <Compare value="GT"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareVital>
+</Catalog>

@@ -1,0 +1,8 @@
+﻿Attribute001/Name=종족 선택
+Attribute001/Value001/Name=기본
+Attribute001/Value002/Name=탈다림
+Attribute001/Value003/Name=멩스크
+Attribute001/Value004/Name=무작위
+DocInfo/DescLong= 유튜브 '맹덕엄마 MM'님을 통해 제작하고 있는 스타크래프트 II 신규종족 모드 팩입니다.<n/><n/> 현재 개발 과정에 있으며, 다양한 종족을 제작하고, 이들을 위한 밸런스를 맞추며, 또한 영어를 비롯한 다른 언어들을 지원하기 위한 과정에 있습니다.<n/><n/> 하단의 링크는 유튜브 '맹덕엄마 MM'님의 채널로 연결되는 링크입니다.<n/><n/> 여러분이 상상하고 꿈꿔온 궁극의 스타크래프트 II를 만나십시오!
+DocInfo/DescShort=스타크래프트 II 섬멸전 플레이어
+DocInfo/Name=SC: Revolution Overdrive

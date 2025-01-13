@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementAnd id="AndCountUnitFleetBeaconTaldarimCompleteOnlyTechTreeCheatEq1478448419CountUnitSOAMothershipv4QueuedOrBetter0">
+        <OperandArray value="CountUnitFleetBeaconTaldarimCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="Eq1478448419CountUnitSOAMothershipv4QueuedOrBetter0"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitInterceptorTaldarimCompleteOnlyAtUnitCountUpgradeCarrierTaldarimInterceptorUpgradeCompleteOnly2620646877">
+        <OperandArray value="CountUnitInterceptorTaldarimCompleteOnlyAtUnit"/>
+        <OperandArray value="CountUpgradeCarrierTaldarimInterceptorUpgradeCompleteOnly2620646877"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimAirArmorLevel1CompleteOnlyCountUnitFleetBeaconTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimAirArmorLevel1CompleteOnly"/>
+        <OperandArray value="CountUnitFleetBeaconTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimAirArmorLevel2CompleteOnlyCountUnitFleetBeaconTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimAirArmorLevel2CompleteOnly"/>
+        <OperandArray value="CountUnitFleetBeaconTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimAirWeaponsLevel1CompleteOnlyCountUnitFleetBeaconTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimAirWeaponsLevel1CompleteOnly"/>
+        <OperandArray value="CountUnitFleetBeaconTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimAirWeaponsLevel2CompleteOnlyCountUnitFleetBeaconTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimAirWeaponsLevel2CompleteOnly"/>
+        <OperandArray value="CountUnitFleetBeaconTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimGroundArmorLevel1CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimGroundArmorLevel1CompleteOnly"/>
+        <OperandArray value="CountUnitTwilightCouncilTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimGroundArmorLevel2CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimGroundArmorLevel2CompleteOnly"/>
+        <OperandArray value="CountUnitTwilightCouncilTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimGroundWeaponsLevel1CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimGroundWeaponsLevel1CompleteOnly"/>
+        <OperandArray value="CountUnitTwilightCouncilTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimGroundWeaponsLevel2CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimGroundWeaponsLevel2CompleteOnly"/>
+        <OperandArray value="CountUnitTwilightCouncilTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimShieldsLevel1CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimShieldsLevel1CompleteOnly"/>
+        <OperandArray value="CountUnitTwilightCouncilTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeTaldarimShieldsLevel2CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly">
+        <OperandArray value="CountUpgradeTaldarimShieldsLevel2CompleteOnly"/>
+        <OperandArray value="CountUnitTwilightCouncilTaldarimCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitAlias_Gateway_TaldarimCompleteOnly3321547334TechTreeCheat">
+        <Count Link="Alias_Gateway_Taldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitCyberneticsCoreTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="CyberneticsCoreTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDarkShrineTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="DarkShrineTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitFleetBeaconTaldarimCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="FleetBeaconTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitFleetBeaconTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="FleetBeaconTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitForgeTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="ForgeTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitInterceptorTaldarimCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="InterceptorTaldarim" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitInterceptorTaldarimQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="InterceptorTaldarim" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitNexusTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="NexusTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitRoboticsBayTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="RoboticsBayTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitRoboticsFacilityTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="RoboticsFacilityTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitSOAMothershipv4QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SOAMothershipv4" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitStargateTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="StargateTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitTemplarArchivesTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="TemplarArchivesTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitTwilightCouncilTaldarimCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TwilightCouncilTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitTwilightCouncilTaldarimCompleteOnlyTechTreeCheat">
+        <Count Link="TwilightCouncilTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeAlarackHavocPermanentCloakCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarackHavocPermanentCloak" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarackHavocPermanentCloakQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarackHavocPermanentCloak" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakColossusChargedBlastAirAttackCompleteOnly1632885665">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakColossusChargedBlastAirAttack" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakColossusChargedBlastAirAttackQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakColossusChargedBlastAirAttack" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakColossusChargedBlastChargeTimeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakColossusChargedBlastChargeTime" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakColossusChargedBlastChargeTimeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakColossusChargedBlastChargeTime" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakHavocAbilityRangeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakHavocAbilityRange" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakHavocAbilityRangeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakHavocAbilityRange" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakHavocTargetLockBuffCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakHavocTargetLockBuff" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakHavocTargetLockBuffQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakHavocTargetLockBuff" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakHighTemplarPsionicOrbTravelDistanceCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakHighTemplarPsionicOrbTravelDistance" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakHighTemplarPsionicOrbTravelDistanceQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakHighTemplarPsionicOrbTravelDistance" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakStalkerPhasingArmorCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakStalkerPhasingArmor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakStalkerPhasingArmorQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakStalkerPhasingArmor" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakSupplicantMaxShieldsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakSupplicantMaxShields" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakSupplicantMaxShieldsQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakSupplicantMaxShields" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakSupplicantShieldArmorCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakSupplicantShieldArmor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakSupplicantShieldArmorQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakSupplicantShieldArmor" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakVanguardIncreaseSplashAreaCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakVanguardIncreaseSplashArea" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAlarakVanguardIncreaseSplashAreaQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AlarakVanguardIncreaseSplashArea" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCarrierTaldarimInterceptorUpgradeCompleteOnly2620646877">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CarrierTaldarimInterceptorUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeCarrierTaldarimInterceptorUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="CarrierTaldarimInterceptorUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeColossusTaldarimThermalExplosionCompleteOnly4213684408">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ColossusTaldarimThermalExplosion" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeColossusTaldarimThermalExplosionQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="ColossusTaldarimThermalExplosion" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePhaseBlinkCompleteOnly1215822746">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PhaseBlink" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePhaseBlinkQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PhaseBlink" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePhoenixTaldarimGroundAttackUpgradeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PhoenixTaldarimGroundAttackUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePhoenixTaldarimGroundAttackUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="PhoenixTaldarimGroundAttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeResearchSacrificeCompleteOnly1308047646">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ResearchSacrifice" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeResearchSacrificeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="ResearchSacrifice" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirArmorLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirArmorLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirArmorLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirArmorLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirArmorLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirArmorLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirArmorLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirArmorLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirArmorLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirArmorLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirWeaponsLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirWeaponsLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirWeaponsLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirWeaponsLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirWeaponsLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirWeaponsLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirWeaponsLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirWeaponsLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimAirWeaponsLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimAirWeaponsLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGraviticBoosterQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGraviticBooster" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundArmorLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundArmorLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundArmorLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundArmorLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundArmorLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundArmorLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundArmorLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundArmorLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundArmorLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundArmorLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundWeaponsLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundWeaponsLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundWeaponsLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundWeaponsLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundWeaponsLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundWeaponsLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundWeaponsLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundWeaponsLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimGroundWeaponsLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimGroundWeaponsLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimShieldsLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimShieldsLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimShieldsLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimShieldsLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimShieldsLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimShieldsLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimShieldsLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimShieldsLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTaldarimShieldsLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TaldarimShieldsLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTempestTaldarimGroundAttackUpgradeCompleteOnly2179728934">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TempestTaldarimGroundAttackUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTempestTaldarimGroundAttackUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TempestTaldarimGroundAttackUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVanguardArmoredDamageCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VanguardArmoredDamage" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVanguardArmoredDamageQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VanguardArmoredDamage" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVoidHighTemplarMindBlastCompleteOnly1522811427">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VoidHighTemplarMindBlast" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVoidHighTemplarMindBlastQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VoidHighTemplarMindBlast" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVoidRayTaldarimSpeedUpgradeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VoidRayTaldarimSpeedUpgrade" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVoidStasisCompleteOnly619326569">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VoidStasis" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeVoidStasisQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="VoidStasis" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeWarpGateResearchTaldarimCompleteOnly2487229854TechTreeCheat">
+        <Count Link="WarpGateResearchTaldarim" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeWarpGateResearchTaldarimQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="WarpGateResearchTaldarim" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="Eq1478448419CountUnitSOAMothershipv4QueuedOrBetter0">
+        <OperandArray index="0" value="CountUnitSOAMothershipv4QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementLT id="LT4069678448CountUnitInterceptorTaldarimQueuedOrBetterAtUnit8">
+        <OperandArray index="0" value="CountUnitInterceptorTaldarimQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="8"/>
+    </CRequirementLT>
+    <CRequirementNot id="NotCountUpgradeAlarackHavocPermanentCloakQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarackHavocPermanentCloakQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakColossusChargedBlastAirAttackQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakColossusChargedBlastAirAttackQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakColossusChargedBlastChargeTimeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakColossusChargedBlastChargeTimeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakHavocAbilityRangeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakHavocAbilityRangeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakHavocTargetLockBuffQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakHavocTargetLockBuffQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakHighTemplarPsionicOrbTravelDistanceQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakHighTemplarPsionicOrbTravelDistanceQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakStalkerPhasingArmorQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakStalkerPhasingArmorQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakSupplicantMaxShieldsQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakSupplicantMaxShieldsQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakSupplicantShieldArmorQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakSupplicantShieldArmorQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAlarakVanguardIncreaseSplashAreaQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAlarakVanguardIncreaseSplashAreaQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeCarrierTaldarimInterceptorUpgradeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeCarrierTaldarimInterceptorUpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeColossusTaldarimThermalExplosionQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeColossusTaldarimThermalExplosionQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradePhaseBlinkQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradePhaseBlinkQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradePhoenixTaldarimGroundAttackUpgradeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradePhoenixTaldarimGroundAttackUpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeResearchSacrificeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeResearchSacrificeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimAirArmorLevel1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimAirArmorLevel1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimAirArmorLevel2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimAirArmorLevel2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimAirArmorLevel3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimAirArmorLevel3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimAirWeaponsLevel1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimAirWeaponsLevel1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimAirWeaponsLevel2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimAirWeaponsLevel2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimAirWeaponsLevel3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimAirWeaponsLevel3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimGraviticBoosterQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimGraviticBoosterQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimGroundArmorLevel1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimGroundArmorLevel1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimGroundArmorLevel2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimGroundArmorLevel2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimGroundArmorLevel3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimGroundArmorLevel3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimGroundWeaponsLevel1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimGroundWeaponsLevel1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimGroundWeaponsLevel2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimGroundWeaponsLevel2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimGroundWeaponsLevel3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimGroundWeaponsLevel3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimShieldsLevel1QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimShieldsLevel1QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimShieldsLevel2QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimShieldsLevel2QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTaldarimShieldsLevel3QueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTaldarimShieldsLevel3QueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTempestTaldarimGroundAttackUpgradeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTempestTaldarimGroundAttackUpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeVanguardArmoredDamageQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeVanguardArmoredDamageQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeVoidHighTemplarMindBlastQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeVoidHighTemplarMindBlastQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeVoidRayTaldarimSpeedUpgradeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeVoidRayTaldarimSpeedUpgradeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeVoidStasisQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeVoidStasisQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeWarpGateResearchTaldarimQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeWarpGateResearchTaldarimQueuedOrBetter"/>
+    </CRequirementNot>
+</Catalog>

@@ -1,0 +1,8 @@
+﻿Param/Expression/lib_40BC87EB_0C1B7BC6=SetScale ~A~ 0.1
+Param/Expression/lib_40BC87EB_75B33ADE=Essence ~A~
+Param/Expression/lib_40BC87EB_89AECAA9=~A~<n/>~B~
+Param/Expression/lib_40BC87EB_F07BDE2B=<c val="FF9800">Dehaka has died. He will be revived at his den in ~Duration~ seconds.  You can also feed him drones to revive faster</c>
+Param/Expression/lib_40BC87EB_FE82BB7C=SetScale ~A~
+Param/Value/lib_40BC87EB_0CC790E5=<c val="FF9800">Dehaka has died. You must build a Primal Hive to revive him.</c>
+Param/Value/lib_40BC87EB_A907A787=<c val="FF9800">Dehaka has been revived at your Hatchery.</c>
+Param/Value/lib_40BC87EB_DD36035D=<c val="FF9800">Dehaka is ready for battle.</c>

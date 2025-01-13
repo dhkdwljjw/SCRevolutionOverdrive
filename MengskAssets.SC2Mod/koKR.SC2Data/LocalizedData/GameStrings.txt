@@ -1,0 +1,3 @@
+﻿DocInfo/DescLong=Mengsk Assets for SC : Revolution Overdrive
+DocInfo/DescShort=아무
+DocInfo/Name=MengskAssets

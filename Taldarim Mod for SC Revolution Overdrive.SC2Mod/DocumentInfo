@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DocInfo>
+    <Dependencies>
+        <Value>file:Mods\TaldarimAssets.SC2Mod</Value>
+        <Value>bnet:공허의 유산 멀티플레이어 (모드)/0.0/999,file:Mods/VoidMulti.SC2Mod</Value>
+    </Dependencies>
+</DocInfo>

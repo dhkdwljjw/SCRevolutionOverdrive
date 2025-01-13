@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Actor id="SYSTEM_ActorConfig"/>
+<Commander id="UITaldarim"/>
+<Race id="Terr"/>
+<Race id="Zerg"/>
+<Race id="Prot"/>
+<Race id="Tal"/>
+<Race id="TerM"/>
+</Preload>

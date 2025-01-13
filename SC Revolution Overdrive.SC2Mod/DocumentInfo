@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DocInfo>
+    <Flags>
+        <Value>ExtensionMod</Value>
+    </Flags>
+    <Dependencies>
+        <Value>bnet:공허의 유산 멀티플레이어 (모드)/0.0/999,file:Mods/VoidMulti.SC2Mod</Value>
+        <Value>file:Mods\Taldarim Mod for SC Revolution Overdrive.SC2Mod</Value>
+        <Value>file:Mods\Mengsk Mod for SC Revolution Overdrive.SC2Mod</Value>
+    </Dependencies>
+</DocInfo>

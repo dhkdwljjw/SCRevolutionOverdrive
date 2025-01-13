@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectCreatePersistent id="SOAMothershipBlinkCP">
+        <EditorCategories value="Race:Protoss"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="SOAMothershipBlinkTeleport"/>
+        <PeriodicPeriodArray value="0.375"/>
+    </CEffectCreatePersistent>
+    <CEffectTeleport id="SOAMothershipBlinkTeleport">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Value="Source"/>
+        <TargetLocation Value="TargetPoint"/>
+        <Range value="10"/>
+    </CEffectTeleport>
+    <CAbilTrain id="NexusTaldarimTrain">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Warping"/>
+        <InfoArray index="Train1" Time="17">
+            <Button DefaultButtonFace="ProbeTaldarim"/>
+            <Unit value="ProbeTaldarim"/>
+        </InfoArray>
+        <Alert value="TrainWorkerComplete"/>
+    </CAbilTrain>
+    <CAbilTrain id="NexusTrainTaldarimMothership">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Warping"/>
+        <InfoArray index="Train1" Time="160">
+            <Button DefaultButtonFace="SOAMothershipv4" Requirements="TaldarimMothershipRequirements"/>
+            <Unit value="SOAMothershipv4"/>
+        </InfoArray>
+        <Alert value="MothershipComplete"/>
+    </CAbilTrain>
+    <CAbilEffectInstant id="HarbingerDisruptoinTrapActivate">
+        <Effect index="0" value="HarbingerDisruptionTrapActivateSet"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="0.5"/>
+        </Cost>
+        <Arc value="360"/>
+        <AutoCastRange value="3"/>
+        <AutoCastValidatorArray value="ActivateDisruptionTrapTargetInRange"/>
+        <PrepTime value="0"/>
+        <AINotifyEffect value="HarbingerDisruptionTrapActivateSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ActivateDisruptionTrap"/>
+    </CAbilEffectInstant>
+    <CAbilBuild id="HarbingerDisruptionTrapBuild">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <FlagArray index="RequireFacing" value="1"/>
+        <InfoArray index="Build1" Unit="HarbingerDisruptionTrap" Time="5">
+            <Vital index="Energy" value="75"/>
+            <Button DefaultButtonFace="HarbingerBuildDisruptionTrap">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <Range value="5"/>
+        <EffectArray index="Start" value="HarbingerDisruptionTrapBuildBeamOn"/>
+        <EffectArray index="Finish" value="HarbingerDisruptionTrapBuildBeamOff"/>
+        <EffectArray index="Cancel" value="HarbingerDisruptionTrapBuildBeamOff"/>
+    </CAbilBuild>
+    <CAbilEffectTarget id="HarbingerForesee">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="HarbingerForeseeSearch"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Cooldown TimeUse="14"/>
+        </Cost>
+        <Range value="12"/>
+        <CastOutroTime value="0.5"/>
+        <CursorEffect value="HarbingerForeseeSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HarbingerForesee"/>
+    </CAbilEffectTarget>
+    <CAbilHarvest id="ProbeHarvestTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+    </CAbilHarvest>
+    <CAbilBuild id="TaldarimBuild">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <FlagArray index="PeonDisableCollision" value="1"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <InfoArray index="Build1" Unit="NexusTaldarim" Time="100">
+            <Button DefaultButtonFace="NexusTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="PylonTaldarim" Time="25">
+            <Button DefaultButtonFace="PylonTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build3" Unit="AssimilatorTaldarim" Time="30">
+            <Button DefaultButtonFace="AssimilatorTaldarim"/>
+            <ValidatorArray value="HasVespene"/>
+        </InfoArray>
+        <InfoArray index="Build4" Unit="GatewayTaldarim" Time="65">
+            <Button DefaultButtonFace="GatewayTaldarim" Requirements="HaveNexusTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build5" Unit="ForgeTaldarim" Time="45">
+            <Button DefaultButtonFace="ForgeTaldarim" Requirements="HaveNexusTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build6" Unit="FleetBeaconTaldarim" Time="60">
+            <Button DefaultButtonFace="FleetBeaconTaldarim" Requirements="HaveStargateTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build7" Unit="TwilightCouncilTaldarim" Time="50">
+            <Button DefaultButtonFace="TwilightCouncilTaldarim" Requirements="HaveCyberneticsCoreTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build8" Unit="PhotonCannonTaldarim" Time="40">
+            <Button DefaultButtonFace="PhotonCannonTaldarim" Requirements="HaveForgeTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build10" Unit="StargateTaldarim" Time="60">
+            <Button DefaultButtonFace="StargateTaldarim" Requirements="HaveCyberneticsCoreTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build11" Unit="TemplarArchivesTaldarim" Time="50">
+            <Button DefaultButtonFace="TemplarArchivesTaldarim" Requirements="HaveTwilightCouncilTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build12" Unit="DarkShrineTaldarim" Time="100">
+            <Button DefaultButtonFace="DarkShrineTaldarim" Requirements="HaveTwilightCouncilTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build13" Unit="RoboticsBayTaldarim" Time="65">
+            <Button DefaultButtonFace="RoboticsBayTaldarim" Requirements="HaveRoboticsFacilityTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build14" Unit="RoboticsFacilityTaldarim" Time="65">
+            <Button DefaultButtonFace="RoboticsFacilityTaldarim" Requirements="HaveCyberneticsCoreTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build15" Unit="CyberneticsCoreTaldarim" Time="50">
+            <Button DefaultButtonFace="CyberneticsCoreTaldarim" Requirements="HaveGatewayTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Build16" Unit="ShieldBatteryTaldarim" Time="40">
+            <Button DefaultButtonFace="ShieldBatteryTaldarim" Requirements="HaveCyberneticsCoreTaldarim"/>
+        </InfoArray>
+        <ConstructionMover value="Construction"/>
+    </CAbilBuild>
+    <CAbilEffectTarget id="BlinkTaldarim">
+        <AbilSetId value="Blnk"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PhaseBlinkSet"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="16"/>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <AINotifyEffect value="Blink"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BlinkTaldarim" Requirements="HavePhaseBlink">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilArmMagazine id="CarrierTaldarimHangar">
+        <AbilSetId value="CarrierTaldarimHanger"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Flags index="Retarget" value="1"/>
+        <Leash value="12"/>
+        <InfoArray index="Ammo1" Time="12" CountStart="4" Manage="Recall" Unit="InterceptorTaldarim">
+            <Charge Link="CarrierTaldarimInterceptor" Location="Unit"/>
+            <Cooldown Link="CarrierTaldarimTrainInterceptor" TimeUse="0.01"/>
+            <Button DefaultButtonFace="InterceptorTaldarim" Requirements="ArmInterceptorTaldarim">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Flags index="AutoBuild" value="1"/>
+            <Flags index="AutoBuildOn" value="1"/>
+            <Flags index="LeashRetarget" value="1"/>
+        </InfoArray>
+        <Alert value="TrainComplete"/>
+        <MaxCount value="8"/>
+    </CAbilArmMagazine>
+    <CAbilResearch id="CyberneticsCoreTaldarimResearch">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="180" Upgrade="TaldarimAirWeaponsLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="TaldarimAirWeaponsLevel1" Requirements="LearnTaldarimAirWeapon1"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="215" Upgrade="TaldarimAirWeaponsLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="TaldarimAirWeaponsLevel2" Requirements="LearnTaldarimAirWeapon2"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="250" Upgrade="TaldarimAirWeaponsLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="TaldarimAirWeaponsLevel3" Requirements="LearnTaldarimAirWeapon3"/>
+        </InfoArray>
+        <InfoArray index="Research4" Time="180" Upgrade="TaldarimAirArmorLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="TaldarimAirArmorLevel1" Requirements="LearnTaldarimAirArmor1"/>
+        </InfoArray>
+        <InfoArray index="Research5" Time="215" Upgrade="TaldarimAirArmorLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="TaldarimAirArmorLevel2" Requirements="LearnTaldarimAirArmor2"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="250" Upgrade="TaldarimAirArmorLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="TaldarimAirArmorLevel3" Requirements="LearnTaldarimAirArmor3"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="140" Upgrade="WarpGateResearchTaldarim">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+            <Button DefaultButtonFace="ResearchWarpGateTaldarim" Requirements="LearnWarpGateTaldarim">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research8" Time="80" Upgrade="AlarackHavocPermanentCloak">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchHavocPermanentCloak" Requirements="LearnHavocCloak"/>
+        </InfoArray>
+        <InfoArray index="Research9" Time="120" Upgrade="AlarakHavocAbilityRange">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchAlarakHavocAbilityRange" Requirements="LearnBloodshardResonance"/>
+        </InfoArray>
+        <InfoArray index="Research10" Time="100" Upgrade="AlarakHavocTargetLockBuff">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchAlarakTargetLockBuff" Requirements="LearnDetectWeakness">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research11" Time="110"/>
+    </CAbilResearch>
+    <CAbilResearch id="DarkShrineResearch2">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <InfoArray index="Research1" Time="140" Upgrade="VoidStasis">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchVoidStasis" Requirements="LearnVoidStasis">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="FleetBeaconResearchTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <InfoArray index="Research1" Time="160" Upgrade="CarrierTaldarimInterceptorUpgrade">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchCarrierTaldarimInterceptorUpgrade" Requirements="LearnCarrierTaldarimInterceptorUpgrade">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="140" Upgrade="TempestTaldarimGroundAttackUpgrade">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="TempestTaldarimResearchGroundAttackUpgrade" Requirements="LearnTempestTaldarimGroundAttackUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="90" Upgrade="PhoenixTaldarimGroundAttackUpgrade">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="AnionPulseCrystalsTaldarim" Requirements="LearnPhoenixTaldarimGroundAttackUpgrade">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research5" Time="80" Upgrade="VoidRayTaldarimSpeedUpgrade">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchVoidRayTaldarimSpeedUpgrade" Requirements="LearnFluxVanes">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="ForgeResearchTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="170" Upgrade="TaldarimGroundWeaponsLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="TaldarimGroundWeaponsLevel1" Requirements="LearnTaldarimGroundWeapon1"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="202.5" Upgrade="TaldarimGroundWeaponsLevel2">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="TaldarimGroundWeaponsLevel2" Requirements="LearnTaldarimGroundWeapon2"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="235" Upgrade="TaldarimGroundWeaponsLevel3">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="TaldarimGroundWeaponsLevel3" Requirements="LearnTaldarimGroundWeapon3"/>
+        </InfoArray>
+        <InfoArray index="Research4" Time="170" Upgrade="TaldarimGroundArmorLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="TaldarimGroundArmorLevel1" Requirements="LearnTaldarimGroundArmor1"/>
+        </InfoArray>
+        <InfoArray index="Research5" Time="202.5" Upgrade="TaldarimGroundArmorLevel2">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="TaldarimGroundArmorLevel2" Requirements="LearnTaldarimGroundArmor2"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="235" Upgrade="TaldarimGroundArmorLevel3">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="TaldarimGroundArmorLevel3" Requirements="LearnTaldarimGroundArmor3"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="170" Upgrade="TaldarimShieldsLevel1">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="TaldarimShieldsLevel1" Requirements="LearnTaldarimShields1"/>
+        </InfoArray>
+        <InfoArray index="Research8" Time="202.5" Upgrade="TaldarimShieldsLevel2">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="TaldarimShieldsLevel2" Requirements="LearnTaldarimShields2"/>
+        </InfoArray>
+        <InfoArray index="Research9" Time="235" Upgrade="TaldarimShieldsLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="TaldarimShieldsLevel3" Requirements="LearnTaldarimShields3"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="GatewayTrainTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Warping"/>
+        <InfoArray index="Train1" Time="38">
+            <Button DefaultButtonFace="WarpInSupplicant"/>
+            <Unit value="Supplicant"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="42">
+            <Button DefaultButtonFace="StalkerTaldarim" Requirements="HaveCyberneticsCoreTaldarim"/>
+            <Unit value="StalkerTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="55">
+            <Button DefaultButtonFace="HighTemplarTaldarim" Requirements="HaveTemplarArchivesTaldarim"/>
+            <Unit value="HighTemplarTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="55">
+            <Button DefaultButtonFace="DarkTemplarTaldarim" Requirements="HaveDarkShrineTaldarim"/>
+            <Unit value="DarkTemplarTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="32">
+            <Button DefaultButtonFace="Monitor" Requirements="HaveCyberneticsCoreTaldarim"/>
+            <Unit value="Monitor"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilMorph id="MorphBackToGatewayTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphBackToGatewayTaldarim"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Cost>
+            <Cooldown Link="WarpGateTrainTaldarim" Location="Unit"/>
+        </Cost>
+        <InfoArray Unit="GatewayTaldarim">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="10"/>
+                <EffectArray index="Finish" value="UpgradeToWarpGateAutoCastDisablerTaldarim"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="10"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="10"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="TransformationComplete"/>
+    </CAbilMorph>
+    <CAbilMorph id="ObserverTaldarimMorphtoObserverSiegeTaldarim">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphtoObserverSiege">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray Unit="ObserverSiegeModeTaldarim">
+            <SectionArray index="Abils">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="ObserverSiegeTaldarimMorphtoObserverTaldarim">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphtoObserver">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="ObserverTaldarim">
+            <SectionArray index="Abils">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.75"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="PhasingModeTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PhasingModeTaldarim"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="WarpPrismPhasingTaldarim">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="ReleaseInterceptors">
+        <CmdButtonArray index="Execute" Requirements="HaveCarrierTaldarimInterceptorUpgrade"/>
+    </CAbilEffectTarget>
+    <CAbilResearch id="RoboticsBayTaldarimResearch">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="140" Upgrade="VanguardArmoredDamage">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchVanguardArmoredDamage" Requirements="LearnFusionMortars"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="120" Upgrade="AlarakVanguardIncreaseSplashArea">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchAlarakVanguardIncreaseSplashArea" Requirements="LearnMatterDispersion">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="100" Upgrade="AlarakColossusChargedBlastAirAttack">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchAlarakColossusChargedBlastAirAttack" Requirements="LearnAerialTracking">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research4" Time="140" Upgrade="AlarakColossusChargedBlastChargeTime">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchAlarakColossusChargedBlastChargeTime" Requirements="LearnRapidPowerCycling"/>
+        </InfoArray>
+        <InfoArray index="Research5" Time="120" Upgrade="TaldarimGraviticBooster">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchGraviticBoosterTaldarim" Requirements="LearnGraviticBoosterTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="140" Upgrade="ColossusTaldarimThermalExplosion">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchColossusTaldarimThermalExplosion" Requirements="LearnColossusTaldarimThermalExplosion"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="RoboticsFacilityTaldarimTrain">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Warping"/>
+        <InfoArray index="Train1" Time="50" Effect="WarpInEffect15">
+            <Button DefaultButtonFace="WarpPrismTaldarim"/>
+            <Unit value="WarpPrismTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="25" Effect="WarpInEffect15">
+            <Button DefaultButtonFace="ObserverTaldarim"/>
+            <Unit value="ObserverTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="75">
+            <Button DefaultButtonFace="ColossusTaldarim" Requirements="HaveRoboticsBayTaldarim"/>
+            <Unit value="ColossusTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="55">
+            <Button DefaultButtonFace="ImmortalTaldarim"/>
+            <Unit value="ImmortalTaldarim"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectTarget id="SOAMothershipBlink">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SOAMothershipBlinkCP"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="12"/>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SOAMothershipBlink"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SOAMothershipLineAttack">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="SOAMothershipLineAttackInitialCP"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="AllowMovingSuppressed" value="1"/>
+        <Flags index="AllowTurningSuppressed" value="1"/>
+        <Flags index="ChannelingMinimum" value="0"/>
+        <Flags index="ReApproachable" value="0"/>
+        <Flags index="TransientPreferred" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Cooldown Link="SOAMothershipLineAttack" Location="Unit" TimeUse="1"/>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SOAMothershipLineAttack"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="StargateTrainTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Warping"/>
+        <InfoArray index="Train1" Time="35" Effect="WarpInEffect15">
+            <Button DefaultButtonFace="PhoenixTaldarim"/>
+            <Unit value="PhoenixTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="60" Effect="WarpInEffect">
+            <Button DefaultButtonFace="Harbinger"/>
+            <Unit value="Harbinger"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="120" Effect="WarpInEffect">
+            <Button DefaultButtonFace="CarrierTaldarim" Requirements="HaveFleetBeaconTaldarim"/>
+            <Unit value="CarrierTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="90" Effect="WarpInEffect">
+            <Button DefaultButtonFace="TempestTaldarim" Requirements="HaveFleetBeaconTaldarim"/>
+            <Unit value="TempestTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="60.2" Effect="WarpInEffect">
+            <Button DefaultButtonFace="VoidRayTaldarim"/>
+            <Unit value="VoidRayTaldarim"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="TemplarArchivesTaldarimResearch">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="140" Upgrade="AlarakHighTemplarPsionicOrbTravelDistance">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchAlarakHighTemplarPsionicOrbTravelDistance" Requirements="LearnChaoticAtunement">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="140" Upgrade="VoidHighTemplarMindBlast">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchVoidHighTemplarMindBlast" Requirements="LearnMindBlast"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="140" Upgrade="ResearchSacrifice">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchAscendantSacrifice" Requirements="LearnSacrifice"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilMorph id="TransportModeTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TransportModeTaldarim"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="WarpPrismTaldarim">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilResearch id="TwilightCouncilTaldarimResearch">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="140" Upgrade="AlarakSupplicantMaxShields">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ArmorResearchSupplicantShieldArmor" Requirements="LearnBloodShields">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="170" Upgrade="PhaseBlink">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchPhaseBlink" Requirements="LearnPhaseBlnk">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="140" Upgrade="AlarakSupplicantShieldArmor">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchAlarakSupplicantMaxShields" Requirements="LearnSoulAugmentation">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research4" Time="140" Upgrade="AlarakStalkerPhasingArmor">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchPhasedArmor" Requirements="LearnPhasingArmor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilMorph id="UpgradeToWarpGateTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="UpgradeToWarpGateTaldarim" Requirements="HaveWarpGateTaldarim"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <InfoArray Unit="WarpGateTaldarim">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="10"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="10"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="10"/>
+            </SectionArray>
+        </InfoArray>
+        <Alert value="TransformationComplete"/>
+        <AutoCastValidatorArray value="NotHaveUpgradeToWarpGateAutoCastDisablerTaldarim"/>
+        <AutoCastRange value="5"/>
+        <AutoCastCountMax value="500"/>
+        <Activity value="UI/Transforming"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="VoidSentryBlackHole">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="VoidSentryBlackHolePersistent"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Range value="10"/>
+        <Arc value="360"/>
+        <CursorEffect value="VoidSentryBlackHoleSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidSentryBlackHole"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="VoidHighTemplarPsiOrb">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <Effect index="0" value="VoidHighTemplarPsiOrbInitialPersistent"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Range value="10"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidHighTemplarPsiOrb"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="VoidHighTemplarMindBlast">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <Effect index="0" value="VoidHighTemplarMindBlastDamage"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Cooldown TimeUse="8"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Structure,Missile,Stasis,Dead,Invulnerable"/>
+        <Range value="13"/>
+        <AINotifyEffect value="VoidHighTemplarMindBlastDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidHighTemplarMindBlast" Requirements="HaveMindBlast"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="AscendantSacrifice">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <TargetFilters value="-;Self,Ally,Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden,Hallucination,Invulnerable"/>
+        <Range value="4"/>
+        <Cost>
+            <Cooldown Location="Unit" TimeUse="10"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AscendantSacrifice" Requirements="HaveSacrifice"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DarkTemplarVoidStasis">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DarkTemplarVoidStasisSet"/>
+        <Cost>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <TargetFilters value="Ground;Player,Ally,Heroic,Missile,Stasis,UnderConstruction,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidStasis" Requirements="HaveVoidStasis"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="ObserverSquadSight">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ObserverSquadSightCP"/>
+        <Cost>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SquadSight"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="ObserverTargetLock">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ObserverTargetLockCP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Cost>
+            <Cooldown Location="Unit" TimeUse="3"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Invulnerable"/>
+        <TargetSorts>
+            <SortArray value="TSLifeLargestFirst"/>
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
+        <Range value="8"/>
+        <AutoCastRange value="8"/>
+        <AutoCastValidatorArray value="NotHaveTargetLock"/>
+        <AutoCastValidatorArray value="NotInterceptor"/>
+        <CastOutroTime value="0.5"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TargetLock"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ForceFieldMonitor">
+        <AbilSetId value="ForceField"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ForceField"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+        </Cost>
+        <Range value="9"/>
+        <Marker>
+            <MatchFlags index="Link" value="0"/>
+            <MatchFlags index="CasterUnit" value="1"/>
+        </Marker>
+        <CursorEffect value="ForceFieldPlacement"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SentryTaldarimForceField"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <PlaceUnit value="ForceField"/>
+    </CAbilEffectTarget>
+    <CAbilWarpTrain id="WarpGateTrainTaldarim">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="16" Unit="AlarakSupplicantWarpTrainDummy">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="WarpGateTrainTaldarim"/>
+                <TimeStart value="30"/>
+                <TimeUse value="28"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown Link="WarpGateTrainTaldarim"/>
+            <Button DefaultButtonFace="WarpInSupplicant"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="16" Unit="StalkerTaldarim">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="WarpGateTrainTaldarim"/>
+                <TimeUse value="32"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown Link="WarpGateTrainTaldarim"/>
+            <Button DefaultButtonFace="StalkerTaldarim" Requirements="HaveCyberneticsCoreTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="16" Unit="HighTemplarTaldarim">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="WarpGateTrainTaldarim"/>
+                <TimeUse value="45"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown Link="WarpGateTrainTaldarim"/>
+            <Button DefaultButtonFace="HighTemplarTaldarim" Requirements="HaveTemplarArchivesTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="16" Unit="DarkTemplarTaldarim">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="WarpGateTrainTaldarim"/>
+                <TimeUse value="45"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown Link="WarpGateTrainTaldarim"/>
+            <Button DefaultButtonFace="DarkTemplarTaldarim" Requirements="HaveDarkShrineTaldarim"/>
+        </InfoArray>
+        <InfoArray index="Train6" Time="16" Unit="Monitor">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="WarpGateTrainTaldarim"/>
+                <TimeUse value="32"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown Link="WarpGateTrainTaldarim"/>
+            <Button DefaultButtonFace="Monitor" Requirements="HaveCyberneticsCoreTaldarim"/>
+        </InfoArray>
+    </CAbilWarpTrain>
+    <CAbilWarpable id="WarpableAnywhere">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <PowerUserBehavior value="PowerUserWarpableAnywhere"/>
+        <Cancelable value="1"/>
+        <CmdButtonArray index="Cancel">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+    </CAbilWarpable>
+    <CAbilWarpTrain id="WarpGateTrainSupplicantTrue">
+        <InfoArray index="Train12" Time="16" Unit="Supplicant">
+            <Button DefaultButtonFace="WarpInSupplicantHidden">
+                <Flags index="IgnoreUser" value="1"/>
+            </Button>
+        </InfoArray>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="WarpTrainersButton" value="0"/>
+    </CAbilWarpTrain>
+    <CAbilEffectTarget id="StructureOvercharge">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="AlarakStructureOverchargeSet"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Charge>
+                <CountMax value="3"/>
+                <CountUse value="1"/>
+                <Location value="Player"/>
+                <TimeStart value="90"/>
+                <TimeUse value="90"/>
+            </Charge>
+            <Cooldown Location="Player" TimeUse="3"/>
+        </Cost>
+        <TargetFilters value="Visible;Ally,Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Invulnerable"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AlarakStructureOvercharge" Requirements="HaveCyberneticsCoreTaldarim"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PhoenixBomberGround">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PhoenixBomberCarpetBombSet"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Cooldown Location="Unit" TimeUse="10"/>
+        </Cost>
+        <TargetFilters value="Ground,Visible;Self,Player,Ally,Neutral,Missile,Dead,Hidden,Invulnerable"/>
+        <Range value="5"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PhoenixBomberGround"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PulsarBlast">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PulsarBlastLM"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PulsarBlast"/>
+    </CAbilEffectTarget>
+</Catalog>

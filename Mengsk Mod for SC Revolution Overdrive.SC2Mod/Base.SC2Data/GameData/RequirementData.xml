@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="ArmedExperimentalStrike">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTCountUnitExperimentalStrikeUnitQueuedOrBetterAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="CommanderPrestigeMengskRoyalGuard">
+        <NodeArray index="Show" Link="CountUpgradeCommanderPrestigeMengskRoyalGuardCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="GhostMengskSuperCloakUse">
+        <NodeArray index="Use" Link="GTE366229690CountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="HaveBunkerDepotMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitBunkerDepotMengskCompleteOnly1297102915TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveMechTransformationSpeedMengsk">
+        <NodeArray index="Use" Link="CountUpgradeMechTransformationSpeedMengskCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HavePropagandaBlastMengsk">
+        <NodeArray index="Use" Link="CountBehaviorPropagandaBlastMengskCompleteOnlyAtUnit1474688104"/>
+    </CRequirement>
+    <CRequirement id="GhostMengskHoldingFire">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorGhostMengskHoldFireBCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="GhostMengskNotHoldingFire">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountBehaviorGhostMengskHoldFireBCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveTacNuke">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitTacNukeMissileUnitCompleteOnlyAtUnit1351533016"/>
+    </CRequirement>
+    <CRequirement id="HaveTrooperMengskDropTrain">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeTrooperMengskDropTrainCompleteOnly480319619"/>
+    </CRequirement>
+    <CRequirement id="HaveMengskVeterancySiegeTankMengskGELevel2">
+        <NodeArray index="Use" Link="GTE366229690CountBehaviorMengskVeterancySiegeTankMengskCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="HaveMengskVeterancyVikingMengskGELevel3">
+        <NodeArray index="Use" Link="GTE4126974048CountBehaviorMengskVeterancyVikingMengskCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="HaveMengskVeterancyVikingMengskLevel4">
+        <NodeArray index="Use" Link="GTE111485213CountBehaviorMengskVeterancyVikingMengskCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="HaveArtilleryMengskRange">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeArtilleryMengskRangeCompleteOnly3576403734"/>
+    </CRequirement>
+    <CRequirement id="HaveVikingMengskCheatDeathCooldown">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorVikingMengskCheatDeathCooldownCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="LearnAAMengsk">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTrooperMengskSpecializeAAQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveAAMengsk">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeTrooperMengskSpecializeAACompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnFlamethrowerMengsk">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTrooperMengskSpecializeFlamethrowerQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveFlamethrowerMengsk">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeTrooperMengskSpecializeFlamethrowerCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnImprovedMengsk">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTrooperMengskSpecializeImprovedQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveImprovedMengsk">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeTrooperMengskSpecializeImprovedCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="MengskVeterancyLevelLT4">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="LTSumCountBehaviorMengskVeterancyBattlecruiserMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnitCountBehavior3784557210"/>
+    </CRequirement>
+    <CRequirement id="MengskVeterancyLevelGTE4">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Show" Link="GTESumCountBehaviorMengskVeterancyBattlecruiserMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnitCountBehavio3174684790"/>
+    </CRequirement>
+    <CRequirement id="ShowMengskVeterancyGhostMengskGELevel3">
+        <NodeArray index="Show" Link="GTECountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="HaveMengskVeterancyBattlecruiserMengskGELevel2">
+        <NodeArray index="Show" Link="GTECountBehaviorMengskVeterancyBattlecruiserMengskCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="HaveMengskVeterancyBattlecruiserMengskLevel1">
+        <NodeArray index="Show" Link="EqCountBehaviorMengskVeterancyBattlecruiserMengskCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="HaveMengskVeterancyMarauderMengskGELevel2">
+        <NodeArray index="Use" Link="GTE366229690CountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="HaveMarauderMengskVeterancyLevel3">
+        <NodeArray index="Use" Link="GTE4126974048CountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="HaveMarauderMengskVeterancyLevel4">
+        <NodeArray index="Use" Link="GTE111485213CountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="HaveVikingMengskAttackDamageCooldown">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorVikingMengskAttackDamageCooldownCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveVikingMengskSpeed">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeVikingMengskSpeedCompleteOnly1841791773"/>
+    </CRequirement>
+    <CRequirement id="HaveBunkerDepotMengskRange">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeBunkerDepotMengskRangeCompleteOnly3144739092"/>
+    </CRequirement>
+    <CRequirement id="HaveBlimpMengskTopbarRegen">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeBlimpMengskTopbarRegenCompleteOnly3221082208"/>
+    </CRequirement>
+    <CRequirement id="HaveThorMengskArmorAura">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeThorMengskArmorAuraCompleteOnly618094651"/>
+    </CRequirement>
+    <CRequirement id="HaveMedivacMengskDoubleHealBeam">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeMedivacMengskDoubleHealBeamCompleteOnly269547913"/>
+    </CRequirement>
+    <CRequirement id="HaveArtilleryMengskCargo">
+        <NodeArray index="Use" Link="GTE1737461815CountBehaviorArtilleryMengskCargoCompleteOnlyAtUnit1"/>
+    </CRequirement>
+    <CRequirement id="HaveMarauderMengskSlow">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeMarauderMengskSlowCompleteOnly2342204682"/>
+    </CRequirement>
+    <CRequirement id="HaveGhostMengskGuidedStrike">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeGhostMengskGuidedStrikeCompleteOnly989769884"/>
+    </CRequirement>
+    <CRequirement id="HaveMedivacMengskPermanentCloak">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeMedivacMengskPermanentCloakCompleteOnly511910073"/>
+    </CRequirement>
+    <CRequirement id="HaveMengskStructureArmor">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeMengskStructureArmorCompleteOnly2054151329"/>
+    </CRequirement>
+    <CRequirement id="HaveArtilleryMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitArtilleryMengskCompleteOnly2292951859TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveBattlecruiserMengskRangeAura">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeBattlecruiserMengskRangeAuraCompleteOnly2725800310"/>
+    </CRequirement>
+    <CRequirement id="LearnArtilleryMengskRange">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitArmoryMengskCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeArtilleryMengskRangeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTrooperMengskDropTrain">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTrooperMengskDropTrainQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnVikingMengskSpeed">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeVikingMengskSpeedQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnBunkerDepotMengskRange">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeBunkerDepotMengskRangeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnBlimpMengskTopbarRegen">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeBlimpMengskTopbarRegenQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnThorMengskArmorAura">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeThorMengskArmorAuraQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnInstantTrooperMengskTransform">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTrooperMengskInstantTransformQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMechTransformationSpeedMengsk">
+        <NodeArray index="Show" Link="NotCountUpgradeMechTransformationSpeedMengskQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMedivacMengskDoubleHealBeam">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMedivacMengskDoubleHealBeamQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMarauderMengskSlow">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMarauderMengskSlowQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnGhostMengskGuidedStrike">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeGhostMengskGuidedStrikeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMedivacMengskPermanentCloak">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMedivacMengskPermanentCloakQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMedivacMengskSiegeTankAirlift">
+        <NodeArray index="Show" Link="NotCountUpgradeMedivacMengskSiegeTankAirliftQueuedOrBetter4291057663"/>
+    </CRequirement>
+    <CRequirement id="LearnMengskStructureArmor">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMengskStructureArmorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTrooperMengskArmorLevel3">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndEq1349852341CountUpgradeMengskTrooperArmorsLevel2CompleteOnly1CountUnitArmoryMengskCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMengskTrooperArmorsLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTrooperMengskWeaponsLevel1">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMengskTrooperWeaponsLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTrooperMengskArmorLevel1">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMengskTrooperArmorsLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTrooperMengskWeaponsLevel2">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndEq843366628CountUpgradeMengskTrooperWeaponsLevel1CompleteOnly1CountUnitArmoryMengskCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMengskTrooperWeaponsLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTrooperMengskWeaponsLevel3">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndEq3878729167CountUpgradeMengskTrooperWeaponsLevel2CompleteOnly1CountUnitArmoryMengskCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMengskTrooperWeaponsLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTrooperMengskArmorLevel2">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndEq2456287108CountUpgradeMengskTrooperArmorsLevel1CompleteOnly1CountUnitArmoryMengskCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMengskTrooperArmorsLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveMarauderMengskAbsorbReapplicator">
+        <EditorCategories value="TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorMarauderMengskAbsorbReapplicatorCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="LearnBattlecruiserMengskRangeAura">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeBattlecruiserMengskRangeAuraQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="NotHaveMedivacMengskDoubleHealBeam">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMedivacMengskDoubleHealBeamCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveArmoryMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitArmoryMengskCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveBarracksMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_BarracksMengskCompleteOnly92025031TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveCommandCenterMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_CommandCenterMengskCompleteOnly1787385606TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveEngineeringBayMengsk" parent="HaveEngineeringBay">
+        <NodeArray index="Use" Link="CountUnitEngineeringBayMengskCompleteOnly1938945142TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveFactoryMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_FactoryMengskCompleteOnly3975202633TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveGhostAcademyMengsk">
+        <NodeArray index="Use" Link="CountUnitGhostAcademyMengskCompleteOnly2782960886"/>
+    </CRequirement>
+    <CRequirement id="HaveNukeMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitNukeMengskCompleteOnly3727871538"/>
+    </CRequirement>
+    <CRequirement id="HaveStarportMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_StarportMengskCompleteOnly880601908TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveFusionCoreMengsk">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitFusionCoreMengskCompleteOnly203485344TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="ShowMengskVeterancyGhostMengskGELevel4">
+        <EditorCategories value="Race:Terran"/>
+        <NodeArray index="Show" Link="GTECountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="ThorMengskSiegedTargetIncreasedRange">
+        <NodeArray index="Show" Link="GTECountBehaviorMengskVeterancyThorMengskCompleteOnlyAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="ThorMengskSiegedTargetLargeAoE">
+        <NodeArray index="Show" Link="GTECountBehaviorMengskVeterancyThorMengskCompleteOnlyAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="TrainNukeMengsk">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="Not2895527276CountUnitNukeMengskQueuedOrBetterAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveMedivacMengskSiegeTankAirlift">
+        <NodeArray index="Use" Link="CountUpgradeMedivacMengskSiegeTankAirliftCompleteOnly4291057663"/>
+    </CRequirement>
+    <CRequirement id="TrainTacNuke">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="AndLT1117748507CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit1CountUnitArmoryMengskCompleteOnlyCountUnitFusionCoreMengskCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="ArmExperimentalStrike">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="LT440745099CountUnitExperimentalStrikeUnitQueuedOrBetterAtUnit4"/>
+    </CRequirement>
+    <CRequirement id="UseMengskVeterancyGhostMengskLTLevel3">
+        <NodeArray index="Use" Link="LTCountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnit3"/>
+    </CRequirement>
+</Catalog>

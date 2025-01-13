@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="LightningBombTaldarim">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-taldarim-disintegration.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="10"/>
+        <Period value="0.125"/>
+        <PeriodicEffect value="LightningBombTaldarimDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MorphingintoWarpGateTaldarim">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="GatewayMorphingTaldarim"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipTaldarimTurretDisabler">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="IsWarpingIn"/>
+        <Duration value="6"/>
+        <Modification>
+            <TurretDisableArray value="MothershipRotate"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HarbingerDisruptionTrapCaster">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-unit-protoss-stasisward.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressPassenger" value="1"/>
+            <StateFlags index="SuppressLifeRegen" value="1"/>
+            <StateFlags index="SuppressShieldsRegen" value="1"/>
+            <StateFlags index="SuppressEnergyRegen" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Unstoppable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HarbingerDisruptionTrapCloak">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="IsNotConstructing"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HarbingerForesee">
+        <InfoIcon value="Assets\Textures\btn-ability-zeratul-darkarchon-maelstrom.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotOracleStasisTrapped"/>
+        <RemoveValidatorArray value="NoPurificationNova"/>
+        <Duration value="15"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="EnableAttack" value="1"/>
+            <ModifyFlags index="EnableMove" value="1"/>
+            <AbilClassEnableArray index="CAbilStop" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PhoenixTaldarimGroundAttackAutoSearch">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="CasterCanUseAbility"/>
+        <DisableValidatorArray value="PhoenixTaldarimGroundAttackAutoSearchValidator"/>
+        <DisableValidatorArray value="CasterEnergyGE50"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="PhoenixBomberCarpetBombAutoSearchSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DisruptionTrapTimedLife" parent="TimedLife">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <DisableValidatorArray value="NotUnderConstruction"/>
+        <Duration value="238"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PulsarBlastDamageIncrease">
+        <InfoIcon value="Assets\Textures\btn-ability-taldarim-shadowcannon.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <FinalEffect value="PulsarBlastSearch"/>
+        <DamageResponse ModifyFraction="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="UpgradeToWarpGateAutoCastDisablerTaldarim">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <BuffFlags index="DisableWhileUnderConstruction" value="1"/>
+        <Duration value="2"/>
+        <PeriodicEffect value="UpgradeToWarpGateAutoCastOffTaldarim"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidSentryBlackHole">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-blackhole.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="0.125"/>
+        <Modification Height="0.5" MoveSpeedMultiplier="1.5">
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressCollision" value="1"/>
+            <HeightTime index="Start" value="0.25"/>
+            <HeightTime index="Stop" value="0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidHighTemplarPsiOrb">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="VoidHighTemplarPsiOrbSearch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidRayChargeBeamCounter">
+        <InfoFlags index="Hidden" value="1"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="30"/>
+        <Duration value="5"/>
+        <InitialEffect value="VoidRayChargeBeamCounterCheck"/>
+        <RefreshEffect value="VoidRayChargeBeamCounterCheck"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidRayChargeBeamPhase2">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidRayChargeBeamPhase3">
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DarkTemplarVoidStasis">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-voidstasis.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="10"/>
+        <Modification>
+            <StateFlags index="Stasis" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressFoodMade" value="1"/>
+            <StateFlags index="SuppressRadar" value="1"/>
+            <StateFlags index="SuppressTech" value="1"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+            <AbilClassDisableArray index="CAbilWarpTrain" value="1"/>
+            <BehaviorClassDisableArray index="CBehaviorPowerSource" value="1"/>
+            <BehaviorClassDisableArray index="CBehaviorResource" value="1"/>
+            <BehaviorLinkDisableArray value="SalvageBunker"/>
+            <BehaviorLinkDisableArray value="SalvageShared"/>
+            <BehaviorLinkDisableArray value="SensorTowerRadar"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SquadSightPersistentBehavior">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="IsNotWarpingIn"/>
+        <DisableValidatorArray value="NotOracleStasisTrapped"/>
+        <Period value="0.25"/>
+        <PeriodicEffect value="ObserverSquadSightSearch"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ObserverSquadSight">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="1"/>
+        <Modification RangedWeaponRange="2"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-squadsight.dds"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ObserverTargetLock">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Modification>
+            <DamageTakenFraction index="Spell" value="0.3"/>
+            <DamageTakenFraction index="Melee" value="0.3"/>
+            <DamageTakenFraction index="Ranged" value="0.3"/>
+            <DamageTakenFraction index="Splash" value="0.3"/>
+            <DamageTakenFraction index="NoProc" value="0.3"/>
+        </Modification>
+        <MaxStackCount value="3"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ObserverTargetLockCaster">
+        <MaxStackCount value="3"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorPowerSource id="WarpPrismTaldarimPowerSource">
+        <PowerLink value="PowerSource"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <Radius value="3.75"/>
+        <Requirements value="NotHaveScramblerMissileBehavior"/>
+        <PowerLevel value="2"/>
+    </CBehaviorPowerSource>
+    <CBehaviorPowerUser id="PowerUserWarpableAnywhere">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-building-protoss-pylon.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <PowerLink value="PowerSource"/>
+        <PoweredWhileUnderConstruction value="1"/>
+        <PowerStageArray/>
+        <PowerStageArray MinPowerLevel="2" LevelGainEffect="PowerUserWarpablelevel2gained" LevelLossEffect="PowerUserWarpablelevel2lost">
+            <Modification>
+                <RateMultiplierArray index="Progress" value="3.2"/>
+            </Modification>
+        </PowerStageArray>
+    </CBehaviorPowerUser>
+    <CBehaviorBuff id="SupplicantCancelCheck">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <MaxStackCount value="2"/>
+        <MaxStackCountPerCaster value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupplicantWarpPowerCheck">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="IsSupplicantWarpingIn"/>
+        <RemoveValidatorArray value="SupplicantPowerValidator"/>
+        <FinalEffect value="SuplicantWarpCancel"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupplicantCreatorCheck">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SupplicantCreatorWarpGateCheck">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AlarakStalkerPhasingArmor">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DamageResponse Handled="AlarakStalkerPhasingArmorBuffApply">
+            <Chance value="1"/>
+            <Cost>
+                <Cooldown TimeUse="16"/>
+            </Cost>
+        </DamageResponse>
+        <Requirements value="HavePhasingArmor"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AlarakStalkerPhasingArmorBuff">
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-alarak-stalkerphasingarmor.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <Duration value="3"/>
+        <DamageResponse ModifyFraction="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PhaseBlinkDamage">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-blink-red.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="8"/>
+        <Modification>
+            <DamageDealtFraction index="Ranged" value="0.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HavocPermanentCloak">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-alarak-permanentcloak.dds"/>
+        <Requirements value="HaveHavocCloak"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AlarakStructureOvercharge">
+        <InfoIcon value="Assets\Textures\btn-upgrade-protoss-structureovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="20"/>
+        <Period value="0.64"/>
+        <PeriodicEffect value="AlarakStructureOverchargeSearch"/>
+        <BuffFlags index="RemoveDamageResponseExhausted" value="0"/>
+        <BuffFlags index="UpdateDurationWhileDisabled" value="1"/>
+        <Modification>
+            <StateFlags index="GenerateThreat" value="1"/>
+        </Modification>
+        <TimeScaleSource Value="Global"/>
+        <DisableValidatorArray value="IsStructure"/>
+        <DisableValidatorArray value="HasAtLeastNormalPowerOrNexusTaldarim"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AlarakStructureOverchargeShield">
+        <InfoIcon value="Assets\Textures\btn-upgrade-karax-fortificationbarrier.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <BuffFlags index="UpdateDurationWhileDisabled" value="1"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="20"/>
+        <DamageResponse ModifyFraction="0" ModifyLimit="400" ModifyMinimumDamage="1">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+</Catalog>

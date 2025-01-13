@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="ArmInterceptorTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="LT4069678448CountUnitInterceptorTaldarimQueuedOrBetterAtUnit8"/>
+    </CRequirement>
+    <CRequirement id="HaveAerialTracking">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakColossusChargedBlastAirAttackCompleteOnly1632885665"/>
+    </CRequirement>
+    <CRequirement id="HaveBloodShields">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakSupplicantMaxShieldsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveBloodshardResonance">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakHavocAbilityRangeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveCarrierTaldarimInterceptorUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUnitInterceptorTaldarimCompleteOnlyAtUnitCountUpgradeCarrierTaldarimInterceptorUpgradeCompleteOnly2620646877"/>
+    </CRequirement>
+    <CRequirement id="HaveChaoticAtunement">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakHighTemplarPsionicOrbTravelDistanceCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveColossusTaldarimThermalExplosion2">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeColossusTaldarimThermalExplosionCompleteOnly4213684408"/>
+    </CRequirement>
+    <CRequirement id="HaveDarkShrineTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitDarkShrineTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveDetectWeakness">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakHavocTargetLockBuffCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveFleetBeaconTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitFleetBeaconTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveForgeTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitForgeTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveGatewayTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitAlias_Gateway_TaldarimCompleteOnly3321547334TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveNexusTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitNexusTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveRoboticsFacilityTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitRoboticsFacilityTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveCyberneticsCoreTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitCyberneticsCoreTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveStargateTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitStargateTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveFusionMortars">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeVanguardArmoredDamageCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveHavocCloak">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarackHavocPermanentCloakCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveMatterDispersion">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakVanguardIncreaseSplashAreaCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveMindBlast">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeVoidHighTemplarMindBlastCompleteOnly1522811427"/>
+    </CRequirement>
+    <CRequirement id="HavePhaseBlink">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradePhaseBlinkCompleteOnly1215822746"/>
+    </CRequirement>
+    <CRequirement id="HavePhasingArmor">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakStalkerPhasingArmorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveRapidPowerCycling">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakColossusChargedBlastChargeTimeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveRoboticsBayTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitRoboticsBayTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveSacrifice">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeResearchSacrificeCompleteOnly1308047646"/>
+    </CRequirement>
+    <CRequirement id="HaveSoulAugmentation">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="CountUpgradeAlarakSupplicantShieldArmorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveTemplarArchivesTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitTemplarArchivesTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveTwilightCouncilTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitTwilightCouncilTaldarimCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveVoidStasis">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeVoidStasisCompleteOnly619326569"/>
+    </CRequirement>
+    <CRequirement id="LearnAerialTracking">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakColossusChargedBlastAirAttackQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnBloodShields">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakSupplicantMaxShieldsQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnBloodshardResonance">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakHavocAbilityRangeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnCarrierTaldarimInterceptorUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeCarrierTaldarimInterceptorUpgradeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnChaoticAtunement">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakHighTemplarPsionicOrbTravelDistanceQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnColossusTaldarimThermalExplosion">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeColossusTaldarimThermalExplosionQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveColossusTaldarimThermalExplosion">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeColossusTaldarimThermalExplosionCompleteOnly4213684408"/>
+    </CRequirement>
+    <CRequirement id="LearnDetectWeakness">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitTwilightCouncilTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakHavocTargetLockBuffQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnFluxVanes">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeVoidRayTaldarimSpeedUpgradeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnFusionMortars">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeVanguardArmoredDamageQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnGraviticBoosterTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimGraviticBoosterQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnHavocCloak">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarackHavocPermanentCloakQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMatterDispersion">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakVanguardIncreaseSplashAreaQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMindBlast">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeVoidHighTemplarMindBlastQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPhaseBlnk">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradePhaseBlinkQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPhasingArmor">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakStalkerPhasingArmorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPhoenixTaldarimGroundAttackUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradePhoenixTaldarimGroundAttackUpgradeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HavePhoenixTaldarimGroundAttackUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradePhoenixTaldarimGroundAttackUpgradeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnRapidPowerCycling">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakColossusChargedBlastChargeTimeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnSacrifice">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeResearchSacrificeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnSoulAugmentation">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAlarakSupplicantShieldArmorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimGroundArmor1">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimGroundArmorLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimShields1">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimShieldsLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimGroundArmor2">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimGroundArmorLevel1CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimGroundArmorLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimShields2">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimShieldsLevel1CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimShieldsLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimGroundArmor3">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimGroundArmorLevel2CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimGroundArmorLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimAirWeapon1">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimAirWeaponsLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimAirArmor1">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimAirArmorLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimShields3">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimShieldsLevel2CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimShieldsLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimGroundWeapon1">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimGroundWeaponsLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimAirWeapon2">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimAirWeaponsLevel1CompleteOnlyCountUnitFleetBeaconTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimAirWeaponsLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimAirArmor2">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimAirArmorLevel1CompleteOnlyCountUnitFleetBeaconTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimAirArmorLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimGroundWeapon2">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimGroundWeaponsLevel1CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimGroundWeaponsLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimAirWeapon3">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimAirWeaponsLevel2CompleteOnlyCountUnitFleetBeaconTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimAirWeaponsLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimAirArmor3">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimAirArmorLevel2CompleteOnlyCountUnitFleetBeaconTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimAirArmorLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTaldarimGroundWeapon3">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeTaldarimGroundWeaponsLevel2CompleteOnlyCountUnitTwilightCouncilTaldarimCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTaldarimGroundWeaponsLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTempestTaldarimGroundAttackUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTempestTaldarimGroundAttackUpgradeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveTempestTaldarimGroundAttackUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeTempestTaldarimGroundAttackUpgradeCompleteOnly2179728934"/>
+    </CRequirement>
+    <CRequirement id="LearnVoidStasis">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeVoidStasisQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnWarpGateTaldarim">
+        <EditorCategories value="Race:Protoss,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountUpgradeWarpGateResearchTaldarimQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveWarpGateTaldarim">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeWarpGateResearchTaldarimCompleteOnly2487229854TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="TaldarimMothershipRequirements">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitFleetBeaconTaldarimCompleteOnlyTechTreeCheatEq1478448419CountUnitSOAMothershipv4QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="NearWarpgateorNexusTaldarim">
+        <EditorCategories value="Race:Protoss"/>
+        <NodeArray index="Use" Link="CountBehaviorPowerSourceFastCompleteOnlyAtUnit2876499218"/>
+    </CRequirement>
+</Catalog>

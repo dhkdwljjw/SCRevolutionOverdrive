@@ -1,0 +1,36 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Mengsk
+//--------------------------------------------------------------------------------------------------
+// Variable Declarations
+unitgroup lib6BFEBC48_gv_cM_Mengsk_XPHungryUnits;
+unitgroup lib6BFEBC48_gv_cM_Mengsk_VeteranUnits;
+unitgroup lib6BFEBC48_gv_cM_Mengsk_PropagandaUnits;
+
+// Function Declarations
+void lib6BFEBC48_gf_FindandAttackNearestEnemy (unit lp_attacker, fixed lp_searchRadius, fixed lp_satisfiedPathingDistance, fixed lp_thinkPeriod, unitfilter lp_targetFilter, unitfilter lp_fallbackTargetFilter);
+void lib6BFEBC48_gf_SetUnitAttributePoints (string lp_attribute, unit lp_unit, int lp_points);
+
+// Trigger Declarations
+trigger lib6BFEBC48_gt_MengskTriggerSet;
+trigger lib6BFEBC48_gt_MengskArtilleryCargo;
+trigger lib6BFEBC48_gt_MengskVeteranRegister;
+trigger lib6BFEBC48_gt_MengskVeteranFullLevel;
+trigger lib6BFEBC48_gt_MengskVeteranLevelUpStar;
+trigger lib6BFEBC48_gt_MengskVeteranGetXP;
+trigger lib6BFEBC48_gt_MengskVeteranUnlockXP;
+trigger lib6BFEBC48_gt_MengskEnergyCount;
+trigger lib6BFEBC48_gt_MengskPropagandaOn;
+trigger lib6BFEBC48_gt_MengskPropagandaOff;
+trigger lib6BFEBC48_gt_MengskMedivacSiegeTankSiegedTransport;
+trigger lib6BFEBC48_gt_MengskMedivacSiegeTankSiegedLevelUpStar;
+trigger lib6BFEBC48_gt_TrooperMengskEnlistingAB;
+trigger lib6BFEBC48_gt_TrooperMengskEnlistingRB;
+trigger lib6BFEBC48_gt_MengskZergReleaseAutoAttack;
+trigger lib6BFEBC48_gt_MengskZergReadySupply;
+trigger lib6BFEBC48_gt_MengskZergReleaseSupply;
+
+// Library Initialization
+void lib6BFEBC48_InitVariables ();
+

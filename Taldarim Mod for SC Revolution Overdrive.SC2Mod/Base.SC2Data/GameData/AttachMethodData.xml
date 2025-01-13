@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAttachMethodPattern id="AMPatternSOAMothershipv4Beam">
+        <Keyword value="Weapon"/>
+        <Base value="::RollingIndex"/>
+        <Driver value="SOAMothershipv4BeamDummy"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="AMPatternImmortalTaldarim">
+        <Keyword value="Weapon"/>
+        <Base value="::RollingIndex"/>
+        <Driver value="ImmortalTaldarimWeaponLM"/>
+    </CAttachMethodPattern>
+</Catalog>

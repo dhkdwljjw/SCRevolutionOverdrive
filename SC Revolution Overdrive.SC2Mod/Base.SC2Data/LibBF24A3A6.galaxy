@@ -1,0 +1,111 @@
+include "TriggerLibs/NativeLib"
+include "Lib6BFEBC48"
+
+include "LibBF24A3A6_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Utilities
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void libBF24A3A6_InitLibraries () {
+    libNtve_InitVariables();
+    lib6BFEBC48_InitVariables();
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init Trigger
+//--------------------------------------------------------------------------------------------------
+bool libBF24A3A6_gt_InitTrigger_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    bool lv_mengskOnline;
+
+    // Automatic Variable Declarations
+    playergroup auto223F7C99_g;
+    int auto223F7C99_var;
+    string auto81C49D75_val;
+    int auto08D58048_val;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto223F7C99_g = PlayerGroupAll();
+    auto223F7C99_var = -1;
+    while (true) {
+        auto223F7C99_var = PlayerGroupNextPlayer(auto223F7C99_g, auto223F7C99_var);
+        if (auto223F7C99_var < 0) { break; }
+        auto81C49D75_val = GameAttributePlayerValue("1", auto223F7C99_var);
+        if (auto81C49D75_val == "0002") {
+            PlayerSetRace(auto223F7C99_var, "Tal");
+            PlayerSetCommander(auto223F7C99_var, "UITaldarim");
+            PlayerSetDifficulty(auto223F7C99_var, 0);
+            libNtve_gf_SetUpgradeLevelForPlayer(auto223F7C99_var, "TaldarimIcons", 1);
+        }
+        else if (auto81C49D75_val == "0003") {
+            PlayerSetRace(auto223F7C99_var, "TerM");
+            lv_mengskOnline = true;
+        }
+        else if (auto81C49D75_val == "0004") {
+            auto08D58048_val = RandomInt(1, 5);
+            if (auto08D58048_val == 1) {
+                PlayerSetRace(auto223F7C99_var, "Terr");
+            }
+            else if (auto08D58048_val == 2) {
+                PlayerSetRace(auto223F7C99_var, "Zerg");
+            }
+            else if (auto08D58048_val == 3) {
+                PlayerSetRace(auto223F7C99_var, "Prot");
+            }
+            else if (auto08D58048_val == 4) {
+                PlayerSetRace(auto223F7C99_var, "Tal");
+                PlayerSetCommander(auto223F7C99_var, "UITaldarim");
+                PlayerSetDifficulty(auto223F7C99_var, 0);
+                libNtve_gf_SetUpgradeLevelForPlayer(auto223F7C99_var, "TaldarimIcons", 1);
+            }
+            else if (auto08D58048_val == 5) {
+                PlayerSetRace(auto223F7C99_var, "TerM");
+                lv_mengskOnline = true;
+            }
+            else {
+            }
+        }
+        else {
+        }
+    }
+    if ((lv_mengskOnline == true)) {
+        TriggerExecute(lib6BFEBC48_gt_MengskTriggerSet, true, false);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libBF24A3A6_gt_InitTrigger_Init () {
+    libBF24A3A6_gt_InitTrigger = TriggerCreate("libBF24A3A6_gt_InitTrigger_Func");
+    TriggerAddEventMapInit(libBF24A3A6_gt_InitTrigger);
+}
+
+void libBF24A3A6_InitTriggers () {
+    libBF24A3A6_gt_InitTrigger_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool libBF24A3A6_InitLib_completed = false;
+
+void libBF24A3A6_InitLib () {
+    if (libBF24A3A6_InitLib_completed) {
+        return;
+    }
+
+    libBF24A3A6_InitLib_completed = true;
+
+    libBF24A3A6_InitLibraries();
+    libBF24A3A6_InitTriggers();
+}
+

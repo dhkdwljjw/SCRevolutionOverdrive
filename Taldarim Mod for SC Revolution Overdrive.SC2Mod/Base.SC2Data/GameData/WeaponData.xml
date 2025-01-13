@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeaponLegacy id="InterceptorTaldarimLaunch">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\btn-unit-collection-taldarim-interceptor.dds"/>
+        <DisplayEffect value="Carrier"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Arc value="360"/>
+        <Period value="0.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="InterceptorTaldarimLaunchPersistent"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponStrafe id="InterceptorTaldarimBeam">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel0.dds"/>
+        <DisplayEffect value="InterceptorTaldarimBeamDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="2"/>
+        <TeleportResetRange value="0"/>
+        <Arc value="19.6875"/>
+        <Period value="3"/>
+        <Effect value="InterceptorTaldarimBeamPersistent"/>
+    </CWeaponStrafe>
+    <CWeaponLegacy id="InterceptorsTaldarimDummy">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-unit-collection-taldarim-interceptor.dds"/>
+        <DisplayEffect value="InterceptorTaldarimBeamDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Enemy"/>
+        <Range value="8"/>
+        <Arc value="360"/>
+        <Period value="3"/>
+        <Effect value="CarrierTaldarimInterceptor"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="IonCannonsTaldarim">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel0.dds"/>
+        <DisplayEffect value="IonCannonsTaldarimU"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="4"/>
+        <Arc value="4.9987"/>
+        <ArcSlop value="0"/>
+        <Period value="1.1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="IonCannonsGround">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel0.dds"/>
+        <DisplayEffect value="PhoenixBomberCarpetBombDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="4"/>
+        <Arc value="360"/>
+        <Period value="1.1"/>
+        <Effect value="PhoenixBomberCarpetBombPersistent"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParticleBeamTaldarim">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.2"/>
+        <Period value="1.5"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParticleDisruptorsTaldarim">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ParticleDisruptorsTaldarimU"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Period value="1.87"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SOAMothershipv4Weapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel0.dds"/>
+        <DisplayEffect value="SOAMothershipv4BeamDamage"/>
+        <DisplayAttackCount value="6"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Arc value="360"/>
+        <Period value="2.21"/>
+        <DamagePoint value="0"/>
+        <Effect value="SOAMothershipv4BeamSet"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AscendantWeapon">
+        <Name value="Weapon/Name/Ascendant"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel0.dds"/>
+        <DisplayEffect value="AscendantWeaponDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.754"/>
+        <Effect value="AscendantWeaponLM"/>
+        <MinScanRange value="6.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TempestTaldarim">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel0.dds"/>
+        <DisplayEffect value="TempestTaldarimDamage"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="3.3"/>
+        <Effect value="TempestTaldarimLaunchMissile"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TempestTaldarimGround">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel0.dds"/>
+        <DisplayEffect value="TempestTaldarimDamageGround"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10.5"/>
+        <Range value="10"/>
+        <Period value="3.3"/>
+        <Effect value="TempestTaldarimLaunchMissileGround"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="VoidRayChargeBeamBounce">
+        <Name value="Weapon/Name/VoidRayTaldarim"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel0.dds"/>
+        <DisplayEffect value="VoidRayChargeBeamBounceDamageCharge1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <RangeSlop value="2"/>
+        <ArcSlop value="39.9902"/>
+        <Period value="0.5"/>
+        <Backswing value="0.75"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ImmortalTaldarim">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ImmortalTaldarimWeaponDamage"/>
+        <DisplayAttackCount value="12"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="3.75"/>
+        <Effect value="ImmortalTaldarimWeaponRandomLarge"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DarkTemplarTaldarim">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel0.dds"/>
+        <DisplayEffect value="WarpBlades"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.1"/>
+        <Period value="1.694"/>
+        <DamagePoint value="0.361"/>
+        <Backswing value="1.333"/>
+        <Effect value="WarpBlades"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MonitorFakeWeapon">
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-unit-protoss-alarak-taldarim-photoncannon.dds"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="3"/>
+        <ChaseFilters value="-;Neutral,Enemy"/>
+        <AcquireCallForHelpFilters value="-;Player,Ally,Neutral,Enemy"/>
+        <Arc value="0.9997"/>
+        <Cost>
+            <Cooldown Link="Abil/ObserverTargetLock" Location="Unit" TimeUse="2.9"/>
+        </Cost>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ColossusTaldarimChargedBeam">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ColossusTaldarimDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByDistanceFromTarget"/>
+        <Range value="11"/>
+        <Arc value="90"/>
+        <Period value="3"/>
+        <DamagePoint value="2"/>
+        <Effect value="ColossusTaldarimLM"/>
+        <AllowedMovement value="Moving"/>
+        <MinScanRange value="9.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ColossusTaldarimChargedBeamFast">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel0.dds"/>
+        <DisplayEffect value="ColossusTaldarimDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByDistanceFromTarget"/>
+        <MinScanRange value="9.5"/>
+        <Range value="11"/>
+        <Arc value="90"/>
+        <Period value="3"/>
+        <DamagePoint value="0.5"/>
+        <Effect value="ColossusTaldarimLM"/>
+        <AllowedMovement value="Moving"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WarpPrismTaldarimWeapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-airweaponslevel0.dds"/>
+        <DisplayEffect value="WarpPrismTaldarimWeaponDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7.5"/>
+        <Range value="7"/>
+        <Period value="2"/>
+        <Effect value="WarpPrismTaldarimWeaponLaunch"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SupplicantWeapon">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-taldarim-groundweaponslevel0.dds"/>
+        <DisplayEffect value="SupplicantDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="3"/>
+        <Period value="1.65"/>
+        <DamagePoint value="0.125"/>
+        <Effect value="SupplicantLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AlarakStructureOvercharge">
+        <EditorCategories value="Race:Protoss"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-structureovercharge.dds"/>
+        <DisplayEffect value="AlarakStructureOverchargeDamage"/>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Period value="0.64"/>
+    </CWeaponLegacy>
+</Catalog>

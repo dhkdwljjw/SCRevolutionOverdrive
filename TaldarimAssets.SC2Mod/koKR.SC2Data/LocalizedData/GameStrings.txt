@@ -1,0 +1,3 @@
+﻿DocInfo/DescLong=Taldarim Assets for SC: Revoultion Overdrive
+DocInfo/DescShort=아무
+DocInfo/Name=TaldarimAssets

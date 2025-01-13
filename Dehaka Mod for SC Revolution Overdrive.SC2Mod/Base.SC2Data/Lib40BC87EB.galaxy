@@ -1,0 +1,1532 @@
+include "TriggerLibs/NativeLib"
+
+include "Lib40BC87EB_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Dehaka
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void lib40BC87EB_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Variable Initialization
+bool lib40BC87EB_InitVariables_completed = false;
+
+void lib40BC87EB_InitVariables () {
+    int init_i;
+
+    if (lib40BC87EB_InitVariables_completed) {
+        return;
+    }
+
+    lib40BC87EB_InitVariables_completed = true;
+
+    for (init_i = 0; init_i <= 15; init_i += 1) {
+        lib40BC87EB_gv_cM_DehakaLevelsMax[init_i] = 15;
+    }
+    for (init_i = 0; init_i <= 15; init_i += 1) {
+        lib40BC87EB_gv_cM_DehakaVeterencyBehavior[init_i] = "DehakaVeterancyCoopFinal";
+    }
+    for (init_i = 0; init_i <= 15; init_i += 1) {
+        lib40BC87EB_gv_cM_Dehaka_CurrentLevel[init_i] = 1;
+    }
+    lib40BC87EB_gv_cM_Dehaka_EssenceAttribute = "DehakaAttEssence";
+    lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor = 0.1;
+    lib40BC87EB_gv_c_DehakaConsumeCooldownFilter = UnitFilter(0, 0, (1 << c_targetFilterPlayer) | (1 << c_targetFilterAlly) | (1 << c_targetFilterNeutral), 0);
+    lib40BC87EB_gv_dataDehakaLearnAbilCmdLink = AbilityCommand("DehakaLearn", 255);
+}
+
+// Functions
+bool lib40BC87EB_gf_HeroCanSpendSkillPoint (unit lp_hero, string lp_learnAbility) {
+    // Variable Declarations
+    int lv_i;
+    int lv_c;
+    order lv_order;
+
+    // Automatic Variable Declarations
+    int auto7CA75224_ae;
+    const int auto7CA75224_ai = 1;
+
+    // Variable Initialization
+    lv_c = 19;
+
+    // Implementation
+    auto7CA75224_ae = lv_c;
+    lv_i = 0;
+    for ( ; ( (auto7CA75224_ai >= 0 && lv_i <= auto7CA75224_ae) || (auto7CA75224_ai < 0 && lv_i >= auto7CA75224_ae) ) ; lv_i += auto7CA75224_ai ) {
+        lv_order = Order(AbilityCommand(lp_learnAbility, lv_i));
+        if ((UnitOrderIsValid(lp_hero, lv_order) == true)) {
+            return true;
+        }
+
+    }
+    return false;
+}
+
+void lib40BC87EB_gf_CM_Dehaka_EssenceSetStack (unit lp_essence, int lp_stack) {
+    // Automatic Variable Declarations
+    // Implementation
+    UnitSetCustomValue(lp_essence, 63, IntToFixed(lp_stack));
+    TextExpressionSetToken("Param/Expression/lib_40BC87EB_75B33ADE", "A", IntToText(lp_stack));
+    UnitSetInfoTip(lp_essence, TextExpressionAssemble("Param/Expression/lib_40BC87EB_75B33ADE"));
+}
+
+void lib40BC87EB_gf_CM_Dehaka_SetLevelValues (int lp_player) {
+    // Variable Declarations
+    int lv_i;
+    fixed lv_r;
+    int lv_xPTotal;
+
+    // Automatic Variable Declarations
+    int auto57215049_ae;
+    const int auto57215049_ai = 1;
+
+    // Variable Initialization
+
+    // Implementation
+    auto57215049_ae = (lp_player - 1);
+    lv_i = 0;
+    for ( ; ( (auto57215049_ai >= 0 && lv_i <= auto57215049_ae) || (auto57215049_ai < 0 && lv_i >= auto57215049_ae) ) ; lv_i += auto57215049_ai ) {
+        lv_xPTotal += CatalogFieldValueGetAsInt(c_gameCatalogBehavior, lib40BC87EB_gv_cM_DehakaVeterencyBehavior[lp_player], "VeterancyLevelArray[" + IntToString(lv_i) + "].MinVeterancyXP", lp_player);
+        lib40BC87EB_gv_cM_DehakaNextLevelValueArray[lv_i] = lv_xPTotal;
+    }
+}
+
+void lib40BC87EB_gf_CM_Dehaka_LevelUp (int lp_dehakaPlayer, unit lp_dehakaUnit) {
+    // Variable Declarations
+    fixed lv_dehakaScalePerLevel;
+    fixed lv_dehakaBaseScale;
+    fixed lv_dehakaScaleResult;
+    int lv_dehakaAttackDamagePerLevel;
+    int lv_dehakaAttackDamageBase;
+    int lv_dehakaAttackDamageResult;
+    fixed lv_dehakaTurnSpeed;
+    fixed lv_dehakaAbilityArcs;
+    int lv_dehakaNextLevelCheck;
+    int lv_dehakaCurrentLevel;
+    string lv_dehakaUnitType;
+    actor lv_dehakaUnitActor;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_dehakaScalePerLevel = 0.1;
+    lv_dehakaBaseScale = 0.5;
+    lv_dehakaAttackDamagePerLevel = 10;
+    lv_dehakaAttackDamageBase = 20;
+    lv_dehakaCurrentLevel = UnitXPGetCurrentLevel(lp_dehakaUnit, null);
+    lv_dehakaUnitType = UnitGetType(lp_dehakaUnit);
+    lv_dehakaUnitActor = libNtve_gf_MainActorofUnit(lp_dehakaUnit);
+
+    // Implementation
+    if ((lib40BC87EB_gf_HeroCanSpendSkillPoint(lp_dehakaUnit, "DehakaLearn") == true)) {
+        ActorSend(lv_dehakaUnitActor, "HaloStart");
+        UISetButtonFaceHighlighted(PlayerGroupSingle(lp_dehakaPlayer), "DehakaLearnAbilities", true);
+    }
+    else {
+        ActorSend(lv_dehakaUnitActor, "HaloStop");
+        UISetButtonFaceHighlighted(PlayerGroupSingle(lp_dehakaPlayer), "DehakaLearnAbilities", false);
+    }
+    if ((lv_dehakaCurrentLevel >= lib40BC87EB_gv_cM_DehakaLevelsMax[lp_dehakaPlayer]) && (lib40BC87EB_gv_cM_DehakaLevelMaxMusicPlayed == false)) {
+        lib40BC87EB_gv_cM_DehakaLevelMaxMusicPlayed = true;
+        SoundPlayOnUnitForPlayer(SoundLink("MusicDehakaMaxLevel", -1), lp_dehakaPlayer, PlayerGroupSingle(lp_dehakaPlayer), lp_dehakaUnit, 1.0, 100.0, 0.0);
+    }
+
+    lv_dehakaScaleResult = ((lv_dehakaCurrentLevel * lv_dehakaScalePerLevel) + lv_dehakaBaseScale);
+    libNtve_gf_SendActorMessageToUnit(lp_dehakaUnit, libNtve_gf_SetScale(lv_dehakaScaleResult, lv_dehakaScaleResult, lv_dehakaScaleResult, 0.0));
+    libNtve_gf_CatalogFieldValueSetAsReal(c_gameCatalogUnit, lv_dehakaUnitType, "Radius", lp_dehakaPlayer, ((lv_dehakaCurrentLevel * 0.0625) + 0.5));
+    lv_dehakaAttackDamageResult = (lv_dehakaAttackDamageBase + ((lv_dehakaCurrentLevel - 1) * lv_dehakaAttackDamagePerLevel));
+    lv_dehakaTurnSpeed = (800.0 - (lv_dehakaCurrentLevel * 40.0));
+    if ((lv_dehakaTurnSpeed < 300.0)) {
+        lv_dehakaTurnSpeed = 300.0;
+    }
+
+    libNtve_gf_CatalogFieldValueSetAsReal(c_gameCatalogUnit, lv_dehakaUnitType, "TurningRate", lp_dehakaPlayer, lv_dehakaTurnSpeed);
+    libNtve_gf_CatalogFieldValueSetAsReal(c_gameCatalogUnit, lv_dehakaUnitType, "StationaryTurningRate", lp_dehakaPlayer, lv_dehakaTurnSpeed);
+}
+
+int lib40BC87EB_gf_CM_Dehaka_EssenceGetStack (unit lp_essence) {
+    // Variable Declarations
+    int lv_stack;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_stack = FixedToInt(UnitGetCustomValue(lp_essence, 63));
+
+    // Implementation
+    return lv_stack;
+}
+
+void lib40BC87EB_gf_CM_Dehaka_EssenceTransfer (int lp_indexPlayer, unit lp_trainUnit, int lp_essenceBuff100Count, int lp_essenceBuff10Count, int lp_essenceBuff1Count) {
+    // Automatic Variable Declarations
+    // Implementation
+    UnitBehaviorAddPlayer(lp_trainUnit, "EssenceBuff100", lp_indexPlayer, lp_essenceBuff100Count);
+    UnitBehaviorAddPlayer(lp_trainUnit, "EssenceBuff10", lp_indexPlayer, lp_essenceBuff10Count);
+    UnitBehaviorAddPlayer(lp_trainUnit, "EssenceBuff1", lp_indexPlayer, lp_essenceBuff1Count);
+    UnitCreateEffectUnit(lp_trainUnit, "PostMorphHeal", lp_trainUnit);
+}
+
+void lib40BC87EB_gf_CM_Dehaka_EssenceScale (unit lp_essenceUnit, bool lp_instantScale) {
+    // Variable Declarations
+    fixed lv_customScale;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Implementation
+    lv_customScale = (UnitGetCustomValue(lp_essenceUnit, 63) / 100.0);
+    lv_customScale += 0.8;
+    if ((lv_customScale > 1.8)) {
+        lv_customScale = 1.8;
+    }
+
+    if ((lp_instantScale == true)) {
+        TextExpressionSetToken("Param/Expression/lib_40BC87EB_FE82BB7C", "A", FixedToText(lv_customScale, c_fixedPrecisionAny));
+        ActorSendAsText(libNtve_gf_MainActorofUnit(lp_essenceUnit), TextExpressionAssemble("Param/Expression/lib_40BC87EB_FE82BB7C"));
+    }
+    else {
+        TextExpressionSetToken("Param/Expression/lib_40BC87EB_0C1B7BC6", "A", FixedToText(lv_customScale, c_fixedPrecisionAny));
+        ActorSendAsText(libNtve_gf_MainActorofUnit(lp_essenceUnit), TextExpressionAssemble("Param/Expression/lib_40BC87EB_0C1B7BC6"));
+    }
+}
+
+void lib40BC87EB_gf_CM_Dehaka_EssenceMerge (unit lp_essenceUnit, int lp_essenceUnitCount) {
+    // Variable Declarations
+    fixed lv_essenceCongealRadius;
+    int lv_nearbyEssenceMaxCount;
+    unit lv_nearbyEssenceMaxCountUnit;
+
+    // Automatic Variable Declarations
+    unitgroup auto53A4509C_g;
+    int auto53A4509C_u;
+    unit auto53A4509C_var;
+
+    // Variable Initialization
+    lv_essenceCongealRadius = 1.9;
+
+    // Implementation
+    auto53A4509C_g = UnitGroup("EssencePickup", UnitGetOwner(lp_essenceUnit), RegionCircle(UnitGetPosition(lp_essenceUnit), lv_essenceCongealRadius), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    auto53A4509C_u = UnitGroupCount(auto53A4509C_g, c_unitCountAll);
+    for (;; auto53A4509C_u -= 1) {
+        auto53A4509C_var = UnitGroupUnitFromEnd(auto53A4509C_g, auto53A4509C_u);
+        if (auto53A4509C_var == null) { break; }
+        if (((UnitGetCustomValue(auto53A4509C_var, 63) > lv_nearbyEssenceMaxCount) && (auto53A4509C_var != lp_essenceUnit) && (UnitHasBehavior2(auto53A4509C_var, "EssenceTravelling") == false))) {
+            lv_nearbyEssenceMaxCount = FixedToInt(UnitGetCustomValue(auto53A4509C_var, 63));
+            lv_nearbyEssenceMaxCountUnit = auto53A4509C_var;
+        }
+
+    }
+    if ((lv_nearbyEssenceMaxCountUnit != null)) {
+        lib40BC87EB_gf_CM_Dehaka_EssenceSetStack(lv_nearbyEssenceMaxCountUnit, FixedToInt((UnitGetCustomValue(lv_nearbyEssenceMaxCountUnit, 63) + lp_essenceUnitCount)));
+        UnitBehaviorAdd(lp_essenceUnit, "EssenceTravelling", lp_essenceUnit, 1);
+        UnitCreateEffectUnit(lp_essenceUnit, "EssencePickupFullLM", lv_nearbyEssenceMaxCountUnit);
+        lib40BC87EB_gf_CM_Dehaka_EssenceScale(lv_nearbyEssenceMaxCountUnit, false);
+    }
+
+}
+
+void lib40BC87EB_gf_CM_DehakaConsumeFloatText (text lp_text, int lp_p, point lp_loc) {
+    // Automatic Variable Declarations
+    // Implementation
+    TextTagCreate(lp_text, 24, lp_loc, 4.0, true, false, PlayerGroupSingle(lp_p));
+    TextTagSetVelocity(TextTagLastCreated(), 1.0, 90.0);
+    TextTagSetTime(TextTagLastCreated(), c_textTagTimeDuration, 5.0);
+    TextTagSetTime(TextTagLastCreated(), c_textTagTimeFadeOut, 2.0);
+    TextTagSetColor(TextTagLastCreated(), c_textTagColorText, Color(100.00, 100.00, 100.00));
+}
+
+void lib40BC87EB_gf_CM_DehakaConsumeUpdatePsiExplodeDamage (int lp_dehakaPlayer, unit lp_dehakaUnit, fixed lp_weaponDamage) {
+    // Variable Declarations
+    fixed lv_weaponDamageScalar;
+    fixed lv_totalDamage;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_weaponDamageScalar = 2.0;
+    lv_totalDamage = (lp_weaponDamage * lv_weaponDamageScalar);
+
+    // Implementation
+    CatalogFieldValueSet(c_gameCatalogEffect, lib40BC87EB_gv_c_DehakaConsumeEffectPsiExplodeWeaponDmgLink, "Amount", lp_dehakaPlayer, FixedToString(lv_totalDamage, c_fixedPrecisionAny));
+    libNtve_gf_CatalogFieldValueModifyBasedOnDefaultValue(c_gameCatalogEffect, "DehakaConsumeEffectPsionicSearch", "AreaArray[" + IntToString(0) + "].Radius", lp_dehakaPlayer, UnitGetPropertyFixed(lp_dehakaUnit, c_unitPropRadius, c_unitPropCurrent), c_upgradeOperationAdd);
+}
+
+trigger auto_lib40BC87EB_gf_CM_HeroHandleDeath_Trigger = null;
+int auto_lib40BC87EB_gf_CM_HeroHandleDeath_lp_player;
+
+void lib40BC87EB_gf_CM_HeroHandleDeath (int lp_player) {
+    auto_lib40BC87EB_gf_CM_HeroHandleDeath_lp_player = lp_player;
+
+    if (auto_lib40BC87EB_gf_CM_HeroHandleDeath_Trigger == null) {
+        auto_lib40BC87EB_gf_CM_HeroHandleDeath_Trigger = TriggerCreate("auto_lib40BC87EB_gf_CM_HeroHandleDeath_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib40BC87EB_gf_CM_HeroHandleDeath_Trigger, false, false);
+}
+
+bool auto_lib40BC87EB_gf_CM_HeroHandleDeath_TriggerFunc (bool testConds, bool runActions) {
+    int lp_player = auto_lib40BC87EB_gf_CM_HeroHandleDeath_lp_player;
+
+    // Variable Declarations
+    fixed lv_reviveDuration;
+    text lv_tip;
+    text lv_subtip;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_reviveDuration = 60.0;
+
+    // Implementation
+    UnitBehaviorAdd(lib40BC87EB_gv_cM_HeroReviver[lp_player], "DehakaNormalReviveTimer", lib40BC87EB_gv_cM_HeroReviver[lp_player], 1);
+    if ((TechTreeUnitCount(lp_player, "DehakaCoopReviveCocoon", c_techCountCompleteOnly) == 0)) {
+        lib40BC87EB_gf_CM_HeroReviveMsgNoTownHall(lp_player);
+    }
+    else {
+        lib40BC87EB_gf_CM_HeroNormalReviveMsgPending(lp_player, lv_reviveDuration);
+    }
+    if ((UnitIsAlive(lib40BC87EB_gv_cM_HeroUnit[lp_player]) == false)) {
+        lib40BC87EB_gf_CM_HeroWaitForRevive(lp_player);
+    }
+
+    return true;
+}
+
+void lib40BC87EB_gf_CM_HeroNormalReviveMsgPending (int lp_player, fixed lp_duration) {
+    // Automatic Variable Declarations
+    // Implementation
+    TextExpressionSetToken("Param/Expression/lib_40BC87EB_F07BDE2B", "Duration", FixedToText(lp_duration, 0));
+    UIDisplayMessage(PlayerGroupSingle(lp_player), c_messageAreaSubtitle, TextExpressionAssemble("Param/Expression/lib_40BC87EB_F07BDE2B"));
+}
+
+void lib40BC87EB_gf_CM_HeroReviveMsgNoTownHall (int lp_player) {
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(PlayerGroupSingle(lp_player), c_messageAreaSubtitle, StringExternal("Param/Value/lib_40BC87EB_0CC790E5"));
+}
+
+void lib40BC87EB_gf_CM_HeroReviveMsgComplete (int lp_player) {
+    // Automatic Variable Declarations
+    // Implementation
+    if ((lib40BC87EB_gv_cM_HeroDeathCount[lp_player] == true)) {
+        UIDisplayMessage(PlayerGroupSingle(lp_player), c_messageAreaSubtitle, StringExternal("Param/Value/lib_40BC87EB_A907A787"));
+    }
+    else {
+        UIDisplayMessage(PlayerGroupSingle(lp_player), c_messageAreaSubtitle, StringExternal("Param/Value/lib_40BC87EB_DD36035D"));
+    }
+}
+
+trigger auto_lib40BC87EB_gf_CM_HeroWaitForRevive_Trigger = null;
+int auto_lib40BC87EB_gf_CM_HeroWaitForRevive_lp_player;
+
+void lib40BC87EB_gf_CM_HeroWaitForRevive (int lp_player) {
+    auto_lib40BC87EB_gf_CM_HeroWaitForRevive_lp_player = lp_player;
+
+    if (auto_lib40BC87EB_gf_CM_HeroWaitForRevive_Trigger == null) {
+        auto_lib40BC87EB_gf_CM_HeroWaitForRevive_Trigger = TriggerCreate("auto_lib40BC87EB_gf_CM_HeroWaitForRevive_TriggerFunc");
+    }
+
+    TriggerExecute(auto_lib40BC87EB_gf_CM_HeroWaitForRevive_Trigger, false, false);
+}
+
+bool auto_lib40BC87EB_gf_CM_HeroWaitForRevive_TriggerFunc (bool testConds, bool runActions) {
+    int lp_player = auto_lib40BC87EB_gf_CM_HeroWaitForRevive_lp_player;
+
+    // Variable Declarations
+    point lv_reviveFallbackPoint;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Implementation
+    while (!((lib40BC87EB_gv_cM_HeroReviver[lp_player] != null) && (lib40BC87EB_gv_cM_Dehaka_ReviverEssenceCount[lp_player] >= 1))) {
+        Wait(1.0, c_timeGame);
+    }
+    UnitBehaviorAdd(lib40BC87EB_gv_cM_HeroUnit[lp_player], "SuppressCollisionRevive", lib40BC87EB_gv_cM_HeroUnit[lp_player], 1);
+    UnitIssueOrder(lib40BC87EB_gv_cM_HeroReviver[lp_player], libNtve_gf_ReviveOrderWithNoTarget(AbilityCommand("DehakaRevive", 0), lib40BC87EB_gv_cM_HeroUnit[lp_player]), c_orderQueueReplace);
+    lv_reviveFallbackPoint = UnitGetPosition(lib40BC87EB_gv_cM_HeroReviver[lp_player]);
+    Wait(0.125, c_timeGame);
+    if ((UnitIsAlive(lib40BC87EB_gv_cM_HeroUnit[lp_player]) == false)) {
+        UnitRevive(lib40BC87EB_gv_cM_HeroUnit[lp_player]);
+        UnitCreateEffectUnit(lib40BC87EB_gv_cM_HeroUnit[lp_player], lib40BC87EB_gv_cM_HeroReviveHealEffect, lib40BC87EB_gv_cM_HeroUnit[lp_player]);
+        if ((RegionContainsPoint(RegionPlayableMap(), lv_reviveFallbackPoint) == true)) {
+            UnitSetPosition(lib40BC87EB_gv_cM_HeroUnit[lp_player], lv_reviveFallbackPoint, false);
+        }
+
+    }
+
+    lib40BC87EB_gf_CM_HeroReviveMsgComplete(lp_player);
+    UnitBehaviorRemove(lib40BC87EB_gv_cM_HeroReviver[lp_player], "DehakaNormalReviveTimer", 1);
+    if ((PlayerRace(lp_player) == "PZrg")) {
+        lib40BC87EB_gf_CM_Dehaka_LevelUp(lp_player, lib40BC87EB_gv_cM_HeroUnit[lp_player]);
+    }
+
+    return true;
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_TriggersInit
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_TriggersInit_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    bool lv_playerDehaka;
+
+    // Automatic Variable Declarations
+    playergroup autoB54F0749_g;
+    int autoB54F0749_var;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoB54F0749_g = PlayerGroupAll();
+    autoB54F0749_var = -1;
+    while (true) {
+        autoB54F0749_var = PlayerGroupNextPlayer(autoB54F0749_g, autoB54F0749_var);
+        if (autoB54F0749_var < 0) { break; }
+        if (true) {
+            lv_playerDehaka = true;
+            lib40BC87EB_gf_CM_Dehaka_SetLevelValues(autoB54F0749_var);
+        }
+
+    }
+    if ((lv_playerDehaka == true)) {
+        TriggerEnable(lib40BC87EB_gt_CM_DehakaLearn, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_EssenceDrop, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_EssencePickup, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_UnitCostRefund, true);
+        TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe, true);
+        TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeExecuted, true);
+        TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic, true);
+        TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe, true);
+        TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2, true);
+        TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3, true);
+        TriggerEnable(lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn, true);
+        TriggerEnable(lib40BC87EB_gt_DehakaBossFacing, true);
+        TriggerEnable(lib40BC87EB_gt_DehakaMammothBreathLootAtStart, true);
+        TriggerEnable(lib40BC87EB_gt_DehakaMammothBreathLootAtStop, true);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_TriggersInit_Init () {
+    lib40BC87EB_gt_CM_Dehaka_TriggersInit = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_TriggersInit_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_EssenceDrop
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_EssenceDrop_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_essenceUnitCount;
+    int lv_essenceBaseAmount;
+    int lv_essenceBrutalMultiplier;
+    fixed lv_dyingUnitSupply;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_essenceBrutalMultiplier = 1;
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_KillingPlayer() != c_playerAny))) {
+            return false;
+        }
+
+        if (!((PlayerRace(libNtve_gf_KillingPlayer()) == "PZrg"))) {
+            return false;
+        }
+
+        if (!((EventUnitDamageDeathCheck(c_deathTypeRemove) == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_dyingUnitSupply = FixedToInt(StringToFixed(CatalogFieldValueGet(c_gameCatalogUnit, UnitGetType(EventUnit()), "Food", 0)));
+    if ((lv_dyingUnitSupply == -0.5)) {
+        lv_essenceBaseAmount = 1;
+    }
+    else if ((lv_dyingUnitSupply == -1.0)) {
+        lv_essenceBaseAmount = 2;
+    }
+    else if ((lv_dyingUnitSupply == -2.0)) {
+        lv_essenceBaseAmount = 4;
+    }
+    else if ((lv_dyingUnitSupply == -3.0)) {
+        lv_essenceBaseAmount = 6;
+    }
+    else if ((lv_dyingUnitSupply == -4.0)) {
+        lv_essenceBaseAmount = 8;
+    }
+    else if ((lv_dyingUnitSupply < -4.0)) {
+        lv_essenceBaseAmount = 12;
+    }
+    lv_essenceUnitCount = (lv_essenceBaseAmount * lv_essenceBrutalMultiplier);
+    if ((lv_essenceUnitCount > 0)) {
+        libNtve_gf_CreateUnitsWithDefaultFacing(1, "EssencePickup", c_unitCreateIgnorePlacement, libNtve_gf_KillingPlayer(), UnitGetPosition(EventUnit()));
+        lib40BC87EB_gf_CM_Dehaka_EssenceSetStack(UnitLastCreated(), lv_essenceUnitCount);
+        UnitBehaviorRemove(UnitLastCreated(), "EssenceCreated", 1);
+        lib40BC87EB_gf_CM_Dehaka_EssenceScale(UnitLastCreated(), false);
+        lib40BC87EB_gf_CM_Dehaka_EssenceMerge(UnitLastCreated(), lv_essenceUnitCount);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_EssenceDrop_Init () {
+    lib40BC87EB_gt_CM_Dehaka_EssenceDrop = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_EssenceDrop_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_EssenceDrop, false);
+    TriggerAddEventUnitDied(lib40BC87EB_gt_CM_Dehaka_EssenceDrop, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_EssenceDropBaneling
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_essenceUnitCount;
+    int lv_essenceBaseAmount;
+    int lv_essenceBrutalMultiplier;
+    int lv_dehakaPlayer;
+    fixed lv_dyingUnitSupply;
+
+    // Automatic Variable Declarations
+    playergroup auto189F0D40_g;
+    int auto189F0D40_var;
+
+    // Variable Initialization
+    lv_essenceBrutalMultiplier = 1;
+
+    // Conditions
+    if (testConds) {
+        if (!((EventUnitDamageDeathCheck(c_deathTypeRemove) == false))) {
+            return false;
+        }
+
+        if (!(((UnitGetType(EventUnit()) == "Baneling") || (UnitGetType(EventUnit()) == "BanelingBurrowed")))) {
+            return false;
+        }
+
+        if (!((UnitGroupCount(libNtve_gf_UnitsInRegionWithAllianceToPlayerMatchingCondition("DehakaCoop", "", "", EventPlayer(), c_unitAllianceEnemy, RegionCircle(UnitGetPosition(EventUnit()), 20.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto189F0D40_g = PlayerGroupAll();
+    auto189F0D40_var = -1;
+    while (true) {
+        auto189F0D40_var = PlayerGroupNextPlayer(auto189F0D40_g, auto189F0D40_var);
+        if (auto189F0D40_var < 0) { break; }
+        if ((UnitGroupCount(libNtve_gf_UnitsInRegionWithAllianceToPlayerMatchingCondition("DehakaCoop", "", "", auto189F0D40_var, -1, RegionCircle(UnitGetPosition(EventUnit()), 20.0), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), c_unitCountAlive) > 0)) {
+            lv_dehakaPlayer = auto189F0D40_var;
+            lv_dyingUnitSupply = FixedToInt(StringToFixed(CatalogFieldValueGet(c_gameCatalogUnit, UnitGetType(EventUnit()), "Food", 0)));
+            lv_essenceBaseAmount = 1;
+            lv_essenceUnitCount = (lv_essenceBaseAmount * lv_essenceBrutalMultiplier);
+            if ((lv_essenceUnitCount > 0)) {
+                libNtve_gf_CreateUnitsWithDefaultFacing(1, "EssencePickup", c_unitCreateIgnorePlacement, lv_dehakaPlayer, UnitGetPosition(EventUnit()));
+                lib40BC87EB_gf_CM_Dehaka_EssenceSetStack(UnitLastCreated(), lv_essenceUnitCount);
+                UnitBehaviorRemove(UnitLastCreated(), "EssenceCreated", 1);
+                lib40BC87EB_gf_CM_Dehaka_EssenceScale(UnitLastCreated(), false);
+                lib40BC87EB_gf_CM_Dehaka_EssenceMerge(UnitLastCreated(), lv_essenceUnitCount);
+            }
+
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling_Init () {
+    lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling, false);
+    TriggerAddEventUnitDied(lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_EssencePickup
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_EssencePickup_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_val;
+    fixed lv_period;
+    fixed lv_addition;
+    int lv_essenceCountStored;
+    int lv_player;
+    fixed lv_heal;
+    fixed lv_extraLife;
+    unit lv_collectorUnit;
+    string lv_collectorUnitType;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_essenceCountStored = FixedToInt(UnitGetCustomValue(EventPlayerEffectUsedUnit(c_effectUnitCaster), 63));
+    lv_player = EventPlayerEffectUsedUnitOwner(c_effectPlayerTarget);
+    lv_heal = (lv_essenceCountStored*libNtve_gf_CatalogReferenceGetAsReal("Effect,DehakaHealAmountPerEssenceDummy,Amount", lv_player));
+    lv_extraLife = (lv_essenceCountStored*libNtve_gf_CatalogReferenceGetAsReal("Effect,DehakaMaxLifeAmountPerEssenceDummy,Amount", lv_player));
+    lv_collectorUnit = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+    lv_collectorUnitType = UnitGetType(lv_collectorUnit);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lib40BC87EB_gv_cM_Dehaka_TotalEssence[lv_player] += lv_essenceCountStored;
+    UnitSetCustomValue(lv_collectorUnit, lib40BC87EB_gv_cM_DehakaEssenceIndex, (UnitGetCustomValue(lv_collectorUnit, lib40BC87EB_gv_cM_DehakaEssenceIndex) + lv_essenceCountStored));
+    UnitBehaviorAdd(EventPlayerEffectUsedUnit(c_effectUnitCaster), "EssenceTravelling", EventPlayerEffectUsedUnit(c_effectUnitCaster), 1);
+    UnitCreateEffectUnit(EventPlayerEffectUsedUnit(c_effectUnitCaster), "EssencePickupFullLM", EventPlayerEffectUsedUnit(c_effectUnitTarget));
+    CatalogFieldValueSet(c_gameCatalogEffect, "EssenceDehakaDummyStacks", "Amount", EventPlayerEffectUsedUnitOwner(c_effectPlayerTarget), FixedToString(lib40BC87EB_gv_cM_Dehaka_TotalEssence[lv_player], c_fixedPrecisionAny));
+    UnitSetAttributePoint(lv_collectorUnit, lib40BC87EB_gv_cM_Dehaka_EssenceAttribute, true, RoundI(UnitGetCustomValue(lv_collectorUnit, lib40BC87EB_gv_cM_DehakaEssenceIndex)));
+    UnitXPAddXP(lv_collectorUnit, lib40BC87EB_gv_cM_DehakaVeterencyBehavior[lv_player], lv_essenceCountStored);
+    lib40BC87EB_gf_CM_Dehaka_LevelUp(lv_player, lv_collectorUnit);
+    UnitSetPropertyFixed(lv_collectorUnit, c_unitPropLife, (UnitGetPropertyFixed(lv_collectorUnit, c_unitPropLife, c_unitPropCurrent) + lv_heal));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_EssencePickup_Init () {
+    lib40BC87EB_gt_CM_Dehaka_EssencePickup = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_EssencePickup_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_EssencePickup, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_EssencePickup, c_playerAny, "EssencePickupDummy");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_EssenceManualUpdate
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lib40BC87EB_gf_CM_Dehaka_EssenceSetStack(EventPlayerEffectUsedUnit(c_effectUnitCaster), 25);
+    lib40BC87EB_gf_CM_Dehaka_EssenceScale(EventPlayerEffectUsedUnit(c_effectUnitCaster), true);
+    lib40BC87EB_gf_CM_Dehaka_EssenceMerge(EventPlayerEffectUsedUnit(c_effectUnitCaster), 25);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate_Init () {
+    lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate, c_playerAny, "EssenceCreatedDummy");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_LevelUp_Stage2_ColossusLegs
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "DehakaCoop"))) {
+            return false;
+        }
+
+        if (!((UnitXPGetCurrentLevel(EventUnit(), null) >= 6))) {
+            return false;
+        }
+
+        if (!((UnitBehaviorCount(EventUnit(), "DehakaMassive") == 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(EventPlayer(), "DehakaCoopStage2", 1);
+    TechTreeUpgradeAddLevel(EventPlayer(), "DehakaColossusLegs", 1);
+    UnitBehaviorAdd(EventUnit(), "DehakaModelSwapStun", EventUnit(), 1);
+    UnitBehaviorAdd(EventUnit(), "DehakaMassive", EventUnit(), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs_Init () {
+    lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs, false);
+    TriggerAddEventUnitGainLevel(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_LevelUp_Stage3
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "DehakaCoop"))) {
+            return false;
+        }
+
+        if (!((UnitXPGetCurrentLevel(EventUnit(), null) >= 10))) {
+            return false;
+        }
+
+        if (!((UnitBehaviorCount(EventUnit(), "DehakaCoopAirTargetable") == 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TechTreeUpgradeAddLevel(EventPlayer(), "DehakaCoopStage3", 1);
+    UnitBehaviorAdd(EventUnit(), "DehakaCoopAirTargetable", EventUnit(), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3_Init () {
+    lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3 = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3, false);
+    TriggerAddEventUnitGainLevel(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_LevelUp_Stun_Off
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = EventUnit();
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((lib40BC87EB_gf_HeroCanSpendSkillPoint(lv_u, "DehakaLearn") == true)) {
+        ActorSend(libNtve_gf_MainActorofUnit(lv_u), "HaloStart");
+    }
+    else {
+        ActorSend(libNtve_gf_MainActorofUnit(lv_u), "HaloStop");
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off_Init () {
+    lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off, false);
+    TriggerAddEventUnitBehaviorChange(lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off, null, "DehakaModelSwapStun", c_unitBehaviorChangeDeactivate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_LevelUp_LearnOrder
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((AbilityCommandGetAbility(OrderGetAbilityCommand(EventUnitOrder())) == "DehakaLearn"))) {
+            return false;
+        }
+
+        if (!((OrderGetFlag(EventUnitOrder(), c_cmdUser) == true))) {
+            return false;
+        }
+
+        if (!((OrderGetFlag(EventUnitOrder(), c_cmdQueued) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitCreateEffectUnit(EventUnit(), "CancelDehakaLearn", EventUnit());
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder_Init () {
+    lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder, false);
+    TriggerAddEventUnitOrder(lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder, null, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_UnitCostRefund
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerModifyPropertyInt(EventPlayerEffectUsedUnitOwner(c_effectPlayerCaster), c_playerPropMinerals, c_playerPropOperAdd, CatalogFieldValueGetAsInt(c_gameCatalogUnit, UnitGetType(EventPlayerEffectUsedUnit(c_effectUnitTarget)), "CostResource[" + IntToString(0) + "]", EventPlayerEffectUsedUnitOwner(c_effectPlayerCaster)));
+    PlayerModifyPropertyInt(EventPlayerEffectUsedUnitOwner(c_effectPlayerCaster), c_playerPropVespene, c_playerPropOperAdd, CatalogFieldValueGetAsInt(c_gameCatalogUnit, UnitGetType(EventPlayerEffectUsedUnit(c_effectUnitTarget)), "CostResource[" + IntToString(1) + "]", EventPlayerEffectUsedUnitOwner(c_effectPlayerCaster)));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Init () {
+    lib40BC87EB_gt_CM_Dehaka_UnitCostRefund = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_UnitCostRefund, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_UnitCostRefund, c_playerAny, "DehakaTrainLM");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaConsumeExecuted
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaConsumeExecuted_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_dehakaUnit;
+    unit lv_targetUnit;
+    fixed lv_targetLife;
+    int lv_dehakaPlayer;
+    point lv_casterPoint;
+    string lv_userInstance;
+    int lv_i;
+    int lv_c;
+    string lv_effect;
+    unitfilter lv_effectFilter;
+    string lv_effectFilterString;
+    text lv_text;
+    text lv_textNew;
+    fixed lv_cooldownModifier;
+
+    // Automatic Variable Declarations
+    int auto9974C740_ae;
+    const int auto9974C740_ai = 1;
+
+    // Variable Initialization
+    lv_dehakaUnit = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+    lv_targetUnit = EventPlayerEffectUsedUnit(c_effectUnitSource);
+    lv_targetLife = UnitGetPropertyFixed(lv_targetUnit, c_unitPropVitality, c_unitPropCurrent);
+    lv_dehakaPlayer = EventPlayerEffectUsedUnitOwner(c_effectPlayerCaster);
+    lv_casterPoint = EventPlayerEffectUsedPoint(c_effectLocationCasterPoint);
+    lv_c = UserDataInstanceCount("CoopAbilityDehakaConsumeEffects");
+    lv_effectFilter = UnitFilter(0, 0, 0, 0);
+    lv_effectFilterString = "";
+    lv_cooldownModifier = 1.0;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorRemove(lv_dehakaUnit, lib40BC87EB_gv_c_DehakaConsumeBehaviorDisable, 1);
+    if ((UnitHasBehavior2(lv_targetUnit, "ImpalerDehakaTenderize") == true)) {
+        lv_cooldownModifier = 0.25;
+    }
+
+    if ((UnitFilterMatch(lv_targetUnit, lv_dehakaPlayer, lib40BC87EB_gv_c_DehakaConsumeCooldownFilter) == true)) {
+        if ((lv_targetLife >= 600.0)) {
+            UnitAbilityAddCooldown(lv_dehakaUnit, lib40BC87EB_gv_c_DehakaConsumeAbil, lib40BC87EB_gv_c_DehakaConsumeCooldownLink, ((600.0 * lv_cooldownModifier) * lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor));
+        }
+        else {
+            UnitAbilityAddCooldown(lv_dehakaUnit, lib40BC87EB_gv_c_DehakaConsumeAbil, lib40BC87EB_gv_c_DehakaConsumeCooldownLink, ((lv_targetLife * lv_cooldownModifier) * lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor));
+        }
+    }
+
+    auto9974C740_ae = lv_c;
+    lv_i = 1;
+    for ( ; ( (auto9974C740_ai >= 0 && lv_i <= auto9974C740_ae) || (auto9974C740_ai < 0 && lv_i >= auto9974C740_ae) ) ; lv_i += auto9974C740_ai ) {
+        lv_userInstance = UserDataInstance("CoopAbilityDehakaConsumeEffects", lv_i);
+        lv_effectFilterString = UserDataGetString("CoopAbilityDehakaConsumeEffects", lv_userInstance, "Filter", 1);
+        lv_effectFilter = libNtve_gf_ConvertTargetFilterStringToUnitFilter(lv_effectFilterString);
+        if ((UnitFilterMatch(lv_targetUnit, lv_dehakaPlayer, lv_effectFilter) == true)) {
+            lv_effect = UserDataGetGameLink("CoopAbilityDehakaConsumeEffects", lv_userInstance, "Effect", 1);
+            lv_textNew = UserDataGetText("CoopAbilityDehakaConsumeEffects", lv_userInstance, "Text", 1);
+            UnitCreateEffectUnit(lv_dehakaUnit, lv_effect, lv_dehakaUnit);
+            TextExpressionSetToken("Param/Expression/lib_40BC87EB_89AECAA9", "A", lv_text);
+            TextExpressionSetToken("Param/Expression/lib_40BC87EB_89AECAA9", "B", lv_textNew);
+            lv_text = TextExpressionAssemble("Param/Expression/lib_40BC87EB_89AECAA9");
+        }
+
+    }
+    UnitCreateEffectUnit(lv_dehakaUnit, lib40BC87EB_gv_c_DehakaConsumeEffectTriggerEffect, lv_targetUnit);
+    if ((UnitFilterMatch(lv_targetUnit, lv_dehakaPlayer, UnitFilter((1 << c_targetFilterBiological), 0, 0, 0)) == true)) {
+        UnitCreateEffectUnit(lv_dehakaUnit, "DehakaConsumeEffectHealBiological", lv_dehakaUnit);
+    }
+    else {
+        UnitCreateEffectUnit(lv_dehakaUnit, "DehakaConsumeEffectHealOther", lv_dehakaUnit);
+    }
+    ActorSend(libNtve_gf_MainActorofUnit(lv_targetUnit), "HostSiteOpsSet ::Host");
+    UnitSetHeight(lv_targetUnit, UnitGetPropertyFixed(lv_targetUnit, c_unitPropHeight, c_unitPropNormal), 1.0);
+    UnitBehaviorRemove(lv_targetUnit, "ForceLowDeath", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaConsumeExecuted_Init () {
+    lib40BC87EB_gt_CM_DehakaConsumeExecuted = TriggerCreate("lib40BC87EB_gt_CM_DehakaConsumeExecuted_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeExecuted, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_DehakaConsumeExecuted, c_playerAny, lib40BC87EB_gv_c_DehakaConsumeEffect);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaConsumeDetachFailSafe
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_targetUnit;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_targetUnit = EventPlayerEffectUsedUnit(c_effectUnitSource);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.0625, c_timeGame);
+    ActorSend(libNtve_gf_MainActorofUnit(lv_targetUnit), "HostSiteOpsSet ::Host");
+    UnitSetHeight(lv_targetUnit, UnitGetPropertyFixed(lv_targetUnit, c_unitPropHeight, c_unitPropNormal), 1.0);
+    UnitBehaviorRemove(lv_targetUnit, "ForceLowDeath", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe_Init () {
+    lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe = TriggerCreate("lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe, c_playerAny, "DehakaConsumeLaunchTargetVisualImpact");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaConsumeLaunchFailSafe
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_targetUnit;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_targetUnit = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(0.0625, c_timeGame);
+    if ((libNtve_gf_PlayerCanCreateEffectOnUnit(EventPlayerEffectUsedUnitOwner(c_effectPlayerTarget), "TargetIsBeingDraggedByDehaka", lv_targetUnit) == false)) {
+        ActorSend(libNtve_gf_MainActorofUnit(lv_targetUnit), "HostSiteOpsSet ::Host");
+        ActorSend(libNtve_gf_MainActorofUnit(lv_targetUnit), "RefClear ::Host");
+        UnitSetHeight(lv_targetUnit, UnitGetPropertyFixed(lv_targetUnit, c_unitPropHeight, c_unitPropNormal), 1.0);
+        UnitBehaviorRemove(lv_targetUnit, "DehakaConsumeStunned", 1);
+        UnitBehaviorRemove(lv_targetUnit, "DehakaConsume", 1);
+        UnitBehaviorRemove(lv_targetUnit, "DehakaConsumeTentacle", 1);
+        UnitBehaviorRemove(EventPlayerEffectUsedUnit(c_effectUnitCaster), "DehakaConsumeDisableCommandCard", 1);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe_Init () {
+    lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe = TriggerCreate("lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe, c_playerAny, "DehakaConsumeLaunchTargetVisual");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaConsumeEffectHeroic
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_point;
+    int lv_amount;
+    int lv_p;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_point = EventPlayerEffectUsedPoint(c_effectLocationCasterUnit);
+    lv_amount = lib40BC87EB_gv_c_DehakaConsumeEffectHeroicEssenceAmount;
+    lv_p = EventPlayerEffectUsedUnitOwner(c_effectPlayerCaster);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_CreateUnitsWithDefaultFacing(1, "EssencePickup", c_unitCreateIgnorePlacement, lv_p, lv_point);
+    lib40BC87EB_gf_CM_Dehaka_EssenceSetStack(UnitLastCreated(), lv_amount);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic_Init () {
+    lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic = TriggerCreate("lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic, c_playerAny, lib40BC87EB_gv_c_DehakaConsumeEffectHeroicLink);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaConsumeLearnLevel2
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_durationModifier;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_durationModifier = 1.667;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "DehakaCoop"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressAbility() == "DehakaConsume"))) {
+            return false;
+        }
+
+        if (!((UnitAbilityGetLevel(EventUnit(), libNtve_gf_TriggeringProgressAbility()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectAir", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
+    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectArmored", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
+    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectDetector", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
+    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectHeroic", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
+    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectLight", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
+    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectMassive", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
+    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectMechanical", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
+    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectPsionic", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2_Init () {
+    lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2 = TriggerCreate("lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2, false);
+    TriggerAddEventUnitLearnProgress(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaConsumeLearnLevel3
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_lifeCooldownFactorReductionPercent;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_lifeCooldownFactorReductionPercent = 0.2;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "DehakaCoop"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressAbility() == "DehakaConsume"))) {
+            return false;
+        }
+
+        if (!((UnitAbilityGetLevel(EventUnit(), libNtve_gf_TriggeringProgressAbility()) == 2))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor *= (1.0 - lv_lifeCooldownFactorReductionPercent);
+    TriggerEnable(TriggerGetCurrent(), false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3_Init () {
+    lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3 = TriggerCreate("lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3, false);
+    TriggerAddEventUnitLearnProgress(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Dehaka Boss Facing
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_DehakaBossFacing_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitSetFacing(EventUnit(), 315.0, 0.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_DehakaBossFacing_Init () {
+    lib40BC87EB_gt_DehakaBossFacing = TriggerCreate("lib40BC87EB_gt_DehakaBossFacing_Func");
+    TriggerEnable(lib40BC87EB_gt_DehakaBossFacing, false);
+    TriggerAddEventUnitBehaviorChange(lib40BC87EB_gt_DehakaBossFacing, null, "DehakaBossesSummonDelay", c_unitBehaviorChangeActivate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Dehaka Mammoth Breath Loot At Start
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_DehakaMammothBreathLootAtStart_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_dehaka;
+    unit lv_missile;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_dehaka = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+    lv_missile = EventPlayerEffectUsedUnit(c_effectUnitSource);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    ActorLookAtTypeStart(libNtve_gf_MainActorofUnit(lv_dehaka), "InstantHeadOnly", libNtve_gf_MainActorofUnit(lv_missile));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_DehakaMammothBreathLootAtStart_Init () {
+    lib40BC87EB_gt_DehakaMammothBreathLootAtStart = TriggerCreate("lib40BC87EB_gt_DehakaMammothBreathLootAtStart_Func");
+    TriggerEnable(lib40BC87EB_gt_DehakaMammothBreathLootAtStart, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_DehakaMammothBreathLootAtStart, c_playerAny, "MammothBreathCreatePersistent");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Dehaka Mammoth Breath Loot At Stop
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_DehakaMammothBreathLootAtStop_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_dehaka;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_dehaka = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    ActorLookAtTypeStop(libNtve_gf_MainActorofUnit(lv_dehaka), "SlowHeadOnly");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_DehakaMammothBreathLootAtStop_Init () {
+    lib40BC87EB_gt_DehakaMammothBreathLootAtStop = TriggerCreate("lib40BC87EB_gt_DehakaMammothBreathLootAtStop_Func");
+    TriggerEnable(lib40BC87EB_gt_DehakaMammothBreathLootAtStop, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_DehakaMammothBreathLootAtStop, c_playerAny, "MammothBreathSet");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka Learn
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaLearn_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unitgroup lv_ug;
+    unit lv_u;
+    int lv_p;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_ug = UnitGroupEmpty();
+    lv_u = EventUnit();
+    lv_p = EventPlayer();
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((lib40BC87EB_gf_HeroCanSpendSkillPoint(lv_u, AbilityCommandGetAbility(EventUnitAbility())) == true)) {
+        ActorSend(libNtve_gf_MainActorofUnit(lv_u), "HaloStart");
+        UISetButtonFaceHighlighted(PlayerGroupSingle(UnitGetOwner(lv_u)), "DehakaLearnAbilities", true);
+    }
+    else {
+        lv_ug = UnitGroupSelected(lv_p);
+        UnitClearSelection(lv_p);
+        UnitSelect(lv_u, lv_p, true);
+        UnitGroupSelect(lv_ug, lv_p, true);
+        ActorSend(libNtve_gf_MainActorofUnit(lv_u), "HaloStop");
+        UISetButtonFaceHighlighted(PlayerGroupSingle(UnitGetOwner(lv_u)), "DehakaLearnAbilities", false);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaLearn_Init () {
+    lib40BC87EB_gt_CM_DehakaLearn = TriggerCreate("lib40BC87EB_gt_CM_DehakaLearn_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaLearn, false);
+    TriggerAddEventUnitAbility(lib40BC87EB_gt_CM_DehakaLearn, null, lib40BC87EB_gv_dataDehakaLearnAbilCmdLink, c_unitAbilStageExecute, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaMutaliskReviveCooldownOn
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+    string lv_behavior;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = EventUnit();
+    lv_behavior = EventUnitBehavior();
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAddCooldown(lv_u, lib40BC87EB_gv_cM_DehakaMutaliskReviveCooldownIndicator, "Behavior/PrimalReconstitutionCooldownIndicator", UnitBehaviorDurationTotal(lv_u, lv_behavior));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn_Init () {
+    lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn = TriggerCreate("lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn, false);
+    TriggerAddEventUnitBehaviorChange(lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn, null, lib40BC87EB_gv_cM_DehakaMutaliskReviveCooldownBehavior, c_unitBehaviorChangeActivate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaDenReviveFootprintOn
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaDenReviveFootprintOn_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+    int lv_p;
+    point lv_point;
+    int lv_x;
+    int lv_y;
+    point lv_pointInteger;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = EventUnit();
+    lv_p = UnitGetOwner(lv_u);
+    lv_point = UnitGetPosition(lv_u);
+    lv_x = FixedToInt(PointGetX(lv_point));
+    lv_y = FixedToInt(PointGetY(lv_point));
+    lv_pointInteger = Point(lv_x, lv_y);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((lv_point != lv_pointInteger)) {
+        UnitSetPosition(lv_u, lv_pointInteger, false);
+    }
+
+    UnitCreate(1, "DehakaCoopReviveCocoonFootPrint", c_unitCreateIgnorePlacement, lv_p, lv_pointInteger, 270.0);
+    lib40BC87EB_gv_cM_DehakaReviveFootprint[lv_p] = UnitLastCreated();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaDenReviveFootprintOn_Init () {
+    lib40BC87EB_gt_CM_DehakaDenReviveFootprintOn = TriggerCreate("lib40BC87EB_gt_CM_DehakaDenReviveFootprintOn_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaDenReviveFootprintOn, false);
+    TriggerAddEventUnitBehaviorChange(lib40BC87EB_gt_CM_DehakaDenReviveFootprintOn, null, "DehakaNormalReviveTimer", c_unitBehaviorChangeActivate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaDenReviveFootprintOff
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaDenReviveFootprintOff_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+    int lv_p;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = EventUnit();
+    lv_p = UnitGetOwner(lv_u);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitRemove(lib40BC87EB_gv_cM_DehakaReviveFootprint[lv_p]);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaDenReviveFootprintOff_Init () {
+    lib40BC87EB_gt_CM_DehakaDenReviveFootprintOff = TriggerCreate("lib40BC87EB_gt_CM_DehakaDenReviveFootprintOff_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaDenReviveFootprintOff, false);
+    TriggerAddEventUnitBehaviorChange(lib40BC87EB_gt_CM_DehakaDenReviveFootprintOff, null, "DehakaNormalReviveTimer", c_unitBehaviorChangeDeactivate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_DehakaDenConsumeEssence
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_DehakaDenConsumeEssence_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_essenceMineral;
+    fixed lv_essenceVespene;
+    fixed lv_essenceTotalCount;
+    unit lv_essenceUnit;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_essenceUnit = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventPlayerEffectUsedUnit(c_effectUnitTarget)) == "DehakaCoopReviveCocoon"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_essenceMineral = (UnitTypeGetCost(UnitGetType(lv_essenceUnit), c_unitCostMinerals) / 12.5);
+    lv_essenceVespene = (UnitTypeGetCost(UnitGetType(lv_essenceUnit), c_unitCostVespene) / 5.0);
+    lv_essenceTotalCount = (lv_essenceMineral + lv_essenceVespene);
+    lib40BC87EB_gv_cM_Dehaka_ReviverEssenceCount[UnitGetOwner(EventPlayerEffectUsedUnit(c_effectUnitTarget))] += lv_essenceTotalCount;
+    libNtve_gf_CatalogFieldValueSetAsReal(c_gameCatalogEffect, "DehakaEssenceReviveDummy", "Amount", EventPlayer(), lib40BC87EB_gv_cM_Dehaka_ReviverEssenceCount[UnitGetOwner(EventPlayerEffectUsedUnit(c_effectUnitTarget))]);
+    UnitKill(lv_essenceUnit);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_DehakaDenConsumeEssence_Init () {
+    lib40BC87EB_gt_CM_DehakaDenConsumeEssence = TriggerCreate("lib40BC87EB_gt_CM_DehakaDenConsumeEssence_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_DehakaDenConsumeEssence, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_DehakaDenConsumeEssence, c_playerAny, "DehakaCoopReviveEat");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_HeroDied
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_HeroDied_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_indexPlayer;
+
+    // Automatic Variable Declarations
+    playergroup autoC14A85FF_g;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoC14A85FF_g = PlayerGroupAll();
+    lv_indexPlayer = -1;
+    while (true) {
+        lv_indexPlayer = PlayerGroupNextPlayer(autoC14A85FF_g, lv_indexPlayer);
+        if (lv_indexPlayer < 0) { break; }
+        if ((EventUnit() == lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer])) {
+            lib40BC87EB_gf_CM_HeroHandleDeath(lv_indexPlayer);
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_HeroDied_Init () {
+    lib40BC87EB_gt_CM_HeroDied = TriggerCreate("lib40BC87EB_gt_CM_HeroDied_Func");
+    TriggerAddEventUnitDied(lib40BC87EB_gt_CM_HeroDied, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_HeroReviverDied
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_HeroReviverDied_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_indexPlayer;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_indexPlayer = EventPlayer();
+
+    // Conditions
+    if (testConds) {
+        if (!((EventUnit() == lib40BC87EB_gv_cM_HeroReviver[lv_indexPlayer]))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lib40BC87EB_gv_cM_HeroReviver[lv_indexPlayer] = null;
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_HeroReviverDied_Init () {
+    lib40BC87EB_gt_CM_HeroReviverDied = TriggerCreate("lib40BC87EB_gt_CM_HeroReviverDied_Func");
+    TriggerAddEventUnitDied(lib40BC87EB_gt_CM_HeroReviverDied, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_HeroSpawn
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_HeroSpawn_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_indexPlayer;
+    point lv_spawnPoint;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_indexPlayer = EventPlayer();
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_spawnPoint = UnitGetPosition(lib40BC87EB_gv_cM_HeroReviver[lv_indexPlayer]);
+    UnitCreate(1, "DehakaCoop", 0, lv_indexPlayer, lv_spawnPoint, 270.0);
+    lib40BC87EB_gv_cM_HeroDeathCount[lv_indexPlayer] = true;
+    lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer] = UnitLastCreated();
+    lib40BC87EB_gv_cM_DehakaVeterencyBehavior[lv_indexPlayer] = "DehakaVeterancyCoopFinal";
+    UnitBehaviorAdd(lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], lib40BC87EB_gv_cM_DehakaVeterencyBehavior[lv_indexPlayer], lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_HeroSpawn_Init () {
+    lib40BC87EB_gt_CM_HeroSpawn = TriggerCreate("lib40BC87EB_gt_CM_HeroSpawn_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_HeroReviverSpawn
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_HeroReviverSpawn_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_indexPlayer;
+    point lv_spawnPoint;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_indexPlayer = EventPlayer();
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnitProgressUnit()) == "DehakaCoopReviveCocoon"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lib40BC87EB_gv_cM_HeroReviver[lv_indexPlayer] = EventUnitProgressUnit();
+    if ((UnitIsAlive(lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer]) == false)) {
+        UnitBehaviorAdd(lib40BC87EB_gv_cM_HeroReviver[lv_indexPlayer], "DehakaNormalReviveTimer", lib40BC87EB_gv_cM_HeroReviver[lv_indexPlayer], 1);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_HeroReviverSpawn_Init () {
+    lib40BC87EB_gt_CM_HeroReviverSpawn = TriggerCreate("lib40BC87EB_gt_CM_HeroReviverSpawn_Func");
+    TriggerAddEventUnitConstructProgress(lib40BC87EB_gt_CM_HeroReviverSpawn, null, c_unitProgressStageComplete);
+}
+
+void lib40BC87EB_InitTriggers () {
+    lib40BC87EB_gt_CM_Dehaka_TriggersInit_Init();
+    lib40BC87EB_gt_CM_Dehaka_EssenceDrop_Init();
+    lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling_Init();
+    lib40BC87EB_gt_CM_Dehaka_EssencePickup_Init();
+    lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate_Init();
+    lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs_Init();
+    lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3_Init();
+    lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off_Init();
+    lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder_Init();
+    lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Init();
+    lib40BC87EB_gt_CM_DehakaConsumeExecuted_Init();
+    lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe_Init();
+    lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe_Init();
+    lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic_Init();
+    lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2_Init();
+    lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3_Init();
+    lib40BC87EB_gt_DehakaBossFacing_Init();
+    lib40BC87EB_gt_DehakaMammothBreathLootAtStart_Init();
+    lib40BC87EB_gt_DehakaMammothBreathLootAtStop_Init();
+    lib40BC87EB_gt_CM_DehakaLearn_Init();
+    lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn_Init();
+    lib40BC87EB_gt_CM_DehakaDenReviveFootprintOn_Init();
+    lib40BC87EB_gt_CM_DehakaDenReviveFootprintOff_Init();
+    lib40BC87EB_gt_CM_DehakaDenConsumeEssence_Init();
+    lib40BC87EB_gt_CM_HeroDied_Init();
+    lib40BC87EB_gt_CM_HeroReviverDied_Init();
+    lib40BC87EB_gt_CM_HeroSpawn_Init();
+    lib40BC87EB_gt_CM_HeroReviverSpawn_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_InitLib_completed = false;
+
+void lib40BC87EB_InitLib () {
+    if (lib40BC87EB_InitLib_completed) {
+        return;
+    }
+
+    lib40BC87EB_InitLib_completed = true;
+
+    lib40BC87EB_InitLibraries();
+    lib40BC87EB_InitVariables();
+    lib40BC87EB_InitTriggers();
+}
+
