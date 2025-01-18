@@ -1,4 +1,5 @@
 ﻿Abil/Name/DehakaConsume=섭취
+Abil/Name/DehakaDakrunCalldown=DehakaDakrunCalldown
 Behavior/Name/CoopMurvarPukePuddleDisable=억압하는 악취
 Behavior/Name/DehakaAttEssence=<img path="Assets\Textures\btn-tips-sellzergbiosamples.dds" height="30" width="30" alignment="AbsoluteMiddle"/>정수
 Behavior/Name/DehakaConsumeEffectAir=섭취: 공중 효과
@@ -18,6 +19,7 @@ Behavior/Name/DehakaIntimidatingRoar=위협의 포효
 Behavior/Name/DehakaIntimidatingRoarLv2=위협의 포효
 Behavior/Name/DehakaIntimidatingRoarLv3=위협의 포효
 Behavior/Name/DehakaMendingAuraCaster=원시 회복
+Behavior/Name/DehakaMutaliskTimerBehavior=최근 복원됨
 Behavior/Name/DehakaPrimalMutation=원시 변이
 Behavior/Name/DehakaTyrannozorArmorAuraTarget=폭군의 보호
 Behavior/Name/DehakaUltraliskBashStun=기절
@@ -33,25 +35,34 @@ Behavior/Tooltip/DehakaIntimidatingRoar=위협 당함<n/>공격 및 이동 속�
 Behavior/Tooltip/DehakaIntimidatingRoarLv2=위협 당함<n/>공격 및 이동 속도 감소
 Behavior/Tooltip/DehakaIntimidatingRoarLv3=위협 당함<n/>공격 및 이동 속도 감소<n/>에너지 기반 능력 사용 불가
 Behavior/Tooltip/DehakaMendingAuraCaster=주위 아군 유닛을 치유합니다.
+Behavior/Tooltip/DehakaMutaliskTimerBehavior=이 유닛은 최근에 복원되어, 다시 부활할 수 없습니다.
 Behavior/Tooltip/DehakaTyrannozorArmorAuraTarget=이 유닛은 방어력이 증가했습니다.
 Behavior/Tooltip/DehakaUltraliskBashStun=기절함
 Behavior/Tooltip/ImpalerDehakaTenderize=이 유닛은 지속 피해를 받고 있습니다. 이 유닛을 데하카가 섭취하면 섭취의 재사용 대기시간이 25%로 감소합니다.
 Button/Charge/DehakaDenConsumeEssence=<d ref="Effect,DehakaEssenceReviveDummy,Amount"/>
+Button/Name/BuildDehakaExtractor=추출장 변이
 Button/Name/ConsumeDrone=섭취
 Button/Name/CoopMurvarSpawnCreepers=군단 생성
+Button/Name/CreeperHostPassive=땅무지 숙주
 Button/Name/DakrunCrashingCharge=잔혹한 돌진
 Button/Name/DehakaAirAttack=연속 격파
 Button/Name/DehakaAirAttackUpgrade=치명적 거리 진화
 Button/Name/DehakaArmorUpgrade=키틴질 장갑
+Button/Name/DehakaBarracks=원시 감시자 소환
 Button/Name/DehakaBuild=구조물 소환
+Button/Name/DehakaCalldownDakrun=다크룬 호출
+Button/Name/DehakaCalldownGlevig=글레빅 호출
+Button/Name/DehakaCalldownMurvar=멀바르 호출
 Button/Name/DehakaConsume=섭취
 Button/Name/DehakaCoopReviveCocoon=데하카의 굴 소환
 Button/Name/DehakaCreeperAirSuicide=공중 폭발 배주머니
 Button/Name/DehakaDakrunStructure=다크룬의 굴 소환
 Button/Name/DehakaDakrunThornsPassive=향상된 가시 가죽
+Button/Name/DehakaDakrunTopBar=다크룬 소환
 Button/Name/DehakaDeepTunnel=굴 파기
 Button/Name/DehakaDenConsumeEssence=정수 섭취
 Button/Name/DehakaDetector=예민한 감각
+Button/Name/DehakaDrone=원시 일벌레 생성
 Button/Name/DehakaFlyingCreeperLocusts=비행 폭발성 땅무지
 Button/Name/DehakaFlyingLocusts=비행 원시 식충
 Button/Name/DehakaGeneAttackSpeedPassive=아드레날린 분비선 진화
@@ -59,8 +70,14 @@ Button/Name/DehakaGeneCarapacePassive=갑피 진화
 Button/Name/DehakaGeneCreepersPassive=부화주머니 진화
 Button/Name/DehakaGeneLifeLeechPassive=착취 진화
 Button/Name/DehakaGeneThornsPassive=가시 가죽
+Button/Name/DehakaGlevigRoachFireBreath=집중된 화염 진화
+Button/Name/DehakaGlevigStructure=글레빅의 굴 소환
+Button/Name/DehakaGlevigTopBar=글레빅 소환
+Button/Name/DehakaGlialReconstitution=신경 재구성
 Button/Name/DehakaGuardianFury=태고의 분노
 Button/Name/DehakaGuardianMineCharge=폭발성 포자
+Button/Name/DehakaHatchery=원시 군락 소환
+Button/Name/DehakaHydralisk=원시 히드라리스크 생성
 Button/Name/DehakaHydraliskImpalerMerge=원시 전투
 Button/Name/DehakaHydraliskSpeed=근육 보강
 Button/Name/DehakaHydraliskToMutalisk=원시 전투
@@ -68,19 +85,40 @@ Button/Name/DehakaImpalerTenderize=저미기
 Button/Name/DehakaIntimidatingRoar=위협의 포효
 Button/Name/DehakaLeapStomp=도약
 Button/Name/DehakaLearnAbilities=돌연변이 진화
+Button/Name/DehakaLearnPrimalArmorLevel1=원시 갑피 진화 1단계
+Button/Name/DehakaLearnPrimalArmorLevel2=원시 갑피 진화 2단계
+Button/Name/DehakaLearnPrimalArmorLevel3=원시 갑피 진화 3단계
+Button/Name/DehakaLearnPrimalWeaponsLevel1=원시 공격 진화 1단계
+Button/Name/DehakaLearnPrimalWeaponsLevel2=원시 공격 진화 2단계
+Button/Name/DehakaLearnPrimalWeaponsLevel3=원시 공격 진화 3단계
 Button/Name/DehakaLocustSwoop=급강하
 Button/Name/DehakaMendingAura=원시 회복
+Button/Name/DehakaMurvarCreeperAir=공중 폭발 배주머니 진화
+Button/Name/DehakaMurvarStructure=멀바르의 굴 소환
+Button/Name/DehakaMurvarTopBar=멀바르 소환
 Button/Name/DehakaMutaliskDamageReduction=이동 갑피
 Button/Name/DehakaMutaliskRespawnOnDeath=원시 복원
+Button/Name/DehakaNydusDestroyer=원시 벌레 소환
+Button/Name/DehakaRavasaurMerge=원시 전투
+Button/Name/DehakaRavasaurRange=귀밑샘 확대
+Button/Name/DehakaRavasaurVSArmor=산성 융해
+Button/Name/DehakaRoach=원시 바퀴 생성
+Button/Name/DehakaRoachGuardianMerge=원시 전투
+Button/Name/DehakaRoachLevel2Merge=원시 전투
+Button/Name/DehakaRoachMoveSpeed=신경 재구성 진화
+Button/Name/DehakaRoachPassive=원시 바퀴
 Button/Name/DehakaSpawnLocusts=원시 식충 생성
 Button/Name/DehakaSpawnLocustsBomb=폭발성 땅무지 생성
+Button/Name/DehakaSwarmHost=원시 숙주 생성
 Button/Name/DehakaSwarmHostMerge=원시 전투
 Button/Name/DehakaTyrannozorArmorAura=폭군의 보호
 Button/Name/DehakaTyrannozorFanOfKnives=가시 탄막
+Button/Name/DehakaUltralisk=원시 울트라리스크 생성
 Button/Name/DehakaUltraliskBash=관통의 일격
 Button/Name/DehakaUltraliskCrashingCharge=잔혹한 돌진
 Button/Name/DehakaUltraliskLevel2Merge=원시 전투
 Button/Name/DehakaUltraliskRegen=회복 적응
+Button/Name/DehakaZergling=원시 저글링 생성
 Button/Name/GlevigFirebreath=산성 방화
 Button/Name/GlevigSpitfirePassive=연소성 분비선
 Button/Name/GlevigTunnel=굴 파기
@@ -93,31 +131,64 @@ Button/Name/LearnDehakaMammothBreath=그을리는 숨결 진화
 Button/Name/LearnDehakaMendingAura=원시 복원 진화
 Button/Name/MammothBreath=그을리는 숨결
 Button/Name/MurvarPukeCoop=억압하는 악취
+Button/Name/NydusDestroyerBeam=악성 광선
+Button/Name/NydusDestroyerDeepTunnel=굴 파기
+Button/Name/PrimalBuildingRoot=뿌리 박기
+Button/Name/PrimalBuildingUproot=뿌리 들기
+Button/Name/PrimalGuardianPassive=원시 수호군주
+Button/Name/PrimalHostPassive=원시 숙주
+Button/Name/PrimalHydraliskPassive=원시 히드라리스크
+Button/Name/PrimalIgniterPassive=원시 점화자
+Button/Name/PrimalImpalerPassive=원시 관통 촉수
+Button/Name/PrimalMutaliskPassive=원시 뮤탈리스크
 Button/Name/PrimalUltraliskPassive=원시 울트라리스크
+Button/Name/PrimalWurmPassive=원시 벌레
+Button/Name/RallySCV=일꾼 집결 지점 설정
+Button/Name/ResearchDehakaGuardianExplosiveBomb=폭발성 포자 진화
+Button/Name/ResearchDehakaGuardianFury=태고의 분노 진화
+Button/Name/ResearchDehakaHydraliskSpeed=근육 보강 진화
+Button/Name/ResearchDehakaImpalerTenderize=저미기 진화
+Button/Name/ResearchDehakaMutaliskDamageReduction=이동 갑피 진화
+Button/Name/ResearchDehakaMutaliskRespawnOnDeath=원시 복원 진화
+Button/Name/ResearchDehakaRavasaurRange=귀밑샘 확대 진화
+Button/Name/ResearchDehakaRavasaurVSArmor=산성 융해 진화
 Button/Name/ResearchDehakaTyrannozorArmorAura=폭군의 보호 진화
 Button/Name/ResearchDehakaTyrannozorFanOfKnives=가시 탄막 진화
 Button/Name/ResearchDehakaUltraliskBash=관통의 일격 진화
 Button/Name/ResearchDehakaUltraliskCrashingCharge=잔혹한 돌진 진화
 Button/Name/ResearchDehakaUltraliskRegen=회복 적응 진화
+Button/Name/ResearchSlicingGlave=절단 쐐기 진화
 Button/Name/SlicingGlave=절단 쐐기
 Button/Name/TyrannozorPassive=티라노조르
+Button/Tooltip/BuildDehakaExtractor=베스핀 가스 채취를 위해 베스핀 간헐천 위에 건설하는 구조물입니다.
+Button/Tooltip/ConsumeDrone=데하카가 지정한 아군 유닛의 정수를 섭취하여 전투에 참여할 수 있게 합니다.<n/><n/>섭취한 유닛의 광물 비용 25 당 2개의 정수를, 베스핀 비용 25 당 5개의 정수를 얻습니다.
 Button/Tooltip/CoopMurvarSpawnCreepers=<d ref="Behavior,DehakaLocustTimedLife,Duration"/>초 동안 전투를 펼치는 원시 식충 6기와 폭발성 땅무지 6기를 생성합니다.
+Button/Tooltip/CreeperHostPassive=멀바르의 굴이 땅무지 숙주를 진화시킬 수 있게 합니다.
 Button/Tooltip/DakrunCrashingCharge=대상 위치로 돌진하여 주위 적들을 밀쳐내고 <d ref="Effect,DehakaDakrunCrashingChargeDamage,Amount"/>의 피해를 줍니다.
 Button/Tooltip/DehakaAirAttack=데하카가 공중 유닛을 공격할 수 있습니다.
 Button/Tooltip/DehakaAirAttackUpgrade=<c val ="ffff8a">데하카</c>가 공중 유닛을 공격할 수 있습니다.
 Button/Tooltip/DehakaArmorUpgrade=방어력이 <d ref="Behavior,DehakaArmorUpgrade1,Modification.LifeArmorBonus"/>만큼 증가합니다.
+Button/Tooltip/DehakaBarracks=원시 저그 생산 구조물입니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 원시 저글링
+Button/Tooltip/DehakaBarracksUprooted=원시 저그 생산 구조물입니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 원시 저글링
 Button/Tooltip/DehakaBuild=소환 가능한 구조물 목록입니다.
+Button/Tooltip/DehakaCalldownDakrun=원시 무리 우두머리 다크룬을 소환할 수 있도록 다크룬이 전투를 준비합니다. 다크룬은 거대한 중장갑 유닛으로, 대상의 위치로 돌진해서 주위의 유닛을 기절시키고 피해를 줄 수 있습니다.
+Button/Tooltip/DehakaCalldownGlevig=원시 무리 우두머리 글레빅을 소환할 수 있도록 글레빅이 전투를 준비합니다. 글레빅은 강력한 원거리 공격 유닛으로, 범위 피해를 주고 굴 파기 능력으로 위치를 이동할 수 있습니다.
+Button/Tooltip/DehakaCalldownMurvar=원시 무리 우두머리 멀바르를 소환할 수 있도록 멀바르가 전투를 준비합니다. 멀바르는 식충을 생성하고 적의 이동 속도를 감소시키고 적 유닛과 구조물이 공격하거나 에너지 기반 능력을 사용할 수 없게 만드는 구름을 생성합니다.
 Button/Tooltip/DehakaConsume=대상 적 유닛을 즉시 처치해서 체력을 <d ref="Effect,DehakaConsumeEffectHealOther,VitalArray[Life].ChangeFraction*100"/>% 회복하고 <d ref="Behavior,DehakaConsumeEffectAir,Duration"/>초 동안 적의 유형에 따라  지속 능력을 얻습니다. 재사용 대기시간은 처치한 적이 보유하고 있던 체력에 기반합니다.<n/><n/><ul text="•"><li>공중: 원거리 공격 가능</li><li>중장갑: 중장갑 유닛 상대 피해 증가</li><li>생체: 체력 <d ref="Effect,DehakaConsumeEffectHealBiological,VitalArray[Life].ChangeFraction*100"/>% 회복</li><li>경장갑: 이동 속도 증가</li><li>거대: 방어력 증가 및 공격자에게 피해 반사</li><li>기계: 공격 속도 증가</li><li>사이오닉: 사이오닉 에너지로 폭발 및 재사용 능력 재사용 대기시간 50% 더 빠르게 감소</li><n/><n/><c val="ffff8a">현재 생명력이 600을 초과하는 영웅은 대상으로 지정할 수 없습니다.</c>
 Button/Tooltip/DehakaCoop=원시 무리 우두머리입니다. 쓰러진 적으로부터 정수를 수집해 몹집과 힘을 키웁니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaCoopReviveCocoon=데하카가 이 굴 안에서 부활합니다.
 Button/Tooltip/DehakaCreeperAirSuicide=땅무지가 공중 유닛을 대상으로 삼을 수 있고 이동 속도가 증가합니다.
 Button/Tooltip/DehakaCreeperFlying=땅무지 숙주로부터 생성됩니다. 폭발성 땅무지는 <d ref="Behavior,DehakaCreeperTimedLife,Duration"/>초 동안 전장에 머뭅니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaCreeperFlyingUpgraded=땅무지 숙주로부터 생성됩니다. 폭발성 땅무지는 <d ref="Behavior,DehakaCreeperTimedLife,Duration"/>초 동안 전장에 머뭅니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
 Button/Tooltip/DehakaDakrun=적에게 돌격하는 강력한 무리 우두머리입니다. 무방비 상태의 적에게 투사체를 날립니다.
 Button/Tooltip/DehakaDakrunStructure=원시 울트라리스크와 티라노조르를 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 원시 감시자에서 원시 울트라리스크
 Button/Tooltip/DehakaDakrunThornsPassive=다크룬이 피해를 받을 때마다 공격자에게 가시를 날려 <d ref="Effect,DehakaDakrunThornsDamage,Amount"/>의 피해를 줍니다.  
+Button/Tooltip/DehakaDakrunTopBar=원시 무리 우두머리 다크룬을 소환합니다. 다크룬은 거대한 중장갑 유닛으로, 대상의 위치로 돌진해서 주위의 유닛을 기절시키고 피해를 줄 수 있습니다.
 Button/Tooltip/DehakaDeepTunnel=시야가 확보된 곳으로 빠르게 잠복해 이동합니다.
-Button/Tooltip/DehakaDenConsumeEssence=데하카가 다시 전투에 돌입하기 위해서는 개의 정수가 필요합니다.
+Button/Tooltip/DehakaDenConsumeEssence=데하카가 다시 전투에 돌입하기 위해서는 <d ref="Effect,DehakaEssenceReviveRequirementDummy,Amount-Effect,DehakaEssenceReviveDummy,Amount"/>개의 정수가 필요합니다.
 Button/Tooltip/DehakaDetector=은폐, 잠복, 환상 유닛을 탐지할 수 있습니다.
+Button/Tooltip/DehakaDrone=기본 일꾼 유닛입니다. 광물과 베스핀 가스를 채취할 수 있습니다. 구조물을 소환할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaDroneBurrowed=기본 일꾼 유닛입니다. 광물과 베스핀 가스를 채취할 수 있습니다. 구조물을 소환할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaFlyingCreeperLocusts=땅무지 숙주가 생성한 땅무지가 비행할 수 있고 급강하하여 지상 유닛을 공격합니다.
 Button/Tooltip/DehakaFlyingLocusts=원시 숙주가 생성하는 원시 식충이 날아다닐 수 있습니다. 비행 원시 식충은 급강하를 사용해 지상에 착지한 뒤 공격을 시작할 수 있습니다.
 Button/Tooltip/DehakaGeneAttackSpeedPassive=이 유닛은 공격 속도가 <d ref="Behavior,DehakaGeneAttackSpeed,Modification.AttackSpeedMultiplier-1*100" precision="1"/>% 증가했습니다.
@@ -126,10 +197,15 @@ Button/Tooltip/DehakaGeneCreepersPassive=땅무지 숙주가 땅무지를 두 �
 Button/Tooltip/DehakaGeneLifeLeechPassive=이 유닛은 적에게 준 피해의 <d ref="Behavior,DehakaGeneLifeLeech,Modification.VitalDamageLeechArray[Life].KindArray[Melee]*100" precision="1"/>%만큼 생명력을 회복합니다.
 Button/Tooltip/DehakaGeneThornsPassive=피해를 받을 때마다 공격자에게 가시를 날려 <d ref="Effect,DehakaGeneThornsDamage,Amount"/>의 피해를 줍니다.  
 Button/Tooltip/DehakaGlevig=산을 내뿜고 땅 속으로 이동하는 불쾌하고 위험한 무리 우두머리입니다.
+Button/Tooltip/DehakaGlevigRoachFireBreath=<c val ="ffff8a">원시 점화자</c>가 경장갑 적에게 주는 피해가 증가합니다.
+Button/Tooltip/DehakaGlevigStructure=원시 바퀴, 원시 히드라리스크, 관통 촉수, 라바사우르스를 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 원시 감시자에서 원시 바퀴<n/>- 원시 감시자에서 원시 히드라리스크<n/>- 원시 일벌레에서 원시 벌레
+Button/Tooltip/DehakaGlevigTopBar=원시 무리 우두머리 글레빅과 작은 소규모 저그 무리를 소환합니다. 글레빅은 강력한 원거리 공격 유닛으로, 범위 피해를 주고 굴 파기 능력으로 위치를 이동할 수 있습니다.
+Button/Tooltip/DehakaGlialReconstitution=이동 속도가 증가합니다.
 Button/Tooltip/DehakaGuardian=원거리 지상 공격 유닛입니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaGuardianFightMorph=원거리 지상 공격 유닛입니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaGuardianFury=각 공격이 일시적으로 공격 속도를 <d ref="(Behavior,DehakaGuardianRage1,Modification.AttackSpeedMultiplier - 1) * 100"/>%만큼 증가시킵니다. 이 효과는 중첩하여 공격 속도가 최대 <d ref="(Behavior,DehakaGuardianRage5,Modification.AttackSpeedMultiplier - 1) * 100"/>% 증가합니다.
 Button/Tooltip/DehakaGuardianMineCharge=대상에게 폭발성 포자를 날려 대상과 주위 모든 적 지상 유닛에게 <d ref="Effect,DehakaGuardianMineChargeExplodeDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/DehakaHatchery=주요 구조물입니다. 원시 일벌레를 소환하고 채취한 자원을 수집합니다. 원시 저그 유닛을 업그레이드할 수 있습니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 원시 일벌레
 Button/Tooltip/DehakaHydralisk=원거리 공격수입니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
 Button/Tooltip/DehakaHydraliskImpalerMerge=원시 히드라리스크 두 기가 전투를 펼쳐 생존자가 관통 촉수로 진화합니다.<n/><n/>장거리 대장갑 복병입니다. 공격하려면 잠복해야 합니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaHydraliskSpeed=이동 속도와 공격 사거리가 증가합니다.
@@ -142,6 +218,12 @@ Button/Tooltip/DehakaLeapStomp=데하카가 대상 위치로 도약하여 주위
 Button/Tooltip/DehakaLeapStomp2=데하카가 대상 위치로 도약하여 주위의 적 지상 유닛에게 <d ref="$AccumulatedValue:Effect,DehakaStompDamageC,Amount$"/>의 피해를 줍니다.
 Button/Tooltip/DehakaLeapStomp3=데하카가 대상 위치로 도약하여 주위의 적 지상 유닛에게 <d ref="$AccumulatedValue:Effect,DehakaStompDamageC,Amount$"/>의 피해를 줍니다. 적중한 적 하나당 데하카의 방어력이 <d ref="Behavior,DehakaLeapStompArmor,Duration"/>초 동안 <d ref="Behavior,DehakaLeapStompArmor,Modification.LifeArmorBonus"/>만큼 증가합니다.
 Button/Tooltip/DehakaLearnAbilities=사용하지 않은 변이 점수가 있습니다. 여기를 눌러서 사용하십시오.
+Button/Tooltip/DehakaLearnPrimalArmorLevel1=모든 원시 저그 유닛의 방어력을 업그레이드합니다.
+Button/Tooltip/DehakaLearnPrimalArmorLevel2=모든 원시 저그 유닛의 방어력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/DehakaLearnPrimalArmorLevel3=모든 원시 저그 유닛의 방어력이 최대치로 증가합니다.
+Button/Tooltip/DehakaLearnPrimalWeaponsLevel1=모든 원시 저그 유닛의 공격력을 업그레이드합니다.
+Button/Tooltip/DehakaLearnPrimalWeaponsLevel2=모든 원시 저그 유닛의 공격력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/DehakaLearnPrimalWeaponsLevel3=모든 원시 저그 유닛의 공격력이 최대치로 증가합니다.
 Button/Tooltip/DehakaLocust=원시 숙주에서 생성됩니다. 원시 식충은 <d ref="Behavior,DehakaLocustTimedLife,Duration"/>초 동안 전장에 머뭅니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaLocustFlying=원시 숙주에서 생성됩니다. 원시 식충은 <d ref="Behavior,DehakaLocustTimedLife,Duration"/>초 동안 전장에 머뭅니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaLocustSwoop=원시 식충이 대상 위치에 착륙해 공격할 수 있게 합니다.
@@ -149,13 +231,30 @@ Button/Tooltip/DehakaMendingAura=데하카 주위의 아군 유닛이 초당 <d 
 Button/Tooltip/DehakaMendingAura2=데하카 주위의 아군 유닛이 초당 <d ref="Effect,DehakaMendingAuraHealB,VitalArray[Life].Change * 2"/>의 체력을 회복합니다.
 Button/Tooltip/DehakaMendingAura3=데하카 주위의 아군 유닛이 초당 <d ref="Effect,DehakaMendingAuraHealC,VitalArray[Life].Change * 2"/>의 체력을 회복합니다.
 Button/Tooltip/DehakaMurvar=영원한 어미입니다. 땅무지를 생산하고 산성을 토해 희생자를 느려지게 합니다.
+Button/Tooltip/DehakaMurvarCreeperAir=<c val ="ffff8a">땅무지 숙주</c>의 땅무지가 공중 유닛을 공격할 수 있고 이동 속도가 증가합니다.
+Button/Tooltip/DehakaMurvarStructure=원시 뮤탈리스크, 원시 수호군주, 땅무지 숙주를 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 원시 감시자에서 원시 숙주
+Button/Tooltip/DehakaMurvarTopBar=원시 무리 우두머리 멀바르를 소환합니다. 멀바르는 식충을 생성하고 적의 이동 속도를 감소시키고 적 유닛과 구조물이 공격하거나 에너지 기반 능력을 사용할 수 없게 만드는 구름을 생성합니다.
 Button/Tooltip/DehakaMutalisk=여러 대상을 연쇄적으로 가격하는 공중 유닛입니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
 Button/Tooltip/DehakaMutaliskDamageReduction=원시 뮤탈리스크가 이동 중에 받는 피해가 <d ref="Behavior,DehakaMutaliskDamageReduction,Modification.DamageTakenFraction[Melee]*(-100)" precision="1"/>%만큼 감소합니다.
 Button/Tooltip/DehakaMutaliskRespawnOnDeath=원시 뮤탈리스크가 죽으면 짧은 시간 후에 부활합니다. <d ref="Behavior,DehakaMutaliskTimerBehavior,Cost.Cooldown.TimeStart"/>초에 한 번만 발동합니다.
+Button/Tooltip/DehakaNydusDestroyer=강력한 방어 구조물입니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c><n/><c val="FFE303">탐지기</c>
 Button/Tooltip/DehakaPrimalSwarmHost=땅무지를 생성해 적을 공격하는 공성 유닛입니다.<n/><n/><c val="#ColorAttackInfo">땅무지는 지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaPrimalSwarmHostBurrowed=땅무지를 생성해 적을 공격하는 공성 유닛입니다.<n/><n/><c val="#ColorAttackInfo">땅무지는 지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaPrimalSwarmHostUpgraded=땅무지를 생성해 적을 공격하는 공성 유닛입니다.<n/><n/><c val="#ColorAttackInfo">땅무지는 지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/DehakaRavasaur=원거리 공격 유닛입니다. 먼 거리에서 커다란 산성액 덩어리를 발사합니다. <n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaRavasaurMerge=원시 저글링 두 기가 전투를 펼쳐 생존자가 원시 라바사우르스로 진화합니다.<n/><n/>원거리 공격 유닛입니다. 먼 거리에서 커다란 산성액 덩어리를 발사합니다. <n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaRavasaurRange=이동 속도 및 공격 사거리가 증가합니다.
+Button/Tooltip/DehakaRavasaurVSArmor=중장갑 대상에게 +<d ref="$UpgradeEffectArrayValue:DehakaRavasaurVSArmor:Effect,DehakaRavasaurDamage,AttributeBonus[Armored]$"/>의 피해를 줍니다.
+Button/Tooltip/DehakaRoach=돌격 유닛입니다. 잠복해 있는 동안 체력을 빠르게 회복합니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaRoachGuardianMerge=원시 바퀴 두 기가 전투를 펼쳐 생존자가 원시 수호군주로 진화합니다.<n/><n/>원거리 지상 공격 비행 유닛입니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaRoachLevel2Merge=원시 바퀴 두 기가 전투를 펼쳐 생존자가 원시 점화자로 진화합니다.<n/><n/>범위 공격을 하는 돌격 유닛입니다. 잠복한 동안 체력을 빠르게 회복합니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaRoachLevel3=범위 공격을 하는 돌격 유닛입니다. 잠복해 있는 동안 체력을 빠르게 회복합니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaRoachLevel3Burrowed=범위 공격을 하는 돌격 유닛입니다. 잠복해 있는 동안 체력을 빠르게 회복합니다.<n/><n/><c val="ffff8a">지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaRoachMoveSpeed=<c val ="ffff8a">원시 바퀴</c>와 <c val ="ffff8a">원시 점화자</c>의 이동 속도가 증가합니다.
+Button/Tooltip/DehakaRoachPassive=글레빅의 굴이 원시 바퀴 진화를 가능하게 합니다.
 Button/Tooltip/DehakaSpawnLocusts=원시 식충을 생성해 공격하는 공성 유닛입니다. 원시 식충은 <d ref="Behavior,DehakaLocustTimedLife,Duration"/>초 동안 전장에 머뭅니다.<n/><n/><c val="#ColorAttackInfo">원시 식충은 지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaSpawnLocustsBomb=폭발성 땅무지를 생성해 적을 공격하는 공성 유닛입니다. 땅무지는 <d ref="Behavior,DehakaLocustTimedLife,Duration"/>초 동안 전장에 머뭅니다.<n/><n/><c val="#ColorAttackInfo">땅무지는 지상 유닛 공격 가능</c>
+Button/Tooltip/DehakaSpawnLocustsBombUpgraded=폭발성 땅무지를 생성해 적을 공격하는 공성 유닛입니다. 땅무지는 <d ref="Behavior,DehakaLocustTimedLife,Duration"/>초 동안 전장에 머뭅니다.<n/><n/><c val="#ColorAttackInfo">땅무지는 지상 및 공중 유닛 공격 가능</c>
 Button/Tooltip/DehakaSwarmHost=식충을 생성해 공격하는 공성 유닛입니다.<n/><n/><c val="#ColorAttackInfo">식충은 지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaSwarmHostBurrowed=식충을 생성해 공격하는 공성 유닛입니다.<n/><n/><c val="#ColorAttackInfo">식충은 지상 유닛 공격 가능</c>
 Button/Tooltip/DehakaSwarmHostMerge=원시 숙주 둘이 전투를 펼쳐 생존자가 땅무지 숙주로 진화합니다.<n/><n/>땅무지 숙주는 땅무지 졸개를 생산해서 적을 공격하는 공성 유닛입니다.<n/><n/><c val="#ColorAttackInfo">땅무지 지상 공격 가능</c>
@@ -168,6 +267,7 @@ Button/Tooltip/DehakaUltraliskLevel2Merge=두 원시 울트라리스크가 전�
 Button/Tooltip/DehakaUltraliskLevel3=지상 범위 공격을 하는 중돌격 야수입니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
 Button/Tooltip/DehakaUltraliskLevel3Burrowed=지상 범위 공격을 하는 중돌격 야수입니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
 Button/Tooltip/DehakaUltraliskRegen=이 유닛은 전투에서 벗어났을 때 생명력을 빠르게 회복합니다.
+Button/Tooltip/DehakaZergling=빠른 근접 유닛입니다.<n/><n/><c val="FFFF8A">지상 유닛 공격 가능</c>
 Button/Tooltip/GlevigFirebreath=지면을 불로 뒤덮어 대상 지역 안의 적에게 <d ref="(Effect,DehakaGlevigFirebreathCreateGoverningPersistent,PeriodCount*Effect,DehakaGlevigFirebreathCreateGoverningPersistent,PeriodicPeriodArray[0]) / 2"/>초에 걸쳐 <d ref="(Effect,DehakaGlevigFirebreathCreateGoverningPersistent,PeriodCount*Effect,DehakaGlevigFirebreathDamage,Amount) / 2"/>의 피해를 줍니다.
 Button/Tooltip/GlevigSpitfirePassive=글레빅의 일반 공격이 범위 피해를 줍니다.
 Button/Tooltip/GlevigTunnel=글레빅이 대상 위치로 잠복한 후 솟아나와 주위 유닛에게 피해를 주고 밀쳐냅니다.
@@ -180,14 +280,41 @@ Button/Tooltip/LearnDehakaMammothBreath=<c val ="ffff8a">데하카</c>의 불타
 Button/Tooltip/LearnDehakaMendingAura=<c val ="ffff8a">데하카</c>가 지속적으로 주위 모든 아군 유닛을 치유합니다.<n/><n/><c val="ffffcc00">2레벨</c> - 초당 생명력 2<n/><c val="ffffcc00">3레벨</c> - 초당 생명력 3 
 Button/Tooltip/MammothBreath=데하카의 불타는 숨결이 지면을 태워 경로 안의 모든 지상 유닛에게 무기 피해(<d ref="$AccumulatedValue:Effect,MammothBreathDamage,Amount$"/>)를 줍니다.
 Button/Tooltip/MurvarPukeCoop=이동 속도를 감소시키고 적 유닛과 구조물이 에너지 기반 능력을 사용하지 못하게 만드는 구름을 생성합니다. <d ref="(Effect,CoopMurvarPukeCP,PeriodCount) * Effect,CoopMurvarPukeCP,PeriodicPeriodArray[0]"/>초 동안 지속됩니다.
+Button/Tooltip/NydusDestroyerBeam=<d ref="Effect,NydusDestroyerBeamCP,PeriodCount * Effect,NydusDestroyerBeamCP,PeriodicPeriodArray[0]"/>초 동안 대상 유닛에게 초당 <d ref="Effect,NydusDestroyerBeamDamage,Amount * (1 / Effect,NydusDestroyerBeamCP,PeriodicPeriodArray[0])"/>의 피해를 줍니다.
+Button/Tooltip/NydusDestroyerDeepTunnel=시야가 확보된 곳으로 빠르게 잠복해 이동합니다.
+Button/Tooltip/PrimalBuildingRoot=건물을 심어 생산할 수 있게 합니다.
+Button/Tooltip/PrimalBuildingUproot=구조물을 들어 올려 자유롭게 움직일 수 있게 합니다.
+Button/Tooltip/PrimalGuardianPassive=멀바르의 굴이 원시 수호군주를 진화시킬 수 있게 합니다.
+Button/Tooltip/PrimalHostPassive=멀바르의 굴이 원시 숙주를 생성할 수 있게 합니다.
+Button/Tooltip/PrimalHydraliskPassive=글레빅의 굴이 원시 히드라리스크 진화를 가능하게 합니다.
+Button/Tooltip/PrimalIgniterPassive=글레빅의 굴이 원시 점화자 진화를 가능하게 합니다.
+Button/Tooltip/PrimalImpalerPassive=글레빅의 굴이 원시 관통 촉수 진화를 가능하게 합니다.
+Button/Tooltip/PrimalMutaliskPassive=멀바르의 굴이 원시 뮤탈리스크를 진화시킬 수 있게 합니다.
+Button/Tooltip/PrimalTownHall=주요 구조물입니다. 원시 일벌레를 소환하고 채취한 자원을 수집합니다. 원시 저그 유닛을 업그레이드할 수 있습니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 원시 일벌레
 Button/Tooltip/PrimalUltraliskPassive=다크룬의 굴이 원시 울트라리스크를 생성할 수 있게 합니다.
+Button/Tooltip/PrimalWurmPassive=글레빅의 굴이 원시 벌레 진화를 가능하게 합니다.
+Button/Tooltip/RallySCV=일꾼 유닛을 지정된 지정한 지점으로 보냅니다. 광물 지대나 추출장으로 보낸 일꾼은 자동으로 자원 채취를 시작합니다.
+Button/Tooltip/ResearchDehakaGuardianExplosiveBomb=<c val ="ffff8a">원시 수호군주</c>는 대상에게 폭발성 포자를 날려 대상과 주위 모든 적 지상 유닛에게 <d ref="Effect,DehakaGuardianMineChargeExplodeDamage,Amount"/>의 피해를 줄 수 있습니다.
+Button/Tooltip/ResearchDehakaGuardianFury=<c val ="ffff8a">원시 수호군주</c>의 공격이 일시적으로 공격 속도를 <d ref="(Behavior,DehakaGuardianRage1,Modification.AttackSpeedMultiplier - 1) * 100"/>%만큼 증가시킵니다. 공격 속도가 최대 <d ref="(Behavior,DehakaGuardianRage5,Modification.AttackSpeedMultiplier - 1) * 100"/>%만큼 증가할 때까지 중첩됩니다.
+Button/Tooltip/ResearchDehakaHydraliskSpeed=<c val ="ffff8a">원시 히드라리스크</c>의 이동 속도와 공격 사거리가 증가합니다.
+Button/Tooltip/ResearchDehakaImpalerTenderize=<c val ="ffff8a">관통 촉수</c>에게 정중당한 적이 저며집니다. 저며진 유닛은 <d ref="Behavior,ImpalerDehakaTenderize,Duration"/>초에 걸쳐 <d ref="(Effect,ImpalerDehakaTenderizeDamage,Amount*Behavior,ImpalerDehakaTenderize,PeriodCount)"/>의 피해를 받습니다. 저며진 유닛을 <c val ="ffff8a">데하카</c>가 섭취하면 재사용 대기시간이 25% 감소합니다.
+Button/Tooltip/ResearchDehakaMutaliskDamageReduction=<c val ="ffff8a">원시 뮤탈리스크</c>가 이동 중에 받는 피해가 <d ref="Behavior,DehakaMutaliskDamageReduction,Modification.DamageTakenFraction[Melee]*(-100)" precision="1"/>%만큼 감소합니다.
+Button/Tooltip/ResearchDehakaMutaliskRespawnOnDeath=<c val ="ffff8a">원시 뮤탈리스크</c>가 죽으면 짧은 시간 후에 부활합니다. <d ref="Behavior,DehakaMutaliskTimerBehavior,Cost.Cooldown.TimeStart"/>초에 한 번만 발동합니다,
+Button/Tooltip/ResearchDehakaRavasaurRange=<c val ="ffff8a">라바사우르스</c>의 이동 속도와 공격 사거리가 증가합니다.
+Button/Tooltip/ResearchDehakaRavasaurVSArmor=<c val ="ffff8a">라바사우르스</c>가 중장갑 대상에게 +<d ref="$UpgradeEffectArrayValue:DehakaRavasaurVSArmor:Effect,DehakaRavasaurDamage,AttributeBonus[Armored]$"/>의 피해를 줍니다.
 Button/Tooltip/ResearchDehakaTyrannozorArmorAura=<c val ="ffff8a">티라노조르</c>가 주위 아군 유닛의 방어력을 <d ref="Behavior,DehakaTyrannozorArmorAuraTarget,Modification.LifeArmorBonus"/>만큼 증가시킵니다.
 Button/Tooltip/ResearchDehakaTyrannozorFanOfKnives=<c val ="ffff8a">티라노조르</c>가 가시 탄막을 방출해 주위 적 지상 및 공중 유닛에게 <d ref="Effect,DehakaTyrannozorFanOfKnivesDamage,Amount"/>의 피해를 줍니다.
 Button/Tooltip/ResearchDehakaUltraliskBash=<c val ="ffff8a">원시 울트라리스크</c>와 <c val ="ffff8a">티라노조르</c>의 근접 공격이 <d ref="Behavior,DehakaUltraliskBash,DamageResponse.Chance*100" precision="1"/>% 확률로 대상을 기절시킵니다.
 Button/Tooltip/ResearchDehakaUltraliskCrashingCharge=<c val ="ffff8a">원시 울트라리스크</c>가 대상 위치로 돌진하여 주위 적들을 밀쳐내고 <d ref="Effect,DehakaUltraliskCrashingChargeDamage,Amount"/>의 피해를 줍니다.
 Button/Tooltip/ResearchDehakaUltraliskRegen=<c val ="ffff8a">원시 울트라리스크</c>와 <c val ="ffff8a">티라노조르</c>가 전투에서 벗어났을 때 생명력을 빠르게 회복합니다.
+Button/Tooltip/ResearchSlicingGlave=<c val ="ffff8a">원시 뮤탈리스크</c>가 공중 유닛에게 주는 피해가 <d ref="(Effect,DehakaMutaliskAirLevel3GlaiveWurmDamage,Amount-Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount)*100/Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount"/>%만큼 증가합니다.
 Button/Tooltip/SlicingGlave=공중 유닛에게 주는 피해가 <d ref="(Effect,DehakaMutaliskAirLevel3GlaiveWurmDamage,Amount-Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount)*100/Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount"/>%만큼 증가합니다.
 Button/Tooltip/TyrannozorPassive=다크룬의 굴이 티라노조르 변이를 가능하게 합니다.
+Commander/AbilTitle/DehakaConsole=원시 변이
+Commander/Description/DehakaConsole=원시 무리 우두머리
+Commander/Details/DehakaConsole=<ul indent="0" gap="1"path="Assets\Textures\UI_Battlenet_Glues_PageAssets_BulletPoint.dds" width="0" height="0"><li>숙련된 플레이어에게 추천</li><li>임무에서 데하카를 조종하고 정수를 수집해 더 강하게 성장시킵니다.</li><li>흉포한 원시 저그를 지휘합니다.</li></ul>
+Commander/Name/DehakaConsole=데하카 콘솔
+Commander/StoreName/DehakaConsole=사령관: 데하카
 DocInfo/DescShort=아무
 DocInfo/Name=스타크래프트 II 모드
 Effect/Name/DehakaConcoonEatLoadOrderSet=DehakaConcoonEatLoadOrderSet
@@ -216,14 +343,57 @@ Effect/Name/DehakaConsumeSet=DehakaConsumeSet
 Effect/Name/DehakaConsumeSuicideRemove=DehakaConsumeSuicideRemove
 Effect/Name/DehakaConsumeVisualMissileCopyTargetFacing=DehakaConsumeVisualMissileCopyTargetFacing
 Effect/Name/DehakaCoopReviveEat=DehakaCoopReviveEat
+Effect/Name/DehakaDakrunSpawnMP=DehakaDakrunSpawnMP
 Effect/Name/DehakaEssenceReviveDummy=DehakaEssenceReviveDummy
+Effect/Name/DehakaEssenceReviveRequirementDummy=DehakaEssenceReviveRequirementDummy
+Effect/Name/DehakaExtractor=DehakaExtractor
+Effect/Name/DehakaMurvarSpawnSet=DehakaMurvarSpawnSet
 Error/ImpalerBurrowed=잠복해야 공격할 수 있습니다.
 Error/NotHeroicOrLifeLessThan600=대상이 영웅이 아니거나 대상의 현재 생명력이 600 이하여야 합니다.
 Param/Expression/lib_40BC87EB_75B33ADE=정수 ~A~<n/>수집하면 데하카의 힘 증가 및 생명력 회복
+Param/Expression/lib_40BC87EB_F07BDE2B=<c val="FF9800">데하카가 죽었습니다. 데하카의 굴에서 데하카에 정수를 먹여 그가 부활할 수 있게 하십시오.</c>
+Param/Value/lib_40BC87EB_0CC790E5=데하카가 죽었습니다. 데하카의 굴을 건설하여 데하카를 부활시킬 수 있게 하십시오.
+Param/Value/lib_40BC87EB_A907A787=데하카가 자신의 굴에서 부활하여 전투 준비를 마쳤습니다.
+Param/Value/lib_40BC87EB_DD36035D=데하카가 전투 준비를 마쳤습니다.
 Race/Name/PZrg=원시 저그
+RequirementNode/Tooltip/CountUnitAlias_PrimalBarracksCompleteOnly2498476098=원시 감시자
+RequirementNode/Tooltip/CountUpgradeDehakaCalldownDakrunCompleteOnly2973833876=다크룬의 굴에서 다크룬 호출
+RequirementNode/Tooltip/CountUpgradeDehakaCalldownGlevigCompleteOnly3696788027=글레빅의 굴에서 글레빅 호출
+RequirementNode/Tooltip/CountUpgradeDehakaCalldownMurvarCompleteOnly934940264=멀바르의 굴에서 멀바르 호출
+RequirementNode/Tooltip/CountUpgradeDehakaGlevigRoachFireBreathCompleteOnly750942037=글레빅의 굴에서 집중된 화염 진화
+RequirementNode/Tooltip/CountUpgradeDehakaGuardianExplosiveBombCompleteOnly2817616560=멀바르의 굴에서 폭발성 포자 완료됨
+RequirementNode/Tooltip/CountUpgradeDehakaGuardianFuryCompleteOnly1785985127=멀바르의 굴에서 태고의 분노 진화
+RequirementNode/Tooltip/CountUpgradeDehakaHydraliskSpeedCompleteOnly4292097330=글레빅의 굴에서 근육 보강 진화
+RequirementNode/Tooltip/CountUpgradeDehakaImpalerTenderizeCompleteOnly472547941=글레빅의 굴에서 저미기 진화
+RequirementNode/Tooltip/CountUpgradeDehakaMurvarCreeperAirCompleteOnly3250439292=멀바르의 굴에서 공중 폭발 배주머니 진화
+RequirementNode/Tooltip/CountUpgradeDehakaMutaliskAirDoubleDamageCompleteOnly2775413166=멀바르의 굴에서 절단 쐐기 진화
+RequirementNode/Tooltip/CountUpgradeDehakaMutaliskDamageReductionCompleteOnly2919215546=멀바르의 굴에서 이동 갑피 진화
+RequirementNode/Tooltip/CountUpgradeDehakaMutaliskRespawnOnDeathCompleteOnly3112898470=멀바르의 굴에서 원시 복원 진화
+RequirementNode/Tooltip/CountUpgradeDehakaRavasaurRangeCompleteOnly520421447=글레빅의 굴에서 귀밑샘 확대 진화
+RequirementNode/Tooltip/CountUpgradeDehakaRavasaurVSArmorCompleteOnly1565222249=글레빅의 굴에서 산성 융해 진화
+RequirementNode/Tooltip/CountUpgradeDehakaRoachMoveSpeedCompleteOnly450217508=글레빅의 굴에서 신경 재구성 진화
+RequirementNode/Tooltip/CountUpgradeDehakaTyrannozorArmorAuraCompleteOnly3080465665=다크룬의 굴에서 폭군의 보호 진화
+RequirementNode/Tooltip/CountUpgradeDehakaTyrannozorFanOfKnivesCompleteOnly1900012631=다크룬의 굴에서 가시 탄막 진화
+RequirementNode/Tooltip/CountUpgradeDehakaUltraliskBashCompleteOnly1166293633=다크룬의 굴에서 관통의 일격 진화
+RequirementNode/Tooltip/CountUpgradeDehakaUltraliskCrashingChargeCompleteOnly742091005=다크룬의 굴에서 잔혹한 돌진 진화
+RequirementNode/Tooltip/CountUpgradeDehakaUltraliskRegenCompleteOnly1822956796=다크룬의 굴에서 회복 적응 진화
+RequirementNode/Tooltip/Eq1385659935SumCountUpgradeDehakaCalldownGlevigQueuedOrBetterCountUpgradeDehakaCalldownMurvarQueuedOrBetterCountUpgradeDehakaCalldownDakrunQueuedOrBetter0=원시 우두머리 호출하지 않음
+RequirementNode/Tooltip/Eq644957840SumCountUnitDehakaGlevigCompleteOnlyCountUnitDehakaMurvarCompleteOnlyCountUnitDehakaDakrunCompleteOnly0=원시 우두머리 없음
+RequirementNode/Tooltip/LT4175749157CountUnitDehakaCoopReviveCocoonQueuedOrBetter1=1개로 제한
+RequirementNode/Tooltip/LT4175749157CountUnitDehakaDakrunStructureQueuedOrBetter1=1개로 제한
+RequirementNode/Tooltip/LT4175749157CountUnitDehakaGlevigStructureQueuedOrBetter1=1개로 제한
+RequirementNode/Tooltip/LT4175749157CountUnitDehakaMurvarStructureQueuedOrBetter1=1개로 제한
+RequirementNode/Tooltip/Or173926902CountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnly=원시 우두머리의 굴
+UI/DehakaSpawning=생성 중
+UI/ResourceSupplyTooltip_PZrg="살아있는 유닛은 보급품이 필요합니다. 대군주를 생산하여 공급을 늘리십시오."
 UI/Summoning=소환 중
 Unit/Category/ZergPrimal=저그 - 원시
 Unit/LifeArmorName/PrimalZergArmor=원시 저그 껍질
+Unit/Name/CoopDehakaGlevigEggHydralisk=알
+Unit/Name/CoopDehakaGlevigEggRoach=알
+Unit/Name/CoopDehakaGlevigEggZergling=알
+Unit/Name/DehakaBarracks=원시 감시자
+Unit/Name/DehakaBarracksUprooted=원시 감시자
 Unit/Name/DehakaConsumeLaunchTargetMissile=데하카 섭취 발사 대상 미사일
 Unit/Name/DehakaConsumeMissile=데하카 섭취 투사체
 Unit/Name/DehakaCoop=데하카
@@ -234,26 +404,63 @@ Unit/Name/DehakaDakrunStructure=다크룬의 굴
 Unit/Name/DehakaDrone=원시 일벌레
 Unit/Name/DehakaDroneBurrowed=원시 일벌레
 Unit/Name/DehakaGlevig=글레빅
+Unit/Name/DehakaGlevigStructure=글레빅의 굴
 Unit/Name/DehakaGuardian=원시 수호군주
+Unit/Name/DehakaHatchery=원시 군락
+Unit/Name/DehakaHatcheryUprooted=원시 군락
 Unit/Name/DehakaHydraliskLevel2=원시 히드라리스크
 Unit/Name/DehakaHydraliskLevel2Burrowed=원시 히드라리스크
 Unit/Name/DehakaLocust=원시 식충
 Unit/Name/DehakaLocustFlying=원시 식충
 Unit/Name/DehakaMurvar=멀바르
+Unit/Name/DehakaMurvarStructure=멀바르의 굴
 Unit/Name/DehakaMutaliskLevel3=원시 뮤탈리스크
 Unit/Name/DehakaMutaliskReviveEgg=원시 뮤탈리스크 번데기
+Unit/Name/DehakaNydusDestroyer=원시 벌레
 Unit/Name/DehakaPrimalSwarmHost=땅무지 숙주
 Unit/Name/DehakaPrimalSwarmHostBurrowed=땅무지 숙주
+Unit/Name/DehakaRavasaur=라바사우르스
+Unit/Name/DehakaRavasaurBurrowed=라바사우르스
+Unit/Name/DehakaRoachLevel2=원시 바퀴
+Unit/Name/DehakaRoachLevel2Burrowed=원시 바퀴
+Unit/Name/DehakaRoachLevel3=원시 점화자
+Unit/Name/DehakaRoachLevel3Burrowed=원시 점화자
 Unit/Name/DehakaSwarmHost=원시 숙주
 Unit/Name/DehakaSwarmHostBurrowed=원시 숙주
+Unit/Name/DehakaTrainEgg=알
 Unit/Name/DehakaUltraliskLevel2=원시 울트라리스크
 Unit/Name/DehakaUltraliskLevel2Burrowed=원시 울트라리스크
 Unit/Name/DehakaUltraliskLevel3=티라노조르
 Unit/Name/DehakaUltraliskLevel3Burrowed=티라노조르
+Unit/Name/DehakaZerglingLevel2=원시 저글링
+Unit/Name/DehakaZerglingLevel2Burrowed=원시 저글링
 Unit/Name/ImpalerDehaka=관통 촉수
 Unit/Name/ImpalerDehakaBurrowed=관통 촉수
 Unit/ShieldArmorName/ZergWildMutation=변이 껍질
 UnitKillRank/PackLeader=원시 무리 우두머리
+Upgrade/Name/DehakaCalldownDakrun=다크룬 호출
+Upgrade/Name/DehakaCalldownGlevig=글레빅 호출
+Upgrade/Name/DehakaCalldownMurvar=멀바르 호출
+Upgrade/Name/DehakaGlevigRoachFireBreath=집중된 화염
+Upgrade/Name/DehakaGuardianExplosiveBomb=폭발성 포자
+Upgrade/Name/DehakaGuardianFury=태고의 분노
+Upgrade/Name/DehakaHydraliskSpeed=근육 보강
+Upgrade/Name/DehakaImpalerTenderize=저미기
+Upgrade/Name/DehakaMurvarCreeperAir=공중 폭발 배주머니
+Upgrade/Name/DehakaMutaliskAirDoubleDamage=절단 쐐기
+Upgrade/Name/DehakaMutaliskDamageReduction=이동 갑피
+Upgrade/Name/DehakaMutaliskRespawnOnDeath=원시 복원
+Upgrade/Name/DehakaPrimalArmor=원시 갑피
+Upgrade/Name/DehakaPrimalArmorLevel1=원시 갑피 1단계
+Upgrade/Name/DehakaPrimalArmorLevel2=원시 갑피 2단계
+Upgrade/Name/DehakaPrimalArmorLevel3=원시 갑피 3단계
+Upgrade/Name/DehakaPrimalWeapons=원시 공격
+Upgrade/Name/DehakaPrimalWeaponsLevel1=원시 공격 1단계
+Upgrade/Name/DehakaPrimalWeaponsLevel2=원시 공격 2단계
+Upgrade/Name/DehakaPrimalWeaponsLevel3=원시 공격 3단계
+Upgrade/Name/DehakaRavasaurRange=귀밑샘 확대
+Upgrade/Name/DehakaRavasaurVSArmor=산성 융해
+Upgrade/Name/DehakaRoachMoveSpeed=신경 재구성
 Upgrade/Name/DehakaTyrannozorArmorAura=폭군의 보호
 Upgrade/Name/DehakaTyrannozorFanOfKnives=가시 탄막
 Upgrade/Name/DehakaUltraliskBash=관통의 일격
@@ -279,9 +486,19 @@ Weapon/Name/DehakaKaiserBladesLevel3=카이저 칼날
 Weapon/Name/DehakaLocust=가시뼈
 Weapon/Name/DehakaMutaliskAirGlaiveWurm=절단 쐐기
 Weapon/Name/DehakaMutaliskLevel3GlaiveWurm=쐐기 벌레
+Weapon/Name/DehakaNydusDestroyerWeapon=끈끈이 담즙
+Weapon/Name/DehakaRavasaur=휘발성 투사체
+Weapon/Name/DehakaRoachLevel2=산성 타액
+Weapon/Name/DehakaRoachLevel3Cone=화염 숨결
+Weapon/Name/DehakaTownHallBaseWeapon=산 뱉기
 Weapon/Name/DehakaUltraliskMissileLaunchers=가시 난사
+Weapon/Name/DehakaZerglingLevel2=발톱
 Weapon/Name/ImpalerDehaka=날카로운 촉수
 Weapon/Name/KraithMelee=뾰족한 박치기
 Weapon/Name/SlivanRanged=산성 타액
 Weapon/Name/YagdraFireballWeapon=화염 뱉기
 Weapon/Tip/ImpalerDehaka=<c val="#ColorAttackInfo">잠복해야 공격할 수 있습니다.</c>
+e_cmdCantBuildOnThat_PZrg="활동 중인 베스핀 간헐천에 배치해야 합니다."
+e_cmdFoodUsageImpossible_PZrg="불가능한 요청<n/>보급품 한도에 도달했습니다."
+e_cmdMustBuildRefineryFirst_PZrg="추출장을 먼저 건설해야 합니다."
+e_cmdNotEnoughFood_PZrg="부하가 너무 많습니다.<n/>대군주를 더 생성하십시오."
