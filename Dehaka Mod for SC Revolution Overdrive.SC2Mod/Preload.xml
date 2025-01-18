@@ -11,6 +11,7 @@
 <Behavior id="DehakaModelSwapStun"/>
 <Behavior id="SuppressCollisionRevive"/>
 <Behavior id="DehakaNormalReviveTimer"/>
+<Commander id="DehakaConsole"/>
 <Effect id="PostMorphHeal"/>
 <Effect id="DehakaConsumeEffectHealBiological"/>
 <Effect id="DehakaConsumeEffectHealOther"/>
