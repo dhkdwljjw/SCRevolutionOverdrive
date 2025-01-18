@@ -1,5 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUpgrade default="1" id="DehakaPrimalWeapons">
+        <Name value="Upgrade/Name/DehakaPrimalWeapons"/>
+        <Icon value="Assets\Textures\BTN-Upgrade-Dehaka-BothAttacks-Level1.dds"/>
+        <EffectArray Reference="Weapon,DehakaCreeperSwoop,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaCreeperExplodeSearchDamage,Amount" Value="4"/>
+        <EffectArray Reference="Effect,DehakaCreeperExplodeSearchDamage,AttributeBonus[Structure]" Value="4"/>
+        <EffectArray Reference="Weapon,DehakaCreeperSuicide,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaCreeperSuicideDamage,Amount" Value="5"/>
+        <EffectArray Reference="Weapon,DehakaMutaliskLevel3GlaiveWurm,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,DehakaMutaliskLevel3GlaiveWurmSecondImpactDamage,Amount" Value="0.555555"/>
+        <EffectArray Reference="Effect,DehakaMutaliskLevel3GlaiveWurmThirdImpactDamage,Amount" Value="0.222222"/>
+        <EffectArray Reference="Weapon,DehakaMutaliskAirGlaiveWurm,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaMutaliskAirLevel3GlaiveWurmDamage,Amount" Value="3"/>
+        <EffectArray Reference="Effect,DehakaMutaliskAirLevel3GlaiveWurmSecondImpactDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,DehakaMutaliskAirLevel3GlaiveWurmThirdImpactDamage,Amount" Value="0.5"/>
+        <EffectArray Reference="Weapon,DehakaZerglingLevel2,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaZerglingLevel2,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,DehakaRavasaur,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaRavasaurDamage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,DehakaRoachLevel2,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaRoachLevel2Damage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,DehakaRoachLevel2Melee,Level" Value="1"/>
+        <EffectArray Reference="Weapon,DehakaRoachLevel3Cone,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaRoachLevel3AttackDamage,Amount" Value="3"/>
+        <EffectArray Reference="Weapon,DehakaAcidSpores,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaAcidSporesDamage,Amount" Value="4"/>
+        <EffectArray Reference="Weapon,DehakaHydraliskLevel2Melee,Level" Value="1"/>
+        <EffectArray Reference="Weapon,DehakaHydraliskLevel2NeedleSpines,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaHydraliskLevel2NeedleSpinesDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,ImpalerDehaka,Level" Value="1"/>
+        <EffectArray Reference="Effect,ImpalerDehakaDamage,Amount" Value="4"/>
+        <EffectArray Reference="Effect,ImpalerDehakaDamage,AttributeBonus[Armored]" Value="2"/>
+        <EffectArray Reference="Weapon,DehakaLocust,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaLocustDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,DehakaLocustMelee,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaLocustMeleeDamage,Amount" Value="1"/>
+        <EffectArray Reference="Weapon,DehakaKaiserBladesLevel2,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaKaiserBladesLevel2Damage,Amount" Value="4"/>
+        <EffectArray Reference="Weapon,DehakaKaiserBladesLevel3,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaKaiserBladesLevel3Damage,Amount" Value="4"/>
+        <EffectArray Reference="Weapon,DehakaUltraliskMissileLaunchers,Level" Value="1"/>
+        <EffectArray Reference="Effect,DehakaUltraliskMissileLaunchersDamage,Amount" Value="2"/>
+        <EffectArray Reference="Weapon,YagdraFireballWeapon,Level" Value="1"/>
+        <EffectArray Reference="Effect,YagdraFireballDamage,Amount" Value="10"/>
+        <EffectArray Reference="Weapon,SlivanRanged,Level" Value="1"/>
+        <EffectArray Reference="Effect,MurvarRangedDamage,Amount" Value="5"/>
+        <EffectArray Reference="Weapon,KraithMelee,Level" Value="1"/>
+        <EffectArray Reference="Effect,DakrunMelee,Amount" Value="10"/>
+        <AffectedUnitArray value="DehakaZerglingLevel2"/>
+        <AffectedUnitArray value="DehakaZerglingLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaRavasaur"/>
+        <AffectedUnitArray value="DehakaRavasaurBurrowed"/>
+        <AffectedUnitArray value="DehakaRoachLevel2"/>
+        <AffectedUnitArray value="DehakaRoachLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaRoachLevel3"/>
+        <AffectedUnitArray value="DehakaRoachLevel3Burrowed"/>
+        <AffectedUnitArray value="DehakaGuardian"/>
+        <AffectedUnitArray value="DehakaHydraliskLevel2"/>
+        <AffectedUnitArray value="DehakaHydraliskLevel2Burrowed"/>
+        <AffectedUnitArray value="ImpalerDehaka"/>
+        <AffectedUnitArray value="ImpalerDehakaBurrowed"/>
+        <AffectedUnitArray value="DehakaSwarmHost"/>
+        <AffectedUnitArray value="DehakaSwarmHostBurrowed"/>
+        <AffectedUnitArray value="DehakaLocustFlying"/>
+        <AffectedUnitArray value="DehakaLocust"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3Burrowed"/>
+        <AffectedUnitArray value="DehakaMutaliskLevel3"/>
+        <AffectedUnitArray value="DehakaCreeperFlying"/>
+        <AffectedUnitArray value="DehakaGlevig"/>
+        <AffectedUnitArray value="DehakaMurvar"/>
+        <AffectedUnitArray value="DehakaDakrun"/>
+        <LeaderAlias value="DehakaPrimalWeapons"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="DehakaPrimalArmor">
+        <Name value="Upgrade/Name/DehakaPrimalArmor"/>
+        <Icon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Reference="Unit,DehakaPrimalSwarmHostBurrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaPrimalSwarmHostBurrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaPrimalSwarmHost,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaPrimalSwarmHost,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaLocust,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaLocust,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaLocustFlying,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaLocustFlying,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaCreeperFlying,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaCreeperFlying,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaMutaliskLevel3,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaMutaliskLevel3,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaDrone,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaDrone,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaDroneBurrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaDroneBurrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaZerglingLevel2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaZerglingLevel2,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaZerglingLevel2Burrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaZerglingLevel2Burrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRavasaur,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRavasaur,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRavasaurBurrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRavasaurBurrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel2,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel2Burrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel2Burrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel3,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel3,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel3Burrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel3Burrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaGuardian,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaGuardian,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaHydraliskLevel2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaHydraliskLevel2,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaHydraliskLevel2Burrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaHydraliskLevel2Burrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ImpalerDehaka,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ImpalerDehaka,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ImpalerDehakaBurrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ImpalerDehakaBurrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaSwarmHost,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaSwarmHost,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaSwarmHostBurrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaSwarmHostBurrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel2,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel2,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel2Burrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel2Burrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel3,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel3,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel3Burrowed,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaUltraliskLevel3Burrowed,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaGlevig,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaGlevig,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaMurvar,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaMurvar,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,DehakaDakrun,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,DehakaDakrun,LifeArmor" Value="1"/>
+        <AffectedUnitArray value="DehakaDrone"/>
+        <AffectedUnitArray value="DehakaDroneBurrowed"/>
+        <AffectedUnitArray value="DehakaZerglingLevel2"/>
+        <AffectedUnitArray value="DehakaZerglingLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaRavasaur"/>
+        <AffectedUnitArray value="DehakaRavasaurBurrowed"/>
+        <AffectedUnitArray value="DehakaRoachLevel2"/>
+        <AffectedUnitArray value="DehakaRoachLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaRoachLevel3"/>
+        <AffectedUnitArray value="DehakaRoachLevel3Burrowed"/>
+        <AffectedUnitArray value="DehakaGuardian"/>
+        <AffectedUnitArray value="DehakaHydraliskLevel2"/>
+        <AffectedUnitArray value="DehakaHydraliskLevel2Burrowed"/>
+        <AffectedUnitArray value="ImpalerDehaka"/>
+        <AffectedUnitArray value="ImpalerDehakaBurrowed"/>
+        <AffectedUnitArray value="DehakaSwarmHost"/>
+        <AffectedUnitArray value="DehakaSwarmHostBurrowed"/>
+        <AffectedUnitArray value="DehakaLocustFlying"/>
+        <AffectedUnitArray value="DehakaLocust"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3"/>
+        <AffectedUnitArray value="DehakaUltraliskLevel3Burrowed"/>
+        <AffectedUnitArray value="DehakaMutaliskLevel3"/>
+        <AffectedUnitArray value="DehakaCreeperFlying"/>
+        <AffectedUnitArray value="DehakaPrimalSwarmHost"/>
+        <AffectedUnitArray value="DehakaPrimalSwarmHostBurrowed"/>
+        <AffectedUnitArray value="DehakaGlevig"/>
+        <AffectedUnitArray value="DehakaMurvar"/>
+        <AffectedUnitArray value="DehakaDakrun"/>
+        <LeaderAlias value="DehakaPrimalArmor"/>
+    </CUpgrade>
     <CUpgrade id="DehakaAirAttackUpgrade">
         <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
         <EffectArray Operation="Set" Reference="Weapon,DehakaCoop,TargetFilters" Value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -9,6 +181,27 @@
     <CUpgrade id="DehakaBonusSkillPoint">
         <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
         <EffectArray Reference="Abil,DehakaLearn,Points" Value="1"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade id="DehakaCalldownGlevig">
+        <Icon value="Assets\Textures\btn-unit-zerg-glevig.dds"/>
+        <ScoreAmount value="1000"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:SpellResearch"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade id="DehakaCalldownMurvar">
+        <Icon value="Assets\Textures\btn-unit-zerg-murvar.dds"/>
+        <ScoreAmount value="1000"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:SpellResearch"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade id="DehakaCalldownDakrun">
+        <Icon value="Assets\Textures\btn-unit-zerg-dakrun.dds"/>
+        <ScoreAmount value="1000"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:SpellResearch"/>
         <LeaderAlias value=""/>
     </CUpgrade>
     <CUpgrade id="DehakaCoopStage2">
@@ -68,5 +261,234 @@
         <Icon value="Assets\Textures\btn-ability-zerg-dehaka-tyrannozor-barrageofspikes.dds"/>
         <AffectedUnitArray value="DehakaUltraliskLevel3"/>
         <AffectedUnitArray value="DehakaUltraliskLevel3Burrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaMurvarCreeperAir" parent="Research">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-creeperhost-spawncreepers.dds"/>
+        <EffectArray Reference="Unit,DehakaCreeperFlying,Speed" Value="0.750000"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaCreeperSuicide,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaCreeperSuicide,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaPrimalSwarmHostFakeWeapon,TargetFilters" Value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaPrimalSwarmHost,Description" Value="Button/Tooltip/DehakaPrimalSwarmHostUpgraded"/>
+        <EffectArray Operation="Set" Reference="Unit,DehakaCreeperFlying,Description" Value="Button/Tooltip/DehakaCreeperFlyingUpgraded"/>
+        <EffectArray Operation="Set" Reference="Button,DehakaSpawnLocustsBomb,Tooltip" Value="Button/Tooltip/DehakaSpawnLocustsBombUpgraded"/>
+        <AffectedUnitArray value="DehakaCreeperFlying"/>
+        <AffectedUnitArray value="DehakaPrimalSwarmHost"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaMutaliskRespawnOnDeath">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-mutalisk-primalreconstitution.dds"/>
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="DehakaMutaliskLevel3FightMorph"/>
+        <AffectedUnitArray value="DehakaMutaliskLevel3"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaMutaliskDamageReduction">
+        <Icon value="Assets\Textures\btn-ability-dehaka-damagereductionwhilemoving.dds"/>
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="DehakaMutaliskLevel3FightMorph"/>
+        <AffectedUnitArray value="DehakaMutaliskLevel3"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaMutaliskAirDoubleDamage">
+        <Icon value="Assets\Textures\btn-ability-dehaka-airbonusdamage.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaMutaliskLevel3GlaiveWurm,TargetFilters" Value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <EffectArray Operation="Subtract" Reference="Weapon,DehakaMutaliskAirGlaiveWurm,Options[Disabled]" Value="1"/>
+        <EffectArray Operation="Subtract" Reference="Weapon,DehakaMutaliskAirGlaiveWurm,Options[Hidden]" Value="1"/>
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="DehakaMutaliskLevel3FightMorph"/>
+        <AffectedUnitArray value="DehakaMutaliskLevel3"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaGuardianFury" parent="Research">
+        <Icon value="Assets\Textures\BTN-Ability-Zerg-Dehaka-Guardian-PrimordialFury.dds"/>
+        <AffectedUnitArray value="DehakaGuardianFightMorph"/>
+        <AffectedUnitArray value="DehakaGuardian"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaGuardianExplosiveBomb" parent="Research">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-guardian-explosivespores.dds"/>
+        <AffectedUnitArray value="DehakaGuardianFightMorph"/>
+        <AffectedUnitArray value="DehakaGuardian"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaRoachMoveSpeed" parent="Research">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-roach-glialreconstruction.dds"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel2,Speed" Value="0.699200"/>
+        <EffectArray Reference="Unit,DehakaRoachLevel3,Speed" Value="0.550700"/>
+        <AffectedUnitArray value="DehakaRoachLevel2"/>
+        <AffectedUnitArray value="DehakaRoachLevel2Burrowed"/>
+        <AffectedUnitArray value="DehakaRoachLevel3"/>
+        <AffectedUnitArray value="DehakaRoachLevel3Burrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaHydraliskSpeed">
+        <Icon value="Assets\Textures\BTN-Ability-Zerg-Dehaka-Hydralisk-MuscularAugments.dds"/>
+        <EffectArray Reference="Unit,DehakaHydraliskLevel2,Speed" Value="0.5625"/>
+        <EffectArray Reference="Unit,DehakaHydraliskLevel2Burrowed,Speed" Value="0.5625"/>
+        <EffectArray Reference="Weapon,DehakaHydraliskLevel2NeedleSpines,MinScanRange" Value="1"/>
+        <EffectArray Reference="Weapon,DehakaHydraliskLevel2NeedleSpines,Range" Value="1"/>
+        <AffectedUnitArray value="DehakaHydraliskLevel2"/>
+        <AffectedUnitArray value="DehakaHydraliskLevel2Burrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaRavasaurRange">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-ravasaur-englargedparotidglands.dds"/>
+        <EffectArray Reference="Weapon,DehakaRavasaur,MinScanRange" Value="1"/>
+        <EffectArray Reference="Weapon,DehakaRavasaur,Range" Value="1"/>
+        <EffectArray Reference="Unit,DehakaRavasaur,Speed" Value="0.750000"/>
+        <AffectedUnitArray value="DehakaRavasaur"/>
+        <AffectedUnitArray value="DehakaRavasaurBurrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaRavasaurVSArmor">
+        <Icon value="Assets\Textures\btn-ability-zerg-dehaka-ravasaur-dissolvingacid.dds"/>
+        <EffectArray Reference="Effect,DehakaRavasaurDamage,AttributeBonus[Armored]" Value="15"/>
+        <AffectedUnitArray value="DehakaRavasaur"/>
+        <AffectedUnitArray value="DehakaRavasaurBurrowed"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaGlevigRoachFireBreath">
+        <Icon value="Assets\Textures\btn-ability-zerg-fireroach-increasefiredamage.dds"/>
+        <EffectArray Reference="Effect,DehakaRoachLevel3AttackDamage,AttributeBonus[Light]" Value="15"/>
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="DehakaRoachLevel3"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaImpalerTenderize" parent="Research">
+        <Icon value="Assets\Textures\BTN-Ability-Zerg-Dehaka-Impaler-Tenderize.dds"/>
+        <EffectArray Reference="Effect,ImpalerDehakaTenderizeAB,Chance" Value="1"/>
+        <AffectedUnitArray value="ImpalerDehaka"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaPrimalWeaponsLevel1" parent="DehakaPrimalWeapons">
+        <Name value="Upgrade/Name/DehakaPrimalWeaponsLevel1"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaMutaliskLevel3GlaiveWurm,Icon" Value="Assets\Textures\btn-upgrade-dehaka-airattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaZerglingLevel2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRavasaur,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel2,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel2Melee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel3Cone,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaAcidSpores,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-airattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaHydraliskLevel2Melee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaHydraliskLevel2NeedleSpines,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ImpalerDehaka,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaLocust,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaLocustMelee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaKaiserBladesLevel2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaKaiserBladesLevel3,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaUltraliskMissileLaunchers,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,KraithMelee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level1.dds"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaPrimalWeaponsLevel2" parent="DehakaPrimalWeapons">
+        <Name value="Upgrade/Name/DehakaPrimalWeaponsLevel2"/>
+        <Icon value="Assets\Textures\btn-upgrade-dehaka-bothattacks-level2.dds"/>
+        <ScoreAmount value="350"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaMutaliskLevel3GlaiveWurm,Icon" Value="Assets\Textures\btn-upgrade-dehaka-airattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaZerglingLevel2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRavasaur,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel2,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel2Melee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel3Cone,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaAcidSpores,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-airattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaHydraliskLevel2Melee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaHydraliskLevel2NeedleSpines,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ImpalerDehaka,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaLocust,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaLocustMelee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaKaiserBladesLevel2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaKaiserBladesLevel3,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaUltraliskMissileLaunchers,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,KraithMelee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level2.dds"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaPrimalWeaponsLevel3" parent="DehakaPrimalWeapons">
+        <Name value="Upgrade/Name/DehakaPrimalWeaponsLevel3"/>
+        <Icon value="Assets\Textures\btn-upgrade-dehaka-bothattacks-level3.dds"/>
+        <ScoreAmount value="500"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaMutaliskLevel3GlaiveWurm,Icon" Value="Assets\Textures\btn-upgrade-dehaka-airattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaZerglingLevel2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRavasaur,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel2,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-Level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel2Melee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaRoachLevel3Cone,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-Level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaAcidSpores,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-airattacks-Level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaHydraliskLevel2Melee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaHydraliskLevel2NeedleSpines,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-Level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ImpalerDehaka,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-Level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaLocust,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-Level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaLocustMelee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaKaiserBladesLevel2,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaKaiserBladesLevel3,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,DehakaUltraliskMissileLaunchers,Icon" Value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-Level3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,KraithMelee,Icon" Value="Assets\Textures\btn-upgrade-dehaka-meleeattacks-level3.dds"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaPrimalArmorLevel1" parent="DehakaPrimalArmor">
+        <Name value="Upgrade/Name/DehakaPrimalArmorLevel1"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaPrimalSwarmHost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaLocust,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaLocustFlying,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaCreeperFlying,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaMutaliskLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaDrone,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaZerglingLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRavasaur,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRoachLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRoachLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaGuardian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaHydraliskLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImpalerDehaka,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaSwarmHost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaUltraliskLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaUltraliskLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaGlevig,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaMurvar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaDakrun,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaPrimalArmorLevel2" parent="DehakaPrimalArmor">
+        <Name value="Upgrade/Name/DehakaPrimalArmorLevel2"/>
+        <Icon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <ScoreAmount value="350"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaPrimalSwarmHost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaLocust,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaLocustFlying,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaCreeperFlying,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaMutaliskLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaDrone,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaZerglingLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRavasaur,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRoachLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRoachLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaGuardian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaHydraliskLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImpalerDehaka,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaSwarmHost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaUltraliskLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaUltraliskLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaGlevig,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaMurvar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaDakrun,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level2.dds"/>
+        <MaxLevel value="2"/>
+    </CUpgrade>
+    <CUpgrade id="DehakaPrimalArmorLevel3" parent="DehakaPrimalArmor">
+        <Name value="Upgrade/Name/DehakaPrimalArmorLevel3"/>
+        <Icon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <ScoreAmount value="500"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaPrimalSwarmHost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaLocust,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaLocustFlying,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaCreeperFlying,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaMutaliskLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaDrone,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaZerglingLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRavasaur,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRoachLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaRoachLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaGuardian,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaHydraliskLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ImpalerDehaka,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaSwarmHost,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaUltraliskLevel2,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaUltraliskLevel3,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaGlevig,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaMurvar,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,DehakaDakrun,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level3.dds"/>
+        <MaxLevel value="3"/>
     </CUpgrade>
 </Catalog>

@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirement id="DehakaDakrunStructureBuild">
+        <EditorCategories value="TechType:Unit,Race:PrimalZerg"/>
+        <NodeArray index="Use" Link="AndCountUnitDehakaMurvarStructureCompleteOnlyLT4175749157CountUnitDehakaDakrunStructureQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="DehakaGlevigStructureBuild">
+        <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitAlias_PrimalBarracksCompleteOnly2498476098LT4175749157CountUnitDehakaGlevigStructureQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="DehakaMurvarStructureBuild">
+        <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitDehakaGlevigStructureCompleteOnlyLT4175749157CountUnitDehakaMurvarStructureQueuedOrBetter1"/>
+    </CRequirement>
     <CRequirement id="DehakaStompLevel1">
         <NodeArray index="Show" Link="LTECountAbilDehakaLeapStompCompleteOnlyAtUnit1"/>
     </CRequirement>
@@ -9,9 +21,41 @@
     <CRequirement id="DehakaStompLevel3">
         <NodeArray index="Show" Link="EqCountAbilDehakaLeapStompCompleteOnlyAtUnit3"/>
     </CRequirement>
+    <CRequirement id="DehakaReviveStructureBuild">
+        <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndOr173926902CountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyLT4175749157CountUnitDehakaCoopReviveCocoonQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="DehakaSummonDakrun">
+        <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaCalldownDakrunCompleteOnly2973833876"/>
+    </CRequirement>
+    <CRequirement id="DehakaSummonGlevig">
+        <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaCalldownGlevigCompleteOnly3696788027"/>
+    </CRequirement>
+    <CRequirement id="DehakaSummonMurvar">
+        <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaCalldownMurvarCompleteOnly934940264"/>
+    </CRequirement>
     <CRequirement id="HaveDehakaCoop">
         <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
         <NodeArray index="Use" Link="CountUnitDehakaCoopCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaGlevigRoachFireBreath">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaGlevigRoachFireBreathCompleteOnly750942037"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaGuardianFury">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaGuardianFuryCompleteOnly1785985127"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaHydraliskSpeed">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaHydraliskSpeedCompleteOnly4292097330"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaImpalerTenderize">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaImpalerTenderizeCompleteOnly472547941"/>
     </CRequirement>
     <CRequirement id="HaveDehakaMendingAura">
         <NodeArray index="Show" Link="GTECountAbilDehakaMendingAuraCompleteOnlyAtUnit1"/>
@@ -32,6 +76,86 @@
     <CRequirement id="HaveDehakaCoopStage3">
         <EditorCategories value="Race:Zerg"/>
         <NodeArray index="Show" Link="CountUpgradeDehakaCoopStage3CompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaMurvarCreeperAir">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaMurvarCreeperAirCompleteOnly3250439292"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaMutaliskAirDoubleDamage">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaMutaliskAirDoubleDamageCompleteOnly2775413166"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaMutaliskDamageReduction">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaMutaliskDamageReductionCompleteOnly2919215546"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaMutaliskRespawnOnDeath">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaMutaliskRespawnOnDeathCompleteOnly3112898470"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaRavasaurRange">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaRavasaurRangeCompleteOnly520421447"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaRavasaurVSArmor">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaRavasaurVSArmorCompleteOnly1565222249"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaRoachMoveSpeed">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaRoachMoveSpeedCompleteOnly450217508"/>
+    </CRequirement>
+    <CRequirement id="HaveMurvarStructure">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitDehakaMurvarStructureCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaGlevigRoachFireBreath">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaGlevigRoachFireBreathQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaGuardianExplosiveBomb">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaGuardianExplosiveBombQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaGuardianFury">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaGuardianFuryQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaHydraliskSpeed">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaHydraliskSpeedQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaImpalerTenderize">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaImpalerTenderizeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaMurvarCreeperAir">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaMurvarCreeperAirQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaMutaliskAirDoubleDamage">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaMutaliskAirDoubleDamageQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaMutaliskDamageReduction">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaMutaliskDamageReductionQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaMutaliskRespawnOnDeath">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaMutaliskRespawnOnDeathQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaRavasaurRange">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaRavasaurRangeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaRavasaurVSArmor">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaRavasaurVSArmorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaRoachMoveSpeed">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaRoachMoveSpeedQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="MurvarLairCheck">
         <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
@@ -71,31 +195,102 @@
     </CRequirement>
     <CRequirement id="HaveDehakaUltraliskCrashingCharge">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
-        <NodeArray index="Use" Link="CountUpgradeDehakaUltraliskCrashingChargeCompleteOnly3023190289"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaUltraliskCrashingChargeCompleteOnly742091005"/>
     </CRequirement>
     <CRequirement id="HaveDehakaUltraliskRegen">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
-        <NodeArray index="Use" Link="CountUpgradeDehakaUltraliskRegenCompleteOnly2973854788"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaUltraliskRegenCompleteOnly1822956796"/>
     </CRequirement>
     <CRequirement id="HaveDehakaUltraliskBash">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
-        <NodeArray index="Use" Link="CountUpgradeDehakaUltraliskBashCompleteOnly1631805343"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaUltraliskBashCompleteOnly1166293633"/>
     </CRequirement>
     <CRequirement id="HaveDehakaTyrannozorArmorAura">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
-        <NodeArray index="Use" Link="CountUpgradeDehakaTyrannozorArmorAuraCompleteOnly1447308910"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaTyrannozorArmorAuraCompleteOnly3080465665"/>
     </CRequirement>
     <CRequirement id="HaveDehakaTyrannozorFanOfKnives">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
-        <NodeArray index="Use" Link="CountUpgradeDehakaTyrannozorFanOfKnivesCompleteOnly263971190"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaTyrannozorFanOfKnivesCompleteOnly1900012631"/>
     </CRequirement>
     <CRequirement id="HaveDehakaGuardianExplosiveBomb">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
-        <NodeArray index="Use" Link="CountUpgradeDehakaGuardianExplosiveBombCompleteOnly3257379237"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaGuardianExplosiveBombCompleteOnly2817616560"/>
     </CRequirement>
     <CRequirement id="DehakaDakrunInPlay">
         <EditorCategories value="Race:Zerg,TechType:Unit"/>
         <CanBeSuppressed index="Use" value="0"/>
         <NodeArray index="Use" Link="CountUnitDehakaDakrunCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DehakaGlevigInPlay">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitDehakaGlevigCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="DehakaMurvarInPlay">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitDehakaMurvarCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaGeneCarapace">
+        <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorDehakaGeneCarapaceCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaGeneAttackSpeed">
+        <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorDehakaGeneAttackSpeedCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaGeneLifeLeech">
+        <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorDehakaGeneLifeLeechCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaGeneCreepers">
+        <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorDehakaGene4CreepersCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaGeneThorns">
+        <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorDehakaGeneThornsCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaGlevigStructure">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitDehakaGlevigStructureCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaMurvarStructure">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitDehakaMurvarStructureCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveDehakaDakrunStructure">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="CountUnitDehakaDakrunStructureCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaPrimalArmor1">
+        <NodeArray index="Show" Link="EqCountUpgradeDehakaPrimalArmorLevel1QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaPrimalArmor2">
+        <NodeArray index="Use" Link="AndCountUpgradeDehakaPrimalArmorLevel1CompleteOnlyCountUnitDehakaGlevigStructureCompleteOnly"/>
+        <NodeArray index="Show" Link="EqCountUpgradeDehakaPrimalArmorLevel2QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaPrimalArmor3">
+        <NodeArray index="Use" Link="AndCountUpgradeDehakaPrimalArmorLevel2CompleteOnlyCountUnitDehakaMurvarStructureCompleteOnly"/>
+        <NodeArray index="Show" Link="EqCountUpgradeDehakaPrimalArmorLevel3QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaPrimalWeapons1">
+        <NodeArray index="Show" Link="EqCountUpgradeDehakaPrimalWeaponsLevel1QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaPrimalWeapons2">
+        <NodeArray index="Use" Link="AndCountUpgradeDehakaPrimalWeaponsLevel1CompleteOnlyCountUnitDehakaGlevigStructureCompleteOnly"/>
+        <NodeArray index="Show" Link="EqCountUpgradeDehakaPrimalWeaponsLevel2QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaPrimalWeapons3">
+        <NodeArray index="Use" Link="AndCountUpgradeDehakaPrimalWeaponsLevel2CompleteOnlyCountUnitDehakaMurvarStructureCompleteOnly"/>
+        <NodeArray index="Show" Link="EqCountUpgradeDehakaPrimalWeaponsLevel3QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="NotHaveDehakaPrimalBoss">
+        <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyCountUnitDehakaCoopReviveCocoonCompleteOnlyEq1385659935SumCountUpgradeD134161275"/>
     </CRequirement>
 </Catalog>

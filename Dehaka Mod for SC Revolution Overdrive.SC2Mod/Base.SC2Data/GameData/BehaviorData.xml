@@ -15,6 +15,12 @@
         <Duration value="2.3"/>
         <DurationRandomMax value="0.5"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="ImpalerMissileGroundCracks">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Period value="0.1"/>
+        <PeriodicEffect value="ImpalerDummySearch"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DehakaConsume">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
@@ -125,6 +131,10 @@
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaEssenceReviver">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaExtractor">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
     </CBehaviorBuff>
@@ -378,26 +388,6 @@
             </DeathResponse>
         </Modification>
     </CBehaviorBuff>
-    <CBehaviorBuff id="CreeperExplode">
-        <Alignment value="Positive"/>
-        <InfoFlags index="Hidden" value="1"/>
-        <Modification>
-            <DeathResponse Chance="1" Effect="CreeperExplodeDelaySet"/>
-        </Modification>
-        <DamageResponse Fatal="1" Handled="CreeperExplodeDelaySet" ModifyFraction="0">
-            <Chance value="1"/>
-        </DamageResponse>
-    </CBehaviorBuff>
-    <CBehaviorBuff id="CreeperExplodeDelay">
-        <Duration value="0.03"/>
-        <FinalEffect value="CreeperExplodeSet"/>
-        <DamageResponse Fatal="1" ModifyFraction="0">
-            <Chance value="1"/>
-        </DamageResponse>
-        <Modification>
-            <StateFlags index="Stun" value="1"/>
-        </Modification>
-    </CBehaviorBuff>
     <CBehaviorBuff id="DehakaBossesSummonDelay">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
@@ -624,60 +614,6 @@
         <BehaviorFlags index="EnabledWhileDead" value="1"/>
         <XPFraction index="Kills" value="0"/>
     </CBehaviorVeterancy>
-    <CBehaviorVeterancy id="DehakaVeterancyCoopLow">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <VeterancyLevelArray/>
-        <VeterancyLevelArray MinVeterancyXP="15" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="30" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="45" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="60" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="75" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="90" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="105" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="120" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="135" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <BehaviorFlags index="Permanent" value="1"/>
-        <BehaviorFlags index="EnabledWhileDead" value="1"/>
-        <XPFraction index="Kills" value="0"/>
-    </CBehaviorVeterancy>
-    <CBehaviorVeterancy id="DehakaVeterancyCoopMedium">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <VeterancyLevelArray/>
-        <VeterancyLevelArray MinVeterancyXP="15" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="30" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="45" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="60" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="75" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="90" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="105" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="120" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="135" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="150" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="165" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <BehaviorFlags index="Permanent" value="1"/>
-        <BehaviorFlags index="EnabledWhileDead" value="1"/>
-        <XPFraction index="Kills" value="0"/>
-    </CBehaviorVeterancy>
-    <CBehaviorVeterancy id="DehakaVeterancyCoopHigh">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <VeterancyLevelArray/>
-        <VeterancyLevelArray MinVeterancyXP="15" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="30" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="45" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="60" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="75" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="90" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="105" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="120" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="135" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="150" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="165" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="180" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <VeterancyLevelArray MinVeterancyXP="195" LevelGainEffect="DehakaLevelUpDummyMU"/>
-        <BehaviorFlags index="Permanent" value="1"/>
-        <BehaviorFlags index="EnabledWhileDead" value="1"/>
-        <XPFraction index="Kills" value="0"/>
-    </CBehaviorVeterancy>
     <CBehaviorVeterancy id="DehakaVeterancyCoopFinal">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <VeterancyLevelArray/>
@@ -878,7 +814,6 @@
             <RequireEffectArray value="DehakaKaiserBladesLevel2Damage"/>
             <RequireEffectArray value="DehakaKaiserBladesLevel2SecondaryDamage"/>
             <RequireEffectArray value="DehakaKaiserBladesLevel3Damage"/>
-            <RequireEffectArray value="DehakaKaiserBladesLevel3SecondaryDamage"/>
             <Chance value="0.2"/>
         </DamageResponse>
         <InfoFlags index="Hidden" value="1"/>
@@ -1018,5 +953,60 @@
     <CBehaviorBuff id="DehakaDakrunInPlay">
         <InfoFlags index="Hidden" value="1"/>
         <DisableValidatorArray value="DehakaDakrunInPlay"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGlevigInPlay">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="DehakaGlevigInPlay"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMurvarInPlay">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="DehakaMurvarInPlay"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RoachRegenDummy">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="LifeNotFull"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PreventKnockback">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaEggPopStun">
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification TimeScale="0.01">
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+        <Duration value="0.0625"/>
+        <TimeScaleSource Value="Global"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaDisableBarracksTrain">
+        <Modification>
+            <RateMultiplierArray index="Charge" value="0.001"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="KraithCrashingChargeKnockback">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Modification Height="2" MoveSpeedMultiplier="4">
+            <StateFlags index="Uncommandable" value="1"/>
+            <HeightTime index="Start" value="0.312"/>
+            <HeightTime index="Stop" value="0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaGlevigEggSummonTimedLife" parent="TimedLife">
+        <Duration value="60"/>
+        <Modification>
+            <AbilClassDisableArray index="CAbilMerge" value="1"/>
+            <AbilLinkDisableArray value="DehakaCoopReviveEat"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GlevigUnturnable">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Modification>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+        </Modification>
+        <Duration value="6"/>
     </CBehaviorBuff>
 </Catalog>

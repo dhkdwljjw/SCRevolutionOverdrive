@@ -759,8 +759,10 @@
         <Spread value="10.000000"/>
         <Volume value="4.000000,4.000000"/>
     </CSound>
-    <CSound id="Hybrid_StealStrengthCast">
-        <SustainFade index="1" Time="1500" Volume="-96.000000"/>
+    <CSound id="Hybrid_StealStrengthCast" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Hybrid\Hybrid_StealStrengthCast0.wav"/>
+        <SustainFade index="1" Time="1500"/>
     </CSound>
     <CSound id="Hybrid_StealStrengthLoop" parent="Spell">
         <EditorCategories value="Race:Zerg"/>
@@ -2535,7 +2537,6 @@
         <CategoryDuckingLocal value="Dehaka_MusicLevel15"/>
         <Flags index="Download" value="1"/>
     </CSound>
-    <CSound id="PrimalEgg_DeathExplosion" parent="Zerg_ExplosionSmall"/>
     <CSound id="ZergInfested_SpawnEggLaunch" parent="Spell">
         <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Zerg\BroodLord\Broodlord_AttackLaunch0.wav"/>
@@ -3435,5 +3436,1192 @@
         <AssetArray File="Assets\Sounds\Guardian_What03.ogg" FacialGroup=""/>
         <Pitch value="-6.000000,-5.000000"/>
         <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Alert_GamePaused_PZrg" parent="Alert">
+        <Flags index="Unpausable" value="1"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_GamePaused00.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Exclusivity value="GamePausedResumed"/>
+    </CSound>
+    <CSound id="Alert_GameResumed_PZrg" parent="Alert">
+        <Flags index="Unpausable" value="1"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_GameResumed00.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Exclusivity value="GamePausedResumed"/>
+    </CSound>
+    <CSound id="Alert_TerranAddOnComplete_PZrg" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\Alert_SITerranAddOnComplete.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgAllyBaseUnderAttack" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_AllyBaseUnderAttack00.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgAllyUnderAttack" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_AllyUnderAttack00.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgAtMaximumSupply" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MaxSupply00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MaxSupply01.ogg" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="Alert_PZrgBaseUnderAttack" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_BaseUnderAttack00.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgBuildError" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_BuildError00.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgCalldownLaunch" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_CalldownLaunch00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_CalldownLaunch01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+        <Flags index="Ignorable" value="0"/>
+    </CSound>
+    <CSound id="Alert_PZrgCreepTumorUnderAttack" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_TumorUnderAttack00.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgEconomyUnderAttack" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_WorkersUnderAttack00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_WorkersUnderAttack01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgEvolutionComplete" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_EvolutionComplete00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_EvolutionComplete01.ogg" FacialGroup=""/>
+        <Mode value="3DWorld"/>
+        <Category value="Ready"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgForcesUnderAttack" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_ForcesUnderAttack00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_ForcesUnderAttack01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgMaxSupply" parent="Alert" Portrait="QueenPortrait" Subtitle="Genericphrases" Speaker="CharQueen" Line="00186">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MaxSupply00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MaxSupply01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgMetamorphosisComplete" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MetamorphosisComplete00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MetamorphosisComplete01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgMineralsDepleted" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MineralsDepleted00.ogg"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MineralsDepleted01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MineralsDepleted02.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgMutationComplete" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MutationComplete00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MutationComplete01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgNeedMoreFood" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreFood00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreFood01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreFood02.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgNeedMoreGas" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreGas00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreGas01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreGas02.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgNeedMoreMinerals" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreMinerals00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreMinerals01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreMinerals02.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgNewQueen" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_QueenDeployed00.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgNotEnoughEnergy" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NotEnoughEnergy00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NotEnoughEnergy01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgPlaceOnCreep" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedCreep00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedCreep01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgPlaceOnVespeneGeyser" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedGeyser00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedGeyser01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgReasearchComplete" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MetamorphosisComplete00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MetamorphosisComplete01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgUpgradeComplete" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MutationComplete00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MutationComplete01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgVespeneGeyserExhausted" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_GeyserExhausted00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_GeyserExhausted01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_GeyserExhausted02.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="Alert_PZrgWarpTrainComplete" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_EvolutionComplete00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_EvolutionComplete01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdCantFinishBuildingLocationBlocked_PZrg" parent="Alert">
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildLocationInvalid_PZrg" parent="Alert">
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdCantSeeBuildLocation_PZrg" parent="Alert">
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildOnThat_PZrg" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\Queen\Alert_ZergPlaceOnVespeneGeyser.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToResources_PZrg" parent="Alert">
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToDropOff_PZrg" parent="Alert">
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughMinerals_PZrg" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreMinerals00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreMinerals01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreMinerals02.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughVespene_PZrg" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreGas00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreGas01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreGas02.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughEnergy_PZrg" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NotEnoughEnergy00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NotEnoughEnergy01.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughFood_PZrg" parent="Alert">
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreFood00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreFood01.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_NeedMoreFood02.ogg" FacialGroup=""/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdFoodUsageImpossible_PZrg" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MaxSupply00.ogg" FacialGroup=""/>
+        <AssetArray File="LocalizedData\Sounds\VO\IzshaA_MaxSupply01.ogg" FacialGroup=""/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="e_cmdCouldntReachTarget_PZrg" parent="Alert">
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandLocationInvalid_PZrg" parent="Alert">
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg"/>
+        <Flags index="Temporary" value="1"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToCreepSource_PZrg" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg" FacialGroup=""/>
+    </CSound>
+    <CSound id="e_cmdBuildTechRequirementsNotMet_PZrg" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Drone\Drone_Error3.ogg"/>
+    </CSound>
+    <CSound id="Dehaka_Murvar_Spawn_In_RockExplo" parent="Scripted_2D_Multichannel">
+        <AssetArray File="Assets\Sounds\Kraith_RockImpact_1.wav" FacialGroup=""/>
+        <Flags index="Stream" value="0"/>
+        <Mode value="3DWorld"/>
+        <Pitch value="-3.000000,-3.000000"/>
+        <SpeakerMix index="Center" value="0.000000"/>
+        <SpeakerMix index="LFE" value="0.250000"/>
+        <SpeakerMix index="SideLeft" value="0.000000"/>
+        <SpeakerMix index="SideRight" value="0.000000"/>
+        <Spread value="180.000000"/>
+        <SustainFade index="1" Time="1000" Volume="-96.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="34.000000" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="Murvar_InDenBurrow" parent="Ambience_Object">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_05.wav" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="400"/>
+        <Pitch value="-4.000000,-2.000000"/>
+    </CSound>
+    <CSound id="Murvar_InDenDeathVox" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Guardian_What00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Guardian_What01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Guardian_What02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Guardian_What03.ogg" FacialGroup=""/>
+        <Pitch value="-6.000000,-5.000000"/>
+        <Volume value="-1.000000,-1.000000"/>
+    </CSound>
+    <CSound id="GlevigDen_Inhale" parent="Movement">
+        <AssetArray File="Assets\Sounds\GlevigDen_Inhale01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GlevigDen_Inhale02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GlevigDen_Inhale03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GlevigDen_Inhale04.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-14.000000,-10.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="20.000000" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="GlevigDen_Chomp" parent="Movement">
+        <AssetArray File="Assets\Sounds\GlevigDen_Chomp01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GlevigDen_Chomp02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GlevigDen_Chomp03.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-10.000000,-6.000000"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="20.000000" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="MurvarDen_Ready" parent="ZergReady">
+        <AssetArray File="Assets\Sounds\MurvarDen_What01.ogg" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+        <Pitch value="-0.300000,0.300000"/>
+    </CSound>
+    <CSound id="MurvarDen_What" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\MurvarDen_What01.ogg" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+        <Pitch value="-0.300000,0.300000"/>
+    </CSound>
+    <CSound id="GlevigDen_Ready" parent="ZergReady">
+        <AssetArray File="Assets\Sounds\GlevigDen_What01.ogg" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+        <Pitch value="-2.300000,-1.700000"/>
+    </CSound>
+    <CSound id="GlevigDen_What" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\GlevigDen_What01.ogg" FacialGroup=""/>
+        <Volume value="-1.000000,-1.000000"/>
+        <Pitch value="-2.300000,-1.700000"/>
+    </CSound>
+    <CSound id="PrimalIgniter_Attack" parent="HoS_PrimalAck">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Zerg\Roach\Roach_Attack0.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <FacialFile value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Attack1.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Attack2.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Attack3.ogg" FacialGroup=""/>
+        <Pitch value="-8.000000,-6.000000"/>
+        <Volume value="-1.000000,0.000000"/>
+    </CSound>
+    <CSound id="PrimalIgniter_Death" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Death0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Death1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Death2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Death3.wav"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-10.000000,-8.000000"/>
+    </CSound>
+    <CSound id="PrimalIgniter_Pissed" parent="Pissed">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed4.ogg"/>
+        <Volume value="-1.000000,1.000000"/>
+        <Pitch value="-9.000000,-6.000000"/>
+    </CSound>
+    <CSound id="PrimalIgniter_Ready" parent="Ready">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Ready0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Ready1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Ready2.ogg"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-9.000000,-6.000000"/>
+    </CSound>
+    <CSound id="PrimalIgniter_What" parent="HoS_PrimalAck">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Zerg\Roach\Roach_What0.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value="Default"/>
+            <FacialFile value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What4.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What5.ogg"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-10.000000,-7.000000"/>
+    </CSound>
+    <CSound id="PrimalIgniter_Yes" parent="HoS_PrimalAck">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Zerg\Roach\Roach_Yes0.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value="Default"/>
+            <FacialFile value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Yes1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Yes2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Yes3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Yes4.ogg"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-9.000000,-6.000000"/>
+    </CSound>
+    <CSound id="RoachPrimal_Attack" parent="HoS_PrimalAck">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Zerg\Roach\Roach_Attack0.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value=""/>
+            <FacialFile value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Attack1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Attack2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Attack3.ogg"/>
+        <Pitch value="-4.000000,-3.000000"/>
+        <Volume value="-1.000000,0.000000"/>
+    </CSound>
+    <CSound id="RoachPrimal_Death" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Death0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Death1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Death2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Death3.wav"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-4.000000,-3.000000"/>
+    </CSound>
+    <CSound id="RoachPrimal_Pissed" parent="Pissed">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Pissed4.ogg"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-4.000000,-3.000000"/>
+    </CSound>
+    <CSound id="RoachPrimal_Ready" parent="Ready">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Ready0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Ready1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Ready2.ogg"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-4.000000,-3.000000"/>
+    </CSound>
+    <CSound id="RoachPrimal_What" parent="HoS_PrimalAck">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Zerg\Roach\Roach_What0.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value="Default"/>
+            <FacialFile value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What4.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_What5.ogg"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-4.000000,-3.000000"/>
+    </CSound>
+    <CSound id="RoachPrimal_Yes" parent="HoS_PrimalAck">
+        <AssetArray index="0">
+            <File value="Assets\Sounds\Zerg\Roach\Roach_Yes0.ogg"/>
+            <FacialAnim value=""/>
+            <FacialGroup value="Default"/>
+            <FacialFile value=""/>
+            <Speaker value=""/>
+            <Subtitle value=""/>
+        </AssetArray>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Yes1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Yes2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Yes3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_Yes4.ogg"/>
+        <Volume value="-1.000000,0.000000"/>
+        <Pitch value="-4.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Primal_Ravasaur_Death_Vx" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Death_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Death_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Death_04.wav" FacialGroup=""/>
+        <Pitch value="-4.000000,-1.000000"/>
+        <Volume value="-4.000000,-2.000000"/>
+    </CSound>
+    <CSound id="Primal_Ravasaur_Lurch_Vx" parent="Movement">
+        <AssetArray File="Assets\Sounds\PrimalRavasaur_Lurch_Vx_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Vox_Snarl_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Stank_VxFx_Snarl_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_00.ogg" FacialGroup=""/>
+        <Pitch value="1.000000,2.000000"/>
+        <Volume value="-4.000000,-2.000000"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+    </CSound>
+    <CSound id="Primal_Ravasaur_Land" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_5.wav" FacialGroup=""/>
+        <Pitch value="4.000000,6.000000"/>
+        <Volume value="-10.000000,-6.000000"/>
+    </CSound>
+    <CSound id="Primal_Ravasaur_Mv_Fs" parent="Movement">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_3.wav" Volume="-3.000000,-3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Fs_5.wav" FacialGroup=""/>
+        <Pitch value="-9.000000,-5.000000"/>
+        <Volume value="-19.000000,-14.000000"/>
+    </CSound>
+    <CSound id="Primal_Ravasaur_Mv_Vx" parent="Movement">
+        <AssetArray File="Assets\Sounds\Stukov_InfestedBunker_Walk_VxFx_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Stukov_InfestedBunker_Walk_VxFx_02.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,1.000000"/>
+        <Volume value="-12.000000,-12.000000"/>
+    </CSound>
+    <CSound id="Primal_Ravasaur_PawScratches" parent="Movement">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalRavasaur_PawScratch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalRavasaur_PawScratch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalRavasaur_PawScratch_04.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,1.000000"/>
+        <Volume value="-23.000000,-17.000000"/>
+        <Chance value="60"/>
+    </CSound>
+    <CSound id="Ravasaur_Attack" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_07.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_08.ogg" FacialGroup=""/>
+        <Flags index="Ignorable" value="1"/>
+        <Flags index="Purgable" value="0"/>
+        <Flags index="Stream" value="1"/>
+        <Category value="Voice"/>
+        <Chance value="0"/>
+        <PanLevel value="0.750000"/>
+        <Pitch value="9.000000,12.000000"/>
+        <SustainFade index="1" Time="250"/>
+        <Volume value="-3.000000,-1.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_AttackAcknowledgment" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_07.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_08.ogg" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_AttackImpact" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_AttackImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_AttackImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_AttackImpact2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_AttackImpact3.wav" FacialGroup=""/>
+        <DupeDestroyCount value="4"/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_AttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg_AttackLaunch_LargeSwingSingle_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg_AttackLaunch_LargeSwingSingle_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg_AttackLaunch_LargeSwingSingle_02.wav" Pitch="-2.000000,-2.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg_AttackLaunch_LargeSwingSingle_03.wav" FacialGroup=""/>
+        <DupeDestroyCount value="4"/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_AttackVox" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_07.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Attack_08.ogg" FacialGroup=""/>
+        <Flags index="Ignorable" value="1"/>
+        <Flags index="Purgable" value="0"/>
+        <Flags index="Stream" value="1"/>
+        <Chance value="40"/>
+        <Pitch value="9.000000,12.000000"/>
+        <Volume value="-15.000000,-14.000000"/>
+        <DupeWait value="4000,4000"/>
+    </CSound>
+    <CSound id="Ravasaur_Explode" parent="Roach_Explode">
+        <Volume value="-4.000000,-2.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_Movement" parent="Movement">
+        <AssetArray File="Assets\Sounds\Tyrannozor_Vx_Mv_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tyrannozor_Vx_Mv_02.wav" FacialGroup=""/>
+        <DupeDestroyCount value="2"/>
+        <DupeMuteCount value="2"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-10.000000,-7.000000"/>
+        <Chance value="0"/>
+    </CSound>
+    <CSound id="Ravasaur_MvFs" parent="Movement">
+        <AssetArray File="Assets\Sounds\Tyrannozor_Vx_Mv_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Tyrannozor_Vx_Mv_02.wav" FacialGroup=""/>
+        <DupeDestroyCount value="2"/>
+        <DupeMuteCount value="2"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-10.000000,-7.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_Pissed" parent="ZergPissed">
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Death_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Death_03.wav" FacialGroup=""/>
+        <Pitch value="3.000000,6.000000"/>
+        <Volume value="-10.000000,-10.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_Ready" parent="Ready">
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Ready_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Ready_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Ready_02.ogg" FacialGroup=""/>
+        <Pitch value="4.000000,6.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_Spit" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Ravasaur_spit00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ravasaur_spit01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ravasaur_spit02.wav" FacialGroup=""/>
+        <Pitch value="-4.000000,0.000000"/>
+        <Volume value="-5.000000,-5.000000"/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+    </CSound>
+    <CSound id="Ravasaur_Spit_Impact" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Terrorzor_AntiAir_Impact_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terrorzor_AntiAir_Impact_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terrorzor_AntiAir_Impact_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terrorzor_AntiAir_Impact_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terrorzor_AntiAir_Impact_5.wav" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-7.000000,-7.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_What" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_What_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_What_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_What_02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_What_03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_What_04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_What_05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_What_06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_What_07.ogg" FacialGroup=""/>
+        <Pitch value="3.000000,6.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="Ravasaur_Yes" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Yes_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Yes_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Yes_02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Yes_03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Yes_04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Yes_06.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalToughGuy_Yes_07.ogg" FacialGroup=""/>
+        <Pitch value="3.000000,6.000000"/>
+        <Volume value="-8.000000,-8.000000"/>
+    </CSound>
+    <CSound id="DehakaZergling_Merge_Emerge" parent="Ambience_Object">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Abathur_Relief_Vx_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalRavasaur_PawScratch_01.wav" Pitch="-4.000000,-4.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalRavasaur_PawScratch_02.wav" Pitch="-4.000000,-4.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalRavasaur_PawScratch_03.wav" Pitch="-2.000000,-2.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalRavasaur_PawScratch_04.wav" Pitch="-4.000000,-4.000000" FacialGroup=""/>
+        <DupeDestroyCount value="6"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="4"/>
+        <Pitch value="-6.000000,-4.000000"/>
+        <Volume value="-3.000000,-2.000000"/>
+        <DupePrioritization value="Oldest"/>
+    </CSound>
+    <CSound id="Dehaka_Zergling_Merge_Combat_Vx_Lp" parent="Build">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\EvoSelect_Zergling00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\EvoSelect_Zergling002.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\EvoSelect_Zergling01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\EvoSelect_Zergling03.wav" FacialGroup=""/>
+        <LoopCount value="-1"/>
+        <Pitch value="2.000000,4.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Dehaka_Zergling_Merge_Combat_Lp" parent="Build">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Zergling\Zergling_AttackLaunch5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Zergling\Zergling_AttackLaunch6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Zergling\Zergling_AttackLaunch7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Zergling\Zergling_AttackLaunch8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\Zergling\Zergling_AttackLaunch9.wav" FacialGroup=""/>
+        <LoopCount value="-1"/>
+        <Pitch value="2.000000,4.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="DehakaNydus_DestroyerBeam_Lp" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\SOA_TemporalField_Loop_1ch.wav" FacialGroup=""/>
+        <Pitch value="-3.310000,-2.310000"/>
+        <Volume value="-3.000000,-3.000000"/>
+        <LoopCount value="-1"/>
+        <Spread value="20.000000"/>
+    </CSound>
+    <CSound id="DehakaNydus_DestroyerBeam_End" parent="Combat">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_FlameTurret_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_FlameTurret_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_FlameTurret_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_FlameTurret_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_FlameTurret_Impact_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_Xanthos_FlameTurret_Impact_06.wav" FacialGroup=""/>
+        <Pitch value="-2.310000,0.690000"/>
+        <Spread value="20.000000"/>
+        <Volume value="-2.000000,-1.000000"/>
+    </CSound>
+    <CSound id="NydusDestroyer_Ready" parent="Ready">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Ready_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Ready_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Ready_02.ogg" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="NydusDestroyer_Unburrow" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge0.wav"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge1.wav"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge2.wav"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge3.wav"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge4.wav"/>
+        <Flags index="Download" value="0"/>
+        <Flags index="Purgable" value="0"/>
+        <Category value="Doodad"/>
+        <DupeDestroyCount value="32"/>
+        <Pitch value="-2.000000,2.000000"/>
+        <ResourcePriority value="16"/>
+        <SustainFade index="1" Time="2000"/>
+    </CSound>
+    <CSound id="NydusDestroyer_AttackImpact" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged3.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged4.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged5.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged6.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged7.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged8.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Roach\Roach_AttackImpactRanged9.wav"/>
+        <Pitch value="-6.000000,-6.000000"/>
+        <Volume value="-13.980000,-12.040000"/>
+    </CSound>
+    <CSound id="NydusDestroyer_AttackLaunch" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_AttackLaunch_09.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,2.000000"/>
+        <Volume value="-3.000000,0.000000"/>
+    </CSound>
+    <CSound id="PrimalWurm_Bodyfall" parent="Movement">
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Impact_05.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="3"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="PrimalWurm_BodyfallWhoosh" parent="Movement">
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Whoosh_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Whoosh_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Whoosh_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Whoosh_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Ultralisk_Death_Bodyfall_Whoosh_05.wav" FacialGroup=""/>
+        <DupeDestroyCount value="3"/>
+        <DupeMuteCount value="3"/>
+        <Pitch value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="PrimalWurm_Death" parent="ZergDeath">
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Death_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Death_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Death_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Death_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Death_04.wav" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
+        <Pitch value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="PrimalWurm_DeathLong" parent="ZergDeath">
+        <AssetArray File="Assets\Sounds\PrimalWurm_VoxDeath01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalWurm_VoxDeath02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalWurm_VoxDeath03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalWurm_VoxDeath04.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="PrimalWurm_Ready" parent="ZergReady">
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Ready_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Ready_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Ready_02.ogg" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="PrimalWurm_What" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\NydusDestroyer_What_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_What_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_What_02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_What_03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_What_04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_What_05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_What_06.ogg" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="PrimalWurm_Attack" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Attack_00.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Attack_01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Attack_02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Attack_03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Attack_04.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Attack_05.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\NydusDestroyer_Attack_06.ogg" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
+        <Pitch value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="InfestedCocoon_Civilian_Birth" parent="Death">
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedBirth_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedBirth_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedBirth_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedBirth_04.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,0.000000"/>
+        <Volume value="-2.000000,0.000000"/>
+        <DupeDestroyCount value="3"/>
+        <DupeMuteCount value="3"/>
+        <PlayDelay value="0,200"/>
+    </CSound>
+    <CSound id="InfestedCocoon_Death" parent="Death">
+        <AssetArray File="Assets\Sounds\Seps_Evis_Death_Split_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Seps_Evis_Death_Split_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Seps_Evis_Death_Split_03.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,0.000000"/>
+        <Volume value="-8.000000,-6.000000"/>
+        <DupeDestroyCount value="4"/>
+        <DupeMuteCount value="4"/>
+        <VolumeRolloffPoints Distance="10.000000"/>
+        <VolumeRolloffPoints Distance="20.000000" Volume="-96.000000"/>
+    </CSound>
+    <CSound id="InfestedCocoon_Civilian_Death" parent="Death">
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedDeath_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedDeath_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedDeath_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedDeath_04.wav" FacialGroup=""/>
+        <Pitch value="-2.000000,0.000000"/>
+        <Volume value="-4.000000,-2.000000"/>
+        <DupeDestroyCount value="6"/>
+        <DupeMuteCount value="4"/>
+    </CSound>
+    <CSound id="Primal_Zerg_BirthSplash" parent="Ambience_Object">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\CreepTumor_MissleSplash_9.wav" FacialGroup=""/>
+        <Pitch value="-12.000000,-10.000000"/>
+        <Volume value="-2.000000,0.000000"/>
+    </CSound>
+    <CSound id="PrimalEgg_ReadyPopExplosion" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Birth0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Birth1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Birth2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Egg\Egg_Birth3.wav"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="PrimalEgg_PreDeathExplosion" parent="Death">
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedBirth_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedBirth_02.wav" Weight="10" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedBirth_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Cocoon_InfestedBirth_04.wav" FacialGroup=""/>
+        <DupeDestroyCount value="2"/>
+        <DupeMuteCount value="2"/>
+        <DupeWait value="0,2000"/>
+        <Pitch value="3.000000,6.000000"/>
+        <Select value="Random"/>
+        <Volume value="-12.000000,-9.000000"/>
+    </CSound>
+    <CSound id="PrimalEgg_DeathExplosion" parent="Zerg_ExplosionSmall"/>
+    <CSound id="PrimalSpawningPool_Burrow" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_Burrow0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_Burrow1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_Burrow2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_Burrow3.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Ultralisk\Ultralisk_Burrow4.wav"/>
+        <Pitch value="-3.000000,-2.000000"/>
+    </CSound>
+    <CSound id="PrimalSpawningPool_Footstep" parent="Movement">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_BaseFootstepFS01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_BaseFootstepFS02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_BaseFootstepFS03.wav" Volume="3.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_BaseFootstepFS04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_BaseFootstepFS05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_BaseFootstepFS06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_BaseFootstepFS07.wav" Volume="2.000000,2.000000" FacialGroup=""/>
+        <AssetArray>
+            <File value="Assets\Sounds\MonsterHuge_BaseFootstepFS08.wav"/>
+            <Volume value="3.000000,3.000000"/>
+            <Weight value="10"/>
+            <FacialGroup value=""/>
+        </AssetArray>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="2"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="2.000000,4.000000"/>
+        <PlayDelay value="0,30"/>
+        <Select value="Random"/>
+        <Volume value="-6.000000,-4.000000"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="250"/>
+    </CSound>
+    <CSound id="PrimalSpawningPool_Movement" parent="Movement">
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement10.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement11.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement12.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement13.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement14.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement15.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement16.wav" FacialGroup=""/>
+        <DupeDestroyCount value="2"/>
+        <DupeMuteCount value="2"/>
+        <Pitch value="2.000000,3.000000"/>
+        <Volume value="-14.000000,-11.000000"/>
+    </CSound>
+    <CSound id="PrimalSpawningPool_Ready" parent="ZergReady">
+        <AssetArray File="Assets\Sounds\PrimalHatchery_WhatLR03.wav" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
+        <Pitch value="0.000000,0.300000"/>
+    </CSound>
+    <CSound id="PrimalSpawningPool_What" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_WhatLR03.wav" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
+        <Pitch value="0.000000,0.300000"/>
+    </CSound>
+    <CSound id="PrimalSpawningPool_Unburrow" parent="Build">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Burrowing\Zerg_UnburrowSmall0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Burrowing\Zerg_UnburrowSmall1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Burrowing\Zerg_UnburrowSmall2.wav"/>
+        <DupeDestroyCount value="8"/>
+        <DupeMuteCount value="3"/>
+        <Pitch value="-5.000000,-4.000000"/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="PrimalHatcheryUprooted_VoxDeath" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_VoxDeathLR01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_VoxDeathLR02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_VoxDeathLR03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_VoxDeathLR04.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Spread value="20.000000"/>
+        <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="PrimalSpawningPoolUprooted_VoxDeath" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_VoxDeath01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_VoxDeath02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_VoxDeath03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_VoxDeath04.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="4.000000,4.000000"/>
+    </CSound>
+    <CSound id="PrimalHatcheryUprooted_What" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_WhatLR01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_WhatLR02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_WhatLR03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_WhatLR04.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Spread value="20.000000"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="PrimalSpawningPoolUprooted_What" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\PrimalHatchery_What01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_What02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_What03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_What04.ogg" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="PrimalHatcheryUprooted_Yes" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_YesLR01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_YesLR02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_YesLR03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_YesLR04.wav" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Spread value="20.000000"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="PrimalSpawningPoolUprooted_Yes" parent="ZergAck">
+        <AssetArray File="Assets\Sounds\PrimalHatchery_Yes01.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_Yes02.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_Yes03.ogg" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalHatchery_Yes04.ogg" FacialGroup=""/>
+        <Pitch value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="PrimalTownHall_Die" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Die_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Die_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Die_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Die_4.wav" FacialGroup=""/>
+        <Pitch value="-3.000000,0.000000"/>
+        <Volume value="-2.000000,0.000000"/>
+    </CSound>
+    <CSound id="Slivan_MeatSplatGround" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Slivan_MeatSplat_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Slivan_MeatSplat_2.wav" Pitch="2.000000,3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Slivan_MeatSplat_3.wav" Volume="4.000000,4.000000" FacialGroup=""/>
+        <Pitch value="-3.000000,1.000000"/>
+        <Volume value="-1.000000,1.000000"/>
+    </CSound>
+    <CSound id="PrimalHatchery_Burrow" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Yagdra_Burrow_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Yagdra_Burrow_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Yagdra_Burrow_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Yagdra_Burrow_4.wav" FacialGroup=""/>
+        <Pitch value="-4.000000,-3.000000"/>
+        <Volume value="1.000000,1.000000"/>
+    </CSound>
+    <CSound id="PrimalHatchery_Burrow2" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Burrowing\Zerg_BurrowLarge0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Burrowing\Zerg_BurrowLarge1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Burrowing\Zerg_BurrowLarge2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Burrowing\Zerg_BurrowLarge3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Burrowing\Zerg_BurrowLarge4.wav" FacialGroup=""/>
+        <Pitch value="-6.000000,-4.000000"/>
+        <Volume value="2.000000,2.000000"/>
+    </CSound>
+    <CSound id="PrimalHatchery_Footstep" parent="Movement">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\StoneZealot_footstep01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\StoneZealot_footstep02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\StoneZealot_footstep03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\StoneZealot_footstep08.wav" Pitch="-3.000000,-3.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\StoneZealot_footstep09.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="2"/>
+        <DupePrioritization value="Oldest"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="200"/>
+        <Pitch value="-2.000000,2.000000"/>
+        <PlayDelay value="0,30"/>
+        <Volume value="-7.000000,-4.000000"/>
+    </CSound>
+    <CSound id="PrimalHatchery_Movement" parent="Movement">
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement06.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement07.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement08.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement09.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement10.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement11.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement12.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement13.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement14.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement15.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\MonsterHuge_FoleyMovement16.wav" FacialGroup=""/>
+        <DupeMuteCount value="2"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-18.000000,-10.000000"/>
+        <DupeDestroyCount value="2"/>
+    </CSound>
+    <CSound id="PrimalHatchery_Ready" parent="ZergReady">
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_WhatLR04.wav" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+        <Pitch value="-5.000000,-4.500000"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="500"/>
+    </CSound>
+    <CSound id="PrimalHatchery_What" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalSpawningPool_WhatLR04.wav" FacialGroup=""/>
+        <Volume value="-4.000000,-4.000000"/>
+        <Pitch value="-5.000000,-4.500000"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="500"/>
+    </CSound>
+    <CSound id="PrimalHatchery_Unburrow" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge0.wav"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge1.wav"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge2.wav"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge3.wav"/>
+        <AssetArray File="Assets\Sounds\Uni\Units\Rocks\Rocks_ExplosionLarge4.wav"/>
+        <Pitch value="-3.000000,-1.000000"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="100"/>
+    </CSound>
+    <CSound id="PrimalExtractor_Ready" parent="Ready">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Extractor\Extractor_What0.ogg" Offset="80000,80000"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="200"/>
+        <Pitch value="-1.000000,-1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="PrimalExtractor_What" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Extractor\Extractor_What0.ogg" Offset="80000,80000"/>
+        <OffsetFadeIn Volume="-96.000000"/>
+        <OffsetFadeIn Time="200"/>
+        <Pitch value="-1.000000,-1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="Dehaka_Eggsplosion_Death" parent="Ambience_Object">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Doodad_Eggsplosion_Death_00.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Doodad_Eggsplosion_Death_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Doodad_Eggsplosion_Death_02.wav" FacialGroup=""/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="4"/>
+        <DupePrioritization value="Oldest"/>
+        <Pitch value="-3.000000,3.000000"/>
+        <Volume value="-3.000000,0.000000"/>
+    </CSound>
+    <CSound id="Impaler_TentacleImpact2" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Kraith_Large_Fs_5.wav" FacialGroup=""/>
+        <Pitch value="5.000000,7.000000"/>
+        <Volume value="-16.000000,-13.000000"/>
+        <ResourcePriority value="64"/>
     </CSound>
 </Catalog>

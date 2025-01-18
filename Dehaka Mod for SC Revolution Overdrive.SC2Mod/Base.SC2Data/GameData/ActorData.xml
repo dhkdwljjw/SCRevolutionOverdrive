@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit default="1" id="DehakaTrainEgg" parent="GenericUnitMorph">
+        <On Terms="AbilTrain.*.Finish" Send="Create DehakaCocoonFinishDeath"/>
+        <On Terms="AbilTrain.*.Start" Send="$Birth"/>
+        <DeathArray index="Normal" ModelLink="DehakaTrainEgg" SoundLink="PrimalEgg_PreDeathExplosion"/>
+        <SoundArray index="What" value="Egg_What"/>
+    </CActorUnit>
+    <CActorModel default="1" id="PrimalZergBuildAttachedBurrowedSplat">
+        <Aliases value="_Snapshot"/>
+        <Aliases value="_PrimalZergBuildModelExtra"/>
+        <Inherits index="CastShadows" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="CreepEngulfment" value="1"/>
+        <Inherits index="Decal" value="1"/>
+        <Inherits index="ModelMaterials" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="TeamColor" value="1"/>
+        <Inherits index="TimeScale" value="1"/>
+        <Inherits index="TintColor" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Inherits index="WarpGroup" value="1"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Unburrow Stand Burrow"/>
+        <On Terms="Abil.DehakaDroneMorph.BuiltStart" Send="Create PrimalZergConstructionAttachedExtra"/>
+        <On Terms="AnimBracketState.*.AfterClosing; !AnimBracketExitReason ModelSwap; AnimName BSD" Send="Destroy"/>
+        <On Terms="UnitDeath" Send="AnimBracketStop BSD"/>
+        <On Terms="UnitConstruction.*.Finish" Send="AnimClear ::Progress"/>
+        <HostForProps Subject="_Selectable"/>
+        <ModelFlags index="AutomatedGlobalLoopsIgnoreOrphan" value="1"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <ModelFlags index="UseSyncSeed" value="1"/>
+    </CActorModel>
     <CActorModel default="1" id="PrimalZergBuildAttachedExtra">
         <Terms value="Cap 1"/>
         <Aliases value="_Snapshot"/>
@@ -57,6 +87,12 @@
         <On Terms="WeaponStart.DehakaDroneSpines.AttackStart" Send="Create"/>
         <Sound value="Drone_AttackLaunch"/>
     </CActorSound>
+    <CActorUnit id="ExtractorRich">
+        <On Terms="Behavior.DehakaExtractor.On" Send="SetTintColor 128,128,255"/>
+        <On Terms="Behavior.HarvestableRichVespeneGeyserGasZerg.Restore; ValidateUnit HaveDehakaExtractor" Send="SetTintColor 128,128,255"/>
+        <On Terms="Behavior.HarvestableRichVespeneGeyserGasZerg.Restore; ValidateUnit NotHaveDehakaExtractor" Send="SetTintColor 255,255,255"/>
+        <Remove Terms="Behavior.HarvestableRichVespeneGeyserGasZerg.Restore" Send="SetTintColor 255,255,255"/>
+    </CActorUnit>
     <CActorBeamSimple id="MammothBreathBeam" parent="BeamSimpleAnimationStyleContinuous">
         <On Terms="UnitDeath" Send="AnimBracketStop BSD"/>
         <ModelFlags index="AllowHitTest" value="0"/>
@@ -950,7 +986,6 @@
         <On Terms="Abil.DehakaDeepTunnel.SourceCastStart" Send="AnimPlay DeepBurrow Stand,Work,Start NonLooping,DontResetOnUnhide"/>
         <On Terms="AnimDone; AnimName DeepBurrow" Send="AnimPlay DeepUnburrow Stand,Work,End NonLooping,DontResetOnUnhide"/>
         <On Terms="AnimDone; AnimName DeepBurrow" Send="AnimClear DeepBurrow"/>
-        <On Terms="UnitDeathCustomize; ValidateUnit HasZergGenericDeath" Send="DeathCustomize Detached"/>
         <On Terms="Abil.DehakaSwipe.SourcePrepStart" Send="AnimPlay Spell Attack,03 0 -1.000000 -1.000000 1.000000 AsTimeScale"/>
         <On Terms="Abil.MammothBeam.SourceChannelStart" Send="AnimPlay Spell Channel PlayForever"/>
         <On Terms="Abil.MammothBeam.SourceChannelStop" Send="AnimClear Spell"/>
@@ -2100,8 +2135,9 @@
     </CActorModel>
     <CActorUnit id="DehakaGlevigDeepTunnelPlacement" parent="GenericUnitMinimal" unitName="DehakaGlevigDeepTunnelPlacement">
         <Model value="Invisible"/>
-        <PlacementModel value="Invisible"/>
+        <PlacementModel value="Glevig_Coop"/>
         <UnitFlags index="ShowBlobShadow" value="0"/>
+        <PlacementActorModel value="DehakaCoopReviveCocoonPlacementModel"/>
     </CActorUnit>
     <CActorModel id="DehakaGlevigSearchCursorDummy">
         <Flags index="SuppressSaveLoad" value="1"/>
@@ -2217,8 +2253,8 @@
         <DeathArray index="Normal" AnimProps="Burrow,Superior"/>
         <DeathArray index="UnderConstruction" ModelLink="ZergBuildingDeath" SoundLink="Zerg_ExplosionLarge"/>
         <PlacementSound value="Dehaka_Glevig_Spawn_In_RockExplo"/>
-        <PlacementActorModel value="ZergPlacementModel"/>
-        <PlaceholderActorModel value="ZergPlacementModel"/>
+        <PlacementActorModel value="DehakaCoopReviveCocoonPlacementModel"/>
+        <PlaceholderActorModel value="DehakaCoopReviveCocoonPlacementModel"/>
         <PortraitModel value="Glevig_Primal_Collection_Portrait"/>
         <BarOffset value="225"/>
         <BarWidth value="155"/>
@@ -2357,8 +2393,8 @@
         <PlacementSound value="Zerg_BuildingPlacement"/>
         <PortraitActor value="DehakaCoopPortrait"/>
         <PortraitModel value="DehakaCoopPortrait"/>
-        <BarOffset value="60"/>
-        <BarWidth value="78"/>
+        <BarOffset value="125"/>
+        <BarWidth value="155"/>
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-Dehaka-DehakaNest-Primal.dds"/>
         </GroupIcon>
@@ -2367,8 +2403,6 @@
         <SoundArray index="Ready" value="DehakaDen_What"/>
         <SoundArray index="What" value="DehakaDen_What"/>
         <SoundArray index="Construction" value="Zerg_BuildingMorphWhat"/>
-        <StatusBarFlags index="Life" value="0"/>
-        <StatusBarFlags index="Cargo" value="0"/>
         <UnitIcon value="Assets\Textures\btn-building-dehaka-dehakanest.dds"/>
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Dehaka-DehakaNest-Primal.dds"/>
@@ -3306,6 +3340,19 @@
         </DeathCustoms>
         <ModelFlags index="OutlineEmitter" value="1"/>
     </CActorUnit>
+    <CActorMissile id="ImpalerAttackMissile" parent="GenericAttackMissile" unitName="ImpalerWeapon">
+        <Model value="Invisible"/>
+        <Baselines index="Stand" AnimProps="Unburrow" BlendIn="-1.000000" BlendOut="-1.000000"/>
+        <HostSiteOps Ops="SOpShadow"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
+    </CActorMissile>
+    <CActorModel id="ImpalerAttackImpact">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <On Terms="Effect.ImpalerDehakaDamage.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="$Birth 0 0.000000 0.000000 1.500000 AsDuration"/>
+        <On Terms="AnimDone; AnimName Birth" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow SOpAttachOriginStationary"/>
+    </CActorModel>
     <CActorAction id="ImpalerDehakaAttack" parent="GenericAttack" effectImpact="ImpalerDehakaDamage" effectLaunch="ImpalerDehakaLM">
         <LaunchAssets Sound="Lurker_AttackLaunch2"/>
         <LaunchAttachQuery Methods="Origin"/>
@@ -3651,6 +3698,8 @@
         <On Terms="AbilMorph.*.Finish; MorphTo DehakaHydraliskLevel2; MorphFrom DehakaHydraliskLevel2Burrowed" Send="AnimBracketStop Burrow"/>
         <On Terms="AbilMorph.*.Finish; MorphTo DehakaHydraliskLevel2; MorphFrom DehakaHydraliskLevel2Burrowed" Send="AnimClear Burrow"/>
         <On Terms="UnitHeightUpdate.*.Land" Send="Create Hydra_Land"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggHydralisk" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggHydralisk" Send="AnimGroupRemove Work"/>
         <EventDataSound Name="HydraliskAttackImpactMelee" Actor="UnitSound" Sound="Hydralisk_AttackImpactMelee"/>
         <DeathArray index="Normal" ModelLink="Hydralisk_Primal_Collection_Death" SoundLink="Hydralisk_Explode"/>
         <DeathArray index="Disintegrate" ModelLink="Hydralisk_Primal_Collection_DeathAcid" SoundLink="Uni_DeathFXAcid"/>
@@ -3890,72 +3939,6 @@
         <SoundArray index="Attack" value="PrimalGuardian_Attack"/>
         <SoundArray index="Pissed" value=""/>
     </CActorUnit>
-    <CActorSound id="DehakaRoach_Merge_Combat_AS" parent="SoundContinuous">
-        <Sound value="Dehaka_Roach_Merge_Combat_Lp"/>
-        <Layers Sound="Dehaka_Roach_Merge_Combat_Vx_Lp">
-            <Chance value="100"/>
-            <Pitch value="0.000000,0.000000"/>
-            <PlayDelay value="0,0"/>
-            <Volume value="0.000000,0.000000"/>
-        </Layers>
-    </CActorSound>
-    <CActorModel id="DehakaRoachLevel3Merge" parent="ModelAddition">
-        <Model value="Roach_Primal_Collection"/>
-        <Inherits index="BaseModelScale" value="0"/>
-        <Inherits index="Opacity" value="0"/>
-        <Inherits index="Scale" value="0"/>
-        <On Terms="ActorCreation" Send="AnimPlay Attack Attack,Cover,00"/>
-        <On Terms="ActorCreation" Send="Create DehakaRoachLevel3MergeExtra"/>
-        <On Terms="ActorCreation" Send="Create DehakaRoach_Merge_Combat_AS"/>
-        <On Terms="ActorDestruction" Target="DehakaRoach_Merge_Combat_AS" Send="Destroy"/>
-        <On Terms="AnimDone; AnimName Attack" Send="AnimPlay AttackB Attack,Cover,02"/>
-        <On Terms="AnimDone; AnimName AttackB" Send="AnimPlay AttackC Attack,Cover,03"/>
-        <On Terms="AnimDone; AnimName AttackC" Send="AnimPlay AttackD Attack,Cover,00"/>
-        <On Terms="AnimDone; AnimName AttackD" Send="AnimPlay AttackE Attack,Cover,02"/>
-        <On Terms="AnimDone; AnimName AttackE" Send="AnimPlay AttackF Attack,Cover,01"/>
-        <On Terms="AnimDone; AnimName AttackF" Send="AnimPlay AttackG Attack,Cover,03"/>
-        <On Terms="AnimDone; AnimName AttackG" Send="AnimPlay AttackH Attack,Cover,03"/>
-        <On Terms="AnimDone; AnimName AttackH" Send="Create DehakaRoachLevel3MergeEgg"/>
-        <On Terms="AnimDone; AnimName AttackH" Send="AnimPlay Burrow Burrow"/>
-        <On Terms="AnimDone; AnimName Burrow" Send="Destroy"/>
-        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaRoachLevel3MergeExtra" Send="RefClear ::Host"/>
-        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaRoachLevel3MergeExtra" Send="$Death"/>
-        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaRoachLevel3MergeExtra" Send="AnimClear Attack"/>
-        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaRoachLevel3MergeExtra" Send="AnimClear AttackB"/>
-        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Send="Destroy"/>
-        <HostSiteOps Ops="SOpAttachOrigin SOpShadow"/>
-    </CActorModel>
-    <CActorSiteOpLocalOffset id="SOpDehakaRoach3Offset">
-        <LocalOffset value="0.000000,-1.500000,0.000000"/>
-    </CActorSiteOpLocalOffset>
-    <CActorModel id="DehakaRoachLevel3MergeExtra">
-        <Model value="Roach_Primal_Collection"/>
-        <On Terms="ActorCreation" Send="AnimPlay Attack Attack,Cover,00"/>
-        <On Terms="AnimDone; AnimName Attack" Send="AnimPlay AttackB Attack,Cover,01"/>
-        <On Terms="AnimDone; AnimName AttackB" Send="AnimPlay AttackC Attack,Cover,00"/>
-        <On Terms="AnimDone; AnimName AttackC" Send="AnimPlay AttackD Attack,Cover,02"/>
-        <On Terms="AnimDone; AnimName AttackD" Send="AnimPlay AttackE Attack,Cover,03"/>
-        <On Terms="AnimDone; AnimName AttackE" Send="AnimPlay AttackF Attack,Cover,00"/>
-        <On Terms="AnimDone; AnimName AttackF" Send="AnimPlay AttackG Attack,Cover,01"/>
-        <On Terms="AnimDone; AnimName AttackG" Send="ModelSwap Roach_Primal_Collection_Death"/>
-        <On Terms="AnimDone; AnimName AttackG" Send="RefClear ::Host"/>
-        <On Terms="AnimDone; AnimName AttackG" Send="$Death"/>
-        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
-        <On Terms="AnimDone; AnimName AttackG" Send="Create Zerg_CombatMerge_Death_AS"/>
-        <HostSiteOps Ops="SOpAttachOrigin SOpDehakaRoach3Offset SOp180 SOpShadow"/>
-        <Host Subject="::Creator"/>
-        <ModelFlags index="AllowHitTest" value="0"/>
-    </CActorModel>
-    <CActorModel id="DehakaRoachLevel3MergeEgg">
-        <On Terms="ActorCreation" Send="$Birth 0 0.000000 -1.000000 0.500000 AsTimeScale"/>
-        <On Terms="AnimDone; AnimName Birth" Send="$Stand"/>
-        <On Terms="AnimDone; AnimName Birth" Send="TimerSet 1.000000 DelayDeath"/>
-        <On Terms="TimerExpired; TimerName DelayDeath" Send="ModelSwap DehakaRoachLevel3MergeEggDeath"/>
-        <On Terms="TimerExpired; TimerName DelayDeath" Send="RefClear ::Host"/>
-        <On Terms="TimerExpired; TimerName DelayDeath" Send="$Death"/>
-        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
-        <Host Subject="::Creator"/>
-    </CActorModel>
     <CActorModel id="DehakaCoopReviveCocoonBuild" parent="PrimalZergBuildingBuild"/>
     <CActorModel id="DehakaGlevigStructureBuild" parent="PrimalZergBuildingBuild"/>
     <CActorModel id="DehakaMurvarStructureBuild" parent="PrimalZergBuildingBuild"/>
@@ -4019,6 +4002,7 @@
         <On Terms="UnitBirth.DehakaDakrunStructure" Send="Create DehakaDakrunStructureAttachSplat"/>
         <On Terms="ActorCreation" Send="Create MonsterLarge_VoxIdleGrowl_DelayedLoopSound"/>
         <DeathArray index="Normal" AnimProps="Burrow"/>
+        <DeathArray index="UnderConstruction" ModelLink="DehakaPrimalBuildingDeath"/>
         <DeathActorModel value="DehakaPackleaderStructureDeathModel"/>
         <DeathActorModelLow value="DehakaPackleaderStructureDeathModel"/>
         <PortraitModel value="Dakrun_Primal_Collection_Portrait"/>
@@ -4151,16 +4135,1370 @@
     <CActorSound id="Zerg_BuildingMorphStart">
         <On Terms="Abil.DehakaDroneMorph.BuiltStart" Send="Create"/>
     </CActorSound>
-    <CModel id="Primal_Gene_Mutation_Coop_AttackSpeed" parent="PersistentSpellFX">
-        <Model value="Assets\Effects\Zerg\Primal_Gene_Mutation_Coop_AttackSpeed\Primal_Gene_Mutation_Coop_AttackSpeed.m3"/>
-        <EditorCategories value="Race:Zerg"/>
-    </CModel>
-    <CModel id="Primal_Gene_Mutation_Coop_LifeLeech" parent="PersistentSpellFX">
-        <Model value="Assets\Effects\Zerg\Primal_Gene_Mutation_Coop_LifeLeech\Primal_Gene_Mutation_Coop_LifeLeech.m3"/>
-        <EditorCategories value="Race:Zerg"/>
-    </CModel>
-    <CModel id="Glaze_Primal_Gene_Mutation_Coop_Frenzied" parent="PersistentSpellFX">
-        <Model value="Assets\Effects\Glaze\Glaze_Primal_Gene_Mutation_Coop_Frenzied\Glaze_Primal_Gene_Mutation_Coop_Frenzied.m3"/>
-        <EditorCategories value="Race:Zerg"/>
-    </CModel>
+    <CActorModel id="DehakaMurvarStructureAttachExtra" parent="PrimalZergBuildAttachedExtra">
+        <On Terms="Behavior.DehakaMurvarInPlay.On" Send="AnimBracketStart Active Work,Start Work Work,End"/>
+        <On Terms="Behavior.DehakaMurvarInPlay.Off" Send="TimerSet 3.000000 ReturnDelay"/>
+        <On Terms="TimerExpired; TimerName ReturnDelay" Send="AnimBracketStop Active"/>
+    </CActorModel>
+    <CActorSplat id="DehakaMurvarStructureAttachSplat">
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <FogVisibility value="Visible"/>
+        <HostSiteOps Ops="SOpShadow" HoldPosition="1" HoldRotation="1"/>
+        <FadeOut value="6.000000"/>
+        <HoldTime value="-1.000000"/>
+    </CActorSplat>
+    <CActorSiteOpLocalOffset id="SOpCoopMurvarSpawnPuddleAOffset">
+        <LocalOffset value="-2.500000,-2.500000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="SOpCoopMurvarSpawnPuddleBOffset">
+        <LocalOffset value="2.500000,-2.500000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="SOpCoopMurvarSpawnPuddleCOffset">
+        <LocalOffset value="-2.500000,2.500000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="SOpCoopMurvarSpawnPuddleDOffset">
+        <LocalOffset value="2.500000,2.500000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSound id="Murvar_Spawn_In_AS">
+        <Host Subject="_Unit" Scope="Target"/>
+        <Sound value="Dehaka_Murvar_Spawn_In_RockExplo"/>
+    </CActorSound>
+    <CActorModel id="CoopMurvarSpawnPuddleA" parent="ModelAnimationStyleContinuous">
+        <Model value="CoopMurvarSpawnPuddle"/>
+        <On Terms="Effect.CoopMurvarLaunchCP.Start" Send="Create"/>
+        <On Terms="Effect.CoopMurvarLaunchCP.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create Murvar_Spawn_In_AS"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
+        <HostSiteOps Ops="SOpForwardNorth SOpCoopMurvarSpawnPuddleAOffset SOpShadow"/>
+    </CActorModel>
+    <CActorModel id="CoopMurvarSpawnPuddleB" parent="ModelAnimationStyleContinuous">
+        <Model value="CoopMurvarSpawnPuddle"/>
+        <On Terms="Effect.CoopMurvarLaunchCP.Start" Send="Create"/>
+        <On Terms="Effect.CoopMurvarLaunchCP.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create Murvar_Spawn_In_AS"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
+        <HostSiteOps Ops="SOpForwardNorth SOpCoopMurvarSpawnPuddleBOffset SOpShadow"/>
+    </CActorModel>
+    <CActorModel id="CoopMurvarSpawnPuddleC" parent="ModelAnimationStyleContinuous">
+        <Model value="CoopMurvarSpawnPuddle"/>
+        <On Terms="Effect.CoopMurvarLaunchCP.Start" Send="Create"/>
+        <On Terms="Effect.CoopMurvarLaunchCP.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create Murvar_Spawn_In_AS"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
+        <HostSiteOps Ops="SOpForwardNorth SOpCoopMurvarSpawnPuddleCOffset SOpShadow"/>
+    </CActorModel>
+    <CActorModel id="CoopMurvarSpawnPuddleD" parent="ModelAnimationStyleContinuous">
+        <Model value="CoopMurvarSpawnPuddle"/>
+        <On Terms="Effect.CoopMurvarLaunchCP.Start" Send="Create"/>
+        <On Terms="Effect.CoopMurvarLaunchCP.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create Murvar_Spawn_In_AS"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
+        <HostSiteOps Ops="SOpForwardNorth SOpCoopMurvarSpawnPuddleDOffset SOpShadow"/>
+    </CActorModel>
+    <CActorUnit id="DehakaMurvarStructure" parent="ZergBuilding" unitName="DehakaMurvarStructure">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <On Terms="ActorCreation" Send="AnimPlay Wiggle Spell,Alternate PlayForever"/>
+        <On Terms="ActorCreation" Send="Create DehakaMurvarStructureAttachExtra"/>
+        <On Terms="UnitBirth.DehakaMurvarStructure" Send="Create DehakaMurvarStructureAttachSplat"/>
+        <On Terms="ActorCreation" Send="Create MonsterLarge_VoxIdleGrowl_DelayedLoopSound"/>
+        <DeathArray index="Normal" AnimProps="Burrow"/>
+        <DeathArray index="UnderConstruction" ModelLink="DehakaPrimalBuildingDeath"/>
+        <DeathActorModel value="DehakaPackleaderStructureDeathModel"/>
+        <DeathActorModelLow value="DehakaPackleaderStructureDeathModel"/>
+        <PortraitModel value="Murvar_Primal_Collection_Portrait"/>
+        <WalkAnimMoveSpeed value="0.75"/>
+        <BarOffset value="125"/>
+        <BarWidth value="155"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Dehaka-MurvarNest-Primal.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Building-Dehaka-MurvarNest.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <SoundArray index="Ready" value="MurvarDen_Ready"/>
+        <SoundArray index="What" value="MurvarDen_What"/>
+        <SoundArray index="Construction" value="Zerg_BuildingMorphWhat"/>
+        <UnitIcon value="Assets\Textures\BTN-Building-Dehaka-MurvarNest.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Dehaka-MurvarNest-Primal.dds"/>
+        </Wireframe>
+        <PlacementModel value="Dehaka_Nest_Murvar_COOP_Placement"/>
+        <PlacementSound value="Zerg_BuildingPlacement"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaGlevigStructure" parent="ZergBuilding" unitName="DehakaGlevigStructure">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <On Terms="ActorCreation" Send="Create DehakaGlevigStructureAttachExtra"/>
+        <On Terms="UnitBirth.DehakaGlevigStructure" Send="Create DehakaGlevigStructureAttachSplat"/>
+        <On Terms="ActorCreation" Send="Create MonsterLarge_VoxIdleGrowl_DelayedLoopSound"/>
+        <DeathArray index="Normal" AnimProps="Burrow"/>
+        <DeathArray index="UnderConstruction" ModelLink="DehakaPrimalBuildingDeath"/>
+        <DeathActorModel value="DehakaPackleaderStructureDeathModel"/>
+        <DeathActorModelLow value="DehakaPackleaderStructureDeathModel"/>
+        <PlacementSound value="Zerg_BuildingPlacement"/>
+        <PortraitModel value="Glevig_Primal_Collection_Portrait"/>
+        <BarOffset value="225"/>
+        <BarWidth value="155"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Dehaka-GlevigNest-Primal.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Building-Dehaka-GlevigNest.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <NameOffset value="70"/>
+        <SoundArray index="Ready" value="GlevigDen_Ready"/>
+        <SoundArray index="What" value="GlevigDen_What"/>
+        <SoundArray index="Construction" value="Zerg_BuildingMorphWhat"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\BTN-Building-Dehaka-GlevigNest.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Dehaka-GlevigNest-Primal.dds"/>
+        </Wireframe>
+        <PlacementModel value="Dehaka_Nest_Glevig_COOP_Placement"/>
+    </CActorUnit>
+    <CActorModel id="DehakaGlevigStructureAttachExtra" parent="PrimalZergBuildAttachedExtra">
+        <On Terms="Behavior.DehakaGlevigInPlay.On" Send="AnimBracketStart Active Work,Start Work Work,End"/>
+        <On Terms="Behavior.DehakaGlevigInPlay.Off" Send="TimerSet 3.000000 ReturnDelay"/>
+        <On Terms="TimerExpired; TimerName ReturnDelay" Send="AnimBracketStop Active"/>
+    </CActorModel>
+    <CActorSplat id="DehakaGlevigStructureAttachSplat">
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <FogVisibility value="Visible"/>
+        <HostSiteOps Ops="SOpShadow" HoldPosition="1" HoldRotation="1"/>
+        <FadeOut value="6.000000"/>
+        <HoldTime value="-1.000000"/>
+    </CActorSplat>
+    <CActorUnit id="DehakaRoachLevel3" parent="GenericUnitBase" unitName="DehakaRoachLevel3">
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Infestor_Land"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownMedium"/>
+        <On Terms="UnitBirth.DehakaRoachLevel3Burrowed" Send="Create"/>
+        <On Terms="UnitBirth.DehakaRoachLevel3Burrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom DehakaRoachLevel3; MorphTo DehakaRoachLevel3Burrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo DehakaRoachLevel3; MorphFrom DehakaRoachLevel3Burrowed" Send="AnimBracketStop Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo DehakaRoachLevel3; MorphFrom DehakaRoachLevel3Burrowed" Send="AnimClear Burrow"/>
+        <On Terms="Abil.PrimalRoachLevel2Merge.Start" Send="SetOpacity"/>
+        <On Terms="Abil.PrimalRoachLevel2Merge.Start" Send="Create DehakaRoachLevel3Merge"/>
+        <On Terms="Abil.PrimalRoachLevel2Merge.Stop" Target="DehakaRoachLevel3Merge" Send="Signal MergeStop"/>
+        <On Terms="Abil.PrimalRoachLevel2Merge.Stop" Send="AnimPlay Birth Unburrow 0 0.000000"/>
+        <On Terms="Abil.PrimalRoachLevel2Merge.Stop" Send="SetOpacity 1.000000"/>
+        <On Terms="WeaponStart.DehakaRoachLevel3Cone.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.DehakaRoachLevel3Cone.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Effect.DehakaRoachLevel3AttackDamage.Start; At Caster; ValidateUnit LifeNotFullAndHaveDehakaGeneLifeLeech" Send="Create DehakaGeneLifeLeech"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <WireframeShieldColor value="255,0,128,0"/>
+        <DeathArray index="Normal" ModelLink="Dehaka_RoachUpgrade_Primal_Collection_Death" SoundLink="Roach_Explode" VoiceLink="PrimalIgniter_Death"/>
+        <DeathArray index="Disintegrate" ModelLink="RoachDeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Fire" ModelLink="RoachDeathFire" SoundLink="Uni_DeathFXFire"/>
+        <PortraitModel value="Roach_Primal_Collection_Portrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergMediumBurrowEffects"/>
+        <BarOffset value="55"/>
+        <UnitIcon value="Assets\Textures\btn-unit-collection-primal-RoachUpgrade.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-collection-primal-RoachUpgrade.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-collection-primal-RoachUpgrade.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-collection-primal-RoachUpgrade.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level0.dds"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="2.000000"/>
+            <RangeDown value="2.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMedium25"/>
+        </TerrainSquibs>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Ready" value="PrimalIgniter_Ready"/>
+        <SoundArray index="What" value="PrimalIgniter_What"/>
+        <SoundArray index="Yes" value="PrimalIgniter_Yes"/>
+        <SoundArray index="Attack" value="PrimalIgniter_Attack"/>
+        <SoundArray index="Pissed" value="PrimalIgniter_Pissed"/>
+        <SoundArray index="Movement" value=""/>
+        <Aliases value="_UnitLarge"/>
+        <Model value="Dehaka_RoachUpgrade_Primal_Collection"/>
+        <BuildModel value="Dehaka_RoachUpgrade_Primal_Collection"/>
+        <PlacementModel value="Dehaka_RoachUpgrade_Primal_Collection"/>
+    </CActorUnit>
+    <CActorSound id="Roach_Death">
+        <On Terms="UnitDeath.DehakaRoachLevel2; PassChance 25.000000" Send="Create"/>
+        <On Terms="UnitDeath.DehakaRoachLevel3; PassChance 25.000000" Send="Create"/>
+    </CActorSound>
+    <CActorSplat id="DehakaRoachLevel3BurrowedSplat" parent="BurrowedSplat" unitName="DehakaRoachLevel3"/>
+    <CActorSound id="DehakaRoach_Merge_Combat_AS" parent="SoundContinuous">
+        <Sound value="Dehaka_Roach_Merge_Combat_Lp"/>
+        <Layers Sound="Dehaka_Roach_Merge_Combat_Vx_Lp">
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorModel id="DehakaRoachLevel3Merge" parent="ModelAddition">
+        <Model value="Roach_Primal_Collection"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="Opacity" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <On Terms="ActorCreation" Send="AnimPlay Attack Attack,Cover,00"/>
+        <On Terms="ActorCreation" Send="Create DehakaRoachLevel3MergeExtra"/>
+        <On Terms="ActorCreation" Send="Create DehakaRoach_Merge_Combat_AS"/>
+        <On Terms="ActorDestruction" Target="DehakaRoach_Merge_Combat_AS" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Attack" Send="AnimPlay AttackB Attack,Cover,02"/>
+        <On Terms="AnimDone; AnimName AttackB" Send="AnimPlay AttackC Attack,Cover,03"/>
+        <On Terms="AnimDone; AnimName AttackC" Send="AnimPlay AttackD Attack,Cover,00"/>
+        <On Terms="AnimDone; AnimName AttackD" Send="AnimPlay AttackE Attack,Cover,02"/>
+        <On Terms="AnimDone; AnimName AttackE" Send="AnimPlay AttackF Attack,Cover,01"/>
+        <On Terms="AnimDone; AnimName AttackF" Send="AnimPlay AttackG Attack,Cover,03"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="AnimPlay AttackH Attack,Cover,03"/>
+        <On Terms="AnimDone; AnimName AttackH" Send="Create DehakaRoachLevel3MergeEgg"/>
+        <On Terms="AnimDone; AnimName AttackH" Send="AnimPlay Burrow Burrow"/>
+        <On Terms="AnimDone; AnimName Burrow" Send="Destroy"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaRoachLevel3MergeExtra" Send="RefClear ::Host"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaRoachLevel3MergeExtra" Send="$Death"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaRoachLevel3MergeExtra" Send="AnimClear Attack"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaRoachLevel3MergeExtra" Send="AnimClear AttackB"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpShadow"/>
+    </CActorModel>
+    <CActorSiteOpLocalOffset id="SOpDehakaRoach3Offset">
+        <LocalOffset value="0.000000,-1.500000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorModel id="DehakaRoachLevel3MergeExtra">
+        <Model value="Roach_Primal_Collection"/>
+        <On Terms="ActorCreation" Send="AnimPlay Attack Attack,Cover,00"/>
+        <On Terms="AnimDone; AnimName Attack" Send="AnimPlay AttackB Attack,Cover,01"/>
+        <On Terms="AnimDone; AnimName AttackB" Send="AnimPlay AttackC Attack,Cover,00"/>
+        <On Terms="AnimDone; AnimName AttackC" Send="AnimPlay AttackD Attack,Cover,02"/>
+        <On Terms="AnimDone; AnimName AttackD" Send="AnimPlay AttackE Attack,Cover,03"/>
+        <On Terms="AnimDone; AnimName AttackE" Send="AnimPlay AttackF Attack,Cover,00"/>
+        <On Terms="AnimDone; AnimName AttackF" Send="AnimPlay AttackG Attack,Cover,01"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="ModelSwap Roach_Primal_Collection_Death"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="RefClear ::Host"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="$Death"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="Create Zerg_CombatMerge_Death_AS"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpDehakaRoach3Offset SOp180 SOpShadow"/>
+        <Host Subject="::Creator"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="DehakaRoachLevel3MergeEgg">
+        <On Terms="ActorCreation" Send="$Birth 0 0.000000 -1.000000 0.500000 AsTimeScale"/>
+        <On Terms="AnimDone; AnimName Birth" Send="$Stand"/>
+        <On Terms="AnimDone; AnimName Birth" Send="TimerSet 1.000000 DelayDeath"/>
+        <On Terms="TimerExpired; TimerName DelayDeath" Send="ModelSwap DehakaRoachLevel3MergeEggDeath"/>
+        <On Terms="TimerExpired; TimerName DelayDeath" Send="RefClear ::Host"/>
+        <On Terms="TimerExpired; TimerName DelayDeath" Send="$Death"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <Host Subject="::Creator"/>
+    </CActorModel>
+    <CActorModel id="DehakaRoachConeAttackLaunch" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.DehakaRoachConeAttackSet.Start; At Caster; !ValidateEffect HaveDehakaGlevigRoachFireBreath" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetScaleFromWeaponRange 0.000000,1.000000,0.000000"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon00 SOp2DRotation"/>
+    </CActorModel>
+    <CActorModel id="DehakaRoachConeAttackImpact" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.DehakaRoachLevel3AttackDamage.Start; At Target; !ValidateEffect HaveDehakaGlevigRoachFireBreath" Send="Create"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
+    <CActorModel id="DehakaRoachConeAttackLaunchUpgraded" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.DehakaRoachConeAttackSet.Start; At Caster; ValidateEffect HaveDehakaGlevigRoachFireBreath" Send="Create"/>
+        <On Terms="ActorCreation" Send="SetScaleFromWeaponRange 0.000000,1.000000,0.000000"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon00 SOp2DRotation"/>
+    </CActorModel>
+    <CActorModel id="DehakaRoachConeAttackImpactUpgraded" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.DehakaRoachLevel3AttackDamage.Start; At Target; ValidateEffect HaveDehakaGlevigRoachFireBreath" Send="Create"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+    </CActorModel>
+    <CActorSound id="DehakaRoachConeAttackLaunchSound" parent="SoundOneShot">
+        <On Terms="Effect.DehakaRoachConeAttackSet.Start; At Caster" Send="Create"/>
+        <Sound value="HellionTank_AttackLaunch"/>
+    </CActorSound>
+    <CActorSound id="DehakaRoachConeAttackImpactSound" parent="SoundOneShot">
+        <On Terms="Effect.DehakaRoachLevel3AttackDamage.Start; At Target" Send="Create"/>
+        <Sound value="Hellion_AttackImpact"/>
+    </CActorSound>
+    <CActorModel id="RoachRegenDummy" parent="ModelAnimationStyleContinuous">
+        <Model value="MendBuff"/>
+        <On Terms="Behavior.RoachRegenDummy.On" Send="Create"/>
+        <On Terms="Behavior.RoachRegenDummy.Off" Send="AnimBracketStop BSD"/>
+        <Host Subject="_Selectable"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <HostSiteOps Ops="SOpAttachCenter SOpForwardNorth" HoldRotation="1"/>
+    </CActorModel>
+    <CActorUnit id="DehakaRoachLevel2" parent="GenericUnitBase" unitName="DehakaRoachLevel2">
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create PrimalRoach_Land"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.DehakaRoachLevel2.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.DehakaRoachLevel2.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="WeaponStart.DehakaRoachLevel2Melee.AttackStart" Send="AnimBracketStart AttackCover Attack,Cover"/>
+        <On Terms="WeaponStop.DehakaRoachLevel2Melee.AttackStop" Send="AnimBracketStop AttackCover"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownMedium"/>
+        <On Terms="UnitBirth.DehakaRoachLevel2Burrowed" Send="Create"/>
+        <On Terms="UnitBirth.DehakaRoachLevel2Burrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom DehakaRoachLevel2; MorphTo DehakaRoachLevel2Burrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo DehakaRoachLevel2; MorphFrom DehakaRoachLevel2Burrowed" Send="AnimBracketStop Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo DehakaRoachLevel2; MorphFrom DehakaRoachLevel2Burrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggRoach" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggRoach" Send="AnimGroupRemove Work"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <WireframeShieldColor value="255,0,128,0"/>
+        <DeathArray index="Normal" ModelLink="Roach_Primal_Collection_Death" SoundLink="Roach_Explode" VoiceLink="RoachPrimal_Death"/>
+        <DeathArray index="Disintegrate" ModelLink="Roach_Primal_Collection_DeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Fire" ModelLink="Roach_Primal_Collection_DeathFire" SoundLink="Uni_DeathFXFire"/>
+        <PortraitModel value="Roach_Primal_Collection_Portrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergMediumBurrowEffects"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <BarOffset value="55"/>
+        <UnitIcon value="Assets\Textures\btn-unit-collection-primal-Roach.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-collection-primal-Roach.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-collection-primal-Roach.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-collection-primal-Roach.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level0.dds"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="2.000000"/>
+            <RangeDown value="2.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMedium25"/>
+        </TerrainSquibs>
+        <TerrainSquibs>
+            <GroupName value="RippleStandard"/>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLarge"/>
+        </TerrainSquibs>
+        <AbilSoundArray AbilCmd="PrimalRoachLevel2Merge,SelectedUnits" Sound="Roach_Attack"/>
+        <AbilSoundArray AbilCmd="PrimalRoachGuardianMerge,SelectedUnits" Sound="Roach_Attack"/>
+        <SoundArray index="Ready" value="RoachPrimal_Ready"/>
+        <SoundArray index="What" value="RoachPrimal_What"/>
+        <SoundArray index="Yes" value="RoachPrimal_Yes"/>
+        <SoundArray index="Attack" value="RoachPrimal_Attack"/>
+        <SoundArray index="Pissed" value="RoachPrimal_Pissed"/>
+        <Aliases value="_UnitMedium"/>
+        <Model value="Roach_Primal_Collection"/>
+        <BuildModel value="Roach_Primal_Collection"/>
+        <PlacementModel value="Roach_Primal_Collection"/>
+        <DeathCustoms ModelLink="Roach_Primal_Collection_DeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="BloodReduced"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+    </CActorUnit>
+    <CActorAction id="DehakaRoachLevel2Attack" parent="GenericAttack" effectImpact="DehakaRoachLevel2Damage" effectLaunch="DehakaRoachLevel2LM">
+        <LaunchAssets Sound="Roach_AttackLaunchRanged"/>
+        <LaunchAttachQuery Methods="Head"/>
+        <ImpactMap index="None" Model="DehakaRoachMissileImpact" Sound="Roach_AttackImpactRanged"/>
+        <ImpactPhysics Name="AcidSalivaImpact" MatchKeys="Basic" Physics="RoachAttackDeathForce"/>
+        <ImpactPhysics Name="AcidSalivaImpact" MatchKeys="Basic" Physics="RoachAttackDeathForce"/>
+        <AcquisitionYawHalfArc value="10.000000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="15.000000"/>
+    </CActorAction>
+    <CActorMissile id="DehakaRoachLevel2AttackMissile" parent="GenericAttackMissile" unitName="DehakaRoachLevel2Weapon"/>
+    <CActorAction id="DehakaRoachLevel2MeleeAttack" parent="GenericAttack" effectAttack="DehakaRoachLevel2Melee">
+        <ImpactMap index="None" Model="DehakaRoachAttackImpact" Sound="Roach_AttackImpactMelee"/>
+        <ImpactPhysics>
+            <Name value="Attack00"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="Cover,00"/>
+            <Physics value="RoachMeleeAttackRightBladeForce"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="Attack01"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="Cover,01"/>
+            <Physics value="RoachMeleeAttackRightBladeForce"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="Attack02"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="Cover,02"/>
+            <Physics value="RoachMeleeAttackForce02"/>
+        </ImpactPhysics>
+        <ImpactPhysics>
+            <Name value="Attack03"/>
+            <MatchKeys value="Basic"/>
+            <AttackAnimProps value="Cover,03"/>
+            <Physics value="RoachMeleeAttackForce03"/>
+        </ImpactPhysics>
+        <AttackAnimName value="AttackCover"/>
+    </CActorAction>
+    <CActorSound id="DehakaRoachAttackStart" parent="SoundOneShot">
+        <On Terms="WeaponStart.DehakaRoachLevel2Melee.AttackStart" Send="Create"/>
+        <Sound value="Roach_AttackLaunchMelee"/>
+    </CActorSound>
+    <CActorSplat id="DehakaRoachLevel2BurrowedSplat" parent="BurrowedSplat" unitName="DehakaRoachLevel2"/>
+    <CActorUnit id="DehakaRavasaur" parent="GenericUnitBase" unitName="DehakaRavasaur">
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Ravager_Land"/>
+        <On Terms="Abil.attack.ReadyStart" Send="AnimGroupApply Ready"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Spell"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimGroupRemove Ready"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Attack" Send="AnimClear Attack"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create LargeBurrowDownEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownMedium"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom DehakaRavasaur; MorphTo DehakaRavasaurBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo DehakaRavasaur; MorphFrom DehakaRavasaurBurrowed" Send="AnimBracketStop Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo DehakaRavasaur; MorphFrom RavasaurBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="UnitBirth.DehakaRavasaurBurrowed" Send="Create"/>
+        <On Terms="UnitBirth.DehakaRavasaurBurrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant"/>
+        <On Terms="Abil.PrimalZerglingRavasaurMerge.Start" Send="SetOpacity"/>
+        <On Terms="Abil.PrimalZerglingRavasaurMerge.Start" Send="Create DehakaZerglingLevel2Merge"/>
+        <On Terms="Abil.PrimalZerglingRavasaurMerge.Stop" Target="DehakaZerglingLevel2Merge" Send="Signal MergeStop"/>
+        <On Terms="Abil.PrimalZerglingRavasaurMerge.Stop" Send="AnimPlay Birth Unburrow 0 0.000000"/>
+        <On Terms="Abil.PrimalZerglingRavasaurMerge.Stop" Send="SetOpacity 1.000000"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On Terms="WeaponStart.*.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On Terms="Effect.DehakaRavasaurDamage.Start; At Caster; ValidateUnit LifeNotFullAndHaveDehakaGeneLifeLeech" Send="Create DehakaGeneLifeLeech"/>
+        <Aliases value="_UnitLarge"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergMediumBurrowEffects"/>
+        <Macros value="UnloadDropAnim"/>
+        <EventDataSound Name="AttackLaunch" Actor="UnitSound" Sound="Ravasaur_AttackLaunch"/>
+        <DeathArray index="Normal" ModelLink="Ravasaur_Primal_Collection_Death" SoundLink="Ravasaur_Explode" VoiceLink="Primal_Ravasaur_Death_Vx"/>
+        <DeathArray index="Disintegrate" ModelLink="Ravasaur_Primal_Collection_Death" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Fire" ModelLink="Ravasaur_Primal_Collection_Death" SoundLink="Uni_DeathFXFire"/>
+        <SoundArray index="Ready" value="Ravasaur_Ready"/>
+        <SoundArray index="What" value="Ravasaur_What"/>
+        <SoundArray index="Yes" value="Ravasaur_Yes"/>
+        <SoundArray index="Attack" value="Ravasaur_AttackAcknowledgment"/>
+        <SoundArray index="Pissed" value="Ravasaur_Pissed"/>
+        <SoundArray index="Movement" value="Ravasaur_Movement"/>
+        <PortraitModel value="Ravasaur_Primal_Collection_Portrait"/>
+        <BarOffset value="55"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-collection-primal-Ravasaur.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-collection-primal-Ravasaur.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level0.dds"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <UnitIcon value="Assets\Textures\btn-unit-collection-primal-Ravasaur.dds"/>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-collection-primal-Ravasaur.dds"/>
+        </Wireframe>
+        <WireframeShieldColor value="255,0,128,0"/>
+        <Model value="Ravasaur_Primal_Collection"/>
+        <BuildModel value="Ravasaur_Primal_Collection"/>
+        <PlacementModel value="Ravasaur_Primal_Collection"/>
+        <Baselines index="Walk" AnimProps="Walk,00"/>
+    </CActorUnit>
+    <CActorAction id="DehakaRavasaurAttack" parent="GenericAttack" effectImpact="DehakaRavasaurDamage" effectLaunch="DehakaRavasaurLM">
+        <ImpactMap index="None" Sound="Roach_AttackImpactRanged"/>
+        <AcquisitionYawHalfArc value="10.000000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="15.000000"/>
+    </CActorAction>
+    <CActorMissile id="DehakaRavasaurAttackMissile" parent="GenericAttackMissile" unitName="DehakaRavasaurWeapon"/>
+    <CActorSplat id="DehakaRavasaurBurrowedSplat" parent="BurrowedSplat" unitName="DehakaRavasaur"/>
+    <CActorSound id="DehakaZergling_Merge_Combat_AS" parent="SoundContinuous">
+        <Sound value="Dehaka_Zergling_Merge_Combat_Vx_Lp"/>
+        <Layers Sound="Dehaka_Zergling_Merge_Combat_Lp">
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorSound id="DehakaZergling_Merge_Ravasaur_AS" parent="SoundOneShot">
+        <On Terms="Abil.PrimalZerglingRavasaurMerge.Stop" Send="Create"/>
+        <Sound value="DehakaZergling_Merge_Emerge"/>
+    </CActorSound>
+    <CActorModel id="DehakaZerglingLevel2MergeExtra">
+        <Model value="Zergling_Primal_Collection"/>
+        <On Terms="ActorCreation" Send="AnimPlay Attack Attack,01 0 -1.000000 -1.000000 0.800000 AsTimeScale"/>
+        <On Terms="AnimDone; AnimName Attack" Send="AnimPlay AttackB Attack,01 0 -1.000000 -1.000000 0.800000 AsTimeScale"/>
+        <On Terms="AnimDone; AnimName AttackB" Send="AnimPlay AttackC Attack,00"/>
+        <On Terms="AnimDone; AnimName AttackC" Send="AnimPlay AttackD Attack,01"/>
+        <On Terms="AnimDone; AnimName AttackD" Send="AnimPlay AttackE Attack,00"/>
+        <On Terms="AnimDone; AnimName AttackE" Send="AnimPlay AttackF Attack,01"/>
+        <On Terms="AnimDone; AnimName AttackF" Send="AnimPlay AttackG Attack,00"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="ModelSwap Zergling_Primal_Collection_Death"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="RefClear ::Host"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="$Death"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="Create Zerg_CombatMerge_Death_AS"/>
+        <HostSiteOps Ops="SOpAttachOrigin SOpDehakaZergling2Offset SOp180 SOpShadow"/>
+        <Host Subject="::Creator"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorModel id="DehakaZerglingLevel2MergeEgg">
+        <On Terms="ActorCreation" Send="$Birth 0 0.000000 -1.000000 0.300000 AsTimeScale"/>
+        <On Terms="AnimDone; AnimName Birth" Send="$Stand"/>
+        <On Terms="AnimDone; AnimName Birth" Send="TimerSet 1.000000 DelayDeath"/>
+        <On Terms="TimerExpired; TimerName DelayDeath" Send="ModelSwap DehakaZerglingLevel2MergeEggDeath"/>
+        <On Terms="TimerExpired; TimerName DelayDeath" Send="RefClear ::Host"/>
+        <On Terms="TimerExpired; TimerName DelayDeath" Send="$Death"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <Host Subject="::Creator"/>
+    </CActorModel>
+    <CActorModel id="DehakaZerglingLevel2Merge" parent="ModelAddition">
+        <Model value="Zergling_Primal_Collection"/>
+        <Inherits index="BaseModelScale" value="0"/>
+        <Inherits index="Opacity" value="0"/>
+        <Inherits index="Scale" value="0"/>
+        <On Terms="ActorCreation" Send="AnimPlay Attack Attack,00"/>
+        <On Terms="ActorCreation" Send="Create DehakaZerglingLevel2MergeExtra"/>
+        <On Terms="ActorCreation" Send="Create DehakaZergling_Merge_Combat_AS"/>
+        <On Terms="ActorDestruction" Target="DehakaZergling_Merge_Combat_AS" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Attack" Send="AnimPlay AttackB Attack,01"/>
+        <On Terms="AnimDone; AnimName AttackB" Send="AnimPlay AttackC Attack,00"/>
+        <On Terms="AnimDone; AnimName AttackC" Send="AnimPlay AttackD Attack,01"/>
+        <On Terms="AnimDone; AnimName AttackD" Send="AnimPlay AttackE Attack,00"/>
+        <On Terms="AnimDone; AnimName AttackE" Send="AnimPlay AttackF Attack,01"/>
+        <On Terms="AnimDone; AnimName AttackF" Send="AnimPlay AttackG Attack,00"/>
+        <On Terms="AnimDone; AnimName AttackG" Send="AnimPlay AttackH Attack,01"/>
+        <On Terms="AnimDone; AnimName AttackH" Send="AnimPlay Burrow Burrow"/>
+        <On Terms="AnimDone; AnimName AttackH" Send="Create DehakaZerglingLevel2MergeEgg"/>
+        <On Terms="AnimDone; AnimName Burrow" Send="Destroy"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaZerglingLevel2MergeExtra" Send="RefClear ::Host"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaZerglingLevel2MergeExtra" Send="$Death"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaZerglingLevel2MergeExtra" Send="AnimClear Attack"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Target="DehakaZerglingLevel2MergeExtra" Send="AnimClear AttackB"/>
+        <On Terms="Signal.*.MergeStop; AnimPlaying Attack" Send="Destroy"/>
+    </CActorModel>
+    <CActorSiteOpLocalOffset id="SOpDehakaZergling2Offset">
+        <LocalOffset value="0.000000,-0.750000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorUnit id="DehakaZerglingLevel2" parent="GenericUnitStandard" unitName="DehakaZerglingLevel2">
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create PrimalZergling_Land"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Zergling_Land"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create LargeBurrowDownEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownSmall"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom DehakaZerglingLevel2; MorphTo DehakaZerglingLevel2Burrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo DehakaZerglingLevel2; MorphFrom DehakaZerglingLevel2Burrowed" Send="AnimBracketStop Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo DehakaZerglingLevel2; MorphFrom DehakaZerglingLevel2Burrowed" Send="AnimClear Burrow"/>
+        <On Terms="UnitBirth.DehakaZerglingLevel2Burrowed" Send="Create"/>
+        <On Terms="UnitBirth.DehakaZerglingLevel2Burrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant"/>
+        <On Terms="UnitBirth.Zergling" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Zergling; MorphFrom ZerglingBurrowed" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo ZerglingBurrowed; MorphFrom Zergling" Send="TerrainSquibDeactivate"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Zergling_Land"/>
+        <On Terms="Behavior.DehakaEggPopStun.Off" Send="TimerSet 0.062500 WalkCheck"/>
+        <On Terms="TimerExpired; TimerName WalkCheck; UnitWalking" Send="AnimClear Birth"/>
+        <On Terms="UnitMovementUpdate.*.Walk; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggZergling" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggZergling" Send="AnimGroupRemove Work"/>
+        <ShieldArmorIcon value="Assets\Textures\btn-upgrade-zerg-swarmfrenzy.dds"/>
+        <StatusColors index="Shields">
+            <ColorArray index="0" value="255,0,128,0"/>
+        </StatusColors>
+        <VitalColors index="Shields">
+            <ColorArray value="255,0,128,0"/>
+        </VitalColors>
+        <VitalNames index="Shields" value="Vital/ZergShields"/>
+        <WireframeShieldColor value="255,0,128,0"/>
+        <Macros value="ZergBurrowStandardAnimMacro"/>
+        <Macros value="ZergMediumBurrowEffects"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <DeathArray index="Normal" ModelLink="Zergling_Primal_Collection_Death" SoundLink="Zergling_Explode"/>
+        <DeathArray index="Disintegrate" ModelLink="Zergling_Primal_Collection_DeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Eviscerate" ModelLink="Zergling_Primal_Collection_DeathEviscerate" SoundLink="Zergling_DeathFXEviscerate"/>
+        <DeathArray index="Fire" ModelLink="Zergling_Primal_Collection_DeathFire" SoundLink="Zergling_DeathFXFire"/>
+        <PortraitActor value="ZerglingPrimalCollectionPortrait"/>
+        <PortraitModel value="Zergling_Primal_Collection_Portrait"/>
+        <WalkAnimMoveSpeed value="3.1328"/>
+        <BarOffset value="55"/>
+        <UnitIcon value="Assets\Textures\btn-unit-collection-primal-Zergling.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-collection-primal-Zergling.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-collection-primal-Zergling.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-collection-primal-Zergling.dds"/>
+        </Wireframe>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level0.dds"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.800000"/>
+            <RangeDown value="0.400000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMedium15"/>
+        </TerrainSquibs>
+        <TerrainSquibs>
+            <GroupName value="RippleStandard"/>
+            <MovementDistance value="0.250000,0.250000"/>
+            <IdlePeriod value="0.200000,0.400000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleTiny"/>
+        </TerrainSquibs>
+        <Aliases value="_UnitSmall"/>
+        <Model value="Zergling_Primal_Collection"/>
+        <BuildModel value="Zergling_Primal_Collection"/>
+        <PlacementModel value="Zergling_Primal_Collection"/>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <DeathCustoms ActorModel="ZerglingDeathRagdoll" ModelLink="Zergling_Primal_Collection_DeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="BloodReduced"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ActorModel="ZerglingSpineCrawlerHurlDeathRagdoll" ModelLink="Zergling_Primal_Collection_DeathRagdoll" Name="RagdollSpineCrawlerHurl"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <MovementHerdNode value="HerdNode_ZergSmall"/>
+        <AbilSoundArray AbilCmd="PrimalZerglingRavasaurMerge,SelectedUnits" Sound="Zergling_Attack"/>
+        <SoundArray index="Ready" value="Zergling_Ready"/>
+        <SoundArray index="What" value="Zergling_What"/>
+        <SoundArray index="Yes" value="Zergling_Yes"/>
+        <SoundArray index="Attack" value="Zergling_Attack"/>
+        <SoundArray index="Pissed" value="Zergling_Pissed"/>
+    </CActorUnit>
+    <CActorSplat id="DehakaZerglingLevel2BurrowedSplat" parent="BurrowedSplat" unitName="DehakaZerglingLevel2"/>
+    <CActorAction id="DehakaZerglingLevel2Attack" parent="GenericAttack" effectAttack="DehakaZerglingLevel2">
+        <ImpactAttachQuery Methods="AMFilterTargetVolumes"/>
+        <ImpactMap index="None" Sound="PrimalZergling_AttackImpact"/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorSound id="DehakaZerglingLevel2AttackLaunch" parent="SoundOneShot">
+        <On Terms="WeaponStart.DehakaZerglingLevel2.AttackStart" Send="Create"/>
+        <Sound value="PrimalZergling_AttackLaunch"/>
+    </CActorSound>
+    <CActorSound id="PrimalRoach_Land" parent="SoundOneShot"/>
+    <CActorSound id="PrimalZergling_Land" parent="SoundOneShot"/>
+    <CActorAction id="NydusDestroyerBeamAction" parent="GenericAttackBase">
+        <Lifetime value="-1.000000"/>
+        <On Terms="Effect.NydusDestroyerBeamCP.Start" Send="Create"/>
+        <On Terms="Effect.NydusDestroyerBeamDamage.Start; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <On Terms="Effect.NydusDestroyerBeamCP.Stop; At Effect" Send="Destroy"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeNoVizEnhance SOpForwardLaunchGuide"/>
+        <ActionFlags index="AlignedImpactsAndDamages" value="1"/>
+        <ActionFlags index="LaunchForceSite" value="1"/>
+        <LaunchAttachQuery Methods="AMFilterWeapon"/>
+        <Beam value="NydusDestroyerBeam"/>
+        <BeamScope value="Caster"/>
+        <ForceCommencementFrom value="NydusDestroyerBeamDamage"/>
+    </CActorAction>
+    <CActorSound id="NydusDestroyerBeamCast" parent="SoundOneShot">
+        <On Terms="Abil.NydusDestroyerBeam.SourceCastStart" Send="Create"/>
+        <Sound value="Hybrid_StealStrengthCast"/>
+    </CActorSound>
+    <CActorSound id="NydusDestroyerBeamLoop" parent="SoundContinuous">
+        <On Terms="Abil.NydusDestroyerBeam.SourceChannelStart" Send="Create"/>
+        <On Terms="Abil.NydusDestroyerBeam.SourceChannelStop" Send="Destroy"/>
+        <Sound value="Hybrid_StealStrengthLoop"/>
+    </CActorSound>
+    <CActorRange id="NydusDestroyerBeamRange" parent="RangeAbil" abil="NydusDestroyerBeam"/>
+    <CActorBeamSimple id="NydusDestroyerBeam">
+        <Supporter Subject="::Creator"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
+        <On Terms="ActorOrphan" Send="AnimBracketStop BSD"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="SupporterDestruction" Send="AnimBracketStop BSD"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <Model value="Primal_Wurm_Coop_Beam"/>
+    </CActorBeamSimple>
+    <CActorAction id="DehakaNydusDestroyerAttack" parent="GenericAttack" effectImpact="DehakaNydusDestroyerDamage" effectLaunch="DehakaNydusDestroyerLaunchMissile">
+        <LaunchAssets Sound="NydusDestroyer_AttackLaunch"/>
+        <LaunchAttachQuery Methods="Weapon 0"/>
+        <ImpactMap index="None" Sound="NydusDestroyer_AttackImpact"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <AcquisitionYawHalfArc value="7.500000"/>
+        <AcquisitionPitchHalfArc value="15.000000"/>
+        <AccuracyHalfArc value="10.000000"/>
+    </CActorAction>
+    <CActorMissile id="DehakaNydusDestroyerAttackMissile" parent="GenericAttackMissile" unitName="DehakaNydusDestroyerWeapon"/>
+    <CActorUnit id="NydusDestroyerDeepTunnelPlacement" parent="GenericUnitMinimal" unitName="NydusDestroyerDeepTunnelPlacement">
+        <Model value="Invisible"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <PlacementModel value="Dehaka_Primal_Wurm_Coop_Placement"/>
+        <PlacementSound value="Zerg_BuildingPlacement"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaNydusDestroyer" parent="GenericUnitMorph" unitName="DehakaNydusDestroyer">
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart AttackSuperior Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart AttackInferior Attack,Inferior"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop AttackSuperior"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop AttackInferior"/>
+        <On Terms="ActorCreation; !ScopeContains DehakaNydusDestroyerBase" Send="Create DehakaNydusDestroyerBase"/>
+        <On Terms="UnitConstruction.DehakaNydusDestroyer.Start" Send="Create DehakaNydusDestroyerBuild"/>
+        <On Terms="UnitConstruction.DehakaNydusDestroyer.Start" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitConstruction.DehakaNydusDestroyer.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitConstruction.DehakaNydusDestroyer.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceCastStart" Send="AnimClear Attack"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceCastStart" Send="AnimClear Spell"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceCastStart" Send="AnimPlay Tunnel Burrow PlayForever"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceCastStart" Send="Create YagdraBurrowDownEffects"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceCastStart" Send="Create BurrowDownUltralisk"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceFinishStart" Send="Create DehakaNydusDestroyerBase"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceCastStart" Target="DehakaNydusDestroyerBase" Send="Signal Burrowing"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceFinishStart" Send="AnimPlay Untunnel Unburrow"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceFinishStart" Send="AnimClear Tunnel"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceFinishStart" Send="Create YagdraBurrowUpEffects"/>
+        <On Terms="Abil.NydusDestroyerDeepTunnel.SourceFinishStart" Send="Create BurrowUpLarge"/>
+        <On Terms="ActorCreation" Send="Create MonsterLarge_VoxIdleGrowl_DelayedLoopSound"/>
+        <On Terms="Abil.NydusDestroyerBeam.SourceChannelStart" Send="$Spell PlayForever"/>
+        <On Terms="Abil.NydusDestroyerBeam.SourceChannelStop" Send="AnimClear Spell"/>
+        <On Terms="ModelEvent; ModelEventName PrimalZergSpit" Send="Create Primal_Zerg_Spit"/>
+        <DeathArray index="Normal" ModelLink="Dehaka_Primal_Wurm_Coop_Death" SoundLink="Zerg_ExplosionLarge"/>
+        <DeathArray index="Disintegrate" ModelLink="Dehaka_Primal_Wurm_Coop_DeathAcid" SoundLink="Uni_DeathFXAcid"/>
+        <DeathArray index="Fire" ModelLink="Dehaka_Primal_Wurm_Coop_DeathFire" SoundLink="Uni_DeathFXFireLarge"/>
+        <DeathArray index="UnderConstruction" ModelLink="DehakaPrimalBuildingDeath" SoundLink="Zerg_ExplosionLarge"/>
+        <PortraitModel value="Wurm_Primal_Collection_Portrait"/>
+        <BuildModel value="Dehaka_Primal_Wurm_Coop"/>
+        <PlacementModel value="Dehaka_Primal_Wurm_Coop_Placement"/>
+        <PlacementSound value="Zerg_BuildingPlacement"/>
+        <Macros value="BuildingFlattenTerrainMacro"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <BarWidth value="85"/>
+        <BarOffset value="180"/>
+        <NameOffset value="70"/>
+        <UnitIcon value="Assets\Textures\BTN-Building-Dehaka-PrimalWurm.dds"/>
+        <HeroIcon value="Assets\Textures\btn-building-dehaka-primalwurm.dds"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Wurm-Primal.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Wurm-Primal.dds"/>
+        </Wireframe>
+        <SoundArray index="Birth" value="PrimalWurm_Ready"/>
+        <SoundArray index="Ready" value="PrimalWurm_Ready"/>
+        <SoundArray index="What" value="PrimalWurm_What"/>
+        <SoundArray index="Yes" value="PrimalWurm_Attack"/>
+        <SoundArray index="Attack" value="PrimalWurm_Attack"/>
+        <SoundArray index="Construction" value="Zerg_BuildingMorphWhat"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level0.dds"/>
+        <Aliases value="_UnitHuge"/>
+        <Model value="Dehaka_Primal_Wurm_Coop"/>
+    </CActorUnit>
+    <CActorModel id="Primal_Zerg_Spit">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth {} {} ContentPlayOnce"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachWeapon"/>
+    </CActorModel>
+    <CActorModel id="DehakaNydusDestroyerBuild" parent="PrimalZergBuildingBuild"/>
+    <CActorModel id="DehakaNydusDestroyerBase" parent="PrimalZergBuildAttachedBurrowedSplat">
+        <On Terms="Signal.*.Burrowing" Send="RefClear ::Host"/>
+        <On Terms="Signal.*.Burrowing" Send="AnimBracketStop BSD"/>
+        <On Terms="Signal.*.DeathDisintegration" Send="AnimBracketStop BSD"/>
+        <On Terms="Signal.*.DeathDisintegration" Send="AnimSetDuration BSD 7.000000"/>
+        <On Terms="UnitDeath" Send="AnimSetDuration BSD 13.000000"/>
+        <Model value="Primal_Wurm_Base_Coop"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+        <HostSiteOps Ops="SOpAttachHarnessStationary" HoldPosition="1" HoldRotation="1"/>
+        <Supporter Subject="_Selectable"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Scale" value="1"/>
+    </CActorModel>
+    <CActorSound id="PrimalEgg_ReadyPopExplosionSound" parent="SoundOneShot">
+        <Sound value="PrimalEgg_ReadyPopExplosion"/>
+    </CActorSound>
+    <CActorModel id="DehakaCocoonFinishDeath">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD {} {} Death ContentPlayOnce"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="AnimSetTimeScale BSD 2.000000"/>
+    </CActorModel>
+    <CActorModel id="Primal_Zerg_BirthSmokeSmall" parent="ModelAnimationStyleOneShotNoOrphan">
+        <On Terms="ActorCreation" Send="Create Primal_Zerg_BirthSplash"/>
+    </CActorModel>
+    <CActorModel id="Primal_Zerg_BirthSmoke" parent="ModelAnimationStyleOneShotNoOrphan">
+        <On Terms="ActorCreation" Send="Create Primal_Zerg_BirthSplash"/>
+    </CActorModel>
+    <CActorModel id="Primal_Zerg_BirthSmokeLarge" parent="ModelAnimationStyleOneShotNoOrphan">
+        <On Terms="ActorCreation" Send="Create Primal_Zerg_BirthSplash"/>
+    </CActorModel>
+    <CActorSound id="Primal_Zerg_BirthSplash" parent="SoundOneShot">
+        <Layers Sound="InfestedCocoon_Civilian_Birth">
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorUnit id="DehakaTrainEggDrone" parent="DehakaTrainEgg" unitName="DehakaTrainEggDrone">
+        <On Terms="AbilTrain.*.Finish" Send="Create Primal_Zerg_BirthSmokeSmall"/>
+        <On Terms="AbilTrain.*.Finish" Send="Create PrimalEgg_ReadyPopExplosionSound"/>
+        <Aliases value="_UnitSmall"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <PortraitModel value="CocoonPortrait"/>
+        <BarOffset value="50"/>
+        <BarWidth value="40"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </Wireframe>
+        <StatusBarOn index="Progress" value="1"/>
+        <StatusBarOn index="Duration" value="1"/>
+        <HighlightTooltip value="Unit/Name/DehakaTrainEgg"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaTrainEggZergling" parent="DehakaTrainEgg" unitName="DehakaTrainEggZergling">
+        <On Terms="AbilTrain.*.Finish" Send="Create Primal_Zerg_BirthSmokeSmall"/>
+        <On Terms="AbilTrain.*.Finish" Send="Create PrimalEgg_ReadyPopExplosionSound"/>
+        <Aliases value="_UnitSmall"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <PortraitModel value="CocoonPortrait"/>
+        <BarOffset value="50"/>
+        <BarWidth value="40"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </Wireframe>
+        <StatusBarOn index="Progress" value="1"/>
+        <StatusBarOn index="Duration" value="1"/>
+        <HighlightTooltip value="Unit/Name/DehakaTrainEgg"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaTrainEggRoach" parent="DehakaTrainEgg" unitName="DehakaTrainEggRoach">
+        <On Terms="AbilTrain.*.Finish" Send="Create Primal_Zerg_BirthSmokeSmall"/>
+        <On Terms="AbilTrain.*.Finish" Send="Create PrimalEgg_ReadyPopExplosionSound"/>
+        <Aliases value="_UnitSmall"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <PortraitModel value="CocoonPortrait"/>
+        <BarOffset value="50"/>
+        <BarWidth value="40"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </Wireframe>
+        <StatusBarOn index="Progress" value="1"/>
+        <StatusBarOn index="Duration" value="1"/>
+        <HighlightTooltip value="Unit/Name/DehakaTrainEgg"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaTrainEggHydralisk" parent="DehakaTrainEgg" unitName="DehakaTrainEggHydralisk">
+        <On Terms="AbilTrain.*.Finish" Send="Create Primal_Zerg_BirthSmoke"/>
+        <On Terms="AbilTrain.*.Finish" Send="Create PrimalEgg_ReadyPopExplosionSound"/>
+        <Aliases value="_UnitSmall"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <PortraitModel value="CocoonPortrait"/>
+        <BarOffset value="50"/>
+        <BarWidth value="40"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </Wireframe>
+        <StatusBarOn index="Progress" value="1"/>
+        <StatusBarOn index="Duration" value="1"/>
+        <HighlightTooltip value="Unit/Name/DehakaTrainEgg"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaTrainEggSwarmHost" parent="DehakaTrainEgg" unitName="DehakaTrainEggSwarmHost">
+        <On Terms="AbilTrain.*.Finish" Send="Create Primal_Zerg_BirthSmoke"/>
+        <On Terms="AbilTrain.*.Finish" Send="Create PrimalEgg_ReadyPopExplosionSound"/>
+        <Aliases value="_UnitSmall"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <PortraitModel value="CocoonPortrait"/>
+        <BarOffset value="50"/>
+        <BarWidth value="40"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </Wireframe>
+        <StatusBarOn index="Progress" value="1"/>
+        <StatusBarOn index="Duration" value="1"/>
+        <HighlightTooltip value="Unit/Name/DehakaTrainEgg"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaTrainEggUltralisk" parent="DehakaTrainEgg" unitName="DehakaTrainEggUltralisk">
+        <On Terms="AbilTrain.*.Finish" Send="Create Primal_Zerg_BirthSmokeLarge"/>
+        <On Terms="AbilTrain.*.Finish" Send="Create PrimalEgg_ReadyPopExplosionSound"/>
+        <Aliases value="_UnitSmall"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <PortraitModel value="CocoonPortrait"/>
+        <BarOffset value="50"/>
+        <BarWidth value="40"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-RavagersEgg.dds"/>
+        </Wireframe>
+        <StatusBarOn index="Progress" value="1"/>
+        <StatusBarOn index="Duration" value="1"/>
+        <HighlightTooltip value="Unit/Name/DehakaTrainEgg"/>
+    </CActorUnit>
+    <CActorMissile id="DehakaTownHallWeaponAttackMissile" parent="GenericAttackMissile" unitName="DehakaTownHallWeapon"/>
+    <CActorAction id="DehakaTownHallWeaponAttack" parent="GenericAttack" effectImpact="DehakaTownHallBaseWeaponDamage" effectLaunch="DehakaTownHallBaseWeapon">
+        <LaunchAssets Sound="PrimalHive_AcidSpitAttackLaunch"/>
+        <ImpactMap index="None" Sound="PrimalHive_AcidSpitAttackImpact"/>
+    </CActorAction>
+    <CActorModel id="DehakaBarracksDeath" parent="UnitDeathModel">
+        <Macros index="0" removed="1"/>
+        <On Terms="ActorCreation" Send="AnimCopy ::Creator"/>
+        <On Terms="ActorCreation" Send="AnimGroupRemove Alternate Instant"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.200000 DeathUnburrow"/>
+        <On Terms="ActorCreation" Send="AnimSetTimeScaleGlobal 1.000000"/>
+        <On Terms="TimerExpired; TimerName DeathUnburrow" Send="ModelSwap Dehaka_Primal_Barracks_Coop_Death"/>
+        <On Terms="ModelSwapped; ModelSwapTo Dehaka_Primal_Barracks_Coop_Death" Send="$Death NonLooping"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+    </CActorModel>
+    <CActorModel id="DehakaBarracksBuild" parent="PrimalZergBuildingBuild"/>
+    <CActorUnit id="DehakaBarracks" parent="GenericUnitStandardNoAutoSoundLinks" unitName="DehakaBarracks">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <On Terms="UnitBirth.DehakaBarracks" Send="AnimGroupApply Alternate Stand,Alternate,Start Stand,Alternate,End Instant 1.000000 AsTimeScale"/>
+        <On Terms="UnitConstruction.DehakaBarracks.Start" Send="Create DehakaBarracksBuild"/>
+        <On Terms="UnitConstruction.DehakaBarracks.Start" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitConstruction.DehakaBarracks.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitConstruction.DehakaBarracks.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitBirth.DehakaBarracks.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitBirth.DehakaBarracks.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On Terms="UnitBirth.DehakaBarracks.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracks" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracks" Send="AnimGroupApply Alternate Stand,Alternate,Start Stand,Alternate,End 0 1.000000 AsTimeScale"/>
+        <On Terms="UnitDeath.DehakaBarracks" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracks" Send="Create PrimalSpawningPool_BurrowSound"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracks" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracksUprooted" Send="Destroy"/>
+        <On Terms="AbilTrain.DehakaBarracksTrainEgg.Start" Send="AnimPlay Train Spell NonLooping"/>
+        <On Terms="ActorCreation" Send="Create MonsterLarge_VoxIdleGrowl_DelayedLoopSound"/>
+        <On Terms="ModelEvent; ModelEventName PrimalZergSpit" Send="Create Primal_Zerg_Spit"/>
+        <DeathArray index="Normal" AnimProps="IGNORE" ModelLink="DehakaBarracksDeath" SoundLink="PrimalHatchery_Unburrow"/>
+        <DeathArray index="UnderConstruction" ActorModel="UnitDeathModel" ModelLink="DehakaPrimalBuildingDeath" SoundLink="Zerg_ExplosionLarge"/>
+        <PlacementSound value="Zerg_BuildingPlacement"/>
+        <PlacementActorModel value="PrimalPlacementModel"/>
+        <PlaceholderActorModel value="PrimalPlacementModel"/>
+        <PortraitModel value="Barracks_Primal_Collection_Portrait"/>
+        <WalkAnimMoveSpeed value="1.2773"/>
+        <BarOffset value="135"/>
+        <BarWidth value="200"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Barrack-Primal.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-dehaka-primalbarracks.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <NameOffset value="130"/>
+        <SoundArray index="Ready" value="PrimalSpawningPool_Ready"/>
+        <SoundArray index="What" value="PrimalSpawningPool_What"/>
+        <SoundArray index="Construction" value="Zerg_BuildingMorphWhat"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-dehaka-primalbarracks.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Barrack-Primal.dds"/>
+        </Wireframe>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <PlacementModel value="Dehaka_Primal_Barracks_Coop_Placement"/>
+        <DeathActorModel value="DehakaBarracksDeath"/>
+        <DeathActorModelLow value="DehakaBarracksDeath"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaBarracksUprooted" parent="GenericUnitStandardNoAutoSoundLinks" unitName="DehakaBarracksUprooted">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <On Terms="UnitBirth.DehakaBarracksUprooted" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracksUprooted" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracksUprooted" Send="AnimGroupRemove Alternate"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracksUprooted" Send="Create LargeBurrowUpEffects"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracksUprooted" Send="Create PrimalSpawningPool_UnburrowSound"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracks" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracksUprooted" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaBarracksUprooted" Send="AnimPlay Uproot Stand,Alternate,End NonLooping 0.000000 -1.000000 1.000000 AsTimeScale"/>
+        <On Terms="ActorCreation" Send="Create MonsterLarge_VoxIdleGrowl_DelayedLoopSound"/>
+        <On Terms="ModelEvent; ModelEventName PrimalZergSpit" Send="Create Primal_Zerg_Spit"/>
+        <On Terms="ModelEvent; ModelEventName Footstep" Send="Create PrimalSpawningPool_Footstep_Sound"/>
+        <On Terms="ModelEvent; ModelEventName Footstep; PassChance 50.000000" Send="Create PrimalSpawningPool_Movement_Sound"/>
+        <DeathArray index="Normal" ModelLink="Dehaka_Primal_Barracks_Coop_Death" SoundLink="Zerg_ExplosionLarge"/>
+        <DeathArray index="UnderConstruction" ActorModel="UnitDeathModel" ModelLink="DehakaPrimalBuildingDeath" SoundLink="Zerg_ExplosionLarge"/>
+        <PlacementSound value="Zerg_BuildingPlacement"/>
+        <PlacementActorModel value="PrimalPlacementModel"/>
+        <PlaceholderActorModel value="PrimalPlacementModel"/>
+        <PortraitModel value="Barracks_Primal_Collection_Portrait"/>
+        <WalkAnimMoveSpeed value="1.2773"/>
+        <BarOffset value="135"/>
+        <BarWidth value="200"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Barrack-Primal.dds"/>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Barrack-Primal.dds"/>
+        </Wireframe>
+        <HeroIcon value="Assets\Textures\btn-building-dehaka-primalbarracks.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <NameOffset value="130"/>
+        <SoundArray index="Ready" value="PrimalSpawningPoolUprooted_Ready"/>
+        <SoundArray index="Help" value="Alert_ZergBaseUnderAttack"/>
+        <SoundArray index="What" value="PrimalSpawningPoolUprooted_What"/>
+        <SoundArray index="Yes" value="PrimalSpawningPoolUprooted_Yes"/>
+        <SoundArray index="Attack" value="PrimalSpawningPoolUprooted_Yes"/>
+        <SoundArray index="Construction" value="Zerg_BuildingMorphWhat"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-dehaka-primalbarracks.dds"/>
+    </CActorUnit>
+    <CActorSound id="PrimalSpawningPool_Footstep_Sound" parent="SoundOneShot">
+        <Sound value="PrimalSpawningPool_Footstep"/>
+    </CActorSound>
+    <CActorSound id="PrimalSpawningPool_Movement_Sound" parent="SoundOneShot">
+        <Sound value="PrimalSpawningPool_Movement"/>
+    </CActorSound>
+    <CActorSound id="PrimalSpawningPool_BurrowSound" parent="SoundOneShot">
+        <Sound value="PrimalSpawningPool_Burrow"/>
+    </CActorSound>
+    <CActorSound id="PrimalSpawningPool_UnburrowSound" parent="SoundOneShot">
+        <Sound value="PrimalSpawningPool_Unburrow"/>
+    </CActorSound>
+    <CActorProgress id="ZergConstruction">
+        <On Terms="Abil.DehakaHatcheryBuild.BuiltStart" Send="Create"/>
+    </CActorProgress>
+    <CActorModel id="DehakaHatcheryBuild" parent="PrimalZergBuildingBuild"/>
+    <CActorModel id="DehakaHatcheryDeath" parent="UnitDeathModel">
+        <Macros index="0" removed="1"/>
+        <On Terms="ActorCreation" Send="AnimCopy ::Creator"/>
+        <On Terms="ActorCreation" Send="AnimGroupRemove Alternate Instant"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.200000 DeathUnburrow"/>
+        <On Terms="ActorCreation" Send="AnimSetTimeScaleGlobal 1.000000"/>
+        <On Terms="TimerExpired; TimerName DeathUnburrow" Send="ModelSwap Dehaka_Primal_Hatchery_Coop_Death"/>
+        <On Terms="ModelSwapped; ModelSwapTo Dehaka_Primal_Hatchery_Coop_Death" Send="$Death NonLooping"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+    </CActorModel>
+    <CActorUnit id="DehakaHatchery" parent="GenericUnitStandardNoAutoSoundLinks" unitName="DehakaHatchery">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <Macros value="ZergPrimalHatcheryPlayerDecalMacro"/>
+        <Macros value="SprayHelperMacroCoop"/>
+        <On Terms="UnitBirth.DehakaHatchery" Send="AnimGroupApply Alternate Stand,Alternate,Start Stand,Alternate,End Instant 1.000000 AsTimeScale"/>
+        <On Terms="UnitConstruction.DehakaHatchery.Start" Send="Create DehakaHatcheryBuild"/>
+        <On Terms="UnitConstruction.DehakaHatchery.Start" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitConstruction.DehakaHatchery.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitConstruction.DehakaHatchery.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitBirth.DehakaHatchery.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitBirth.DehakaHatchery.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On Terms="UnitBirth.DehakaHatchery.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatchery" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatchery" Send="AnimGroupApply Alternate Stand,Alternate,Start Stand,Alternate,End 0 1.000000 AsTimeScale"/>
+        <On Terms="UnitDeath.DehakaHatchery" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatchery" Send="Create PrimalHatchery_BurrowSound"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatchery" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatcheryUprooted" Send="Destroy"/>
+        <On Terms="AbilTrain.DehakaHatcheryTrainEgg.Start" Send="$Spell NonLooping"/>
+        <On Terms="ActorCreation" Send="Create MonsterLarge_VoxIdleGrowl_DelayedLoopSound"/>
+        <On Terms="ModelEvent; ModelEventName PrimalZergSpit" Send="Create Primal_Zerg_Spit"/>
+        <!-- Clan decal -->
+        <On Terms="AbilMorph.*.Start; MorphFrom DehakaHatchery; MorphTo DehakaHatcheryUprooted" Target="ZergClanFlag" Send="Signal DestroyFlag"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom DehakaHatcheryUprooted; MorphTo DehakaHatchery; PlayerHasClanDecal" Send="Create ZergClanFlag"/>
+        <On Terms="UnitBirth.DehakaHatchery; PlayerHasClanDecal" Send="Create ZergClanFlag"/>
+        <!-- Player trophy -->
+        <On Terms="AbilMorph.*.Start; MorphFrom DehakaHatchery; MorphTo DehakaHatcheryUprooted" Target="ZergPlayerTrophy" Send="Signal DestroyFlag"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom DehakaHatcheryUprooted; MorphTo DehakaHatchery; PlayerHasTrophy" Send="Create ZergPlayerTrophy"/>
+        <On Terms="UnitBirth.DehakaHatchery; PlayerHasTrophy" Send="Create ZergPlayerTrophy"/>
+        <PlacementSound value="Zerg_BuildingPlacement"/>
+        <PlacementActorModel value="PrimalPlacementModel"/>
+        <PlaceholderActorModel value="PrimalPlacementModel"/>
+        <PortraitModel value="Hatchery_Primal_Collection_Portrait"/>
+        <WalkAnimMoveSpeed value="1.2773"/>
+        <BarOffset value="135"/>
+        <BarWidth value="200"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <NameOffset value="130"/>
+        <SoundArray index="Ready" value="PrimalHatchery_Ready"/>
+        <SoundArray index="What" value="PrimalHatchery_What"/>
+        <SoundArray index="Construction" value="Zerg_BuildingMorphWhat"/>
+        <StatusHarvesterData Text="UI/HarvesterCountMinerals" SearchFilters="HarvestableResource;Player,Ally,Enemy" SearchRadius="8"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-dehaka-primalhatchery.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Hatchery-Primal.dds"/>
+        </Wireframe>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Hatchery-Primal.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-dehaka-primalhatchery.dds"/>
+        <PlacementModel value="Dehaka_Primal_Hatchery_Coop_Placement"/>
+        <DeathActorModel value="DehakaHatcheryDeath"/>
+        <DeathActorModelLow value="DehakaHatcheryDeath"/>
+        <DeathArray index="Normal" AnimProps="IGNORE" ModelLink="DehakaHatcheryDeath" SoundLink="PrimalHatchery_Unburrow"/>
+        <DeathArray index="UnderConstruction" ActorModel="UnitDeathModel" ModelLink="DehakaPrimalBuildingDeath" SoundLink="Zerg_ExplosionLarge"/>
+    </CActorUnit>
+    <CActorUnit id="DehakaHatcheryUprooted" parent="GenericUnitStandardNoAutoSoundLinks" unitName="DehakaHatcheryUprooted">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <Macros value="ZergPrimalHatcheryPlayerDecalMacro"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatcheryUprooted" Send="AnimGroupRemove Alternate"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatcheryUprooted" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatcheryUprooted" Send="AnimPlay Uproot Stand,Alternate,End NonLooping -1.000000 -1.000000 1.000000 AsTimeScale"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatcheryUprooted" Send="Create LargeBurrowUpEffects"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatcheryUprooted" Send="Create PrimalHatchery_UnburrowSound"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatchery" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphTo DehakaHatcheryUprooted" Send="Create"/>
+        <On Terms="ActorCreation" Send="Create MonsterLarge_VoxIdleGrowl_DelayedLoopSound"/>
+        <On Terms="ModelEvent; ModelEventName PrimalZergSpit" Send="Create Primal_Zerg_Spit"/>
+        <On Terms="ModelEvent; ModelEventName Footstep" Send="Create PrimalHatchery_Footstep_Sound"/>
+        <On Terms="ModelEvent; ModelEventName Footstep; PassChance 50.000000" Send="Create PrimalHatchery_Movement_Sound"/>
+        <DeathArray index="Normal" ModelLink="Dehaka_Primal_Hatchery_Coop_Death" SoundLink="Zerg_ExplosionLarge"/>
+        <DeathArray index="UnderConstruction" ActorModel="UnitDeathModel" ModelLink="DehakaPrimalBuildingDeath" SoundLink="Zerg_ExplosionLarge"/>
+        <PlacementSound value="Zerg_BuildingPlacement"/>
+        <PlacementActorModel value="PrimalPlacementModel"/>
+        <PlaceholderActorModel value="PrimalPlacementModel"/>
+        <PortraitModel value="Hatchery_Primal_Collection_Portrait"/>
+        <WalkAnimMoveSpeed value="1.2773"/>
+        <BarOffset value="135"/>
+        <BarWidth value="200"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Hatchery-Primal.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-dehaka-primalhatchery.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level1.dds"/>
+        <NameOffset value="130"/>
+        <SoundArray index="Ready" value="PrimalHatcheryUprooted_Ready"/>
+        <SoundArray index="Help" value="Alert_ZergBaseUnderAttack"/>
+        <SoundArray index="What" value="PrimalHatcheryUprooted_What"/>
+        <SoundArray index="Yes" value="PrimalHatcheryUprooted_Yes"/>
+        <SoundArray index="Attack" value="PrimalHatcheryUprooted_Yes"/>
+        <SoundArray index="Construction" value="Zerg_BuildingMorphWhat"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-dehaka-primalhatchery.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Dehaka-Hatchery-Primal.dds"/>
+        </Wireframe>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+    </CActorUnit>
+    <CActorSplat id="MurvarSpawningTargetSearch" parent="ZergCursorSplat" abil="DehakaMurvarTopBar"/>
+    <CActorSplat id="KraithSpawningTargetSearch" parent="ZergCursorSplat" abil="DehakaDakrunTopBar"/>
+    <CActorSimple id="KraithCrashingChargeKnockbackAnim">
+        <On Terms="Behavior.KraithCrashingChargeKnockback.On" Send="Create"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="AnimClear Attack"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="AnimClear AttackReady"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="AnimClear AttackLeft"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="AnimClear AttackRight"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="AnimPlay KraithKnockback Flail PlayForever,RandomStartOffset 0.100000 0.100000"/>
+        <On Terms="Behavior.KraithCrashingChargeKnockback.Off" Send="TimerSet 0.250000 KnockbackDelay"/>
+        <On Terms="TimerExpired; TimerName KnockbackDelay" Target="_Unit" Send="AnimClear KraithKnockback"/>
+        <On Terms="TimerExpired; TimerName KnockbackDelay" Send="Destroy"/>
+    </CActorSimple>
+    <CActorModel id="PrimalPlacementModel" parent="PlacementModel">
+        <Remove Terms="ActorCreation" Send="$Stand PlayForever"/>
+        <On Terms="ActorCreation" Send="$Stand,Burrow PlayForever"/>
+        <On Terms="ActorCreation; !ModelIsLowQuality" Send="SetOpacity 0.450000"/>
+        <On Terms="ActorCreation" Send="SetCastShadows"/>
+    </CActorModel>
+    <CActorUnit id="CoopDehakaGlevigEggZergling" parent="GenericUnitStandardNoAutoSoundLinks" unitName="CoopDehakaGlevigEggZergling">
+        <On Terms="ActorCreation" Send="Create YagdraEggBirth"/>
+        <On Terms="ActorCreation" Send="$Birth"/>
+        <On Terms="ActorCreation" Send="SetScale 0.100000"/>
+        <On Terms="ActorCreation" Send="SetScale 1.000000 0.125000"/>
+        <On Terms="ActorCreation" Send="Create YagdraEggSoundSmall"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Work Work"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggZergling" Send="AnimGroupRemove Work"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggZergling" Send="Create DehakaEliteEggsplosion"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggZergling" Send="Destroy"/>
+        <DeathArray index="Normal" ModelLink="YagdraEggDeath" SoundLink="Doodad_Eggsplosion_Death"/>
+        <PortraitModel value="EggPortrait"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Egg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <SoundArray index="Ready" value="Egg_Ready"/>
+        <SoundArray index="What" value="Egg_What"/>
+        <SoundArray index="Pissed" value="Egg_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-Egg.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="CoopDehakaGlevigEggRoach" parent="GenericUnitStandardNoAutoSoundLinks" unitName="CoopDehakaGlevigEggRoach">
+        <On Terms="ActorCreation" Send="Create YagdraEggBirth"/>
+        <On Terms="ActorCreation" Send="$Birth"/>
+        <On Terms="ActorCreation" Send="SetScale 0.100000"/>
+        <On Terms="ActorCreation" Send="SetScale 1.000000 0.125000"/>
+        <On Terms="ActorCreation" Send="Create YagdraEggSoundSmall"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Work Work"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggRoach" Send="AnimGroupRemove Work"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggRoach" Send="Create DehakaEliteEggsplosion"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggRoach" Send="Destroy"/>
+        <DeathArray index="Normal" ModelLink="YagdraEggDeath" SoundLink="Doodad_Eggsplosion_Death"/>
+        <PortraitModel value="EggPortrait"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Egg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <SoundArray index="Ready" value="Egg_Ready"/>
+        <SoundArray index="What" value="Egg_What"/>
+        <SoundArray index="Pissed" value="Egg_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-Egg.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorUnit id="CoopDehakaGlevigEggHydralisk" parent="GenericUnitStandardNoAutoSoundLinks" unitName="CoopDehakaGlevigEggHydralisk">
+        <On Terms="ActorCreation" Send="Create YagdraEggBirth"/>
+        <On Terms="ActorCreation" Send="$Birth"/>
+        <On Terms="ActorCreation" Send="SetScale 0.100000"/>
+        <On Terms="ActorCreation" Send="SetScale 1.000000 0.125000"/>
+        <On Terms="ActorCreation" Send="Create YagdraEggSoundSmall"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Work Work"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggHydralisk" Send="AnimGroupRemove Work"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggHydralisk" Send="Create DehakaEliteEggsplosion"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom CoopDehakaGlevigEggHydralisk" Send="Destroy"/>
+        <DeathArray index="Normal" ModelLink="YagdraEggDeath" SoundLink="Doodad_Eggsplosion_Death"/>
+        <PortraitModel value="EggPortrait"/>
+        <BarOffset value="40"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Zerg-Egg.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-zerg-groundcarapace-level0.dds"/>
+        <SoundArray index="Ready" value="Egg_Ready"/>
+        <SoundArray index="What" value="Egg_What"/>
+        <SoundArray index="Pissed" value="Egg_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-egg.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Zerg-Egg.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSound id="YagdraEggSoundSmall" parent="SoundContinuous">
+        <Sound value="Doodad_Egg_StandWork"/>
+        <On Terms="ActorCreation" Send="SoundSetPitch Linear -12.000000@0.000000,12.000000@5000.000000"/>
+    </CActorSound>
+    <CActorModel id="YagdraEggBirth" parent="ModelAnimationStyleOneShot"/>
+    <CActorModel id="DehakaEliteEggsplosion">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOriginStationary SOpShadow"/>
+        <On Terms="ActorCreation" Send="$Death"/>
+        <On Terms="ActorCreation" Send="Create Dehaka_EliteEggsplosion_AS"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+    </CActorModel>
+    <CActorSound id="Dehaka_EliteEggsplosion_AS" parent="SoundOneShot">
+        <Sound value="Dehaka_Eggsplosion_Death"/>
+    </CActorSound>
+    <CActorSiteOpForward id="SOpFireballForwardGuide">
+        <HostForward Subject="_Unit" Actor="Find"/>
+    </CActorSiteOpForward>
+    <CActorModel id="DehakaImpalerTenderizeModel" parent="ModelAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachCenterSoft"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <On Terms="Behavior.ImpalerDehakaTenderize.On" Send="Create"/>
+        <On Terms="Behavior.ImpalerDehakaTenderize.Off" Send="Destroy"/>
+        <Model value="Primal_Lurker_Coop_Tenderize"/>
+        <AutoScaleFromSelectionFactor value="0.300000"/>
+    </CActorModel>
+    <CActorModel id="Primal_Lurker_Coop_Tenderize_Bloodpool" parent="ModelAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <Host Subject="_Unit"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <On Terms="Behavior.ImpalerDehakaTenderize.On" Send="Create"/>
+        <On Terms="Behavior.ImpalerDehakaTenderize.Off" Send="Destroy"/>
+        <AutoScaleFromSelectionFactor value="0.600000"/>
+    </CActorModel>
+    <CActorModel id="Primal_Lurker_Coop_Tenderize_Impact" parent="ModelAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <Host Subject="_Unit"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <On Terms="Behavior.ImpalerDehakaTenderize.On" Send="Create"/>
+        <On Terms="Behavior.ImpalerDehakaTenderize.Off" Send="Destroy"/>
+        <AutoScaleFromSelectionFactor value="0.600000"/>
+        <HostSiteOps Ops="SOpAttachCenterSoft"/>
+    </CActorModel>
 </Catalog>

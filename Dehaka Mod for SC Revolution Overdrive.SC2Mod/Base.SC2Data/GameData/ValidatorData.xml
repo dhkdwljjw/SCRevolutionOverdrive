@@ -9,6 +9,18 @@
         <WhichUnit Effect="DehakaConsumeLaunchMissile"/>
         <Filters value="-;Dead"/>
     </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaExtractor">
+        <Value value="1"/>
+        <Behavior value="DehakaExtractor"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveDehakaExtractor">
+        <Behavior value="DehakaExtractor"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareField id="TargetFoodUse1High">
+        <Compare value="LT"/>
+        <Field value="Food"/>
+        <Value value="0"/>
+    </CValidatorUnitCompareField>
     <CValidatorUnitCompareField id="IsPZrg">
         <Field value="Race"/>
         <Value value="PZrg"/>
@@ -16,10 +28,10 @@
     <CValidatorUnitType id="IsDehakaDenCoop">
         <Value value="DehakaCoopReviveCocoon"/>
     </CValidatorUnitType>
-    <CValidatorUnitCompareVital id="LifeLessThan600">
+    <CValidatorUnitCompareVitality id="LifeLessThan600">
         <Compare value="LE"/>
         <Value value="600"/>
-    </CValidatorUnitCompareVital>
+    </CValidatorUnitCompareVitality>
     <CValidatorUnitCompareBehaviorCount id="NoDehakaPrimalMutation">
         <Behavior value="DehakaPrimalMutation"/>
     </CValidatorUnitCompareBehaviorCount>
@@ -115,8 +127,6 @@
     </CValidatorPlayerRequirement>
     <CValidatorCombine id="PickupCheckCoop">
         <Type value="And"/>
-        <CombineArray value="NotSpiderMine"/>
-        <CombineArray value="NotSpiderMineBurrowed"/>
         <CombineArray value="NotHiddenSelf"/>
     </CValidatorCombine>
     <CValidatorUnitType id="IsDehakaCoop">
@@ -140,7 +150,7 @@
     <CValidatorCombine id="DehakaCoopReviveEatUnitType">
         <ResultFailed value="CantTargetThatUnit,Validator/Text/DehakaReviveValidator"/>
         <Type value="And"/>
-        <CombineArray value="FoodUse1High"/>
+        <CombineArray value="TargetFoodUse1High"/>
         <CombineArray value="IsPZrg"/>
         <CombineArray value="TargetCanMove"/>
         <CombineArray value="TargetCanBeConsumed"/>
@@ -285,4 +295,28 @@
         <Find value="1"/>
         <Value value="HaveDehakaCoop"/>
     </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DehakaGlevigInPlay">
+        <Find value="1"/>
+        <Value value="DehakaGlevigInPlay"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DehakaMurvarInPlay">
+        <Find value="1"/>
+        <Value value="DehakaMurvarInPlay"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveDehakaTyrannozorArmorAura">
+        <Find value="1"/>
+        <Value value="HaveDehakaTyrannozorArmorAura"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveDehakaGlevigRoachFireBreath">
+        <Find value="1"/>
+        <Value value="HaveDehakaGlevigRoachFireBreath"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="NoPreventKnockback">
+        <Behavior value="PreventKnockback"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HavePreventKnockback">
+        <Behavior value="PreventKnockback"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
 </Catalog>

@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectSet id="DehakaMurvarSpawnSet">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <EffectArray value="CoopMurvarLaunchCP"/>
+        <EffectArray value="DehakaMurvarSpawnMP"/>
+    </CEffectSet>
+    <CEffectModifyPlayer id="DehakaDakrunSpawnMP">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Upgrades Upgrade="DehakaCalldownDakrun" Count="-1"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="DehakaMurvarSpawnMP">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Upgrades Upgrade="DehakaCalldownMurvar" Count="-1"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="DehakaGlevigSpawnMP">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Upgrades Upgrade="DehakaCalldownGlevig" Count="-1"/>
+    </CEffectModifyPlayer>
     <CEffectEnumArea id="ChargedBusterSearch">
         <LaunchLocation Value="OriginPoint"/>
         <SearchFilters value="Ground;Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray RectangleWidth="3" RectangleHeight="2" Effect="ChargedBusterDamage"/>
     </CEffectEnumArea>
+    <CEffectDamage id="DehakaHealAmountPerEssenceDummy">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Amount value="2"/>
+    </CEffectDamage>
+    <CEffectDamage id="DehakaMaxLifeAmountPerEssenceDummy">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Amount value="0.75"/>
+    </CEffectDamage>
     <CEffectSet id="DehakaConcoonEatLoadOrderSet">
         <ValidatorArray value="DehakaCoopReviveEatUnitType"/>
         <EditorCategories value="Race:PrimalZerg"/>
@@ -258,6 +283,13 @@
     <CEffectDamage id="DehakaEssenceReviveDummy">
         <EditorCategories value="Race:PrimalZerg"/>
     </CEffectDamage>
+    <CEffectDamage id="DehakaEssenceReviveRequirementDummy">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Amount value="40"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="DehakaExtractor">
+        <EditorCategories value="Race:PrimalZerg"/>
+    </CEffectApplyBehavior>
     <CEffectApplyBehavior id="ForceLowDeath"/>
     <CEffectCreatePersistent id="MammothBreathCreatePersistent">
         <EditorCategories value="Race:PrimalZerg"/>
@@ -1055,20 +1087,6 @@
     <CEffectSet id="DehakaGeneLifeLeechDummy">
         <EditorCategories value="Race:PrimalZerg"/>
     </CEffectSet>
-    <CEffectDamage id="CreeperExplodeSearchDamage" parent="DU_WEAP">
-        <EditorCategories value="Race:Zerg"/>
-        <Amount value="40"/>
-        <AttributeBonus index="Structure" value="40"/>
-        <ImpactLocation Value="TargetUnit"/>
-        <Kind value="Splash"/>
-        <Death value="Disintegrate"/>
-        <AINotifyFlags index="HurtEnemy" value="1"/>
-    </CEffectDamage>
-    <CEffectSet id="CreeperExplodeSet">
-        <EffectArray value="RemoveCreeperExplodeDeathBehavior"/>
-        <EffectArray value="CreeperExplodeSearch"/>
-        <EffectArray value="SuicideDelay"/>
-    </CEffectSet>
     <CEffectDamage id="DehakaCreeperSuicideDamage">
         <EditorCategories value="Race:Zerg"/>
         <Amount value="110"/>
@@ -1084,44 +1102,22 @@
         <EffectArray value="Suicide"/>
         <ValidatorArray value="TargetNotDead"/>
     </CEffectSet>
-    <CEffectRemoveBehavior id="RemoveCreeperExplodeDeathBehavior">
-        <EditorCategories value="Race:Zerg"/>
-        <BehaviorLink value="CreeperExplode"/>
-        <WhichUnit Value="Caster"/>
-    </CEffectRemoveBehavior>
     <CEffectEnumArea id="DehakaCreeperAirExplodeSearch">
         <EditorCategories value="Race:Zerg"/>
         <SearchFilters value="Air;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AreaArray Radius="2.2" Effect="DehakaCreeperSuicideDamage"/>
         <ImpactLocation Value="SourceUnit"/>
         <SearchFlags index="SameCliff" value="1"/>
+        <IncludeArray Effect="DehakaCreeperSuicideSet" Value="Target"/>
     </CEffectEnumArea>
     <CEffectEnumArea id="DehakaCreeperExplodeSearch">
         <EditorCategories value="Race:Zerg"/>
         <SearchFilters value="Ground;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
-        <AreaArray Radius="2.2" Effect="CreeperExplodeSearchDamage"/>
+        <AreaArray Radius="2.2" Effect="DehakaCreeperExplodeSearchDamage"/>
         <ImpactLocation Value="SourceUnit"/>
         <SearchFlags index="SameCliff" value="1"/>
+        <IncludeArray Effect="DehakaCreeperExplodeSet" Value="Target"/>
     </CEffectEnumArea>
-    <CEffectEnumArea id="CreeperExplodeSearch">
-        <EditorCategories value="Race:Zerg"/>
-        <SearchFilters value="Ground;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
-        <AreaArray Radius="2.2" Effect="CreeperExplodeSearchDamage"/>
-        <ImpactLocation Value="SourceUnit"/>
-        <SearchFlags index="SameCliff" value="1"/>
-    </CEffectEnumArea>
-    <CEffectCreatePersistent id="SuicideDelay">
-        <EditorCategories value="Race:Zerg"/>
-        <ExpireDelay value="0.0625"/>
-        <FinalEffect value="Suicide"/>
-    </CEffectCreatePersistent>
-    <CEffectApplyBehavior id="CreeperExplodeDelay">
-        <WhichUnit Value="Caster"/>
-    </CEffectApplyBehavior>
-    <CEffectSet id="CreeperExplodeDelaySet">
-        <EffectArray value="RemoveCreeperExplodeDeathBehavior"/>
-        <EffectArray value="CreeperExplodeDelay"/>
-    </CEffectSet>
     <CEffectLaunchMissile id="DehakaCreeperFlyingSwoopLM">
         <ImpactEffect value="DehakaCreeperExplodeSet"/>
         <Movers Link="DehakaCreeperFlyingSwoop"/>
@@ -1330,7 +1326,6 @@
     </CEffectLaunchMissile>
     <CEffectDamage id="YagdraFireballDamage">
         <EditorCategories value="Race:Zerg"/>
-        <ImpactLocation Value="TargetPoint"/>
         <Flags index="Notification" value="1"/>
         <Death value="Fire"/>
         <AreaArray Radius="1" Fraction="1"/>
@@ -1484,6 +1479,9 @@
     <CEffectRemoveBehavior id="DehakaTrainRemovePrecursor">
         <BehaviorLink value="DehakaTrainPrecursor"/>
     </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="DehakaEggPopStun">
+        <EditorCategories value="Race:Zerg"/>
+    </CEffectApplyBehavior>
     <CEffectModifyUnit id="DehakaTrainRally">
         <EditorCategories value="Race:Zerg"/>
         <CopyRallyCount value="32"/>
@@ -2398,5 +2396,308 @@
     <CEffectDamage id="DehakaDroneSpines" parent="DU_WEAP">
         <EditorCategories value="Race:Zerg"/>
         <Amount value="5"/>
+    </CEffectDamage>
+    <CEffectCreateUnit id="DehakaMurvarTopBarCU">
+        <ValidatorArray value="HasVision"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="OffsetByRadius" value="0"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="DehakaMurvarSpawnSet"/>
+        <SpawnUnit value="DehakaMurvar"/>
+        <SpawnRange value="0"/>
+    </CEffectCreateUnit>
+    <CEffectCreatePersistent id="CoopMurvarLaunchCP">
+        <EditorCategories value="Race:Zerg"/>
+        <InitialEffect value="CoopMurvarLaunchPuddleSearch"/>
+        <PeriodCount value="10"/>
+        <PeriodicEffectArray value="CoopMurvarLaunchPuddleSearch"/>
+        <PeriodicPeriodArray value="0.5"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="CoopMurvarLaunchPuddleSearch">
+        <EditorCategories value="Race:Zerg"/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Missile,Item,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="6" Effect="CoopMurvarPukePuddleSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="DehakaRoachConeAttackSet">
+        <EffectArray value="DehakaRoachLevel3AttackDamage"/>
+        <EffectArray value="DehakaRoachLevel3AttackSearch"/>
+    </CEffectSet>
+    <CEffectEnumArea id="DehakaRoachLevel3AttackSearch">
+        <AreaArray Arc="45" Radius="5" Effect="DehakaRoachLevel3AttackDamage"/>
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Dead,Hidden,Invulnerable"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+        <SearchFlags index="OffsetByUnitRadius" value="1"/>
+        <ExcludeArray Effect="DehakaRoachConeAttackSet" Value="Target"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="DehakaRoachLevel3AttackDamage">
+        <Kind value="Ranged"/>
+        <KindSplash value="Ranged"/>
+        <ArmorReduction value="1"/>
+        <EditorCategories value="Race:Terran"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <Flags index="Notification" value="1"/>
+        <Death value="Fire"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <Amount value="25"/>
+        <ValidatorArray value="WeaponInRange"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="DehakaRoachLevel2LM">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="DehakaRoachLevel2Damage"/>
+        <AmmoUnit value="DehakaRoachLevel2Weapon"/>
+        <Movers Link="MissileDefault"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="DehakaRoachLevel2Damage" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Zerg"/>
+        <Amount value="16"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectDamage id="DehakaRoachLevel2Melee" parent="DehakaRoachLevel2Damage">
+        <Death value="Eviscerate"/>
+        <Kind value="Melee"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="DehakaRavasaurLM">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="DehakaRavasaurDamage"/>
+        <AmmoUnit value="DehakaRavasaurWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="DehakaRavasaurDamage" parent="DU_WEAP_MISSILE">
+        <EditorCategories value="Race:Zerg"/>
+        <Amount value="15"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectDamage id="DehakaZerglingLevel2" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Amount value="10"/>
+    </CEffectDamage>
+    <CEffectModifyUnit id="NydusDestroyerBeamTurretFace">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <ImpactUnit Value="Caster"/>
+        <ModifyTurret Turret="NydusCanalAttacker">
+            <Target Effect="NydusDestroyerBeamCP" Value="TargetUnit"/>
+            <Flags index="Tracking" value="1"/>
+            <Flags index="ClearTargetOnAimComplete" value="1"/>
+        </ModifyTurret>
+    </CEffectModifyUnit>
+    <CEffectCreatePersistent id="NydusDestroyerBeamCP">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodicEffectArray value="NydusDestroyerBeamSet"/>
+        <PeriodicPeriodArray value="0.5"/>
+        <PeriodCount value="10"/>
+        <PeriodicValidator value="CasterAndTargetNotDead"/>
+        <InitialEffect value="NydusDestroyerBeamSet"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="NydusDestroyerBeamSet">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <EffectArray value="NydusDestroyerBeamTurretFace"/>
+        <EffectArray value="NydusDestroyerBeamDamage"/>
+    </CEffectSet>
+    <CEffectDamage id="NydusDestroyerBeamDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Amount value="25"/>
+        <Kind value="Spell"/>
+        <Death value="Disintegrate"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <LaunchLocation Value="CasterUnit"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="NydusDestroyerKnockbackSearch">
+        <EditorCategories value="Race:Zerg"/>
+        <SearchFilters value="Ground;Self,Structure,RawResource,HarvestableResource,Missile,Item,Dead,Hidden,MapBoss"/>
+        <AreaArray Radius="0.6" Effect="UnitKnockbackBy2"/>
+        <ExcludeArray Value="Target"/>
+    </CEffectEnumArea>
+    <CEffectCreateUnit id="NydusDestroyerDeepTunnelCU">
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="OffsetByRadius" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="NydusDestroyerDeepTunnelTeleportSet"/>
+        <SpawnUnit value="NydusDestroyerDeepTunnelPlacement"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="NydusDestroyerDeepTunnelTeleportSet">
+        <EffectArray value="NydusDestroyerDeepTunnelSuppressDetectionAB"/>
+        <EffectArray value="NydusDestroyerDeepTunnelTeleport"/>
+        <EffectArray value="NydusDestroyerKnockbackSearch"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectTeleport id="NydusDestroyerDeepTunnelTeleport">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichUnit Effect="NydusDestroyerDeepTunnelCU" Value="Caster"/>
+        <ClearQueuedOrders value="0"/>
+        <TargetLocation Effect="NydusDestroyerDeepTunnelTeleportSet" Value="TargetPoint"/>
+        <TeleportFlags index="TestFog" value="0"/>
+    </CEffectTeleport>
+    <CEffectApplyBehavior id="NydusDestroyerDeepTunnelSuppressDetectionAB">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="NydusDestroyerDeepTunnelSuppressDetection"/>
+    </CEffectApplyBehavior>
+    <CEffectLaunchMissile id="DehakaNydusDestroyerLaunchMissile">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="DehakaNydusDestroyerDamage"/>
+        <AmmoUnit value="DehakaNydusDestroyerWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="DehakaNydusDestroyerDamage">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Amount value="50"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="GravitonBeam">
+        <ValidatorArray value="NoPreventKnockback"/>
+    </CEffectCreatePersistent>
+    <CEffectCreateUnit id="UnitKnockbackBy3">
+        <ValidatorArray value="NoPreventKnockback"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="UnitKnockbackBy2">
+        <ValidatorArray value="NoPreventKnockback"/>
+    </CEffectCreateUnit>
+    <CEffectLaunchMissile id="DehakaTownHallBaseWeapon">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactEffect value="DehakaTownHallBaseWeaponDamage"/>
+        <AmmoUnit value="DehakaTownHallWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="DehakaTownHallBaseWeaponDamage">
+        <EditorCategories value="Race:Zerg"/>
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <ArmorReduction value="1"/>
+        <Amount value="20"/>
+        <Death value="Disintegrate"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="KraithCrashingChargeForcePersistent">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <InitialEffect value="ApplyKraithCrashingChargeKnockback"/>
+        <FinalEffect value="RemoveKraithCrashingChargeKnockback"/>
+        <PeriodCount value="10"/>
+        <PeriodicEffectArray value="KraithCrashingChargeApplyForce"/>
+        <PeriodicPeriodArray value="0.0625"/>
+        <ValidatorArray value="NotStructure"/>
+        <ValidatorArray value="IsNotBuried"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="ApplyKraithCrashingChargeKnockback">
+        <EditorCategories value="Race:Zerg"/>
+        <Behavior value="KraithCrashingChargeKnockback"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="RemoveKraithCrashingChargeKnockback">
+        <EditorCategories value="Race:Zerg"/>
+        <BehaviorLink value="KraithCrashingChargeKnockback"/>
+    </CEffectRemoveBehavior>
+    <CEffectApplyForce id="KraithCrashingChargeApplyForce">
+        <EditorCategories value="Race:Zerg"/>
+        <Amount value="10"/>
+        <WhichLocation Value="SourceUnit"/>
+    </CEffectApplyForce>
+    <CEffectDamage id="KraithCrashingChargeDamage">
+        <Amount value="200"/>
+    </CEffectDamage>
+    <CEffectCreateUnit id="DehakaDakrunTopBarCU">
+        <ValidatorArray value="HasVision"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="OffsetByRadius" value="0"/>
+        <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="DehakaDakrunTopBarSpawnSet"/>
+        <SpawnUnit value="DehakaDakrun"/>
+        <SpawnRange value="1.5"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="DehakaDakrunTopBarSpawnSet">
+        <EffectArray value="DakrunSpawningTargetSearch"/>
+        <EffectArray value="DehakaDakrunSpawnMP"/>
+    </CEffectSet>
+    <CEffectEnumArea id="DakrunSpawningTargetSearch">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Missile,Stasis,Dead,Invulnerable"/>
+        <AreaArray Radius="3" Effect="DakrunSpawningTargetSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="DakrunSpawningTargetSet">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="KraithCrashingChargeDamage"/>
+        <EffectArray value="KraithCrashingChargeForcePersistent"/>
+    </CEffectSet>
+    <CEffectDamage id="EssenceDehakaDummyStacks"/>
+    <CEffectDamage id="EssenceDehakaDummyNextLevel"/>
+    <CEffectDamage id="EssenceDehakaDummyCurrentLevel"/>
+    <CEffectCreateUnit id="DehakaGlevigTopBarCU">
+        <ValidatorArray value="HasVision"/>
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="OffsetByRadius" value="0"/>
+        <CreateFlags index="SetFacing" value="1"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="DehakaGlevigTopBarInitialSet"/>
+        <SpawnUnit value="DehakaGlevig"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="DehakaGlevigTopBarInitialSet">
+        <EffectArray value="GlevigKnockbackSearch"/>
+        <EffectArray value="DehakaGlevigEggSpawnHydraliskCU"/>
+        <EffectArray value="DehakaGlevigEggSpawnRoachCU"/>
+        <EffectArray value="DehakaGlevigEggSpawnZerglingCU"/>
+        <EffectArray value="DehakaGlevigSpawnMP"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CEffectCreateUnit id="DehakaGlevigEggSpawnZerglingCU">
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="OffsetByRadius" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="CoopDehakaGlevigEggMorphZerglingSet"/>
+        <SpawnUnit value="CoopDehakaGlevigEggZergling"/>
+        <SpawnCount value="8"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="DehakaGlevigEggSpawnRoachCU">
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="OffsetByRadius" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="CoopDehakaGlevigEggMorphRoachSet"/>
+        <SpawnUnit value="CoopDehakaGlevigEggRoach"/>
+        <SpawnCount value="2"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="DehakaGlevigEggSpawnHydraliskCU">
+        <WhichLocation Value="TargetPoint"/>
+        <CreateFlags index="DropOff" value="0"/>
+        <CreateFlags index="OffsetByRadius" value="0"/>
+        <CreateFlags index="UseFood" value="0"/>
+        <SpawnEffect value="CoopDehakaGlevigEggMorphHydraliskSet"/>
+        <SpawnUnit value="CoopDehakaGlevigEggHydralisk"/>
+        <SpawnCount value="2"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="CoopDehakaGlevigEggMorphHydraliskSet">
+        <EffectArray value="CoopDehakaGlevigEggMorphHydralisk"/>
+    </CEffectSet>
+    <CEffectSet id="CoopDehakaGlevigEggMorphRoachSet">
+        <EffectArray value="CoopDehakaGlevigEggMorphRoach"/>
+    </CEffectSet>
+    <CEffectSet id="CoopDehakaGlevigEggMorphZerglingSet">
+        <EffectArray value="CoopDehakaGlevigEggMorphZergling"/>
+    </CEffectSet>
+    <CEffectIssueOrder id="CoopDehakaGlevigEggMorphZergling">
+        <Abil value="CoopDehakaGlevigEggMorphZergling"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="CoopDehakaGlevigEggMorphHydralisk">
+        <Abil value="CoopDehakaGlevigEggMorphHydralisk"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="CoopDehakaGlevigEggMorphRoach">
+        <Abil value="CoopDehakaGlevigEggMorphRoach"/>
+    </CEffectIssueOrder>
+    <CEffectApplyBehavior id="PermanentSuppressFoodUsed"/>
+    <CEffectApplyBehavior id="DehakaGlevigEggSummonTimedLifeAB">
+        <Behavior value="DehakaGlevigEggSummonTimedLife"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="TimedLifeFate">
+        <ImpactLocation Value="SourceUnit"/>
+        <Flags index="NoVitalAbsorbShields" value="1"/>
     </CEffectDamage>
 </Catalog>

@@ -3,6 +3,31 @@
     <CRequirementAnd id="AndCountBehaviorDehakaDisableCoopReviveEatCompleteOnlyAtUnit">
         <OperandArray value="CountBehaviorDehakaDisableCoopReviveEatCompleteOnlyAtUnit"/>
     </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitAlias_PrimalBarracksCompleteOnly2498476098LT4175749157CountUnitDehakaGlevigStructureQueuedOrBetter1">
+        <OperandArray value="CountUnitAlias_PrimalBarracksCompleteOnly2498476098"/>
+        <OperandArray value="LT4175749157CountUnitDehakaGlevigStructureQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyCountUnitDehakaCoopReviveCocoonCompleteOnlyEq1385659935SumCountUpgradeD134161275">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitDehakaGlevigStructureCompleteOnly"/>
+        <OperandArray value="CountUnitDehakaMurvarStructureCompleteOnly"/>
+        <OperandArray value="CountUnitDehakaDakrunStructureCompleteOnly"/>
+        <OperandArray value="CountUnitDehakaCoopReviveCocoonCompleteOnly"/>
+        <OperandArray value="Eq1385659935SumCountUpgradeDehakaCalldownGlevigQueuedOrBetterCountUpgradeDehakaCalldownMurvarQueuedOrBetterCountUpgradeDehakaCalldownDakrunQueuedOrBetter0"/>
+        <OperandArray value="Eq644957840SumCountUnitDehakaGlevigCompleteOnlyCountUnitDehakaMurvarCompleteOnlyCountUnitDehakaDakrunCompleteOnly0"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitDehakaGlevigStructureCompleteOnlyLT4175749157CountUnitDehakaMurvarStructureQueuedOrBetter1">
+        <OperandArray value="CountUnitDehakaGlevigStructureCompleteOnly"/>
+        <OperandArray value="LT4175749157CountUnitDehakaMurvarStructureQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUnitDehakaMurvarStructureCompleteOnlyLT4175749157CountUnitDehakaDakrunStructureQueuedOrBetter1">
+        <OperandArray value="CountUnitDehakaMurvarStructureCompleteOnly"/>
+        <OperandArray value="LT4175749157CountUnitDehakaDakrunStructureQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndOr173926902CountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyLT4175749157CountUnitDehakaCoopReviveCocoonQueuedOrBetter1">
+        <OperandArray value="Or173926902CountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnly"/>
+        <OperandArray value="LT4175749157CountUnitDehakaCoopReviveCocoonQueuedOrBetter1"/>
+    </CRequirementAnd>
     <CRequirementCountAbil id="CountAbilDehakaLeapStompCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="DehakaLeapStomp" State="CompleteOnlyAtUnit"/>
@@ -11,11 +36,203 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="DehakaDisableCoopReviveEat" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitAlias_PrimalBarracksCompleteOnly2498476098">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_PrimalBarracks" State="CompleteOnly"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitDehakaCoopCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="DehakaCoop" State="CompleteOnly"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDehakaCoopReviveCocoonCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="DehakaCoopReviveCocoon" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDehakaCoopReviveCocoonQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaCoopReviveCocoon" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDehakaDakrunStructureQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaDakrunStructure" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDehakaGlevigStructureQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGlevigStructure" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDehakaMurvarStructureQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMurvarStructure" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaCalldownDakrunCompleteOnly2973833876">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaCalldownDakrun" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaCalldownDakrunQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="DehakaCalldownDakrun" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaCalldownGlevigCompleteOnly3696788027">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaCalldownGlevig" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaCalldownGlevigQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="DehakaCalldownGlevig" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaCalldownMurvarCompleteOnly934940264">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaCalldownMurvar" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaCalldownMurvarQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="DehakaCalldownMurvar" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaGlevigRoachFireBreathCompleteOnly750942037">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGlevigRoachFireBreath" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaGlevigRoachFireBreathQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGlevigRoachFireBreath" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaGuardianExplosiveBombCompleteOnly2817616560">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGuardianExplosiveBomb" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaGuardianExplosiveBombQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGuardianExplosiveBomb" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaGuardianFuryCompleteOnly1785985127">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGuardianFury" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaGuardianFuryQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGuardianFury" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaHydraliskSpeedCompleteOnly4292097330">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaHydraliskSpeed" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaHydraliskSpeedQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaHydraliskSpeed" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaImpalerTenderizeCompleteOnly472547941">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaImpalerTenderize" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaImpalerTenderizeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="DehakaImpalerTenderize" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaMurvarCreeperAirCompleteOnly3250439292">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMurvarCreeperAir" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaMurvarCreeperAirQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMurvarCreeperAir" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaMutaliskAirDoubleDamageCompleteOnly2775413166">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMutaliskAirDoubleDamage" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaMutaliskAirDoubleDamageQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMutaliskAirDoubleDamage" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaMutaliskDamageReductionCompleteOnly2919215546">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMutaliskDamageReduction" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaMutaliskDamageReductionQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMutaliskDamageReduction" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaMutaliskRespawnOnDeathCompleteOnly3112898470">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMutaliskRespawnOnDeath" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaMutaliskRespawnOnDeathQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMutaliskRespawnOnDeath" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaRavasaurRangeCompleteOnly520421447">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaRavasaurRange" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaRavasaurRangeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaRavasaurRange" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaRavasaurVSArmorCompleteOnly1565222249">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaRavasaurVSArmor" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaRavasaurVSArmorQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaRavasaurVSArmor" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaRoachMoveSpeedCompleteOnly450217508">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaRoachMoveSpeed" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaRoachMoveSpeedQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaRoachMoveSpeed" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaTyrannozorArmorAuraCompleteOnly3080465665">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaTyrannozorArmorAura" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaTyrannozorFanOfKnivesCompleteOnly1900012631">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaTyrannozorFanOfKnives" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaUltraliskBashCompleteOnly1166293633">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaUltraliskBash" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaUltraliskCrashingChargeCompleteOnly742091005">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaUltraliskCrashingCharge" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaUltraliskRegenCompleteOnly1822956796">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaUltraliskRegen" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="Eq1385659935SumCountUpgradeDehakaCalldownGlevigQueuedOrBetterCountUpgradeDehakaCalldownMurvarQueuedOrBetterCountUpgradeDehakaCalldownDakrunQueuedOrBetter0">
+        <OperandArray index="0" value="SumCountUpgradeDehakaCalldownGlevigQueuedOrBetterCountUpgradeDehakaCalldownMurvarQueuedOrBetterCountUpgradeDehakaCalldownDakrunQueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="Eq644957840SumCountUnitDehakaGlevigCompleteOnlyCountUnitDehakaMurvarCompleteOnlyCountUnitDehakaDakrunCompleteOnly0">
+        <OperandArray index="0" value="SumCountUnitDehakaGlevigCompleteOnlyCountUnitDehakaMurvarCompleteOnlyCountUnitDehakaDakrunCompleteOnly"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementLT id="LT4175749157CountUnitDehakaCoopReviveCocoonQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitDehakaCoopReviveCocoonQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT4175749157CountUnitDehakaDakrunStructureQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitDehakaDakrunStructureQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT4175749157CountUnitDehakaGlevigStructureQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitDehakaGlevigStructureQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LT4175749157CountUnitDehakaMurvarStructureQueuedOrBetter1">
+        <OperandArray index="0" value="CountUnitDehakaMurvarStructureQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
     <CRequirementLT id="LTCountAbilDehakaLeapStompCompleteOnlyAtUnit3">
         <OperandArray index="0" value="CountAbilDehakaLeapStompCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="3"/>
@@ -76,14 +293,47 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="DehakaGlevigStructure" State="CompleteOnly"/>
     </CRequirementCountUnit>
-    <CRequirementCountUpgrade id="CountUpgradeDehakaUltraliskCrashingChargeCompleteOnly3023190289">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="DehakaUltraliskCrashingCharge" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDehakaUltraliskCrashingChargeQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="DehakaUltraliskCrashingCharge" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementNot id="NotCountUpgradeDehakaGlevigRoachFireBreathQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaGlevigRoachFireBreathQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaGuardianExplosiveBombQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaGuardianExplosiveBombQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaGuardianFuryQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaGuardianFuryQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaHydraliskSpeedQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaHydraliskSpeedQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaImpalerTenderizeQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeDehakaImpalerTenderizeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaMurvarCreeperAirQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaMurvarCreeperAirQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaMutaliskAirDoubleDamageQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaMutaliskAirDoubleDamageQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaMutaliskDamageReductionQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaMutaliskDamageReductionQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaMutaliskRespawnOnDeathQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaMutaliskRespawnOnDeathQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaRavasaurRangeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaRavasaurRangeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaRavasaurVSArmorQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaRavasaurVSArmorQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDehakaRoachMoveSpeedQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDehakaRoachMoveSpeedQueuedOrBetter"/>
+    </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeDehakaUltraliskCrashingChargeQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeDehakaUltraliskCrashingChargeQueuedOrBetter"/>
     </CRequirementNot>
@@ -115,24 +365,133 @@
     <CRequirementNot id="NotCountUpgradeDehakaTyrannozorFanOfKnivesQueuedOrBetter">
         <OperandArray index="0" value="CountUpgradeDehakaTyrannozorFanOfKnivesQueuedOrBetter"/>
     </CRequirementNot>
-    <CRequirementCountUpgrade id="CountUpgradeDehakaUltraliskRegenCompleteOnly2973854788">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="DehakaUltraliskRegen" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeDehakaUltraliskBashCompleteOnly1631805343">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="DehakaUltraliskBash" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeDehakaTyrannozorArmorAuraCompleteOnly1447308910">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="DehakaTyrannozorArmorAura" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
-    <CRequirementCountUpgrade id="CountUpgradeDehakaTyrannozorFanOfKnivesCompleteOnly263971190">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="DehakaTyrannozorFanOfKnives" State="CompleteOnly"/>
-    </CRequirementCountUpgrade>
     <CRequirementCountUnit id="CountUnitDehakaDakrunCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="DehakaDakrun" State="CompleteOnly"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDehakaGlevigCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGlevig" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitDehakaMurvarCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaMurvar" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountBehavior id="CountBehaviorDehakaGene4CreepersCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGene4Creepers" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorDehakaGeneAttackSpeedCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGeneAttackSpeed" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorDehakaGeneCarapaceCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGeneCarapace" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorDehakaGeneLifeLeechCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGeneLifeLeech" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorDehakaGeneThornsCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaGeneThorns" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementOr id="Or173926902CountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnly">
+        <OperandArray value="CountUnitDehakaGlevigStructureCompleteOnly"/>
+        <OperandArray value="CountUnitDehakaMurvarStructureCompleteOnly"/>
+        <OperandArray value="CountUnitDehakaDakrunStructureCompleteOnly"/>
+    </CRequirementOr>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalArmorLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalArmorLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalArmorLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalArmorLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalArmorLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalArmorLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalArmorLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalArmorLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalArmorLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalArmorLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalWeaponsLevel1CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalWeaponsLevel1" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalWeaponsLevel1QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalWeaponsLevel1" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalWeaponsLevel2CompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalWeaponsLevel2" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalWeaponsLevel2QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalWeaponsLevel2" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDehakaPrimalWeaponsLevel3QueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DehakaPrimalWeaponsLevel3" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementAnd id="AndCountUpgradeDehakaPrimalArmorLevel1CompleteOnlyCountUnitDehakaGlevigStructureCompleteOnly">
+        <OperandArray value="CountUpgradeDehakaPrimalArmorLevel1CompleteOnly"/>
+        <OperandArray value="CountUnitDehakaGlevigStructureCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeDehakaPrimalArmorLevel2CompleteOnlyCountUnitDehakaMurvarStructureCompleteOnly">
+        <OperandArray value="CountUpgradeDehakaPrimalArmorLevel2CompleteOnly"/>
+        <OperandArray value="CountUnitDehakaMurvarStructureCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeDehakaPrimalWeaponsLevel1CompleteOnlyCountUnitDehakaGlevigStructureCompleteOnly">
+        <OperandArray value="CountUpgradeDehakaPrimalWeaponsLevel1CompleteOnly"/>
+        <OperandArray value="CountUnitDehakaGlevigStructureCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndCountUpgradeDehakaPrimalWeaponsLevel2CompleteOnlyCountUnitDehakaMurvarStructureCompleteOnly">
+        <OperandArray value="CountUpgradeDehakaPrimalWeaponsLevel2CompleteOnly"/>
+        <OperandArray value="CountUnitDehakaMurvarStructureCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementEq id="EqCountUpgradeDehakaPrimalArmorLevel1QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeDehakaPrimalArmorLevel1QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeDehakaPrimalArmorLevel2QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeDehakaPrimalArmorLevel2QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeDehakaPrimalArmorLevel3QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeDehakaPrimalArmorLevel3QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeDehakaPrimalWeaponsLevel1QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeDehakaPrimalWeaponsLevel1QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeDehakaPrimalWeaponsLevel2QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeDehakaPrimalWeaponsLevel2QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUpgradeDehakaPrimalWeaponsLevel3QueuedOrBetter0">
+        <OperandArray index="0" value="CountUpgradeDehakaPrimalWeaponsLevel3QueuedOrBetter"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementSum id="SumCountUnitDehakaGlevigCompleteOnlyCountUnitDehakaMurvarCompleteOnlyCountUnitDehakaDakrunCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUnitDehakaGlevigCompleteOnly"/>
+        <OperandArray value="CountUnitDehakaMurvarCompleteOnly"/>
+        <OperandArray value="CountUnitDehakaDakrunCompleteOnly"/>
+    </CRequirementSum>
+    <CRequirementSum id="SumCountUpgradeDehakaCalldownGlevigQueuedOrBetterCountUpgradeDehakaCalldownMurvarQueuedOrBetterCountUpgradeDehakaCalldownDakrunQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountUpgradeDehakaCalldownGlevigQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDehakaCalldownMurvarQueuedOrBetter"/>
+        <OperandArray value="CountUpgradeDehakaCalldownDakrunQueuedOrBetter"/>
+    </CRequirementSum>
 </Catalog>

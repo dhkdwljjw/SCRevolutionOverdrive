@@ -40,6 +40,5 @@
         <PlacementGridColorBlindColor value="255,90,255,133"/>
         <VictorySound value="UI_MissionComplete"/>
         <DefeatSound value="UI_MissionFailed"/>
-        <DefaultConsoleSkin value="ConsoleZerg_Dehaka"/>
     </CRace>
 </Catalog>

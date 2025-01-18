@@ -249,4 +249,13 @@
         </MotionPhases>
         <MotionPhases YawPitchRoll="MAX"/>
     </CMoverMissile>
+    <CMoverMissile id="DehakaRavasaurWeapon">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Acceleration value="-1"/>
+            <MinSpeed value="7"/>
+            <MaxSpeed value="7"/>
+            <Gravity value="35"/>
+        </MotionPhases>
+    </CMoverMissile>
 </Catalog>

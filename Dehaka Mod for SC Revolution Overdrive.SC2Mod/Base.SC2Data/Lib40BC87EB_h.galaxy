@@ -19,11 +19,7 @@ const string lib40BC87EB_gv_cM_DehakaMutaliskReviveCooldownIndicator = "PrimalRe
 const string lib40BC87EB_gv_cM_HeroReviveHealEffect = "KerriganReviveHealA";
 
 // Variable Declarations
-unit[16] lib40BC87EB_gv_cM_HeroDehaka;
-int[16] lib40BC87EB_gv_cM_DehakaLevelsMax;
 string[16] lib40BC87EB_gv_cM_DehakaVeterencyBehavior;
-int[16] lib40BC87EB_gv_cM_Dehaka_CurrentLevel;
-int[21] lib40BC87EB_gv_cM_DehakaNextLevelValueArray;
 int[16] lib40BC87EB_gv_cM_Dehaka_TotalEssence;
 fixed[16] lib40BC87EB_gv_cM_Dehaka_ReviverEssenceCount;
 string lib40BC87EB_gv_cM_Dehaka_EssenceAttribute;
@@ -39,7 +35,6 @@ bool[16] lib40BC87EB_gv_cM_HeroDeathCount;
 // Function Declarations
 bool lib40BC87EB_gf_HeroCanSpendSkillPoint (unit lp_hero, string lp_learnAbility);
 void lib40BC87EB_gf_CM_Dehaka_EssenceSetStack (unit lp_essence, int lp_stack);
-void lib40BC87EB_gf_CM_Dehaka_SetLevelValues (int lp_player);
 void lib40BC87EB_gf_CM_Dehaka_LevelUp (int lp_dehakaPlayer, unit lp_dehakaUnit);
 int lib40BC87EB_gf_CM_Dehaka_EssenceGetStack (unit lp_essence);
 void lib40BC87EB_gf_CM_Dehaka_EssenceTransfer (int lp_indexPlayer, unit lp_trainUnit, int lp_essenceBuff100Count, int lp_essenceBuff10Count, int lp_essenceBuff1Count);
@@ -55,10 +50,12 @@ void lib40BC87EB_gf_CM_HeroWaitForRevive (int lp_player);
 
 // Trigger Declarations
 trigger lib40BC87EB_gt_CM_Dehaka_TriggersInit;
+trigger lib40BC87EB_gt_CM_Dehaka_UnlockXP;
 trigger lib40BC87EB_gt_CM_Dehaka_EssenceDrop;
 trigger lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling;
 trigger lib40BC87EB_gt_CM_Dehaka_EssencePickup;
 trigger lib40BC87EB_gt_CM_Dehaka_EssenceManualUpdate;
+trigger lib40BC87EB_gt_CM_Dehaka_LevelUp_ReviveDummy;
 trigger lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs;
 trigger lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage3;
 trigger lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off;
