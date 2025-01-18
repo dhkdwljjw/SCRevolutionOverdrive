@@ -1,3 +1,3 @@
-﻿DocInfo/DescLong=상세 설명을 입력합니다.
+﻿DocInfo/DescLong=Dehaka Assets for SC : Revolution Overdrive
 DocInfo/DescShort=아무
-DocInfo/Name=스타크래프트 II 모드
+DocInfo/Name=DehakaAssets
