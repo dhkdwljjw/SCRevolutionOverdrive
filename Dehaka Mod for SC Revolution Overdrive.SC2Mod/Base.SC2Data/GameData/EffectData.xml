@@ -2700,4 +2700,7 @@
         <ImpactLocation Value="SourceUnit"/>
         <Flags index="NoVitalAbsorbShields" value="1"/>
     </CEffectDamage>
+    <CEffectEnumArea id="ImpalerDummySearch">
+        <ImpactLocation Value="CasterPoint"/>
+    </CEffectEnumArea>
 </Catalog>

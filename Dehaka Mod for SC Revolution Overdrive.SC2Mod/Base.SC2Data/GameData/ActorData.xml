@@ -2407,7 +2407,6 @@
         <Wireframe>
             <Image value="Assets\Textures\Wireframe-Dehaka-DehakaNest-Primal.dds"/>
         </Wireframe>
-        <PlacementActorModel value="DehakaCoopReviveCocoonPlacementModel"/>
         <PlaceholderActorModel value="DehakaCoopReviveCocoonPlacementModel"/>
     </CActorUnit>
     <CActorMissile id="DehakaCreeperEggAAttackMissile" parent="GenericAttackMissile" unitName="DehakaCreeperEggAMissileWeapon">
@@ -2588,7 +2587,7 @@
         <On Terms="ActorCreation" Send="AnimGroupApply Alternate {} {} Instant"/>
         <On Terms="Behavior.DehakaNormalReviveTimer.On" Send="Create"/>
         <On Terms="Behavior.DehakaNormalReviveTimer.Off" Send="AnimBracketStop BSD"/>
-        <On Terms="Effect.DehakaConcoonEatLoadOrderSet.Start; At Caster" Send="AnimPlay Work Work"/>
+        <On Terms="Effect.DehakaCoopReviveEat; At Target" Send="AnimPlay Work Work"/>
         <On Terms="AssetPreInit; ValidatePlayer HaveDehakaCoopStage2" Send="ModelLinkCustomize Dehaka_Coop_Mammoth"/>
         <On Terms="ActorCreation; ValidatePlayer HaveDehakaCoopStage2" Send="SetScale 1.500000"/>
         <Remove Terms="Abil.DehakaDroneMorph.BuiltStart" Send="Create PrimalZergConstructionAttachedExtra"/>
@@ -4237,7 +4236,7 @@
         <DeathActorModelLow value="DehakaPackleaderStructureDeathModel"/>
         <PlacementSound value="Zerg_BuildingPlacement"/>
         <PortraitModel value="Glevig_Primal_Collection_Portrait"/>
-        <BarOffset value="225"/>
+        <BarOffset value="125"/>
         <BarWidth value="155"/>
         <GroupIcon>
             <Image value="Assets\Textures\Wireframe-Dehaka-GlevigNest-Primal.dds"/>
@@ -5500,5 +5499,10 @@
         <On Terms="Behavior.ImpalerDehakaTenderize.Off" Send="Destroy"/>
         <AutoScaleFromSelectionFactor value="0.600000"/>
         <HostSiteOps Ops="SOpAttachCenterSoft"/>
+    </CActorModel>
+    <CActorModel id="ImpalerMissileGroundCracks" parent="ModelAnimationStyleOneShot">
+        <Host Subject="_Missile"/>
+        <On Terms="Effect.ImpalerDummySearch.Start" Send="Create"/>
+        <HostSiteOps Ops="SOpShadow SOpAttachOriginStationary"/>
     </CActorModel>
 </Catalog>

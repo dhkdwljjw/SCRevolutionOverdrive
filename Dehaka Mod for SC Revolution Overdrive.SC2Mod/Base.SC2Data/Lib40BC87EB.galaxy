@@ -405,7 +405,6 @@ bool lib40BC87EB_gt_CM_Dehaka_TriggersInit_Func (bool testConds, bool runActions
 //--------------------------------------------------------------------------------------------------
 void lib40BC87EB_gt_CM_Dehaka_TriggersInit_Init () {
     lib40BC87EB_gt_CM_Dehaka_TriggersInit = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_TriggersInit_Func");
-    TriggerAddEventMapInit(lib40BC87EB_gt_CM_Dehaka_TriggersInit);
 }
 
 //--------------------------------------------------------------------------------------------------
