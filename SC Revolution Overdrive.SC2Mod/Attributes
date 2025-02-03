@@ -20,6 +20,10 @@
             <Name Value="Attribute001/Value003/Name"/>
         </Value>
         <Value>
+            <Id Value="5"/>
+            <Name Value="Attribute001/Value005/Name"/>
+        </Value>
+        <Value>
             <Id Value="4"/>
             <Name Value="Attribute001/Value004/Name"/>
         </Value>

@@ -1,5 +1,6 @@
 include "TriggerLibs/NativeLib"
 include "Lib6BFEBC48"
+include "Lib40BC87EB"
 
 include "LibBF24A3A6_h"
 
@@ -10,6 +11,7 @@ include "LibBF24A3A6_h"
 void libBF24A3A6_InitLibraries () {
     libNtve_InitVariables();
     lib6BFEBC48_InitVariables();
+    lib40BC87EB_InitVariables();
 }
 
 // Triggers
@@ -19,6 +21,7 @@ void libBF24A3A6_InitLibraries () {
 bool libBF24A3A6_gt_InitTrigger_Func (bool testConds, bool runActions) {
     // Variable Declarations
     bool lv_mengskOnline;
+    bool lv_dehakaOnline;
 
     // Automatic Variable Declarations
     playergroup auto223F7C99_g;
@@ -49,8 +52,12 @@ bool libBF24A3A6_gt_InitTrigger_Func (bool testConds, bool runActions) {
             PlayerSetRace(auto223F7C99_var, "TerM");
             lv_mengskOnline = true;
         }
+        else if (auto81C49D75_val == "0005") {
+            PlayerSetRace(auto223F7C99_var, "PZrg");
+            lv_dehakaOnline = true;
+        }
         else if (auto81C49D75_val == "0004") {
-            auto08D58048_val = RandomInt(1, 5);
+            auto08D58048_val = RandomInt(1, 6);
             if (auto08D58048_val == 1) {
                 PlayerSetRace(auto223F7C99_var, "Terr");
             }
@@ -70,6 +77,10 @@ bool libBF24A3A6_gt_InitTrigger_Func (bool testConds, bool runActions) {
                 PlayerSetRace(auto223F7C99_var, "TerM");
                 lv_mengskOnline = true;
             }
+            else if (auto08D58048_val == 6) {
+                PlayerSetRace(auto223F7C99_var, "PZrg");
+                lv_dehakaOnline = true;
+            }
             else {
             }
         }
@@ -78,6 +89,10 @@ bool libBF24A3A6_gt_InitTrigger_Func (bool testConds, bool runActions) {
     }
     if ((lv_mengskOnline == true)) {
         TriggerExecute(lib6BFEBC48_gt_MengskTriggerSet, true, false);
+    }
+
+    if ((lv_dehakaOnline == true)) {
+        TriggerExecute(lib40BC87EB_gt_CM_Dehaka_TriggersInit, true, false);
     }
 
     return true;
