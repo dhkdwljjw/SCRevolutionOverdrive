@@ -315,8 +315,9 @@ Commander/Description/DehakaConsole=원시 무리 우두머리
 Commander/Details/DehakaConsole=<ul indent="0" gap="1"path="Assets\Textures\UI_Battlenet_Glues_PageAssets_BulletPoint.dds" width="0" height="0"><li>숙련된 플레이어에게 추천</li><li>임무에서 데하카를 조종하고 정수를 수집해 더 강하게 성장시킵니다.</li><li>흉포한 원시 저그를 지휘합니다.</li></ul>
 Commander/Name/DehakaConsole=데하카 콘솔
 Commander/StoreName/DehakaConsole=사령관: 데하카
+DocInfo/DescLong=Dehaka Mod for SC Revolution Overdrive
 DocInfo/DescShort=아무
-DocInfo/Name=스타크래프트 II 모드
+DocInfo/Name=Dehaka Mod for SC Revolution Overdrive
 Effect/Name/DehakaConcoonEatLoadOrderSet=DehakaConcoonEatLoadOrderSet
 Effect/Name/DehakaConsumeApplyBehavior=DehakaConsumeApplyBehavior
 Effect/Name/DehakaConsumeApplyStunBehavior=DehakaConsumeApplyStunBehavior
