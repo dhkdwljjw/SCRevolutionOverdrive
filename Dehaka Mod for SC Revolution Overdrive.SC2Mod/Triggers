@@ -2128,7 +2128,6 @@
         </Element>
         <Element Type="Trigger" Id="229CF3D7">
             <Variable Type="Variable" Library="40BC87EB" Id="DD882D2C"/>
-            <Event Type="FunctionCall" Library="40BC87EB" Id="C9DD8BD4"/>
             <Action Type="FunctionCall" Library="40BC87EB" Id="B54F0749"/>
             <Action Type="FunctionCall" Library="40BC87EB" Id="DC53F717"/>
         </Element>
@@ -2141,9 +2140,6 @@
         <Element Type="Param" Id="5A2276E2">
             <Value>false</Value>
             <ValueType Type="bool"/>
-        </Element>
-        <Element Type="FunctionCall" Id="C9DD8BD4">
-            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
         </Element>
         <Element Type="FunctionCall" Id="B54F0749">
             <FunctionDef Type="FunctionDef" Library="Ntve" Id="5084725D"/>
