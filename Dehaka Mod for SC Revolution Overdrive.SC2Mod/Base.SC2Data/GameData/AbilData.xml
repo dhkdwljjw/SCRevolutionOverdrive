@@ -69,7 +69,7 @@
         <InfoArray index="Research1" Time="180" Upgrade="DehakaCalldownDakrun">
             <Resource index="Minerals" value="500"/>
             <Resource index="Vespene" value="500"/>
-            <Button DefaultButtonFace="DehakaCalldownDakrun" Requirements="NotHaveDehakaPrimalBoss"/>
+            <Button DefaultButtonFace="DehakaCalldownDakrun" Requirements="NotHaveDehakaDakrun"/>
         </InfoArray>
         <Activity value="UI/Summoning"/>
     </CAbilResearch>
@@ -78,7 +78,7 @@
         <InfoArray index="Research1" Time="180" Upgrade="DehakaCalldownGlevig">
             <Resource index="Minerals" value="500"/>
             <Resource index="Vespene" value="500"/>
-            <Button DefaultButtonFace="DehakaCalldownGlevig" Requirements="NotHaveDehakaPrimalBoss"/>
+            <Button DefaultButtonFace="DehakaCalldownGlevig" Requirements="NotHaveDehakaGlevig"/>
         </InfoArray>
         <Activity value="UI/Summoning"/>
     </CAbilResearch>
@@ -87,7 +87,7 @@
         <InfoArray index="Research1" Time="180" Upgrade="DehakaCalldownMurvar">
             <Resource index="Minerals" value="500"/>
             <Resource index="Vespene" value="500"/>
-            <Button DefaultButtonFace="DehakaCalldownMurvar" Requirements="NotHaveDehakaPrimalBoss"/>
+            <Button DefaultButtonFace="DehakaCalldownMurvar" Requirements="NotHaveDehakaMurvar"/>
         </InfoArray>
         <Activity value="UI/Summoning"/>
     </CAbilResearch>

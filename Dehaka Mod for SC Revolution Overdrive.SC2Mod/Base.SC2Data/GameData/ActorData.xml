@@ -1110,6 +1110,7 @@
         <!-- Consume Channel-->
         <On Terms="Abil.DehakaConsume.SourceChannelStart" Send="AnimBracketStart Spell Spell,H,Start Spell,H Spell,H,End"/>
         <On Terms="Abil.DehakaConsume.SourceChannelStop" Send="AnimBracketStop Spell"/>
+        <On Terms="Upgrade.DehakaCoopStage2.Add" Send="AnimPlay Arms Cover,End PlayForever"/>
         <DeathCustoms ModelLink="Invisible" Name="Detached"/>
         <EventDataSound Name="AttackLaunch" Actor="UnitSound" Sound="Dehaka_Whoosh"/>
         <EventDataSound Name="AttackImpact" Actor="UnitSound" Sound="PrimalUltralisk_AttackImpact"/>
@@ -1138,9 +1139,9 @@
         <!--CustomUnitStatusFrame value="HotS_UnitStatus/KerriganHeroUnitStatusFrameTemplate"/-->
         <CustomUnitStatusFrame value="Coop_UnitStatus/DehakaHeroUnitStatusFrameTemplate"/>
         <GroupIcon>
-            <Image value="Assets\Textures\Wireframe-Dehaka-YoungDehaka-Primal.dds"/>
+            <Image value="Assets\Textures\wireframe-dehaka-mammothdehaka-primal.dds"/>
         </GroupIcon>
-        <HeroIcon value="Assets\Textures\BTN-Unit-Dehaka-YoungDehaka.dds"/>
+        <HeroIcon value="Assets\Textures\btn-unit-dehaka-mammothdehaka.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-dehaka-groundcarapace-level0.dds"/>
         <MinimapIconScale value="0.800000"/>
         <MinimapRenderPriority value="Hero"/>
@@ -1151,18 +1152,18 @@
         <SoundArray index="Yes" value="Dehaka_Yes"/>
         <SoundArray index="Attack" value="Dehaka_Attack"/>
         <SoundArray index="Pissed" value="Dehaka_Pissed"/>
-        <UnitIcon value="Assets\Textures\BTN-Unit-Dehaka-YoungDehaka.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-dehaka-mammothdehaka.dds"/>
         <Wireframe>
-            <Image value="Assets\Textures\Wireframe-Dehaka-YoungDehaka-Primal.dds"/>
+            <Image value="Assets\Textures\wireframe-dehaka-mammothdehaka-primal.dds"/>
         </Wireframe>
         <MinimapIcon value="Assets\Textures\btn-ac-zerg-dehakamapicon.dds"/>
         <MinimapIconTintColor value="255,249,169,62"/>
         <MinimapTooltip value="Unit/Name/DehakaCoop"/>
         <MinimapUseSelfColor value="0"/>
         <MinimapUseSelectionColor value="0"/>
-        <Model value="Dehaka_Coop_Young"/>
-        <BuildModel value="Dehaka_Coop_Young"/>
-        <PlacementModel value="Dehaka_Coop_Young"/>
+        <Model value="Dehaka_Coop_Mammoth"/>
+        <BuildModel value="Dehaka_Coop_Mammoth"/>
+        <PlacementModel value="Dehaka_Coop_Mammoth"/>
     </CActorMissile>
     <CActorModel id="DehakaHeroGlow" parent="ModelAddition"/>
     <CActorSound id="DehakaBurrowUp" parent="SoundOneShot">

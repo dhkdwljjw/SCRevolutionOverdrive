@@ -726,7 +726,6 @@ bool lib40BC87EB_gt_CM_Dehaka_LevelUp_Stage2_ColossusLegs_Func (bool testConds, 
 
     TechTreeUpgradeAddLevel(EventPlayer(), "DehakaCoopStage2", 1);
     TechTreeUpgradeAddLevel(EventPlayer(), "DehakaColossusLegs", 1);
-    UnitBehaviorAdd(EventUnit(), "DehakaModelSwapStun", EventUnit(), 1);
     UnitBehaviorAdd(EventUnit(), "DehakaMassive", EventUnit(), 1);
     return true;
 }
@@ -1521,6 +1520,11 @@ bool lib40BC87EB_gt_CM_HeroSpawn_Func (bool testConds, bool runActions) {
     lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer] = UnitLastCreated();
     lib40BC87EB_gv_cM_DehakaVeterencyBehavior[lv_indexPlayer] = "DehakaVeterancyCoopFinal";
     UnitBehaviorAdd(lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], lib40BC87EB_gv_cM_DehakaVeterencyBehavior[lv_indexPlayer], lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], 1);
+    lib40BC87EB_gv_cM_Dehaka_TotalEssence[lv_indexPlayer] += 675;
+    UnitSetCustomValue(lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], lib40BC87EB_gv_cM_DehakaEssenceIndex, (UnitGetCustomValue(lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], lib40BC87EB_gv_cM_DehakaEssenceIndex) + 675.0));
+    CatalogFieldValueSet(c_gameCatalogEffect, "EssenceDehakaDummyStacks", "Amount", EventPlayer(), IntToString(lib40BC87EB_gv_cM_Dehaka_TotalEssence[lv_indexPlayer]));
+    UnitSetAttributePoint(lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], lib40BC87EB_gv_cM_Dehaka_EssenceAttribute, true, RoundI(UnitGetCustomValue(lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], lib40BC87EB_gv_cM_DehakaEssenceIndex)));
+    UnitXPAddXP(lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer], lib40BC87EB_gv_cM_DehakaVeterencyBehavior[lv_indexPlayer], 675.0);
     lib40BC87EB_gf_CM_Dehaka_LevelUp(lv_indexPlayer, lib40BC87EB_gv_cM_HeroUnit[lv_indexPlayer]);
     return true;
 }

@@ -285,7 +285,7 @@
     </CEffectDamage>
     <CEffectDamage id="DehakaEssenceReviveRequirementDummy">
         <EditorCategories value="Race:PrimalZerg"/>
-        <Amount value="40"/>
+        <Amount value="220"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="DehakaExtractor">
         <EditorCategories value="Race:PrimalZerg"/>

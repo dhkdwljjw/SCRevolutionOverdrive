@@ -347,6 +347,7 @@
         <TurningRate value="719.2968"/>
         <Sight value="10"/>
         <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="500"/>
         <RepairTime value="20"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="stop"/>
@@ -367,7 +368,6 @@
         </CardLayouts>
         <Radius value="2"/>
         <InnerRadius value="1"/>
-        <CargoSize value="4"/>
         <SubgroupPriority value="194"/>
         <EditorCategories value="ObjectType:Hero,ObjectFamily:FactionPrimal"/>
         <GlossaryPriority value="2"/>
@@ -442,6 +442,8 @@
         <HotkeyCategory value="Unit/Category/ZergPrimal"/>
         <KillDisplay value="Always"/>
         <RankDisplay value="Always"/>
+        <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="500"/>
     </CUnit>
     <CUnit id="DehakaGlevigDeepTunnelPlacement">
         <EditorFlags index="NoPlacement" value="1"/>
@@ -485,7 +487,7 @@
         <Attributes index="MapBoss" value="1"/>
         <LifeStart value="1000"/>
         <LifeMax value="1000"/>
-        <LifeArmor value="1"/>
+        <LifeArmor value="3"/>
         <LifeRegenRate value="0.2734"/>
         <LifeArmorName value="Unit/LifeArmorName/PrimalZergArmor"/>
         <ShieldArmorName value="Unit/ShieldArmorName/ZergWildMutation"/>
@@ -524,6 +526,8 @@
         <Fidget>
             <ChanceArray index="Idle" value="0"/>
         </Fidget>
+        <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="500"/>
     </CUnit>
     <CUnit id="EssencePickup" parent="ITEM">
         <FlagArray index="Turnable" value="1"/>
@@ -2567,7 +2571,6 @@
         <StationaryTurningRate value="719.4726"/>
         <TurningRate value="719.4726"/>
         <Sight value="11"/>
-        <Food value="-2"/>
         <CostCategory value="Technology"/>
         <CostResource index="Minerals" value="300"/>
         <AttackTargetPriority value="11"/>
@@ -2627,7 +2630,6 @@
         <LifeRegenRate value="0.2734"/>
         <LifeArmorName value="Unit/LifeArmorName/PrimalZergArmor"/>
         <Sight value="11"/>
-        <Food value="-2"/>
         <CostCategory value="Economy"/>
         <CostResource index="Minerals" value="250"/>
         <AttackTargetPriority value="11"/>
@@ -2685,7 +2687,6 @@
         <Speed value="1.879"/>
         <Acceleration value="100"/>
         <Sight value="11"/>
-        <Food value="-2"/>
         <CostCategory value="Economy"/>
         <CostResource index="Minerals" value="250"/>
         <AttackTargetPriority value="11"/>
@@ -2844,7 +2845,6 @@
         <LifeRegenRate value="0.2734"/>
         <LifeArmorName value="Unit/LifeArmorName/PrimalZergArmor"/>
         <Sight value="11"/>
-        <Food value="-6"/>
         <CostCategory value="Economy"/>
         <CostResource index="Minerals" value="450"/>
         <AttackTargetPriority value="11"/>
@@ -2913,7 +2913,6 @@
         <Speed value="2"/>
         <Acceleration value="100"/>
         <Sight value="11"/>
-        <Food value="-6"/>
         <CostCategory value="Economy"/>
         <CostResource index="Minerals" value="450"/>
         <AttackTargetPriority value="11"/>

@@ -23,7 +23,7 @@
     </CRequirement>
     <CRequirement id="DehakaReviveStructureBuild">
         <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
-        <NodeArray index="Use" Link="AndOr173926902CountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyLT4175749157CountUnitDehakaCoopReviveCocoonQueuedOrBetter1"/>
+        <NodeArray index="Use" Link="AndCountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyLT4175749157CountUnitDehakaCoopReviveCocoonQueuedOrBetter1"/>
     </CRequirement>
     <CRequirement id="DehakaSummonDakrun">
         <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
@@ -289,8 +289,16 @@
         <NodeArray index="Use" Link="AndCountUpgradeDehakaPrimalWeaponsLevel2CompleteOnlyCountUnitDehakaMurvarStructureCompleteOnly"/>
         <NodeArray index="Show" Link="EqCountUpgradeDehakaPrimalWeaponsLevel3QueuedOrBetter0"/>
     </CRequirement>
-    <CRequirement id="NotHaveDehakaPrimalBoss">
+    <CRequirement id="NotHaveDehakaDakrun">
         <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
-        <NodeArray index="Use" Link="AndCountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyCountUnitDehakaCoopReviveCocoonCompleteOnlyEq1385659935SumCountUpgradeD134161275"/>
+        <NodeArray index="Use" Link="AndCountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyCountUnitDehakaCoopReviveCocoonCompleteOnlyNot2999093840CountUpgradeDeh1290800902"/>
+    </CRequirement>
+    <CRequirement id="NotHaveDehakaGlevig">
+        <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyCountUnitDehakaCoopReviveCocoonCompleteOnlyNot3583686659CountUpgradeDeh852834725"/>
+    </CRequirement>
+    <CRequirement id="NotHaveDehakaMurvar">
+        <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyCountUnitDehakaCoopReviveCocoonCompleteOnlyNot1116342123CountUpgradeDeh822584008"/>
     </CRequirement>
 </Catalog>
