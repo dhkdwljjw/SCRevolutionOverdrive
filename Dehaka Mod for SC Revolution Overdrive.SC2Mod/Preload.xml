@@ -8,7 +8,6 @@
 <Behavior id="EssenceBuff100"/>
 <Behavior id="DehakaMassive"/>
 <Behavior id="DehakaCoopAirTargetable"/>
-<Behavior id="DehakaModelSwapStun"/>
 <Behavior id="SuppressCollisionRevive"/>
 <Behavior id="DehakaNormalReviveTimer"/>
 <Commander id="DehakaConsole"/>
