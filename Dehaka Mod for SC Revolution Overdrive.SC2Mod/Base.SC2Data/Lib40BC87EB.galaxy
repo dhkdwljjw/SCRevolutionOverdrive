@@ -387,6 +387,8 @@ bool lib40BC87EB_gt_CM_Dehaka_TriggersInit_Func (bool testConds, bool runActions
         TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2, true);
         TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3, true);
         TriggerEnable(lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_Calldown_Boss, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_Summon_Boss, true);
         TriggerEnable(lib40BC87EB_gt_DehakaBossFacing, true);
         TriggerEnable(lib40BC87EB_gt_DehakaMammothBreathLootAtStart, true);
         TriggerEnable(lib40BC87EB_gt_DehakaMammothBreathLootAtStop, true);
@@ -862,6 +864,52 @@ void lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Init () {
     lib40BC87EB_gt_CM_Dehaka_UnitCostRefund = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Func");
     TriggerEnable(lib40BC87EB_gt_CM_Dehaka_UnitCostRefund, false);
     TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_UnitCostRefund, c_playerAny, "DehakaTrainLM");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_Calldown_Boss
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_Calldown_Boss_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerModifyPropertyInt(EventPlayer(), c_playerPropSuppliesUsed, c_playerPropOperAdd, 10);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_Calldown_Boss_Init () {
+    lib40BC87EB_gt_CM_Dehaka_Calldown_Boss = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_Calldown_Boss_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_Calldown_Boss, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_Calldown_Boss, c_playerAny, "DehakaDakrunCalldownSet");
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_Calldown_Boss, c_playerAny, "DehakaGlevigCalldownSet");
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_Calldown_Boss, c_playerAny, "DehakaMurvarCalldownSet");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_Summon_Boss
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_Summon_Boss_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerModifyPropertyInt(EventPlayer(), c_playerPropSuppliesUsed, c_playerPropOperSubtract, 10);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_Summon_Boss_Init () {
+    lib40BC87EB_gt_CM_Dehaka_Summon_Boss = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_Summon_Boss_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_Summon_Boss, false);
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_Summon_Boss, c_playerAny, "DehakaDakrunTopBarCU");
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_Summon_Boss, c_playerAny, "DehakaGlevigTopBarCU");
+    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_Dehaka_Summon_Boss, c_playerAny, "DehakaMurvarTopBarCU");
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -1588,6 +1636,8 @@ void lib40BC87EB_InitTriggers () {
     lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off_Init();
     lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder_Init();
     lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Init();
+    lib40BC87EB_gt_CM_Dehaka_Calldown_Boss_Init();
+    lib40BC87EB_gt_CM_Dehaka_Summon_Boss_Init();
     lib40BC87EB_gt_CM_DehakaConsumeExecuted_Init();
     lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe_Init();
     lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe_Init();

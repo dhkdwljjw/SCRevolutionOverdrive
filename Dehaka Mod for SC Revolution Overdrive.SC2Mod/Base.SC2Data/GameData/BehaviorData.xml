@@ -717,6 +717,13 @@
             <AbilLinkEnableArray value="DehakaConcoonEatLoadOrder"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaDenSupply">
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <StateFlags index="SuppressFoodUsed" value="1"/>
+        </Modification>
+        <Requirements value="DehakaInPlay"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="DehakaGeneCarapace">
         <Modification>
             <VitalMaxAdditiveMultiplierArray index="Life" value="0.5"/>
@@ -1008,5 +1015,11 @@
             <ModifyFlags index="SuppressTurning" value="1"/>
         </Modification>
         <Duration value="6"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Detector14" parent="Detector">
+        <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
+        <Modification Detect="14"/>
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
 </Catalog>

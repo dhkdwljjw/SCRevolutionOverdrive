@@ -67,6 +67,7 @@ Button/Hotkey/NydusDestroyerBeam=Q
 Button/Hotkey/NydusDestroyerDeepTunnel=D
 Button/Hotkey/PrimalBuildingRoot=R
 Button/Hotkey/RallySCV=G
+Button/Hotkey/ResearchDehakaBurrow=B
 Button/Hotkey/ResearchDehakaGuardianExplosiveBomb=R
 Button/Hotkey/ResearchDehakaGuardianFury=T
 Button/Hotkey/ResearchDehakaHydraliskSpeed=A

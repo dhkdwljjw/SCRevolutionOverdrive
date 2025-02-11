@@ -300,6 +300,12 @@
         <AlertIcon value="Assets\Textures\btn-ability-dehaka-damagereductionwhilemoving.dds"/>
         <EditorCategories value="Race:PrimalZerg"/>
     </CButton>
+    <CButton id="ResearchDehakaBurrow">
+        <Icon value="Assets\Textures\btn-ability-zerg-burrow-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-burrow-color.dds"/>
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Universal value="1"/>
+    </CButton>
     <CButton id="SlicingGlave">
         <Icon value="Assets\Textures\btn-ability-dehaka-airbonusdamage.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-dehaka-airbonusdamage.dds"/>

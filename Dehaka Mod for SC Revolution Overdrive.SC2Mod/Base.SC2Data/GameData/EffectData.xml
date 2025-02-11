@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectModifyPlayer id="DehakaDakrunCalldownMP">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Upgrades Upgrade="DehakaCalldownDakrun" Count="1"/>
+    </CEffectModifyPlayer>
+    <CEffectSet id="DehakaDakrunCalldownSet">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <EffectArray value="DehakaDakrunCalldownMP"/>
+        <EffectArray value="KillRemove"/>
+    </CEffectSet>
+    <CEffectModifyPlayer id="DehakaMurvarCalldownMP">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Upgrades Upgrade="DehakaCalldownMurvar" Count="1"/>
+    </CEffectModifyPlayer>
+    <CEffectSet id="DehakaMurvarCalldownSet">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <EffectArray value="DehakaMurvarCalldownMP"/>
+        <EffectArray value="KillRemove"/>
+    </CEffectSet>
+    <CEffectModifyPlayer id="DehakaGlevigCalldownMP">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <Upgrades Upgrade="DehakaCalldownGlevig" Count="1"/>
+    </CEffectModifyPlayer>
+    <CEffectSet id="DehakaGlevigCalldownSet">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <EffectArray value="DehakaGlevigCalldownMP"/>
+        <EffectArray value="KillRemove"/>
+    </CEffectSet>
     <CEffectSet id="DehakaMurvarSpawnSet">
         <EditorCategories value="Race:PrimalZerg"/>
         <EffectArray value="CoopMurvarLaunchCP"/>
@@ -1089,7 +1116,7 @@
     </CEffectSet>
     <CEffectDamage id="DehakaCreeperSuicideDamage">
         <EditorCategories value="Race:Zerg"/>
-        <Amount value="110"/>
+        <Amount value="70"/>
         <ImpactLocation Value="TargetUnit"/>
         <Kind value="Splash"/>
         <Death value="Disintegrate"/>
@@ -1132,12 +1159,12 @@
     </CEffectSet>
     <CEffectDamage id="DehakaCreeperExplodeSearchDamage" parent="DU_WEAP">
         <EditorCategories value="Race:Zerg"/>
-        <Amount value="40"/>
-        <AttributeBonus index="Structure" value="40"/>
-        <ImpactLocation Value="TargetUnit"/>
-        <Kind value="Splash"/>
-        <Death value="Disintegrate"/>
         <AINotifyFlags index="HurtEnemy" value="1"/>
+        <ImpactLocation Value="TargetUnit"/>
+        <AttributeBonus index="Structure" value="20"/>
+        <Kind value="Splash"/>
+        <Amount value="20"/>
+        <Death value="Disintegrate"/>
     </CEffectDamage>
     <CEffectDamage id="DehakaDakrunCrashingChargeDamage">
         <ValidatorArray value="TargetIsEnemy"/>
@@ -2403,7 +2430,6 @@
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="OffsetByRadius" value="0"/>
         <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
-        <CreateFlags index="UseFood" value="0"/>
         <SpawnEffect value="DehakaMurvarSpawnSet"/>
         <SpawnUnit value="DehakaMurvar"/>
         <SpawnRange value="0"/>
@@ -2568,7 +2594,7 @@
         <ResponseFlags index="Flee" value="1"/>
         <ImpactLocation Value="TargetUnit"/>
         <ArmorReduction value="1"/>
-        <Amount value="20"/>
+        <Amount value="10"/>
         <Death value="Disintegrate"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="KraithCrashingChargeForcePersistent">
@@ -2606,7 +2632,6 @@
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="OffsetByRadius" value="0"/>
         <CreateFlags index="PlacementIgnoreBlockers" value="1"/>
-        <CreateFlags index="UseFood" value="0"/>
         <SpawnEffect value="DehakaDakrunTopBarSpawnSet"/>
         <SpawnUnit value="DehakaDakrun"/>
         <SpawnRange value="1.5"/>
@@ -2635,7 +2660,6 @@
         <CreateFlags index="DropOff" value="0"/>
         <CreateFlags index="OffsetByRadius" value="0"/>
         <CreateFlags index="SetFacing" value="1"/>
-        <CreateFlags index="UseFood" value="0"/>
         <SpawnEffect value="DehakaGlevigTopBarInitialSet"/>
         <SpawnUnit value="DehakaGlevig"/>
     </CEffectCreateUnit>

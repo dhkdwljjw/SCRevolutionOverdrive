@@ -109,6 +109,10 @@
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
         <NodeArray index="Use" Link="CountUnitDehakaMurvarStructureCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="HaveDehakaBurrow">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDehakaBurrowResearchCompleteOnly829393666"/>
+    </CRequirement>
     <CRequirement id="LearnDehakaGlevigRoachFireBreath">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
         <NodeArray index="Show" Link="NotCountUpgradeDehakaGlevigRoachFireBreathQueuedOrBetter"/>
@@ -156,6 +160,10 @@
     <CRequirement id="LearnDehakaRoachMoveSpeed">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
         <NodeArray index="Show" Link="NotCountUpgradeDehakaRoachMoveSpeedQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDehakaBurrow">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDehakaBurrowResearchQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="MurvarLairCheck">
         <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
@@ -232,6 +240,10 @@
         <CanBeSuppressed index="Use" value="0"/>
         <NodeArray index="Use" Link="CountUnitDehakaMurvarCompleteOnly"/>
     </CRequirement>
+    <CRequirement id="DehakaInPlay">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitDehakaCoopCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="HaveDehakaGeneCarapace">
         <EditorCategories value="Race:PrimalZerg,TechType:Ability"/>
         <NodeArray index="Show" Link="CountBehaviorDehakaGeneCarapaceCompleteOnlyAtUnit"/>
@@ -288,6 +300,10 @@
     <CRequirement id="LearnDehakaPrimalWeapons3">
         <NodeArray index="Use" Link="AndCountUpgradeDehakaPrimalWeaponsLevel2CompleteOnlyCountUnitDehakaMurvarStructureCompleteOnly"/>
         <NodeArray index="Show" Link="EqCountUpgradeDehakaPrimalWeaponsLevel3QueuedOrBetter0"/>
+    </CRequirement>
+    <CRequirement id="NotHaveDehakaBoss">
+        <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitDehakaGlevigStructureCompleteOnlyCountUnitDehakaMurvarStructureCompleteOnlyCountUnitDehakaDakrunStructureCompleteOnlyCountUnitDehakaCoopReviveCocoonCompleteOnlyAnd1385659935EqSumCountUnitG1773214815"/>
     </CRequirement>
     <CRequirement id="NotHaveDehakaDakrun">
         <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>

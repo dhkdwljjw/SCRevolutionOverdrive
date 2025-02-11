@@ -127,6 +127,7 @@
         <RankDisplay value="Never"/>
         <TauntDuration index="Dance" value="5"/>
         <AlliedPushPriority value="11"/>
+        <Food value="-12"/>
     </CUnit>
     <CUnit id="MurvarCreepSpawnWeapon" parent="MISSILE_INVULNERABLE">
         <Race value="Zerg"/>
@@ -356,6 +357,7 @@
         <AbilArray Link="CoopMurvarSpawnCreepers"/>
         <AbilArray Link="MurvarCoopPuke"/>
         <BehaviorArray Link="DehakaBossesSummonDelay"/>
+        <BehaviorArray Link="Detector10"/>
         <WeaponArray Link="SlivanRanged"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -377,6 +379,7 @@
             <ChanceArray index="Idle" value="33"/>
             <ChanceArray index="Turn" value="33"/>
         </Fidget>
+        <Food value="-10"/>
     </CUnit>
     <CUnit id="MurvarRangedWeapon" parent="MISSILE_INVULNERABLE">
         <Race value="Zerg"/>
@@ -422,6 +425,7 @@
         <AbilArray Link="KraithCrashingCharge"/>
         <BehaviorArray Link="DehakaDakrunThorns"/>
         <BehaviorArray Link="DehakaBossesSummonDelay"/>
+        <BehaviorArray Link="Detector10"/>
         <WeaponArray Link="KraithMelee"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -444,6 +448,7 @@
         <RankDisplay value="Always"/>
         <CostResource index="Minerals" value="500"/>
         <CostResource index="Vespene" value="500"/>
+        <Food value="-10"/>
     </CUnit>
     <CUnit id="DehakaGlevigDeepTunnelPlacement">
         <EditorFlags index="NoPlacement" value="1"/>
@@ -503,6 +508,7 @@
         <AbilArray Link="DehakaGlevigFirebreath"/>
         <AbilArray Link="BuildInProgress"/>
         <BehaviorArray Link="DehakaBossesSummonDelay"/>
+        <BehaviorArray Link="Detector14"/>
         <WeaponArray Link="YagdraFireballWeapon"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -528,6 +534,7 @@
         </Fidget>
         <CostResource index="Minerals" value="500"/>
         <CostResource index="Vespene" value="500"/>
+        <Food value="-10"/>
     </CUnit>
     <CUnit id="EssencePickup" parent="ITEM">
         <FlagArray index="Turnable" value="1"/>
@@ -645,6 +652,7 @@
         <AbilArray Link="PrimalBuildInProgress"/>
         <BehaviorArray Link="Unfollowable"/>
         <BehaviorArray Link="DehakaEssenceReviver"/>
+        <BehaviorArray Link="DehakaDenSupply"/>
         <CardLayouts>
             <LayoutButtons Face="ConsumeDrone" Type="AbilCmd" AbilCmd="DehakaConcoonEatLoadOrder,Execute" Row="0" Column="0"/>
             <LayoutButtons Face="DehakaDenConsumeEssence" Type="Passive" Behavior="DehakaEssenceReviver" Row="1" Column="0"/>
@@ -662,6 +670,7 @@
         <PlacementFootprint value="Footprint3x3CreepNormalContour"/>
         <SeparationRadius value="1.5"/>
         <MinimapRadius value="1.5"/>
+        <Food value="-12"/>
     </CUnit>
     <CUnit id="DehakaCreeperEggAMissileWeapon" parent="MISSILE_INVULNERABLE">
         <Race value="PZrg"/>
@@ -1780,7 +1789,7 @@
             <LayoutButtons Face="ResearchDehakaUltraliskBash" Type="AbilCmd" AbilCmd="DehakaDakrunResearch,Research3" Row="0" Column="2"/>
             <LayoutButtons Face="ResearchDehakaTyrannozorFanOfKnives" Type="AbilCmd" AbilCmd="DehakaDakrunResearch,Research5" Row="0" Column="3"/>
             <LayoutButtons Face="ResearchDehakaTyrannozorArmorAura" Type="AbilCmd" AbilCmd="DehakaDakrunResearch,Research4" Row="0" Column="4"/>
-            <LayoutButtons Face="DehakaCalldownDakrun" Type="AbilCmd" AbilCmd="DehakaDakrunCalldown,Research1" Row="2" Column="0"/>
+            <LayoutButtons Face="DehakaCalldownDakrun" Type="AbilCmd" AbilCmd="DehakaDakrunCalldown,Train1" Row="2" Column="0"/>
             <LayoutButtons Face="DehakaDakrunTopBar" Type="AbilCmd" AbilCmd="DehakaDakrunTopBar,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="PrimalUltraliskPassive" Type="Passive" Row="2" Column="2"/>
             <LayoutButtons Face="TyrannozorPassive" Type="Passive" Row="2" Column="3"/>
@@ -1971,7 +1980,7 @@
             <LayoutButtons Face="ResearchDehakaMutaliskDamageReduction" Type="AbilCmd" AbilCmd="DehakaMurvarResearch,Research8" Row="0" Column="1"/>
             <LayoutButtons Face="ResearchDehakaMutaliskRespawnOnDeath" Type="AbilCmd" AbilCmd="DehakaMurvarResearch,Research9" Row="0" Column="2"/>
             <LayoutButtons Face="DehakaMurvarCreeperAir" Type="AbilCmd" AbilCmd="DehakaMurvarResearch,Research12" Row="1" Column="0"/>
-            <LayoutButtons Face="DehakaCalldownMurvar" Type="AbilCmd" AbilCmd="DehakaMurvarCalldown,Research1" Row="2" Column="0"/>
+            <LayoutButtons Face="DehakaCalldownMurvar" Type="AbilCmd" AbilCmd="DehakaMurvarCalldown,Train1" Row="2" Column="0"/>
             <LayoutButtons Face="ResearchDehakaGuardianExplosiveBomb" Type="AbilCmd" AbilCmd="DehakaMurvarResearch,Research11" Row="0" Column="3"/>
             <LayoutButtons Face="ResearchDehakaGuardianFury" Type="AbilCmd" AbilCmd="DehakaMurvarResearch,Research10" Row="0" Column="4"/>
             <LayoutButtons Face="PrimalMutaliskPassive" Type="Passive" Row="2" Column="2"/>
@@ -2401,7 +2410,7 @@
             <LayoutButtons Face="ResearchDehakaRavasaurRange" Type="AbilCmd" AbilCmd="DehakaGlevigResearch,Research9" Row="0" Column="1"/>
             <LayoutButtons Face="ResearchDehakaHydraliskSpeed" Type="AbilCmd" AbilCmd="DehakaGlevigResearch,Research8" Row="1" Column="0"/>
             <LayoutButtons Face="ResearchDehakaImpalerTenderize" Type="AbilCmd" AbilCmd="DehakaGlevigResearch,Research11" Row="1" Column="1"/>
-            <LayoutButtons Face="DehakaCalldownGlevig" Type="AbilCmd" AbilCmd="DehakaGlevigCalldown,Research1" Row="2" Column="0"/>
+            <LayoutButtons Face="DehakaCalldownGlevig" Type="AbilCmd" AbilCmd="DehakaGlevigCalldown,Train1" Row="2" Column="0"/>
             <LayoutButtons Face="DehakaRoachMoveSpeed" Type="AbilCmd" AbilCmd="DehakaGlevigResearch,Research7" Row="0" Column="2"/>
             <LayoutButtons Face="DehakaGlevigRoachFireBreath" Type="AbilCmd" AbilCmd="DehakaGlevigResearch,Research3" Row="0" Column="3"/>
             <LayoutButtons Face="PrimalHydraliskPassive" Type="Passive" Row="2" Column="2"/>
@@ -2599,6 +2608,7 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:FactionPrimal"/>
         <GlossaryPriority value="5"/>
         <HotkeyCategory value="Unit/Category/ZergPrimal"/>
+        <Food value="-1"/>
     </CUnit>
     <CUnit id="DehakaBarracks">
         <DeathRevealRadius value="3"/>
@@ -2871,6 +2881,7 @@
             <LayoutButtons Face="DehakaLearnPrimalArmorLevel1" Type="AbilCmd" AbilCmd="DehakaHatcheryResearch,Research4" Row="2" Column="1"/>
             <LayoutButtons Face="DehakaLearnPrimalArmorLevel2" Type="AbilCmd" AbilCmd="DehakaHatcheryResearch,Research5" Row="2" Column="1"/>
             <LayoutButtons Face="DehakaLearnPrimalArmorLevel3" Type="AbilCmd" AbilCmd="DehakaHatcheryResearch,Research6" Row="2" Column="1"/>
+            <LayoutButtons Face="ResearchDehakaBurrow" Type="AbilCmd" AbilCmd="DehakaHatcheryResearch,Research7" Row="0" Column="4"/>
         </CardLayouts>
         <Radius value="2.5"/>
         <SeparationRadius value="2.5"/>
@@ -3036,5 +3047,95 @@
         <InnerRadius value="0.5"/>
         <SubgroupPriority value="1"/>
         <EditorCategories value="ObjectType:Hero,ObjectFamily:Campaign"/>
+    </CUnit>
+    <CUnit id="GlevigDummy">
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <EditorFlags index="NoPlacement" value="1"/>
+        <EditorFlags index="BlockStructures" value="0"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <Mover value="Fly"/>
+        <Acceleration value="1000"/>
+        <Height value="0.5"/>
+        <Food value="-10"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="500"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <SubgroupPriority value="19"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <Mass value="0"/>
+        <LeaderAlias value=""/>
+    </CUnit>
+    <CUnit id="MurvarDummy">
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <EditorFlags index="NoPlacement" value="1"/>
+        <EditorFlags index="BlockStructures" value="0"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <Mover value="Fly"/>
+        <Acceleration value="1000"/>
+        <Height value="0.5"/>
+        <Food value="-10"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="500"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <SubgroupPriority value="19"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <Mass value="0"/>
+        <LeaderAlias value=""/>
+    </CUnit>
+    <CUnit id="DakrunDummy">
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <EditorFlags index="NoPlacement" value="1"/>
+        <EditorFlags index="BlockStructures" value="0"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <Mover value="Fly"/>
+        <Acceleration value="1000"/>
+        <Height value="0.5"/>
+        <Food value="-10"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="500"/>
+        <CostResource index="Vespene" value="500"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <SubgroupPriority value="19"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <Mass value="0"/>
+        <LeaderAlias value=""/>
     </CUnit>
 </Catalog>

@@ -64,33 +64,30 @@
         <UninterruptibleArray index="Channel" value="1"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="DehakaConsume"/>
     </CAbilEffectTarget>
-    <CAbilResearch id="DehakaDakrunCalldown">
+    <CAbilTrain id="DehakaGlevigCalldown">
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
-        <InfoArray index="Research1" Time="180" Upgrade="DehakaCalldownDakrun">
-            <Resource index="Minerals" value="500"/>
-            <Resource index="Vespene" value="500"/>
-            <Button DefaultButtonFace="DehakaCalldownDakrun" Requirements="NotHaveDehakaDakrun"/>
-        </InfoArray>
         <Activity value="UI/Summoning"/>
-    </CAbilResearch>
-    <CAbilResearch id="DehakaGlevigCalldown">
+        <InfoArray index="Train1" Time="180" Effect="DehakaGlevigCalldownSet">
+            <Button DefaultButtonFace="DehakaCalldownGlevig" Requirements="NotHaveDehakaBoss"/>
+            <Unit value="GlevigDummy"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaMurvarCalldown">
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
-        <InfoArray index="Research1" Time="180" Upgrade="DehakaCalldownGlevig">
-            <Resource index="Minerals" value="500"/>
-            <Resource index="Vespene" value="500"/>
-            <Button DefaultButtonFace="DehakaCalldownGlevig" Requirements="NotHaveDehakaGlevig"/>
-        </InfoArray>
         <Activity value="UI/Summoning"/>
-    </CAbilResearch>
-    <CAbilResearch id="DehakaMurvarCalldown">
+        <InfoArray index="Train1" Time="180" Effect="DehakaMuravarCalldownSet">
+            <Button DefaultButtonFace="DehakaCalldownMurvar" Requirements="NotHaveDehakaBoss"/>
+            <Unit value="MurvarDummy"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaDakrunCalldown">
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
-        <InfoArray index="Research1" Time="180" Upgrade="DehakaCalldownMurvar">
-            <Resource index="Minerals" value="500"/>
-            <Resource index="Vespene" value="500"/>
-            <Button DefaultButtonFace="DehakaCalldownMurvar" Requirements="NotHaveDehakaMurvar"/>
-        </InfoArray>
         <Activity value="UI/Summoning"/>
-    </CAbilResearch>
+        <InfoArray index="Train1" Time="180" Effect="DehakaDakrunCalldownSet">
+            <Button DefaultButtonFace="DehakaCalldownDakrun" Requirements="NotHaveDehakaBoss"/>
+            <Unit value="DakrunDummy"/>
+        </InfoArray>
+    </CAbilTrain>
     <CAbilEffectTarget id="MammothBreath">
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
         <Effect index="0" value="MammothBreathStartSet"/>
@@ -493,7 +490,7 @@
     <CAbilMorph id="DehakaMorphToPrimalSwarmHostBurrowed">
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSwarmHostBurrowedMP">
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSwarmHostBurrowedMP" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
@@ -560,7 +557,7 @@
     <CAbilMorph id="DehakaMorphToSwarmHostBurrowed">
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSwarmHostBurrowedMP">
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSwarmHostBurrowedMP" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
@@ -637,7 +634,7 @@
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <ActorKey value="BurrowDown"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <Flags index="IgnoreFacing" value="1"/>
@@ -679,7 +676,7 @@
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <ActorKey value="BurrowDown"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <Flags index="IgnoreFacing" value="1"/>
@@ -883,7 +880,7 @@
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <ActorKey value="BurrowDown"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
@@ -1002,7 +999,7 @@
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <ActorKey value="BurrowDown"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
@@ -1094,7 +1091,7 @@
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <ActorKey value="BurrowDown"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
@@ -1144,7 +1141,7 @@
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <ActorKey value="BurrowDown"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
@@ -1212,7 +1209,7 @@
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <ActorKey value="BurrowDown"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
@@ -1305,7 +1302,7 @@
         <AbilSetId value="BrwD"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
         <ActorKey value="BurrowDown"/>
-        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
@@ -1693,6 +1690,11 @@
             <Resource index="Minerals" value="250"/>
             <Resource index="Vespene" value="250"/>
             <Button DefaultButtonFace="DehakaLearnPrimalArmorLevel3" Requirements="LearnDehakaPrimalArmor3"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="100" Upgrade="DehakaBurrowResearch">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaBurrow" Requirements="LearnDehakaBurrow"/>
         </InfoArray>
     </CAbilResearch>
     <CAbilEffectTarget id="DehakaDakrunTopBar">

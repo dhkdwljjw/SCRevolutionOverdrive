@@ -5506,4 +5506,41 @@
         <On Terms="Effect.ImpalerDummySearch.Start" Send="Create"/>
         <HostSiteOps Ops="SOpShadow SOpAttachOriginStationary"/>
     </CActorModel>
+    <CActorUnit id="GlevigDummy" parent="GenericUnitStandard" unitName="GlevigDummy">
+        <Model value="Invisible"/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-glevig.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-glevig.dds"/>
+    </CActorUnit>
+    <CActorUnit id="MurvarDummy" parent="GenericUnitStandard" unitName="MurvarDummy">
+        <Model value="Invisible"/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-murvar.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-murvar.dds"/>
+    </CActorUnit>
+    <CActorUnit id="DakrunDummy" parent="GenericUnitStandard" unitName="DakrunDummy">
+        <Model value="Invisible"/>
+        <HeroIcon value="Assets\Textures\btn-unit-zerg-dakrun.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-dakrun.dds"/>
+    </CActorUnit>
+    <CActorSound id="PrimalHatchery_BurrowSound" parent="SoundOneShot">
+        <Sound value="PrimalHatchery_Burrow"/>
+        <Layers>
+            <Sound value="PrimalHatchery_Burrow2"/>
+            <PitchSource value="Sound"/>
+            <PlayDelaySource value="Sound"/>
+            <VolumeSource value="Sound"/>
+            <Chance value="100"/>
+            <Pitch value="0.000000,0.000000"/>
+            <PlayDelay value="0,0"/>
+            <Volume value="0.000000,0.000000"/>
+        </Layers>
+    </CActorSound>
+    <CActorSound id="PrimalHatchery_UnburrowSound" parent="SoundOneShot">
+        <Sound value="PrimalHatchery_Unburrow"/>
+    </CActorSound>
+    <CActorSound id="PrimalHatchery_Footstep_Sound" parent="SoundOneShot">
+        <Sound value="PrimalHatchery_Footstep"/>
+    </CActorSound>
+    <CActorSound id="PrimalHatchery_Movement_Sound" parent="SoundOneShot">
+        <Sound value="PrimalHatchery_Movement"/>
+    </CActorSound>
 </Catalog>

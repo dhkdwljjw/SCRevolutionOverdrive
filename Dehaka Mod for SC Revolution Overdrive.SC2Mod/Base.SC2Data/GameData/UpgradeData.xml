@@ -4,8 +4,8 @@
         <Name value="Upgrade/Name/DehakaPrimalWeapons"/>
         <Icon value="Assets\Textures\BTN-Upgrade-Dehaka-BothAttacks-Level1.dds"/>
         <EffectArray Reference="Weapon,DehakaCreeperSwoop,Level" Value="1"/>
-        <EffectArray Reference="Effect,DehakaCreeperExplodeSearchDamage,Amount" Value="4"/>
-        <EffectArray Reference="Effect,DehakaCreeperExplodeSearchDamage,AttributeBonus[Structure]" Value="4"/>
+        <EffectArray Reference="Effect,DehakaCreeperExplodeSearchDamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,DehakaCreeperExplodeSearchDamage,AttributeBonus[Structure]" Value="2"/>
         <EffectArray Reference="Weapon,DehakaCreeperSuicide,Level" Value="1"/>
         <EffectArray Reference="Effect,DehakaCreeperSuicideDamage,Amount" Value="5"/>
         <EffectArray Reference="Weapon,DehakaMutaliskLevel3GlaiveWurm,Level" Value="1"/>
@@ -182,6 +182,13 @@
         <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
         <EffectArray Reference="Abil,DehakaLearn,Points" Value="1"/>
         <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade id="DehakaBurrowResearch" parent="Research">
+        <Icon value="Assets\Textures\btn-ability-zerg-burrow-color.dds"/>
+        <Race value="PZrg"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:PrimalZerg,UpgradeType:Talents"/>
     </CUpgrade>
     <CUpgrade id="DehakaCalldownGlevig">
         <Icon value="Assets\Textures\btn-unit-zerg-glevig.dds"/>

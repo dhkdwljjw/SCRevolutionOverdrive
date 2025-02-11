@@ -30,6 +30,7 @@
             <Item Type="Trigger" Library="40BC87EB" Id="68EA8E50"/>
             <Item Type="Trigger" Library="40BC87EB" Id="555CE17C"/>
             <Item Type="Trigger" Library="40BC87EB" Id="36A2779E"/>
+            <Item Type="Category" Library="40BC87EB" Id="09B3474B"/>
             <Item Type="Category" Library="40BC87EB" Id="761B0973"/>
             <Item Type="Category" Library="40BC87EB" Id="526D0A43"/>
             <Item Type="Category" Library="40BC87EB" Id="41FA2EB3"/>
@@ -2322,6 +2323,8 @@
             <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="26B0048A"/>
             <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="6D1074D4"/>
             <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="184594C6"/>
+            <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="A1D0AB4E"/>
+            <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="B64DD583"/>
             <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="371E575C"/>
             <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="AEA26ED7"/>
             <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="F1FC118B"/>
@@ -2616,6 +2619,36 @@
             <ValueElement Type="Trigger" Library="40BC87EB" Id="951AADA5"/>
         </Element>
         <Element Type="Param" Id="04A04B89">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000177"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000538"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A1D0AB4E">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000111"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="9DA3E999"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="C8EDAB38"/>
+        </Element>
+        <Element Type="Param" Id="9DA3E999">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000176"/>
+            <ValueType Type="trigger"/>
+            <ValueElement Type="Trigger" Library="40BC87EB" Id="896A260D"/>
+        </Element>
+        <Element Type="Param" Id="C8EDAB38">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000177"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="00000538"/>
+        </Element>
+        <Element Type="FunctionCall" Id="B64DD583">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000111"/>
+            <SubFunctionType Type="SubFuncType" Library="Ntve" Id="00000004"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="19A9568E"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="25C0CBF6"/>
+        </Element>
+        <Element Type="Param" Id="19A9568E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="00000176"/>
+            <ValueType Type="trigger"/>
+            <ValueElement Type="Trigger" Library="40BC87EB" Id="18004037"/>
+        </Element>
+        <Element Type="Param" Id="25C0CBF6">
             <ParameterDef Type="ParamDef" Library="Ntve" Id="00000177"/>
             <Preset Type="PresetValue" Library="Ntve" Id="00000538"/>
         </Element>
@@ -6045,6 +6078,168 @@
         </Element>
         <Element Type="Param" Id="E285E2D9">
             <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Category" Id="09B3474B">
+            <Item Type="Trigger" Library="40BC87EB" Id="896A260D"/>
+            <Item Type="Trigger" Library="40BC87EB" Id="18004037"/>
+        </Element>
+        <Element Type="Trigger" Id="896A260D">
+            <InitOff/>
+            <Event Type="FunctionCall" Library="40BC87EB" Id="70DE02E8"/>
+            <Event Type="FunctionCall" Library="40BC87EB" Id="A96D4321"/>
+            <Event Type="FunctionCall" Library="40BC87EB" Id="74D21749"/>
+            <Action Type="FunctionCall" Library="40BC87EB" Id="4AF7E46C"/>
+        </Element>
+        <Element Type="FunctionCall" Id="70DE02E8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="929A339A"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="918D7373"/>
+        </Element>
+        <Element Type="Param" Id="929A339A">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="918D7373">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>DehakaDakrunCalldownSet</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="FunctionCall" Id="A96D4321">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="34418022"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="13F77605"/>
+        </Element>
+        <Element Type="Param" Id="34418022">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="13F77605">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>DehakaGlevigCalldownSet</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="FunctionCall" Id="74D21749">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="268AC056"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="3147A610"/>
+        </Element>
+        <Element Type="Param" Id="268AC056">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="3147A610">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>DehakaMurvarCalldownSet</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="FunctionCall" Id="4AF7E46C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="943DF2F7"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="DBFA3B3B"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="37E6EE70"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="147AED0B"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="F837F23F"/>
+        </Element>
+        <Element Type="Param" Id="DBFA3B3B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="75FC31CB"/>
+            <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="E322B305"/>
+        </Element>
+        <Element Type="FunctionCall" Id="E322B305">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="37E6EE70">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4AA9487D"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="B90BFFB3"/>
+        </Element>
+        <Element Type="Param" Id="147AED0B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C93A9DCB"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="A9A13ADB"/>
+        </Element>
+        <Element Type="Param" Id="F837F23F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EEF303AC"/>
+            <Value>10</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Trigger" Id="18004037">
+            <InitOff/>
+            <Event Type="FunctionCall" Library="40BC87EB" Id="2A7DF4D0"/>
+            <Event Type="FunctionCall" Library="40BC87EB" Id="00F6A807"/>
+            <Event Type="FunctionCall" Library="40BC87EB" Id="AB88C4D8"/>
+            <Action Type="FunctionCall" Library="40BC87EB" Id="082ED5FC"/>
+        </Element>
+        <Element Type="FunctionCall" Id="2A7DF4D0">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="4F7D9B0C"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="E3B81DEC"/>
+        </Element>
+        <Element Type="Param" Id="4F7D9B0C">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="E3B81DEC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>DehakaDakrunTopBarCU</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="FunctionCall" Id="00F6A807">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="86A98DCC"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="BE0C5FD6"/>
+        </Element>
+        <Element Type="Param" Id="86A98DCC">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="BE0C5FD6">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>DehakaGlevigTopBarCU</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="FunctionCall" Id="AB88C4D8">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="9FFA06A7"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="F47DF950"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="B7CDE380"/>
+        </Element>
+        <Element Type="Param" Id="F47DF950">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="44A8E2B6"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="2999701E"/>
+        </Element>
+        <Element Type="Param" Id="B7CDE380">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6FB1C942"/>
+            <Value>DehakaMurvarTopBarCU</Value>
+            <ValueType Type="gamelink"/>
+            <ValueGameType Type="Effect"/>
+        </Element>
+        <Element Type="FunctionCall" Id="082ED5FC">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="943DF2F7"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="C226C72F"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="2D3E5159"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="2758FA90"/>
+            <Parameter Type="Param" Library="40BC87EB" Id="AA9209D7"/>
+        </Element>
+        <Element Type="Param" Id="C226C72F">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="75FC31CB"/>
+            <FunctionCall Type="FunctionCall" Library="40BC87EB" Id="62382B81"/>
+        </Element>
+        <Element Type="FunctionCall" Id="62382B81">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000053"/>
+        </Element>
+        <Element Type="Param" Id="2D3E5159">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="4AA9487D"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="B90BFFB3"/>
+        </Element>
+        <Element Type="Param" Id="2758FA90">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="C93A9DCB"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="F854D914"/>
+        </Element>
+        <Element Type="Param" Id="AA9209D7">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="EEF303AC"/>
+            <Value>10</Value>
             <ValueType Type="int"/>
         </Element>
         <Element Type="Category" Id="761B0973">
