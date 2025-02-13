@@ -21,6 +21,8 @@ trigger lib6BFEBC48_gt_MengskVeteranLevelUpStar;
 trigger lib6BFEBC48_gt_MengskVeteranGetXP;
 trigger lib6BFEBC48_gt_MengskVeteranUnlockXP;
 trigger lib6BFEBC48_gt_MengskEnergyCount;
+trigger lib6BFEBC48_gt_MengskNukeAnnihilationSupplyOn;
+trigger lib6BFEBC48_gt_MengskNukeAnnihilationSupplyOff;
 trigger lib6BFEBC48_gt_MengskPropagandaOn;
 trigger lib6BFEBC48_gt_MengskPropagandaOff;
 trigger lib6BFEBC48_gt_MengskMedivacSiegeTankSiegedTransport;
