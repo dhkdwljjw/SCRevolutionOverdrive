@@ -90,7 +90,7 @@
         <TargetFilters value="Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="10"/>
         <RangeSlop value="10"/>
-        <PrepTime value="1.5"/>
+        <PrepTime value="3"/>
         <FinishTime value="0.9"/>
         <ShowProgressArray index="Prep" value="1"/>
         <UninterruptibleArray index="Prep" value="1"/>
@@ -616,7 +616,7 @@
         <TargetFilters value="Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Range value="10"/>
         <RangeSlop value="10"/>
-        <PrepTime value="1.5"/>
+        <PrepTime value="3"/>
         <FinishTime value="0.9"/>
         <ShowProgressArray index="Prep" value="1"/>
         <UninterruptibleArray index="Prep" value="1"/>
@@ -1228,6 +1228,10 @@
         <TargetFilters value="Structure;Self,Ally,Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden"/>
         <AutoCastFilters value="Structure;Self,Ally,Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden"/>
         <AutoCastRange value="500"/>
+        <Cost>
+            <Resource index="Minerals" value="10"/>
+            <Resource index="Custom" value="10"/>
+        </Cost>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="SCVMengskEnlist">
         <Alignment value="Positive"/>
@@ -1242,6 +1246,10 @@
         <CmdButtonArray index="Execute" DefaultButtonFace="TrooperMengskEnlist" Requirements="HaveFactoryMengsk">
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
+        <Cost>
+            <Resource index="Minerals" value="10"/>
+            <Resource index="Custom" value="10"/>
+        </Cost>
     </CAbilEffectInstant>
     <CAbilEffectInstant id="TrooperMengskEnlistNearby">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -1339,30 +1347,32 @@
         <TechPlayer value="Owner"/>
         <Alignment value="Negative"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
-        <Effect index="0" value="TacNuke"/>
+        <Effect index="0" value="TacNukePersistent"/>
         <Range value="500"/>
         <Arc value="360"/>
         <FinishTime value="2.5"/>
-        <CancelableArray index="Channel" value="1"/>
         <UninterruptibleArray index="Channel" value="1"/>
         <ValidatedArray index="Channel" value="0"/>
         <CursorEffect value="TacNukeDamage"/>
-        <CalldownEffect value="TacNuke"/>
-        <AINotifyEffect value="TacNuke"/>
+        <AINotifyEffect value="TacNukePersistent"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="TacNukeMissileCalldown" Requirements="HaveTacNuke"/>
         <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
         <AlertArray index="Cast" value="CalldownLaunch"/>
         <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Resource index="Custom" value="100"/>
+            <Cooldown Location="Player" TimeUse="60"/>
+        </Cost>
     </CAbilEffectTarget>
-    <CAbilArmMagazine id="ArmSiloWithTacticalNuke">
+    <CAbilTrain id="ArmSiloWithTacticalNuke">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
-        <Launch value="ReleaseAtSource"/>
-        <Flags index="BestUnit" value="1"/>
-        <InfoArray index="Ammo1" Time="100" Unit="TacNukeMissileUnit">
+        <InfoArray index="Train1" Time="180" Effect="NuclearAnnihilationDummy">
             <Button DefaultButtonFace="TacNukeArm" Requirements="TrainTacNuke"/>
+            <Unit value="NuclearAnnihilationDummy"/>
         </InfoArray>
-        <CalldownEffect value="TacNuke"/>
-    </CAbilArmMagazine>
+    </CAbilTrain>
     <CAbilMorph id="SCVMengskMorphTrooperNoWeapon">
         <AbilSetId value="SCVMengskMorphTrooper"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -1383,4 +1393,14 @@
         </Cost>
         <InfoArray Unit="TrooperMengsk"/>
     </CAbilMorph>
+    <CAbilEffectTarget id="NuclearAnnihilationMengsk">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="NuclearAnnihilationMengskBigNukeDropDelayCP"/>
+        <Cost>
+            <Cooldown TimeUse="300"/>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NuclearAnnihilationMengsk"/>
+    </CAbilEffectTarget>
 </Catalog>

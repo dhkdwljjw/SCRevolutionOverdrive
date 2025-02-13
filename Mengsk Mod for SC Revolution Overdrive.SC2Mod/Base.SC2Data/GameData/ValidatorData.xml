@@ -244,6 +244,7 @@
     <CValidatorPlayerRequirement id="MedivacMengskSiegeTankAirlift">
         <Find value="1"/>
         <Value value="HaveMedivacMengskSiegeTankAirlift"/>
+        <ResultFailed value="CantAttackWeaponsDisabled"/>
     </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="MedivacMengskSiegeTankAirliftLevelGTE1">
         <WhichUnit Value="Caster"/>
@@ -324,4 +325,8 @@
         <CombineArray value="CasterLevelGTE4"/>
         <CombineArray value="NoVikingMengskCheatDeathCooldown"/>
     </CValidatorCombine>
+    <CValidatorUnitFilters id="IsHeroic">
+        <Filters value="Heroic;-"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitFilters id="NotHeroic"/>
 </Catalog>

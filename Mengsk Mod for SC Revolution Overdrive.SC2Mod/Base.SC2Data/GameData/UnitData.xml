@@ -222,7 +222,7 @@
         <Food value="-12"/>
         <CostCategory value="Army"/>
         <CostResource index="Minerals" value="800"/>
-        <CostResource index="Vespene" value="800"/>
+        <CostResource index="Vespene" value="600"/>
         <RepairTime value="160"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="stop"/>
@@ -751,19 +751,19 @@
         <HotkeyCategory value="Unit/Category/MengskUnits"/>
     </CUnit>
     <CUnit id="MutaliskMengskGlaiveWurmAttack1Missile" parent="MISSILE">
-        <Race value="PZrg"/>
+        <Race value="TerM"/>
         <Mover value="MissileDefault"/>
-        <EditorCategories value="ObjectType:Projectile,ObjectFamily:FactionNerazim"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="MutaliskMengskGlaiveWurmAttack2Missile" parent="MISSILE">
-        <Race value="PZrg"/>
+        <Race value="TerM"/>
         <Mover value="GlaiveWurmBounceMissile"/>
-        <EditorCategories value="ObjectType:Projectile,ObjectFamily:FactionNerazim"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="MutaliskMengskGlaiveWurmAttack3Missile" parent="MISSILE">
-        <Race value="PZrg"/>
+        <Race value="TerM"/>
         <Mover value="GlaiveWurmBounceMissile"/>
-        <EditorCategories value="ObjectType:Projectile,ObjectFamily:FactionNerazim"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
     </CUnit>
     <CUnit id="MutaliskMengsk">
         <DeathRevealRadius value="3"/>
@@ -1296,7 +1296,7 @@
         <LifeStart value="45"/>
         <LifeMax value="45"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
-        <Speed value="2.9492"/>
+        <Speed value="2.25"/>
         <Acceleration value="1000"/>
         <LateralAcceleration value="46.0625"/>
         <StationaryTurningRate value="999.8437"/>
@@ -1376,7 +1376,7 @@
         <LifeStart value="45"/>
         <LifeMax value="45"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
-        <Speed value="2.9492"/>
+        <Speed value="2.25"/>
         <Acceleration value="1000"/>
         <LateralAcceleration value="46.0625"/>
         <StationaryTurningRate value="999.8437"/>
@@ -1456,7 +1456,7 @@
         <LifeStart value="145"/>
         <LifeMax value="145"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
-        <Speed value="2.9492"/>
+        <Speed value="2.25"/>
         <Acceleration value="1000"/>
         <LateralAcceleration value="46.0625"/>
         <StationaryTurningRate value="719.4726"/>
@@ -1606,8 +1606,8 @@
         <Sight value="11"/>
         <Food value="-4"/>
         <CostCategory value="Army"/>
-        <CostResource index="Minerals" value="400"/>
-        <CostResource index="Vespene" value="400"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="300"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
@@ -1718,7 +1718,7 @@
             <LayoutButtons Face="MarauderMengskSlowResearch" Type="AbilCmd" AbilCmd="GhostAcademyMengskResearch,Research1" Row="0" Column="0"/>
             <LayoutButtons Face="GhostMengskGuidedStrikeRessearch" Type="AbilCmd" AbilCmd="GhostAcademyMengskResearch,Research2" Row="0" Column="1"/>
             <LayoutButtons Face="TacNukeMissileCalldown" Type="AbilCmd" AbilCmd="TacNukeMissileStrike,Execute" Row="1" Column="0"/>
-            <LayoutButtons Face="TacNukeArm" Type="AbilCmd" AbilCmd="ArmSiloWithTacticalNuke,Ammo1" Row="2" Column="1"/>
+            <LayoutButtons Face="TacNukeArm" Type="AbilCmd" AbilCmd="ArmSiloWithTacticalNuke,Train1" Row="2" Column="1"/>
         </CardLayouts>
         <Radius value="1.5"/>
         <SeparationRadius value="1.5"/>
@@ -1730,7 +1730,7 @@
         <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
         <GlossaryPriority value="318"/>
         <HotkeyCategory value="Unit/Category/MengskUnits"/>
-        <TechTreeUnlockedUnitArray value="Ghost"/>
+        <TechTreeUnlockedUnitArray value="GhostMengsk"/>
     </CUnit>
     <CUnit id="MarauderMengsk">
         <DeathRevealRadius value="3"/>
@@ -1759,7 +1759,7 @@
         <Food value="-4"/>
         <CostCategory value="Army"/>
         <CostResource index="Minerals" value="250"/>
-        <CostResource index="Vespene" value="250"/>
+        <CostResource index="Vespene" value="100"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
@@ -1824,7 +1824,7 @@
         <LifeStart value="45"/>
         <LifeMax value="45"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
-        <Speed value="2.9492"/>
+        <Speed value="2.25"/>
         <Acceleration value="1000"/>
         <LateralAcceleration value="46.0625"/>
         <StationaryTurningRate value="999.8437"/>
@@ -2400,7 +2400,7 @@
         <Food value="-10"/>
         <CostCategory value="Army"/>
         <CostResource index="Minerals" value="600"/>
-        <CostResource index="Vespene" value="600"/>
+        <CostResource index="Vespene" value="400"/>
         <RepairTime value="120"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="attack"/>
@@ -2478,7 +2478,7 @@
         <Food value="-10"/>
         <CostCategory value="Army"/>
         <CostResource index="Minerals" value="600"/>
-        <CostResource index="Vespene" value="600"/>
+        <CostResource index="Vespene" value="400"/>
         <RepairTime value="120"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="attack"/>
@@ -2665,7 +2665,7 @@
         <Food value="-4"/>
         <CostCategory value="Army"/>
         <CostResource index="Minerals" value="300"/>
-        <CostResource index="Vespene" value="300"/>
+        <CostResource index="Vespene" value="200"/>
         <RepairTime value="72"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="stop"/>
@@ -2754,7 +2754,7 @@
         <Food value="-4"/>
         <CostCategory value="Army"/>
         <CostResource index="Minerals" value="300"/>
-        <CostResource index="Vespene" value="300"/>
+        <CostResource index="Vespene" value="200"/>
         <RepairTime value="72"/>
         <AttackTargetPriority value="20"/>
         <AbilArray Link="stop"/>
@@ -3022,29 +3022,6 @@
         <Mass value="0"/>
         <LeaderAlias value=""/>
     </CUnit>
-    <CUnit id="TacNukeMissileUnit">
-        <Race value="Terr"/>
-        <FlagArray index="Uncommandable" value="1"/>
-        <FlagArray index="Unselectable" value="1"/>
-        <FlagArray index="UseLineOfSight" value="1"/>
-        <FlagArray index="Invulnerable" value="1"/>
-        <EditorFlags index="NoPlacement" value="1"/>
-        <PlaneArray index="Air" value="1"/>
-        <Collide index="Flying" value="1"/>
-        <LifeStart value="100"/>
-        <LifeMax value="100"/>
-        <VisionHeight value="4"/>
-        <Food value="-4"/>
-        <CostCategory value="Technology"/>
-        <CostResource index="Minerals" value="200"/>
-        <CostResource index="Vespene" value="200"/>
-        <CostResource index="Custom" value="100"/>
-        <AbilArray Link="move"/>
-        <ScoreMake value="200"/>
-        <ScoreResult value="BuildOrder"/>
-        <SubgroupPriority value="15"/>
-        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
-    </CUnit>
     <CUnit id="TacticalNukeMissile" parent="MISSILE_HALFLIFE">
         <FlagArray index="Untargetable" value="0"/>
         <FlagArray index="Missile" value="0"/>
@@ -3060,5 +3037,36 @@
         <AttackTargetPriority value="20"/>
         <MinimapRadius value="0.375"/>
         <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="NuclearAnnihilationDummy">
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <EditorFlags index="NoPlacement" value="1"/>
+        <EditorFlags index="BlockStructures" value="0"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <Mover value="Fly"/>
+        <Acceleration value="1000"/>
+        <Height value="0.5"/>
+        <Food value="-10"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="1000"/>
+        <CostResource index="Vespene" value="1000"/>
+        <CostResource index="Custom" value="1000"/>
+        <Radius value="0"/>
+        <SeparationRadius value="0"/>
+        <SubgroupPriority value="19"/>
+        <MinimapRadius value="0"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <Mass value="0"/>
+        <LeaderAlias value=""/>
     </CUnit>
 </Catalog>

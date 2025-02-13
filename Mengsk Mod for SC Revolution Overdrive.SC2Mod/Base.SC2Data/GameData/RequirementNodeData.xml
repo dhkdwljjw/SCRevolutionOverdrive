@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CRequirementAnd id="And1065390385LTCountUpgradeNuclearAnnihilationDummyCompleteOnly1LTCountUnitNuclearAnnihilationDummyQueuedOrBetter1">
+        <OperandArray value="LTCountUpgradeNuclearAnnihilationDummyCompleteOnly1"/>
+        <OperandArray value="LTCountUnitNuclearAnnihilationDummyQueuedOrBetter1"/>
+    </CRequirementAnd>
+    <CRequirementAnd id="AndAnd1065390385LTCountUpgradeNuclearAnnihilationDummyCompleteOnly1LTCountUnitNuclearAnnihilationDummyQueuedOrBetter1CountUnitArmoryMengskCompleteOnlyCountUnitFusionCoreMengskCompleteOnly">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="And1065390385LTCountUpgradeNuclearAnnihilationDummyCompleteOnly1LTCountUnitNuclearAnnihilationDummyQueuedOrBetter1"/>
+        <OperandArray value="CountUnitArmoryMengskCompleteOnly"/>
+        <OperandArray value="CountUnitFusionCoreMengskCompleteOnly"/>
+    </CRequirementAnd>
     <CRequirementAnd id="AndEq1349852341CountUpgradeMengskTrooperArmorsLevel2CompleteOnly1CountUnitArmoryMengskCompleteOnlyTechTreeCheat">
         <OperandArray value="Eq1349852341CountUpgradeMengskTrooperArmorsLevel2CompleteOnly1"/>
         <OperandArray value="CountUnitArmoryMengskCompleteOnlyTechTreeCheat"/>
@@ -15,11 +25,6 @@
     <CRequirementAnd id="AndEq843366628CountUpgradeMengskTrooperWeaponsLevel1CompleteOnly1CountUnitArmoryMengskCompleteOnlyTechTreeCheat">
         <OperandArray value="Eq843366628CountUpgradeMengskTrooperWeaponsLevel1CompleteOnly1"/>
         <OperandArray value="CountUnitArmoryMengskCompleteOnlyTechTreeCheat"/>
-    </CRequirementAnd>
-    <CRequirementAnd id="AndLT1117748507CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit1CountUnitArmoryMengskCompleteOnlyCountUnitFusionCoreMengskCompleteOnly">
-        <OperandArray value="LT1117748507CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit1"/>
-        <OperandArray value="CountUnitArmoryMengskCompleteOnly"/>
-        <OperandArray value="CountUnitFusionCoreMengskCompleteOnly"/>
     </CRequirementAnd>
     <CRequirementCountBehavior id="CountBehaviorArtilleryMengskCargoCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
@@ -116,6 +121,11 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="GhostAcademyMengsk" State="CompleteOnly"/>
     </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitNuclearAnnihilationDummyQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="NuclearAnnihilationDummy" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
     <CRequirementCountUnit id="CountUnitNukeMengskCompleteOnly3727871538">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="NukeMengsk" State="CompleteOnly"/>
@@ -123,14 +133,6 @@
     <CRequirementCountUnit id="CountUnitNukeMengskQueuedOrBetterAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="NukeMengsk" State="QueuedOrBetterAtUnit"/>
-    </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitTacNukeMissileUnitCompleteOnlyAtUnit1351533016">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="TacNukeMissileUnit" State="CompleteOnlyAtUnit"/>
-    </CRequirementCountUnit>
-    <CRequirementCountUnit id="CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit">
-        <Flags index="TechTreeCheat" value="0"/>
-        <Count Link="TacNukeMissileUnit" State="QueuedOrBetterAtUnit"/>
     </CRequirementCountUnit>
     <CRequirementCountUpgrade id="CountUpgradeArtilleryMengskRangeCompleteOnly3576403734">
         <Flags index="TechTreeCheat" value="0"/>
@@ -270,6 +272,15 @@
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="MengskTrooperWeaponsLevel3" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeNuclearAnnihilationDummyCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="NuclearAnnihilationDummy" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeNuclearAnnihilationDummyCompleteOnly2420567955">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="NuclearAnnihilationDummy" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeThorMengskArmorAuraCompleteOnly618094651">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="ThorMengskArmorAura" State="CompleteOnly"/>
@@ -292,32 +303,26 @@
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTrooperMengskSpecializeAACompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="TrooperMengskSpecializeAA" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTrooperMengskSpecializeAAQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="TrooperMengskSpecializeAA" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTrooperMengskSpecializeFlamethrowerCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="TrooperMengskSpecializeFlamethrower" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTrooperMengskSpecializeFlamethrowerQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="TrooperMengskSpecializeFlamethrower" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTrooperMengskSpecializeImprovedCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="TrooperMengskSpecializeImproved" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeTrooperMengskSpecializeImprovedQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="TrooperMengskSpecializeImproved" State="QueuedOrBetter"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeVikingMengskSpeedCompleteOnly1841791773">
@@ -419,10 +424,6 @@
         <OperandArray index="0" value="SumCountBehaviorMengskVeterancyBattlecruiserMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnitCountBehaviorMe659244800"/>
         <OperandArray index="1" value="4"/>
     </CRequirementGTE>
-    <CRequirementLT id="LT1117748507CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit1">
-        <OperandArray index="0" value="CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit"/>
-        <OperandArray index="1" value="1"/>
-    </CRequirementLT>
     <CRequirementLT id="LT440745099CountUnitExperimentalStrikeUnitQueuedOrBetterAtUnit4">
         <OperandArray index="0" value="CountUnitExperimentalStrikeUnitQueuedOrBetterAtUnit"/>
         <OperandArray index="1" value="4"/>
@@ -430,6 +431,16 @@
     <CRequirementLT id="LTCountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnit3">
         <OperandArray index="0" value="CountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnit"/>
         <OperandArray index="1" value="3"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUnitNuclearAnnihilationDummyQueuedOrBetter1">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUnitNuclearAnnihilationDummyQueuedOrBetter"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementLT>
+    <CRequirementLT id="LTCountUpgradeNuclearAnnihilationDummyCompleteOnly1">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeNuclearAnnihilationDummyCompleteOnly"/>
+        <OperandArray index="1" value="1"/>
     </CRequirementLT>
     <CRequirementLT id="LTSumCountBehaviorMengskVeterancyBattlecruiserMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnitCountBehavior3784557210">
         <OperandArray index="0" value="SumCountBehaviorMengskVeterancyBattlecruiserMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyGhostMengskCompleteOnlyAtUnitCountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnitCountBehaviorMe659244800"/>
@@ -505,15 +516,12 @@
         <OperandArray index="0" value="CountUpgradeTrooperMengskInstantTransformQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeTrooperMengskSpecializeAAQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeTrooperMengskSpecializeAAQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeTrooperMengskSpecializeFlamethrowerQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeTrooperMengskSpecializeFlamethrowerQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeTrooperMengskSpecializeImprovedQueuedOrBetter">
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <OperandArray index="0" value="CountUpgradeTrooperMengskSpecializeImprovedQueuedOrBetter"/>
     </CRequirementNot>
     <CRequirementNot id="NotCountUpgradeVikingMengskSpeedQueuedOrBetter">

@@ -38,6 +38,12 @@
         <ExpireDelay value="2.3"/>
         <FinalEffect value="RemovePrecursor"/>
     </CEffectCreatePersistent>
+    <CEffectRandomPointInCircle id="NuclearAnnihilationMengskSmallNukeDropPoint">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetPoint"/>
+        <Effect value="NuclearAnnihilationMengskSmallNukeDropDelayCP"/>
+        <Radius value="7.5"/>
+    </CEffectRandomPointInCircle>
     <CEffectDamage id="PickupRemove">
         <EditorCategories value="Race:Terran"/>
         <ImpactLocation Value="SourceUnit"/>
@@ -786,12 +792,12 @@
         <EditorCategories value="Race:Terran"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
-        <AttributeBonus index="Armored" value="25"/>
+        <AttributeBonus index="Armored" value="30"/>
         <ArmorReduction value="1"/>
         <Flags index="Notification" value="1"/>
         <Kind value="Ranged"/>
         <KindSplash value="Splash"/>
-        <Amount value="55"/>
+        <Amount value="40"/>
         <Death value="Blast"/>
         <AreaArray Radius="0.4687" Fraction="1"/>
         <AreaArray Radius="0.7812" Fraction="0.5"/>
@@ -806,12 +812,12 @@
         <EditorCategories value="Race:Terran"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
-        <AttributeBonus index="Armored" value="25"/>
+        <AttributeBonus index="Armored" value="30"/>
         <ArmorReduction value="1"/>
         <Flags index="Notification" value="1"/>
         <Kind value="Ranged"/>
         <KindSplash value="Splash"/>
-        <Amount value="55"/>
+        <Amount value="40"/>
         <Death value="Blast"/>
         <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="CallForHelp" value="1"/>
@@ -1164,7 +1170,9 @@
         <Flags index="Notification" value="1"/>
         <Amount value="300"/>
         <Death value="Blast"/>
-        <AreaArray Radius="2" Fraction="1"/>
+        <AreaArray Radius="0.5" Fraction="1"/>
+        <AreaArray Radius="1" Fraction="0.5"/>
+        <AreaArray Radius="1.5" Fraction="0.25"/>
         <SearchFilters value="-;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <SearchFlags index="CallForHelp" value="1"/>
         <SearchFlags index="SameCliff" value="0"/>
@@ -1890,9 +1898,9 @@
     </CEffectDamage>
     <CEffectSet id="GhostTacNukeSet">
         <EditorCategories value="Race:Terran"/>
-        <EffectArray value="TacNukeDamage"/>
-        <EffectArray value="TacNukeDetonate"/>
-        <TargetLocationType value="Point"/>
+        <EffectArray value="NuclearAnnihilationLaunchMP"/>
+        <EffectArray value="NuclearAnnihilationMengskBigNukeDropDelayCP"/>
+        <EffectArray value="SuicideRemove"/>
     </CEffectSet>
     <CEffectLaunchMissile id="GhostTacNukeLM">
         <EditorCategories value="Race:Terran"/>
@@ -1912,28 +1920,10 @@
         <EditorCategories value="Race:Terran"/>
         <Flags index="Channeled" value="1"/>
         <ExpireEffect value="GhostTacNukeLaunchSet"/>
-        <FinalEffect value="TacNukeSuicide"/>
         <PeriodCount value="20"/>
         <PeriodicPeriodArray value="0.2"/>
-        <AINotifyEffect value="TacNukeDamage"/>
+        <AINotifyEffect value="NuclearAnnihilationMengskBigNukeDamageSearch"/>
         <Alert value="CalldownLaunchObserver"/>
-    </CEffectCreatePersistent>
-    <CEffectDamage id="TacNukeSuicide">
-        <EditorCategories value="Race:Terran"/>
-        <ImpactLocation Value="SourceUnit"/>
-        <Flags index="Kill" value="1"/>
-    </CEffectDamage>
-    <CEffectUseCalldown id="TacNuke">
-        <EditorCategories value="Race:Terran"/>
-        <WhichLocation Value="TargetPoint"/>
-        <CalldownCount value="1"/>
-        <CalldownEffect value="TacNukePersistent"/>
-    </CEffectUseCalldown>
-    <CEffectCreatePersistent id="TacNukeDetonate">
-        <EditorCategories value="Race:Terran"/>
-        <ExpireDelay value="8.25"/>
-        <RevealRadius value="4"/>
-        <RevealFlags index="Unfog" value="1"/>
     </CEffectCreatePersistent>
     <CEffectCreatePersistent id="TacNukeIndicatorCP">
         <EditorCategories value="Race:Terran"/>
@@ -1954,4 +1944,60 @@
         <EditorCategories value="Race:Terran"/>
         <XP value="200"/>
     </CEffectModifyUnit>
+    <CEffectCreatePersistent id="NuclearAnnihilationMengskSmallNukeDummyCP">
+        <PeriodCount value="40"/>
+        <PeriodicPeriodArray value="0.125"/>
+        <PeriodicEffectArray value="NuclearAnnihilationMengskSmallNukeDropPoint"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="NuclearAnnihilationMengskSmallNukeDamageSearch">
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="3" Effect="NuclearAnnihilationMengskSmallNukeDamage"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="NuclearAnnihilationMengskSmallNukeDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Kind value="Splash"/>
+        <Amount value="150"/>
+        <AttributeBonus index="Structure" value="100"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="NuclearAnnihilationMengskSmallNukeDropDelayCP">
+        <EditorCategories value="Race:Terran"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="NuclearAnnihilationMengskSmallNukeDamageSearch"/>
+        <PeriodicPeriodArray value="1.2"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="NuclearAnnihilationMengskDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Zerg"/>
+        <Kind value="Splash"/>
+        <Amount value="500"/>
+        <AttributeBonus index="Structure" value="300"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="NuclearAnnihilationMengskBigNukeDamageSearch">
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AreaArray Radius="10" Effect="NuclearAnnihilationMengskDamage"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="NuclearAnnihilationMengskBigNukeDropDelayCP">
+        <EditorCategories value="Race:Terran"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="NuclearAnnihilationMengskBigNukeDamageSearch"/>
+        <PeriodicPeriodArray value="5"/>
+        <RevealRadius value="15"/>
+        <RevealFlags index="Unfog" value="1"/>
+        <ExpireDelay value="5"/>
+        <InitialDelay value="2"/>
+        <InitialEffect value="NuclearAnnihilationMengskSmallNukeDummyCP"/>
+    </CEffectCreatePersistent>
+    <CEffectModifyPlayer id="NuclearAnnihilationDummyMP">
+        <EditorCategories value="Race:Terran"/>
+        <Upgrades Upgrade="NuclearAnnihilationDummy" Count="1"/>
+    </CEffectModifyPlayer>
+    <CEffectModifyPlayer id="NuclearAnnihilationLaunchMP">
+        <EditorCategories value="Race:Terran"/>
+        <Upgrades Upgrade="NuclearAnnihilationDummy" Count="-1"/>
+        <WhichPlayer Value="Caster"/>
+    </CEffectModifyPlayer>
+    <CEffectSet id="NuclearAnnihilationDummy">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="NuclearAnnihilationDummyMP"/>
+        <EffectArray value="KillRemove"/>
+    </CEffectSet>
 </Catalog>

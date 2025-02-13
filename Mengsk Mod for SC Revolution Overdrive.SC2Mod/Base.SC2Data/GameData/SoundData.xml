@@ -1541,4 +1541,36 @@
         <AssetArray File="LocalizedData\Sounds\VO\Mengsk_Announcer\MengskA_NeedMoreGas02.ogg"/>
         <AssetArray File="LocalizedData\Sounds\VO\Mengsk_Announcer\MengskA_NeedMoreGas03.ogg"/>
     </CSound>
+    <CSound id="UI_Mengsk_TopBar_Nuke_Select" parent="UI">
+        <AssetArray File="Assets\Sounds\Nova_Eradicator_Lab_Alarm_01.wav" Volume="-6.000000,-6.000000" FacialGroup=""/>
+        <SpeakerMix index="FrontLeft" value="0.600000"/>
+        <SpeakerMix index="FrontRight" value="0.600000"/>
+        <SpeakerMix index="BackLeft" value="0.500000"/>
+        <SpeakerMix index="BackRight" value="0.500000"/>
+        <SpeakerMix index="SideLeft" value="0.125000"/>
+        <SpeakerMix index="SideRight" value="0.125000"/>
+        <Spread value="20.000000"/>
+        <DupeMuteCount value="1"/>
+        <Pitch value="-1.000000,-1.000000"/>
+        <NonLocalVolumeAdjustment value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="NuclearAnnihilation_NukeDropWhistle" parent="Combat">
+        <AssetArray File="Assets\Sounds\Griffin_Bomb_Whistle_01.wav" FacialGroup=""/>
+        <DupeDestroyCount value="2"/>
+        <DupeMuteCount value="2"/>
+        <Pitch value="-3.000000,1.000000"/>
+        <Spread value="15.000000"/>
+        <Volume value="-15.000000,-12.000000"/>
+    </CSound>
+    <CSound id="NuclearAnnihilation_SmallNukeDropWhistle" parent="Combat">
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombWhistle_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombWhistle_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombWhistle_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombWhistle_04.wav" Pitch="-6.000000,-6.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombWhistle_05.wav" Pitch="-2.000000,-2.000000" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Mengsk_ExpStrike_BombWhistle_08.wav" FacialGroup=""/>
+        <Pitch value="-4.000000,0.000000"/>
+        <Volume value="-12.000000,-8.000000"/>
+        <Chance value="35"/>
+    </CSound>
 </Catalog>

@@ -62,6 +62,10 @@
         <ArcSlop value="0"/>
         <RandomDelayMin value="-0.25"/>
         <RandomDelayMax value="0.5"/>
+        <Cost>
+            <Resource index="Minerals" value="10"/>
+            <Resource index="Vespene" value="10"/>
+        </Cost>
     </CWeaponLegacy>
     <CWeaponLegacy id="MissileTurretMengskMissile">
         <EditorCategories value="Race:Terran"/>

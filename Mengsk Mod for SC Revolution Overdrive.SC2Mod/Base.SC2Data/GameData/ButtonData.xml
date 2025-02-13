@@ -739,4 +739,9 @@
         <AlertIcon value="Assets\Textures\btn-ability-terran-armnuke.dds"/>
         <EditorCategories value="Race:Terran"/>
     </CButton>
+    <CButton id="NuclearAnnihilationMengsk">
+        <Icon value="Assets\Textures\btn-ability-mengsk-topbar-nuclearannihilation.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-topbar-nuclearannihilation.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
 </Catalog>

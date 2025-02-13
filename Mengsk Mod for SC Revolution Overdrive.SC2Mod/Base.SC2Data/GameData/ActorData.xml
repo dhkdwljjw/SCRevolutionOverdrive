@@ -2896,7 +2896,7 @@
         <Model value="SiegeTank_Mengsk_COOP"/>
         <ModelFlags index="OutlineEmitter" value="1"/>
         <BuildModel value="SiegeTank_Mengsk_COOP"/>
-        <DeathArray index="Normal" ModelLink="SiegeTank_Mengsk_COOP_Death" SoundLink="SiegeTank_Explode" VoiceLink="SiegeTankDeathVoice"/>
+        <DeathArray index="Normal" ModelLink="SiegeTank_Mengsk_COOP_Death" SoundLink="SiegeTank_Explode"/>
         <DeathCustoms ActorModel="SiegeTankDeathRagdoll" ModelLink="SiegeTank_Mengsk_COOP_DeathRagdoll" Name="RagdollBasic">
             <BodySquibs Name="Basic" Model="TerranSquibDeathRagdoll"/>
         </DeathCustoms>
@@ -3693,21 +3693,6 @@
         <Magnitude value="35.000000,10.000000"/>
         <HostEndSiteOps Ops="SOpMoveUpBy2"/>
     </CActorForceCylinder>
-    <CActorUnit id="TacNukeMissileUnit" parent="GenericUnitStandard" unitName="TacNukeMissileUnit">
-        <Model value="Invisible"/>
-        <BuildModel value="Nuke"/>
-        <DeathArray index="Normal" ModelLink="Nuke"/>
-        <PlacementModel value="Nuke"/>
-        <SoundArray index="Ready" value="Alert_TerranNukeReady"/>
-        <StatusBarFlags index="Shields" value="0"/>
-        <StatusBarFlags index="Life" value="0"/>
-        <StatusBarFlags index="Energy" value="0"/>
-        <StatusBarFlags index="Cargo" value="0"/>
-        <StatusBarFlags index="Progress" value="0"/>
-        <StatusBarFlags index="Duration" value="0"/>
-        <StatusBarFlags index="Magazine" value="0"/>
-        <UnitIcon value="Assets\Textures\btn-upgrade-mengsk-ghostacademy-guidedtacticalstrike.dds"/>
-    </CActorUnit>
     <CActorForceCylinder id="TacNukeShockwave">
         <On Terms="ActorCreation" Send="TimerSet 0.200000 PhasePause"/>
         <On Terms="TimerExpired; TimerName PhasePause" Send="ForceSetRadius 0.750000"/>
@@ -3737,11 +3722,13 @@
     </CActorRegionCircle>
     <CActorSplat id="TacNukeCursorSplat" parent="TerranCursorSplat" abil="TacNukeMissileStrike">
         <Model value="nukeCursorSplat"/>
+        <Scale value="1.250000"/>
     </CActorSplat>
     <CActorAction id="TacticalNuke" parent="GenericAttack" effectImpact="GhostTacNukeSet" effectLaunch="GhostTacNukeLM">
         <LaunchAttachQuery Methods="AMFilterCenter"/>
         <LaunchAssets Sound="Ghost_NukeLaunch"/>
-        <ImpactMap index="None" Model="GhostTacNukeMissileExplode" Sound="Ghost_NukeExplode"/>
+        <ImpactMap index="None" Model="GhostTacNukeMissileExplode" Scale="2.000000" Sound="Ghost_EMPAttackImpact"/>
+        <ImpactPointSiteOps Ops="SOpTargetPointStationary SOpMoveUpBy2"/>
     </CActorAction>
     <CActorMissile id="TacticalNukeMissile" parent="GenericAttackMissile" unitName="TacticalNukeMissile">
         <Aliases value="_Selectable"/>
@@ -3752,7 +3739,6 @@
         <Scale value="0.500000"/>
         <ModelFlags index="NeedsVolumeMonitoring" value="1"/>
         <DeathArray index="Normal" AnimProps="Death" ModelLink="KirovMissileDeath" SoundLink="Mutator_MissileNuke_ExplosionShotDown"/>
-        <DeathArray index="Impact" AnimProps="Stand"/>
         <DeathActorModel value="UnitDeathModel"/>
         <DeathActorModelLow value="UnitDeathModelUnscaled"/>
         <DeathActorSound value="UnitDeathSound"/>
@@ -3769,4 +3755,47 @@
         <On Terms="Behavior.VeloxPsiEssenceStormDamage.On" Send="Create"/>
         <Sound value="HighTemplar_PsionicStormImpact"/>
     </CActorSound>
+    <CActorSound id="UI_Mengsk_TopBar_Nuke_Deploy" parent="SoundOneShot">
+        <On Terms="Effect.NuclearAnnihilationMengskBigNukeDropDelayCP.Start; At Effect" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="UI_Mengsk_TopBar_Nuke_Select" parent="SoundOneShot">
+        <On Terms="Abil.NuclearAnnihilationMengsk.Cursor" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="NuclearAnnihilation_NukeDropWhistle_AS" parent="SoundOneShot">
+        <On Terms="Effect.NuclearAnnihilationMengskSmallNukeDropDelayCP.Start; At Effect" Send="Create"/>
+        <Sound value="NuclearAnnihilation_NukeDropWhistle"/>
+        <Layers Sound="NuclearAnnihilation_SmallNukeDropWhistle"/>
+    </CActorSound>
+    <CActorSquib id="NuclearAnnihilationMengskBigNukeExplode">
+        <On Terms="Effect.NuclearAnnihilationMengskBigNukeDamageSearch.Start; At Effect" Send="Create"/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOpShadow"/>
+        <Map index="None" Sound="NukeBig_Mengsk_Explode"/>
+    </CActorSquib>
+    <CActorModel id="NuclearAnnihilationMengskBigNukeDrop">
+        <On Terms="Effect.NuclearAnnihilationMengskBigNukeDropDelayCP.Initial; At Effect" Send="Create"/>
+        <On Terms="ActorCreation" Send="$Birth"/>
+        <On Terms="AnimDone; AnimName Birth" Send="Destroy"/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOpShadow"/>
+    </CActorModel>
+    <CActorSquib id="NuclearAnnihilationMengskSmallNukeExplode">
+        <On Terms="Effect.NuclearAnnihilationMengskSmallNukeDamageSearch.Start; At Effect" Send="Create"/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOpShadow"/>
+        <Map index="None" Sound="NukeSmall_Mengsk_Explode"/>
+    </CActorSquib>
+    <CActorModel id="NuclearAnnihilationMengskSmallNukeDrop">
+        <On Terms="Effect.NuclearAnnihilationMengskSmallNukeDropDelayCP.Start; At Effect" Send="Create"/>
+        <On Terms="ActorCreation" Send="$Birth"/>
+        <On Terms="AnimDone; AnimName Birth" Send="Destroy"/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOpShadow"/>
+    </CActorModel>
+    <CActorSplat id="NuclearAnnihilationMengskSplat" parent="TerranCursorSplat" abil="NuclearAnnihilationMengsk">
+        <Model value="NuclearAnnihilationMengskSplat"/>
+        <Scale value="20.000000"/>
+    </CActorSplat>
+    <CActorUnit id="NuclearAnnihilationDummy" parent="GenericUnitStandard" unitName="NuclearAnnihilationDummy">
+        <Model value="Invisible"/>
+        <HeroIcon value="Assets\Textures\btn-ability-mengsk-topbar-nuclearannihilation.dds"/>
+        <UnitIcon value="Assets\Textures\btn-ability-mengsk-topbar-nuclearannihilation.dds"/>
+        <SoundArray index="Ready" value="Alert_TerranNukeReady"/>
+    </CActorUnit>
 </Catalog>

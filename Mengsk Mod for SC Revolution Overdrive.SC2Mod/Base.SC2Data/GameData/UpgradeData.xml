@@ -193,6 +193,13 @@
         <ScoreAmount value="200"/>
         <ScoreResult value="BuildOrder"/>
     </CUpgrade>
+    <CUpgrade id="NuclearAnnihilationDummy">
+        <Icon value="Assets\Textures\btn-ability-mengsk-topbar-nuclearannihilation.dds"/>
+        <ScoreAmount value="2000"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
     <CUpgrade id="ThorMengskArmorAura">
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
         <Icon value="Assets\Textures\btn-ability-mengsk-thor-bigboycover.dds"/>
@@ -201,7 +208,6 @@
         <ScoreResult value="BuildOrder"/>
     </CUpgrade>
     <CUpgrade id="TrooperMengskDropTrain">
-        <Flags index="UpgradeCheat" value="0"/>
         <Icon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-orbitaldrop.dds"/>
         <Alert value="ResearchComplete"/>
         <ScoreAmount value="300"/>
@@ -209,7 +215,15 @@
         <EffectArray Operation="Set" Reference="Abil,BarracksMengskTrain,InfoArray[Train3].Unit[1]" Value="TrooperMengsk"/>
         <EffectArray Operation="Set" Reference="Button,TrooperMengskDouble,AlertName" Value="Button/Name/TrooperMengskDouble"/>
         <EffectArray Operation="Set" Reference="Button,TrooperMengskDouble,Name" Value="Button/Name/TrooperMengskDouble"/>
+        <EffectArray Reference="Unit,TrooperMengsk,Speed" Value="0.562500"/>
+        <EffectArray Reference="Unit,TrooperMengskImproved,Speed" Value="0.562500"/>
+        <EffectArray Reference="Unit,TrooperMengskFlamethrower,Speed" Value="0.562500"/>
+        <EffectArray Reference="Unit,TrooperMengskAA,Speed" Value="0.562500"/>
         <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="TrooperMengsk"/>
+        <AffectedUnitArray value="TrooperMengskImproved"/>
+        <AffectedUnitArray value="TrooperMengskFlamethrower"/>
+        <AffectedUnitArray value="TrooperMengskAA"/>
     </CUpgrade>
     <CUpgrade id="MechTransformationSpeedMengsk">
         <EffectArray Operation="Subtract" Reference="Abil,SiegeModeMengsk,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="2.500000"/>

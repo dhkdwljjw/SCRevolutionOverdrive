@@ -31,7 +31,7 @@
     </CRequirement>
     <CRequirement id="HaveTacNuke">
         <EditorCategories value="Race:Terran,TechType:Unit"/>
-        <NodeArray index="Use" Link="CountUnitTacNukeMissileUnitCompleteOnlyAtUnit1351533016"/>
+        <NodeArray index="Use" Link="CountUpgradeNuclearAnnihilationDummyCompleteOnly2420567955"/>
     </CRequirement>
     <CRequirement id="HaveTrooperMengskDropTrain">
         <EditorCategories value="Race:Terran,TechType:Upgrade"/>
@@ -311,7 +311,7 @@
     </CRequirement>
     <CRequirement id="TrainTacNuke">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
-        <NodeArray index="Use" Link="AndLT1117748507CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit1CountUnitArmoryMengskCompleteOnlyCountUnitFusionCoreMengskCompleteOnly"/>
+        <NodeArray index="Use" Link="AndAnd1065390385LTCountUpgradeNuclearAnnihilationDummyCompleteOnly1LTCountUnitNuclearAnnihilationDummyQueuedOrBetter1CountUnitArmoryMengskCompleteOnlyCountUnitFusionCoreMengskCompleteOnly"/>
     </CRequirement>
     <CRequirement id="ArmExperimentalStrike">
         <EditorCategories value="Race:Terran,TechType:Ability"/>
