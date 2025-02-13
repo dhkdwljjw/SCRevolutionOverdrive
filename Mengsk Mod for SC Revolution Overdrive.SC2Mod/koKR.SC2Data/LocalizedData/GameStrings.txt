@@ -161,6 +161,7 @@ Button/Name/MissileTurretMengsk=미사일 포탑 건설
 Button/Name/MissileTurretMengskPassive=미사일 포탑
 Button/Name/MorphtoRavenMengsk=애국자 모드 취소
 Button/Name/MorphtoRavenMengskSieged=애국자 모드
+Button/Name/NuclearAnnihilationMengsk=핵 섬멸
 Button/Name/NukeCalldownMengsk=전술 미사일 공격
 Button/Name/NukeMengskArm=격납고 전술 미사일 배치
 Button/Name/PropagandaBlastMengsk=세뇌
@@ -185,8 +186,8 @@ Button/Name/SnipeMengsk=저격
 Button/Name/StarportMengsk=우주공항 건설
 Button/Name/StructureArmorMengsk=신소재 강화 장갑
 Button/Name/StructureArmorMengskResearch=신소재 강화 장갑 연구
-Button/Name/TacNukeArm=전략 핵미사일 배치
-Button/Name/TacNukeMissileCalldown=전략 핵 공격
+Button/Name/TacNukeArm=핵 섬멸 준비
+Button/Name/TacNukeMissileCalldown=핵 섬멸
 Button/Name/ThorMengsk=검은망치 생산
 Button/Name/ThorMengskArmorAura=방어장
 Button/Name/ThorMengskArmorAuraResearch=방어장 연구
@@ -326,6 +327,7 @@ Button/Tooltip/MissileTurretMengskPassive=공학 연구소는 미사일 포탑�
 Button/Tooltip/MorphtoRavenMengsk=세뇌를 중단하고 황제의 증인의 이동 능력을 복원시킵니다.
 Button/Tooltip/MorphtoRavenMengskSieged=황제의 증인에게 주위 아군을 세뇌하는 능력을 부여하지만 이동 능력이 사라집니다. 
 Button/Tooltip/MutaliskMengsk=과학자들은 뮤탈리스크의 자연스러운 행동을 연구할 수 있을 만큼 큰 새장을 요구했습니다. 곧 연구 시설에서는 하염없이 늘어만 가는 실종자 수가 문제로 대두되었습니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/NuclearAnnihilationMengsk=대상 지역에 전술 미사일을 <d ref="Effect,NuclearAnnihilationMengskSmallNukeDummyCP,PeriodCount" player="current"/>회 쏟아부어 각각 좁은 지역에 <d ref="Effect,NuclearAnnihilationMengskSmallNukeDamage,Amount" player = "current"/>(구조물에는 +<d ref="Effect,NuclearAnnihilationMengskSmallNukeDamage,AttributeBonus[Structure]"/>)의 피해를 주고, 뒤이어 핵 미사일로 넓은 지역에 <d ref="Effect,NuclearAnnihilationMengskDamage,Amount" player = "current"/>(구조물에는 +<d ref="Effect,NuclearAnnihilationMengskDamage,AttributeBonus[Structure]"/>)의 피해를 줍니다.
 Button/Tooltip/NukeCalldownMengsk=선택한 지점에 전술 미사일을 떨어트립니다. 전술 미사일은 <d ref="Effect,GhostMengskNukeCP,InitialDelay + Effect,GhostMengskNukeCP,ExpireDelay + Effect,GhostMengskNukeDetonateCP,InitialDelay"/>초 후 투하되어 좁은 범위의 적에게 최대 <d ref="Effect,GhostMengskNukeDamage,Amount"/>(구조물에는 추가 <d ref="Effect,GhostMengskNukeDamage,AttributeBonus[Structure]"/>)의 피해를 줍니다.<n/><n/>황실 사관학교에서 충전할 수 있습니다.
 Button/Tooltip/NukeMengskArm=격납고에 전술 미사일을 배치합니다.<n/><n/>전술 미사일은 <d ref="Effect,GhostMengskNukeCP,InitialDelay + Effect,GhostMengskNukeCP,ExpireDelay + Effect,GhostMengskNukeDetonateCP,InitialDelay"/>초 후 투하되어 좁은 범위의 적에게 최대 <d ref="Effect,GhostMengskNukeDamage,Amount"/>(구조물에는 추가 <d ref="Effect,GhostMengskNukeDamage,AttributeBonus[Structure]"/>)의 피해를 줍니다.<n/><n/>황제의 그림자가 투하 위치를 정할 수 있습니다.
 Button/Tooltip/PromotionAllowed=<n/><c val="ffff8a">사용 효과 :</c> 이 유닛에 즉시 200의 경험치를 부여합니다.<n/>
@@ -367,8 +369,8 @@ Button/Tooltip/StarportMengsk=제국 근위대의 공중 유닛 생산 시설입
 Button/Tooltip/StarportMengskFlying=우주공항에서 유닛을 생산하려면 지상에 착륙해야 합니다.
 Button/Tooltip/StructureArmorMengsk=이 구조물의 체력과 방어력이 증가합니다.
 Button/Tooltip/StructureArmorMengskResearch=<c val="ffff8a">보급 벙커</c>, <c val="ffff8a">미사일 포탑</c>, <c val="ffff8a">대지파괴 포</c>의 체력과 방어력이 증가합니다.
-Button/Tooltip/TacNukeArm=격납고에 전략 핵미사일을 배치합니다.<n/><n/>핵미사일은 <d time="4"/> 후 발사되어 대상 위치로 비행, 폭발하여 넓은 범위에 있는 모든 유닛의 보호막을 모두 소진시키며, 최대 체력의 2/3만큼의 피해를 줍니다. 최소 피해량은 500입니다.<n/><n/>황실 사관학교에서 타격 지점을 지정합니다.
-Button/Tooltip/TacNukeMissileCalldown=선택한 지점에 전략 핵미사일을 떨어트립니다. 전략 핵미사일은 <d time="4"/> 후 발사되어 대상 위치로 비행, 폭발하여 넓은 범위에 있는 모든 유닛의 보호막을 모두 소진시키며, 최대 체력의 2/3만큼의 피해를 줍니다. 최소 피해량은 500입니다.
+Button/Tooltip/TacNukeArm=격납고가 핵 섬멸을 준비합니다.<n/><n/>핵 섬멸은 신호기에 발사 명령을 보내는 것으로 시작하며, 명령을 받은 신호기는 <d time="4"/> 후 발사되어 대상 위치로 비행, 작동하여 핵 섬멸을 유도합니다.<n/><n/>황실 사관학교에서 타격 지점을 지정합니다.
+Button/Tooltip/TacNukeMissileCalldown=선택한 지점으로 핵 섬멸을 위한 신호기를 발사합니다. 신호기는 <d time="4"/> 후 발사되어 대상 위치로 비행, 작동하여 핵 섬멸을 유도합니다.<n/><n/>신호기가 작동하면, 대상 지역에 전술 미사일을 <d ref="Effect,NuclearAnnihilationMengskSmallNukeDummyCP,PeriodCount" player="current"/>회 쏟아부어 각각 좁은 지역에 <d ref="Effect,NuclearAnnihilationMengskSmallNukeDamage,Amount" player = "current"/>(구조물에는 +<d ref="Effect,NuclearAnnihilationMengskSmallNukeDamage,AttributeBonus[Structure]"/>)의 피해를 주고, 뒤이어 핵 미사일로 넓은 지역에 <d ref="Effect,NuclearAnnihilationMengskDamage,Amount" player = "current"/>(구조물에는 +<d ref="Effect,NuclearAnnihilationMengskDamage,AttributeBonus[Structure]"/>)의 피해를 줍니다.
 Button/Tooltip/ThorMengsk=근위대 중돌격 기계 유닛입니다. 감시 모드를 사용할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
 Button/Tooltip/ThorMengskArmorAura=다른 주위 아군 지상 유닛의 방어력이 <d ref="Behavior,ThorMengskArmorAuraTarget,Modification.LifeArmorBonus"/> 증가합니다.
 Button/Tooltip/ThorMengskArmorAuraResearch=<c val="ffff8a">검은망치</c>가 주위 아군 유닛의 방어력을 <d ref="Behavior,ThorMengskArmorAuraTarget,Modification.LifeArmorBonus"/> 증가시킵니다.
@@ -386,7 +388,7 @@ Button/Tooltip/TrooperMengsk=다용도 보병입니다. 다양한 전투 상황�
 Button/Tooltip/TrooperMengskAA=대공 전문 공격 유닛입니다. 인부복으로 갈아입을 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
 Button/Tooltip/TrooperMengskBuild=전투 구조물 목록입니다.
 Button/Tooltip/TrooperMengskDropTrain=징병소에서 동시에 두 유닛을 생산할 수 있습니다.
-Button/Tooltip/TrooperMengskDropTrainResearch=<c val="ffff8a">징병소</c>에서 동시에 두 유닛을 징집할 수 있게 합니다. 또한, 병영에서 <c val="ffff8a">자치령 부대원</c>을 한 번에 2기씩 징집합니다.
+Button/Tooltip/TrooperMengskDropTrainResearch=<c val="ffff8a">징병소</c>에서 동시에 두 유닛을 징집할 수 있게 합니다. 또한, 병영에서 <c val="ffff8a">자치령 부대원</c>을 한 번에 2기씩 징집하며, <c val="ffff8a">자치령 부대원</c>의 이동속도가 증가합니다.
 Button/Tooltip/TrooperMengskEnlist=인부에게 명령을 내려 가장 가까운 징병소나 보급 벙커에서 부대원 복장으로 갈아입게 합니다.
 Button/Tooltip/TrooperMengskEnlistCC=인부에게 명령을 내려 징병소나 보급 벙커에서 부대원 복장으로 갈아입게 합니다.
 Button/Tooltip/TrooperMengskFlamethrower=대보병 전문 공격 유닛입니다. 인부복으로 갈아입을 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
@@ -429,6 +431,7 @@ Effect/Name/AmmoTimedLife=탄약 시한 생명
 Effect/Name/ArtilleryMengskBombardmentSwitch=ArtilleryMengskBombardmentSwitch
 Effect/Name/ArtilleryMengskExperimentalStrikeUM=ArtilleryMengskExperimentalStrikeUM
 Effect/Name/C10CanisterRifleMengsk=C-10 산탄 소총
+Effect/Name/NuclearAnnihilationMengskSmallNukeDropPoint=NuclearAnnihilationMengskSmallNukeDropPoint
 Effect/Name/PickupRemove=제거 획득
 Effect/Name/SCVMengskAttackDamage=SCVMengskAttackDamage
 Effect/Name/ScienceFacilityHydralisksSet=ScienceFacilityHydralisksSet
@@ -437,6 +440,7 @@ Effect/Name/ScienceFacilityUltraliskSet=ScienceFacilityUltraliskSet
 Effect/Name/ScienceFacilityZerglingsSet=ScienceFacilityZerglingsSet
 Effect/Name/ThreatTest=ThreatTest
 Race/Name/TerM=테란 멩스크
+RequirementNode/Tooltip/And1065390385LTCountUpgradeNuclearAnnihilationDummyCompleteOnly1LTCountUnitNuclearAnnihilationDummyQueuedOrBetter1=핵 섬멸 준비되지 않음
 RequirementNode/Tooltip/CountBehaviorPropagandaBlastMengskCompleteOnlyAtUnit1474688104=황제의 증인에게 세뇌
 RequirementNode/Tooltip/CountUnitAlias_BarracksMengskCompleteOnly92025031TechTreeCheat=병영
 RequirementNode/Tooltip/CountUnitAlias_CommandCenterMengskCompleteOnly1787385606TechTreeCheat=징병소
@@ -448,7 +452,6 @@ RequirementNode/Tooltip/CountUnitEngineeringBayMengskCompleteOnly1938945142TechT
 RequirementNode/Tooltip/CountUnitFusionCoreMengskCompleteOnly203485344TechTreeCheat=융합로
 RequirementNode/Tooltip/CountUnitGhostAcademyMengskCompleteOnly2782960886=황실 사관학교
 RequirementNode/Tooltip/CountUnitNukeMengskCompleteOnly3727871538=황실 사관학교에서 전술 미사일 생산
-RequirementNode/Tooltip/CountUnitTacNukeMissileUnitCompleteOnlyAtUnit1351533016=황실 사관학교에서 전략 핵 생산
 RequirementNode/Tooltip/CountUpgradeArtilleryMengskRangeCompleteOnly3576403734=공학 연구소에서 반구 촉매 연구
 RequirementNode/Tooltip/CountUpgradeBattlecruiserMengskRangeAuraCompleteOnly2725800310=융합로에서 현장 지원 조준 시스템 연구
 RequirementNode/Tooltip/CountUpgradeBlimpMengskTopbarRegenCompleteOnly3221082208=융합로에서 공기 파장 증폭 연구
@@ -460,6 +463,7 @@ RequirementNode/Tooltip/CountUpgradeMedivacMengskPermanentCloakCompleteOnly51191
 RequirementNode/Tooltip/CountUpgradeMedivacMengskSiegeTankAirliftCompleteOnly4291057663=무기고에서 군비 안정판 연구
 RequirementNode/Tooltip/CountUpgradeMedivacMengskSiegeTankAirliftQueuedOrBetter4291057663=무기고에서 군비 안정판 연구
 RequirementNode/Tooltip/CountUpgradeMengskStructureArmorCompleteOnly2054151329=공학 연구소에서 신소재 강화 장갑 연구
+RequirementNode/Tooltip/CountUpgradeNuclearAnnihilationDummyCompleteOnly2420567955=황실 사관학교에서 핵 섬멸 준비
 RequirementNode/Tooltip/CountUpgradeThorMengskArmorAuraCompleteOnly618094651=무기고에서 방어장 연구
 RequirementNode/Tooltip/CountUpgradeTrooperMengskDropTrainCompleteOnly480319619=공학 연구소에서 부대원 궤도 낙하기 연구
 RequirementNode/Tooltip/CountUpgradeVikingMengskSpeedCompleteOnly1841791773=융합로에서 에이시어 터빈 연구
@@ -475,7 +479,6 @@ RequirementNode/Tooltip/GTE366229690CountBehaviorMengskVeterancyMarauderMengskCo
 RequirementNode/Tooltip/GTE366229690CountBehaviorMengskVeterancySiegeTankMengskCompleteOnlyAtUnit2=등급: 1
 RequirementNode/Tooltip/GTE4126974048CountBehaviorMengskVeterancyMarauderMengskCompleteOnlyAtUnit3=등급: 2
 RequirementNode/Tooltip/GTE4126974048CountBehaviorMengskVeterancyVikingMengskCompleteOnlyAtUnit3=등급: 2
-RequirementNode/Tooltip/LT1117748507CountUnitTacNukeMissileUnitQueuedOrBetterAtUnit1=전략 핵 없음
 RequirementNode/Tooltip/LT440745099CountUnitExperimentalStrikeUnitQueuedOrBetterAtUnit4=대지파괴 포에 3발 이하의 오염된 강타 장전
 RequirementNode/Tooltip/Not2895527276CountUnitNukeMengskQueuedOrBetterAtUnit=이 황실 사관학교에 전술 미사일 없음
 TrooperOrLaborer=부대원 또는 인부를 대상으로 해야 합니다.
@@ -549,6 +552,7 @@ Upgrade/Name/MengskTrooperArmorsLevel3=자치령 장갑 3단계
 Upgrade/Name/MengskTrooperWeaponsLevel1=지치령 무기 1단계
 Upgrade/Name/MengskTrooperWeaponsLevel2=지치령 무기 2단계
 Upgrade/Name/MengskTrooperWeaponsLevel3=지치령 무기 3단계
+Upgrade/Name/NuclearAnnihilationDummy=NuclearAnnihilationDummy
 Upgrade/Name/ThorMengskArmorAura=방어장
 Upgrade/Name/TrooperMengskDropTrain=신속 징집
 Upgrade/Name/TrooperMengskSpecializeAA=우박폭풍 발사기 장착
@@ -580,4 +584,5 @@ Weapon/Name/VikingMengskAirMassive=랜저 유도탄
 Weapon/Name/VikingMengskGround=개틀링 포
 Weapon/Name/VikingMengskGroundMassive=개틀링 포
 Weapon/Name/ZerglingMengskClaws=발톱
+Weapon/Tip/ArtilleryMengskBombardment=공격 시 광물 10, 베스핀 10 소모
 e_cmdNotEnoughCustom=진영 고유 자원이 부족합니다.
