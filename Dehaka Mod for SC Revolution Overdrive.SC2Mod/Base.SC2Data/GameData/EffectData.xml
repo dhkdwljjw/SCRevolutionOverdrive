@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectSwitch id="DisguiseEx3">
+        <CaseArray Validator="DisguiseAsPrimalZerglingWithWings" Effect="DisguiseAsPrimalZerglingWithWingsCU"/>
+        <CaseArray Validator="DisguiseAsPrimalZerglingWithoutWings" Effect="DisguiseAsPrimalZerglingWithoutWingsCU"/>
+    </CEffectSwitch>
     <CEffectModifyPlayer id="DehakaDakrunCalldownMP">
         <EditorCategories value="Race:PrimalZerg"/>
         <Upgrades Upgrade="DehakaCalldownDakrun" Count="1"/>
@@ -29,7 +33,6 @@
     </CEffectSet>
     <CEffectSet id="DehakaMurvarSpawnSet">
         <EditorCategories value="Race:PrimalZerg"/>
-        <EffectArray value="CoopMurvarLaunchCP"/>
         <EffectArray value="DehakaMurvarSpawnMP"/>
     </CEffectSet>
     <CEffectModifyPlayer id="DehakaDakrunSpawnMP">
@@ -134,7 +137,7 @@
     <CEffectModifyUnit id="DehakaConsumeEffectHealBiological">
         <EditorCategories value="Race:PrimalZerg"/>
         <VitalArray index="Life">
-            <ChangeFraction value="0.2"/>
+            <ChangeFraction value="0.1"/>
         </VitalArray>
     </CEffectModifyUnit>
     <CEffectModifyUnit id="DehakaConsumeEffectHealOther">
@@ -210,7 +213,7 @@
         <ValidatorArray index="0" value="IsNotEggUnit"/>
         <ValidatorArray value="NotWarpingIn"/>
         <ValidatorArray value="IsNotLarva"/>
-        <ValidatorArray value="NotHeroicOrLifeLessThan600"/>
+        <ValidatorArray value="LifeLessThan500"/>
         <EditorCategories value="Race:PrimalZerg"/>
         <LaunchEffect value="DehakaConsumeDisableCommandCard"/>
         <FinishEffect value="DehakaConsumeSet"/>
@@ -272,7 +275,7 @@
         <EditorCategories value="Race:PrimalZerg"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
-        <Amount value="10"/>
+        <Amount value="6"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="DehakaConsumeReflectLaunchMissile">
         <EditorCategories value="Race:PrimalZerg"/>
@@ -317,6 +320,17 @@
     <CEffectApplyBehavior id="DehakaExtractor">
         <EditorCategories value="Race:PrimalZerg"/>
     </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="DehakaMutaliskAttackingAB">
+        <EditorCategories value="Race:PrimalZerg"/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="DehakaMutaliskAttacking"/>
+    </CEffectApplyBehavior>
+    <CEffectCreateUnit id="DisguiseAsPrimalZerglingWithWingsCU" parent="DisguiseEx3CU">
+        <SpawnUnit value="ChangelingPrimalZerglingWings"/>
+    </CEffectCreateUnit>
+    <CEffectCreateUnit id="DisguiseAsPrimalZerglingWithoutWingsCU" parent="DisguiseEx3CU">
+        <SpawnUnit value="ChangelingPrimalZergling"/>
+    </CEffectCreateUnit>
     <CEffectApplyBehavior id="ForceLowDeath"/>
     <CEffectCreatePersistent id="MammothBreathCreatePersistent">
         <EditorCategories value="Race:PrimalZerg"/>
@@ -529,7 +543,7 @@
     <CEffectEnumArea id="DehakaIntimidatingRoarSearch">
         <EditorCategories value="Race:PrimalZerg"/>
         <SearchFilters value="-;Player,Ally,Neutral,Structure,Invulnerable,Unstoppable,MapBoss"/>
-        <AreaArray Radius="10" Effect="DehakaIntimidatingRoar"/>
+        <AreaArray Radius="6" Effect="DehakaIntimidatingRoar"/>
         <SearchFlags index="ExtendByUnitRadius" value="1"/>
     </CEffectEnumArea>
     <CEffectEnumArea id="DehakaIntimidatingRoarSearchLv2">
@@ -578,11 +592,6 @@
         <VitalArray index="Life">
             <Change value="1.5"/>
         </VitalArray>
-    </CEffectModifyUnit>
-    <CEffectModifyUnit id="MammothBeamCooldown">
-        <EditorCategories value="Race:PrimalZerg"/>
-        <ImpactUnit Value="Caster"/>
-        <Cost Abil="MammothBeam,255" CooldownOperation="Max" CooldownTimeUse="5"/>
     </CEffectModifyUnit>
     <CEffectCreatePersistent id="MammothBeamCP">
         <EditorCategories value="Race:PrimalZerg"/>
@@ -1116,7 +1125,7 @@
     </CEffectSet>
     <CEffectDamage id="DehakaCreeperSuicideDamage">
         <EditorCategories value="Race:Zerg"/>
-        <Amount value="70"/>
+        <Amount value="20"/>
         <ImpactLocation Value="TargetUnit"/>
         <Kind value="Splash"/>
         <Death value="Disintegrate"/>
@@ -1169,7 +1178,7 @@
     <CEffectDamage id="DehakaDakrunCrashingChargeDamage">
         <ValidatorArray value="TargetIsEnemy"/>
         <EditorCategories value="Race:Zerg"/>
-        <Amount value="200"/>
+        <Amount value="100"/>
         <Death value="Blast"/>
         <SearchFlags index="CallForHelp" value="1"/>
     </CEffectDamage>
@@ -1245,7 +1254,7 @@
         <ValidatorArray value="NotInvulnerable"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="DehakaDakrunThornsDamage" parent="DU_WEAP">
-        <Amount value="20"/>
+        <Amount value="10"/>
     </CEffectDamage>
     <CEffectDamage id="DakrunMelee">
         <Kind value="Melee"/>
@@ -1335,7 +1344,7 @@
         <TargetLocationType value="Point"/>
     </CEffectSet>
     <CEffectEnumArea id="DehakaGlevigFirebreathSearch">
-        <SearchFilters value="-;Player,Ally,Neutral,Missile,Item,Dead,Hidden,Invulnerable"/>
+        <SearchFilters value="Ground;Player,Ally,Neutral,Missile,Item,Dead,Hidden,Invulnerable"/>
         <AreaArray RectangleWidth="4" RectangleHeight="16" Effect="DehakaGlevigFirebreathDamage"/>
         <AreaRelativeOffset value="0,-8"/>
     </CEffectEnumArea>
@@ -1343,7 +1352,7 @@
         <EditorCategories value="Race:Zerg"/>
         <ResponseFlags index="Acquire" value="1"/>
         <ResponseFlags index="Flee" value="1"/>
-        <Amount value="50"/>
+        <Amount value="25"/>
         <Death value="Fire"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="YagdraFireballLaunchMissile">
@@ -1355,13 +1364,15 @@
         <EditorCategories value="Race:Zerg"/>
         <Flags index="Notification" value="1"/>
         <Death value="Fire"/>
-        <AreaArray Radius="1" Fraction="1"/>
+        <AreaArray Radius="0.4687" Fraction="1"/>
+        <AreaArray Radius="0.7812" Fraction="0.5"/>
+        <AreaArray Radius="1.25" Fraction="0.25"/>
         <Amount value="100"/>
         <ExcludeArray Value="Target"/>
         <SearchFilters value="-;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectDamage id="ImpalerDehakaTenderizeDamage">
-        <Amount value="20"/>
+        <Amount value="2"/>
         <Death value="Eviscerate"/>
         <ValidatorArray value="NotInvulnerable"/>
     </CEffectDamage>
@@ -1570,9 +1581,16 @@
         <TargetLocationType value="Point"/>
         <EffectArray value="DehakaLocustEggAnimation"/>
         <EffectArray value="DehakaCreeperCreateUnitA"/>
+        <EffectArray value="DehakaCreeperCreateUnitB"/>
+        <EffectArray value="DehakaCreeperCreateUnitC"/>
+    </CEffectSet>
+    <CEffectSet id="DehakaCreeperCreateUnitC">
+        <EditorCategories value="Race:Zerg"/>
         <EffectArray value="DehakaCreeperCreateUnitA"/>
         <EffectArray value="DehakaCreeperCreateUnitB"/>
-        <EffectArray value="DehakaCreeperCreateUnitB"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
     </CEffectSet>
     <CEffectCreateUnit id="DehakaCreeperCreateUnitA">
         <WhichLocation Value="CasterUnit"/>
@@ -1722,27 +1740,18 @@
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="DehakaGeneCarapaceAB">
         <Behavior value="DehakaGeneCarapace"/>
-        <Chance value="0.2"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="DehakaGeneAttackSpeedAB">
         <Behavior value="DehakaGeneAttackSpeed"/>
-        <Chance value="0.2"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="DehakaGeneLifeLeechAB">
         <Behavior value="DehakaGeneLifeLeech"/>
-        <Chance value="0.2"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="DehakaGene4CreepersAB">
         <Behavior value="DehakaGene4Creepers"/>
-        <Chance value="0.2"/>
     </CEffectApplyBehavior>
     <CEffectApplyBehavior id="DehakaGeneThornsAuraAB">
         <Behavior value="DehakaGeneThorns"/>
-        <Chance value="0.2"/>
-    </CEffectApplyBehavior>
-    <CEffectApplyBehavior id="DehakaGeneFrenziedAB">
-        <Behavior value="Frenzy"/>
-        <Chance value="0.2"/>
     </CEffectApplyBehavior>
     <CEffectSet id="DehakaGeneRavasaurMorphSet">
         <EffectArray value="PrimalUnitMergeFacing"/>
@@ -1774,26 +1783,41 @@
         <EffectArray value="DehakaGeneCarapaceAB"/>
         <EffectArray value="DehakaGeneAttackSpeedAB"/>
         <EffectArray value="DehakaGeneLifeLeechAB"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
     </CEffectSet>
     <CEffectSet id="DehakaGeneFireRoachGeneApplySet">
         <EffectArray value="DehakaGeneCarapaceAB"/>
         <EffectArray value="DehakaGeneAttackSpeedAB"/>
         <EffectArray value="DehakaGeneLifeLeechAB"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
     </CEffectSet>
     <CEffectSet id="DehakaGeneImpalerGeneApplySet">
         <EffectArray value="DehakaGeneCarapaceAB"/>
         <EffectArray value="DehakaGeneAttackSpeedAB"/>
         <EffectArray value="DehakaGeneLifeLeechAB"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
     </CEffectSet>
     <CEffectSet id="DehakaGeneCreeperHostGeneApplySet">
         <EffectArray value="DehakaGeneCarapaceAB"/>
         <EffectArray value="DehakaGene4CreepersAB"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
     </CEffectSet>
     <CEffectSet id="DehakaGeneTyrannosaurGeneApplySet">
         <EffectArray value="DehakaGeneCarapaceAB"/>
         <EffectArray value="DehakaGeneAttackSpeedAB"/>
         <EffectArray value="DehakaGeneThornsAuraAB"/>
         <EffectArray value="DehakaGeneLifeLeechAB"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
     </CEffectSet>
     <CEffectSwitch id="DehakaGeneThornsLMSwitch">
         <CaseArray Validator="IsHidden" Effect="DehakaGeneThornsSearch"/>
@@ -1812,7 +1836,7 @@
         <ValidatorArray value="NotInvulnerable"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="DehakaGeneThornsDamage" parent="DU_WEAP">
-        <Amount value="10"/>
+        <Amount value="6"/>
     </CEffectDamage>
     <CEffectSet id="DehakaGeneGuardianMorphSet">
         <EffectArray value="PrimalUnitMergeFacing"/>
@@ -1823,6 +1847,9 @@
         <EffectArray value="DehakaGeneCarapaceAB"/>
         <EffectArray value="DehakaGeneAttackSpeedAB"/>
         <EffectArray value="DehakaGeneLifeLeechAB"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
     </CEffectSet>
     <CEffectSet id="DehakaGeneMutaliskMorphSet">
         <EffectArray value="PrimalUnitMergeFacing"/>
@@ -1833,6 +1860,9 @@
         <EffectArray value="DehakaGeneCarapaceAB"/>
         <EffectArray value="DehakaGeneAttackSpeedAB"/>
         <EffectArray value="DehakaGeneLifeLeechAB"/>
+        <Random value="1"/>
+        <MinCount value="1"/>
+        <MaxCount value="1"/>
     </CEffectSet>
     <CEffectModifyUnit id="PrimalUnitMergeFacing">
         <FacingLocation Value="CasterUnit"/>
@@ -1941,7 +1971,7 @@
         <EffectArray value="DehakaTyrannozorFanOfKnivesDamage"/>
     </CEffectSet>
     <CEffectDamage id="DehakaTyrannozorFanOfKnivesDamage">
-        <Amount value="100"/>
+        <Amount value="50"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectEnumArea id="DehakaTyrannozorArmorAuraSearch">
@@ -1989,7 +2019,7 @@
     </CEffectEnumArea>
     <CEffectDamage id="DehakaKaiserBladesLevel3Damage" parent="DU_WEAP">
         <EditorCategories value="Race:Zerg"/>
-        <Amount value="35"/>
+        <Amount value="50"/>
         <Death value="Eviscerate"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="ImpalerDehakaLM">
@@ -2011,7 +2041,7 @@
         <ImpactLocation Value="TargetUnit"/>
         <ArmorReduction value="1"/>
         <AttributeBonus index="Armored" value="20"/>
-        <Amount value="40"/>
+        <Amount value="30"/>
         <Death value="Blast"/>
         <Kind value="Ranged"/>
         <Flags index="Notification" value="1"/>
@@ -2026,6 +2056,7 @@
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="DehakaMutaliskLevel3GlaiveWurmFirstSet"/>
         <AmmoUnit value="DehakaMutaliskLevel3GlaiveWurmAttack1Missile"/>
+        <LaunchEffect value="DehakaMutaliskAttackingAB"/>
     </CEffectLaunchMissile>
     <CEffectSet id="DehakaMutaliskLevel3GlaiveWurmFirstSet">
         <EditorCategories value="Race:Zerg"/>
@@ -2112,6 +2143,7 @@
         <EditorCategories value="Race:Terran"/>
         <ImpactEffect value="DehakaMutaliskAirLevel3GlaiveWurmFirstSet"/>
         <AmmoUnit value="DehakaMutaliskAirLevel3GlaiveWurmAttack1Missile"/>
+        <LaunchEffect value="DehakaMutaliskAttackingAB"/>
     </CEffectLaunchMissile>
     <CEffectSet id="DehakaMutaliskAirLevel3GlaiveWurmFirstSet">
         <EditorCategories value="Race:Zerg"/>
@@ -2246,7 +2278,7 @@
     <CEffectDamage id="DehakaGuardianMineChargeExplodeDamage" parent="DU_WEAP_SPLASH">
         <EditorCategories value="Race:PrimalZerg"/>
         <Kind value="Spell"/>
-        <Amount value="50"/>
+        <Amount value="30"/>
         <Death value="Blast"/>
         <ArmorReduction value="0"/>
         <ValidatorArray value="IsNotPhasedUnit"/>
@@ -2400,7 +2432,7 @@
     <CEffectDamage id="DehakaAcidSporesDamage" parent="DU_WEAP_MISSILE">
         <EditorCategories value="Race:Zerg"/>
         <Visibility value="Visible"/>
-        <Amount value="35"/>
+        <Amount value="30"/>
         <Death value="Disintegrate"/>
     </CEffectDamage>
     <CEffectSet id="DehakaAcidSporesLaunchMissileSet">
@@ -2468,7 +2500,7 @@
         <Flags index="Notification" value="1"/>
         <Death value="Fire"/>
         <SearchFlags index="CallForHelp" value="1"/>
-        <Amount value="25"/>
+        <Amount value="30"/>
         <ValidatorArray value="WeaponInRange"/>
     </CEffectDamage>
     <CEffectLaunchMissile id="DehakaRoachLevel2LM">
@@ -2526,7 +2558,7 @@
     </CEffectSet>
     <CEffectDamage id="NydusDestroyerBeamDamage" parent="DU_WEAP">
         <EditorCategories value="Race:PrimalZerg"/>
-        <Amount value="25"/>
+        <Amount value="16"/>
         <Kind value="Spell"/>
         <Death value="Disintegrate"/>
         <ImpactLocation Value="TargetUnit"/>
@@ -2545,6 +2577,7 @@
         <CreateFlags index="UseFood" value="0"/>
         <SpawnEffect value="NydusDestroyerDeepTunnelTeleportSet"/>
         <SpawnUnit value="NydusDestroyerDeepTunnelPlacement"/>
+        <ValidatorArray value="PrimalHatcheryInRadius10"/>
     </CEffectCreateUnit>
     <CEffectSet id="NydusDestroyerDeepTunnelTeleportSet">
         <EffectArray value="NydusDestroyerDeepTunnelSuppressDetectionAB"/>
@@ -2571,7 +2604,7 @@
     </CEffectLaunchMissile>
     <CEffectDamage id="DehakaNydusDestroyerDamage">
         <EditorCategories value="Race:PrimalZerg"/>
-        <Amount value="50"/>
+        <Amount value="40"/>
         <Death value="Disintegrate"/>
     </CEffectDamage>
     <CEffectCreatePersistent id="GravitonBeam">
@@ -2637,7 +2670,6 @@
         <SpawnRange value="1.5"/>
     </CEffectCreateUnit>
     <CEffectSet id="DehakaDakrunTopBarSpawnSet">
-        <EffectArray value="DakrunSpawningTargetSearch"/>
         <EffectArray value="DehakaDakrunSpawnMP"/>
     </CEffectSet>
     <CEffectEnumArea id="DakrunSpawningTargetSearch">
@@ -2664,12 +2696,7 @@
         <SpawnUnit value="DehakaGlevig"/>
     </CEffectCreateUnit>
     <CEffectSet id="DehakaGlevigTopBarInitialSet">
-        <EffectArray value="GlevigKnockbackSearch"/>
-        <EffectArray value="DehakaGlevigEggSpawnHydraliskCU"/>
-        <EffectArray value="DehakaGlevigEggSpawnRoachCU"/>
-        <EffectArray value="DehakaGlevigEggSpawnZerglingCU"/>
         <EffectArray value="DehakaGlevigSpawnMP"/>
-        <TargetLocationType value="Point"/>
     </CEffectSet>
     <CEffectCreateUnit id="DehakaGlevigEggSpawnZerglingCU">
         <WhichLocation Value="TargetPoint"/>

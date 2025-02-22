@@ -11,7 +11,7 @@
     <CWeaponLegacy id="DehakaCoopAirBeam">
         <EditorCategories value="Race:Zerg"/>
         <Icon value="Assets\Textures\btn-ability-zerg-dehaka-mammothbreath.dds"/>
-        <DisplayEffect value="DehakaCoopAirDamage"/>
+        <DisplayEffect value="MammothBeamCP"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <AcquireCliffLevelRange value="-1,1"/>
         <Range value="6"/>
@@ -327,8 +327,8 @@
         <Icon value="Assets\Textures\BTN-Upgrade-Dehaka-MissileAttacks-Level0.dds"/>
         <DisplayEffect value="DehakaRavasaurDamage"/>
         <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <MinScanRange value="7.5"/>
-        <Range value="7"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
         <Period value="1.5"/>
         <Effect value="DehakaRavasaurLM"/>
     </CWeaponLegacy>

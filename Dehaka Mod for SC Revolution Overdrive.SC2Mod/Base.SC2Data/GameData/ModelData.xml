@@ -84,6 +84,10 @@
         <Model value="Assets\Effects\Zerg\Dehaka_MammothBreath\Dehaka_MammothBreath.m3"/>
         <EditorCategories value="Race:PrimalZerg"/>
     </CModel>
+    <CModel id="UnloadFX2" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\UnloadFX\UnloadFX.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
     <CModel id="ZergAOEStrechLine_Zerg_NoColor_Start" parent="UI">
         <Model value="Assets/UI/Cursors/ZergAOEStrechLine_Zerg_NoColor_Start/ZergAOEStrechLine_Zerg_NoColor_Start.m3"/>
     </CModel>
@@ -5485,6 +5489,18 @@
             <Payload value="PrimalEgg_DeathExplosion"/>
         </Events>
     </CModel>
+    <CModel id="DehakaTrainEggOverlord" parent="RacePersistentSpellFX" Race="Zerg">
+        <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
+        <SelectionLayer value="2"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalEgg_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.843000"/>
+            <Payload value="PrimalEgg_DeathExplosion"/>
+        </Events>
+    </CModel>
     <CModel id="DehakaTrainEggZergling" parent="RacePersistentSpellFX" Race="Zerg">
         <Model value="Assets\Units\Zerg\Primal_Egg_Coop\Primal_Egg_Coop.m3"/>
         <SelectionLayer value="2"/>
@@ -6192,6 +6208,56 @@
     </CModel>
     <CModel id="ImpalerMissileGroundCracks" parent="ImpactFX">
         <Model value="Assets\Effects\Zerg\PrimalLurkerMissile\PrimalLurkerMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="DehakaTownHallWeaponAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Zerg\PrimalTownHallMissileImpact\PrimalTownHallMissileImpact.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="PrimalTownHall_Attk_Impact"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="PrimalTownHall_Attk_Impact"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaTownHallWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Zerg\PrimalTownHallMissile\PrimalTownHallMissile.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="PrimalZergUnloadLaunch" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Zerg\ZergUnloadLaunch\ZergUnloadLaunch.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CModel>
+    <CModel id="DehakaZerglingLevel2MergeEgg" parent="PersistentSpellFX">
+        <Model value="Assets\Units\Zerg\DehakaEgg_Coop\DehakaEgg_Coop.m3"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <Events>
+            <Anim value="Birth,00"/>
+            <Name value="DehakaZergling_Merge_EggBirth"/>
+            <Type value="Sound"/>
+            <Time value="0.003000"/>
+            <Payload value="DehakaZergling_Merge_EggBirth"/>
+        </Events>
+    </CModel>
+    <CModel id="DehakaZerglingLevel2MergeEggDeath" parent="PersistentSpellFX">
+        <Model value="Assets\Units\Zerg\DehakaEgg_Coop_Death\DehakaEgg_Coop_Death.m3"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="DehakaZergling_Merge_EggDeath"/>
+            <Type value="Sound"/>
+            <Time value="0.006000"/>
+            <Payload value="DehakaZergling_Merge_EggDeath"/>
+        </Events>
+        <LowQualityModel value="ZergSmallUnitDeathLow"/>
+    </CModel>
+    <CModel id="DehakaMutaliskDamageReductionGlow" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Zerg\Primal_Mutalisk_Coop_LessDamage\Primal_Mutalisk_Coop_LessDamage.m3"/>
         <EditorCategories value="Race:Zerg"/>
     </CModel>
 </Catalog>

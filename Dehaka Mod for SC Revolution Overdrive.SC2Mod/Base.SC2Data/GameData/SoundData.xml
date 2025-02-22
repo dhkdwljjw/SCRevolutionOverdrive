@@ -94,6 +94,79 @@
         <Pitch value="-2.000000,2.000000"/>
         <Volume value="-2.000000,2.000000"/>
     </CSound>
+    <CSound id="PrimalOverlord_Death" parent="Death">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Death0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Death1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Death2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Death3.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Death4.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Death5.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Death6.wav"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="PrimalOverlord_Load" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Load0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Load1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Load2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Load3.wav"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="PrimalOverlord_Pissed" parent="Pissed">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What1.ogg"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="PrimalOverlord_Ready" parent="Ready">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Ready0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Ready1.ogg"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="PrimalOverlord_Unload" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Unload0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Unload1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Unload2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Unload3.wav"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
+    <CSound id="PrimalOverlord_What" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What4.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What5.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What6.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What7.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_What8.ogg"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="PrimalOverlord_Yes" parent="Voice">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes0.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes1.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes2.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes3.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes4.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes5.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes6.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes7.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes8.ogg"/>
+        <AssetArray File="Assets\Sounds\Zerg\Overlord\Overlord_Yes9.ogg"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
     <CSound id="Spell_Drag_Impact" parent="Spell">
         <EditorCategories value="Race:Zerg"/>
         <AssetArray File="Assets\Sounds\Spell_Yoink_Impact_00.wav" FacialGroup=""/>
@@ -4623,5 +4696,38 @@
         <Pitch value="5.000000,7.000000"/>
         <Volume value="-16.000000,-13.000000"/>
         <ResourcePriority value="64"/>
+    </CSound>
+    <CSound id="PrimalTownHall_Attk" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Attack_A.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Attack_A1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Attack_B.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Attack_B1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Attack_C.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Attack_C1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Attack_D.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Attack_D1.wav" FacialGroup=""/>
+        <Pitch value="-4.000000,0.000000"/>
+        <Volume value="-2.000000,0.000000"/>
+    </CSound>
+    <CSound id="PrimalTownHall_Attk_Impact" parent="Combat">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Att_Impact_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Att_Impact_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Att_Impact_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\PrimalTownHall_Att_Impact_4.wav" FacialGroup=""/>
+        <Pitch value="-6.000000,-1.000000"/>
+        <Volume value="-2.000000,2.000000"/>
+    </CSound>
+    <CSound id="PrimalZergling_AttackImpact" parent="Zerg_AttackImpactSmallPierce"/>
+    <CSound id="PrimalZergling_AttackLaunch" parent="Combat">
+        <DupeDestroyCount value="5"/>
+        <Pitch value="0.000000,3.000000"/>
+        <Volume value="-19.000000,-18.000000"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing0.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing1.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing2.wav"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffects\Attacks\Zerg_AttackLaunchSmallSwing3.wav"/>
+        <EditorCategories value="Race:Zerg"/>
     </CSound>
 </Catalog>

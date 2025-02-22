@@ -9,10 +9,36 @@
         <WhichUnit Effect="DehakaConsumeLaunchMissile"/>
         <Filters value="-;Dead"/>
     </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="DehakaMutaliskNotAttacking">
+        <Behavior value="DehakaMutaliskAttacking"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareField id="DisguiseAsPrimalZergling">
+        <Field value="Race"/>
+        <Value value="PZrg"/>
+    </CValidatorUnitCompareField>
+    <CValidatorCombine id="DisguiseAsPrimalZerglingWithWings">
+        <Type value="And"/>
+        <CombineArray value="DisguiseAsPrimalZergling"/>
+        <CombineArray value="HasPrimalZerglingWingsUpgrade"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="DisguiseAsPrimalZerglingWithoutWings">
+        <Type value="And"/>
+        <CombineArray value="DisguiseAsPrimalZergling"/>
+        <CombineArray value="MissingPrimalZerglingWingsUpgrade"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="HasPrimalZerglingWingsUpgrade">
+        <WhichPlayer Value="Target"/>
+        <Find value="1"/>
+        <Value value="HavePrimalZerglingMovementSpeed"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="HaveDehakaExtractor">
         <Value value="1"/>
         <Behavior value="DehakaExtractor"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="MissingPrimalZerglingWingsUpgrade">
+        <WhichPlayer Value="Target"/>
+        <Value value="HavePrimalZerglingMovementSpeed"/>
+    </CValidatorPlayerRequirement>
     <CValidatorUnitCompareBehaviorCount id="NotHaveDehakaExtractor">
         <Behavior value="DehakaExtractor"/>
     </CValidatorUnitCompareBehaviorCount>
@@ -28,18 +54,14 @@
     <CValidatorUnitType id="IsDehakaDenCoop">
         <Value value="DehakaCoopReviveCocoon"/>
     </CValidatorUnitType>
-    <CValidatorUnitCompareVitality id="LifeLessThan600">
+    <CValidatorUnitCompareVitality id="LifeLessThan500">
+        <ResultFailed value="CantTargetThatUnit,Text/TargetLifeMoreThan500"/>
         <Compare value="LE"/>
-        <Value value="600"/>
+        <Value value="500"/>
     </CValidatorUnitCompareVitality>
     <CValidatorUnitCompareBehaviorCount id="NoDehakaPrimalMutation">
         <Behavior value="DehakaPrimalMutation"/>
     </CValidatorUnitCompareBehaviorCount>
-    <CValidatorCombine id="NotHeroicOrLifeLessThan600">
-        <ResultFailed value="CantTargetThatUnit,Error/NotHeroicOrLifeLessThan600"/>
-        <CombineArray value="NotHeroic"/>
-        <CombineArray value="LifeLessThan600"/>
-    </CValidatorCombine>
     <CValidatorUnitAbil id="TargetCanBeConsumed">
         <Find value="1"/>
         <AbilLink value="DehakaCoopReviveEat"/>
@@ -319,4 +341,36 @@
         <Compare value="GE"/>
         <Value value="1"/>
     </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="PrimalHatcheryInRadius10">
+        <AreaArray>
+            <Compare value="GT"/>
+            <Count value="0"/>
+            <Radius value="10"/>
+            <Validator value="IsPrimalHatchery"/>
+        </AreaArray>
+        <SearchFilters value="Visible;Ally,Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Invulnerable"/>
+        <ResultFailed value="TargetIsOutOfRange,Error/TargetMustBeNearInPrimalHatchery"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitType id="IsPrimalHatchery">
+        <Value value="DehakaHatchery"/>
+    </CValidatorUnitType>
+    <CValidatorPlayerRequirement id="PrimalZerglingUpgraded">
+        <Find value="1"/>
+        <Value value="HavePrimalZerglingMovementSpeed"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="PrimalZerglingUpgradedDeathByAcid">
+        <Type value="And"/>
+        <CombineArray value="PrimalZerglingUpgraded"/>
+        <CombineArray value="DeathByAcid"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PrimalZerglingUpgradedDeathByEviscerate">
+        <Type value="And"/>
+        <CombineArray value="PrimalZerglingUpgraded"/>
+        <CombineArray value="DeathByEviscerate"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PrimalZerglingUpgradedDeathByFire">
+        <Type value="And"/>
+        <CombineArray value="PrimalZerglingUpgraded"/>
+        <CombineArray value="DeathByFire"/>
+    </CValidatorCombine>
 </Catalog>

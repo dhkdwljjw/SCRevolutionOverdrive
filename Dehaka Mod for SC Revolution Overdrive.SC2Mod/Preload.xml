@@ -2,6 +2,7 @@
 <Preload>
 <Abil id="DehakaLearn"/>
 <Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="TransportingHeroicUnit"/>
 <Behavior id="EssenceTravelling"/>
 <Behavior id="EssenceBuff1"/>
 <Behavior id="EssenceBuff10"/>

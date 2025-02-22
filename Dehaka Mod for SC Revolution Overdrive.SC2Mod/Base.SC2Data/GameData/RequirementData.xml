@@ -105,6 +105,10 @@
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
         <NodeArray index="Use" Link="CountUpgradeDehakaRoachMoveSpeedCompleteOnly450217508"/>
     </CRequirement>
+    <CRequirement id="HaveGeneMutation">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeGeneMutationCompleteOnly"/>
+    </CRequirement>
     <CRequirement id="HaveMurvarStructure">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
         <NodeArray index="Use" Link="CountUnitDehakaMurvarStructureCompleteOnly"/>
@@ -112,6 +116,14 @@
     <CRequirement id="HaveDehakaBurrow">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
         <NodeArray index="Use" Link="CountUpgradeDehakaBurrowResearchCompleteOnly829393666"/>
+    </CRequirement>
+    <CRequirement id="HaveOverlordTransport">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradePrimalOverlordTransportCompleteOnly3569173534"/>
+    </CRequirement>
+    <CRequirement id="HavePrimalZerglingMovementSpeed">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeprimalzerglingmovementspeedCompleteOnly"/>
     </CRequirement>
     <CRequirement id="LearnDehakaGlevigRoachFireBreath">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
@@ -164,6 +176,25 @@
     <CRequirement id="LearnDehakaBurrow">
         <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
         <NodeArray index="Show" Link="NotCountUpgradeDehakaBurrowResearchQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnGeneMutation">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeGeneMutationQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnOverlordSpeed">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitDehakaGlevigStructureCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradePrimalOverlordSpeedQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnOverlordTransport">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitDehakaGlevigStructureCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradePrimalOverlordTransportQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPrimalZerglingMovementSpeed">
+        <EditorCategories value="Race:PrimalZerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="Or2498476098CountUnitDehakaBarracksCompleteOnlyCountUnitDehakaBarracksUprootedCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeprimalzerglingmovementspeedQueuedOrBetter"/>
     </CRequirement>
     <CRequirement id="MurvarLairCheck">
         <EditorCategories value="Race:PrimalZerg,TechType:Unit"/>

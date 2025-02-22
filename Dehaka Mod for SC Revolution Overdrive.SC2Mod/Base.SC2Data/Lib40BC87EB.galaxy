@@ -22,11 +22,11 @@ void lib40BC87EB_InitVariables () {
 
     lib40BC87EB_InitVariables_completed = true;
 
-    for (init_i = 0; init_i <= 15; init_i += 1) {
+    for (init_i = 0; init_i <= 17; init_i += 1) {
         lib40BC87EB_gv_cM_DehakaVeterencyBehavior[init_i] = "DehakaVeterancyCoopFinal";
     }
     lib40BC87EB_gv_cM_Dehaka_EssenceAttribute = "DehakaAttEssence";
-    lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor = 0.1;
+    lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor = 1.0;
     lib40BC87EB_gv_c_DehakaConsumeCooldownFilter = UnitFilter(0, 0, (1 << c_targetFilterPlayer) | (1 << c_targetFilterAlly) | (1 << c_targetFilterNeutral), 0);
     lib40BC87EB_gv_dataDehakaLearnAbilCmdLink = AbilityCommand("DehakaLearn", 255);
 }
@@ -196,31 +196,6 @@ void lib40BC87EB_gf_CM_Dehaka_EssenceMerge (unit lp_essenceUnit, int lp_essenceU
 
 }
 
-void lib40BC87EB_gf_CM_DehakaConsumeFloatText (text lp_text, int lp_p, point lp_loc) {
-    // Automatic Variable Declarations
-    // Implementation
-    TextTagCreate(lp_text, 24, lp_loc, 4.0, true, false, PlayerGroupSingle(lp_p));
-    TextTagSetVelocity(TextTagLastCreated(), 1.0, 90.0);
-    TextTagSetTime(TextTagLastCreated(), c_textTagTimeDuration, 5.0);
-    TextTagSetTime(TextTagLastCreated(), c_textTagTimeFadeOut, 2.0);
-    TextTagSetColor(TextTagLastCreated(), c_textTagColorText, Color(100.00, 100.00, 100.00));
-}
-
-void lib40BC87EB_gf_CM_DehakaConsumeUpdatePsiExplodeDamage (int lp_dehakaPlayer, unit lp_dehakaUnit, fixed lp_weaponDamage) {
-    // Variable Declarations
-    fixed lv_weaponDamageScalar;
-    fixed lv_totalDamage;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-    lv_weaponDamageScalar = 2.0;
-    lv_totalDamage = (lp_weaponDamage * lv_weaponDamageScalar);
-
-    // Implementation
-    CatalogFieldValueSet(c_gameCatalogEffect, lib40BC87EB_gv_c_DehakaConsumeEffectPsiExplodeWeaponDmgLink, "Amount", lp_dehakaPlayer, FixedToString(lv_totalDamage, c_fixedPrecisionAny));
-    libNtve_gf_CatalogFieldValueModifyBasedOnDefaultValue(c_gameCatalogEffect, "DehakaConsumeEffectPsionicSearch", "AreaArray[" + IntToString(0) + "].Radius", lp_dehakaPlayer, UnitGetPropertyFixed(lp_dehakaUnit, c_unitPropRadius, c_unitPropCurrent), c_upgradeOperationAdd);
-}
-
 trigger auto_lib40BC87EB_gf_CM_HeroHandleDeath_Trigger = null;
 int auto_lib40BC87EB_gf_CM_HeroHandleDeath_lp_player;
 
@@ -353,7 +328,7 @@ bool lib40BC87EB_gt_CM_Dehaka_TriggersInit_Func (bool testConds, bool runActions
         return true;
     }
 
-    autoB54F0749_g = PlayerGroupAll();
+    autoB54F0749_g = PlayerGroupActive();
     autoB54F0749_var = -1;
     while (true) {
         autoB54F0749_var = PlayerGroupNextPlayer(autoB54F0749_g, autoB54F0749_var);
@@ -363,7 +338,6 @@ bool lib40BC87EB_gt_CM_Dehaka_TriggersInit_Func (bool testConds, bool runActions
             PlayerSetCommander(autoB54F0749_var, "DehakaConsole");
             PlayerSetDifficulty(autoB54F0749_var, 0);
             PlayerApplySkin(autoB54F0749_var, "DehakaPrimal", true);
-            PlayerModifyPropertyInt(autoB54F0749_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, 200);
         }
 
     }
@@ -382,13 +356,14 @@ bool lib40BC87EB_gt_CM_Dehaka_TriggersInit_Func (bool testConds, bool runActions
         TriggerEnable(lib40BC87EB_gt_CM_Dehaka_UnitCostRefund, true);
         TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe, true);
         TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeExecuted, true);
-        TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic, true);
         TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe, true);
         TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2, true);
         TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3, true);
         TriggerEnable(lib40BC87EB_gt_CM_DehakaMutaliskReviveCooldownOn, true);
         TriggerEnable(lib40BC87EB_gt_CM_Dehaka_Calldown_Boss, true);
         TriggerEnable(lib40BC87EB_gt_CM_Dehaka_Summon_Boss, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LoadingHero, true);
+        TriggerEnable(lib40BC87EB_gt_CM_Dehaka_UnloadingHero, true);
         TriggerEnable(lib40BC87EB_gt_DehakaBossFacing, true);
         TriggerEnable(lib40BC87EB_gt_DehakaMammothBreathLootAtStart, true);
         TriggerEnable(lib40BC87EB_gt_DehakaMammothBreathLootAtStop, true);
@@ -459,6 +434,10 @@ bool lib40BC87EB_gt_CM_Dehaka_EssenceDrop_Func (bool testConds, bool runActions)
     // Conditions
     if (testConds) {
         if (!((libNtve_gf_KillingPlayer() != c_playerAny))) {
+            return false;
+        }
+
+        if (!((lib40BC87EB_gv_cM_HeroReviver[libNtve_gf_KillingPlayer()] != null))) {
             return false;
         }
 
@@ -559,6 +538,10 @@ bool lib40BC87EB_gt_CM_Dehaka_EssenceDropBaneling_Func (bool testConds, bool run
         }
 
         if (!(((UnitGetType(EventUnit()) == "Baneling") || (UnitGetType(EventUnit()) == "BanelingBurrowed")))) {
+            return false;
+        }
+
+        if (!((lib40BC87EB_gv_cM_HeroReviver[libNtve_gf_KillingPlayer()] != null))) {
             return false;
         }
 
@@ -867,6 +850,62 @@ void lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_LoadingHero
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_LoadingHero_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitTypeTestAttribute(UnitGetType(EventUnitCargo()), c_unitAttributeHeroic) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAdd(EventUnit(), "TransportingHeroicUnit", EventUnit(), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_LoadingHero_Init () {
+    lib40BC87EB_gt_CM_Dehaka_LoadingHero = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_LoadingHero_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_LoadingHero, false);
+    TriggerAddEventUnitCargo(lib40BC87EB_gt_CM_Dehaka_LoadingHero, null, true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: CM_Dehaka_UnloadingHero
+//--------------------------------------------------------------------------------------------------
+bool lib40BC87EB_gt_CM_Dehaka_UnloadingHero_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGroupCount(UnitGroupFilter(null, c_playerAny, UnitCargoGroup(EventUnit()), UnitFilter((1 << c_targetFilterHeroic), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterStasis - 32)) | (1 << (c_targetFilterDead - 32))), 0), c_unitCountAlive) == 0))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorRemove(EventUnit(), "TransportingHeroicUnit", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib40BC87EB_gt_CM_Dehaka_UnloadingHero_Init () {
+    lib40BC87EB_gt_CM_Dehaka_UnloadingHero = TriggerCreate("lib40BC87EB_gt_CM_Dehaka_UnloadingHero_Func");
+    TriggerEnable(lib40BC87EB_gt_CM_Dehaka_UnloadingHero, false);
+    TriggerAddEventUnitCargo(lib40BC87EB_gt_CM_Dehaka_UnloadingHero, null, false);
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: CM_Dehaka_Calldown_Boss
 //--------------------------------------------------------------------------------------------------
 bool lib40BC87EB_gt_CM_Dehaka_Calldown_Boss_Func (bool testConds, bool runActions) {
@@ -954,16 +993,11 @@ bool lib40BC87EB_gt_CM_DehakaConsumeExecuted_Func (bool testConds, bool runActio
 
     UnitBehaviorRemove(lv_dehakaUnit, lib40BC87EB_gv_c_DehakaConsumeBehaviorDisable, 1);
     if ((UnitHasBehavior2(lv_targetUnit, "ImpalerDehakaTenderize") == true)) {
-        lv_cooldownModifier = 0.25;
+        lv_cooldownModifier = 0.5;
     }
 
     if ((UnitFilterMatch(lv_targetUnit, lv_dehakaPlayer, lib40BC87EB_gv_c_DehakaConsumeCooldownFilter) == true)) {
-        if ((lv_targetLife >= 600.0)) {
-            UnitAbilityAddCooldown(lv_dehakaUnit, lib40BC87EB_gv_c_DehakaConsumeAbil, lib40BC87EB_gv_c_DehakaConsumeCooldownLink, ((600.0 * lv_cooldownModifier) * lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor));
-        }
-        else {
-            UnitAbilityAddCooldown(lv_dehakaUnit, lib40BC87EB_gv_c_DehakaConsumeAbil, lib40BC87EB_gv_c_DehakaConsumeCooldownLink, ((lv_targetLife * lv_cooldownModifier) * lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor));
-        }
+        UnitAbilityAddCooldown(lv_dehakaUnit, lib40BC87EB_gv_c_DehakaConsumeAbil, lib40BC87EB_gv_c_DehakaConsumeCooldownLink, ((120.0 * lv_cooldownModifier) * lib40BC87EB_gv_c_DehakaConsumeLifeCooldownFactor));
     }
 
     auto9974C740_ae = lv_c;
@@ -1070,38 +1104,6 @@ void lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: CM_DehakaConsumeEffectHeroic
-//--------------------------------------------------------------------------------------------------
-bool lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic_Func (bool testConds, bool runActions) {
-    // Variable Declarations
-    point lv_point;
-    int lv_amount;
-    int lv_p;
-
-    // Automatic Variable Declarations
-    // Variable Initialization
-    lv_point = EventPlayerEffectUsedPoint(c_effectLocationCasterUnit);
-    lv_amount = lib40BC87EB_gv_c_DehakaConsumeEffectHeroicEssenceAmount;
-    lv_p = EventPlayerEffectUsedUnitOwner(c_effectPlayerCaster);
-
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    libNtve_gf_CreateUnitsWithDefaultFacing(1, "EssencePickup", c_unitCreateIgnorePlacement, lv_p, lv_point);
-    lib40BC87EB_gf_CM_Dehaka_EssenceSetStack(UnitLastCreated(), lv_amount);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic_Init () {
-    lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic = TriggerCreate("lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic_Func");
-    TriggerEnable(lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic, false);
-    TriggerAddEventPlayerEffectUsed(lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic, c_playerAny, lib40BC87EB_gv_c_DehakaConsumeEffectHeroicLink);
-}
-
-//--------------------------------------------------------------------------------------------------
 // Trigger: CM_DehakaConsumeLearnLevel2
 //--------------------------------------------------------------------------------------------------
 bool lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2_Func (bool testConds, bool runActions) {
@@ -1135,7 +1137,6 @@ bool lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2_Func (bool testConds, bool runAc
     CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectAir", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
     CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectArmored", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
     CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectDetector", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
-    CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectHeroic", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
     CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectLight", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
     CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectMassive", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
     CatalogFieldValueModify(c_gameCatalogBehavior, "DehakaConsumeEffectMechanical", "Duration", EventPlayer(), FixedToString(lv_durationModifier, 2), c_upgradeOperationMultiply);
@@ -1636,12 +1637,13 @@ void lib40BC87EB_InitTriggers () {
     lib40BC87EB_gt_CM_Dehaka_LevelUp_Stun_Off_Init();
     lib40BC87EB_gt_CM_Dehaka_LevelUp_LearnOrder_Init();
     lib40BC87EB_gt_CM_Dehaka_UnitCostRefund_Init();
+    lib40BC87EB_gt_CM_Dehaka_LoadingHero_Init();
+    lib40BC87EB_gt_CM_Dehaka_UnloadingHero_Init();
     lib40BC87EB_gt_CM_Dehaka_Calldown_Boss_Init();
     lib40BC87EB_gt_CM_Dehaka_Summon_Boss_Init();
     lib40BC87EB_gt_CM_DehakaConsumeExecuted_Init();
     lib40BC87EB_gt_CM_DehakaConsumeDetachFailSafe_Init();
     lib40BC87EB_gt_CM_DehakaConsumeLaunchFailSafe_Init();
-    lib40BC87EB_gt_CM_DehakaConsumeEffectHeroic_Init();
     lib40BC87EB_gt_CM_DehakaConsumeLearnLevel2_Init();
     lib40BC87EB_gt_CM_DehakaConsumeLearnLevel3_Init();
     lib40BC87EB_gt_DehakaBossFacing_Init();

@@ -16,11 +16,11 @@
         <Operation value="Multiply"/>
     </CAccumulatorArithmetic>
     <CAccumulatorConstant id="DehakaLeapStompDamageBonus">
-        <Amount value="25"/>
+        <Amount value="10"/>
     </CAccumulatorConstant>
     <CAccumulatorAbilLevel id="DehakaLeapStompLevelDamageFactor">
+        <Amount value="0.25"/>
         <Amount value="0.5"/>
-        <Amount value="0.75"/>
     </CAccumulatorAbilLevel>
     <CAccumulatorVeterancyLevel id="DehakaLeapStompRadiusBonus">
         <MinAccumulation value="0"/>
@@ -30,9 +30,9 @@
     </CAccumulatorVeterancyLevel>
     <CAccumulatorVeterancyLevel id="DehakaLevelAttackDamageScaling">
         <MinAccumulation value="0"/>
-        <Amount value="10"/>
+        <Amount value="8"/>
         <PreviousValueFactor value="1"/>
-        <BonusPerLevel value="10"/>
+        <BonusPerLevel value="8"/>
     </CAccumulatorVeterancyLevel>
     <CAccumulatorConstant id="DehakaLevelMammothBeamDamageFactor">
         <ApplicationRule value="Multiply"/>
@@ -40,6 +40,6 @@
     </CAccumulatorConstant>
     <CAccumulatorConstant id="DehakaLevelPsiExplodeDamageFactor">
         <ApplicationRule value="Multiply"/>
-        <Amount value="2"/>
+        <Amount value="0.5"/>
     </CAccumulatorConstant>
 </Catalog>

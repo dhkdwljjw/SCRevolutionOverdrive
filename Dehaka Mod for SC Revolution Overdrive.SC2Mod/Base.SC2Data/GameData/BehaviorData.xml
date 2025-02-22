@@ -15,6 +15,11 @@
         <Duration value="2.3"/>
         <DurationRandomMax value="0.5"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="DehakaMutaliskAttacking">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="ImpalerMissileGroundCracks">
         <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
         <Period value="0.1"/>
@@ -46,7 +51,7 @@
     <CBehaviorBuff id="DehakaConsumeEffectArmored" parent="DehakaConsumeEffectBase">
         <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-MoreArmorDamage.dds"/>
         <Modification>
-            <DamageDealtAttributeMultiplier index="Armored" value="0.3"/>
+            <DamageDealtAttributeMultiplier index="Armored" value="0.2"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaConsumeEffectBiological" parent="DehakaConsumeEffectBase">
@@ -57,11 +62,10 @@
         <BehaviorCategories index="User14" value="1"/>
         <Modification Detect="11" DetectFilters="-;Missile"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="DehakaConsumeEffectHeroic" parent="DehakaConsumeEffectBase"/>
     <CBehaviorBuff id="DehakaConsumeEffectLight" parent="DehakaConsumeEffectBase">
         <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-SpeedBoost.dds"/>
         <Modification>
-            <AdditiveMoveSpeedFactor value="0.3"/>
+            <AdditiveMoveSpeedFactor value="0.2"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaConsumeEffectMassive" parent="DehakaConsumeEffectBase">
@@ -77,13 +81,13 @@
         <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-AttackSpeed.dds"/>
         <BehaviorCategories index="Fast" value="1"/>
         <Modification>
-            <AdditiveAttackSpeedFactor value="0.3"/>
+            <AdditiveAttackSpeedFactor value="0.2"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaConsumeEffectPsionic" parent="DehakaConsumeEffectBase">
         <InfoIcon value="Assets\Textures\BTN-Ability-Dehaka-Psionic.dds"/>
         <Modification>
-            <RateMultiplierArray index="Cooldown" value="2"/>
+            <RateMultiplierArray index="Cooldown" value="1.5"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaConsumePrecursor">
@@ -199,7 +203,7 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\fear_coop.dds"/>
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
-        <Duration value="15"/>
+        <Duration value="6"/>
         <Modification>
             <AdditiveMoveSpeedFactor value="-0.75"/>
             <AdditiveAttackSpeedFactor value="-0.25"/>
@@ -209,7 +213,7 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\fear_coop.dds"/>
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
-        <Duration value="15"/>
+        <Duration value="6"/>
         <Modification>
             <StateFlags index="SuppressEnergy" value="1"/>
             <AdditiveMoveSpeedFactor value="-0.75"/>
@@ -220,7 +224,7 @@
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\fear_coop.dds"/>
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
-        <Duration value="15"/>
+        <Duration value="6"/>
         <Modification>
             <StateFlags index="SuppressEnergy" value="1"/>
             <AdditiveMoveSpeedFactor value="-0.75"/>
@@ -271,7 +275,7 @@
         <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
         <MaxPoints value="65535"/>
         <Modification>
-            <VitalMaxArray index="Life" value="0.75"/>
+            <VitalMaxArray index="Life" value="0.6"/>
         </Modification>
     </CBehaviorAttribute>
     <CBehaviorBuff id="DehakaAirUnkillable">
@@ -358,6 +362,13 @@
             <StateFlags index="SuppressAttack" value="1"/>
             <StateFlags index="SuppressEnergy" value="1"/>
             <AbilClassDisableArray index="CAbilAttack" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TransportingHeroicUnit">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="UnitAttrOnHeroic" value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="TriggerInheritsParentBuffs">
@@ -467,8 +478,8 @@
     <CBehaviorBuff id="ImpalerDehakaTenderize">
         <InfoIcon value="Assets\Textures\BTN-Ability-Zerg-Dehaka-Impaler-Tenderize.dds"/>
         <Duration value="10"/>
-        <Period value="1"/>
-        <PeriodCount value="10"/>
+        <Period value="0.5"/>
+        <PeriodCount value="20"/>
         <PeriodicEffect value="ImpalerDehakaTenderizeDamage"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="EssenceCreated">
@@ -573,7 +584,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="PrimalReconstitutionCooldownIndicator">
         <Cost>
-            <Cooldown TimeUse="60"/>
+            <Cooldown TimeUse="120"/>
         </Cost>
         <BehaviorFlags index="Permanent" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
@@ -582,11 +593,11 @@
     <CBehaviorBuff id="DehakaMutaliskTimerBehavior">
         <Alignment value="Negative"/>
         <Cost>
-            <Cooldown TimeStart="60"/>
+            <Cooldown TimeStart="120"/>
         </Cost>
         <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-mutalisk-primalreconstitution.dds"/>
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
-        <Duration value="60"/>
+        <Duration value="120"/>
     </CBehaviorBuff>
     <CBehaviorVeterancy id="DehakaVeterancyCoopFullValues">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -692,6 +703,7 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaGene4Creepers">
         <InfoFlags index="Hidden" value="1"/>
+        <Requirements value="HaveGeneMutation"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="SuppressCollisionRevive">
         <BehaviorFlags index="Permanent" value="1"/>
@@ -726,14 +738,15 @@
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaGeneCarapace">
         <Modification>
-            <VitalMaxAdditiveMultiplierArray index="Life" value="0.5"/>
+            <VitalMaxAdditiveMultiplierArray index="Life" value="0.25"/>
         </Modification>
         <InfoFlags index="Hidden" value="1"/>
+        <Requirements value="HaveGeneMutation"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaGeneAttackSpeed">
         <Modification AttackSpeedMultiplier="1.2"/>
-        <BehaviorCategories index="Fast" value="1"/>
         <InfoFlags index="Hidden" value="1"/>
+        <Requirements value="HaveGeneMutation"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaGeneLifeLeech">
         <Modification>
@@ -749,14 +762,15 @@
         <DamageResponse Handled="DehakaGeneLifeLeechDummy" Location="Attacker">
             <Chance value="1"/>
         </DamageResponse>
+        <Requirements value="HaveGeneMutation"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaGeneThorns">
         <InfoFlags index="Hidden" value="1"/>
         <DamageResponse Handled="DehakaGeneThornsLMSwitch">
             <ExcludeEffectArray value="DehakaGeneThornsDamage"/>
             <Chance value="1"/>
-            <DamageType index="Magic" value="0"/>
         </DamageResponse>
+        <Requirements value="HaveGeneMutation"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaGeneRavasaurGeneApply">
         <InfoFlags index="Hidden" value="1"/>
@@ -831,7 +845,7 @@
         <InfoIcon value="Assets\Textures\btn-ability-zerg-dehaka-ultralisk-impalingstrike.dds"/>
         <BehaviorCategories index="Stun" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <Duration value="2"/>
+        <Duration value="1.5"/>
         <Modification>
             <StateFlags index="Stun" value="1"/>
         </Modification>
@@ -849,7 +863,7 @@
         <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
         <Duration value="0.6"/>
         <Modification>
-            <LifeArmorBonus value="2"/>
+            <LifeArmorBonus value="1"/>
         </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="ImpalerWeaponDisabled">
@@ -865,15 +879,16 @@
     <CBehaviorBuff id="DehakaMutaliskDamageReduction">
         <InfoIcon value="Assets\Textures\btn-ability-dehaka-damagereductionwhilemoving.dds"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <DisableValidatorArray value="DehakaMutaliskIsMoving"/>
+        <DisableValidatorArray value="DehakaMutaliskNotAttacking"/>
         <DisableValidatorArray value="HaveDehakaMutaliskDamageReduction"/>
         <Modification>
-            <DamageTakenFraction index="Spell" value="-0.5"/>
-            <DamageTakenFraction index="Melee" value="-0.5"/>
-            <DamageTakenFraction index="Ranged" value="-0.5"/>
-            <DamageTakenFraction index="Splash" value="-0.5"/>
-            <DamageTakenFraction index="NoProc" value="-0.5"/>
+            <DamageTakenFraction index="Spell" value="-0.25"/>
+            <DamageTakenFraction index="Melee" value="-0.25"/>
+            <DamageTakenFraction index="Ranged" value="-0.25"/>
+            <DamageTakenFraction index="Splash" value="-0.25"/>
+            <DamageTakenFraction index="NoProc" value="-0.25"/>
         </Modification>
+        <InfoFlags index="Hidden" value="1"/>
     </CBehaviorBuff>
     <CBehaviorBuff id="DehakaMutaliskReconstruction">
         <InfoFlags index="Hidden" value="1"/>

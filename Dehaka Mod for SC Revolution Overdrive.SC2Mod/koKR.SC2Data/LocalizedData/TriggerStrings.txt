@@ -1,10 +1,13 @@
 ﻿Category/Name/lib_40BC87EB_09B3474B=Dehaka Calldown Boss
 Category/Name/lib_40BC87EB_30FF6278=Data Utilities
+Category/Name/lib_40BC87EB_761B0973=Dehaka Consume
 Category/Name/lib_40BC87EB_8C03B861=Dehaka Hero Unit
 FunctionDef/Name/lib_40BC87EB_4070C557=CM_HeroWaitForRevive
 Trigger/Name/lib_40BC87EB_18004037=CM_Dehaka_Summon_Boss
 Trigger/Name/lib_40BC87EB_183E6CCD=CM_Dehaka_UnlockXP
 Trigger/Name/lib_40BC87EB_229CF3D7=CM_Dehaka_TriggersInit
+Trigger/Name/lib_40BC87EB_242053A6=CM_Dehaka_UnloadingHero
+Trigger/Name/lib_40BC87EB_2A6C0A17=CM_Dehaka_LoadingHero
 Trigger/Name/lib_40BC87EB_47A970DB=CM_Dehaka_EssenceDropBaneling
 Trigger/Name/lib_40BC87EB_564A06A2=CM_HeroSpawn
 Trigger/Name/lib_40BC87EB_896A260D=CM_Dehaka_Calldown_Boss
