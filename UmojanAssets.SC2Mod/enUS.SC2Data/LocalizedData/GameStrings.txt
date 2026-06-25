@@ -1,0 +1,3 @@
+﻿DocInfo/DescLong=Umojan Assets for SC : Revolution Overdrive<n/><n/>Models Developed By : Comrade Mikhail<n/><n/>Special Thanks for Providing Models : ChonkyKat, DaveSpectre, WingedArchon, Gumba_54, ghostnova91, CerberusSC2, VastanX, arghzad
+DocInfo/DescShort=아무
+DocInfo/Name=Umojan Assets for SC : Revolution Overdrive

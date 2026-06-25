@@ -1,0 +1,3 @@
+﻿DocInfo/DescLong=Taldarim Assets for SC: Revoultion Overdrive
+DocInfo/DescShort=Any Players
+DocInfo/Name=Taldarim Assets for SC: Revolution Overdrive
