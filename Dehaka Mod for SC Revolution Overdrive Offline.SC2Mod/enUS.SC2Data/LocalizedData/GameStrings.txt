@@ -1,0 +1,539 @@
+﻿Abil/Name/DehakaConsume=Consume
+Abil/Name/DehakaDakrunCalldown=DehakaDakrunCalldown
+Abil/Name/PrimalOverlordTransport=Load-Unload (Primal Overlord)
+Behavior/Name/CoopMurvarPukePuddleDisable=Oppressive Stench
+Behavior/Name/DehakaAttEssence=<img path="Assets\Textures\btn-tips-sellzergbiosamples.dds" height="30" width="30" alignment="AbsoluteMiddle"/>Essence
+Behavior/Name/DehakaConsumeEffectAir=Devour: Air Effect
+Behavior/Name/DehakaConsumeEffectArmored=Devour: Armored Effect
+Behavior/Name/DehakaConsumeEffectDetector=Devour: Detector Effect
+Behavior/Name/DehakaConsumeEffectLight=Devour: Light Effect
+Behavior/Name/DehakaConsumeEffectMassive=Devour: Massive Effect
+Behavior/Name/DehakaConsumeEffectMechanical=Devour: Mechanical Effect
+Behavior/Name/DehakaConsumeEffectPsionic=Devour: Psionic Effect
+Behavior/Name/DehakaGuardianRage1=Fury
+Behavior/Name/DehakaGuardianRage2=Fury
+Behavior/Name/DehakaGuardianRage3=Fury
+Behavior/Name/DehakaGuardianRage4=Fury
+Behavior/Name/DehakaGuardianRage5=Fury
+Behavior/Name/DehakaIntimidatingRoar=Intimidating Roar
+Behavior/Name/DehakaIntimidatingRoarLv2=Intimidating Roar
+Behavior/Name/DehakaIntimidatingRoarLv3=Intimidating Roar
+Behavior/Name/DehakaMendingAuraCaster=Primal Regeneration
+Behavior/Name/DehakaMutaliskTimerBehavior=Recently Reconstituted
+Behavior/Name/DehakaPrimalMutation=Primal Mutation
+Behavior/Name/DehakaTyrannozorArmorAuraTarget=Tyrant's Protection
+Behavior/Name/DehakaUltraliskBashStun=Stun
+Behavior/Name/ImpalerDehakaTenderize=Tenderize
+Behavior/Tooltip/CoopMurvarPukePuddleDisable=Slowed and cannot attack or use abilities that cost energy.
+Behavior/Tooltip/DehakaAttEssence=Collect Essence from slain enemies to increase Dehaka's power. Every Essence collected heals Dehaka for <d ref="Effect,DehakaHealAmountPerEssenceDummy,Amount"/> and grants him +<d ref="Effect,DehakaMaxLifeAmountPerEssenceDummy,Amount"  precision="2"/> maximum life.<n><n>Can walk over smaller units and become Massive at level 6.
+Behavior/Tooltip/DehakaGuardianRage1=Attack speed increased by <d ref="(Behavior,DehakaGuardianRage1,Modification.AttackSpeedMultiplier - 1) * 100"/>%.
+Behavior/Tooltip/DehakaGuardianRage2=Attack speed increased by <d ref="(Behavior,DehakaGuardianRage2,Modification.AttackSpeedMultiplier - 1) * 100"/>%.
+Behavior/Tooltip/DehakaGuardianRage3=Attack speed increased by <d ref="(Behavior,DehakaGuardianRage3,Modification.AttackSpeedMultiplier - 1) * 100"/>%.
+Behavior/Tooltip/DehakaGuardianRage4=Attack speed increased by <d ref="(Behavior,DehakaGuardianRage4,Modification.AttackSpeedMultiplier - 1) * 100"/>%.
+Behavior/Tooltip/DehakaGuardianRage5=Attack speed increased by <d ref="(Behavior,DehakaGuardianRage5,Modification.AttackSpeedMultiplier - 1) * 100"/>%.
+Behavior/Tooltip/DehakaIntimidatingRoar=Intimidated.<n/>Lowered Attack and Movement speed.
+Behavior/Tooltip/DehakaIntimidatingRoarLv2=Intimidated.<n/>Lowered Attack and Movement speed.<n/>Cannot use energy based abilities.
+Behavior/Tooltip/DehakaIntimidatingRoarLv3=Intimidated.<n/>Lowered Attack and Movement speed.<n/>Cannot use energy based abilities.<n/>Lowered Armor.
+Behavior/Tooltip/DehakaMendingAuraCaster=Healing nearby allied units.
+Behavior/Tooltip/DehakaMutaliskTimerBehavior=This unit has been recently reconstituted and cannot be revived again.
+Behavior/Tooltip/DehakaTyrannozorArmorAuraTarget=This unit's armor is increased.
+Behavior/Tooltip/DehakaUltraliskBashStun=Stunned.
+Behavior/Tooltip/ImpalerDehakaTenderize=This unit is taking damage over time and will only invoke 50% of the normal cooldown if consumed by Dehaka.
+Button/Charge/DehakaDenConsumeEssence=<d ref="Effect,DehakaEssenceReviveDummy,Amount"/>
+Button/Name/BuildDehakaExtractor=Mutate Extractor
+Button/Name/ConsumeDrone=Devour
+Button/Name/CoopMurvarSpawnCreepers=Spawn Swarm
+Button/Name/CreeperHostPassive=Creeper Host
+Button/Name/DakrunCrashingCharge=Brutal Charge
+Button/Name/DehakaAirAttack=Deadly Reach
+Button/Name/DehakaAirAttackUpgrade=Evolve Deadly Reach
+Button/Name/DehakaArmorUpgrade=Chitinous Plating
+Button/Name/DehakaBarracks=Summon Primal Warden
+Button/Name/DehakaBuild=Summon Structures
+Button/Name/DehakaCalldownDakrun=Calldown Dakrun
+Button/Name/DehakaCalldownGlevig=Calldown Glevig
+Button/Name/DehakaCalldownMurvar=Calldown Murvar
+Button/Name/DehakaConsume=Devour
+Button/Name/DehakaCoopReviveCocoon=Summon Dehaka's Den
+Button/Name/DehakaCreeperAirSuicide=Aerial Burst Sacs
+Button/Name/DehakaDakrunStructure=Summon Dakrun's Den
+Button/Name/DehakaDakrunThornsPassive=Greater Spiked Hide
+Button/Name/DehakaDakrunTopBar=Summon Dakrun
+Button/Name/DehakaDeepTunnel=Deep Tunnel
+Button/Name/DehakaDenConsumeEssence=Consume Essence
+Button/Name/DehakaDetector=Keen Senses
+Button/Name/DehakaDrone=Spawn Primal Drone
+Button/Name/DehakaFlyingCreeperLocusts=Flying Explosive Creepers
+Button/Name/DehakaFlyingLocusts=Flying Primal Locusts
+Button/Name/DehakaGeneAttackSpeedPassive=Evolved Adrenal Glands
+Button/Name/DehakaGeneCarapacePassive=Evolved Carapace
+Button/Name/DehakaGeneCreepersPassive=Evolved Incubation Sacs
+Button/Name/DehakaGeneLifeLeechPassive=Evolved Leeching
+Button/Name/DehakaGeneThornsPassive=Spiked Hide
+Button/Name/DehakaGlevigRoachFireBreath=Evolve Concentrated Fire
+Button/Name/DehakaGlevigStructure=Summon Glevig's Den
+Button/Name/DehakaGlevigTopBar=Summon Glevig
+Button/Name/DehakaGlialReconstitution=Glial Reconstitution
+Button/Name/DehakaGuardianFury=Primordial Fury
+Button/Name/DehakaGuardianMineCharge=Explosive Spores
+Button/Name/DehakaHatchery=Summon Primal Hive
+Button/Name/DehakaHydralisk=Spawn Primal Hydralisk
+Button/Name/DehakaHydraliskImpalerMerge=Primal Combat
+Button/Name/DehakaHydraliskSpeed=Muscular Augments
+Button/Name/DehakaHydraliskToMutalisk=Primal Combat
+Button/Name/DehakaImpalerTenderize=Tenderize
+Button/Name/DehakaIntimidatingRoar=Intimidating Roar
+Button/Name/DehakaLeapStomp=Leap
+Button/Name/DehakaLearnAbilities=Evolve Mutations
+Button/Name/DehakaLearnPrimalArmorLevel1=Evolve Primal Carapace Level 1
+Button/Name/DehakaLearnPrimalArmorLevel2=Evolve Primal Carapace Level 2
+Button/Name/DehakaLearnPrimalArmorLevel3=Evolve Primal Carapace Level 3
+Button/Name/DehakaLearnPrimalWeaponsLevel1=Evolve Primal Attacks Level 1
+Button/Name/DehakaLearnPrimalWeaponsLevel2=Evolve Primal Attacks Level 2
+Button/Name/DehakaLearnPrimalWeaponsLevel3=Evolve Primal Attacks Level 3
+Button/Name/DehakaLocustSwoop=Swoop
+Button/Name/DehakaMendingAura=Primal Regeneration
+Button/Name/DehakaMurvarCreeperAir=Evolve Aerial Burst Sacs
+Button/Name/DehakaMurvarStructure=Summon Murvar's Den
+Button/Name/DehakaMurvarTopBar=Summon Murvar
+Button/Name/DehakaMutaliskDamageReduction=Shifting Carapace
+Button/Name/DehakaMutaliskRespawnOnDeath=Primal Reconstitution
+Button/Name/DehakaNydusDestroyer=Summon Primal Wurm
+Button/Name/DehakaRavasaurMerge=Primal Combat
+Button/Name/DehakaRavasaurRange=Enlarged Parotid Glands
+Button/Name/DehakaRavasaurVSArmor=Dissolving Acid
+Button/Name/DehakaRoach=Spawn Primal Roach
+Button/Name/DehakaRoachGuardianMerge=Primal Combat
+Button/Name/DehakaRoachLevel2Merge=Primal Combat
+Button/Name/DehakaRoachMoveSpeed=Evolve Glial Reconstitution
+Button/Name/DehakaRoachPassive=Primal Roach
+Button/Name/DehakaSpawnLocusts=Spawn Primal Locusts
+Button/Name/DehakaSpawnLocustsBomb=Spawn Explosive Creeper
+Button/Name/DehakaSwarmHost=Spawn Primal Host
+Button/Name/DehakaSwarmHostMerge=Primal Combat
+Button/Name/DehakaTyrannozorArmorAura=Tyrant's Protection
+Button/Name/DehakaTyrannozorFanOfKnives=Barrage of Spikes
+Button/Name/DehakaUltralisk=Spawn Primal Ultralisk
+Button/Name/DehakaUltraliskBash=Impaling Strike
+Button/Name/DehakaUltraliskCrashingCharge=Brutal Charge
+Button/Name/DehakaUltraliskLevel2Merge=Primal Combat
+Button/Name/DehakaUltraliskRegen=Healing Adaptation
+Button/Name/DehakaZergling=Spawn Primal Zergling
+Button/Name/EvolvePrimalVentralSacks=Evolve Ventral Sacs
+Button/Name/GeneMutation=Evolve Gene Mutation
+Button/Name/GlevigFirebreath=Incendiary Acid
+Button/Name/GlevigSpitfirePassive=Combustive Glands
+Button/Name/GlevigTunnel=Deep Tunnel
+Button/Name/LearnDehakaArmorUpgrade=Evolve Chitinous Plating
+Button/Name/LearnDehakaConsume=Evolve Devour
+Button/Name/LearnDehakaDetector=Evolve Keen Senses
+Button/Name/LearnDehakaIntimidatingRoar=Evolve Intimidating Roar
+Button/Name/LearnDehakaLeapStomp=Evolve Leap
+Button/Name/LearnDehakaMammothBreath=Evolve Scorching Breath
+Button/Name/LearnDehakaMendingAura=Evolve Primal Regeneration
+Button/Name/MammothBreath=Scorching Breath
+Button/Name/MurvarPukeCoop=Oppressive Stench
+Button/Name/NydusDestroyerBeam=Bile Stream
+Button/Name/NydusDestroyerDeepTunnel=Deep Tunnel
+Button/Name/PrimalBuildingRoot=Root
+Button/Name/PrimalBuildingUproot=Uproot
+Button/Name/PrimalGuardianPassive=Primal Guardian
+Button/Name/PrimalHostPassive=Primal Host
+Button/Name/PrimalHydraliskPassive=Primal Hydralisk
+Button/Name/PrimalIgniterPassive=Primal Igniter
+Button/Name/PrimalImpalerPassive=Primal Impaler
+Button/Name/PrimalMutaliskPassive=Primal Mutalisk
+Button/Name/PrimalOverlord=Spawn Primal Overlord
+Button/Name/PrimalOverlordSpeed=Evolve Pneumatized Carapace
+Button/Name/PrimalOverlordTransportLoad=Load
+Button/Name/PrimalOverlordTransportUnload=Unload All
+Button/Name/PrimalUltraliskPassive=Primal Ultralisk
+Button/Name/PrimalWurmPassive=Primal Wurm
+Button/Name/PrimalZerglingAttackSpeed=Evolve Adrenal Glands
+Button/Name/ResearchDehakaBurrow=Evolve Burrow
+Button/Name/ResearchDehakaGuardianExplosiveBomb=Evolve Explosive Spores
+Button/Name/ResearchDehakaGuardianFury=Evolve Primordial Fury
+Button/Name/ResearchDehakaHydraliskSpeed=Evolve Muscular Augments
+Button/Name/ResearchDehakaImpalerTenderize=Evolve Tenderize
+Button/Name/ResearchDehakaMutaliskDamageReduction=Evolve Shifting Carapace
+Button/Name/ResearchDehakaMutaliskRespawnOnDeath=Evolve Primal Reconstitution
+Button/Name/ResearchDehakaRavasaurRange=Evolve Enlarged Parotid Glands
+Button/Name/ResearchDehakaRavasaurVSArmor=Evolve Dissolving Acid
+Button/Name/ResearchDehakaTyrannozorArmorAura=Evolve Tyrant's Protection
+Button/Name/ResearchDehakaTyrannozorFanOfKnives=Evolve Barrage of Spikes
+Button/Name/ResearchDehakaUltraliskBash=Evolve Impaling Strike
+Button/Name/ResearchDehakaUltraliskCrashingCharge=Evolve Brutal Charge
+Button/Name/ResearchDehakaUltraliskRegen=Evolve Healing Adaptation
+Button/Name/ResearchSlicingGlave=Evolve Slicing Glave
+Button/Name/SlicingGlave=Slicing Glave
+Button/Name/TyrannozorPassive=Tyrannozor
+Button/Name/primalzerglingmovementspeed=Evolve Metabolic Boost
+Button/Tooltip/BuildDehakaExtractor=Mutated over a Vespene Geyser to allow harvesting of vespene gas.
+Button/Tooltip/ConsumeDrone=Dehaka consumes target friendly unit's essence to join the battle.<n/><n/>Each unit provides 2 essences per 25 mineral costs, and 5 essences per 25 vespene costs.
+Button/Tooltip/CoopMurvarSpawnCreepers=Spawns 6 Primal Locusts and 6 Explosive Creepers that fight for <d ref="Behavior,DehakaLocustTimedLife,Duration"/> seconds.
+Button/Tooltip/CreeperHostPassive=Murvar's Den allows you to evolve Creeper Hosts.
+Button/Tooltip/DakrunCrashingCharge=Charge to target location knocking back units in the area and dealing <d ref="Effect,DehakaDakrunCrashingChargeDamage,Amount"/> damage.
+Button/Tooltip/DehakaAirAttack=Allows Dehaka to attack air units.
+Button/Tooltip/DehakaAirAttackUpgrade=Allows <c val ="ffff8a">Dehaka</c> to attack air units.
+Button/Tooltip/DehakaArmorUpgrade=Increases armor by <d ref="Behavior,DehakaArmorUpgrade1,Modification.LifeArmorBonus"/>.
+Button/Tooltip/DehakaBarracks=Primal Zerg production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Primal Zerglings
+Button/Tooltip/DehakaBarracksUprooted=Primal Zerg production structure.<n/><n/><c val="ffff8a">Enables:</c><n/>- Primal Zerglings
+Button/Tooltip/DehakaBuild=A list of structures available for summon.
+Button/Tooltip/DehakaCalldownDakrun=Primal Pack Leader Dakrun prepares for battle, to respond on following requesting summon. Dakrun is a heavily armored juggernaut that can charge at a target location to deal heavy damage and knock back enemy units in the area.
+Button/Tooltip/DehakaCalldownGlevig=Primal Pack Leader Glevig prepares for battle, to respond on following requesting summon. Glevig is a powerful stationary ranged attacker that deals area damage and can relocate his position with Deep Tunnel. 
+Button/Tooltip/DehakaCalldownMurvar=Primal Pack Leader Murvar prepares for battle, to respond on following requesting summon. Murvar spawns Locusts and can create a cloud that slows enemy movement speed and prevents enemy units and structures from attacking or using energy-based abilities.
+Button/Tooltip/DehakaConsume=Instantly kill the target enemy unit to heal <d ref="Effect,DehakaConsumeEffectHealOther,VitalArray[Life].ChangeFraction*100"/>% Life and gain passive abilities based on the enemy type for <d ref="Behavior,DehakaConsumeEffectAir,Duration"/> seconds. The cooldown is based on the amount of life the enemy has when killed.<n/><n/><ul text="•"><li>Air: Gain a ranged attack</li><li>Armored: Gain bonus damage against armored units</li><li>Biological: Heal <d ref="Effect,DehakaConsumeEffectHealBiological,VitalArray[Life].ChangeFraction*100"/>% life</li><li>Light: Gain move speed</li><li>Massive: Gain armor and reflect damage at attackers</li><li>Mechanical: Gain attack speed</li><li>Psionic: Explode with Psionic Energy and abilities cooldown 33% faster</li><n/><n/><c val="ffff8a">Can't target unit which current life point is over 500.</c>
+Button/Tooltip/DehakaCoop=Primal Pack Leader. Collects essence from his fallen enemies to change and grow in strength.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaCoopReviveCocoon=Dehaka will revive within this den.
+Button/Tooltip/DehakaCreeperAirSuicide=Allows Creepers to target air and increases their movement speed.
+Button/Tooltip/DehakaCreeperFlying=Spawns from Creeper hosts. Explosive Creepers last <d ref="Behavior,DehakaCreeperTimedLife,Duration"/> seconds.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaCreeperFlyingUpgraded=Spawns from Creeper hosts. Explosive Creepers last <d ref="Behavior,DehakaCreeperTimedLife,Duration"/> seconds.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DehakaDakrun=An immense Pack Leader who charges at foes. Can launch projectiles at unsuspecting prey.
+Button/Tooltip/DehakaDakrunStructure=Contains upgrades for Primal Ultralisks and Tyrannozors.<n/><n/><c val="ffff8a">Enables:</c><n/>- Primal Ultralisk at Primal Warden
+Button/Tooltip/DehakaDakrunThornsPassive=Every time Dakrun takes damage, he shoots a spine back at the attacker that deals <d ref="Effect,DehakaDakrunThornsDamage,Amount"/> damage.
+Button/Tooltip/DehakaDakrunTopBar=Summons the Primal Pack Leader Dakrun. Dakrun is a heavily armored juggernaut that can charge at a target location to deal heavy damage and knock back enemy units in the area.
+Button/Tooltip/DehakaDeepTunnel=Quickly burrow to any visible location.
+Button/Tooltip/DehakaDenConsumeEssence=Dehaka must consume <d ref="Effect,DehakaEssenceReviveRequirementDummy,Amount-Effect,DehakaEssenceReviveDummy,Amount"/> more essences to join the battle.
+Button/Tooltip/DehakaDetector=Detect cloaked, burrowed, and hallucinated units.
+Button/Tooltip/DehakaDrone=Basic worker unit. Can harvest minerals and vespene gas. Can summon structures.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/DehakaDroneBurrowed=Basic worker unit. Can harvest minerals and vespene gas. Can summon structures.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/DehakaFlyingCreeperLocusts=Creepers spawned by the Creeper Host can fly. Creepers will dive bomb to attack ground targets.
+Button/Tooltip/DehakaFlyingLocusts=Primal Locusts spawned by the Primal Host can fly. Flying Primal Locusts can use Swoop to land and attack.
+Button/Tooltip/DehakaGeneAttackSpeedPassive=This unit attacks <d ref="Behavior,DehakaGeneAttackSpeed,Modification.AttackSpeedMultiplier-1*100" precision="1"/>% faster.
+Button/Tooltip/DehakaGeneCarapacePassive=This unit has <d ref="Behavior,DehakaGeneCarapace,Modification.VitalMaxAdditiveMultiplierArray[Life]*100" precision="1"/>% more life.
+Button/Tooltip/DehakaGeneCreepersPassive=This Creeper Host spawns 1 additional Creeper.
+Button/Tooltip/DehakaGeneLifeLeechPassive=This unit will leech <d ref="Behavior,DehakaGeneLifeLeech,Modification.VitalDamageLeechArray[Life].KindArray[Melee]*100" precision="1"/>% of damage done as life.
+Button/Tooltip/DehakaGeneThornsPassive=Each time this unit takes damage, it shoots a spine back at the attacker that deals <d ref="Effect,DehakaGeneThornsDamage,Amount"/> damage.
+Button/Tooltip/DehakaGlevig=Vile and dangerous Pack Leader who breathes acid and tunnels through the ground.
+Button/Tooltip/DehakaGlevigRoachFireBreath=Increases the <c val ="ffff8a">Primal Igniter's</c> damage against light armored enemies.
+Button/Tooltip/DehakaGlevigStructure=Contains upgrades for Primal Roaches, Primal Hydralisks, Impalers and Ravasaurs.<n/><n/><c val="ffff8a">Enables:</c><n/>- Primal Roach at Primal Warden<n/>- Primal Hydralisk at Primal Warden<n/>- Primal Wurms from Primal Drones
+Button/Tooltip/DehakaGlevigTopBar=Summons the Primal Pack Leader Glevig and a small pack of Primal Zerg. Glevig is a powerful stationary ranged attacker that deals area damage and can relocate his position with Deep Tunnel. 
+Button/Tooltip/DehakaGlialReconstitution=Movement speed increased.
+Button/Tooltip/DehakaGuardian=Long range anti-ground flier.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaGuardianFury=Each attack temporarily increases attack speed by <d ref="(Behavior,DehakaGuardianRage1,Modification.AttackSpeedMultiplier - 1) * 100"/>%. Can stack up to <d ref="(Behavior,DehakaGuardianRage5,Modification.AttackSpeedMultiplier - 1) * 100"/>% increased attack speed.
+Button/Tooltip/DehakaGuardianMineCharge=Fires an Explosive Spore at the target, causing the target and all nearby enemy ground units to take <d ref="Effect,DehakaGuardianMineChargeExplodeDamage,Amount"/> damage.
+Button/Tooltip/DehakaHatchery=Primary structure. Used to spawn Primal Drones and receive gathered resources. Contains upgrades for Primal Zerg units.<n/><n/><c val="ffff8a">Enables:</c><n/>- Primal Drones<n/>- Primal Overlords
+Button/Tooltip/DehakaHydralisk=Ranged attacker.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DehakaHydraliskAndPrimalCombat=Ranged attacker. Can combat another Primal Hydralisk to evolve.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DehakaHydraliskImpalerMerge=Two Primal Hydralisk battle and the survivor evolves into an Impaler.<n/><n/>Long-range anti-armor ambusher. Must burrow to attack.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaHydraliskSpeed=Increases movement speed and attack range.
+Button/Tooltip/DehakaHydraliskToMutalisk=Two Primal Hydralisk battle and the survivor evolves into a Primal Mutalisk.<n/><n/>Air Unit. Bounces its shot to strike multiple targets.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DehakaImpalerTenderize=Tenderized units take <d ref="(Effect,ImpalerDehakaTenderizeDamage,Amount*Behavior,ImpalerDehakaTenderize,PeriodCount)"/> damage over <d ref="Behavior,ImpalerDehakaTenderize,Duration"/> seconds. A tenderized unit consumed by Dehaka will invoke 50% of the normal cooldown time.
+Button/Tooltip/DehakaIntimidatingRoar=Dehaka terrifies nearby enemies, reducing their movement speed by <d ref="Behavior,DehakaIntimidatingRoar,Modification.AdditiveMoveSpeedFactor * (-1 ) * 100" precision="2"/>% and attack speed by <d ref="Behavior,DehakaIntimidatingRoar,Modification.AdditiveAttackSpeedFactor * (-1 ) * 100" precision="2"/>% for for <d ref="Behavior,DehakaIntimidatingRoar,Duration"/> seconds.
+Button/Tooltip/DehakaIntimidatingRoarLv2=Dehaka terrifies nearby enemies, reducing their movement speed by <d ref="Behavior,DehakaIntimidatingRoar,Modification.AdditiveMoveSpeedFactor * (-1 ) * 100" precision="2"/>% and attack speed by <d ref="Behavior,DehakaIntimidatingRoar,Modification.AdditiveAttackSpeedFactor * (-1 ) * 100" precision="2"/>% for for <d ref="Behavior,DehakaIntimidatingRoar,Duration"/> seconds<n/>Enemies affected by Intimidating Roar cannot use abilities that cost energy.
+Button/Tooltip/DehakaIntimidatingRoarLv3=Dehaka terrifies nearby enemies, reducing their movement speed by <d ref="Behavior,DehakaIntimidatingRoar,Modification.AdditiveMoveSpeedFactor * (-1 ) * 100" precision="2"/>% and attack speed by <d ref="Behavior,DehakaIntimidatingRoar,Modification.AdditiveAttackSpeedFactor * (-1 ) * 100" precision="2"/>% for for <d ref="Behavior,DehakaIntimidatingRoar,Duration"/> seconds<n/>Enemies affected by Intimidating Roar have their armor reduced by 2 and cannot use abilities that cost energy.
+Button/Tooltip/DehakaLeapStomp=Dehaka leaps to the target location, dealing <d ref="$AccumulatedValue:Effect,DehakaStompDamageC,Amount$"/> damage to nearby enemy ground units.
+Button/Tooltip/DehakaLeapStomp2=Dehaka leaps to the target location, dealing <d ref="$AccumulatedValue:Effect,DehakaStompDamageC,Amount$"/> damage to nearby enemy ground units.
+Button/Tooltip/DehakaLeapStomp3=Dehaka leaps to the target location, dealing <d ref="$AccumulatedValue:Effect,DehakaStompDamageC,Amount$"/> damage to nearby enemy ground units. Each enemy hit grants Dehaka <d ref="Behavior,DehakaLeapStompArmor,Modification.LifeArmorBonus"/> armor for <d ref="Behavior,DehakaLeapStompArmor,Duration"/> seconds.
+Button/Tooltip/DehakaLearnAbilities=You have unspent mutation points. Click here to spend them.
+Button/Tooltip/DehakaLearnPrimalArmorLevel1=Upgrades the armor of all Primal Zerg units.
+Button/Tooltip/DehakaLearnPrimalArmorLevel2=Further upgrades the armor of all Primal Zerg units.
+Button/Tooltip/DehakaLearnPrimalArmorLevel3=Maximizes the armor of all Primal Zerg units.
+Button/Tooltip/DehakaLearnPrimalWeaponsLevel1=Upgrades the attacks of all Primal Zerg units.
+Button/Tooltip/DehakaLearnPrimalWeaponsLevel2=Further upgrades the attacks of all Primal Zerg units.
+Button/Tooltip/DehakaLearnPrimalWeaponsLevel3=Maximizes the attacks of all Primal Zerg units.
+Button/Tooltip/DehakaLocust=Spawns from Primal hosts. Primal Locusts last <d ref="Behavior,DehakaLocustTimedLife,Duration"/> seconds.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaLocustFlying=Spawns from Primal hosts. Primal Locusts last <d ref="Behavior,DehakaLocustTimedLife,Duration"/> seconds.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaLocustSwoop=Primal Locust can land at the targeted location, allowing it to attack.
+Button/Tooltip/DehakaMendingAura=Allied units near Dehaka heal <d ref="Effect,DehakaMendingAuraHealA,VitalArray[Life].Change * 2"/> life per second.
+Button/Tooltip/DehakaMendingAura2=Allied units near Dehaka heal <d ref="Effect,DehakaMendingAuraHealB,VitalArray[Life].Change * 2"/> life per second.
+Button/Tooltip/DehakaMendingAura3=Allied units near Dehaka heal <d ref="Effect,DehakaMendingAuraHealC,VitalArray[Life].Change * 2"/> life per second.
+Button/Tooltip/DehakaMurvar=The Eternal Mother. Spawns Creepers and vomits acid to slow her victims.
+Button/Tooltip/DehakaMurvarCreeperAir=Allows the <c val ="ffff8a">Creeper Host's</c> Creepers to target air units and increases their movement speed.
+Button/Tooltip/DehakaMurvarStructure=Contains upgrades for Primal Mutalisks, Primal Guardians and Creeper Hosts.<n/><n/><c val="ffff8a">Enables:</c><n/>- Primal Host at Primal Warden
+Button/Tooltip/DehakaMurvarTopBar=Summons the Primal Pack Leader Murvar. Murvar spawns Locusts and can create a cloud that slows enemy movement speed and prevents enemy units and structures from attacking or using energy-based abilities.
+Button/Tooltip/DehakaMutalisk=Air Unit. Bounces its shot to strike multiple targets.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DehakaMutaliskDamageReduction=Primal Mutalisks take <d ref="Behavior,DehakaMutaliskDamageReduction,Modification.DamageTakenFraction[Melee]*(-100)" precision="1"/>% less damage while moving.
+Button/Tooltip/DehakaMutaliskRespawnOnDeath=Primal Mutalisks revive on death after a short time. Cannot occur more than once every <d ref="Behavior,DehakaMutaliskTimerBehavior,Cost.Cooldown.TimeStart"/> seconds.
+Button/Tooltip/DehakaNydusDestroyer=Powerful defensive structure. <n/><n/><c val="ffff8a">Can attack ground and air units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/DehakaPrimalSwarmHost=Siege unit that attacks by spawning Creeper minions.<n/><n/><c val="#ColorAttackInfo">Creepers can attack ground units.</c>
+Button/Tooltip/DehakaPrimalSwarmHostBurrowed=Siege unit that attacks by spawning Creeper minions.<n/><n/><c val="#ColorAttackInfo">Creepers can attack ground units.</c>
+Button/Tooltip/DehakaPrimalSwarmHostUpgraded=Siege unit that attacks by spawning Creeper minions.<n/><n/><c val="#ColorAttackInfo">Creepers can attack ground and air units.</c>
+Button/Tooltip/DehakaRavasaur=Ranged unit. Shoots large globs of acid at long range.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaRavasaurMerge=Two Primal Zerglings battle and the survivor evolves into a Ravasaur.<n/><n/>Ranged unit. Shoots large globs of acid at long range.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaRavasaurRange=Increases movement speed and attack range.
+Button/Tooltip/DehakaRavasaurVSArmor=Deal +<d ref="$UpgradeEffectArrayValue:DehakaRavasaurVSArmor:Effect,DehakaRavasaurDamage,AttributeBonus[Armored]$"/> damage to armored targets.
+Button/Tooltip/DehakaRoach=Assault unit. Regenerates life quickly when burrowed.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaRoachGuardianMerge=Two Primal Roaches battle and the survivor evolves into a Primal Guardian.<n/><n/>Long range anti-ground flier.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaRoachLevel2Merge=Two Primal Roaches battle and the survivor evolves into a Primal Igniter.<n/><n/>Assault unit. Has an area-damage attack. Regenerates life quickly when burrowed.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaRoachLevel3=Assault unit. Has an area-damage attack. Regenerates life quickly when burrowed.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaRoachLevel3Burrowed=Assault unit. Has an area-damage attack. Regenerates life quickly when burrowed.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaRoachMoveSpeed=Increases the movement speed of <c val ="ffff8a">Primal Roaches</c> and <c val ="ffff8a">Primal Igniters</c>.
+Button/Tooltip/DehakaRoachPassive=Glevig's Den allows you to spawn Primal Roaches.
+Button/Tooltip/DehakaSpawnLocusts=Siege unit that attacks by spawning Primal Locusts. Primal Locusts last <d ref="Behavior,DehakaLocustTimedLife,Duration"/> seconds.<n/><n/><c val="#ColorAttackInfo">Primal Locusts Button/Tooltip/DehakaSpawnLocustsBomb=Siege unit that attacks by spawning Explosive Creepers. Creepers last <d ref="Behavior,DehakaLocustTimedLife,Duration"/> seconds.<n/><n/><c val="#ColorAttackInfo">Creepers can attack ground units.</c>
+Button/Tooltip/DehakaSpawnLocustsBombUpgraded=Siege unit that attacks by spawning Explosive Creepers. Creepers last <d ref="Behavior,DehakaLocustTimedLife,Duration"/> seconds.<n/><n/><c val="#ColorAttackInfo">Creepers can attack ground and air units.</c>
+Button/Tooltip/DehakaSwarmHost=Siege unit that attacks by spawning Locust minions.<n/><n/><c val="#ColorAttackInfo">Locusts can attack ground units.</c>
+Button/Tooltip/DehakaSwarmHostBurrowed=Siege unit that attacks by spawning Locust minions.<n/><n/><c val="#ColorAttackInfo">Locusts can attack ground units.</c>
+Button/Tooltip/DehakaSwarmHostMerge=Two Primal Hosts battle and the survivor evolves into a Creeper Host.<n/><n/>Siege unit that attacks by spawning Creeper minions.<n/><n/><c val="#ColorAttackInfo">Creepers can attack ground units.</c>
+Button/Tooltip/DehakaTyrannozorArmorAura=Grants nearby friendly units <d ref="Behavior,DehakaTyrannozorArmorAuraTarget,Modification.LifeArmorBonus"/> armor.
+Button/Tooltip/DehakaTyrannozorFanOfKnives=Unleash a Barrage of Spikes, dealing <d ref="Effect,DehakaTyrannozorFanOfKnivesDamage,Amount"/> damage to enemy ground and air units around the Tyrannozor.
+Button/Tooltip/DehakaUltralisk=Heavy assault beast. Can charge at a target, dealing area damage and knocking back enemy units.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/DehakaUltraliskBash=Melee attacks have a <d ref="Behavior,DehakaUltraliskBash,DamageResponse.Chance*100" precision="1"/>% chance to stun.
+Button/Tooltip/DehakaUltraliskCrashingCharge=Charge to target location knocking back units in the area and dealing <d ref="Effect,DehakaUltraliskCrashingChargeDamage,Amount"/> damage.
+Button/Tooltip/DehakaUltraliskLevel2Merge=Two Primal Ultralisks battle and the survivor evolves into Tyrannozor.<n/><n/>Heavy assault beast. Has a ground area-damage attack.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DehakaUltraliskLevel3=Heavy assault beast. Has a ground area-damage attack.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DehakaUltraliskLevel3Burrowed=Heavy assault beast. Has a ground area-damage attack.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DehakaUltraliskRegen=This unit regenerates life quickly when out of combat.
+Button/Tooltip/DehakaZergling=Fast melee creature.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/EvolvePrimalVentralSacks=Allows <c val="ffff8a">Primal Overlords</c> to transport units.
+Button/Tooltip/GeneMutation=Evolved units through Primal Combat or coming Primal Combat grant a mutation.
+Button/Tooltip/GlevigSpitfirePassive=Glevig's normal attacks deal area damage.
+Button/Tooltip/GlevigTunnel=Glevig burrows to the target location and erupts, dealing damage to units in the area and knocking them back.
+Button/Tooltip/LearnDehakaArmorUpgrade=Increases <c val ="ffff8a">Dehaka's</c> armor by <d ref="Behavior,DehakaArmorUpgrade1,Modification.LifeArmorBonus"/>.
+Button/Tooltip/LearnDehakaConsume=<c val ="ffff8a">Dehaka</c> instantly kills the target enemy to heal <d ref="Effect,DehakaConsumeEffectHealOther,VitalArray[Life].ChangeFraction*100"/>% Life and gain passive abilities based on the enemy type for <d ref="Behavior,DehakaConsumeEffectBiological,Duration"/> seconds.<n/><n/><c val="ffffcc00">Level 2</c> - Passive bonuses last <d ref="Behavior,DehakaConsumeEffectBiological,Duration * 1.667"/> seconds. Range increased by 3<n/><c val="ffffcc00">Level 3</c> - Cooldown reduced by 20%. Range increased by 3.
+Button/Tooltip/LearnDehakaDetector=Allows <c val ="ffff8a">Dehaka</c> to detect cloaked, burrowed, and hallucinated units.
+Button/Tooltip/LearnDehakaIntimidatingRoar=<c val ="ffff8a">Dehaka</c> intimidates nearby enemies, reducing their movement speed by 75% and attack speed by 25% for <d ref="Behavior,DehakaIntimidatingRoar,Duration"/> seconds.<n/><n/><c val="ffffcc00">Level 2</c> - Enemies affected by Intimidating Roar also cannot use abilities that cost energy.<n/><c val="ffffcc00">Level 3</c> - Enemies affected by Intimidating Roar also have armor reduced by <d ref="Behavior,DehakaIntimidatingRoarLv3,Modification.LifeArmorBonus * (-1)"/>.
+Button/Tooltip/LearnDehakaLeapStomp=<c val ="ffff8a">Dehaka</c> leaps to the target location, dealing 10 + 25% weapon damage to all enemy ground units in the area.<n/><n/><c val="ffffcc00">Level 2</c> - Leap range increased by 3, Damage increased to 10 + 50% weapon damage.<n/><c val="ffffcc00">Level 3</c> - Each enemy hit also grants Dehaka <d ref="Behavior,DehakaLeapStompArmor,Modification.LifeArmorBonus"/> armor for <d ref="Behavior,DehakaLeapStompArmor,Duration"/> seconds.
+Button/Tooltip/LearnDehakaMammothBreath=<c val ="ffff8a">Dehaka's</c> fiery breath scorches the earth, dealing weapon damage (<d ref="$AccumulatedValue:Effect,MammothBreathDamage,Amount$"/>) to all enemy ground units in its path.
+Button/Tooltip/LearnDehakaMendingAura=<c val ="ffff8a">Dehaka</c> passively heals all allied units nearby.<n/><n/><c val="ffffcc00">Level 2</c> - 2 life per second.<n/><c val="ffffcc00">Level 3</c> - 3 life per second.
+Button/Tooltip/MammothBreath=Dehaka's fiery breath scorches the earth, dealing weapon damage (<d ref="$AccumulatedValue:Effect,MammothBreathDamage,Amount$"/>) to all enemy ground units in its path.
+Button/Tooltip/MurvarPukeCoop=Creates a cloud that slows movement speed and prevents enemy units and structures from attacking and using energy-based abilities. Lasts for <d ref="(Effect,CoopMurvarPukeCP,PeriodCount) * Effect,CoopMurvarPukeCP,PeriodicPeriodArray[0]"/> seconds.
+Button/Tooltip/NydusDestroyerBeam=Deals <d ref="Effect,NydusDestroyerBeamDamage,Amount * (1 / Effect,NydusDestroyerBeamCP,PeriodicPeriodArray[0])"/> damage per second to the target unit for <d ref="Effect,NydusDestroyerBeamCP,PeriodCount * Effect,NydusDestroyerBeamCP,PeriodicPeriodArray[0]"/> seconds.
+Button/Tooltip/NydusDestroyerDeepTunnel=Quickly burrow to the target visible location.
+Button/Tooltip/PrimalBuildingRoot=Roots the structure, allowing it to produce.
+Button/Tooltip/PrimalBuildingUproot=Uproots the structure, allowing it to move about freely.
+Button/Tooltip/PrimalGuardianPassive=Murvar's Den allows you to evolve Primal Guardian.
+Button/Tooltip/PrimalHostPassive=Murvar's Den allows you to spawn Primal Hosts.
+Button/Tooltip/PrimalHydraliskPassive=Glevig's Den allows you to spawn Primal Hydralisks.
+Button/Tooltip/PrimalIgniterPassive=Glevig's Den allows you to evolve Primal Igniters.
+Button/Tooltip/PrimalImpalerPassive=Glevig's Den allows you to evolve Primal Impalers.
+Button/Tooltip/PrimalMutaliskPassive=Murvar's Den allows you to evolve Primal Mutalisks.
+Button/Tooltip/PrimalOverlord=Increases supply. Supply allows you to create more units.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/PrimalOverlordSpeed=Increases the movement speed of <c val="ffff8a">Primal Overlords</c>.
+Button/Tooltip/PrimalOverlordTransportLoad=Loads units into the Primal Overlord's ventral sacs.
+Button/Tooltip/PrimalOverlordTransportUnload=Unloads all units.
+Button/Tooltip/PrimalTownHall=Primary structure. Used to spawn Primal Drones and receive gathered resources. Contains upgrades for Primal Zerg units.<n/><n/><c val="ffff8a">Enables:</c><n/>- Primal Drones
+Button/Tooltip/PrimalUltraliskPassive=Dakrun's Den allows you to spawn Primal Ultralisks.
+Button/Tooltip/PrimalWurmPassive=Glevig's Den allows you to summon Primal Wurms.
+Button/Tooltip/PrimalZerglingAttackSpeed=Increases the attack speed of <c val="ffff8a">Primal Zerglings</c> by 40%.
+Button/Tooltip/ResearchDehakaBurrow=Enables all Primal Zerg ground units to use the Burrow ability. Burrow allows a unit to take cover underground, rendering it unable to attack. A burrowed unit is invisible unless revealed by detectors or effects.
+Button/Tooltip/ResearchDehakaGuardianExplosiveBomb=<c val ="ffff8a">Primal Guardians</c> can fire an Explosive Spore at the target, causing the target and all nearby enemy ground units to take <d ref="Effect,DehakaGuardianMineChargeExplodeDamage,Amount"/> damage.
+Button/Tooltip/ResearchDehakaGuardianFury=<c val ="ffff8a">Primal Guardian</c> attacks temporarily increases its attack speed by <d ref="(Behavior,DehakaGuardianRage1,Modification.AttackSpeedMultiplier - 1) * 100"/>%. Can stack up to <d ref="(Behavior,DehakaGuardianRage5,Modification.AttackSpeedMultiplier - 1) * 100"/>% increased attack speed.
+Button/Tooltip/ResearchDehakaHydraliskSpeed=Increases <c val ="ffff8a">Primal Hydralisk</c> movement speed and attack range.
+Button/Tooltip/ResearchDehakaImpalerTenderize=Units hit by <c val ="ffff8a">Impalers</c> become tenderized. Tenderized units take <d ref="(Effect,ImpalerDehakaTenderizeDamage,Amount*Behavior,ImpalerDehakaTenderize,PeriodCount)"/> damage over <d ref="Behavior,ImpalerDehakaTenderize,Duration"/> seconds. A tenderized unit Devoured by <c val ="ffff8a">Dehaka</c> will invoke 50% of the normal cooldown time.
+Button/Tooltip/ResearchDehakaMutaliskDamageReduction=<c val ="ffff8a">Primal Mutalisks</c> take <d ref="Behavior,DehakaMutaliskDamageReduction,Modification.DamageTakenFraction[Melee]*(-100)" precision="1"/>% less damage while moving.
+Button/Tooltip/ResearchDehakaMutaliskRespawnOnDeath=<c val ="ffff8a">Primal Mutalisks</c> revive on death after a short time. Cannot occur more than once every <d ref="Behavior,DehakaMutaliskTimerBehavior,Cost.Cooldown.TimeStart"/> seconds.
+Button/Tooltip/ResearchDehakaRavasaurRange=Increases <c val ="ffff8a">Ravasaur</c> movement speed and attack range.
+Button/Tooltip/ResearchDehakaRavasaurVSArmor=<c val ="ffff8a">Ravasaurs</c> deal +<d ref="$UpgradeEffectArrayValue:DehakaRavasaurVSArmor:Effect,DehakaRavasaurDamage,AttributeBonus[Armored]$"/> damage to armored targets.
+Button/Tooltip/ResearchDehakaTyrannozorArmorAura=<c val ="ffff8a">Tyrannozors</c> grants nearby friendly units <d ref="Behavior,DehakaTyrannozorArmorAuraTarget,Modification.LifeArmorBonus"/> armor.
+Button/Tooltip/ResearchDehakaTyrannozorFanOfKnives=<c val ="ffff8a">Tyrannozors</c> can unleash a Barrage of Spikes, dealing <d ref="Effect,DehakaTyrannozorFanOfKnivesDamage,Amount"/> damage to nearby enemy ground and air units.
+Button/Tooltip/ResearchDehakaUltraliskBash=<c val ="ffff8a">Primal Ultralisk</c> and <c val ="ffff8a">Tyrannozor</c> melee attacks have a <d ref="Behavior,DehakaUltraliskBash,DamageResponse.Chance*100" precision="1"/>% chance to stun.
+Button/Tooltip/ResearchDehakaUltraliskCrashingCharge=<c val ="ffff8a">Primal Ultralisks</c> can charge to a target location, knocking back units in the area and dealing <d ref="Effect,DehakaUltraliskCrashingChargeDamage,Amount"/> damage.
+Button/Tooltip/ResearchDehakaUltraliskRegen=<c val ="ffff8a">Primal Ultralisks</c> and <c val ="ffff8a">Tyrannozors</c> regenerate life quickly when out of combat.
+Button/Tooltip/ResearchSlicingGlave=<c val ="ffff8a">Primal Mutalisks</c> deal <d ref="(Effect,DehakaMutaliskAirLevel3GlaiveWurmDamage,Amount-Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount)*100/Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount"/>% increased damage against air units. 
+Button/Tooltip/SlicingGlave=Deals <d ref="(Effect,DehakaMutaliskAirLevel3GlaiveWurmDamage,Amount-Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount)*100/Effect,DehakaMutaliskLevel3GlaiveWurmDamage,Amount"/>% increased damage against air units.
+Button/Tooltip/TyrannozorPassive=Dakrun's Den allows you to evolve Tyrannozors.
+Button/Tooltip/primalzerglingmovementspeed=Increases the movement speed of <c val="ffff8a">Primal Zerglings</c>.
+Carpets the ground with fire, Enemy units in the area take <d ref="(Effect,DehakaGlevigFirebreathCreateGoverningPersistent,PeriodCount*Effect,DehakaGlevigFirebreathDamage,Amount) / 2"/> damage over <d ref="(Effect,DehakaGlevigFirebreathCreateGoverningPersistent,PeriodCount*Effect,DehakaGlevigFirebreathCreateGoverningPersistent,PeriodicPeriodArray[0]) / 2"/> seconds.
+Commander/Name/DehakaConsole=Dehaka Console
+DocInfo/DescLong=Dehaka Mod for SC Revolution Overdrive
+DocInfo/DescShort=Any Players
+DocInfo/Name=Dehaka Mod for SC Revolution Overdrive
+Effect/Name/DehakaConcoonEatLoadOrderSet=DehakaConcoonEatLoadOrderSet
+Effect/Name/DehakaConsumeApplyBehavior=DehakaConsumeApplyBehavior
+Effect/Name/DehakaConsumeApplyStunBehavior=DehakaConsumeApplyStunBehavior
+Effect/Name/DehakaConsumeApplyTentacleBehavior=DehakaConsumeApplyTentacleBehavior
+Effect/Name/DehakaConsumeCreatePlaceholder=DehakaConsumeCreatePlaceholder
+Effect/Name/DehakaConsumeCreationSet=DehakaConsumeCreationSet
+Effect/Name/DehakaConsumeDelayPersistent=DehakaConsumeDelayPersistent
+Effect/Name/DehakaConsumeDisableCommandCard=DehakaConsumeDisableCommandCard
+Effect/Name/DehakaConsumeEffectBiological=DehakaConsumeEffectBiological
+Effect/Name/DehakaConsumeEffectHeroic=DehakaConsumeEffectHeroic
+Effect/Name/DehakaConsumeEffectMechanicalSet=DehakaConsumeEffectMechanicalSet
+Effect/Name/DehakaConsumeEffectPsionic=DehakaConsumeEffectPsionic
+Effect/Name/DehakaConsumeEffectPsionicSet=DehakaConsumeEffectPsionicSet
+Effect/Name/DehakaConsumeImpactEatDamage=DehakaConsumeImpactEatDamage
+Effect/Name/DehakaConsumeImpactEatDamageReal=DehakaConsumeImpactEatDamageReal
+Effect/Name/DehakaConsumeLaunchMissile=DehakaConsumeLaunchMissile
+Effect/Name/DehakaConsumeLaunchTarget=DehakaConsumeLaunchTarget
+Effect/Name/DehakaConsumeLaunchTargetSet=Dehaka Consume Launch Target Set
+Effect/Name/DehakaConsumeLaunchTargetVisual=Dehaka Consume Launch Target Visual
+Effect/Name/DehakaConsumeLaunchTargetVisualImpact=Dehaka Consume Launch Target Visual Impact
+Effect/Name/DehakaConsumeMakePrecursor=DehakaConsumeMakePrecursor
+Effect/Name/DehakaConsumeReflectDamage=DehakaConsumeReflectDamage
+Effect/Name/DehakaConsumeSet=DehakaConsumeSet
+Effect/Name/DehakaConsumeSuicideRemove=DehakaConsumeSuicideRemove
+Effect/Name/DehakaConsumeVisualMissileCopyTargetFacing=DehakaConsumeVisualMissileCopyTargetFacing
+Effect/Name/DehakaCoopReviveEat=DehakaCoopReviveEat
+Effect/Name/DehakaDakrunCalldownMP=DehakaDakrunCalldownMP
+Effect/Name/DehakaDakrunCalldownSet=DehakaDakrunCalldownSet
+Effect/Name/DehakaDakrunSpawnMP=DehakaDakrunSpawnMP
+Effect/Name/DehakaEssenceReviveDummy=DehakaEssenceReviveDummy
+Effect/Name/DehakaEssenceReviveRequirementDummy=DehakaEssenceReviveRequirementDummy
+Effect/Name/DehakaExtractor=DehakaExtractor
+Effect/Name/DehakaMurvarSpawnSet=DehakaMurvarSpawnSet
+Effect/Name/DehakaMutaliskAttackingAB=DehakaMutaliskAttackingAB
+Error/ImpalerBurrowed=Must Burrow to attack.
+Error/TargetMustBeNearInPrimalHatchery=Target must be near a Primal Hive.
+Param/Expression/lib_40BC87EB_75B33ADE=Essence ~A~<n/>Collect to increase Dehaka's power and restore life
+Param/Expression/lib_40BC87EB_F07BDE2B=<c val="FF9800">Dehaka has died. Let Dehaka consume essences through Dehaka's Den to let him revive and join the battle.</c>
+Param/Value/lib_40BC87EB_0CC790E5=Dehaka has died. Construct Dehaka's Den to allow him revive.
+Param/Value/lib_40BC87EB_A907A787=Dehaka has been revived at his den to join the battle.
+Param/Value/lib_40BC87EB_DD36035D=Dehaka is ready for battle.
+Race/Name/PZrg=Primal Zerg
+RequirementNode/Tooltip/And1385659935EqSumCountUnitGlevigDummyQueuedOrBetterCountUnitMurvarDummyQueuedOrBetterCountUnitDakrunDummyQueuedOrBetter0EqSumCountUpgradeDehakaCalldownGlevigQueuedOrBetterCountUpgradeDehakaCalldownMu540949625=No Called Primal Pack Leader
+RequirementNode/Tooltip/CountUnitAlias_PrimalBarracksCompleteOnly2498476098=Primal Warden
+RequirementNode/Tooltip/CountUpgradeDehakaBurrowResearchCompleteOnly829393666=Evolve Burrow at the Primal Hive
+RequirementNode/Tooltip/CountUpgradeDehakaCalldownDakrunCompleteOnly2973833876=Calldown Dakrun at the Dakrun's Den
+RequirementNode/Tooltip/CountUpgradeDehakaCalldownGlevigCompleteOnly3696788027=Calldown Glevig at the Glevig's Den
+RequirementNode/Tooltip/CountUpgradeDehakaCalldownMurvarCompleteOnly934940264=Calldown Murvar at the Murvar's Den
+RequirementNode/Tooltip/CountUpgradeDehakaGlevigRoachFireBreathCompleteOnly750942037=Research Concentrated Fire at Glevig's Den
+RequirementNode/Tooltip/CountUpgradeDehakaGuardianExplosiveBombCompleteOnly2817616560=Evolve Explosive Spores at Murvar's Den
+RequirementNode/Tooltip/CountUpgradeDehakaGuardianFuryCompleteOnly1785985127=Evolve Primordial Fury at Murvar's Den
+RequirementNode/Tooltip/CountUpgradeDehakaHydraliskSpeedCompleteOnly4292097330=Evolve Muscular Augments at Glevig's Den
+RequirementNode/Tooltip/CountUpgradeDehakaImpalerTenderizeCompleteOnly472547941=Evolve Tenderize at Glevig's Den
+RequirementNode/Tooltip/CountUpgradeDehakaMurvarCreeperAirCompleteOnly3250439292=Evolve Aerial Burst Sacs at Murvar's Den
+RequirementNode/Tooltip/CountUpgradeDehakaMutaliskAirDoubleDamageCompleteOnly2775413166=Evolve Slicing Glave at Murvar's Den
+RequirementNode/Tooltip/CountUpgradeDehakaMutaliskDamageReductionCompleteOnly2919215546=Evolve Shifting Carapace at Murvar's Den
+RequirementNode/Tooltip/CountUpgradeDehakaMutaliskRespawnOnDeathCompleteOnly3112898470=Evolve Primal Reconstitution at Murvar's Den
+RequirementNode/Tooltip/CountUpgradeDehakaRavasaurRangeCompleteOnly520421447=Evolve Enlarged Parotid Glands at Glevig's Den
+RequirementNode/Tooltip/CountUpgradeDehakaRavasaurVSArmorCompleteOnly1565222249=Evolve Dissolving Acid at Glevig's Den
+RequirementNode/Tooltip/CountUpgradeDehakaRoachMoveSpeedCompleteOnly450217508=Evolve Glial Reconstitution at Glevig's Den
+RequirementNode/Tooltip/CountUpgradeDehakaTyrannozorArmorAuraCompleteOnly3080465665=Evolve Tyrant's Protection at Dakrun's Den
+RequirementNode/Tooltip/CountUpgradeDehakaTyrannozorFanOfKnivesCompleteOnly1900012631=Evolve Barrage of Spikes at Dakrun's Den
+RequirementNode/Tooltip/CountUpgradeDehakaUltraliskBashCompleteOnly1166293633=Evolve Impaling Strike at Dakrun's Den
+RequirementNode/Tooltip/CountUpgradeDehakaUltraliskCrashingChargeCompleteOnly742091005=Evolve Brutal Charge at Dakrun's Den
+RequirementNode/Tooltip/CountUpgradeDehakaUltraliskRegenCompleteOnly1822956796=Evolve Healing Adaptation at Dakrun's Den
+RequirementNode/Tooltip/CountUpgradePrimalOverlordTransportCompleteOnly3569173534=Evolve Ventral Sacs at the Primal Hive
+RequirementNode/Tooltip/CountUpgradePrimalZerglingAttackSpeedCompleteOnly478611823=Evolve Adrenal Glands at the Primal Hive
+RequirementNode/Tooltip/Eq644957840SumCountUnitDehakaGlevigCompleteOnlyCountUnitDehakaMurvarCompleteOnlyCountUnitDehakaDakrunCompleteOnly0=No Primal Pack Leader
+RequirementNode/Tooltip/LT4175749157CountUnitDehakaCoopReviveCocoonQueuedOrBetter1=Limit 1
+RequirementNode/Tooltip/LT4175749157CountUnitDehakaDakrunStructureQueuedOrBetter1=Limit 1
+RequirementNode/Tooltip/LT4175749157CountUnitDehakaGlevigStructureQueuedOrBetter1=Limit 1
+RequirementNode/Tooltip/LT4175749157CountUnitDehakaMurvarStructureQueuedOrBetter1=Limit 1
+RequirementNode/Tooltip/Not1116342123CountUpgradeDehakaCalldownMurvarQueuedOrBetter=No Murvar Called
+RequirementNode/Tooltip/Not1760688329CountUnitDehakaMurvarCompleteOnly=No Murvar
+RequirementNode/Tooltip/Not1963173822CountUnitDehakaDakrunCompleteOnly=No Dakrun
+RequirementNode/Tooltip/Not2483313128CountUnitDehakaGlevigCompleteOnly=No Glevig
+RequirementNode/Tooltip/Not2999093840CountUpgradeDehakaCalldownDakrunQueuedOrBetter=No Dakrun Called
+RequirementNode/Tooltip/Not3583686659CountUpgradeDehakaCalldownGlevigQueuedOrBetter=No Glevig Called
+RequirementNode/Tooltip/Or2498476098CountUnitDehakaBarracksCompleteOnlyCountUnitDehakaBarracksUprootedCompleteOnly=Primal Warden
+Text/TargetLifeMoreThan500=Only units with under 500 life points can be targeted.
+UI/DehakaSpawning=Spawning
+UI/ResourceSupplyToolTip_PZrg=All living units cost supply. Build Primal Overlords to increase supply. 
+UI/Summoning=Summoning
+Unit/Category/ZergPrimal=Primal Zerg
+Unit/LifeArmorName/PrimalZergArmor=Primal Zerg Carapace
+Unit/Name/CoopDehakaGlevigEggHydralisk=Egg
+Unit/Name/CoopDehakaGlevigEggRoach=Egg
+Unit/Name/CoopDehakaGlevigEggZergling=Egg
+Unit/Name/DehakaBarracks=Primal Warden
+Unit/Name/DehakaBarracksUprooted=Primal Warden
+Unit/Name/DehakaConsumeLaunchTargetMissile=Dehaka Consume Launch Target Missile
+Unit/Name/DehakaConsumeMissile=Dehaka Consume Missile
+Unit/Name/DehakaCoop=Dehaka
+Unit/Name/DehakaCoopReviveCocoon=Dehaka's Den
+Unit/Name/DehakaCreeper=Creeper
+Unit/Name/DehakaCreeperFlying=Explosive Creeper
+Unit/Name/DehakaDakrun=Dakrun
+Unit/Name/DehakaDakrunStructure=Dakrun's Den
+Unit/Name/DehakaDrone=Primal Drone
+Unit/Name/DehakaDroneBurrowed=Primal Drone
+Unit/Name/DehakaGlevig=Glevig
+Unit/Name/DehakaGlevigStructure=Glevig's Den
+Unit/Name/DehakaGuardian=Primal Guardian
+Unit/Name/DehakaHatchery=Primal Hive
+Unit/Name/DehakaHatcheryUprooted=Primal Hive
+Unit/Name/DehakaHydraliskLevel2=Primal Hydralisk
+Unit/Name/DehakaHydraliskLevel2Burrowed=Primal Hydralisk
+Unit/Name/DehakaLocust=Primal Locust
+Unit/Name/DehakaLocustFlying=Primal Locust
+Unit/Name/DehakaMurvar=Murvar
+Unit/Name/DehakaMurvarStructure=Murvar's Den
+Unit/Name/DehakaMutaliskLevel3=Primal Mutalisk
+Unit/Name/DehakaMutaliskReviveEgg=Primal Mutalisk Chrysalis
+Unit/Name/DehakaNydusDestroyer=Primal Wurm
+Unit/Name/DehakaPrimalSwarmHost=Creeper Host
+Unit/Name/DehakaPrimalSwarmHostBurrowed=Creeper Host
+Unit/Name/DehakaRavasaur=Ravasaur
+Unit/Name/DehakaRavasaurBurrowed=Ravasaur
+Unit/Name/DehakaRoachBurrowed=Primal Roach
+Unit/Name/DehakaRoachLevel2=Primal Roach
+Unit/Name/DehakaRoachLevel2Burrowed=Primal Roach
+Unit/Name/DehakaRoachLevel3=Primal Igniter
+Unit/Name/DehakaRoachLevel3Burrowed=Primal Igniter
+Unit/Name/DehakaSwarmHost=Primal Host
+Unit/Name/DehakaSwarmHostBurrowed=Primal Host
+Unit/Name/DehakaTrainEgg=Egg
+Unit/Name/DehakaUltraliskLevel2=Primal Ultralisk
+Unit/Name/DehakaUltraliskLevel2Burrowed=Primal Ultralisk
+Unit/Name/DehakaUltraliskLevel3=Tyrannozor
+Unit/Name/DehakaUltraliskLevel3Burrowed=Tyrannozor
+Unit/Name/DehakaZerglingLevel2=Primal Zergling
+Unit/Name/DehakaZerglingLevel2Burrowed=Primal Zergling
+Unit/Name/ImpalerDehaka=Impaler
+Unit/Name/ImpalerDehakaBurrowed=Impaler
+Unit/Name/PrimalOverlord=Primal Overlord
+Unit/ShieldArmorName/ZergWildMutation=Mutated Shell
+UnitKillRank/PackLeader=Primal Pack Leader
+Upgrade/Name/DehakaBurrowResearch=Burrow
+Upgrade/Name/DehakaCalldownDakrun=Calldown Dakrun
+Upgrade/Name/DehakaCalldownGlevig=Calldown Glevig
+Upgrade/Name/DehakaCalldownMurvar=Calldown Murvar
+Upgrade/Name/DehakaGlevigRoachFireBreath=Concentrated Fire
+Upgrade/Name/DehakaGuardianExplosiveBomb=Explosive Spores
+Upgrade/Name/DehakaGuardianFury=Primordial Fury
+Upgrade/Name/DehakaHydraliskSpeed=Muscular Augments
+Upgrade/Name/DehakaImpalerTenderize=Tenderize
+Upgrade/Name/DehakaMurvarCreeperAir=Aerial Burst Sacs
+Upgrade/Name/DehakaMutaliskAirDoubleDamage=Slicing Glaive
+Upgrade/Name/DehakaMutaliskDamageReduction=Shifting Carapace
+Upgrade/Name/DehakaMutaliskRespawnOnDeath=Primal Reconstitution
+Upgrade/Name/DehakaPrimalArmor=Primal Carapace
+Upgrade/Name/DehakaPrimalArmorLevel1=Primal Carapace - Level 1
+Upgrade/Name/DehakaPrimalArmorLevel2=Primal Carapace - Level 2
+Upgrade/Name/DehakaPrimalArmorLevel3=Primal Carapace - Level 3
+Upgrade/Name/DehakaPrimalWeapons=Primal Attacks
+Upgrade/Name/DehakaPrimalWeaponsLevel1=Primal Attacks - Level 1
+Upgrade/Name/DehakaPrimalWeaponsLevel2=Primal Attacks - Level 2
+Upgrade/Name/DehakaPrimalWeaponsLevel3=Primal Attacks - Level 3
+Upgrade/Name/DehakaRavasaurRange=Enlarged Parotid Glands
+Upgrade/Name/DehakaRavasaurVSArmor=Dissolving Acid
+Upgrade/Name/DehakaRoachMoveSpeed=Glial Reconstitution
+Upgrade/Name/DehakaTyrannozorArmorAura=Tyrant's Protection
+Upgrade/Name/DehakaTyrannozorFanOfKnives=Barrage of Spikes
+Upgrade/Name/DehakaUltraliskBash=Impaling Strike
+Upgrade/Name/DehakaUltraliskCrashingCharge=Brutal Charge
+Upgrade/Name/DehakaUltraliskRegen=Healing Adaptation
+Upgrade/Name/GeneMutation=Gene Mutation
+Upgrade/Name/PrimalOverlordSpeed=Pneumatized Carapace
+Upgrade/Name/PrimalOverlordTransport=Ventral Sacs
+Upgrade/Name/PrimalZerglingAttackSpeed=Adrenal Glands
+Upgrade/Name/primalzerglingmovementspeed=Metabolic Boost
+UserData/CoopAbilityDehakaConsumeEffects/Air_Text=[PH] Anti-air weapon enabled
+UserData/CoopAbilityDehakaConsumeEffects/Armored_Text=[PH] +20% Damage vs. Armored
+UserData/CoopAbilityDehakaConsumeEffects/Biological_Text=[PH] Heal 10% life
+UserData/CoopAbilityDehakaConsumeEffects/Detector_Text=[PH] Gain Detection
+UserData/CoopAbilityDehakaConsumeEffects/Light_Text=[PH] Speed +20%
+UserData/CoopAbilityDehakaConsumeEffects/Massive_Text=[PH] Gain Thorns Armor
+UserData/CoopAbilityDehakaConsumeEffects/Mechanical_Text=[PH] Gain 20% Attack Speed
+UserData/CoopAbilityDehakaConsumeEffects/Psionic_Text=[PH] Deal area damage and abilities cooldown faster
+Validator/Text/DehakaReviveValidator=Must target unburrowed Primal Zerg units occupying supply.
+Weapon/Name/DehakaAcidSpores=Acid Spores
+Weapon/Name/DehakaCoop=Claws
+Weapon/Name/DehakaCoopAirBeam=Mammoth Beam
+Weapon/Name/DehakaCreeperSuicide=Aerial Burst Sacs
+Weapon/Name/DehakaCreeperSwoop=Swooping Burst
+Weapon/Name/DehakaDroneSpines=Claws
+Weapon/Name/DehakaHydraliskLevel2NeedleSpines=Needle Spines
+Weapon/Name/DehakaKaiserBladesLevel2=Kaiser Blades
+Weapon/Name/DehakaKaiserBladesLevel3=Kaiser Blades
+Weapon/Name/DehakaLocust=Spines
+Weapon/Name/DehakaMutaliskAirGlaiveWurm=Slicing Glave
+Weapon/Name/DehakaMutaliskLevel3GlaiveWurm=Glaive Wurm
+Weapon/Name/DehakaNydusDestroyerWeapon=Viscous Bile
+Weapon/Name/DehakaRavasaur=Volatile Projection
+Weapon/Name/DehakaRoachLevel2=Acid Saliva
+Weapon/Name/DehakaRoachLevel3Cone=Fire Breath
+Weapon/Name/DehakaTownHallBaseWeapon=Acid Spit
+Weapon/Name/DehakaUltraliskMissileLaunchers=Spike Burst
+Weapon/Name/DehakaZerglingLevel2=Claws
+Weapon/Name/ImpalerDehaka=Piercing Tentacle
+Weapon/Name/KraithMelee=Spiky Headbutt
+Weapon/Name/SlivanRanged=Acid Saliva
+Weapon/Name/YagdraFireballWeapon=Spit Fire
+Weapon/Tip/ImpalerDehaka=<c val="#ColorAttackInfo">Must be burrowed to attack.</c>
+e_cmdCantBuildOnThat_PZrg=Must place on an active Vespene Geyser
+e_cmdFoodUsageImpossible_PZrg=Request not possible<n/>Supply limit reached
+e_cmdMustBuildRefineryFirst_PZrg=Must build extractor first
+e_cmdNotEnoughFood_PZrg=Too many underlings<n/>Spawn more Primal Overlords

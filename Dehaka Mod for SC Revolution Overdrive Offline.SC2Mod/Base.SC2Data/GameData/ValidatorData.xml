@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorCombine id="HardenedShieldDiamondbackValidator">
+        <CombineArray value="NotHaveDehakaMurvarPukePuddle"/>
+        <CombineArray value="NotHaveDehakaIntimatingRoarLevel2"/>
+        <CombineArray value="NotHaveDehakaIntimatingRoarLevel3"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveDehakaMurvarPukePuddle">
+        <Behavior value="CoopMurvarPukePuddleDisable"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveDehakaIntimatingRoarLevel2">
+        <Behavior value="DehakaIntimidatingRoarLv2"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveDehakaIntimatingRoarLevel3">
+        <Behavior value="DehakaIntimidatingRoarLv3"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareOrderTargetRange id="DehakaConsumeRangeCheck">
+        <Compare value="GT"/>
+        <AbilLink value="DehakaConsume"/>
+        <Value value="12"/>
+    </CValidatorUnitCompareOrderTargetRange>
+    <CValidatorUnitFilters id="DehakaConsumeTargetNotDead">
+        <WhichUnit Effect="DehakaConsumeLaunchMissile"/>
+        <Filters value="-;Dead"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="DehakaMutaliskNotAttacking">
+        <Behavior value="DehakaMutaliskAttacking"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareField id="DisguiseAsPrimalZergling">
+        <Field value="Race"/>
+        <Value value="PZrg"/>
+    </CValidatorUnitCompareField>
+    <CValidatorCombine id="DisguiseAsPrimalZerglingWithWings">
+        <Type value="And"/>
+        <CombineArray value="DisguiseAsPrimalZergling"/>
+        <CombineArray value="HasPrimalZerglingWingsUpgrade"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="DisguiseAsPrimalZerglingWithoutWings">
+        <Type value="And"/>
+        <CombineArray value="DisguiseAsPrimalZergling"/>
+        <CombineArray value="MissingPrimalZerglingWingsUpgrade"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="HasPrimalZerglingWingsUpgrade">
+        <WhichPlayer Value="Target"/>
+        <Find value="1"/>
+        <Value value="HavePrimalZerglingMovementSpeed"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaExtractor">
+        <Value value="1"/>
+        <Behavior value="DehakaExtractor"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="MissingPrimalZerglingWingsUpgrade">
+        <WhichPlayer Value="Target"/>
+        <Value value="HavePrimalZerglingMovementSpeed"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="NotHaveDehakaExtractor">
+        <Behavior value="DehakaExtractor"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareField id="TargetFoodUse1High">
+        <Compare value="LT"/>
+        <Field value="Food"/>
+        <Value value="0"/>
+    </CValidatorUnitCompareField>
+    <CValidatorUnitCompareField id="IsPZrg">
+        <Field value="Race"/>
+        <Value value="PZrg"/>
+    </CValidatorUnitCompareField>
+    <CValidatorUnitType id="IsDehakaDenCoop">
+        <Value value="DehakaCoopReviveCocoon"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareVitality id="LifeLessThan500">
+        <ResultFailed value="CantTargetThatUnit,Text/TargetLifeMoreThan500"/>
+        <Compare value="LE"/>
+        <Value value="500"/>
+    </CValidatorUnitCompareVitality>
+    <CValidatorUnitCompareBehaviorCount id="NoDehakaPrimalMutation">
+        <Behavior value="DehakaPrimalMutation"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitAbil id="TargetCanBeConsumed">
+        <Find value="1"/>
+        <AbilLink value="DehakaCoopReviveEat"/>
+    </CValidatorUnitAbil>
+    <CValidatorUnitMover id="TargetIsBeingDraggedByDehaka">
+        <Value value="DehakaConsumeTargetMissile"/>
+        <Find value="1"/>
+    </CValidatorUnitMover>
+    <CValidatorUnitCompareOrderTargetRange id="DehakaLeapRangeCheck">
+        <Compare value="GT"/>
+        <AbilLink value="DehakaLeapStomp"/>
+        <Value value="12"/>
+    </CValidatorUnitCompareOrderTargetRange>
+    <CValidatorPlayerRequirement id="DehakaStompLevel2">
+        <Find value="1"/>
+        <Value value="DehakaStompLevel2"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DehakaStompLevel3">
+        <Find value="1"/>
+        <Value value="DehakaStompLevel3"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DehakaStompLevel1">
+        <Find value="1"/>
+        <Value value="DehakaStompLevel1"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareAbilLevel id="DehakaStompAbilLevel1">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="DehakaLeapStomp"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="DehakaStompAbilLevelGT1">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="DehakaLeapStomp"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="DehakaStompAbilLevel2">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="DehakaLeapStomp"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorUnitCompareAbilLevel id="DehakaStompAbilLevel3">
+        <WhichUnit Value="Caster"/>
+        <AbilLink value="DehakaLeapStomp"/>
+        <Value value="2"/>
+    </CValidatorUnitCompareAbilLevel>
+    <CValidatorPlayerRequirement id="HaveDehakaCoopStage2">
+        <Find value="1"/>
+        <Value value="HaveDehakaCoopStage2"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveDehakaCoopStage3">
+        <Find value="1"/>
+        <Value value="HaveDehakaCoopStage3"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitMover id="NotDehakaJumping">
+        <Value value="DehakaLeapStompMissile"/>
+    </CValidatorUnitMover>
+    <CValidatorUnitMover id="DehakaJumping">
+        <Value value="DehakaLeapStompMissile"/>
+        <Find value="1"/>
+    </CValidatorUnitMover>
+    <CValidatorLocationEnumArea id="EnemiesWithin12">
+        <AreaArray>
+            <Compare value="GE"/>
+            <Count value="1"/>
+            <Radius value="12"/>
+            <Validator value="EnemyTarget"/>
+        </AreaArray>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <WhichLocation Value="CasterUnit"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorPlayerRequirement id="MurvarLairCheck">
+        <Value value="MurvarLairCheck"/>
+        <Find value="1"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DakrunLairCheck">
+        <Value value="DakrunLairCheck"/>
+        <Find value="1"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitFilters id="DehakaGlevigRegionFilters">
+        <Filters value="Visible;Player,Ally,Neutral,Worker,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorPlayerRequirement id="GlevigLairCheck">
+        <Value value="GlevigLairCheck"/>
+        <Find value="1"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="PickupCheckCoop">
+        <Type value="And"/>
+        <CombineArray value="NotHiddenSelf"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="IsDehakaCoop">
+        <Value value="DehakaCoop"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="EssenceBuff100CountLT1">
+        <Compare value="LT"/>
+        <Value value="1"/>
+        <Behavior value="EssenceBuff100"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="EssenceBuff1CountGE10">
+        <Behavior value="EssenceBuff1"/>
+        <Compare value="GE"/>
+        <Value value="10"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="EssenceBuff10CountGE10">
+        <Behavior value="EssenceBuff10"/>
+        <Compare value="GE"/>
+        <Value value="10"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="DehakaCoopReviveEatUnitType">
+        <ResultFailed value="CantTargetThatUnit,Validator/Text/DehakaReviveValidator"/>
+        <Type value="And"/>
+        <CombineArray value="TargetFoodUse1High"/>
+        <CombineArray value="IsPZrg"/>
+        <CombineArray value="TargetCanMove"/>
+        <CombineArray value="TargetCanBeConsumed"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaCreeperGene">
+        <Behavior value="DehakaGene4Creepers"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitAbil id="TargetCanMove">
+        <Find value="1"/>
+        <AbilClass value="CAbilMove"/>
+    </CValidatorUnitAbil>
+    <CValidatorLocationEnumArea id="EnemiesWithin14">
+        <AreaArray>
+            <Compare value="GE"/>
+            <Count value="1"/>
+            <Radius value="14"/>
+            <Validator value="EnemyTarget"/>
+        </AreaArray>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <WhichLocation Value="CasterUnit"/>
+        <SearchFlags index="ExtendByUnitRadius" value="1"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorLocationCompareRange id="BurrowChargeMinimumRange"/>
+    <CValidatorLocationCompareRange id="BrutalChargeMinRange">
+        <ResultFailed value="TargetIsTooClose"/>
+        <Compare value="GE"/>
+        <Range value="1"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareBehaviorCount id="TargetNotHarmless">
+        <Behavior value="Harmless"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="HaveDehakaUltraliskBash">
+        <Find value="1"/>
+        <Value value="HaveDehakaUltraliskBash"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="NotHeroicAndNotStructure">
+        <CombineArray value="NotHeroic"/>
+        <CombineArray value="NotStructureTarget"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorLocationEnumArea id="DehakaTyrannozorFanOfKnivesEnemiesNearby">
+        <AreaArray Compare="GE" Count="1" Radius="2"/>
+        <SearchFilters value="Visible;Self,Player,Ally,Neutral,Air,Structure,RawResource,HarvestableResource,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorCombine id="LifeNotFullAndHaveDehakaGeneLifeLeech">
+        <CombineArray value="HaveDehakaGeneLifeLeech"/>
+        <CombineArray value="CasterLifeNotFull"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaGeneLifeLeech">
+        <Behavior value="DehakaGeneLifeLeech"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="ImpalerIsBurrowed">
+        <Behavior value="ImpalerWeaponDisabled"/>
+        <WhichUnit Value="Caster"/>
+        <ResultFailed value="Error,Error/ImpalerBurrowed"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareSpeed id="DehakaMutaliskIsMoving">
+        <Compare value="GT"/>
+        <Value value="0.0468"/>
+    </CValidatorUnitCompareSpeed>
+    <CValidatorPlayerRequirement id="HaveDehakaMutaliskDamageReduction">
+        <Find value="1"/>
+        <Value value="HaveDehakaMutaliskDamageReduction"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="DehakaMutaliskReviveCombine">
+        <CombineArray value="IsDehakaMutalisk"/>
+        <CombineArray value="HaveDehakaMutaliskRespawnOnDeath"/>
+        <CombineArray value="DehakaMutaliskCantRevive"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="IsDehakaMutalisk">
+        <Value value="DehakaMutaliskLevel3"/>
+        <WhichUnit Value="Source"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="DehakaMutaliskCantRevive">
+        <WhichUnit Value="Source"/>
+        <Behavior value="DehakaMutaliskTimerBehavior"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorPlayerRequirement id="HaveDehakaMutaliskRespawnOnDeath">
+        <Find value="1"/>
+        <Value value="HaveDehakaMutaliskRespawnOnDeath"/>
+        <WhichUnit Value="Source"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitType id="NotDehakaMutaliskLevel3">
+        <Value value="DehakaMutaliskLevel3"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorPlayerRequirement id="HaveDehakaGuardianFury">
+        <Find value="1"/>
+        <Value value="HaveDehakaGuardianFury"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaGuardianRage1">
+        <Behavior value="DehakaGuardianRage1"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaGuardianRage2">
+        <Behavior value="DehakaGuardianRage2"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaGuardianRage3">
+        <Behavior value="DehakaGuardianRage3"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaGuardianRage4">
+        <Behavior value="DehakaGuardianRage4"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HaveDehakaGuardianRage5">
+        <Behavior value="DehakaGuardianRage5"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitFilters id="DehakaGuardianMineTargetNotDead">
+        <Filters value="-;Dead"/>
+        <WhichUnit Effect="DehakaGuardianMineKnockback"/>
+    </CValidatorUnitFilters>
+    <CValidatorLocationCompareRange id="DehakaGuardianMineRange">
+        <WhichLocation Effect="DehakaGuardianMineKnockback" Value="TargetUnit"/>
+        <Compare value="LE"/>
+        <Range value="4"/>
+        <Pathing value="1"/>
+        <Value Value="TargetUnit"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitType id="NotDehakaGuardian">
+        <Value value="DehakaGuardian"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorPlayerRequirement id="DehakaDakrunInPlay">
+        <Find value="1"/>
+        <Value value="DehakaDakrunInPlay"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="UnknownValidator">
+        <Find value="1"/>
+        <Value value="HaveDehakaCoop"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DehakaGlevigInPlay">
+        <Find value="1"/>
+        <Value value="DehakaGlevigInPlay"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="DehakaMurvarInPlay">
+        <Find value="1"/>
+        <Value value="DehakaMurvarInPlay"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveDehakaTyrannozorArmorAura">
+        <Find value="1"/>
+        <Value value="HaveDehakaTyrannozorArmorAura"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveDehakaGlevigRoachFireBreath">
+        <Find value="1"/>
+        <Value value="HaveDehakaGlevigRoachFireBreath"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitCompareBehaviorCount id="NoPreventKnockback">
+        <Behavior value="PreventKnockback"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HavePreventKnockback">
+        <Behavior value="PreventKnockback"/>
+        <Compare value="GE"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationEnumArea id="PrimalHatcheryInRadius10">
+        <AreaArray>
+            <Compare value="GT"/>
+            <Count value="0"/>
+            <Radius value="10"/>
+            <Validator value="IsPrimalHatchery"/>
+        </AreaArray>
+        <SearchFilters value="Visible;Ally,Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Invulnerable"/>
+        <ResultFailed value="TargetIsOutOfRange,Error/TargetMustBeNearInPrimalHatchery"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitType id="IsPrimalHatchery">
+        <Value value="DehakaHatchery"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsDehakaRoachLevel3">
+        <Value value="DehakaRoachLevel3"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsDehakaRoachLevel3Burrowed">
+        <Value value="DehakaRoachLevel3Burrowed"/>
+    </CValidatorUnitType>
+    <CValidatorPlayerRequirement id="PrimalZerglingUpgraded">
+        <Find value="1"/>
+        <Value value="HavePrimalZerglingMovementSpeed"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="PrimalZerglingUpgradedDeathByAcid">
+        <Type value="And"/>
+        <CombineArray value="PrimalZerglingUpgraded"/>
+        <CombineArray value="DeathByAcid"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PrimalZerglingUpgradedDeathByEviscerate">
+        <Type value="And"/>
+        <CombineArray value="PrimalZerglingUpgraded"/>
+        <CombineArray value="DeathByEviscerate"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="PrimalZerglingUpgradedDeathByFire">
+        <Type value="And"/>
+        <CombineArray value="PrimalZerglingUpgraded"/>
+        <CombineArray value="DeathByFire"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="TargetIsNotCCImmune">
+        <ResultFailed value="CantTargetUnstoppableUnits"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsFireAttackUnit">
+        <CombineArray value="IsDehakaRoachLevel3"/>
+        <CombineArray value="IsDehakaRoachLevel3Burrowed"/>
+    </CValidatorCombine>
+</Catalog>

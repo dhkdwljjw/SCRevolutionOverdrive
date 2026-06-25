@@ -1,0 +1,130 @@
+static const string NYDUS_TYPE = "NydusCanalSCBW";
+static trigger CargoTrig;
+static trigger DeathTrig;
+static const int PreplacedNydusLinks_Max = 30;
+
+static string PeerNydusKey(unit u){
+    return "NydusCanalSCBW."+IntToString(UnitGetTag(u))+".Peer";
+}
+
+static unit PeerNydusGet(unit u){
+    if(UnitGetType(u)!=NYDUS_TYPE){return null;}
+    else if(DataTableValueExists(true,PeerNydusKey(u))){
+        return DataTableGetUnit(true,PeerNydusKey(u));
+    }
+    else{return null;}
+}
+
+static void NydusScoreFix(int owner, bool isDeath){
+    int[2] cost;
+    cost[0] = CatalogFieldValueGetAsInt(c_gameCatalogUnit, NYDUS_TYPE, "CostResource[0]", owner);
+    cost[1] = CatalogFieldValueGetAsInt(c_gameCatalogUnit, NYDUS_TYPE, "CostResource[1]", owner);
+    if(isDeath){
+        cost[0] = -cost[0];
+        cost[1] = -cost[1];
+    }
+    PlayerScoreValueSetFromInt(owner, "MineralsUsedTotalTechnology", PlayerScoreValueGetAsInt(owner, "MineralsUsedTotalTechnology") - cost[0]);
+    PlayerScoreValueSetFromInt(owner, "VespeneUsedTotalTechnology", PlayerScoreValueGetAsInt(owner, "VespeneUsedTotalTechnology") - cost[1]);
+    PlayerScoreValueSetFromInt(owner, "MineralsUsedCurrentTechnology", PlayerScoreValueGetAsInt(owner, "MineralsUsedCurrentTechnology") - cost[0]);
+    PlayerScoreValueSetFromInt(owner, "VespeneUsedCurrentTechnology", PlayerScoreValueGetAsInt(owner, "VespeneUsedCurrentTechnology") - cost[1]);
+}
+
+static void PeerNydusSet(unit u1, unit u2){
+    if(UnitGetType(u1)!=NYDUS_TYPE){return;}
+    else if(UnitGetType(u2)!=NYDUS_TYPE){return;}
+    else{
+        DataTableSetUnit(true,PeerNydusKey(u1),u2);
+        DataTableSetUnit(true,PeerNydusKey(u2),u1);
+        NydusScoreFix(UnitGetOwner(u1), false);
+    }
+}
+
+static void DebugMsg(string s){
+    TriggerDebugOutput(1,StringToText(s),false);
+}
+
+static void RegisterNydus(unit u){
+    TriggerAddEventUnitCargo(CargoTrig,UnitRefFromUnit(u),true);
+    TriggerAddEventUnitDied(DeathTrig,UnitRefFromUnit(u));
+}
+
+
+bool NydusCanalSCBW_DeathTrig(bool a, bool b){
+    unit source= EventUnit();
+    unit target = PeerNydusGet(source);
+    if(UnitIsAlive(target)){
+        NydusScoreFix(UnitGetOwner(target), true);
+    }
+    UnitKill(target);
+    return true;
+}
+
+bool NydusCanalSCBW_TeleportCargoTrig(bool a, bool b){
+    unit source= EventUnit();
+    unit target = PeerNydusGet(source);
+    order o = Order(AbilityCommand(NYDUS_TYPE+"@Transport",c_abilTransportCmdUnloadAll));
+    UnitCreateEffectUnit(target, NYDUS_TYPE+"@TransportCargoAB", EventUnitCargo());
+    UnitIssueOrder(target,o,c_orderQueueAddToFront);
+    return true;
+}
+
+
+bool NydusCanalSCBW_RegisterNydusTrig(bool a, bool b){
+    unit builderUnit = EventUnit();
+    unit builtUnit = EventUnitProgressUnit();
+    // DebugMsg("builderUnit"+UnitGetType(builderUnit));
+    // DebugMsg("builtUnit"+UnitGetType(builtUnit));
+    if(UnitGetType(builderUnit)!=NYDUS_TYPE){return false;}
+    else if(UnitGetType(builtUnit)!=NYDUS_TYPE){return false;}
+    PeerNydusSet(builderUnit,builtUnit);
+    RegisterNydus(builderUnit);
+    RegisterNydus(builtUnit);
+    return true;
+}
+
+bool NydusCanalSCBW_BuildFinishTrig(bool a, bool b){
+    unit builderUnit = EventUnit();
+    unit builtUnit = EventUnitProgressUnit();
+    if(UnitGetType(builderUnit)!=NYDUS_TYPE){return false;}
+    else if(UnitGetType(builtUnit)!=NYDUS_TYPE){return false;}
+    UnitCreateEffectUnit(builderUnit, NYDUS_TYPE+"@Dummy", builtUnit);
+    UnitCreateEffectUnit(builtUnit, NYDUS_TYPE+"@Dummy", builderUnit);
+    return true;
+}
+
+bool NydusCanalSCBW_LinkPreplaced(bool a, bool b){
+    unitgroup objectGroup;
+    unit nydus1; unit nydus2;
+    int i;
+    for (i = 1; i <= PreplacedNydusLinks_Max; i += 1) {
+        objectGroup = UnitGroupFromId(i);
+        if(objectGroup == null){ break; }
+        if(UnitGroupCount(objectGroup, c_unitCountAlive) != 2){ continue; }
+        nydus1 = UnitGroupUnit(objectGroup, 1);
+        nydus2 = UnitGroupUnit(objectGroup, 2);
+        if(UnitGetType(nydus1) != NYDUS_TYPE  || UnitGetType(nydus2) != NYDUS_TYPE ) { continue; }
+        PeerNydusSet(nydus1,nydus2);
+        RegisterNydus(nydus1);
+        RegisterNydus(nydus2);
+        UnitCreateEffectUnit(nydus1, NYDUS_TYPE+"@Dummy", nydus2);
+        UnitCreateEffectUnit(nydus2, NYDUS_TYPE+"@Dummy", nydus1);
+        UnitCreateEffectUnit(nydus1, NYDUS_TYPE+"@Build", nydus2);
+        UnitCreateEffectUnit(nydus2, NYDUS_TYPE+"@Build", nydus1);
+    }
+    TriggerDestroy(TriggerGetCurrent());
+    return true;
+}
+
+void NydusCanalSCBW_Init(){
+    trigger t;
+    t= TriggerCreate("NydusCanalSCBW_TeleportCargoTrig");
+    CargoTrig = t;
+    t= TriggerCreate("NydusCanalSCBW_DeathTrig");
+    DeathTrig = t;
+    t= TriggerCreate("NydusCanalSCBW_RegisterNydusTrig");
+    TriggerAddEventUnitConstructProgress(t,null,c_unitProgressStageStart);
+    t= TriggerCreate("NydusCanalSCBW_BuildFinishTrig");
+    TriggerAddEventUnitConstructProgress(t,null,c_unitProgressStageComplete);
+    t= TriggerCreate("NydusCanalSCBW_LinkPreplaced");
+    TriggerAddEventTimeElapsed(t, 0.0625, c_timeGame);
+}

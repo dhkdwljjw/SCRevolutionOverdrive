@@ -1,0 +1,15 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Umojan
+//--------------------------------------------------------------------------------------------------
+// Function Declarations
+void lib85E3144F_gf_UmojanInfiniteMoneyMapAction (unitgroup lp_unitGroup);
+void lib85E3144F_gf_UmojanInfiniteMoneyMapNewOrder (unit lp_unit, abilcmd lp_oldAbil, abilcmd lp_newAbil);
+
+// Trigger Declarations
+trigger lib85E3144F_gt_NanoCleanse;
+trigger lib85E3144F_gt_PsionicLockdown;
+trigger lib85E3144F_gt_UmojanInit;
+trigger lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger;
+

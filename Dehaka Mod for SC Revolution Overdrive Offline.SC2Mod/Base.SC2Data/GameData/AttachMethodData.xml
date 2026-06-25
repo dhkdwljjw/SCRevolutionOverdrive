@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAttachMethodFilter id="AMFilterHardpointSetA1">
+        <Keys Keyword="Hardpoint"/>
+        <Keys Keyword="SetA" Index="1"/>
+    </CAttachMethodFilter>
+</Catalog>

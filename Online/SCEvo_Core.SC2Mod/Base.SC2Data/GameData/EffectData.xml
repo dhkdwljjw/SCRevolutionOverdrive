@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectAddTrackedUnit default="1"/>
+    <CEffectEnumTrackedUnits default="1"/>
+    <CEffectRemoveTrackedUnit default="1"/>
+    <CEffectMorph default="1"/>
+    <CEffectDamage default="1" id="SCBW_WeaponDamage" parent="DU_WEAP">
+        <Flags index="Notification" value="0"/>
+        <DamageInheritEffect value="SCBW_DamageNotification"/>
+        <Visibility value="Visible"/>
+    </CEffectDamage>
+    <CEffectDamage default="1" id="SCBW_SpellDamage">
+        <ResponseFlags index="Acquire" value="1"/>
+        <ResponseFlags index="Flee" value="1"/>
+        <SearchFlags index="CallForHelp" value="1"/>
+        <SearchFlags index="SameCliff" value="0"/>
+        <DamageInheritEffect value="SCBW_DamageNotification"/>
+    </CEffectDamage>
+    <CEffectDamage default="1" id="SCBW_WeaponDamageMissile" parent="SCBW_WeaponDamage">
+        <Kind value="Ranged"/>
+    </CEffectDamage>
+    <CEffectDamage default="1" id="SCBW_WeaponDamageSplash" parent="SCBW_WeaponDamage">
+        <Kind value="Splash"/>
+    </CEffectDamage>
+    <CEffectUserData default="1" id="SCBW_WeaponCooldown">
+        <Key value="SCBW_WeaponCooldown"/>
+        <SourceKey value="SCBW_WeaponCooldown"/>
+        <Operation value="Set"/>
+    </CEffectUserData>
+    <CEffectUserData default="1" id="DamageIncoming">
+        <?token id="Race" value="Neutral"?>
+        <?token id="x"?>
+        <Key value="IncomingDamage"/>
+        <Amount value="0">
+            <AccumulatorArray value="##x##@Damage"/>
+        </Amount>
+        <SourceKey value="IncomingDamage"/>
+        <Operation value="Set"/>
+        <EditorCategories value="Race:##Race##"/>
+    </CEffectUserData>
+    <CEffectDamage default="1" id="ExplosiveBaseDamageSCBW" parent="DU_WEAP">
+        <?token id="Race" value="Neutral"?>
+        <ArmorReduction value="0"/>
+        <!--Flags index="NoScaledDealtBonus" value="1"/>
+        <Flags index="NoFractionDealtBonus" value="1"/>
+        <Flags index="NoUnscaledDealtBonus" value="1"/-->
+        <Type value="Demolition"/>
+        <Amount value="0">
+            <AccumulatorArray value="SCBW_DamageFormula"/>
+        </Amount>
+        <DisplayFlags index="DisplayRounded" value="1"/>
+        <EditorCategories value="Race:##Race##"/>
+        <Flags index="Notification" value="0"/>
+        <DamageInheritEffect value="SCBW_DamageNotification"/>
+        <Visibility value="Visible"/>
+    </CEffectDamage>
+    <CEffectDamage default="1" id="ConcussiveBaseDamageSCBW" parent="DU_WEAP">
+        <?token id="Race" value="Neutral"?>
+        <ArmorReduction value="0"/>
+        <!--Flags index="NoScaledDealtBonus" value="1"/>
+        <Flags index="NoFractionDealtBonus" value="1"/>
+        <Flags index="NoUnscaledDealtBonus" value="1"/-->
+        <Type value="Enhanced"/>
+        <Amount value="0">
+            <AccumulatorArray value="SCBW_DamageFormula"/>
+        </Amount>
+        <DisplayFlags index="DisplayRounded" value="1"/>
+        <EditorCategories value="Race:##Race##"/>
+        <Flags index="Notification" value="0"/>
+        <DamageInheritEffect value="SCBW_DamageNotification"/>
+        <Visibility value="Visible"/>
+    </CEffectDamage>
+    <CEffectDamage default="1" id="ExplosiveDamageUISCBW" parent="DU_WEAP">
+        <?token id="Race" value="Neutral"?>
+        <AttributeFactor index="Light" value="-0.3332"/>
+        <AttributeFactor index="Armored" value="0.3334"/>
+        <ShieldFactor value="0.3334"/>
+        <DisplayFlags index="DisplayRounded" value="1"/>
+        <EditorCategories value="Race:##Race##"/>
+    </CEffectDamage>
+    <CEffectDamage default="1" id="ConcussiveDamageUISCBW" parent="DU_WEAP">
+        <?token id="Race" value="Neutral"?>
+        <AttributeFactor index="Light" value="1"/>
+        <AttributeFactor index="Armored" value="-0.5"/>
+        <ShieldFactor value="1"/>
+        <DisplayFlags index="DisplayRounded" value="1"/>
+        <EditorCategories value="Race:##Race##"/>
+    </CEffectDamage>
+    <CEffectDamage default="1" id="SCBW_WeaponDamageRanged" parent="SCBW_WeaponDamage">
+        <Kind value="Ranged"/>
+    </CEffectDamage>
+    <CEffectSet default="1" id="SCBW_WeaponImpactBase">
+        <?token id="Race" value="Neutral"?>
+        <?token id="x"?>
+        <EffectArray value="##x##@DamageApply"/>
+        <EffectArray value="##x##@DamageAccum"/>
+        <EditorCategories value="Race:##Race##"/>
+    </CEffectSet>
+    <CEffectSet default="1" id="SCBW_WeaponImpactExplBase" parent="SCBW_WeaponImpactBase">
+        <EffectArray index="1" value="SCBW_DamageFormula@TypeExpl"/>
+        <EffectArray value="##x##@DamageAccum"/>
+    </CEffectSet>
+    <CEffectSet default="1" id="SCBW_WeaponImpactConcBase" parent="SCBW_WeaponImpactBase">
+        <EffectArray index="1" value="SCBW_DamageFormula@TypeConc"/>
+        <EffectArray value="##x##@DamageAccum"/>
+    </CEffectSet>
+    <CEffectSet default="1" id="SCBW_SplashImpactZonesBase">
+        <?token id="Race" value="Neutral"?>
+        <?token id="x"?>
+        <EffectArray value="SCBW_DamageFormula@SplashFactorReset"/>
+        <EffectArray value="##x##@DamageAccum"/>
+        <EffectArray value="SCBW_DamageFormula@SplashFactorStep"/>
+        <EffectArray value="##x##@DamageAccum2"/>
+        <EffectArray value="SCBW_DamageFormula@SplashFactorStep"/>
+        <EffectArray value="##x##@DamageAccum3"/>
+        <EditorCategories value="Race:##Race##"/>
+    </CEffectSet>
+    <CEffectSet default="1" id="SCBW_SplashImpactBase">
+        <?token id="Race" value="Neutral"?>
+        <?token id="x"?>
+        <EffectArray value="##x##@DamageApply"/>
+        <EffectArray value="Bogus"/>
+        <EffectArray value="##x##@ImpactSplash"/>
+        <EditorCategories value="Race:##Race##"/>
+    </CEffectSet>
+    <CEffectSet default="1" id="SCBW_SplashImpactExplBase" parent="SCBW_SplashImpactBase">
+        <EffectArray index="1" value="SCBW_DamageFormula@TypeExpl"/>
+    </CEffectSet>
+    <CEffectSet default="1" id="SCBW_SplashImpactConcBase" parent="SCBW_SplashImpactBase">
+        <EffectArray index="1" value="SCBW_DamageFormula@TypeConc"/>
+    </CEffectSet>
+    <CEffectUserData default="1" id="MissChanceBase">
+        <ValidatorArray value="SCBW_MissChance@CheckPrimary"/>
+        <Key value="Missed"/>
+        <SourceKey value="Missed"/>
+        <Operation value="Set"/>
+        <Chance value="0.4687"/>
+    </CEffectUserData>
+    <CEffectMorph default="1" id="AirStackingMorphBase">
+        <?token id="morphTo" value="Ball"?>
+        <?token id="Race" value="Zerg"?>
+        <ValidatorArray value="NotDeadOrConstruction"/>
+        <ValidatorArray value="SCBW_NotStasisNotStunned"/>
+        <ValidatorArray value="SCBW_NotMorphing"/>
+        <WhichUnit Value="Target"/>
+        <MorphFlags index="IgnoreFacing" value="1"/>
+        <MorphFlags index="IgnorePlacement" value="1"/>
+        <MorphFlags index="IgnoreMorphing" value="1"/>
+        <MorphUnit value="##morphTo##"/>
+        <AbilKeyFallback value="##morphTo##@Morph"/>
+        <EditorCategories value="Race:##Race##"/>
+    </CEffectMorph>
+    <CEffectIssueOrder default="1" id="AirStackingMorphOrderBase">
+        <?token id="Race" value="Zerg"?>
+        <ValidatorArray value="NotDeadOrConstruction"/>
+        <ValidatorArray value="SCBW_NotStasisNotStunned"/>
+        <ValidatorArray value="SCBW_NotMorphing"/>
+        <EditorCategories value="Race:Terran"/>
+        <WhichUnit Value="Caster"/>
+        <Abil value="##id##"/>
+        <CmdFlags index="Preempt" value="1"/>
+    </CEffectIssueOrder>
+    <CEffectCreatePersistent default="1" id="AirStackingMorphDelayBase">
+        <?token id="morphTo" value="Ball"?>
+        <?token id="Race" value="Zerg"?>
+        <ValidatorArray value="NotDead"/>
+        <EditorCategories value="Race:##Race##"/>
+        <WhichLocation Value="TargetUnit"/>
+        <Flags index="EffectSuccess" value="1"/>
+        <Flags index="RandomPeriod" value="1"/>
+        <InitialDelay value="0.0625"/>
+        <PeriodCount value="65535"/>
+        <PeriodicEffectArray value="##morphTo##@Morph"/>
+        <PeriodicPeriodArray value="0"/>
+        <PeriodicPeriodArray value="0.005"/>
+        <PeriodicPeriodArray value="0.01"/>
+        <PeriodicPeriodArray value="0.015"/>
+        <PeriodicPeriodArray value="0.02"/>
+        <PeriodicPeriodArray value="0.025"/>
+        <PeriodicPeriodArray value="0.03"/>
+        <PeriodicPeriodArray value="0.035"/>
+        <PeriodicPeriodArray value="0.04"/>
+        <PeriodicPeriodArray value="0.045"/>
+        <PeriodicPeriodArray value="0.05"/>
+        <PeriodicPeriodArray value="0.055"/>
+        <PeriodicPeriodArray value="0.06"/>
+        <PeriodicPeriodArray value="0.0625"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="GeyserExhaustedRaw"/>
+    <CEffectUserData id="SCBW_LimitedRally@TeleportTest">
+        <ValidatorArray value="SCBW_LimitedRally@TeleportValidator"/>
+        <Key value="LimitedRally"/>
+        <SourceKey value="LimitedRally"/>
+        <ValidateMax value="1"/>
+        <EffectSuccess value="SCBW_LimitedRally@Teleport"/>
+    </CEffectUserData>
+    <CEffectRemoveBehavior id="SCBW_CategoryRemoveTeleportRemoveCaster">
+        <BehaviorCategories index="TeleportRemove" value="1"/>
+        <BehaviorLink value=""/>
+        <WhichUnit Value="Caster"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="SCBW_CarrierRecallSetSource">
+        <EffectArray value="SCBW_CarrierRecall"/>
+        <SetSource value="1"/>
+    </CEffectSet>
+    <CEffectDamage id="SCBW_DamageNotification">
+        <Flags index="Notification" value="1"/>
+        <Flags index="NoKillCredit" value="1"/>
+        <Flags index="NoLeech" value="1"/>
+        <Flags index="NoGain" value="1"/>
+        <Flags index="NoScaledDealtBonus" value="1"/>
+        <Flags index="NoFractionDealtBonus" value="1"/>
+        <Flags index="NoUnscaledDealtBonus" value="1"/>
+        <Flags index="NoDealtMaximum" value="1"/>
+        <Flags index="NoDealtMinimum" value="1"/>
+        <Flags index="NoScaledTakenBonus" value="1"/>
+        <Flags index="NoFractionTakenBonus" value="1"/>
+        <Flags index="NoUnscaledTakenBonus" value="1"/>
+        <Flags index="NoTakenMaximum" value="1"/>
+        <Flags index="NoTakenMinimum" value="1"/>
+        <Flags index="NoBehaviorResponse" value="1"/>
+        <Flags index="NoVitalAbsorbLife" value="1"/>
+        <Flags index="NoVitalAbsorbShields" value="1"/>
+        <Flags index="NoVitalAbsorbEnergy" value="1"/>
+        <Flags index="NoVitalLeechLife" value="1"/>
+        <Flags index="NoVitalLeechShields" value="1"/>
+        <Flags index="NoVitalLeechEnergy" value="1"/>
+        <Flags index="NoVitalGainLife" value="1"/>
+        <Flags index="NoVitalGainShields" value="1"/>
+        <Flags index="NoVitalGainEnergy" value="1"/>
+        <Flags index="NoDamageTimerReset" value="1"/>
+        <Kind value="NoProc"/>
+        <KindSplash value="NoProc"/>
+        <Minimum value="0"/>
+        <Maximum value="0"/>
+    </CEffectDamage>
+    <CEffectSet id="SCBW_MergeBegin"/>
+    <CEffectCreateUnit id="ReaperKD8Knockback">
+        <ValidatorArray value="SCBW_NotBurrowedUnit"/>
+    </CEffectCreateUnit>
+    <CEffectApplyBehavior id="NeuralParasiteDroneCheck">
+        <ValidatorArray index="0" value="IsDroneOrDroneSCBW"/>
+    </CEffectApplyBehavior>
+    <CEffectSwitch id="DisguiseEx3">
+        <CaseArray Validator="DisguiseAsMarineSCBW" Effect="DisguiseAsMarineSCBWCU"/>
+        <CaseArray Validator="DisguiseAsZealotSCBW" Effect="DisguiseAsZealotSCBWCU"/>
+        <CaseArray Validator="DisguiseAsZerglingSCBW" Effect="DisguiseAsZerglingSCBWCU"/>
+    </CEffectSwitch>
+    <CEffectSet id="CarryHarvestableVespeneGeyserGasInitial">
+        <EffectArray value="CarryHarvestableVespeneGeyserGasSearchForGeyser"/>
+    </CEffectSet>
+    <CEffectEnumArea id="CarryHarvestableVespeneGeyserGasSearchForGeyser">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Structure,HarvestableResource;Ally,Enemy,Missile,Dead"/>
+        <AreaArray MaxCount="1" Radius="0.5" Effect="CarryHarvestableVespeneGeyserGasSetPalletSize"/>
+        <AreaRelativeOffset value="0,-1"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="CarryHarvestableVespeneGeyserGasSetPalletSize">
+        <ValidatorArray value="GeyserIsExhausted"/>
+        <ImpactLocation Value="SourceUnit"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="GeyserExhaustedCheck">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Structure,RawResource,Uncommandable;Missile,Dead"/>
+        <AreaArray MaxCount="1" Radius="0.5" Effect="GeyserExhaustedCheckAB"/>
+    </CEffectEnumArea>
+    <CEffectSet id="GeyserExhaustedEnumSet">
+        <EffectArray value="GeyserExhaustedHarvestable"/>
+        <EffectArray value="GeyserExhaustedResource"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="GeyserExhaustedHarvestable"/>
+    <CEffectApplyBehavior id="GeyserExhaustedCheckAB">
+        <ValidatorArray index="0" value="GeyserIsExhausted"/>
+        <WhichUnit Value="Source"/>
+        <Behavior value="GeyserExhaustedHarvestable"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="GeyserExhaustedResource">
+        <Resources value="1000000"/>
+    </CEffectModifyUnit>
+    <CEffectUserData id="GeyserExhaustedUser">
+        <Key value="GeyserExhausted"/>
+        <SourceKey value="GeyserExhausted"/>
+        <Operation value="Set"/>
+        <TargetLocationType value="Unit"/>
+        <BehaviorScope Value="Source" Behavior="GeyserExhaustedRaw"/>
+    </CEffectUserData>
+    <CEffectSet id="GeyserExhausted">
+        <EffectArray value="GeyserExhaustedEnum"/>
+        <EffectArray value="GeyserExhaustedResource"/>
+        <EffectArray value="GeyserExhaustedRaw"/>
+        <EffectArray value="GeyserExhaustedUser"/>
+        <ValidatorArray value="NotDead"/>
+    </CEffectSet>
+    <CEffectEnumArea id="RawVespeneGeyserEnum">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Ground,HarvestableResource;Dead"/>
+        <AreaArray MaxCount="1" Radius="1" Effect="RawVespeneGeyserEnumSet"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="GeyserExhaustedEnum">
+        <ImpactLocation Value="SourceUnit"/>
+        <SearchFilters value="Ground,HarvestableResource;UnderConstruction,Dead"/>
+        <AreaArray MaxCount="1" Radius="1" Effect="GeyserExhaustedEnumSet"/>
+    </CEffectEnumArea>
+    <CEffectRemoveBehavior id="RawVespeneGeyserGasRB">
+        <BehaviorLink value="RawVespeneGeyserGas"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="RawVespeneGeyserEnumSet"/>
+    <CEffectSet id="RefinerySCBWCreate">
+        <EffectArray value="RefineryRichSearch"/>
+        <EffectArray value="GeyserExhaustedCheck"/>
+    </CEffectSet>
+    <CEffectRemoveBehavior id="SCBW_CategoryRemoveTeleportRemove">
+        <BehaviorCategories index="TeleportRemove" value="1"/>
+        <BehaviorLink value=""/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="SCBW_TrainFinish">
+        <EffectArray value="SCBW_LimitedRally@TrainFinish"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="SCBW_LimitedRally@TrainFinish">
+        <ValidatorArray value="AnyRallyPointIsSetCaster"/>
+        <Chance value="0"/>
+        <WhichLocation Value="SourcePoint"/>
+        <OffsetVectorStartLocation Value="SourcePoint"/>
+        <OffsetVectorEndLocation Value="SourcePoint"/>
+        <OffsetFacingFallback Value="Unknown"/>
+        <Flags index="EffectSuccess" value="1"/>
+        <PeriodCount value="26"/>
+        <PeriodicEffectArray value="SCBW_LimitedRally@TeleportTest"/>
+        <PeriodicOffsetArray value="0,-0.5,0"/>
+        <PeriodicOffsetArray value="0,-1,0"/>
+        <PeriodicOffsetArray value="0,-1.5,0"/>
+        <PeriodicOffsetArray value="0,-2,0"/>
+        <PeriodicOffsetArray value="0,-2.5,0"/>
+        <PeriodicOffsetArray value="0,-2.6,0"/>
+        <PeriodicOffsetArray value="0.5,-2.6,0"/>
+        <PeriodicOffsetArray value="-0.5,-2.6,0"/>
+        <PeriodicOffsetArray value="-1,-2.6,0"/>
+        <PeriodicOffsetArray value="1,-2.6,0"/>
+        <PeriodicOffsetArray value="-1.5,-2.6,0"/>
+        <PeriodicOffsetArray value="1.5,-2.6,0"/>
+        <PeriodicOffsetArray value="-2,-2.6,0"/>
+        <PeriodicOffsetArray value="2,-2.6,0"/>
+        <PeriodicOffsetArray value="-2.5,-2.6,0"/>
+        <PeriodicOffsetArray value="2.5,-2.6,0"/>
+        <PeriodicOffsetArray value="-0.5,0,0"/>
+        <PeriodicOffsetArray value="-1,0,0"/>
+        <PeriodicOffsetArray value="-1.5,0,0"/>
+        <PeriodicOffsetArray value="-2,0,0"/>
+        <PeriodicOffsetArray value="-2.5,0,0"/>
+        <PeriodicOffsetArray value="0.5,0,0"/>
+        <PeriodicOffsetArray value="1,0,0"/>
+        <PeriodicOffsetArray value="1.5,0,0"/>
+        <PeriodicOffsetArray value="2,0,0"/>
+        <PeriodicOffsetArray value="2.5,0,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectApplyBehavior id="SCBW_WorkerDropOffStun">
+        <ValidatorArray index="0" value="NotDead"/>
+        <ValidatorArray value="SCBW_Harvesting"/>
+    </CEffectApplyBehavior>
+    <CEffectTeleport id="SCBW_LimitedRally@Teleport">
+        <WhichUnit Effect="SCBW_LimitedRally@TrainFinish"/>
+        <ClearQueuedOrders value="0"/>
+        <PlacementArc value="360"/>
+        <PlacementRange value="4"/>
+        <Range value="4"/>
+        <SourceLocation Effect="SCBW_LimitedRally@TrainFinish" Value="TargetUnitOrPoint"/>
+        <TargetLocation Value="TargetPoint"/>
+        <TeleportFlags index="TestCliff" value="1"/>
+        <TeleportFlags index="TestFog" value="0"/>
+        <TeleportFlags index="TestZone" value="1"/>
+        <ValidatorArray value="SCBW_LimitedRally@TeleportValidator"/>
+    </CEffectTeleport>
+    <CEffectRemoveBehavior id="SCBW_UnderConstructionRB">
+        <BehaviorLink value="UnderConstruction"/>
+    </CEffectRemoveBehavior>
+    <CEffectModifyPlayer id="DummyResourceSpend"/>
+    <CEffectCreatePersistent id="SCBW_CarrierRecall">
+        <ValidatorArray value="CarrierSCBW@Is"/>
+        <WhichLocation Value="SourceUnit"/>
+        <InitialEffect value="SCBW_CarrierRecallCancelAttack"/>
+        <ExpireDelay value="0.01"/>
+        <ExpireEffect value="SCBW_CarrierRecallOrder"/>
+    </CEffectCreatePersistent>
+    <CEffectIssueOrder id="SCBW_CarrierRecallOrder">
+        <WhichUnit Value="Source"/>
+        <Abil value="stop"/>
+        <CmdFlags index="Preempt" value="1"/>
+        <Player Value="Source"/>
+    </CEffectIssueOrder>
+    <CEffectCancelOrder id="SCBW_CarrierRecallCancelAttack">
+        <WhichUnit Value="Source"/>
+        <AbilCmd value="attack,Execute"/>
+    </CEffectCancelOrder>
+    <CEffectDamage id="FakeWeaponDummy" parent="DU_WEAP">
+        <ResponseFlags index="Acquire" value="0"/>
+        <ResponseFlags index="Flee" value="0"/>
+        <Visibility value="Hidden"/>
+        <Flags index="Notification" value="0"/>
+    </CEffectDamage>
+    <CEffectIssueOrder id="ZergSCBW@Unburrow">
+        <EditorCategories value="Race:Zerg"/>
+        <Abil value="ZerglingSCBW@BurrowUp"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="ZergSCBW@BurrowCancel">
+        <Abil value="ZerglingSCBW@BurrowDown"/>
+        <AbilCmdIndex value="1"/>
+    </CEffectIssueOrder>
+</Catalog>

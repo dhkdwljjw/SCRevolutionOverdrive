@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAccumulatorEffectAmount id="DamageInheritedPsionicLockdown">
+        <AmountType value="DamageInherited"/>
+    </CAccumulatorEffectAmount>
+    <CAccumulatorConstant id="ShieldAmountPsionicLockdown">
+        <MinAccumulation value="0"/>
+        <Amount value="200"/>
+    </CAccumulatorConstant>
+    <CAccumulatorUserData id="ShieldRemainingPsionicLockdownSource">
+        <MinAccumulation value="0"/>
+        <Key value="PsionicLockdownShield"/>
+        <BehaviorScope Value="Source" Behavior="PsionicLockdownData"/>
+    </CAccumulatorUserData>
+    <CAccumulatorEffectAmount id="DamageInheritedNanoCleanse">
+        <AmountType value="DamageInherited"/>
+    </CAccumulatorEffectAmount>
+    <CAccumulatorConstant id="ShieldAmountNanoCleanse">
+        <MinAccumulation value="0"/>
+        <Amount value="300"/>
+    </CAccumulatorConstant>
+    <CAccumulatorUserData id="ShieldRemainingNanoCleanseSource">
+        <MinAccumulation value="0"/>
+        <Key value="NanoCleanseShield"/>
+        <BehaviorScope Value="Source" Behavior="NanoCleanseData"/>
+    </CAccumulatorUserData>
+</Catalog>

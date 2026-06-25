@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="MedivacMengskSiegeTankAirlift"/>
+<Behavior id="MedivacMengskSiegeTankAirliftLevel"/>
+<Commander id="UIMengsk"/>
+<Effect id="TrooperMengskEnlistingAB"/>
+<Effect id="TrooperMengskEnlistingRB"/>
+</Preload>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorPlayerRequirement id="HaveSentryPostAccelerator">
+        <Find value="1"/>
+        <Value value="HaveSentryPostAccelerator"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveUmojanPowerShields">
+        <Find value="1"/>
+        <Value value="HaveUmojanPowerShields"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorCombine id="NotMeteorTargetValidatorLeft">
+        <CombineArray value="MeteorTargetValidatorLeft"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitFilters id="MeteorTargetValidatorLeft">
+        <WhichUnit Effect="MeteorMissileCPLeft"/>
+        <Filters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorCombine id="NotMeteorTargetValidatorRight">
+        <CombineArray value="MeteorTargetValidatorRight"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitFilters id="MeteorTargetValidatorRight">
+        <WhichUnit Effect="MeteorMissileCPRight"/>
+        <Filters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorCombine id="NotZeusAATargetValidator">
+        <CombineArray value="ZeusAATargetValidator"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitFilters id="ZeusAATargetValidator">
+        <Filters value="Air;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <WhichUnit Effect="ZeusAA"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareBehaviorCount id="HaveVespeneHarvesterUmojanTarget">
+        <Behavior value="VespeneHarvesterUmojanTarget"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="IsVespenePlant">
+        <Value value="VespenePlant"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsVespenePlantRich">
+        <Value value="VespenePlantRich"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareBehaviorCount id="NoVespeneHarvesterUmojanTarget">
+        <ResultFailed value="Error,Error/VespeneDroneTarget"/>
+        <Behavior value="VespeneHarvesterUmojanTarget"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="VespeneHarvesterUmojanCombineValidator">
+        <ResultFailed value="Error,Error/VespeneDroneTarget"/>
+        <Type value="And"/>
+        <CombineArray value="VespeneHarvesterUmojanValidTarget"/>
+        <CombineArray value="NoVespeneHarvesterUmojanTarget"/>
+        <CombineArray value="NotUnderConstruction"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="VespeneHarvesterUmojanPeriodicCheck">
+        <Type value="And"/>
+        <CombineArray value="TargetIsVisible"/>
+        <CombineArray value="TargetNotDead"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="VespeneHarvesterUmojanValidTarget">
+        <ResultFailed value="CantTargetThatUnit"/>
+        <CombineArray value="IsVespenePlant"/>
+        <CombineArray value="IsVespenePlantRich"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="HaveMineralResonator">
+        <Behavior value="MineralResonator"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasMineralResonatorAmplify">
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+        <Behavior value="MineralResonatorAmplify"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasPsionicSuppressionField">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Behavior value="PsionicSuppressionField"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitType id="IsPioneer">
+        <Value value="Pioneer"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="WorkerIsGatheringSet">
+        <CombineArray value="WorkerIsGathering"/>
+        <CombineArray value="WorkerIsGatheringInfinite"/>
+    </CValidatorCombine>
+    <CValidatorUnitOrderQueue id="WorkerIsGathering">
+        <AbilLink value="PioneerHarvest"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="WorkerIsGatheringInfinite">
+        <AbilLink value="PioneerHarvestInfinite"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorCombine id="NormalMinerals">
+        <CombineArray value="MineralFieldMinerals"/>
+        <CombineArray value="MineralFieldMinerals450"/>
+        <CombineArray value="MineralFieldMinerals750"/>
+        <CombineArray value="MineralFieldMineralsOpaque"/>
+        <CombineArray value="MineralFieldMineralsOpaque900"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="HighYieldMinerals">
+        <CombineArray value="HighYieldMineralFieldMinerals"/>
+        <CombineArray value="HighYieldMineralFieldMinerals750"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="MineralFieldMinerals">
+        <Behavior value="MineralFieldMinerals"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MineralFieldMinerals450">
+        <Behavior value="MineralFieldMinerals450"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MineralFieldMinerals750">
+        <Behavior value="MineralFieldMinerals750"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MineralFieldMineralsOpaque">
+        <Behavior value="MineralFieldMineralsOpaque"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MineralFieldMineralsOpaque900">
+        <Behavior value="MineralFieldMineralsOpaque900"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HighYieldMineralFieldMinerals">
+        <Behavior value="HighYieldMineralFieldMinerals"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="HighYieldMineralFieldMinerals750">
+        <Behavior value="HighYieldMineralFieldMinerals750"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="TargetHavePsionicLockdown">
+        <Behavior value="PsionicLockdown"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NotHavePsionicLockdown">
+        <Behavior value="PsionicLockdown"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="HardenedShieldDiamondbackValidator">
+        <Type value="And"/>
+        <CombineArray value="NotHavePsionicLockdown"/>
+        <CombineArray value="NotHaveScramblerMissileBehavior"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsAresArtilleryorZeus">
+        <CombineArray value="IsAresArtillery"/>
+        <CombineArray value="IsZeus"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="IsAresArtillery">
+        <Value value="AresArtillery"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsZeus">
+        <Value value="Zeus"/>
+    </CValidatorUnitType>
+    <CValidatorPlayerRequirement id="HaveFragmentShrapnel">
+        <Find value="1"/>
+        <Value value="HaveFragmentShrapnel"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="HaveShapedBlastWarhead">
+        <Find value="1"/>
+        <Value value="HaveShapedBlastWarhead"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="MaelstromRoundsArmed">
+        <Find value="1"/>
+        <Value value="MaelstromRoundsArmed"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitOrderQueue id="NotCasterAttackTarget">
+        <AbilLink value="attack"/>
+        <Find value="0"/>
+        <Target Value="TargetUnit"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorCombine id="IsUmojanInfantry">
+        <CombineArray value="IsWarrior"/>
+        <CombineArray value="IsCrusader"/>
+        <CombineArray value="IsStriker"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="IsWarrior">
+        <Value value="Warrior"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsCrusader">
+        <Value value="Crusader"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="IsStriker">
+        <Value value="Striker"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareVital id="CasterHas25Energy">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="25"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="ActivateStasisWardValidators">
+        <CombineArray value="TargetIsNotCCImmune"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasAthenaWeaponSwitch">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Behavior value="AthenaWeaponSwitch"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasNoAthenaWeaponSwitch">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="AthenaWeaponSwitch"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasPointDefenseSystemAquila">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Behavior value="PointDefenseSystemAquila"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="CasterEnergyGE25">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="25"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareVital id="CasterShieldsGE50">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GE"/>
+        <Value value="50"/>
+        <Vital value="Shields"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="ShadowAssassinSnipeValidator">
+        <CombineArray value="CasterEnergyGE25"/>
+        <CombineArray value="CanSpendEnergy"/>
+        <ResultFailed value="NotEnoughEnergy"/>
+        <Type value="And"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="GravitonBeamValidators">
+        <CombineArray value="TargetIsNotCCImmune"/>
+    </CValidatorCombine>
+    <CValidatorLocationEnumArea id="HeraProtocolSearchValidator">
+        <WhichLocation Effect="BarragePersistent"/>
+        <AreaArray Radius="6"/>
+        <Compare value="Eq"/>
+        <SearchFilters value="-;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasTomahawkCruiseMissileA">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Behavior value="TomahawkCruiseMissileA"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasTomahawkCruiseMissileB">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Behavior value="TomahawkCruiseMissileB"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasTomahawkCruiseMissileC">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Behavior value="TomahawkCruiseMissileC"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="NeuralParasitePeriodicValidator">
+        <CombineArray value="TargetIsNotCCImmune"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasShadowAssassinSnipe">
+        <Behavior value="ShadowAssassinSnipe"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="CasterHasNanoCleanse">
+        <Behavior value="NanoCleanse"/>
+        <WhichUnit Value="Caster"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="TargetHaveNanoCleanse">
+        <Behavior value="NanoCleanse"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="TargetNotHaveNanoCleanse">
+        <Behavior value="NanoCleanse"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="TargetIsNotCCImmune">
+        <ResultFailed value="CantTargetUnstoppableUnits"/>
+        <Type value="And"/>
+        <CombineArray value="TargetNotHaveNanoCleanse"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsFireAttackUnit">
+        <CombineArray value="IsHellionTank"/>
+        <CombineArray value="IsHellion"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="NotFireAttackUnit">
+        <CombineArray value="IsFireAttackUnit"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitFilters id="CasterNotStunned">
+        <WhichUnit Value="Caster"/>
+        <Filters value="-;Stunned"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitInWeaponRange id="HaywireMissileMaxDistance">
+        <ResultFailed value="TargetIsOutOfRange"/>
+    </CValidatorUnitInWeaponRange>
+    <CValidatorUnitFilters id="HaywireMissileFilter">
+        <Filters value="Visible;Self,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CValidatorUnitFilters>
+    <CValidatorUnitCompareVital id="TargetShieldsLT250">
+        <Value value="250"/>
+        <Compare value="LT"/>
+        <Vital value="Shields"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorCombine id="UmojanPowerShieldValidator">
+        <CombineArray value="CasterShieldsGE1"/>
+        <CombineArray value="CasterHasNanoCleanse"/>
+    </CValidatorCombine>
+    <CValidatorUnitType id="IsNotTacticalCruiseMissile">
+        <Value value="TacticalCruiseMissile"/>
+        <Find value="0"/>
+    </CValidatorUnitType>
+    <CValidatorUnitCompareField id="DisguiseAsWarrior">
+        <Field value="Race"/>
+        <Value value="Umoj"/>
+    </CValidatorUnitCompareField>
+</Catalog>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeaponLegacy id="ArchonSCBWWeapon">
+        <Range value="3"/>
+        <Period value="1.375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BattlecruiserSCBWWeaponAir">
+        <Range value="7"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BattlecruiserSCBWWeaponGround">
+        <Range value="7"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BroodlingSCBWWeapon">
+        <Period value="0.9375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CarrierSCBWWeapon@Dummy">
+        <DisplayEffect value="InterceptorSCBWWeaponAlt@Damage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CorsairSCBWWeapon">
+        <Period value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DarkArchonSCBWWeapon">
+        <Period value="1.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DarkTemplarSCBWWeapon">
+        <Period value="1.694"/>
+        <Range value="0.1"/>
+        <RangeSlop value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DevourerSCBWWeapon">
+        <DamagePoint value="0.0625"/>
+        <Range value="8"/>
+        <Period value="3.5625"/>
+        <RangeSlop value="1"/>
+        <MinScanRange value="8"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DragoonSCBWWeapon">
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <LegacyOptions index="Uninterruptible" value="0"/>
+        <DamagePoint value="0.167"/>
+        <Period value="1.875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DroneSCBWWeapon">
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <Range value="0.5"/>
+        <Period value="1.54"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="FirebatSCBWWeapon">
+        <MinScanRange value="5"/>
+        <Period value="1.375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="FirebatSCBWWeapon@Bunker">
+        <Period value="1.375"/>
+        <UninterruptibleDuration value="0.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="FirebatSCBWWeapon@Melee">
+        <Period value="1.375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathSCBWWeaponAir">
+        <MinScanRange value="6.5"/>
+        <Arc value="144.9975"/>
+        <Range value="6"/>
+        <Period value="1.4375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathSCBWWeaponAir@Fake">
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathSCBWWeaponGround">
+        <MinScanRange value="6.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GoliathSCBWWeaponGround@Fake">
+        <MinScanRange value="6.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GuardianSCBWWeapon">
+        <Range value="11"/>
+        <MinScanRange value="11"/>
+        <DamagePoint value="0.1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HydraliskSCBWWeapon">
+        <MinScanRange value="5.5"/>
+        <Period value="1.0312"/>
+        <DamagePoint value="0.08"/>
+        <Range value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HydraliskSCBWWeaponAlt">
+        <MinScanRange value="5.5"/>
+        <DamagePoint value="0.08"/>
+        <Range value="5"/>
+        <Period value="0.9687"/>
+    </CWeaponLegacy>
+    <CWeaponStrafe id="InterceptorSCBWWeaponAlt" parent="InterceptorSCBWWeapon">
+        <Marker Link="Weapon/InterceptorSCBWWeaponAlt"/>
+        <Cost>
+            <Cooldown Link="Weapon/InterceptorSCBWWeaponAlt"/>
+        </Cost>
+        <Effect value="InterceptorSCBWWeaponAlt@CP"/>
+        <DisplayEffect value="InterceptorSCBWWeaponAlt@Damage"/>
+    </CWeaponStrafe>
+    <CWeaponLegacy id="LurkerSCBWWeapon">
+        <MinScanRange value="8.5"/>
+        <Range value="8"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LurkerSCBWWeaponAlt">
+        <MinScanRange value="8.5"/>
+        <Range value="8"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MarineSCBWWeapon">
+        <Range value="5"/>
+        <MinScanRange value="5.5"/>
+        <Period value="0.9375"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MissileTurretSCBWWeapon">
+        <Period value="0.8608"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MutaliskSCBWWeapon">
+        <Range value="5"/>
+        <ArcSlop value="90"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PhotonCannonSCBWWeapon">
+        <Period value="1.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ProbeSCBWWeapon">
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <Range value="0.5"/>
+        <Period value="1.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ReaverSCBWWeapon">
+        <MinScanRange value="10"/>
+        <Range value="10"/>
+        <DisplayEffect value="ScarabSCBWWeapon@DamageUI"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ReaverSCBWWeapon@Dummy">
+        <Range value="10"/>
+        <DisplayEffect value="ScarabSCBWWeapon@DamageUI"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ReaverSCBWWeapon@NoScan">
+        <Range value="10"/>
+        <DisplayEffect value="ScarabSCBWWeapon@DamageUI"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SCVSCBWWeapon">
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Slowing"/>
+        <Period value="1.54"/>
+        <Range value="0.1562"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScarabSCBWWeapon">
+        <DisplayEffect value="ScarabSCBWWeapon@DamageUI"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScourgeSCBWWeapon">
+        <DamagePoint value="0"/>
+        <AcquireTargetSorts>
+            <SortArray value="ScourgeSCBWWeapon@TargetSort"/>
+        </AcquireTargetSorts>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScoutSCBWWeaponAir">
+        <Range value="6"/>
+        <DamagePoint value="0.0625"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ScoutSCBWWeaponGround">
+        <DisplayAttackCount value="2"/>
+        <Range value="5"/>
+        <Period value="1.5625"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SiegeTankSCBWSiegedWeapon">
+        <Period value="3.78"/>
+        <Range value="13.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SiegeTankSCBWWeapon">
+        <MinScanRange value="7.5"/>
+        <Arc value="360"/>
+        <Period value="1.7875"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SporeColonySCBWWeapon">
+        <Range value="8"/>
+        <Period value="0.8608"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SunkenColonySCBWWeapon">
+        <Range value="7.5"/>
+        <Period value="1.75"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="UltraliskSCBWWeapon">
+        <Range value="1"/>
+        <RangeSlop value="1.25"/>
+        <Period value="0.8437"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ValkyrieSCBWWeapon">
+        <Period value="3.5625"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="VultureSCBWWeapon">
+        <Period value="1.8437"/>
+    </CWeaponLegacy>
+    <CWeaponStrafe id="VultureSCBWWeapon@StrafingWeapon">
+        <Period value="1.8437"/>
+    </CWeaponStrafe>
+    <CWeaponLegacy id="WraithSCBWWeaponAir">
+        <Range value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ZealotSCBWWeapon">
+        <Range value="0.1"/>
+        <Period value="1.2"/>
+        <RangeSlop value="1"/>
+        <UninterruptibleDuration value="0.28"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ZerglingSCBWWeapon">
+        <Range value="0.1"/>
+        <RangeSlop value="1"/>
+        <Period value="0.59"/>
+    </CWeaponLegacy>
+</Catalog>

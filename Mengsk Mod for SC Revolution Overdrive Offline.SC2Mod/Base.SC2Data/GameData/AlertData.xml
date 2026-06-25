@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAlert id="AddOnComplete_TerM">
+        <Sound value="MengskA_AddOnComplete"/>
+        <Text value="Alert/Text/AddOnComplete"/>
+    </CAlert>
+    <CAlert id="AmmoComplete_TerM">
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/AmmoComplete_Terr"/>
+    </CAlert>
+    <CAlert id="AttackTownAlly_TerM" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="MengskA_AllyBaseUnderAttack"/>
+        <Text value="Alert/Text/AttackTownAlly"/>
+        <Peripheral value="AllyBaseUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackTown_TerM" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <PingModel value="PingBaseAttack"/>
+        <Sound value="MengskA_BaseUnderAttackTerran"/>
+        <Text value="Alert/Text/AttackTown"/>
+        <Voice value="Help"/>
+        <Peripheral value="SelfBaseUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackUnitAlly_TerM" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="MengskA_AllyUnderAttack"/>
+        <Text value="Alert/Text/AttackUnitAlly"/>
+        <Peripheral value="AllyUnitUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackUnit_TerM" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="MengskA_ForcesUnderAttackTerran"/>
+        <Text value="Alert/Text/AttackUnit"/>
+        <Voice value="Help"/>
+        <Peripheral value="SelfUnitUnderAttack"/>
+    </CAlert>
+    <CAlert id="BuildComplete_TerM">
+        <Voice value="Ready"/>
+        <Peripheral value="BuildingComplete"/>
+        <Text value="Alert/Text/BuildComplete_Terr"/>
+    </CAlert>
+    <CAlert id="CalldownLaunch_TerM" parent="Global">
+        <Flags index="SoundFromLocalPlayer" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-terran-nuclearstrike.dds"/>
+        <QueueTime value="10.000000"/>
+        <Sound value="MengskA_CalldownLaunch"/>
+        <Text value="Alert/Text/CalldownLaunch"/>
+        <Peripheral value="CalldownLaunch"/>
+    </CAlert>
+    <CAlert id="CommandCenterUpgradeComplete_TerM">
+        <Sound value="MengskA_CommandCenterUpgraded"/>
+        <Peripheral value="UpgradeComplete"/>
+        <Text value="Alert/Text/CommandCenterUpgradeComplete"/>
+    </CAlert>
+    <CAlert id="MergeComplete_TerM">
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/MergeComplete_Terr"/>
+    </CAlert>
+    <CAlert id="MorphComplete_TerM">
+        <Voice value="Ready"/>
+        <Peripheral value="MorphComplete"/>
+        <Text value="Alert/Text/MorphComplete_Terr"/>
+    </CAlert>
+    <CAlert id="ResearchComplete_TerM">
+        <Sound value="MengskA_ResearchComplete"/>
+        <Peripheral value="ResearchComplete"/>
+        <Text value="Alert/Text/ResearchComplete_Terr"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_HighYieldMineral_TerM">
+        <Icon value="Assets\Textures\icon-highyieldmineral-protoss.dds"/>
+        <Sound value="MengskA_MineralsDepleted"/>
+        <Peripheral value="ResourceExhausted"/>
+        <Text value="Alert/Text/ResourceExhausted_HighYieldMineral_Terr"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_Mineral_TerM">
+        <Icon value="Assets\Textures\icon-mineral-protoss.dds"/>
+        <Sound value="MengskA_MineralsDepleted"/>
+        <Text value="Alert/Text/ResourceExhausted_Mineral"/>
+        <Peripheral value="ResourceExhausted"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_Vespene_TerM">
+        <Icon value="Assets\Textures\icon-gas-protoss.dds"/>
+        <Sound value="MengskA_GeyserExhaustedTerran"/>
+        <Text value="Alert/Text/ResourceExhausted_Vespene"/>
+        <Peripheral value="ResourceExhausted"/>
+    </CAlert>
+    <CAlert id="SpecializeComplete_TerM">
+        <Peripheral value="SpecializationComplete"/>
+        <Text value="Alert/Text/SpecializeComplete_Terr"/>
+    </CAlert>
+    <CAlert id="TrainComplete_TerM">
+        <Voice value="Ready"/>
+        <Peripheral value="TrainComplete"/>
+        <Text value="Alert/Text/TrainComplete_Terr"/>
+    </CAlert>
+    <CAlert id="TrainError_TerM">
+        <Display index="Self" value="0"/>
+        <Icon value="Assets\Textures\icon-supply-protoss.dds"/>
+        <QueueTime value="4.000000"/>
+    </CAlert>
+    <CAlert id="TrainWorkerComplete_TerM">
+        <Flags index="Hide" value="1"/>
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/TrainWorkerComplete_Terr"/>
+    </CAlert>
+    <CAlert id="UpgradeComplete_TerM">
+        <Sound value="MengskA_UpgradeComplete"/>
+        <Peripheral value="UpgradeComplete"/>
+        <Text value="Alert/Text/UpgradeComplete_Terr"/>
+    </CAlert>
+    <CAlert id="WarpTrainComplete_TerM">
+        <Sound value=""/>
+        <Voice value="Ready"/>
+        <Peripheral value="WarpInComplete"/>
+        <Text value="Alert/Text/WarpTrainComplete_Terr"/>
+    </CAlert>
+</Catalog>

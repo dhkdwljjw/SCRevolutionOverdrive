@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="NanoCleanseMelee"/>
+<Behavior id="NanoCleanseRanged"/>
+<Behavior id="NanoCleanseSplash"/>
+<Behavior id="NanoCleanseSpell"/>
+<Behavior id="PsionicLockdownMelee"/>
+<Behavior id="PsionicLockdownRanged"/>
+<Behavior id="PsionicLockdownSplash"/>
+<Behavior id="PsionicLockdownSpell"/>
+<Effect id="DamageMeleeArmorReducted"/>
+<Effect id="DamageRangedArmorReducted"/>
+<Effect id="DamageSplashArmorReducted"/>
+<Effect id="DamageSpellArmorReducted"/>
+<Effect id="DamageMeleeArmorIgnored"/>
+<Effect id="DamageRangedArmorIgnored"/>
+<Effect id="DamageSplashArmorIgnored"/>
+<Effect id="DamageSpellArmorIgnored"/>
+</Preload>

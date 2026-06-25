@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorSplat default="1" id="ProtossCursorSplatSCBW" parent="CursorSplat">
+        <Macros value="GlobalLoopMacro"/>
+        <Model value="ProtossAOECursorSplatSCBW"/>
+    </CActorSplat>
+    <CActorSplat default="1" id="TerranCursorSplatSCBW" parent="CursorSplat">
+        <Model value="TerranAOECursorSplat"/>
+    </CActorSplat>
+    <CActorSplat default="1" id="ZergCursorSplatSCBW" parent="CursorSplat">
+        <Model value="ZergAOECursorSplat"/>
+    </CActorSplat>
+    <CActorModel default="1" id="SCBW_InfestationBaseModel">
+        <Aliases value="_Snapshot"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death"/>
+        <On Terms="UnitDeath; !ModelIsLowQuality" Send="AnimBracketStop BSD"/>
+        <On Terms="UnitDeath; ModelIsLowQuality" Send="ModelSwap ZergMediumUnitDeathLow"/>
+        <On Terms="UnitDeath; ModelIsLowQuality" Send="SetScale 1.250000"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorAction default="1" id="GenericAttackImpact" parent="GenericAttack">
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction default="1" id="GenericAttackWhiff" parent="GenericAttackImpact">
+        <ImpactModel value="GenericAttackImpactModelWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+    </CActorAction>
+    <CActorAction default="1" id="GenericAttackBulletWhiff" parent="GenericAttackImpact">
+        <ImpactModel value="GenericAttackImpactModelBulletWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <ImpactSound value="GenericAttackImpactSoundWhiff"/>
+    </CActorAction>
+    <CActorAction default="1" id="GenericAttackMissileWhiff" parent="GenericAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorUnit default="1" id="GenericBurrowerBaseSCBW" parent="GenericUnitBase">
+        <On Terms="UnitBirth.##unitName##@Burrowed" Send="Create"/>
+        <On Terms="UnitBirth.##unitName##@Burrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant,DontResetOnUnhide"/>
+    </CActorUnit>
+    <CActorUnit default="1" id="GenericBurrowerStandardSCBW" parent="GenericUnitStandard">
+        <On Terms="UnitBirth.##unitName##@Burrowed" Send="Create"/>
+        <On Terms="UnitBirth.##unitName##@Burrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant,DontResetOnUnhide"/>
+    </CActorUnit>
+    <CActorSplat default="1" id="BurrowedSplatSCBW" parent="BurrowedSplatBase">
+        <?token id="unitName" type="CUnitLink" value="Bogus"?>
+        <On Terms="UnitBirth.##unitName##@Burrowed" Send="Create"/>
+        <On Terms="AbilMorph.*.Start; MorphTo ##unitName##@Burrowed" Send="Create"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom ##unitName##@Burrowed" Send="RefClear ::Host"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##@Burrowed" Send="TimerSet 4.000000,2.000000 DelayDestroy"/>
+        <On Terms="TimerExpired; TimerName DelayDestroy" Send="Destroy"/>
+    </CActorSplat>
+    <!--                                                                                         -->
+    <!-- Resources                                                                               -->
+    <!--                                                                                         -->
+    <CActorModel default="1" id="ProtossBuildingSCBW@Build" parent="ModelConstruction">
+        <Aliases value="_ProtossBuildModel"/>
+        <On Terms="ActorCreation" Send="Create ProtossBuildingSCBW@ConstructionAttached"/>
+    </CActorModel>
+    <CActorUnit default="1" id="ProtossBuildingSCBW" parent="GenericUnitStandard">
+        <Aliases value="_CreepEngulfable"/>
+        <Macros value="BuildingFlattenTerrainMacro"/>
+        <Macros value="SnowVisualBuildingMacroMP"/>
+        <Macros value="GlobalLoopMacro"/>
+        <Macros value="GlobalLoopMacroMore"/>
+        <Macros value="ProtossBuildingPowerUp"/>
+        <Macros value="QueueAnim"/>
+        <Macros value="VoidMPUnpoweredAnim"/>
+        <On Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On Terms="UnitConstruction.##unitName##.Start" Send="Create ##unitName##@Build"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <EventDataSound Name="BuildingWarpIn" Actor="UnitSound" Sound="ProtossBuildingSCBW@WarpIn"/>
+        <CreepHeightClass value="Medium"/>
+        <CreepRateGrow value="Grow"/>
+        <CreepRateShrink value="Shrink"/>
+        <BuildModel value="##unitName##@Birth"/>
+        <DeathArray index="Normal" ModelLink="##unitName##@Death" SoundLink="##unitName##@Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="##unitName##@DeathUnderConstruction" SoundLink="##unitName##@Explode"/>
+        <DeathCustoms ModelLink="##unitName##@DeathUnpowered" SoundLink="##unitName##@Explode" Name="Variation2"/>
+        <PlacementModel value="##unitName##@Placement"/>
+        <PlacementSound value="ProtossBuildingSCBW@Placement"/>
+        <PortraitModel value="##unitName##@Portrait"/>
+        <HeroIcon value="Assets\Textures\btn-building-protoss-##unitName##.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-armor-protoss-buildingplating.dds"/>
+        <SoundArray index="Birth" value="##unitName##@Birth"/>
+        <SoundArray index="Ready" value="##unitName##@Ready"/>
+        <SoundArray index="Help" value="##unitName##@Help"/>
+        <SoundArray index="What" value="##unitName##@What"/>
+        <SoundArray index="Yes" value="##unitName##@Yes"/>
+        <SoundArray index="Attack" value="##unitName##@Attack"/>
+        <SoundArray index="Pissed" value="##unitName##@Pissed"/>
+        <SoundArray index="Movement" value="##unitName##@Movement"/>
+        <SoundArray index="Turning" value="##unitName##@Turning"/>
+        <SoundArray index="Board" value="##unitName##@Board"/>
+        <SoundArray index="Construction" value="Protoss_ConstructionWhat"/>
+        <SoundArray index="Click" value="##unitName##@Click"/>
+        <SoundArray index="ClickError" value="##unitName##@ClickError"/>
+        <SoundArray index="Highlight" value="##unitName##@Highlight"/>
+        <UnitIcon value="Assets\Textures\btn-building-protoss-##unitName##.dds"/>
+        <GroupSoundArray index="What" value="##unitName##@GroupWhat"/>
+        <GroupSoundArray index="Yes" value="##unitName##@GroupYes"/>
+        <GroupSoundArray index="Attack" value="##unitName##@GroupAttack"/>
+        <GroupSoundArray index="Board" value="##unitName##@GroupBoard"/>
+    </CActorUnit>
+    <CActorUnit default="1" id="ProtossBuildingSCBWNoPowerUser" parent="ProtossBuildingSCBW">
+        <Macros index="5" value="QueueAnim"/>
+        <Macros index="6" removed="1"/>
+        <Macros index="7" removed="1"/>
+    </CActorUnit>
+    <CActorUnit default="1" id="ProtossBuildingSCBWNoWeapon" parent="ProtossBuildingSCBW">
+        <On index="64" Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On index="65" Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <On index="66" Terms="UnitConstruction.##unitName##.Start" Send="Create ##unitName##@Build"/>
+        <On index="67" removed="1"/>
+        <On index="68" removed="1"/>
+        <On index="69" removed="1"/>
+        <On index="70" removed="1"/>
+        <On index="71" removed="1"/>
+    </CActorUnit>
+    <CActorLookAt default="1" id="BattlecruiserSCBW@LookAtBase" parent="UnitTurret">
+        <On Terms="SupporterDestruction.*.UnitDeathModel" Send="Destroy"/>
+        <Type value="BattlecruiserSCBW@Turret"/>
+    </CActorLookAt>
+    <CActorLookAt default="1" id="BattlecruiserSCBW@LookAtATS" parent="BattlecruiserSCBW@LookAtBase">
+        <?token id="TurretGroup" value="Turret_00"?>
+        <Aliases value="_BattlecruiserTurretATS"/>
+        <Types Id="BattlecruiserSCBW@Turret">
+            <Start Group="##TurretGroup##" Weight="1" Time="125"/>
+            <Stop Group="##TurretGroup##" Weight="1" Time="125"/>
+        </Types>
+    </CActorLookAt>
+    <CActorLookAt default="1" id="BattlecruiserSCBW@LookAtATA" parent="BattlecruiserSCBW@LookAtBase">
+        <?token id="TurretGroup" value="Turret_00"?>
+        <Aliases value="_BattlecruiserTurretATA"/>
+        <Types Id="BattlecruiserSCBW@Turret">
+            <Start Group="##TurretGroup##" Weight="1" Time="125"/>
+            <Stop Group="##TurretGroup##" Weight="1" Time="125"/>
+        </Types>
+    </CActorLookAt>
+    <CActorProgress default="1" id="BuildAbilSCBW@Progress">
+        <?token id="Abil" value="##id##"?>
+        <On Terms="Abil.##Abil##.BuiltStart" Send="Create"/>
+        <!--<On Terms="Abil.BarracksAddOns.BuiltStart" Send="Create"/>-->
+        <On Terms="ProgressLevel.##id##.Start; Level 0" Send="SetTransferOverrideAnim Build,A,Stand"/>
+        <On Terms="ProgressLevel.##id##.Stop; Level 0" Send="SetTransferOverrideAnim"/>
+        <StageArray AnimProps="Build,A,Start" BlendTime="0.000000"/>
+        <StageArray AnimProps="Build,A,Stand"/>
+        <StageArray AnimProps="Build,B,Start"/>
+        <StageArray AnimProps="Build,B,Stand"/>
+        <StageArray AnimProps="Build,C,Start"/>
+        <StageArray AnimProps="Build,C,Stand"/>
+        <StageArray AnimProps="Build,D"/>
+    </CActorProgress>
+    <CActorModel default="1" id="ProtossBuildingSCBW@BirthAddition" parent="ModelConstruction">
+        <Aliases value="_ProtossBuildModel"/>
+        <On Terms="ActorCreation" Send="Create ProtossBuildingSCBW@ConstructionAttached"/>
+    </CActorModel>
+    <CActorSetQueried default="1" id="ProtossBuildingSCBW@FlameSet">
+        <?token id="type"?>
+        <AttachQuery Methods="$BuildingDamageNew"/>
+        <SpawnTarget value="ProtossBuildingSCBW@##type##"/>
+    </CActorSetQueried>
+    <CActorSetQueried default="1" id="ProtossBuildingSCBW@FlameSetTransition">
+        <?token id="type"?>
+        <AttachQuery Methods="$BuildingDamageTransition"/>
+        <SpawnTarget value="ProtossBuildingSCBW@##type##"/>
+    </CActorSetQueried>
+    <CActorRange default="1" id="SCBW_RangeAbilMultiple" parent="RangeAbil">
+        <?token id="abil2" type="CAbilLink"?>
+        <On Terms="Abil.##abil2##.TargetOn" Send="Create"/>
+        <On Terms="Abil.##abil2##.TargetOff" Send="Destroy"/>
+        <On Terms="Abil.##abil2##.ButtonHoverOn" Send="Create"/>
+        <On Terms="Abil.##abil2##.ButtonHoverOff" Send="Destroy"/>
+    </CActorRange>
+    <CActorModel default="1" id="TerranBuildingSCBW@BuildBasis" parent="TerranModelConstruction">
+        <Aliases value="_TerranBuildModel"/>
+        <On Terms="ActorCreation" Send="Create TerranConstructionSCBW@Attached"/>
+        <HostSiteOps Ops="SOpShadow TerranBuildingFacing"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <CreepHeightClass value="Default"/>
+    </CActorModel>
+    <CActorModel default="1" id="TerranBuildingSCBW@Build" parent="TerranBuildingSCBW@BuildBasis"/>
+    <CActorModel default="1" id="TerranBuildingSCBW@BuildRefinery" parent="TerranBuildingSCBW@BuildBasis"/>
+    <CActorModel default="1" id="TerranBuildingSCBW@BuildSmall" parent="TerranBuildingSCBW@BuildBasis">
+        <Aliases index="1" value="_TerranBuildModelSmall"/>
+        <Remove Terms="ActorCreation" Send="Create TerranConstructionSCBW@Attached"/>
+        <On Terms="ActorCreation" Send="Create TerranConstructionSCBW@AttachedSmall"/>
+        <CreepHeightClass value="Small"/>
+    </CActorModel>
+    <CActorSound default="1" id="TerranBuildingSCBW@LiftOff" parent="SoundOneShot">
+        <?token id="unitName"?>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##; MorphTo ##unitName##@Flying" Send="Create"/>
+        <!--<On Terms="AbilMorph.*.Start; MorphTo ##unitName##@Flying MorphFrom ##unitName##" Send="Create"/>-->
+    </CActorSound>
+    <CActorSound default="1" id="TerranBuildingSCBW@Land" parent="SoundOneShot">
+        <?token id="unitName"?>
+        <On Terms="AbilMorph.*.Start; MorphTo ##unitName##; MorphFrom ##unitName##@Flying" Send="Create"/>
+    </CActorSound>
+    <CActorUnit default="1" id="TerranBuildingSCBW" parent="GenericUnitStandard">
+        <Aliases value="_CreepEngulfable"/>
+        <Macros value="SnowVisualUnitMacroMP"/>
+        <On Terms="UnitConstruction.##unitName##.Start" Send="Create ##unitName##@Build"/>
+        <On Terms="UnitConstruction.##unitName##.Start" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitConstruction.##unitName##.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitConstruction.##unitName##.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitConstruction.##unitName##.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On Terms="UnitBirth.##unitName##.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitBirth.##unitName##.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On Terms="UnitBirth.##unitName##.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On Terms="UnitDeath.##unitName##" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitDeathCustomize; CreepEngulfs" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="ActorCreation; CreepIntersects" Send="CreepEngulfmentStartTransition"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <CreepHeightClass value="Default"/>
+        <CreepRateGrow value="Grow"/>
+        <CreepRateShrink value="Shrink"/>
+        <DeathArray index="Normal" ModelLink="##unitName##@Death" SoundLink=""/>
+        <PlacementModel value="##unitName##@Placement"/>
+        <PlacementSound value="TerranBuildingSCBW@Placement"/>
+        <PortraitModel value="##unitName##@Portrait"/>
+        <HeroIcon value="Assets\Textures\btn-building-terran-##unitName##.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <SoundArray index="Birth" value="##unitName##@Birth"/>
+        <SoundArray index="Ready" value="##unitName##@Ready"/>
+        <SoundArray index="Help" value="##unitName##@Help"/>
+        <SoundArray index="What" value="##unitName##@What"/>
+        <SoundArray index="Yes" value="##unitName##@Yes"/>
+        <SoundArray index="Attack" value="##unitName##@Attack"/>
+        <SoundArray index="Pissed" value="##unitName##@Pissed"/>
+        <SoundArray index="Movement" value="##unitName##@Movement"/>
+        <SoundArray index="Turning" value="##unitName##@Turning"/>
+        <SoundArray index="Board" value="##unitName##@Board"/>
+        <SoundArray index="Construction" value="TerranBuildingSCBW@ConstructionWhat"/>
+        <SoundArray index="Click" value="##unitName##@Click"/>
+        <SoundArray index="ClickError" value="##unitName##@ClickError"/>
+        <SoundArray index="Highlight" value="##unitName##@Highlight"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-##unitName##.dds"/>
+        <GroupSoundArray index="What" value="##unitName##@GroupWhat"/>
+        <GroupSoundArray index="Yes" value="##unitName##@GroupYes"/>
+        <GroupSoundArray index="Attack" value="##unitName##@GroupAttack"/>
+        <GroupSoundArray index="Board" value="##unitName##@GroupBoard"/>
+    </CActorUnit>
+    <CActorUnit default="1" id="TerranBuildingSCBW@Flyer" parent="TerranBuildingSCBW">
+        <Aliases value="_UnitHuge"/>
+        <Macros index="1" value="QueueAnim"/>
+        <Macros value="BuildAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="SnowVisualUnitMacroMP"/>
+        <DeathCustoms ModelLink="##unitName##@FlyDeath" SoundLink="##unitName##@Explode" Name="Flying"/>
+        <On Terms="UnitBirth.##unitName##@Flying" Send="Create"/>
+        <On Terms="UnitBirth.##unitName##@Flying" Send="AnimGroupApply Fly Fly,Start Fly,End Instant"/>
+        <On Terms="UnitBirth.##unitName##@Flying" Send="AliasRemove _CreepEngulfable"/>
+        <On Terms="UnitBirth.##unitName##@Flying" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="UnitDeathCustomize.##unitName##@Flying" Send="DeathCustomize Flying"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##; MorphTo ##unitName##@Flying" Send="AnimGroupApply Fly Fly,Start Fly,End"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##; MorphTo ##unitName##@Flying" Send="AliasRemove _CreepEngulfable"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##; MorphTo ##unitName##@Flying" Send="CreepEngulfmentStopTransition"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##; MorphTo ##unitName##@Flying" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##; MorphTo ##unitName##@Flying; ScopeContains GroundLocalSelection" Send="StatusIncrement FlyerHelper"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##@Flying; MorphTo ##unitName##" Send="AnimGroupRemove Fly"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##@Flying; MorphTo ##unitName##" Send="AliasAdd _CreepEngulfable"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##@Flying; MorphTo ##unitName##" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="AbilMorph.*.Start; MorphFrom ##unitName##@Flying; MorphTo ##unitName##; ScopeContains FlyerHelperSplat; HasStatus FlyerHelper" Send="StatusDecrement FlyerHelper"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom ##unitName##@Flying; MorphTo ##unitName##" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On Terms="AbilMorph.*.Finish; MorphFrom ##unitName##@Flying; MorphTo ##unitName##" Target="FlyerHelperSplat" Send="Destroy"/>
+        <HostSiteOps Ops="SOpBankerUnitBuilding"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.000000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive3"/>
+        </TerrainSquibs>
+    </CActorUnit>
+    <CActorUnit default="1" id="TerranBuildingSCBW@AddOn" parent="TerranBuildingSCBW">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerranAttachmentAnims"/>
+        <Macros value="QueueAnimAddon"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit TerranBuildingSCBW@AddonDetached" Send="DeathCustomize Detached"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" SoundLink="##unitName##@Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="##unitName##@Explode"/>
+        <DeathCustoms ModelLink="##unitName##@DeathDetached" Name="Detached"/>
+        <PortraitModel value="TerranBuildingSCBW@Portrait"/>
+        <AddonIndicator value="Actor/AddonIndicator/##unitName##"/>
+        <BarOffset value="80"/>
+        <BarWidth value="75"/>
+        <GlossaryAnim value="Stand,Attached"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
+        </GroupIcon>
+        <!--<GroupSoundArray index="What" value="TechLabGroupWhat"/>
+        <GroupSoundArray index="Yes" value="TechLabGroupYes"/>
+        <GroupSoundArray index="Attack" value="TechLabGroupAttack"/>
+        <GroupSoundArray index="Board" value="TechLabGroupBoard"/>-->
+        <HeroIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <!--<HighlightTooltip value="Unit/Name/TechLab"/>
+        <SoundArray index="Birth" value="TechLab_Birth"/>
+        <SoundArray index="Ready" value="TechLab_Ready"/>
+        <SoundArray index="Help" value="TechLabHelp"/>
+        <SoundArray index="What" value="TechLab_What"/>
+        <SoundArray index="Yes" value="TechLabYes"/>
+        <SoundArray index="Attack" value="TechLabAttack"/>
+        <SoundArray index="Pissed" value="TechLabPissed"/>
+        <SoundArray index="Movement" value="TechLabMovement"/>
+        <SoundArray index="Turning" value="TechLabTurning"/>
+        <SoundArray index="Board" value="TechLabBoard"/>
+        <SoundArray index="Click" value="TechLabClick"/>
+        <SoundArray index="ClickError" value="TechLabClickError"/>
+        <SoundArray index="Highlight" value="TechLabHighlight"/>-->
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-techlab.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-TechLab.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorStateMonitor default="1" id="TerranBuildingSCBW@Flames">
+        <On Terms="StateChange; StateValid LightSmoke; StateChanged Normal" Send="Create TerranFlameSetLightSmoke"/>
+        <On Terms="StateChange; StateValid HeavySmoke; StateChanged Normal" Send="Create TerranFlameSetHeavySmoke"/>
+        <On Terms="StateChange; StateValid Fire; StateChanged Normal" Send="Create TerranFlameSetFire"/>
+        <On Terms="StateChange; StateValid LightSmoke; !StateChanged Normal" Send="Create TerranFlameSetLightSmokeTransition"/>
+        <On Terms="StateChange; StateValid HeavySmoke; !StateChanged Normal" Send="Create TerranFlameSetHeavySmokeTransition"/>
+        <On Terms="StateChange; StateValid Fire; !StateChanged Normal" Send="Create TerranFlameSetFireTransition"/>
+        <On Terms="StateChange; !StateValid LightSmoke" Target="TerranFlameSetLightSmoke" Send="Destroy"/>
+        <On Terms="StateChange; !StateValid HeavySmoke" Target="TerranFlameSetHeavySmoke" Send="Destroy"/>
+        <On Terms="StateChange; !StateValid Fire" Target="TerranFlameSetFire" Send="Destroy"/>
+        <On Terms="StateChange; !StateValid LightSmoke" Target="TerranFlameSetLightSmokeTransition" Send="Destroy"/>
+        <On Terms="StateChange; !StateValid HeavySmoke" Target="TerranFlameSetHeavySmokeTransition" Send="Destroy"/>
+        <On Terms="StateChange; !StateValid Fire" Target="TerranFlameSetFireTransition" Send="Destroy"/>
+        <StateArray Name="Normal" Terms="ValidateUnit BurnDownNormal"/>
+        <StateArray Name="LightSmoke" Terms="ValidateUnit BurnDownLightSmoke"/>
+        <StateArray Name="HeavySmoke" Terms="ValidateUnit BurnDownHeavySmoke"/>
+        <StateArray Name="Fire" Terms="ValidateUnit BurnDownFire"/>
+        <StateThinkInterval value="0.5"/>
+    </CActorStateMonitor>
+    <CActorSound default="1" id="ProtossBuildingSCBW@FlameSound" parent="SoundContinuous">
+        <Host Subject="_Selectable"/>
+    </CActorSound>
+    <CActorModel default="1" id="ZergBuildingSCBW@Build" parent="ModelConstruction">
+        <Aliases value="_ZergBuildModel"/>
+        <On Terms="ActorCreation" Send="Create ZergBuildingSCBW@ConstructionAttached"/>
+        <HostSiteOps Ops="SOpShadow ZergBuildingSCBW@Facing"/>
+    </CActorModel>
+    <CActorUnit default="1" id="ZergBuildingSCBW" parent="GenericUnitStandard">
+        <Macros value="QueueAnim"/>
+        <Macros value="SnowVisualUnitMacroMP"/>
+        <On Terms="UnitConstruction.##unitName##.Start" Send="Create ##unitName##@Build"/>
+        <On Terms="UnitConstruction.##unitName##.Start" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitConstruction.##unitName##.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitConstruction.##unitName##.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitBirth.##unitName##.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitBirth.##unitName##.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On Terms="UnitBirth.##unitName##.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On Terms="UnitDeath.##unitName##" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <DeathArray index="Normal" ModelLink="##unitName##@Death" SoundLink="##unitName##@Explode"/>
+        <DeathArray index="UnderConstruction" ModelLink="##unitName##@DeathUnderConstruction" SoundLink="##unitName##@Explode"/>
+        <PlacementModel value="##unitName##@Placement"/>
+        <PlacementSound value="ZergBuildingSCBW@Placement"/>
+        <PortraitModel value="##id##@Portrait"/>
+        <BarWidth value="160"/>
+        <HeroIcon value="Assets\Textures\btn-building-zerg-##unitName##.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-armor-zerg-building.dds"/>
+        <NameOffset value="100"/>
+        <SoundArray index="Birth" value="##unitName##@Birth"/>
+        <SoundArray index="Ready" value="##unitName##@Ready"/>
+        <SoundArray index="Help" value="##unitName##@Help"/>
+        <SoundArray index="What" value="##unitName##@What"/>
+        <SoundArray index="Yes" value="##unitName##@Yes"/>
+        <SoundArray index="Attack" value="##unitName##@Attack"/>
+        <SoundArray index="Pissed" value="##unitName##@Pissed"/>
+        <SoundArray index="Movement" value="##unitName##@Movement"/>
+        <SoundArray index="Turning" value="##unitName##@Turning"/>
+        <SoundArray index="Board" value="##unitName##@Board"/>
+        <SoundArray index="Construction" value="ZergBuildingSCBW@MorphWhat"/>
+        <SoundArray index="Click" value="##unitName##@Click"/>
+        <SoundArray index="ClickError" value="##unitName##@ClickError"/>
+        <SoundArray index="Highlight" value="##unitName##@Highlight"/>
+        <GroupSoundArray index="What" value="##unitName##@GroupWhat"/>
+        <GroupSoundArray index="Yes" value="##unitName##@GroupYes"/>
+        <GroupSoundArray index="Attack" value="##unitName##@GroupAttack"/>
+        <GroupSoundArray index="Board" value="##unitName##@GroupBoard"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-zerg-##unitName##.dds"/>
+    </CActorUnit>
+    <CActorModel default="1" id="EggSCBWDeathModelBase" parent="ModelAnimationStyleOneShotNoOrphan">
+        <CopySource value="EggSCBW"/>
+        <Inherits index="Scale" value="1"/>
+        <AcceptedTransfers index="Textures" value="1"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOriginStationary SOpShadow"/>
+    </CActorModel>
+    <CActorSound default="1" id="SCBW_DeathVoiceBase" parent="SoundOneShot">
+        <Aliases value="_DeathVoice"/>
+        <On Terms="UnitDeath.##unitName##; PassChance 50.000000; ValidateUnit IsHallucinationSCBW@Not" Send="Create"/>
+        <Sound value="##unitName##@Death"/>
+    </CActorSound>
+    <CActorModel default="1" id="RoboticsFacilitySCBW@WarpInBase" parent="ModelAddition">
+        <?token id="x" value="Bogus"?>
+        <On Terms="UnitDeathCustomize" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachHardPoint"/>
+        <Model value="##x##@WarpInRobotics"/>
+        <ModelAspectSets>
+            <Aspects RegardsAs="Enemy" Model="RoboticsFacilitySCBW@WarpInEnemy"/>
+        </ModelAspectSets>
+    </CActorModel>
+    <CActorSound id="GenericAttackImpactSoundNoVisibilityInherit" parent="GenericAttackSound">
+        <Inherits index="Visibility" value="0"/>
+    </CActorSound>
+    <CActorEventMacro id="HideWorkerCount">
+        <On Terms="Upgrade.SCEV_HideWorkerCount.Add" Send="HideWorkerCount 1"/>
+        <On Terms="ActorCreation; ValidateUnit SCEV_HideWorkerCount" Send="HideWorkerCount 1"/>
+    </CActorEventMacro>
+    <CActorModel id="ModelPretargetGroundCustom" parent="ModelPretarget">
+        <Model value="AOEPreTargetGroundUnitProtoss"/>
+    </CActorModel>
+    <CActorEventMacro id="SCBW_ObserverWhatMacro">
+        <On Terms="SelectionLocalUpdate.*.Start; IsLocalParticipantType Observer; IsStatus ObserverWhat 0" Send="TimerSet 10.000000 ObserverClickCooldown"/>
+        <On Terms="SelectionLocalUpdate.*.Start; IsLocalParticipantType Observer; IsStatus ObserverWhat 0" Send="PlayUnitSound What"/>
+        <On Terms="SelectionLocalUpdate.*.Start; IsLocalParticipantType Observer; IsStatus ObserverWhat 0" Send="StatusSet ObserverWhat 1"/>
+        <On Terms="TimerExpired; TimerName ObserverClickCooldown; IsLocalParticipantType Observer; IsStatus ObserverWhat 1" Send="StatusSet ObserverWhat 0"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="WorkerHarvestMacroSCBW">
+        <On Terms="Abil.SCVSCBW@Harvest.Start" Send="StatusIncrement Harvest"/>
+        <On Terms="Abil.SCVSCBW@Harvest.Stop" Send="StatusDecrement Harvest"/>
+        <On Terms="Abil.DroneSCBW@Harvest.Start" Send="StatusIncrement Harvest"/>
+        <On Terms="Abil.DroneSCBW@Harvest.Stop" Send="StatusDecrement Harvest"/>
+        <On Terms="Abil.ProbeSCBW@Harvest.Start" Send="StatusIncrement Harvest"/>
+        <On Terms="Abil.ProbeSCBW@Harvest.Stop" Send="StatusDecrement Harvest"/>
+        <On Terms="Abil.SCVSCBW@HarvestNoQue.Start" Send="StatusIncrement Harvest"/>
+        <On Terms="Abil.SCVSCBW@HarvestNoQue.Stop" Send="StatusDecrement Harvest"/>
+        <On Terms="Abil.DroneSCBW@HarvestNoQue.Start" Send="StatusIncrement Harvest"/>
+        <On Terms="Abil.DroneSCBW@HarvestNoQue.Stop" Send="StatusDecrement Harvest"/>
+        <On Terms="Abil.ProbeSCBW@HarvestNoQue.Start" Send="StatusIncrement Harvest"/>
+        <On Terms="Abil.ProbeSCBW@HarvestNoQue.Stop" Send="StatusDecrement Harvest"/>
+    </CActorEventMacro>
+    <CActorSiteOpDeltaSum id="SOpAttachCenterDeltaSum">
+        <Deltas Subject="_Unit">
+            <AttachQuerySource Methods="Origin"/>
+            <AttachQueryTarget Methods="Center"/>
+        </Deltas>
+        <DeltaSumFlags index="ZOffsetOnly" value="1"/>
+    </CActorSiteOpDeltaSum>
+    <CActorEventMacroRunnable id="ShieldColorMacroRunnable">
+        <Do Terms="ScopeContains _ShieldRed" Send="SetTintColor {255,0,0 8.000000}"/>
+        <Do Terms="ScopeContains _ShieldGreen" Send="SetTintColor {0,255,0 3.000000}"/>
+        <Do Terms="ScopeContains _ShieldYellow" Send="SetTintColor {255,80,0 6.000000}"/>
+        <Do Terms="ScopeContains _ShieldBlue" Send="SetTintColor {0,0,255 2.000000}"/>
+        <Do Terms="ScopeContains _ShieldBlack" Send="SetTintColor {255,255,255 -1.000000}"/>
+    </CActorEventMacroRunnable>
+    <CActorUnit id="CommandCenter">
+        <Macros value="SCBW_InfestationMacro"/>
+    </CActorUnit>
+    <CActorUnit id="OrbitalCommand">
+        <Macros value="SCBW_InfestationMacro"/>
+    </CActorUnit>
+    <CActorUnit id="PlanetaryFortress">
+        <Macros value="SCBW_InfestationMacro"/>
+    </CActorUnit>
+    <CActorUnit id="MULE">
+        <Macros value="MacroWorkerHat"/>
+    </CActorUnit>
+    <CActorSimple id="CombatVisibilityClearer">
+        <On Terms="Effect.ArbiterSCBWRecall@Teleport.Start; At Target" Send="Create"/>
+        <On Terms="Effect.ArbiterSCBWRecall@TeleportAir.Start; At Target" Send="Create"/>
+        <On Terms="Effect.NydusCanalSCBW@TransportCargoLoad.Start; At Target" Send="Create"/>
+        <On Terms="Effect.NydusCanalSCBW@TeleporterSet.Start; At Target" Send="Create"/>
+    </CActorSimple>
+    <CActorSplat id="PowerVisual">
+        <HostSiteOps Ops="SOpShadow SOpMoveUpBy7"/>
+    </CActorSplat>
+    <CActorRange id="PowerVisualLow">
+        <CliffLevelFlags index="Higher" value="1"/>
+    </CActorRange>
+    <CActorModel id="SCBW_InfestationCommandCenter" parent="SCBW_InfestationBaseModel"/>
+    <CActorEventMacro id="SCBW_ReadyStatusMacro">
+        <On Terms="Abil.attack.ReadyStart" Send="StatusSet _Ready 1"/>
+        <On Terms="Abil.attack.ReadyStart" Send="TimerKill ReadyStatusDelay"/>
+        <On Terms="Abil.attack.ReadyStop" Send="TimerSet 0.020000 ReadyStatusDelay"/>
+        <On Terms="TimerExpired; TimerName ReadyStatusDelay" Send="StatusSet _Ready 0"/>
+    </CActorEventMacro>
+    <CActorUnit id="SCBW_InvulnerableDummy" parent="GenericUnitMinimal" unitName="SCBW_InvulnerableDummy">
+        <Model value="Invisible"/>
+        <EditorModel value="Sphere"/>
+        <WalkAnimMoveSpeed value="0"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <StatusBarFlags index="Duration" value="0"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="1"/>
+        <HighlightTooltip value="Unit/Name/Bogus"/>
+    </CActorUnit>
+    <CActorSiteOpAttachVolume id="SOpAttachVolumeVizEnhanceUp">
+        <HostIncoming Subject="_LaunchGuide" Actor="Find"/>
+        <UpwardVisibilityEnhancement value="1"/>
+        <UpwardVisibilityEnhancementVarianceUp value="25.000000"/>
+    </CActorSiteOpAttachVolume>
+    <CActorSiteOpShadow id="SOpShadowHold" parent="SOpShadow">
+        <HoldPosition value="1"/>
+        <HoldRotation value="1"/>
+    </CActorSiteOpShadow>
+    <CActorEventMacro id="SCBW_ZergSmallBurrowEffects">
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create SmallBurrowDownEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create ZergUnitSCBW@Burrow"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Create SmallBurrowUpEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Create ZergUnitSCBW@Unburrow"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUpMorph" Send="Create ZergUnitSCBW@Unburrow"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="SCBW_ZergMediumBurrowEffects">
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create MediumBurrowDownEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create ZergUnitSCBW@Burrow"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Create MediumBurrowUpEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Create ZergUnitSCBW@Unburrow"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUpMorph" Send="Create ZergUnitSCBW@Unburrow"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="SCBW_ZergMediumBurrowEffectsNoSound">
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create MediumBurrowDownEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Create MediumBurrowUpEffects"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="SCBW_ZergLargeBurrowEffects">
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create LargeBurrowDownEffects"/>
+        <!--        <On Terms="AbilMorph.*.Start; AbilKey BurrowDown" Send="Create BurrowDownLarge"/> -->
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Create LargeBurrowUpEffects"/>
+        <On Terms="AbilMorph.*.Start; AbilKey BurrowUp" Send="Create ZergUnitSCBW@Unburrow"/>
+    </CActorEventMacro>
+    <CActorTerrain id="TerrainMgr">
+        <PhysicsImpacts index="46" SoundLink="PhysicsImpactLavaHeavy"/>
+        <PhysicsImpacts index="52" ModelLink="PhysicsImpactDustLight" SoundLink="PhysicsImpactBoneLight"/>
+        <PhysicsImpacts index="53" ModelLink="PhysicsImpactDustMedium" SoundLink="PhysicsImpactBoneMedium"/>
+        <PhysicsImpacts index="54" ModelLink="PhysicsImpactDustLarge" SoundLink="PhysicsImpactBoneHeavy"/>
+        <PhysicsImpacts index="55" ModelLink="PhysicsImpactDustMassive" SoundLink="PhysicsImpactBoneMassive"/>
+    </CActorTerrain>
+    <CActorModel id="ThorTransit">
+        <On Terms="AbilTransport.DropshipSCBW@Transport.TransportUnload" Send="Destroy"/>
+    </CActorModel>
+    <CActorModel id="UnitDeathModelWithDeathMotionFlier">
+        <Aliases value="_DeathMotion"/>
+    </CActorModel>
+    <CActorModel id="UnitDeathModelWithDeathMotionGround">
+        <Aliases value="_DeathMotion"/>
+    </CActorModel>
+    <CActorModel id="UnitDeathModelWithDeathMotionGroundUnscaled">
+        <Aliases value="_DeathMotion"/>
+    </CActorModel>
+    <CActorEventMacro id="RemoveDefaultAttackEvents">
+        <Remove Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <Remove Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+    </CActorEventMacro>
+    <CActorSplat id="UnpoweredVisual">
+        <HostSiteOps Ops="SOpShadow SOpMoveUpBy7"/>
+    </CActorSplat>
+    <CActorSiteOpIncoming id="WhiffOffsetMissileSequence">
+        <HostImpact Subject="_ImpactGuide"/>
+        <HostIncoming Subject="::Main" Scope="Missile" Actor="Find"/>
+        <Type value="Missile"/>
+        <PullBack value="0.500000"/>
+        <FreezePositionAtImpact value="1"/>
+    </CActorSiteOpIncoming>
+    <CActorSound id="ZergUnitSCBW@Burrow" parent="SoundOneShot"/>
+    <CActorEventMacro id="CarryAnim">
+        <On Terms="Effect.CarryHarvestableVespeneGeyserGasSetPalletSize.Start; At Source" Target="_VespenePallet" Send="SetScale 0.680000"/>
+        <On Terms="Effect.CarryHarvestableVespeneGeyserGasSetPalletSize.Start; At Source" Target="_VespenePallet" Send="SetTintColor 145,145,145"/>
+    </CActorEventMacro>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGas">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGasProtoss">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableRichVespeneGeyserGasZerg">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGas">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGasProtoss">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorModel id="CarryHarvestableVespeneGeyserGasZerg">
+        <Aliases value="_VespenePallet"/>
+    </CActorModel>
+    <CActorEventMacro id="GeyserExhausted">
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="SetTintColor 255,170,170"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupApply B"/>
+        <On Terms="Behavior.GeyserExhaustedHarvestable.On" Send="AnimGroupRemove D"/>
+        <On Terms="UnitBirth.*.Normal" Send="TimerSet 0.100000 GeyserDepleteCheck"/>
+        <On Terms="UnitConstruction.*.Finish" Send="TimerSet 0.100000 GeyserDepleteCheck"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="SetTintColor 255,170,170"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupRemove D"/>
+        <On Terms="TimerExpired; TimerName GeyserDepleteCheck; ValidateUnit GeyserIsExhausted" Send="AnimGroupApply B"/>
+        <On Terms="Behavior.GeyserExhaustedRaw.On; ValidateUnit GeyserRawIsExhausted" Send="TimerSet 0.100000 GeyserDepleteCheck"/>
+    </CActorEventMacro>
+    <CActorModel id="GenericAttackImpactModelInheritOnce" parent="GenericAttackModel">
+        <InheritType value="OneShot"/>
+        <HostSiteOps HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessMoveZerg">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Move; ValidatePlayer PlayerIsBWZe" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessMoveTerran">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Move; ValidatePlayer PlayerIsBWTe" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessMoveProtoss">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Move; ValidatePlayer PlayerIsBWPr" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessConfirmZerg">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Confirm; ValidatePlayer PlayerIsBWZe" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessConfirmTerran">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Confirm; ValidatePlayer PlayerIsBWTe" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessConfirmProtoss">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Confirm; ValidatePlayer PlayerIsBWPr" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessAttackZerg">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Attack; ValidatePlayer PlayerIsBWZe" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessAttackTerran">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Attack; ValidatePlayer PlayerIsBWTe" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessAttackProtoss">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Attack; ValidatePlayer PlayerIsBWPr" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessRallyZerg">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Rally; ValidatePlayer PlayerIsBWZe" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessRallyTerran">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Rally; ValidatePlayer PlayerIsBWTe" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CommandUIHarnessRallyProtoss">
+        <On Terms="CommandUI.*.Birth; OrderDisplayType Rally; ValidatePlayer PlayerIsBWPr" Send="Create"/>
+    </CActorModel>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--                                                                                         -->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <CActorUnit id="ProtossVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 37.520000 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="PurifierVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 37.520000 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="RichVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 37.520000 AsDuration"/>
+        <On index="80" Terms="Behavior.RawRichVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawRichVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="ShakurasVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 37.520000 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorUnit id="SpacePlatformGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 37.520000 AsDuration"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <!--                                                                                         -->
+    <!-- Vespene                                                                                 -->
+    <!--                                                                                         -->
+    <CActorUnit id="VespeneGeyser">
+        <On index="73" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 37.520000 AsDuration"/>
+        <On index="80" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <On index="81" Terms="Behavior.RawVespeneGeyserGas.Restore; ValidateUnit GeyserNotExhausted"/>
+        <Macros value="GeyserExhausted"/>
+    </CActorUnit>
+    <CActorSiteOpIncoming id="WhiffOffsetDirectHost">
+        <HostImpact Subject="_ImpactGuide"/>
+        <HostIncoming Subject="::Main" Scope="Outer" Actor="Find"/>
+        <PullBack value="1.000000"/>
+    </CActorSiteOpIncoming>
+    <CActorSite id="GenericAttackImpactSiteWhiff">
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit NotInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit IsInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="StatusSet Missed 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="_Missed" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Target="_Whiff" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Send="Destroy"/>
+    </CActorSite>
+    <CActorSiteOpIncoming id="WhiffOffsetDirect">
+        <HostImpact Subject="_ImpactGuide"/>
+        <HostIncoming Subject="_LaunchGuide" Scope="Outer" Actor="Find"/>
+        <PullBack value="1.000000"/>
+        <FreezePositionAtImpact value="1"/>
+    </CActorSiteOpIncoming>
+    <CActorModel id="GenericAttackImpactModelWhiff" parent="GenericAttackModel">
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit NotInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit IsInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="StatusSet Missed 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="_Missed" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Target="_Whiff" Send="Destroy"/>
+    </CActorModel>
+    <CActorSite id="GenericAttackImpactSiteWhiffMissile">
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit NotInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetMissile SOpForwardLaunchGuide SOpShadow} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit IsInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetMissile SOpForwardLaunchGuide} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="StatusSet Missed 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="_Missed" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Target="_Whiff" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Send="Destroy"/>
+    </CActorSite>
+    <CActorModel id="GenericAttackImpactModelBulletWhiff" parent="GenericAttackModel">
+        <On index="1" Terms="AnimBracketState.*.AfterClosing; !AnimBracketExitReason ModelSwap; AnimName BSD" Send="Destroy"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit TargetRadius_Small" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect WhiffOffsetRandomSmall SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit TargetRadius_Medium" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot25 WhiffOffsetRandomMedium SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit TargetRadius_Large" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot2 SOpMoveUpByDot2 WhiffOffsetRandomLarge SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit TargetRadius_Massive" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot5 WhiffOffsetRandomMassive SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="ModelSwap WhiffBeam"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="Create Bullet_Whiz"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="StatusSet Missed 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="_Missed" Send="Destroy"/>
+        <On Terms="ModelSwapped" Send="$Birth"/>
+        <On Terms="ModelSwapped; ModelSwapTo WhiffBeam" Send="SetOpacity 0.400000"/>
+        <On Terms="AnimDone; AnimName Birth; HasStatus Missed" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Target="_Whiff" Send="Destroy"/>
+    </CActorModel>
+    <CActorSiteOpLocalOffset id="SOpMoveUpByDot75">
+        <LocalOffset value="0.000000,0.000000,0.750000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpRandomPointInCrossbar id="WhiffOffsetRandomMassive">
+        <HalfWidth value="1.300000"/>
+        <Distribution value="GaussianInverse"/>
+        <Variance value="0.430000"/>
+    </CActorSiteOpRandomPointInCrossbar>
+    <CActorSiteOpIncoming id="WhiffOffsetMissile">
+        <HostImpact Subject="_ImpactGuide"/>
+        <HostIncoming Subject="::Main" Scope="Missile" Actor="Find"/>
+        <PullBack value="1.000000"/>
+        <FreezePositionAtImpact value="1"/>
+        <Type value="Missile"/>
+    </CActorSiteOpIncoming>
+    <CActorSiteOpRandomPointInCrossbar id="WhiffOffsetRandomMedium">
+        <HalfWidth value="0.450000"/>
+        <Distribution value="GaussianInverse"/>
+        <Variance value="0.200000"/>
+    </CActorSiteOpRandomPointInCrossbar>
+    <CActorSiteOpRandomPointInCrossbar id="WhiffOffsetRandomLarge">
+        <HalfWidth value="0.750000"/>
+        <Distribution value="GaussianInverse"/>
+        <Variance value="0.300000"/>
+    </CActorSiteOpRandomPointInCrossbar>
+    <CActorSound id="Bullet_Whiz" parent="SoundOneShot"/>
+    <CActorModel id="GenericAttackImpactModelReactionWhiff" parent="GenericAttackModel">
+        <On Terms="Signal.*.Whiffed" Send="Destroy"/>
+        <Aliases value="_Whiff"/>
+    </CActorModel>
+    <CActorSound id="GenericAttackImpactSoundWhiff" parent="GenericAttackSound">
+        <On Terms="Signal.*.Whiffed" Send="Destroy"/>
+        <Aliases value="_Whiff"/>
+    </CActorSound>
+    <CActorSiteOpRandomPointInCrossbar id="WhiffOffsetRandomSmall">
+        <HalfWidth value="0.300000"/>
+        <Distribution value="GaussianInverse"/>
+        <Variance value="0.100000"/>
+    </CActorSiteOpRandomPointInCrossbar>
+    <CActorEventMacro id="WhiffSequenceUnitMacro">
+        <On Terms="Signal.*.SequenceCheck; HasStatus InSequence" Target="::Sender" Send="StatusSet IsSequence 1"/>
+        <On Terms="Signal.*.ResetSequence" Send="StatusSet InSequence 0"/>
+        <On Terms="Signal.*.ResetTimer" Send="TimerKill ResetSequence"/>
+        <On Terms="Signal.*.ResetTimer" Send="TimerSet 1.000000 ResetSequence"/>
+        <On Terms="TimerExpired; TimerName ResetSequence" Send="StatusSet InSequence 0"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="WhiffSequenceAttackSiteMacro">
+        <On Terms="ActorCreation" Target="_Unit" Send="Signal SequenceCheck"/>
+        <On Terms="Signal.*.ResetSequence" Target="_Unit" Send="MessageForward"/>
+        <On Terms="Signal.*.ResetTimer" Target="_Unit" Send="MessageForward"/>
+        <On Terms="StatusSet.*.InSequence" Target="_Unit" Send="MessageForward"/>
+        <On Terms="EffectActionCommence; HasStatus IsSequence" Target="::HostImpactInternal" Send="Signal IsSequence"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="WhiffSequenceSiteMacro">
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="StatusSet Missed 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit NotInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetMissile SOpForwardLaunchGuide SOpShadow} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit IsInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetMissile SOpForwardLaunchGuide} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="_Missed" Send="Destroy"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="::Creator" Send="StatusSet InSequence 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="::Creator" Send="Signal ResetTimer"/>
+        <On Terms="Signal.*.IsSequence" Send="StatusSet InSequence 1"/>
+        <On Terms="Signal.*.IsSequence" Send="StatusSet Missed 1"/>
+        <On Terms="Signal.*.IsSequence; HasStatus Missed; ValidateUnit NotInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetMissileSequence SOpForwardLaunchGuide SOpShadow} 1 1"/>
+        <On Terms="Signal.*.IsSequence; HasStatus Missed; ValidateUnit IsInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetMissileSequence SOpForwardLaunchGuide} 1 1"/>
+        <On Terms="Signal.*.Impact; HasStatus InSequence" Target="::Creator" Send="Signal ResetSequence"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Target="_Whiff" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Send="TimerSet 1.000000 A"/>
+        <On Terms="TimerExpired; TimerName A" Send="Destroy"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="WhiffSequenceAttackMacro">
+        <On Terms="ActorCreation" Target="_Unit" Send="Signal SequenceCheck"/>
+        <On Terms="Signal.*.ResetSequence" Target="_Unit" Send="MessageForward"/>
+        <On Terms="Signal.*.ResetTimer" Target="_Unit" Send="MessageForward"/>
+        <On Terms="StatusSet.*.InSequence" Target="_Unit" Send="MessageForward"/>
+        <On Terms="EffectActionCommence; HasStatus IsSequence" Target="::HostImpactInternal" Send="Signal IsSequence"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="WhiffSequenceModelMacro">
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="StatusSet Missed 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit NotInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit IsInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="_Missed" Send="Destroy"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="::Creator" Send="StatusSet InSequence 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="::Creator" Send="Signal ResetTimer"/>
+        <On Terms="Signal.*.IsSequence" Send="StatusSet InSequence 1"/>
+        <On Terms="Signal.*.IsSequence" Send="StatusSet Missed 1"/>
+        <On Terms="Signal.*.IsSequence; HasStatus Missed; ValidateUnit NotInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow} 1 1"/>
+        <On Terms="Signal.*.IsSequence; HasStatus Missed; ValidateUnit IsInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide} 1 1"/>
+        <On Terms="Signal.*.Impact; HasStatus InSequence" Target="::Creator" Send="Signal ResetSequence"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Target="_Whiff" Send="Destroy"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="WhiffSequenceBulletModelMacro">
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit TargetRadius_Small" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect WhiffOffsetRandomSmall SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit TargetRadius_Medium" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot25 WhiffOffsetRandomMedium SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit TargetRadius_Large" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot2 SOpMoveUpByDot2 WhiffOffsetRandomLarge SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit TargetRadius_Massive" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot5 WhiffOffsetRandomMassive SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="ModelSwap WhiffBeam"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="Create Bullet_Whiz"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="StatusSet Missed 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="_Missed" Send="Destroy"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="::Creator" Send="StatusSet InSequence 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="::Creator" Send="Signal ResetTimer"/>
+        <On Terms="Signal.*.IsSequence" Send="StatusSet InSequence 1"/>
+        <On Terms="Signal.*.IsSequence" Send="StatusSet Missed 1"/>
+        <On Terms="Signal.*.IsSequence" Send="ModelSwap WhiffBeam"/>
+        <On Terms="Signal.*.IsSequence" Send="Create Bullet_Whiz"/>
+        <On Terms="Signal.*.IsSequence; ValidateUnit TargetRadius_Small" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect WhiffOffsetRandomSmall SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="Signal.*.IsSequence; ValidateUnit TargetRadius_Medium" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot25 WhiffOffsetRandomMedium SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="Signal.*.IsSequence; ValidateUnit TargetRadius_Large" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot2 SOpMoveUpByDot2 WhiffOffsetRandomLarge SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="Signal.*.IsSequence; ValidateUnit TargetRadius_Massive" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpMoveUpByDot5 WhiffOffsetRandomMassive SOpForwardLaunchGuideInverted} 1 1"/>
+        <On Terms="ModelSwapped" Send="$Birth"/>
+        <On Terms="ModelSwapped; ModelSwapTo WhiffBeam" Send="SetOpacity 0.400000"/>
+        <On Terms="AnimDone; AnimName Birth; HasStatus Missed" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus InSequence" Target="::Creator" Send="Signal ResetSequence"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Target="_Whiff" Send="Destroy"/>
+    </CActorEventMacro>
+    <CActorModel id="UnloadFX">
+        <On Terms="AbilTransport.DropshipSCBW@Transport.CargoUnload" Send="Create"/>
+        <On Terms="AbilTransport.OverlordSCBW@Transport.CargoUnload" Send="Create"/>
+    </CActorModel>
+    <CActorEventMacro id="UnloadDropAnim">
+        <On Terms="AbilTransport.ShuttleSCBW@Transport.CargoLoad" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.ShuttleSCBW@Transport.CargoLoadSuppressed" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.ShuttleSCBW@Transport.CargoUnload" Send="AnimBracketStop Unload"/>
+        <On Terms="AbilTransport.ShuttleSCBW@Transport.TransportLoad" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.ShuttleSCBW@Transport.TransportUnload" Send="AnimBracketStop Unload"/>
+        <On Terms="AbilTransport.OverlordSCBW@Transport.CargoLoad" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.OverlordSCBW@Transport.CargoLoadSuppressed" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.OverlordSCBW@Transport.CargoUnload" Send="AnimBracketStop Unload"/>
+        <On Terms="AbilTransport.OverlordSCBW@Transport.TransportLoad" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.OverlordSCBW@Transport.TransportUnload" Send="AnimBracketStop Unload"/>
+        <On Terms="AbilTransport.DropshipSCBW@Transport.CargoLoad" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.DropshipSCBW@Transport.CargoLoadSuppressed" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.DropshipSCBW@Transport.CargoUnload" Send="AnimBracketStop Unload"/>
+        <On Terms="AbilTransport.DropshipSCBW@Transport.TransportLoad" Send="AnimBracketStart Unload IGNORE Unload Unload,End"/>
+        <On Terms="AbilTransport.DropshipSCBW@Transport.TransportUnload" Send="AnimBracketStop Unload"/>
+    </CActorEventMacro>
+    <CActorSound id="ZergUnitSCBW@Unburrow" parent="SoundOneShot"/>
+    <CActorProgress id="TerranConstructionSCBW">
+        <!--<On Terms="Abil.SCVSCBW@Build.BuiltStart" Send="Create"/>-->
+        <!--<On Terms="Abil.SCVSCBW@BuildAdv.BuiltStart" Send="Create"/>-->
+        <!--<On Terms="Abil.BarracksAddOns.BuiltStart" Send="Create"/>-->
+        <On Terms="ProgressLevel.TerranConstructionSCBW.Start; Level 0" Send="SetTransferOverrideAnim Build,A,Stand"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW.Stop; Level 0" Send="SetTransferOverrideAnim"/>
+        <StageArray AnimProps="Build,A,Start" BlendTime="0.000000"/>
+        <StageArray AnimProps="Build,A,Stand"/>
+        <StageArray AnimProps="Build,B,Start"/>
+        <StageArray AnimProps="Build,B,Stand"/>
+        <StageArray AnimProps="Build,C,Start"/>
+        <StageArray AnimProps="Build,C,Stand"/>
+        <StageArray AnimProps="Build,D"/>
+    </CActorProgress>
+    <CActorProgress id="TerranConstructionSCBW@Attached">
+        <Supporter Subject="_TerranBuildModel"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Start; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Stop; Level 0" Send="SetTransferOverrideAnim"/>
+        <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
+        <StageArray AnimProps="Birth,A,Stand"/>
+        <StageArray AnimProps="Birth,B,Start"/>
+        <StageArray AnimProps="Birth,B,Stand"/>
+        <StageArray AnimProps="Birth,C,Start"/>
+        <StageArray AnimProps="Birth,C,Stand"/>
+    </CActorProgress>
+    <CActorProgress id="TerranConstructionSCBW@AttachedSmall">
+        <Supporter Subject="_TerranBuildModelSmall"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Start; Level 0" Send="SetTransferOverrideAnim Birth,A,Stand"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Stop; Level 0" Send="SetTransferOverrideAnim"/>
+        <StageArray AnimProps="Birth,A,Start" BlendTime="0.000000"/>
+        <StageArray AnimProps="Birth,A,Stand"/>
+        <StageArray AnimProps="Birth,B,Start"/>
+        <StageArray AnimProps="Birth,B,Stand"/>
+        <StageArray AnimProps="Birth,C,Start"/>
+        <StageArray AnimProps="Birth,C,Stand"/>
+    </CActorProgress>
+    <CActorSound id="TerranConstructionSCBW@SoundLevel0" parent="ProgressSound">
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Start; Level 0" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Stop; Level 0" Send="Destroy"/>
+        <Sound value="Terran_ConstructionStart"/>
+    </CActorSound>
+    <CActorSound id="TerranConstructionSCBW@SoundLevel0Small" parent="ProgressSound">
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Start; Level 0" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Stop; Level 0" Send="Destroy"/>
+        <Sound value="Terran_ConstructionStartSmall"/>
+    </CActorSound>
+    <CActorSound id="TerranConstructionSCBW@SoundLevel2" parent="ProgressSound">
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Start; Level 2" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Stop; Level 2" Send="Destroy"/>
+        <Sound value="Terran_ConstructionStage1"/>
+    </CActorSound>
+    <CActorSound id="TerranConstructionSCBW@SoundLevel2Small" parent="ProgressSound">
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Start; Level 2" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Stop; Level 2" Send="Destroy"/>
+        <Sound value="Terran_ConstructionStage1Small"/>
+    </CActorSound>
+    <CActorSound id="TerranConstructionSCBW@SoundLevel4" parent="ProgressSound">
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Start; Level 4" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Stop; Level 4" Send="Destroy"/>
+        <Sound value="Terran_ConstructionStage2"/>
+    </CActorSound>
+    <CActorSound id="TerranConstructionSCBW@SoundLevel4Small" parent="ProgressSound">
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Start; Level 4" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Stop; Level 4" Send="Destroy"/>
+        <Sound value="Terran_ConstructionStage2Small"/>
+    </CActorSound>
+    <CActorSound id="TerranConstructionSCBW@SoundLevel6" parent="ProgressSound">
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Start; Level 6" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@Attached.Stop; Level 6" Send="Destroy"/>
+        <Sound value="Terran_ConstructionEnd"/>
+    </CActorSound>
+    <CActorSound id="TerranConstructionSCBW@SoundLevel6Small" parent="ProgressSound">
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Start; Level 6" Send="Create"/>
+        <On Terms="ProgressLevel.TerranConstructionSCBW@AttachedSmall.Stop; Level 6" Send="Destroy"/>
+        <Sound value="Terran_ConstructionEndSmall"/>
+    </CActorSound>
+    <CActorRegionCircle id="DetectorRadarSearchSCBW">
+        <On Terms="ActorCreation" Send="QueryRegion ::Self VoidDetectorRadarSearchQuery AgainstCenterGame"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.100000 Die"/>
+        <On Terms="TimerExpired; TimerName Die" Send="Destroy"/>
+        <Radius value="15.000000"/>
+    </CActorRegionCircle>
+    <CActorSimple id="DetectorRadarSetupSCBW">
+        <Terms value="Cap 1"/>
+        <On Terms="Behavior.GhostSCBWCloak.On; !PassChance 100.000000" Send="Create"/>
+        <On Terms="Behavior.GhostSCBWCloak.On; !PassChance 100.000000" Send="StatusIncrement ActiveCount"/>
+        <On Terms="ActorCreation" Send="TimerSet 0.500000 Retest"/>
+        <On Terms="TimerExpired; TimerName Retest" Send="Create DetectorRadarSearchSCBW"/>
+        <On Terms="TimerExpired; TimerName Retest" Send="TimerSet 0.500000 Retest"/>
+        <On Terms="StatusDecrement; IsStatus ActiveCount 0" Send="Destroy"/>
+        <On Terms="ActorCreation; ValidatePlayer HaveDetectionEnemy" Send="Destroy"/>
+    </CActorSimple>
+    <CActorEventMacro id="PhysicsDeathsSwarmGround">
+        <On index="13" Send="DeathCustomize RagdollFire"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect DamagePhysics" Send="DeathCustomize RagdollBasic"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {GhostSCBWNuclearStrike@Damage GhostSCBWNuclearStrike@DamageAccum}" Send="DeathCustomize RagdollNuke"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {MutaliskSCBWWeapon@Damage MutaliskSCBWWeapon@DamageBounce1 MutaliskSCBWWeapon@DamageBounce2}" Send="DeathCustomize RagdollAcid"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {BattlecruiserSCBWWeaponGround@Damage BattlecruiserSCBWWeaponAir@Damage}" Send="DeathCustomize RagdollFire"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {SiegeTankSCBWSiegedWeapon@DamageAccum SiegeTankSCBWSiegedWeapon@DamageAccum2 SiegeTankSCBWSiegedWeapon@DamageAccum3 SiegeTankSCBWSiegedWeapon@DamageCliff SiegeTankSCBWSiegedWeapon@DamageCliff2 SiegeTankSCBWSiegedWeapon@DamageCliff3 SpiderMineSCBWWeapon@DamageAccum SpiderMineSCBWWeapon@DamageAccum2 SpiderMineSCBWWeapon@DamageAccum3 ScarabSCBWWeapon@Damage ScarabSCBWWeapon@DamageUpgraded}" Send="DeathCustomize RagdollSiegeTank"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {LurkerSCBWWeapon@Damage SunkenColonySCBWWeapon@DamageAccum}" Send="DeathCustomize RagdollBasic"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {InfestedTerranSCBWWeapon@DamageAccum InfestedTerranSCBWWeapon@DamageAccum2 InfestedTerranSCBWWeapon@DamageAccum3 GuardianSCBWWeapon@Damage}" Send="DeathCustomize RagdollAcid"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {DefilerSCBWWeapon@DamageAccum DefilerSCBWWeapon@DamageAccum2 DefilerSCBWWeapon@DamageAccum3}" Send="DeathCustomize RagdollAcid"/>
+    </CActorEventMacro>
+    <CActorEventMacro id="PhysicsDeathsSwarmAir">
+        <On Terms="UnitDeathCustomize; KilledByEffect DamagePhysics" Send="DeathCustomize RagdollBasic"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {GhostSCBWNuclearStrike@Damage GhostSCBWNuclearStrike@DamageAccum}" Send="DeathCustomize RagdollNuke"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {MutaliskSCBWWeapon@Damage MutaliskSCBWWeapon@DamageBounce1 MutaliskSCBWWeapon@DamageBounce2}" Send="DeathCustomize RagdollAcid"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {BattlecruiserSCBWWeaponGround@Damage BattlecruiserSCBWWeaponAir@Damage}" Send="DeathCustomize RagdollFire"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {ValkyrieSCBWWeapon@DamageAccum ValkyrieSCBWWeapon@DamageAccum2 ValkyrieSCBWWeapon@DamageAccum3 CorsairSCBWWeapon@DamageAccum CorsairSCBWWeapon@DamageAccum2 CorsairSCBWWeapon@DamageAccum3}" Send="DeathCustomize RagdollBasic"/>
+        <On Terms="UnitDeathCustomize; KilledByEffect {ScourgeSCBWWeapon@Damage DevourerSCBWWeapon@DamageAccum SporeColonySCBWWeapon@Damage}" Send="DeathCustomize RagdollAcid"/>
+    </CActorEventMacro>
+    <CActorSound id="Changeling_Death" parent="SoundOneShot">
+        <On Terms="UnitDeath.ChangelingMarineSCBW; PassChance 100.000000" Send="Create"/>
+        <On Terms="UnitDeath.ChangelingZealotSCBW; PassChance 100.000000" Send="Create"/>
+        <On Terms="UnitDeath.ChangelingZerglingSCBW; PassChance 100.000000" Send="Create"/>
+    </CActorSound>
+    <CActorModel id="SCBW_HallucinationDeathLarge" parent="ModelAnimationStyleOneShot">
+        <On Terms="ActorCreation" Send="Create SCBW_HallucinationDeathLargeSound"/>
+        <Host Subject="_Selectable"/>
+        <Model value="HallucinationDeath"/>
+        <Scale value="1.500000"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+    </CActorModel>
+    <CActorModel id="SCBW_HallucinationDeathMedium" parent="ModelAnimationStyleOneShot">
+        <On Terms="ActorCreation" Send="Create SCBW_HallucinationDeathMediumSound"/>
+        <Host Subject="_Selectable"/>
+        <Model value="HallucinationDeath"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+    </CActorModel>
+    <CActorModel id="SCBW_HallucinationDeathSmall" parent="ModelAnimationStyleOneShot">
+        <On Terms="ActorCreation" Send="Create SCBW_HallucinationDeathSmallSound"/>
+        <Host Subject="_Selectable"/>
+        <Model value="HallucinationDeath"/>
+        <Scale value="0.600000"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+    </CActorModel>
+    <CActorSound id="SCBW_HallucinationDeathLargeSound" parent="SoundOneShot">
+        <Sound value="Sentry_HallucinationDeathLarge"/>
+    </CActorSound>
+    <CActorSound id="SCBW_HallucinationDeathMediumSound" parent="SoundOneShot">
+        <Sound value="Sentry_HallucinationDeathMedium"/>
+    </CActorSound>
+    <CActorSound id="SCBW_HallucinationDeathSmallSound" parent="SoundOneShot">
+        <Sound value="Sentry_HallucinationDeathSmall"/>
+    </CActorSound>
+    <CActorSimple id="SCBW_HallucinationController">
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="Behavior.HighTemplarSCBWHallucination.On; ValidateUnit RequiresTerran" Send="Create"/>
+        <On Terms="Behavior.HighTemplarSCBWHallucination.On; ValidateUnit RequiresZerg" Send="Create"/>
+        <On Terms="Behavior.HighTemplarSCBWHallucination.On; ValidateUnit RequiresNeut" Send="Create"/>
+        <On Terms="Behavior.HighTemplarSCBWHallucination.On; ValidateUnit IsBWTe" Send="Create"/>
+        <On Terms="Behavior.HighTemplarSCBWHallucination.On; ValidateUnit IsBWZe" Send="Create"/>
+        <On Terms="Behavior.HighTemplarSCBWHallucination.On; ValidateUnit HallucinationTargetRadius_Large" Send="StatusSet Size 2"/>
+        <On Terms="Behavior.HighTemplarSCBWHallucination.On; ValidateUnit HallucinationTargetRadius_Medium" Send="StatusSet Size 1"/>
+        <On Terms="Behavior.HighTemplarSCBWHallucination.On; ValidateUnit HallucinationTargetRadius_Small" Send="StatusSet Size 0"/>
+        <On Terms="UnitDeath; ValidateUnit IsHallucinationSCBW IncludeDerivedSnapshot" Send="Signal Death"/>
+        <On Terms="Signal.*.Death; IsStatus Size 2" Send="Create SCBW_HallucinationDeathLarge"/>
+        <On Terms="Signal.*.Death; IsStatus Size 1" Send="Create SCBW_HallucinationDeathMedium"/>
+        <On Terms="Signal.*.Death; IsStatus Size 0" Send="Create SCBW_HallucinationDeathSmall"/>
+        <On Terms="Signal.*.Death" Send="TimerSet 0.001000 Delay"/>
+        <On Terms="TimerExpired; TimerName Delay" Target="_DeathModel" Send="Destroy Immediate"/>
+        <On Terms="TimerExpired; TimerName Delay" Target="_DeathVoice" Send="SoundSetMuted 1 0"/>
+        <On Terms="TimerExpired; TimerName Delay" Target="_DeathVoice" Send="Destroy Immediate"/>
+        <On Terms="TimerExpired; TimerName Delay" Target="UnitDeathSound" Send="SoundSetMuted 1 0"/>
+        <On Terms="TimerExpired; TimerName Delay" Target="UnitDeathSound" Send="Destroy Immediate"/>
+        <On Terms="TimerExpired; TimerName Delay" Target="UnitDeathVoice" Send="SoundSetMuted 1 0"/>
+        <On Terms="TimerExpired; TimerName Delay" Target="UnitDeathVoice" Send="Destroy Immediate"/>
+        <!-- Edge case for viper -->
+        <On Terms="TimerExpired; TimerName Delay" Target="Viper" Send="Destroy Immediate"/>
+    </CActorSimple>
+    <CActorStateMonitor id="ZergBloodMediumBuilding">
+        <On Terms="UnitCreation.ExtractorRich" Send="Create"/>
+    </CActorStateMonitor>
+    <CActorEventMacro id="WhiffSequenceModelMacro_Scout" parent="WhiffSequenceModelMacro">
+        <Remove Terms="Signal.*.Impact; HasStatus InSequence" Target="::Creator" Send="Signal ResetSequence"/>
+    </CActorEventMacro>
+    <CActorModelMaterial id="CreepGlazeSCBW_A" parent="GlazeParent">
+        <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main"/>
+        <On Terms="AnimDone; AnimName Death" Send="ModelMaterialRemoveFrom ::Main"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModelMaterial>
+    <CActorModelMaterial id="CreepGlazeSCBW_B" parent="GlazeParent">
+        <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main"/>
+        <On Terms="AnimDone; AnimName Death" Send="ModelMaterialRemoveFrom ::Main"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModelMaterial>
+    <CActorModelMaterial id="CreepGlazeSCBW" parent="GlazeParent">
+        <!--On Terms="Behavior.DefilerSCBWPlague.On" Send="Create"/-->
+        <On Terms="ActorCreation" Send="ModelMaterialApplyTo ::Main"/>
+        <!--On Terms="Behavior.DefilerSCBWPlague.Off" Send="AnimBracketStop BSD"/-->
+        <On Terms="AnimDone; AnimName Death" Send="ModelMaterialRemoveFrom ::Main"/>
+        <On Terms="AnimDone; AnimName Death" Send="Destroy"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModelMaterial>
+</Catalog>

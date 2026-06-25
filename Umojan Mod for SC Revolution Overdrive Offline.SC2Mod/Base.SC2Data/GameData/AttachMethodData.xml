@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAttachMethodPattern id="AMPatternSentryPost">
+        <Keyword value="SetA"/>
+        <Base value="::RollingIndex"/>
+        <Driver value="SentryPostLM"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="AMPatternCrusader">
+        <Keyword value="Weapon"/>
+        <Driver value="DominatorGrenadesLM"/>
+        <Base value="::RollingIndex"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="AMPatternCrusaderUpgraded">
+        <Keyword value="Weapon"/>
+        <Driver value="DominatorGrenadesLMUpgraded"/>
+        <Base value="::RollingIndex"/>
+    </CAttachMethodPattern>
+    <CAttachMethodFilter id="AMFilterAthenaVympel">
+        <Logic value="OR"/>
+        <Keys Keyword="Weapon" Index="10"/>
+        <Keys Keyword="Weapon" Index="14"/>
+    </CAttachMethodFilter>
+    <CAttachMethodPattern id="AMPatternAthenaVympel">
+        <Keyword value="Weapon"/>
+        <Driver value="VympelMissilesLM"/>
+    </CAttachMethodPattern>
+    <CAttachMethodFilter id="AMFilterAthenaRanger">
+        <Logic value="OR"/>
+        <Keys Keyword="Weapon" Index="10"/>
+        <Keys Keyword="Weapon" Index="14"/>
+    </CAttachMethodFilter>
+    <CAttachMethodPattern id="AMPatternAthenaRanger">
+        <Keyword value="Weapon"/>
+        <Driver value="RangerMissilesLM"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="AMPatternAthenaRangerShield">
+        <Keyword value="Weapon"/>
+        <Driver value="RangerMissilesLMShield"/>
+    </CAttachMethodPattern>
+    <CAttachMethodFilter id="AMFilterMaverick">
+        <Keys Keyword="Weapon" Index="2"/>
+        <Keys Keyword="Weapon" Index="6"/>
+        <Logic value="OR"/>
+    </CAttachMethodFilter>
+    <CAttachMethodPattern id="AMPatternMaverick">
+        <Base value="::RollingIndex"/>
+        <Driver value="MaverickMissilesLM"/>
+        <Keyword value="Weapon"/>
+    </CAttachMethodPattern>
+    <CAttachMethodFilter id="AMFilterArtemis">
+        <Keys Keyword="Weapon" Index="8"/>
+        <Keys Keyword="Weapon" Index="9"/>
+        <Keys Keyword="Weapon" Index="10"/>
+        <Keys Keyword="Weapon" Index="11"/>
+        <Keys Keyword="Weapon" Index="12"/>
+        <Keys Keyword="Weapon" Index="13"/>
+        <Keys Keyword="Weapon" Index="14"/>
+        <Keys Keyword="Weapon" Index="15"/>
+        <Logic value="OR"/>
+    </CAttachMethodFilter>
+    <CAttachMethodPattern id="AMPatternArtemis">
+        <Base value="::RollingIndex"/>
+        <Driver value="ArtemisDamageMissileLM"/>
+        <Keyword value="Weapon"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="AMPatternMeteorRight">
+        <Keyword value="SetB"/>
+        <Base value="::RollingIndex"/>
+        <Driver value="MeteorMisssileLMRight"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="AMPatternMeteorLeft">
+        <Keyword value="SetC"/>
+        <Base value="::RollingIndex"/>
+        <Driver value="MeteorMissileLMLeft"/>
+    </CAttachMethodPattern>
+    <CAttachMethodFilter id="AMFilterZeusAA">
+        <Logic value="OR"/>
+        <Keys Keyword="Weapon" Index="9"/>
+        <Keys Keyword="Weapon" Index="12"/>
+    </CAttachMethodFilter>
+    <CAttachMethodPattern id="AMPatternZeusAA">
+        <Keyword value="Weapon"/>
+        <Driver value="ZeusAALaunchMissile"/>
+    </CAttachMethodPattern>
+    <CAttachMethodFilter id="AMFilterEnterpriseGun">
+        <Keys Keyword="Weapon" Index="1"/>
+        <Keys Keyword="Weapon" Index="2"/>
+        <Logic value="OR"/>
+    </CAttachMethodFilter>
+    <CAttachMethodPattern id="AMPatternEnterpriseGun">
+        <Keyword value="Weapon"/>
+        <Base value="::RollingIndex"/>
+        <Driver value="EnterpriseGunLM"/>
+    </CAttachMethodPattern>
+    <CAttachMethodFilter id="AMFilterOdysseusMissileLeft">
+        <Keys Keyword="Weapon" Index="20"/>
+        <Keys Keyword="Weapon" Index="22"/>
+        <Logic value="OR"/>
+    </CAttachMethodFilter>
+    <CAttachMethodFilter id="AMFilterOdysseusMissileRight">
+        <Keys Keyword="Weapon" Index="23"/>
+        <Keys Keyword="Weapon" Index="25"/>
+        <Logic value="OR"/>
+    </CAttachMethodFilter>
+    <CAttachMethodPattern id="AMPatternOdysseusMissileLeft">
+        <Keyword value="Weapon"/>
+        <Base value="::RollingIndex"/>
+        <Driver value="OdysseusMissileLMLeft"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="AMPatternOdysseusMissileRight">
+        <Keyword value="Weapon"/>
+        <Base value="::RollingIndex"/>
+        <Driver value="OdysseusMissileLMRight"/>
+    </CAttachMethodPattern>
+    <CAttachMethodPattern id="AMPatternPhoenix">
+        <Keyword value="Weapon"/>
+        <Driver value="PhoenixMissileLM"/>
+        <Base value="::RollingIndex"/>
+    </CAttachMethodPattern>
+</Catalog>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CMoverMissile id="ImmortalTaldarimWeaponMover">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Acceleration value="-1"/>
+            <Speed value="10"/>
+            <MaxSpeed value="20"/>
+            <Gravity value="60"/>
+            <ClearanceLookahead value="3"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="ColossusTaldarimRuptureMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Acceleration value="-1"/>
+            <Speed value="10"/>
+            <MaxSpeed value="20"/>
+            <Gravity value="60"/>
+            <ClearanceLookahead value="3"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="StalkerTaldarimWeapon">
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="18.75"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX"/>
+    </CMoverMissile>
+    <CMoverMissile id="VoidHighTemplarPsiOrbMissile" parent="MissileDefault">
+        <MotionPhases index="0">
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="3"/>
+            <ClearanceAcceleration value="75"/>
+            <Outro value="-1"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="719.2968"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="AscendantSacrificeWeapon1">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="7"/>
+            <ArrivalTestType value="2D"/>
+            <BlendType value="Linear"/>
+            <Outro value="3,5"/>
+            <ThrowVector value="0,-1,0"/>
+            <ThrowBandYaw value="180,-180,14.9963,-14.9963"/>
+            <ThrowBandPitch value="90,4.9987"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="10"/>
+            <TurnType value="Optimal"/>
+            <ArrivalTestType value="2D"/>
+            <BlendType value="Linear"/>
+            <RotationActorType value="LookAtTarget"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="AscendantSacrificeWeapon2">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="6"/>
+            <ArrivalTestType value="2D"/>
+            <BlendType value="Linear"/>
+            <Outro value="3,5.5"/>
+            <ThrowVector value="0,-1,0"/>
+            <ThrowBandYaw value="180,-180,14.9963,-14.9963"/>
+            <ThrowBandPitch value="90,4.9987"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="9"/>
+            <TurnType value="Optimal"/>
+            <ArrivalTestType value="2D"/>
+            <BlendType value="Linear"/>
+            <RotationActorType value="LookAtTarget"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="AscendantSacrificeWeapon3">
+        <MotionPhases>
+            <Driver value="Throw"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="5"/>
+            <ArrivalTestType value="2D"/>
+            <BlendType value="Linear"/>
+            <Outro value="3,6"/>
+            <ThrowVector value="0,-1,0"/>
+            <ThrowBandYaw value="180,-180,14.9963,-14.9963"/>
+            <ThrowBandPitch value="90,4.9987"/>
+        </MotionPhases>
+        <MotionPhases>
+            <Driver value="Guidance"/>
+            <Acceleration value="3200"/>
+            <MaxSpeed value="8"/>
+            <TurnType value="Optimal"/>
+            <ArrivalTestType value="2D"/>
+            <BlendType value="Linear"/>
+            <RotationActorType value="LookAtTarget"/>
+            <YawPitchRoll value="MAX"/>
+        </MotionPhases>
+    </CMoverMissile>
+    <CMoverMissile id="AscendantWeapon" parent="MissileDefault"/>
+    <CMoverMissile id="ColossusTaldarimWeapon" parent="MissileDefault"/>
+    <CMoverMissile id="SupplicantWeapon" parent="MissileDefault"/>
+</Catalog>

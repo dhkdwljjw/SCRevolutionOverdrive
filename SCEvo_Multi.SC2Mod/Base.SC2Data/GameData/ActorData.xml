@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="NexusSCBW">
+        <PlacementActorModel value="NexusSCBW@PlacementModel"/>
+        <On Terms="ActorCreation" Target="::external.ShieldBatterySCBWMatrixHarmonics@ActorList" Send="Signal NexusAddMe"/>
+        <On Terms="ActorDestruction" Target="::external.ShieldBatterySCBWMatrixHarmonics@ActorList" Send="Signal NexusRemoveMe"/>
+        <On Terms="Signal.*.DestroyMatrixHarmonicsRange" Target="ShieldBatterySCBWMatrixHarmonics@Range" Send="Destroy"/>
+    </CActorUnit>
+    <CActorModel id="NexusSCBW@PlacementModel" parent="PlacementModel">
+        <On Terms="ActorCreation" Send="Create ShieldBatterySCBWMatrixHarmonics@Range"/>
+        <Model value="NexusPlacementModel"/>
+    </CActorModel>
+    <CActorUnit id="DevourerSCBW">
+        <On index="65" Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+    </CActorUnit>
+    <CActorAction id="DevourerSCBWWeapon@Action">
+        <LaunchAssets Sound="DevourerSCBWWeapon@Launch"/>
+    </CActorAction>
+    <CActorModel id="ShieldBatterySCBW@PlacementModel">
+        <Macros value="ShieldBatterySCBWMatrixHarmonics@Macro"/>
+    </CActorModel>
+    <CActorEventMacro id="PhysicsDeathsSwarmGround">
+        <On Terms="UnitDeathCustomize; KilledByEffect SiegeTankSiegedWeapon@DamageCliff" Send="DeathCustomize RagdollSiegeTank"/>
+    </CActorEventMacro>
+    <CActorStateMonitor id="ProtossFlamesMediumBuilding">
+        <On Terms="UnitCreation.AssimilatorRich" Send="Create"/>
+    </CActorStateMonitor>
+    <CActorSimple id="ReaverSCBWWeapon@TargetTint">
+        <On index="0" Terms="Behavior.ReaverSCBWWeapon@WarningSign.On; !PassChance 100.000000"/>
+    </CActorSimple>
+    <CActorRange id="ComsatStationSCBWScannerSweep@Visual">
+        <Icon value="Assets\Textures\radaricon1.dds"/>
+        <Inherits index="TeamColor" value="1"/>
+    </CActorRange>
+    <CActorModel id="ComsatStationSCBWScannerSweep@Model">
+        <Inherits index="TeamColor" value="1"/>
+    </CActorModel>
+    <CActorUnit id="DragoonSCBW">
+        <On index="67" Send="TimerSet 0.450000 CoverDelay"/>
+    </CActorUnit>
+    <CActorModel id="FirebatSCBWWeapon@Model">
+        <On index="7" Send="TimerSet 0.400000 AnimStop"/>
+    </CActorModel>
+    <CActorSound id="GhostSCBWNuclearStrike@TargetSound">
+        <Filter index="Neutral" value="1"/>
+        <Filter index="Enemy" value="1"/>
+    </CActorSound>
+    <!--                                                                                         -->
+    <CActorSplat id="PowerVisual">
+        <HostSiteOps Ops="SOpShadow"/>
+    </CActorSplat>
+    <CActorRange id="PowerVisualLow">
+        <CliffLevelFlags index="Higher" value="0"/>
+    </CActorRange>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!--                                                                                         -->
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <CActorUnit id="ProtossVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 30.200001 AsDuration"/>
+    </CActorUnit>
+    <CActorUnit id="PurifierVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 30.200001 AsDuration"/>
+    </CActorUnit>
+    <CActorRange id="QueenSCBWInfestCommandCenter@InfestRange">
+        <Terms value="Cap 1"/>
+        <On Terms="Effect.QueenSCBWInfestCommandCenter@CP.Start; At Caster" Send="Create"/>
+        <On Terms="ActorCreation" Send="MessageThinkActivate"/>
+        <On Terms="Effect.QueenSCBWInfestCommandCenter@CP.Stop; At Caster" Send="Destroy"/>
+        <On Terms="ActorThink; IsLocalParticipantType; ScopeContains GroundLocalSelection" Send="SetVisibility 1"/>
+        <On Terms="ActorThink; IsLocalParticipantType; !ScopeContains GroundLocalSelection" Send="SetVisibility"/>
+        <On Terms="ActorThink; !IsLocalParticipantType; ScopeContains GroundLocalSelectionObserver" Send="SetVisibility 1"/>
+        <On Terms="ActorThink; !IsLocalParticipantType; !ScopeContains GroundLocalSelectionObserver" Send="SetVisibility"/>
+        <Range value="9.750000"/>
+        <Icon value="Assets\Textures\radaricon2.dds"/>
+        <IconArcLength value="1.750000"/>
+    </CActorRange>
+    <CActorUnit id="RichVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 30.200001 AsDuration"/>
+    </CActorUnit>
+    <CActorUnit id="ShakurasVespeneGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 30.200001 AsDuration"/>
+    </CActorUnit>
+    <CActorRange id="ShieldBatterySCBW@ProtectRange">
+        <Range value="6.000000"/>
+    </CActorRange>
+    <CActorUnit id="SpacePlatformGeyser">
+        <On index="71" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 30.200001 AsDuration"/>
+    </CActorUnit>
+    <CActorProgress id="SporeColonySCBW@MorphProgress">
+        <On index="6" Terms="ProgressLevel.*.Start; Level 4"/>
+        <StageArray index="0" AnimProps="Build,B,Start"/>
+        <StageArray index="1" AnimProps="Build,B,Stand"/>
+        <StageArray index="2" AnimProps="Build,C,Start"/>
+        <StageArray index="3" AnimProps="Build,C,Stand"/>
+        <StageArray index="4" AnimProps="Build,D"/>
+        <StageArray index="5" removed="1"/>
+        <StageArray index="6" removed="1"/>
+    </CActorProgress>
+    <CActorSplat id="UnpoweredVisual">
+        <HostSiteOps Ops="SOpShadow"/>
+    </CActorSplat>
+    <CActorRange id="UnpoweredVisualLow">
+        <CliffLevelFlags index="Higher" value="0"/>
+    </CActorRange>
+    <!--                                                                                         -->
+    <!-- Vespene                                                                                 -->
+    <!--                                                                                         -->
+    <CActorUnit id="VespeneGeyser">
+        <On index="73" Send="AnimPlay CoverStart Cover,Start 0 0.000000 0.300000 30.200001 AsDuration"/>
+    </CActorUnit>
+    <CActorAction id="InterceptorSCBWWeaponAlt@Action" parent="GenericAttackBase">
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+        <On Terms="Effect.InterceptorSCBWWeaponAlt@CP.Start; At Caster" Send="Create"/>
+        <On Terms="Effect.InterceptorSCBWWeaponAlt@Damage.Start; At Caster; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <On Terms="Effect.InterceptorSCBWWeaponAlt@Damage.Stop; At Caster; FromEffectTreeDescendant" Send="ActionDamagePhysics"/>
+        <LaunchAttachQuery Methods="AMFilterWeapon"/>
+        <LaunchAssets Sound="InterceptorSCBWWeapon@Launch"/>
+        <Beam value="InterceptorSCBWWeaponAlt@Beam"/>
+        <BeamScope value="Caster"/>
+        <ImpactSite value="GenericAttackImpactSiteWhiff"/>
+        <ImpactMap index="None" Model="InterceptorSCBWWeapon@Impact" Sound="InterceptorSCBWWeapon@Impact"/>
+        <ImpactModel value="InterceptorAttackImpactModel"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <DamagePhysics Name="InterceptorSCBWWeaponAlt@Impact" MatchKeys="Basic" Physics="InterceptorAttackDeathForce"/>
+        <DamagePhysics Name="InterceptorSCBWWeaponAlt@Impact" MatchKeys="BasicAir" Physics="InterceptorAttackAirDeathForce"/>
+        <ActionFlags index="ImpactMonitorsTeleports" value="1"/>
+    </CActorAction>
+    <CActorBeamSimple id="InterceptorSCBWWeaponAlt@Beam">
+        <Macros value="ActionTargetTeleportDestroy"/>
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <Model value="InterceptorSCBWWeapon@Beam"/>
+    </CActorBeamSimple>
+</Catalog>

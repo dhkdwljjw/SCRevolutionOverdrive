@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DocInfo>
+    <ModType>
+        <Value>Interface</Value>
+    </ModType>
+    <Dependencies>
+        <Value>bnet:SCEvo_LocalizedAssets_Public/0.0/231204,file:Mods\SC Evolution Complete\Online\SCEvo_LocalizedAssets.SC2Mod</Value>
+        <Value>bnet:SCEvo_ProtossAssets_Public/0.0/243194,file:Mods\SC Evolution Complete\Online\SCEvo_ProtossAssets.SC2Mod</Value>
+        <Value>bnet:SCEvo_TerranAssets_Public/0.0/243207,file:Mods\SC Evolution Complete\Online\SCEvo_TerranAssets.SC2Mod</Value>
+        <Value>bnet:SCEvo_ZergAssets_Public/0.0/231207,file:Mods\SC Evolution Complete\Online\SCEvo_ZergAssets.SC2Mod</Value>
+    </Dependencies>
+</DocInfo>

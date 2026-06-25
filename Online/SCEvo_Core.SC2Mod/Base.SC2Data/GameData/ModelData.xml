@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel default="1" id="ProtossAdvisorSCBW@PortraitBase" parent="Portrait">
+        <Model value="Assets\Portraits\Protoss\Aldaris@PortraitSCBW\Aldaris@PortraitSCBW.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Flags index="Download" value="1"/>
+        <Image value="Assets\Textures\ProtossAdvisorSCBW@portrait_static.dds"/>
+        <Lighting value="AdvisorSCBW@Portrait"/>
+    </CModel>
+    <CModel default="1" id="ZergAdvisorSCBW@PortraitBase" parent="Portrait">
+        <Model value="Assets\Portraits\Zerg\OvermindPortrait\OvermindPortrait.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Image value="Assets\Textures\ZergAdvisorSCBW@portrait_static.dds.dds"/>
+        <Lighting value="OvermindSCBW@Portrait"/>
+    </CModel>
+    <CModel default="1" id="TerranAdvisorSCBW@PortraitBase" parent="FXAPortrait">
+        <Model value="Assets\Portraits\Terran\ConfederateAdjutantPortrait\ConfederateAdjutantPortrait.m3"/>
+        <FacialController value="LocalizedData\Facial\SM_Adjutant.fxa"/>
+        <Image value="Assets\Textures\TerranAdvisorSCBW@portrait_static.dds"/>
+        <Lighting value="TerranAdvisorSCBW@Portrait"/>
+    </CModel>
+    <CModel id="CarryHighYieldMineralFieldMinerals">
+        <Model value="Assets\Buildings\Resources\ResourceHighYieldCrystalSCBW\ResourceHighYieldCrystalSCBW.m3"/>
+    </CModel>
+    <CModel id="CarryMineralFieldMinerals">
+        <Model value="Assets\Buildings\Resources\ResourceCrystalSCBW\ResourceCrystalSCBW.m3"/>
+    </CModel>
+    <CModel id="CommandCenter">
+        <RequiredAnims value="Assets\Buildings\Terran\CommandCenterEx1\CommandCenterEx1_UnpoweredAnims.m3a"/>
+    </CModel>
+    <CModel id="CommandCenter_CovertOps">
+        <RequiredAnims value="Assets\Buildings\Terran\CommandCenterEx1\CommandCenterEx1_UnpoweredAnims.m3a"/>
+    </CModel>
+    <CModel id="CommandCenter_Silver">
+        <RequiredAnims value="Assets\Buildings\Terran\CommandCenterEx1\CommandCenterEx1_UnpoweredAnims.m3a"/>
+    </CModel>
+    <CModel id="CreepGlazeSCBW_B" parent="Glaze">
+        <Model value="Assets\Effects\Race\Creep@SCBWGlaze\Creep@SCBWGlazeB8.m3"/>
+    </CModel>
+    <CModel id="CreepGlazeSCBW_A" parent="Glaze">
+        <Model value="Assets\Effects\Race\Creep@SCBWGlaze\Creep@SCBWGlazeA2.m3"/>
+    </CModel>
+    <CModel id="BattleStationMineralFieldSCBW" parent="BattleStationMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralClassicSCBW_Battlestation\ResourceMineralClassicSCBW_Battlestation.m3"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="RichBattleStationMineralFieldSCBW" parent="BattleStationMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralClassicSCBW_Battlestation_Rich\ResourceMineralClassicSCBW_Battlestation_Rich.m3"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="RichMineralFieldSCBW" parent="HighYieldMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralClassic_RichSCBW\ResourceMineralClassic_RichSCBW.m3"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="LabMineralFieldSCBW" parent="LabMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralClassicSCBW_Lab\ResourceMineralClassicSCBW_Lab.m3"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="RichLabMineralFieldSCBW" parent="LabMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralClassicSCBW_Lab_Rich\ResourceMineralClassicSCBW_Lab_Rich.m3"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="MineralFieldSCBW" parent="MineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralClassicSCBW\ResourceMineralClassicSCBW.m3"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="PurifierMineralFieldSCBW" parent="PurifierMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralClassicSCBW_Purifier\ResourceMineralClassicSCBW_Purifier.m3"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="PurifierRichMineralFieldSCBW" parent="PurifierRichMineralField">
+        <Model value="Assets\Buildings\Resources\ResourceMineralClassicSCBW_Purifier_Rich\ResourceMineralClassicSCBW_Purifier_Rich.m3"/>
+        <VariationCount value="3"/>
+    </CModel>
+    <CModel id="ProtossAOECursorSplatSCBW" parent="ProtossAOECursorSplat">
+        <Model value="Assets\UI\ProtossCursorEx2\ProtossCursorEx2.m3"/>
+    </CModel>
+    <CModel id="SparkTargetImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+        <Flags index="Ignorable" value="1"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="UltraliskSkin_Webby">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_Collectors_Collection">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_Mecha">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_Primal_Collection">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="UltraliskCE">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="UltraliskSkin_Primal">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_CollectionSkin_Primal">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_CollectorEdition">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_Primal">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_RCZ">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_Remastered">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="Ultralisk_Webby">
+        <AttachProps Id="Ref_Head">
+            <Keys index="Weapon" value="0"/>
+        </AttachProps>
+    </CModel>
+    <CModel id="CreepGlazeSCBW" parent="Glaze">
+        <Model value="Assets\Effects\Race\Creep@SCBWGlaze\Creep@SCBWGlaze.m3"/>
+    </CModel>
+    <CModelFoliage id="CreepSCBW@GlazeA2">
+        <Model value="Assets\Effects\Race\Creep@SCBWGlaze\Creep@SCBWGlazeA2.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+    </CModelFoliage>
+    <CModelFoliage id="CreepSCBW@GlazeB8">
+        <Model value="Assets\Effects\Race\Creep@SCBWGlaze\Creep@SCBWGlazeB8.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+    </CModelFoliage>
+    <CModel id="OvermindSCBW@Portrait" parent="Portrait" Race="Zerg">
+        <Model value="Assets\Portraits\Zerg\OvermindPortrait\OvermindPortrait.m3"/>
+        <Image value="Assets\Textures\ZergAdvisorSCBW@portrait_static.dds.dds"/>
+    </CModel>
+    <CModel id="SCBW_PingViewArea">
+        <Model value="Assets\UI\Feedback\Hud_FOV\Hud_FOV.m3"/>
+        <EditorCategories value="Race:Neutral"/>
+    </CModel>
+    <CModel id="VespeneGeyser">
+        <Model value="Assets\Buildings\Resources\VespeneGeyser_Ex2\VespeneGeyser_Ex2.m3"/>
+    </CModel>
+    <CModel id="VespeneGeyserHigh">
+        <Model value="Assets\Buildings\Resources\VespeneGeyser_Ex2\VespeneGeyser_Ex2.m3"/>
+        <!--PausedParticleSystemBehavior value="PauseEmissionRate"\-->
+    </CModel>
+    <CModel id="ZergAdvisorSCBW@Portrait" parent="ZergAdvisorSCBW@PortraitBase" Race="Zerg"/>
+    <CModel id="ProtAdvisorSCBW@Portrait" parent="ProtossAdvisorSCBW@PortraitBase" Race="Protoss"/>
+    <CModel id="TerranAdvisorSCBW@Portrait" parent="TerranAdvisorSCBW@PortraitBase" Race="Terran"/>
+    <CModel id="WhiffBeam" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Neutral\WhiffBeam\WhiffBeam.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.200000,0.350000,0.200000"/>
+    </CModel>
+    <CModel id="ZerglingUpgradeDeathRagdoll">
+        <Model value="Assets\Units\Zerg\ZerglingDeathRagdoll\ZerglingDeathRagdoll.m3"/>
+    </CModel>
+    <CModel id="UnitSCBW" parent="Unit" Race="Terran"/>
+    <CModel id="SCBW_InfestationCommandCenter" parent="PersistentSpellFX">
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <Model value="Assets\Effects\Zerg\InfestationCommandCenter\InfestationCommandCenter_NoSplat.m3"/>
+        <EditorCategories value="Race:Zerg"/>
+        <SelectionRadius value="0.625000"/>
+        <ShadowRadius value="0.625000"/>
+    </CModel>
+</Catalog>

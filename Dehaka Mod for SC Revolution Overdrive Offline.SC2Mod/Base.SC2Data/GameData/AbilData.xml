@@ -1,0 +1,1882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilMorph default="1" id="PrimalBuildingUproot">
+        <?token id="unit"?>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PrimalBuildingUproot" Requirements="HaveDehakaBurrow"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="RallyReset" value="1"/>
+        <InfoArray Unit="##unit##">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.6"/>
+                <DurationArray index="Duration" value="1.0332"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorphPlacement default="1" id="PrimalBuildingRoot">
+        <?token id="unit"?>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PrimalBuildingRoot"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="RallyReset" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="##unit##" CollideRange="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Facing">
+                <DurationArray index="Duration" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="0.733"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilEffectTarget id="DehakaConsume">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaConsumeLaunchMissile"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="0.125"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <TargetFilters value="Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Range value="9"/>
+        <Range value="12"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaConsume"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="DehakaGlevigCalldown">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/Summoning"/>
+        <InfoArray index="Train1" Time="180" Effect="DehakaGlevigCalldownSet">
+            <Button DefaultButtonFace="DehakaCalldownGlevig" Requirements="NotHaveDehakaBoss"/>
+            <Unit value="GlevigDummy"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaMurvarCalldown">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/Summoning"/>
+        <InfoArray index="Train1" Time="180" Effect="DehakaMurvarCalldownSet">
+            <Button DefaultButtonFace="DehakaCalldownMurvar" Requirements="NotHaveDehakaBoss"/>
+            <Unit value="MurvarDummy"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaDakrunCalldown">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/Summoning"/>
+        <InfoArray index="Train1" Time="180" Effect="DehakaDakrunCalldownSet">
+            <Button DefaultButtonFace="DehakaCalldownDakrun" Requirements="NotHaveDehakaBoss"/>
+            <Unit value="DakrunDummy"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectTarget id="MammothBreath">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="MammothBreathStartSet"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <TimeStart value="90"/>
+                <TimeUse value="90"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown Location="Unit" TimeUse="10"/>
+        </Cost>
+        <Range value="11"/>
+        <CastIntroTime value="0.3"/>
+        <CursorEffect value="ChargedBusterSearch"/>
+        <CursorRangeMode value="Clamp"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MammothBreath"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <Arc value="299.9926"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DehakaLeapStomp">
+        <EditorCategories value="AbilityorEffectType:Units,Race:PrimalZerg"/>
+        <Effect index="0" value="DehakaLeapStompPlacementCU"/>
+        <Flags index="AbortOnAllianceChange" value="0"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Range value="6"/>
+        <Range value="9"/>
+        <Range value="9"/>
+        <CursorEffect value="DehakaStompSearchC"/>
+        <LevelButtonTooltip value="Button/Tooltip/DehakaLeapStomp2"/>
+        <LevelButtonTooltip value="Button/Tooltip/DehakaLeapStomp3"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaLeapStomp"/>
+        <Arc value="299.9926"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DehakaDeepTunnel">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaDeepTunnelCU"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CastIntroTime value="0"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ProgressButtonArray index="Cast" value="DehakaDeepTunnel"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaDeepTunnel">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="DehakaIntimidatingRoar">
+        <EditorCategories value="AbilityorEffectType:Units,Race:PrimalZerg"/>
+        <Effect index="0" value="DehakaIntimidatingRoarSearch"/>
+        <Effect value="DehakaIntimidatingRoarSearchLv2"/>
+        <Effect value="DehakaIntimidatingRoarSearchLv3"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaIntimidatingRoar"/>
+        <CursorEffect value="DehakaIntimidatingRoar"/>
+        <CursorEffect value="DehakaIntimidatingRoarLv2"/>
+        <CursorEffect value="DehakaIntimidatingRoarLv3"/>
+        <LevelButtonTooltip value="Button/Tooltip/DehakaIntimidatingRoarLv2"/>
+        <LevelButtonTooltip value="Button/Tooltip/DehakaIntimidatingRoarLv3"/>
+    </CAbilEffectInstant>
+    <CAbilBehavior id="DehakaMendingAura">
+        <CmdButtonArray index="On" DefaultButtonFace="DehakaMendingAura"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="Cancel">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="DehakaMendingAuraCaster"/>
+        <BehaviorArray value="DehakaMendingAuraCaster"/>
+        <BehaviorArray value="DehakaMendingAuraCaster"/>
+        <LevelButtonOffTooltip value="Button/Tooltip/DehakaMendingAura2"/>
+        <LevelButtonOffTooltip value="Button/Tooltip/DehakaMendingAura3"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="DehakaArmorUpgrade">
+        <CmdButtonArray index="On" DefaultButtonFace="LearnDehakaArmorUpgrade"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="Cancel">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="DehakaArmorUpgrade1"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="DehakaAirAttackUpgrade">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="DehakaAirAttackUpgrade"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="Cancel">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="DehakaAirAttackUpgrade"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="DehakaDetector">
+        <CmdButtonArray index="On" DefaultButtonFace="DehakaDetector"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="Cancel">
+            <Flags index="IgnoreUser" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="ToggledOn" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="DehakaDetectorPassive"/>
+    </CAbilBehavior>
+    <CAbilLearn id="DehakaLearn">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Learn2" Abil="DehakaLeapStomp" VeterancyLevelMin="1" VeterancyLevelSkip="2">
+            <Button DefaultButtonFace="LearnDehakaLeapStomp"/>
+        </InfoArray>
+        <InfoArray index="Learn3" Abil="DehakaConsume" VeterancyLevelMin="1" VeterancyLevelSkip="2">
+            <Button DefaultButtonFace="LearnDehakaConsume"/>
+        </InfoArray>
+        <InfoArray index="Learn4" Abil="MammothBreath" VeterancyLevelMin="6">
+            <Button DefaultButtonFace="LearnDehakaMammothBreath"/>
+        </InfoArray>
+        <InfoArray index="Learn5" Abil="DehakaMendingAura" VeterancyLevelMin="1" VeterancyLevelSkip="2">
+            <Button DefaultButtonFace="LearnDehakaMendingAura" State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Learn6" Abil="DehakaArmorUpgrade" VeterancyLevelMin="5" VeterancyLevelSkip="2">
+            <Button DefaultButtonFace="LearnDehakaArmorUpgrade" State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Learn8" Abil="DehakaIntimidatingRoar" VeterancyLevelMin="1" VeterancyLevelSkip="2">
+            <Button DefaultButtonFace="DehakaIntimidatingRoar"/>
+        </InfoArray>
+        <InfoArray index="Learn9" Abil="DehakaDetector" VeterancyLevelMin="5">
+            <Button DefaultButtonFace="LearnDehakaDetector" State="Restricted"/>
+        </InfoArray>
+        <InfoArray index="Learn11" Abil="DehakaAirAttackUpgrade" VeterancyLevelMin="10">
+            <Button DefaultButtonFace="DehakaAirAttackUpgrade" State="Restricted"/>
+        </InfoArray>
+        <PointsPerLevel value="1"/>
+        <Flags index="HideOnMaxLevel" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Points value="1"/>
+    </CAbilLearn>
+    <CAbilEffectInstant id="CoopMurvarSpawnCreepers">
+        <Flags index="AutoCast" value="1"/>
+        <!-- Autocast on/off is being set in triggers -->
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <Arc value="360"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
+        <AutoCastRange value="12"/>
+        <AutoCastValidatorArray value="EnemiesWithin12"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CoopMurvarSpawnCreepers"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="MurvarCoopPuke">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="CoopMurvarPukeInitialSet"/>
+        <Flags index="AutoCast" value="1"/>
+        <!-- Autocast on/off is being set in triggers -->
+        <Cost>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <Range value="7"/>
+        <Arc value="4.9987"/>
+        <ArcSlop value="180"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral"/>
+        <AutoCastRange value="7"/>
+        <AutoCastValidatorArray value="UnitOrAttackingStructure"/>
+        <CancelableArray index="Channel" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MurvarPukeCoop"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <CursorEffect value="CoopMurvarPukePuddleSearch"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="DehakaLocustFlyingMorphToGround">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaLocustSwoop"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray Unit="DehakaLocust"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="DehakaLocustFlyingSwoopAttack">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaLocustFlyingSwoopCreatePrecursorOffset"/>
+        <Flags index="BestUnit" value="0"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaLocustSwoop"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="DehakaLocustMorphToAir">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="LocustMPFlyingSwoop"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray Unit="DehakaLocustFlying">
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="0.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="KraithCrashingCharge">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="20"/>
+        </Cost>
+        <Range value="14"/>
+        <PrepTime value="0.5"/>
+        <FinishTime value="0.3"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <Effect index="0" value="DehakaDakrunCrashingChargePlacementCU"/>
+        <ProgressButtonArray index="Prep" value="DakrunCrashingCharge"/>
+        <CursorEffect value="DehakaDakrunCrashingChargeTargetSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DakrunCrashingCharge"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="GlevigDeepTunnel">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="GlevigDeepTunnelCU"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CastIntroTime value="2"/>
+        <CastOutroTime value="0"/>
+        <FinishTime value="3"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ShowProgressArray index="Finish" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ProgressButtonArray index="Cast" value="GlevigTunnel"/>
+        <ProgressButtonArray index="Channel" value="GlevigTunnel"/>
+        <ProgressButtonArray index="Finish" value="GlevigTunnel"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="GlevigTunnel"/>
+        <PlaceUnit value="DehakaGlevigDeepTunnelPlacement"/>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DehakaGlevigFirebreath">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaGlevigFirebreathDummyCP"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="DeferCooldown" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Range value="9"/>
+        <RangeSlop value="16"/>
+        <FinishTime value="1.5"/>
+        <CancelableArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Approach" value="1"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="GlevigFirebreath"/>
+        <Cost>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <PreEffectBehavior Behavior="GlevigUnturnable" Count="1" Duration="6"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="EssencePickup">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Charge Link="Abil/EssenceBuffPickup"/>
+            <Cooldown Link="Abil/EssenceBuffPickup" TimeUse="0.125"/>
+        </Cost>
+        <Range value="8"/>
+        <Arc value="360"/>
+        <AutoCastFilters value="-;Ally,Neutral,Enemy,Structure,Missile,Destructible,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastValidatorArray value="PickupCheckCoop"/>
+        <FinishTime value="0.125"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PickupMinerals100"/>
+        <AutoCastRange value="6"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="BurrowDehakaCoopUp">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaCoop" RandomDelayMax="0.1">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="2"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+    </CAbilMorph>
+    <CAbilRevive id="DehakaRevive" parent="ReviveSelfAtTarget">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Revive1" DefaultButtonFace="KerriganRevive"/>
+        <CmdButtonArray index="ReviveAtTarget1" DefaultButtonFace="KerriganRevivePlacement"/>
+        <Effect value="DehakaReviveFirstTimeSet"/>
+        <Flags index="UnitOrderQueue" value="1"/>
+        <BaseInfo>
+            <Cooldown Location="Player" TimeUse="0.1"/>
+        </BaseInfo>
+        <Range value="10"/>
+        <Offset value="0,0"/>
+        <Alert value="KerriganReviveComplete"/>
+    </CAbilRevive>
+    <CAbilEffectInstant id="DehakaCoopReviveEat">
+        <Alignment value="Positive"/>
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <TargetFilters value="Structure;Ally,Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden"/>
+        <Range value="0.04"/>
+        <RangeSlop value="100"/>
+        <AutoCastFilters value="Structure,Visible;Ally,Neutral,Enemy,Missile,Item,Stasis,UnderConstruction,Dead,Hidden"/>
+        <AutoCastRange value="500"/>
+        <CastMovementLimit value="500"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ConsumeDrone">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="DehakaSpawnCreeperTargeted">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaCreeperCreateSwitch"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaSpawnLocusts">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Cost>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AutoCastRange value="12"/>
+        <AutoCastValidatorArray value="EnemiesWithin12"/>
+        <AbilSetId value="SpawnLocust"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="DehakaMorphToPrimalSwarmHost">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSwarmHostMP">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="RallyReset" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaPrimalSwarmHost" RandomDelayMax="0.5">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="DehakaMorphToPrimalSwarmHostBurrowed">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSwarmHostBurrowedMP" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="BurrowDown"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="RallyReset" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaPrimalSwarmHostBurrowed" RallyResetPhase="Delay" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="2.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilTransport id="PrimalOverlordTransport">
+        <AbilSetId value="ULdM"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Load" DefaultButtonFace="PrimalOverlordTransportLoad" Requirements="HaveOverlordTransport"/>
+        <CmdButtonArray index="UnloadAll">
+            <Flags index="Hidden" value="1"/>
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="UnloadAt" DefaultButtonFace="PrimalOverlordTransportUnload"/>
+        <CmdButtonArray index="UnloadUnit">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="LoadAll">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <Flags index="CargoDeath" value="1"/>
+        <MaxCargoCount value="8"/>
+        <MaxCargoSize value="8"/>
+        <TotalCargoSpace value="8"/>
+        <UnloadCargoEffect value="PurificationNovaTargettedCasterRB"/>
+        <UnloadPeriod value="1"/>
+        <TargetFilters value="Visible;Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden"/>
+        <LoadValidatorArray value="NotWidowMineTarget"/>
+    </CAbilTransport>
+    <CAbilMergeable id="PrimalSwarmHostMergeable">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Cancelable value="0"/>
+    </CAbilMergeable>
+    <CAbilEffectTarget id="DehakaConcoonEatLoadOrder">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown TimeUse="0.0625"/>
+        </Cost>
+        <TargetFilters value="-;Ally,Neutral,Enemy,Structure,Heroic,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ConsumeDrone"/>
+        <SharedFlags index="Disabled" value="1"/>
+        <Effect index="0" value="DehakaConcoonEatLoadOrderSet"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DehakaSpawnLocustsTargeted">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaLocustCreateSet"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaSpawnLocusts">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Cost>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AutoCastRange value="14"/>
+        <AutoCastValidatorArray value="EnemiesWithin14"/>
+        <AbilSetId value="SpawnLocust"/>
+    </CAbilEffectTarget>
+    <CAbilMerge id="PrimalSwarmHostMerge">
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="DehakaSwarmHostMerge" State="Restricted">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="DehakaSwarmHostMerge" State="Restricted"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Info Unit="DehakaPrimalSwarmHost" Time="8">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="100"/>
+        </Info>
+        <Effect value="DehakaGeneCreeperHostMorphSet"/>
+    </CAbilMerge>
+    <CAbilMorph id="DehakaMorphToSwarmHostBurrowed">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSwarmHostBurrowedMP" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="BurrowDown"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="RallyReset" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaSwarmHostBurrowed" RallyResetPhase="Delay" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="2.5"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="DehakaMorphToSwarmHost">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="MorphToSwarmHostMP">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="RallyReset" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaSwarmHost" RandomDelayMax="0.5">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="DehakaUltraliskCrashingCharge">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaUltraliskCrashingChargePlacementCU"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="RequireTargetVision" value="0"/>
+        <Cost>
+            <Cooldown TimeUse="30"/>
+        </Cost>
+        <Range value="9"/>
+        <PrepTime value="0.5"/>
+        <FinishTime value="0.3"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CursorEffect value="DehakaUltraliskCrashingChargeTargetSearch"/>
+        <ProgressButtonArray index="Prep" value="DehakaUltraliskCrashingCharge"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaUltraliskCrashingCharge" Requirements="HaveDehakaUltraliskCrashingCharge"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="BurrowDehakaUltraliskLevel2Down">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowDown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaUltraliskLevel2Burrowed" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.8332"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaUltraliskLevel2Up">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowUp"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaUltraliskLevel2" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaUltraliskLevel3Down">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowDown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaUltraliskLevel3Burrowed" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.8332"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaUltraliskLevel3Up">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowUp"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaUltraliskLevel3" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+    </CAbilMorph>
+    <CAbilMerge id="PrimalUltraliskLevel2Merge">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="DehakaUltraliskMerge" State="Restricted">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="DehakaUltraliskMerge" State="Restricted"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Info Unit="DehakaUltraliskLevel3" Time="8">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+        </Info>
+        <Effect value="PrimalUnitMergeFacing"/>
+    </CAbilMerge>
+    <CAbilMergeable id="PrimalUltraliskLevel2Mergeable">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Cancelable value="0"/>
+    </CAbilMergeable>
+    <CAbilEffectInstant id="DehakaTyrannozorFanOfKnives">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaTyrannozorFanOfKnivesSearch"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Charge Link="Abil/DehakaTyrannosaurFanOfKnives"/>
+            <Cooldown Link="Abil/DehakaTyrannosaurFanOfKnives" Location="Unit" TimeUse="30"/>
+        </Cost>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaTyrannozorFanOfKnives" Requirements="HaveDehakaTyrannozorFanOfKnives"/>
+    </CAbilEffectInstant>
+    <CAbilMergeable id="PrimalHydraliskLevel2Mergeable">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Cancelable value="0"/>
+    </CAbilMergeable>
+    <CAbilMorph id="BurrowImpalerDehakaDown">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <ActorKey value="BurrowDown"/>
+        <AbilSetId value="BrwDb"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="ImpalerDehakaBurrowed" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="2"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1.8332"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.8332"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowImpalerDehakaUp">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <ActorKey value="BurrowUp"/>
+        <AbilSetId value="BrwUb"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="ImpalerDehaka" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="DehakaMutaliskFightMorphToDehakaMutalisk">
+        <AbilSetId value="FighterMode"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FighterMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="DehakaMutaliskLevel3">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="DehakaMutaliskRevive">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <Alert value="DehakaMutaliskReviveComplete"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaMutalisk"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Birth" value="1"/>
+        <Flags index="DisableAbils" value="1"/>
+        <Flags index="FastBuild" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="Produce" value="1"/>
+        <Flags index="Rally" value="1"/>
+        <Flags index="ShowProgress" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <Flags index="WaitUntilStopped" value="0"/>
+        <InfoArray Unit="DehakaMutaliskReviveEgg" RallyResetPhase="Delay">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Facing">
+                <DurationArray index="Delay" value="0.5"/>
+                <EffectArray index="Finish" value="PostMorphHeal"/>
+            </SectionArray>
+        </InfoArray>
+        <InfoArray Score="1" Unit="DehakaMutaliskLevel3">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="9.5"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="9.5"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="9.5"/>
+                <EffectArray index="Finish" value="DehakaMutaliskReviveSet"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMergeable id="PrimalMutaliskLevel2Mergeable">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Cancelable value="0"/>
+    </CAbilMergeable>
+    <CAbilMerge id="PrimalHydraliskImpalerMerge">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="DehakaHydraliskImpalerMerge" State="Restricted" Requirements="NoGlevigEggSummonTimedLife">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="DehakaHydraliskImpalerMerge" State="Restricted" Requirements="NoGlevigEggSummonTimedLife"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Info Unit="ImpalerDehaka" Time="8">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+        </Info>
+        <Effect value="DehakaGeneImpalerMorphSet"/>
+    </CAbilMerge>
+    <CAbilMerge id="PrimalHydraliskToMutalisk">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="DehakaMutaliskMerge" State="Restricted" Requirements="HaveMurvarStructure">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="DehakaMutaliskMerge" State="Restricted" Requirements="HaveMurvarStructure"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Effect value="DehakaGeneMutaliskMorphSet"/>
+        <Info Unit="DehakaMutaliskLevel3FightMorph" Time="8">
+            <Resource index="Vespene" value="100"/>
+        </Info>
+    </CAbilMerge>
+    <CAbilMorph id="BurrowDehakaHydraliskLevel2Down">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowDown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaHydraliskLevel2Burrowed" RandomDelayMax="0.3703">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.333"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.5556"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.166"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaHydraliskLevel2Up">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowUp"/>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastRange value="5"/>
+        <AutoCastCountMin value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaHydraliskLevel2" RandomDelayMax="0.5">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.4443"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="DehakaGuardianMineCharge">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Cost>
+            <Cooldown Link="DehakaGuardianMineCharge" TimeUse="30"/>
+        </Cost>
+        <Range value="9"/>
+        <CastOutroTime value="0.35"/>
+        <TargetFilters value="Ground,Visible;Self,Player,Ally,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaGuardianMineCharge" State="Restricted" Requirements="HaveDehakaGuardianExplosiveBomb"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
+        <Effect index="0" value="DehakaGuardianMineChargeLaunch"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="DehakaGuardianFightMorphToDehakaGuardian">
+        <AbilSetId value="FighterMode"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="FighterMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <InfoArray Unit="DehakaGuardian">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMergeable id="PrimalRoachLevel3GuardianMergeable">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Cancelable value="0"/>
+    </CAbilMergeable>
+    <CAbilBuildable id="PrimalBuildInProgress">
+        <Activity value="UI/Summoning"/>
+    </CAbilBuildable>
+    <CAbilResearch id="DehakaDakrunResearch">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="60" Upgrade="DehakaUltraliskCrashingCharge">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+            <Button DefaultButtonFace="ResearchDehakaUltraliskCrashingCharge" Requirements="LearnDehakaUltraliskCrashingCharge"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="60" Upgrade="DehakaUltraliskRegen">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaUltraliskRegen" Requirements="LearnDehakaUltraliskRegen"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="60" Upgrade="DehakaUltraliskBash">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaUltraliskBash" State="Restricted" Requirements="LearnDehakaUltraliskBash"/>
+        </InfoArray>
+        <InfoArray index="Research4" Time="60" Upgrade="DehakaTyrannozorArmorAura">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaTyrannozorArmorAura" State="Restricted" Requirements="LearnDehakaTyrannozorArmorAura"/>
+        </InfoArray>
+        <InfoArray index="Research5" Time="60" Upgrade="DehakaTyrannozorFanOfKnives">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaTyrannozorFanOfKnives" State="Restricted" Requirements="LearnDehakaTyrannozorFanOfKnives"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilMorph id="BurrowDehakaDroneDown">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowDown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <InfoArray Unit="DehakaDroneBurrowed" CollideRange="0"/>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaDroneUp">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowUp"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaDrone" RandomDelayMax="0.25">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.4443"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+    </CAbilMorph>
+    <CAbilBuild id="DehakaDroneMorph">
+        <EditorCategories value="AbilityorEffectType:MorphsandBurrows"/>
+        <FlagArray index="PeonHide" value="1"/>
+        <FlagArray index="PeonKillFinish" value="1"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <InfoArray index="Build1" Unit="DehakaHatchery" Time="100">
+            <Button DefaultButtonFace="DehakaHatchery"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="DehakaBarracks" Time="60">
+            <Button DefaultButtonFace="DehakaBarracks"/>
+        </InfoArray>
+        <InfoArray index="Build3" Unit="DehakaGlevigStructure" Time="90">
+            <Button DefaultButtonFace="DehakaGlevigStructure" Requirements="DehakaGlevigStructureBuild"/>
+        </InfoArray>
+        <InfoArray index="Build4" Unit="DehakaMurvarStructure" Time="120">
+            <Button DefaultButtonFace="DehakaMurvarStructure" Requirements="DehakaMurvarStructureBuild"/>
+        </InfoArray>
+        <InfoArray index="Build5" Unit="DehakaDakrunStructure" Time="120">
+            <Button DefaultButtonFace="DehakaDakrunStructure" Requirements="DehakaDakrunStructureBuild"/>
+        </InfoArray>
+        <InfoArray index="Build6" Unit="DehakaNydusDestroyer" Time="40">
+            <Button DefaultButtonFace="DehakaNydusDestroyer" Requirements="HaveDehakaGlevigStructure"/>
+        </InfoArray>
+        <InfoArray index="Build7" Unit="DehakaCoopReviveCocoon" Time="120">
+            <Button DefaultButtonFace="DehakaCoopReviveCocoon" Requirements="DehakaReviveStructureBuild"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilResearch id="DehakaMurvarResearch">
+        <InfoArray index="Research8" Time="60" Upgrade="DehakaMutaliskDamageReduction">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaMutaliskDamageReduction" Requirements="LearnDehakaMutaliskDamageReduction"/>
+        </InfoArray>
+        <InfoArray index="Research9" Time="90" Upgrade="DehakaMutaliskRespawnOnDeath">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchDehakaMutaliskRespawnOnDeath" Requirements="LearnDehakaMutaliskRespawnOnDeath"/>
+        </InfoArray>
+        <InfoArray index="Research10" Time="60" Upgrade="DehakaGuardianFury">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaGuardianFury" Requirements="LearnDehakaGuardianFury"/>
+        </InfoArray>
+        <InfoArray index="Research11" Time="60" Upgrade="DehakaGuardianExplosiveBomb">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaGuardianExplosiveBomb" Requirements="LearnDehakaGuardianExplosiveBomb"/>
+        </InfoArray>
+        <InfoArray index="Research12" Time="90" Upgrade="DehakaMurvarCreeperAir">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="DehakaMurvarCreeperAir" Requirements="LearnDehakaMurvarCreeperAir"/>
+        </InfoArray>
+        <InfoArray index="Research13" Time="60" Upgrade="DehakaMutaliskAirDoubleDamage">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchSlicingGlave" Requirements="LearnDehakaMutaliskAirDoubleDamage"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilMorph id="BurrowDehakaRoachLevel3Down">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowDown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <InfoArray Unit="DehakaRoachLevel3Burrowed" RandomDelayMax="0.1">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.5556"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.5556"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.5556"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaRoachLevel3Up">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowUp"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaRoachLevel3" RandomDelayMax="0.1">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.4443"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.4443"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+    </CAbilMorph>
+    <CAbilMergeable id="PrimalRoachLevel2Mergeable">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Cancelable value="0"/>
+    </CAbilMergeable>
+    <CAbilMorph id="BurrowDehakaRoachLevel2Down">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowDown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <InfoArray Unit="DehakaRoachLevel2Burrowed" RandomDelayMax="0.1">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.5556"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.5556"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="0.5556"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaRoachLevel2Up">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowUp"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaRoachLevel2" RandomDelayMax="0.1">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="0.4443"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="0.4443"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+    </CAbilMorph>
+    <CAbilMerge id="PrimalRoachLevel2Merge">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="DehakaRoachMerge" State="Restricted" Requirements="NoGlevigEggSummonTimedLife">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="DehakaRoachMerge" State="Restricted" Requirements="NoGlevigEggSummonTimedLife"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Info Unit="DehakaRoachLevel3" Time="8">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+        </Info>
+        <Effect value="DehakaGeneFireRoachMorphSet"/>
+    </CAbilMerge>
+    <CAbilMerge id="PrimalRoachGuardianMerge">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="DehakaRoachGuardianMerge" State="Restricted" Requirements="HaveMurvarStructure">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="DehakaRoachGuardianMerge" State="Restricted" Requirements="HaveMurvarStructure"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Info Unit="DehakaGuardianFightMorph" Time="8">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="100"/>
+        </Info>
+        <Effect value="DehakaGeneGuardianMorphSet"/>
+    </CAbilMerge>
+    <CAbilMorph id="BurrowDehakaRavasaurDown">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowDown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <InfoArray Unit="DehakaRavasaurBurrowed" RandomDelayMax="0.1">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.5556"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="1.5556"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1.5556"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaRavasaurUp">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowUp"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaRavasaur" RandomDelayMax="0.1">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.4443"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="1.4443"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+    </CAbilMorph>
+    <CAbilMergeable id="PrimalZerglingLevel2Mergeable">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Cancelable value="0"/>
+    </CAbilMergeable>
+    <CAbilMerge id="PrimalZerglingRavasaurMerge">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="SelectedUnits" DefaultButtonFace="DehakaRavasaurMerge" State="Restricted" Requirements="NoGlevigEggSummonTimedLife">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="WithTarget" DefaultButtonFace="DehakaRavasaurMerge" State="Restricted" Requirements="NoGlevigEggSummonTimedLife"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Info Unit="DehakaRavasaur" Time="8">
+            <Resource index="Vespene" value="25"/>
+        </Info>
+        <Effect value="DehakaGeneRavasaurMorphSet"/>
+    </CAbilMerge>
+    <CAbilResearch id="DehakaGlevigResearch">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research3" Time="120" Upgrade="DehakaGlevigRoachFireBreath">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="DehakaGlevigRoachFireBreath" State="Restricted" Requirements="LearnDehakaGlevigRoachFireBreath"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="60" Upgrade="DehakaRoachMoveSpeed">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="DehakaRoachMoveSpeed" Requirements="LearnDehakaRoachMoveSpeed"/>
+        </InfoArray>
+        <InfoArray index="Research8" Time="60" Upgrade="DehakaHydraliskSpeed">
+            <Resource index="Minerals" value="50"/>
+            <Resource index="Vespene" value="50"/>
+            <Button DefaultButtonFace="ResearchDehakaHydraliskSpeed" Requirements="LearnDehakaHydraliskSpeed"/>
+        </InfoArray>
+        <InfoArray index="Research9" Time="60" Upgrade="DehakaRavasaurRange">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaRavasaurRange" State="Restricted" Requirements="LearnDehakaRavasaurRange"/>
+        </InfoArray>
+        <InfoArray index="Research10" Time="60" Upgrade="DehakaRavasaurVSArmor">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaRavasaurVSArmor" State="Restricted" Requirements="LearnDehakaRavasaurVSArmor"/>
+        </InfoArray>
+        <InfoArray index="Research11" Time="60" Upgrade="DehakaImpalerTenderize">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaImpalerTenderize" State="Restricted" Requirements="LearnDehakaImpalerTenderize"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilMorph id="BurrowDehakaZerglingLevel2Down">
+        <AbilSetId value="BrwD"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowDown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowDown" Requirements="HaveDehakaBurrow">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <Flags index="Interruptible" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaZerglingLevel2Burrowed" RandomDelayMax="0.3703">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.333"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <DurationArray index="Delay" value="0.5556"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="1"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="BurrowDehakaZerglingLevel2Up">
+        <AbilSetId value="BrwU"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <ActorKey value="BurrowUp"/>
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Air,Missile,Stasis,Dead,Hidden"/>
+        <AutoCastRange value="2"/>
+        <AutoCastCountMin value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaZerglingLevel2" RandomDelayMax="0.5">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="1.0625"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1"/>
+            </SectionArray>
+        </InfoArray>
+        <AutoCastValidatorArray value="TargetNotChangeling"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="NydusDestroyerBeam">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="NydusDestroyerBeamCP"/>
+        <Range value="9"/>
+        <ArcSlop value="180"/>
+        <CancelableArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NydusDestroyerBeam"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <TargetFilters value="Visible;Self,Player,Ally,Stasis,Dead,Hidden,Invulnerable"/>
+        <Flags index="DeferCooldown" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <AINotifyEffect value="NydusDestroyerBeamCooldown"/>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="NydusDestroyerDeepTunnel">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Effect index="0" value="NydusDestroyerDeepTunnelCU"/>
+        <Range value="24"/>
+        <Arc value="360"/>
+        <CastIntroTime value="2"/>
+        <CastOutroTime value="0"/>
+        <FinishTime value="3"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <ShowProgressArray index="Finish" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ProgressButtonArray index="Cast" value="NydusDestroyerDeepTunnel"/>
+        <ProgressButtonArray index="Channel" value="NydusDestroyerDeepTunnel"/>
+        <ProgressButtonArray index="Finish" value="NydusDestroyerDeepTunnel"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NydusDestroyerDeepTunnel"/>
+        <Cost>
+            <Resource index="Minerals" value="25"/>
+            <Resource index="Vespene" value="25"/>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <PlaceUnit value="NydusDestroyerDeepTunnelPlacement"/>
+    </CAbilEffectTarget>
+    <CAbilRally id="RallyInfestedCommandCenter">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
+    </CAbilRally>
+    <CAbilTrain id="DehakaTrainEggMorphToDrone">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/DehakaSpawning"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="DehakaTrainEggDrone"/>
+        <InfoArray index="Train1" Time="17" Effect="DehakaEggPopStun">
+            <Resource index="Minerals" value="50"/>
+            <Button DefaultButtonFace="DehakaDrone"/>
+            <Unit value="DehakaDrone"/>
+            <Flags index="AutoCast" value="1"/>
+            <Flags index="AutoCastOn" value="1"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaTrainEggMorphToOverlord">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/DehakaSpawning"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="DehakaTrainEggOverlord"/>
+        <InfoArray index="Train1" Time="25" Effect="DehakaEggPopStun">
+            <Resource index="Minerals" value="100"/>
+            <Button DefaultButtonFace="PrimalOverlord"/>
+            <Unit value="PrimalOverlord"/>
+            <Flags index="AutoCast" value="1"/>
+            <Flags index="AutoCastOn" value="1"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaTrainEggMorphToZergling">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/DehakaSpawning"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="DehakaTrainEggZergling"/>
+        <InfoArray index="Train1" Time="15" Effect="DehakaEggPopStun">
+            <Resource index="Minerals" value="50"/>
+            <Button DefaultButtonFace="DehakaZergling"/>
+            <Unit value="DehakaZerglingLevel2"/>
+            <Flags index="AutoCast" value="1"/>
+            <Flags index="AutoCastOn" value="1"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaTrainEggMorphToRoach">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/DehakaSpawning"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="DehakaTrainEggRoach"/>
+        <InfoArray index="Train1" Time="24" Effect="DehakaEggPopStun">
+            <Resource index="Minerals" value="75"/>
+            <Resource index="Vespene" value="25"/>
+            <Button DefaultButtonFace="DehakaRoach"/>
+            <Unit value="DehakaRoachLevel2"/>
+            <Flags index="AutoCast" value="1"/>
+            <Flags index="AutoCastOn" value="1"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaTrainEggMorphToHydralisk">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/DehakaSpawning"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="DehakaTrainEggHydralisk"/>
+        <InfoArray index="Train1" Time="26" Effect="DehakaEggPopStun">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="50"/>
+            <Button DefaultButtonFace="DehakaHydralisk"/>
+            <Unit value="DehakaHydraliskLevel2"/>
+            <Flags index="AutoCast" value="1"/>
+            <Flags index="AutoCastOn" value="1"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaTrainEggMorphToSwarmHost">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/DehakaSpawning"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="DehakaTrainEggSwarmHost"/>
+        <InfoArray index="Train1" Time="30" Effect="DehakaEggPopStun">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="75"/>
+            <Button DefaultButtonFace="DehakaSwarmHost"/>
+            <Unit value="DehakaSwarmHost"/>
+            <Flags index="AutoCast" value="1"/>
+            <Flags index="AutoCastOn" value="1"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaTrainEggMorphToUltralisk">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Activity value="UI/DehakaSpawning"/>
+        <Flags index="KillOnCancel" value="1"/>
+        <Flags index="KillOnFinish" value="1"/>
+        <Flags index="Select" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <MorphUnit value="DehakaTrainEggUltralisk"/>
+        <InfoArray index="Train1" Time="45" Effect="DehakaEggPopStun">
+            <Resource index="Minerals" value="300"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="DehakaUltralisk"/>
+            <Unit value="DehakaUltraliskLevel2"/>
+            <Flags index="AutoCast" value="1"/>
+            <Flags index="AutoCastOn" value="1"/>
+            <Flags index="IgnorePlacement" value="1"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaHatcheryTrainEgg">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Structures"/>
+        <Flags index="UnitOrderQueue" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <Range value="5"/>
+        <InfoArray index="Train1" Effect="DehakaTrainInitialSet" Rotation="Source">
+            <Charge>
+                <CountMax value="5"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="16"/>
+                <TimeUse value="16"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown TimeStart="20"/>
+            <Button DefaultButtonFace="DehakaDrone">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="DehakaTrainEggDrone"/>
+            <Flags index="InheritRally" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train2" Effect="DehakaTrainInitialSet" Rotation="Source">
+            <Charge>
+                <CountMax value="5"/>
+                <CountStart value="3"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="16"/>
+                <TimeUse value="16"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown TimeStart="20"/>
+            <Button DefaultButtonFace="PrimalOverlord">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="DehakaTrainEggOverlord"/>
+            <Flags index="InheritRally" value="1"/>
+        </InfoArray>
+        <Alert value=""/>
+    </CAbilTrain>
+    <CAbilTrain id="DehakaBarracksTrainEgg">
+        <EditorCategories value="Race:PrimalZerg,AbilityorEffectType:Structures"/>
+        <Flags index="UnitOrderQueue" value="1"/>
+        <Flags index="WaitForFood" value="0"/>
+        <Range value="5"/>
+        <InfoArray index="Train1" Effect="DehakaTrainInitialSet" Rotation="Source">
+            <Charge>
+                <CountMax value="5"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="16"/>
+                <TimeUse value="16"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown TimeStart="20"/>
+            <Button DefaultButtonFace="DehakaZergling">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="DehakaTrainEggZergling"/>
+            <Flags index="InheritRally" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train2" Effect="DehakaTrainInitialSet" Rotation="Source">
+            <Charge>
+                <CountMax value="5"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="16"/>
+                <TimeUse value="16"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown TimeStart="20"/>
+            <Button DefaultButtonFace="DehakaRoach" Requirements="HaveDehakaGlevigStructure">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="DehakaTrainEggRoach"/>
+            <Flags index="InheritRally" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train3" Effect="DehakaTrainInitialSet" Rotation="Source">
+            <Charge>
+                <CountMax value="5"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="16"/>
+                <TimeUse value="16"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown TimeStart="20"/>
+            <Button DefaultButtonFace="DehakaHydralisk" Requirements="HaveDehakaGlevigStructure">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="DehakaTrainEggHydralisk"/>
+            <Flags index="InheritRally" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train4" Effect="DehakaTrainInitialSet" Rotation="Source">
+            <Charge>
+                <CountMax value="5"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="16"/>
+                <TimeUse value="16"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown TimeStart="20"/>
+            <Button DefaultButtonFace="DehakaSwarmHost" Requirements="HaveDehakaMurvarStructure">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="DehakaTrainEggSwarmHost"/>
+            <Flags index="InheritRally" value="1"/>
+        </InfoArray>
+        <InfoArray index="Train5" Effect="DehakaTrainInitialSet" Rotation="Source">
+            <Charge>
+                <CountMax value="5"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Location value="Unit"/>
+                <TimeStart value="16"/>
+                <TimeUse value="16"/>
+                <Flags index="EnableChargeTimeQueuing" value="1"/>
+            </Charge>
+            <Cooldown TimeStart="20"/>
+            <Button DefaultButtonFace="DehakaUltralisk" Requirements="HaveDehakaDakrunStructure">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="DehakaTrainEggUltralisk"/>
+            <Flags index="InheritRally" value="1"/>
+        </InfoArray>
+        <Alert value=""/>
+    </CAbilTrain>
+    <CAbilMorph id="DehakaBarracksUproot" parent="PrimalBuildingUproot" unit="DehakaBarracksUprooted">
+        <Flags index="IgnoreUnitCost" value="1"/>
+    </CAbilMorph>
+    <CAbilMorphPlacement id="DehakaBarracksRoot" parent="PrimalBuildingRoot" unit="DehakaBarracks">
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <InfoArray index="0" Unit="DehakaBarracks" CollideRange="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilBuild id="DehakaHatcheryBuild">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <FlagArray index="RangeIncludesBuilding" value="0"/>
+        <InfoArray index="Build1" Unit="Extractor" Time="30">
+            <Button DefaultButtonFace="BuildDehakaExtractor"/>
+            <ValidatorArray value="HasVespene"/>
+        </InfoArray>
+        <Range value="9"/>
+        <EffectArray index="Start" value="CreepTumorLaunchMissile"/>
+        <EffectArray index="Finish" value="DehakaExtractor"/>
+    </CAbilBuild>
+    <CAbilMorph id="DehakaHatcheryUproot" parent="PrimalBuildingUproot" unit="DehakaHatcheryUprooted">
+        <Flags index="IgnoreUnitCost" value="1"/>
+    </CAbilMorph>
+    <CAbilMorphPlacement id="DehakaHatcheryRoot" parent="PrimalBuildingRoot" unit="DehakaHatchery">
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <InfoArray index="0" Unit="DehakaHatchery" CollideRange="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilRally id="RallyPrimalTownHall">
+        <EditorCategories value="AbilityorEffectType:Structures,Race:PrimalZerg"/>
+        <InfoArray index="0" UseFilters="-;Worker">
+            <SetValidators value="NotResourcesOrEnemyTargetType"/>
+        </InfoArray>
+        <InfoArray SetOnGround="0" UseFilters="Worker;-"/>
+        <InfoArray SetOnGround="0">
+            <SetValidators value="Failure"/>
+        </InfoArray>
+    </CAbilRally>
+    <CAbilResearch id="DehakaHatcheryResearch">
+        <InfoArray index="Research1" Time="160" Upgrade="DehakaPrimalWeaponsLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="DehakaLearnPrimalWeaponsLevel1" Requirements="LearnDehakaPrimalWeapons1"/>
+        </InfoArray>
+        <InfoArray index="Research2" Time="190" Upgrade="DehakaPrimalWeaponsLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="DehakaLearnPrimalWeaponsLevel2" Requirements="LearnDehakaPrimalWeapons2"/>
+        </InfoArray>
+        <InfoArray index="Research3" Time="220" Upgrade="DehakaPrimalWeaponsLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="DehakaLearnPrimalWeaponsLevel3" Requirements="LearnDehakaPrimalWeapons3"/>
+        </InfoArray>
+        <InfoArray index="Research4" Time="160" Upgrade="DehakaPrimalArmorLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="DehakaLearnPrimalArmorLevel1" Requirements="LearnDehakaPrimalArmor1"/>
+        </InfoArray>
+        <InfoArray index="Research5" Time="190" Upgrade="DehakaPrimalArmorLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="DehakaLearnPrimalArmorLevel2" Requirements="LearnDehakaPrimalArmor2"/>
+        </InfoArray>
+        <InfoArray index="Research6" Time="220" Upgrade="DehakaPrimalArmorLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="DehakaLearnPrimalArmorLevel3" Requirements="LearnDehakaPrimalArmor3"/>
+        </InfoArray>
+        <InfoArray index="Research7" Time="100" Upgrade="DehakaBurrowResearch">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDehakaBurrow" Requirements="LearnDehakaBurrow"/>
+        </InfoArray>
+        <InfoArray index="Research8" Time="100" Upgrade="PrimalOverlordSpeed">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="PrimalOverlordSpeed" Requirements="LearnOverlordSpeed"/>
+        </InfoArray>
+        <InfoArray index="Research9" Time="130" Upgrade="PrimalOverlordTransport">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="EvolvePrimalVentralSacks" Requirements="LearnOverlordTransport"/>
+        </InfoArray>
+        <InfoArray index="Research10" Time="110" Upgrade="primalzerglingmovementspeed">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="primalzerglingmovementspeed" Requirements="LearnPrimalZerglingMovementSpeed"/>
+        </InfoArray>
+        <InfoArray index="Research11" Time="130" Upgrade="PrimalZerglingAttackSpeed">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="PrimalZerglingAttackSpeed" Requirements="LearnPrimalZerglingAttackSpeed"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilEffectTarget id="DehakaDakrunTopBar">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaDakrunTopBarCU"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CursorEffect value="DakrunSpawningTargetSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaDakrunTopBar" Requirements="DehakaSummonDakrun"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DehakaMurvarTopBar">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaMurvarTopBarCU"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CursorEffect value="CoopMurvarLaunchPuddleSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaMurvarTopBar" Requirements="DehakaSummonMurvar"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DehakaGlevigTopBar">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DehakaGlevigTopBarCU"/>
+        <Range value="500"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DehakaGlevigTopBar" Requirements="DehakaSummonGlevig"/>
+        <PlaceUnit value="DehakaGlevig"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="CoopDehakaGlevigEggMorphZergling">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaZerglingLevel2" RandomDelayMax="0.37">
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="5"/>
+                <EffectArray index="Start" value="PermanentSuppressFoodUsed"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="5"/>
+                <EffectArray index="Finish" value="DehakaGlevigEggSummonTimedLifeAB"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="CoopDehakaGlevigEggMorphRoach">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaRoachLevel2" RandomDelayMax="0.37">
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="5"/>
+                <EffectArray index="Start" value="PermanentSuppressFoodUsed"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="5"/>
+                <EffectArray index="Finish" value="DehakaGlevigEggSummonTimedLifeAB"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="CoopDehakaGlevigEggMorphHydralisk">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="BurrowUp">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="DehakaHydraliskLevel2" RandomDelayMax="0.37">
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="5"/>
+                <EffectArray index="Start" value="PermanentSuppressFoodUsed"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="5"/>
+                <EffectArray index="Finish" value="DehakaGlevigEggSummonTimedLifeAB"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilResearch id="DehakaCoopReviveCocoonResearch">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="180" Upgrade="GeneMutation">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="GeneMutation" Requirements="LearnGeneMutation"/>
+        </InfoArray>
+    </CAbilResearch>
+</Catalog>

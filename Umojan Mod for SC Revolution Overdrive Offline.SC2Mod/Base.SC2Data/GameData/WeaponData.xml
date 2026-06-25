@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeaponLegacy id="CrusaderGrenades">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="DominatorGrenadesDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="3.5"/>
+        <Range value="3"/>
+        <Period value="1.5"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="DominatorGrenadesLMSwitch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="SentryPost">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <DisplayEffect value="SentryPostDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="1.12"/>
+        <Effect value="SentryPostLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Pioneer">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.2"/>
+        <Period value="1.5"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WarriorGaussRifle">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="5.5"/>
+        <Period value="0.8608"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0.75"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TheseusAntiTankMissiles">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="TheseusAntiTankMissilesDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="8.5"/>
+        <Range value="8"/>
+        <Period value="2"/>
+        <Effect value="TheseusAntiTankMissilesLMSwitch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ReconUAV">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.25"/>
+        <Period value="0.833"/>
+        <DamagePoint value="0"/>
+        <AllowedMovement value="Moving"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <LegacyOptions index="NoDeceleration" value="1"/>
+        <DisplayEffect value="ReconUAVDamage"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Diamondback">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7.5"/>
+        <Range value="7"/>
+        <Period value="1.875"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RangerMissiles">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="RangerMissilesDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Period value="1.25"/>
+        <Effect value="AthenaRangerMissilesSet"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="VympelMissiles">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="VympelMissilesDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="8"/>
+        <Period value="2"/>
+        <Effect value="AthenaVympelMissilesSet"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MaverickMissiles">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="MaverickMissilesDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Period value="2.8"/>
+        <Effect value="MaverickMissilesCP"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ArtemisHALOMissiles">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="ArtemisMissileDamage"/>
+        <DisplayAttackCount value="8"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="6.5"/>
+        <Range value="6"/>
+        <Period value="3.75"/>
+        <Effect value="ArtemisMissileBurstPersistent"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GaussShockCannon">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="GaussShockCannonDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="9.5"/>
+        <Range value="9"/>
+        <MinimumRange value="2"/>
+        <Period value="3.5"/>
+        <Effect value="GaussShockCannonDamageSwitch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AGR15AssaultRifle">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="5.5"/>
+        <Period value="0.8608"/>
+        <DamagePoint value="0.05"/>
+        <Backswing value="0.75"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ShadowAssassinSnipe">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="AWPRifle"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7.5"/>
+        <Range value="7"/>
+        <Period value="3"/>
+        <DamagePoint value="0.083"/>
+        <Backswing value="1.167"/>
+        <Effect value="ShadowAssassinSnipeSwitch"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MeteorMissilePods">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="MeteorMissileDamage"/>
+        <DisplayAttackCount value="12"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <MinScanRange value="7.5"/>
+        <Range value="7"/>
+        <Period value="3"/>
+        <Effect value="MeteorMissileSet"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PointDefenseSystemLaser">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <TargetFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="0"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Effect value="PointDefenseSystemSearch"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="ContinuousScan" value="1"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Range value="12"/>
+        <Marker>
+            <MatchFlags index="Link" value="1"/>
+        </Marker>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WarHoundUmojan">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7.5"/>
+        <Range value="7"/>
+        <Period value="1.75"/>
+        <Effect value="WarHoundUmojanLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WarHoundUmojanAntiAir">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="7.5"/>
+        <Range value="7"/>
+        <Period value="1.75"/>
+        <Effect value="WarHoundUmojanAntiAirLM"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WarHoundUmojanMelee">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="Melee" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="0.5"/>
+        <Period value="1.75"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Zeus">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="ZeusDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="8"/>
+        <Period value="1.23"/>
+        <DamagePoint value="0.831"/>
+        <Backswing value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <MinScanRange value="8.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ZeusAntiAir">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="ZeusAADamage"/>
+        <DisplayAttackCount value="6"/>
+        <TargetFilters value="Air,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="10"/>
+        <Arc value="360"/>
+        <Period value="3"/>
+        <Effect value="ZeusAA"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <MinScanRange value="10.5"/>
+        <Backswing value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="OdysseusMissileBarrage">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="IgnoreThreat" value="1"/>
+        <Options index="IgnoreAttackPriority" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="OdysseusMissileDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquirePrioritization value="ByAngle"/>
+        <Range value="7"/>
+        <Arc value="360"/>
+        <Period value="0.625"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="OdysseusMissilePersistent"/>
+        <AllowedMovement value="Moving"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="EnterpriseGun">
+        <EditorCategories value="Race:Terran"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="10.5"/>
+        <Range value="10"/>
+        <Period value="2"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <Effect value="EnterpriseGunLM"/>
+        <AllowedMovement value="Slowing"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PointDefenseSystemLaserAquila">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <TargetFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <AcquireFilters value="Missile,Visible;Self,Player,Ally,Neutral,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="0"/>
+        <DamagePoint value="0"/>
+        <Backswing value="0"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+        <Effect value="PointDefenseSystemAquilaSearch"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+        <Options index="CanInitiateAttackOrder" value="0"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="ContinuousScan" value="1"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Range value="12"/>
+        <Marker>
+            <MatchFlags index="Link" value="1"/>
+        </Marker>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PhoenixMissile">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel0.dds"/>
+        <DisplayEffect value="PhoenixMissileDamage"/>
+        <DisplayAttackCount value="2"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <Period value="2"/>
+        <Effect value="PhoenixMissileCP"/>
+        <AllowedMovement value="Slowing"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="VoidAssaulter">
+        <EditorCategories value="Race:Terran"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <Period value="3"/>
+        <DamagePoint value="0.083"/>
+        <Backswing value="1.167"/>
+        <MinScanRange value="10.5"/>
+    </CWeaponLegacy>
+</Catalog>

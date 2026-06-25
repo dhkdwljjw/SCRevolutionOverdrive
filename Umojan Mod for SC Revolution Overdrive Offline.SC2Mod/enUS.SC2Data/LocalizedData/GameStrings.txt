@@ -1,0 +1,439 @@
+﻿Behavior/Name/InspirationAttackDamage=Inspiration
+Behavior/Name/InspirationMovement=Inspiration
+Behavior/Name/NanoCleanse=Nano Cleanse
+Behavior/Name/PointDefenseSystemAquila=Activate Point Defense System
+Behavior/Name/PsionicDisruptionStorm=Psionic Disruption Storm
+Behavior/Name/PsionicLockdown=Psionic Suppression Field
+Behavior/Name/PsionicSuppressionField=Electro-Magnetic Suppression Field
+Behavior/Name/PsionicSuppressionFieldFirebat=Electro-Magnetic Suppression Field
+Behavior/Name/ReconUAVOvercharge=Reactor Overload
+Behavior/Name/SeekerMode=Seeker Mode
+Behavior/Name/SeekerModeSquadSight=Squad Sight
+Behavior/Name/ShadowAssassinCloak=Cloak
+Behavior/Name/ShadowAssassinHoldFire=Hold Fire
+Behavior/Name/ShadowAssassinHoldFireB=Hold Fire
+Behavior/Name/VespeneHarvesterUmojanTarget=Vespene Harvester
+Behavior/Name/ZirconCruiseMissile=Zircon Cruise Missile
+Behavior/Tooltip/InspirationAttackDamage=This unit deals additional damage.
+Behavior/Tooltip/InspirationMovement=This unit moves faster.
+Behavior/Tooltip/NanoCleanse=This unit is effecting by barrier. Immune by all debuffs.<n/><n/>Current Barrier Size : <c val="0080FF"><d ref= "$RunAccumulators:ShieldRemainingNanoCleanseSource$"/></c>
+Behavior/Tooltip/PointDefenseSystemAquila=This unit activates Point Defense System which intercepts nearby all enemy projectile weapons.
+Behavior/Tooltip/PsionicDisruptionStorm=This unit is under the effects of Psionic Disruption Storm. Taking massive damage and dealing decreased damage while in this area of effect.
+Behavior/Tooltip/PsionicLockdown=This unit is effecting by barrier. Can't move, attack, or using ability while the barrier remains.<n/><n/>Current Barrier Size : <c val="0080FF"><d ref= "$RunAccumulators:ShieldRemainingPsionicLockdownSource$"/></c>
+Behavior/Tooltip/PsionicSuppressionField=This unit's weapon speed and range were decreased.
+Behavior/Tooltip/PsionicSuppressionFieldFirebat=This unit's weapon speed was decreased.
+Behavior/Tooltip/ReconUAVOvercharge=This unit deals massive damage to target with suicide.
+Behavior/Tooltip/SeekerMode=This unit gains additional sight, detection range, and ability range, while providing additional weapon range to nearby ally units.
+Behavior/Tooltip/SeekerModeSquadSight=This unit gains additional weapon range.
+Behavior/Tooltip/ShadowAssassinCloak=This unit is cloaked and will only be revealed by detectors or effects.
+Behavior/Tooltip/VespeneHarvesterUmojanTarget=Pioneers can harvest more Vespene from this Vespene Plant.
+Behavior/Tooltip/ZirconCruiseMissile=This unit is being targeted by a Zircon Cruise Missile.
+Button/Name/ActivatePointDefenseSystem=Activate Point Defense System
+Button/Name/ActivatePointDefenseSystemAquila=Activate Point Defense System
+Button/Name/ActiveElectronicallyScannedArrayRadarUpgraded=Active Electronically Scanned Array Radar
+Button/Name/AmphibiousShip=Build Amphibious Ship
+Button/Name/AmphibiousShipLoad=Load
+Button/Name/AmphibiousShipUnloadAll=Unload All
+Button/Name/AntiTankMissile=Anti-Tank Missile
+Button/Name/Aquila=Request Aquila
+Button/Name/AresArtillery=Build Ares Artillery
+Button/Name/ArmMaelstromRounds=Arm Maelstrom Rounds
+Button/Name/ArmTacticalCruiseMissile=Arm Tactical Cruise Missiles
+Button/Name/ArmamentFacility=Build Armament Facility
+Button/Name/Arsenal=Build Arsenal
+Button/Name/Artemis=Build Artemis
+Button/Name/Athena=Build Athena
+Button/Name/AthenaWeaponSwitchRanger=Use Ranger Missiles
+Button/Name/AthenaWeaponSwitchVympel=Use Vympel Missiles
+Button/Name/Berkut=Build Berkut
+Button/Name/Centurion=Train Centurion
+Button/Name/CenturionInspiration=Inspiration
+Button/Name/CenturionPlasmaSurge=Plasma Surge
+Button/Name/CloakOffShadowAssassin=Decloak
+Button/Name/CloakOnShadowAssassin=Cloak
+Button/Name/CommandPost=Build Command Post
+Button/Name/Crusader=Train Crusader
+Button/Name/DeactivatePointDefenseSystem=Deactivate Point Defense System
+Button/Name/DeployMineralResonator=Deploy Mineral Resonator
+Button/Name/DeployPsionicSuppressionField=Electro-Magnetic Suppression Field
+Button/Name/Diamondback=Build Diamondback
+Button/Name/EngineeringFactory=Build Engineering Factory
+Button/Name/FleetHeadquarters=Build Fleet Headquarters
+Button/Name/FragmentShrapnelUpgraded=Fragment Shrapnel
+Button/Name/FutureWarfareLab=Build Future Warfare Lab
+Button/Name/GatherUmoj=Gather
+Button/Name/HaywireMissile=Haywire Missiles
+Button/Name/HeraProtocol=Hera Protocol
+Button/Name/InfantryQuarter=Build Infantry Quarter
+Button/Name/LogisticsDepot=Build Logistics Depot
+Button/Name/MaverickMissilesUpgraded=Maverick Missile Pods
+Button/Name/MineralResonator=Mineral Resonator
+Button/Name/MissileCruiser=Build Missile Cruiser
+Button/Name/NanoCleanse=Nano Cleanse
+Button/Name/NanoDisassembleRepair=Nano Disassemble
+Button/Name/PermanentCloakVoidAssaulter=Permanently Cloaked
+Button/Name/PermanentlyCloakedReconUAV=Permanently Cloaked
+Button/Name/Pioneer=Build Pioneer
+Button/Name/PowerPlant=Build Power Plant
+Button/Name/Praetoria=Build Praetoria
+Button/Name/PsionicDisruptionStorm=Psionic Disruption Storm
+Button/Name/PsionicLockdown=Psionic Suppression Field
+Button/Name/ReconUAV=Build Recon UAV
+Button/Name/ReconUAVOvercharge=Reactor Overload
+Button/Name/RecoveryDevice=Build Recovery Device
+Button/Name/RecoveryDeviceRecharge=Restore Shields
+Button/Name/ResearchActiveElectronicallyScannedArrayRadar=Research Active Electronically Scanned Array Radar
+Button/Name/ResearchAntiTankMissile=Research Anti-Tank Missile
+Button/Name/ResearchAthenaJotunBoosters=Research Jotun Boosters
+Button/Name/ResearchCenturionInspiration=Research Inspiration
+Button/Name/ResearchDeployPsionicSuppressionField=Research Electro-Magnetic Suppression Field
+Button/Name/ResearchFragmentShrapnel=Research Fragment Shrapnel
+Button/Name/ResearchHeraProtocol=Research Hera Protocol
+Button/Name/ResearchMaelstromRounds=Research Maelstrom Rounds
+Button/Name/ResearchMaverickMissiles=Research Maverick Missile Pods
+Button/Name/ResearchPersonalCloakingShadowAssassin=Research Personal Cloaking
+Button/Name/ResearchPraetoriaHangar=Research Praetoria Hangar
+Button/Name/ResearchPsionicLockdown=Research Psionic Suppression Field
+Button/Name/ResearchReconUAVOvercharge=Research Reactor Overload
+Button/Name/ResearchSentryPostAccelerator=Research Sentry Post Accelerator
+Button/Name/ResearchShapedBlastWarhead=Research Shaped Blast Warhead
+Button/Name/ResearchTacticalVisor=Research Tactical Visor
+Button/Name/ResearchUmojanPowerShields=Research Umojan Power Shields
+Button/Name/ResearchUmojanShieldsBattery=Research Shield Battery
+Button/Name/ResearchVoidAssaulterPsionicLash=Research Psionic Lash
+Button/Name/ResearchZirconCruiseMissile=Research Zircon Cruise Missiles
+Button/Name/SeekerMode=Activate Seeker Mode
+Button/Name/SeekerModeOff=Deactivate Seeker Mode
+Button/Name/SentryPost=Build Sentry Post
+Button/Name/SentryPostAccelerator=Sentry Post Accelerator
+Button/Name/ShadowAssassin=Train Shadowguard
+Button/Name/ShapedBlastWarheadUpgraded=Shaped Blast Warhead
+Button/Name/SnipeOffShadowAssassin=Take Ease
+Button/Name/SnipeOnShadowAssassin=Prepare for Snipe
+Button/Name/SpecOpsCommand=Build Spec Ops Command
+Button/Name/StarStation=Build Star Station
+Button/Name/Striker=Train Striker
+Button/Name/TacticalCruiseMissile=Tactical Cruise Missile Strike
+Button/Name/TacticalVisorUpgraded=Tactical Visor
+Button/Name/TacticsAcademy=Build Tactics Academy
+Button/Name/TomahawkCruiseMissile=Tomahawk Cruise Missiles
+Button/Name/UmojanAirArmorUpgradeLevel1=Upgrade Air Armor Level 1
+Button/Name/UmojanAirArmorUpgradeLevel2=Upgrade Air Armor Level 2
+Button/Name/UmojanAirArmorUpgradeLevel3=Upgrade Air Armor Level 3
+Button/Name/UmojanAirWeaponsUpgradeLevel1=Upgrade Air Weapons Level 1
+Button/Name/UmojanAirWeaponsUpgradeLevel2=Upgrade Air Weapons Level 2
+Button/Name/UmojanAirWeaponsUpgradeLevel3=Upgrade Air Weapons Level 3
+Button/Name/UmojanBuild=Build Structure
+Button/Name/UmojanBuildAdvanced=Build Advanced Structure
+Button/Name/UmojanGroundArmorUpgradeLevel1=Upgrade Ground Armor Level 1
+Button/Name/UmojanGroundArmorUpgradeLevel2=Upgrade Ground Armor Level 2
+Button/Name/UmojanGroundArmorUpgradeLevel3=Upgrade Ground Armor Level 3
+Button/Name/UmojanGroundWeaponsUpgradeLevel1=Upgrade Ground Weapons Level 1
+Button/Name/UmojanGroundWeaponsUpgradeLevel2=Upgrade Ground Weapons Level 2
+Button/Name/UmojanGroundWeaponsUpgradeLevel3=Upgrade Ground Weapons Level 3
+Button/Name/UmojanHeroicUnitsRegeneration=Reconstruction
+Button/Name/UmojanHeroicUnitsRegenerationAquila=Reconstruction
+Button/Name/UmojanHeroicUnitsRegenerationVoidAssaulter=Rest on the Void
+Button/Name/UmojanHeroicUnitsRegenerationZeus=Reconstruction
+Button/Name/UmojanPowerShield=Umojan Power Shields
+Button/Name/UmojanPowerShieldsUpgradeLevel1=Upgrade Umojan Power Shields Level 1
+Button/Name/UmojanPowerShieldsUpgradeLevel2=Upgrade Umojan Power Shields Level 2
+Button/Name/UmojanPowerShieldsUpgradeLevel3=Upgrade Umojan Power Shields Level 3
+Button/Name/VespeneHarvesterUmojan=Deploy Vespene Harvester
+Button/Name/VespenePlant=Build Vespene Plant
+Button/Name/VoidAssaulter=Request Void Assaulter
+Button/Name/VoidAssaulterOrbitalStrike=Orbital Strike
+Button/Name/VoidAssaulterPsionicLash=Psionic Lash
+Button/Name/WarHoundUmojan=Build WarHound
+Button/Name/Warrior=Train Warrior
+Button/Name/WeaponsFreeShadowAssassin=Weapons Free
+Button/Name/Zeus=Request Zeus
+Button/Name/ZirconCruiseMissile=Zircon Cruise Missiles
+Button/Tooltip/ActivatePointDefenseSystem=Missile Cruiser activates Point Defense System to intercept all nearby enemy missiles. Cannot target special attacks. Each shot consumes <d ref="Effect,PointDefenseSystemLaserCost,VitalArray[Shields].Change*(-1)"/> shields.<n/><n/>Missile Cruiser must have over 50 shields.
+Button/Tooltip/ActivatePointDefenseSystemAquila=Aquila activates Point Defense System to intercept all nearby enemy missiles. Cannot target special attacks. Can intercept <d ref="Behavior,PointDefenseSystemAquila,MaxStackCount"/> times maximally for <d ref="Behavior,PointDefenseSystemAquila,Duration"/> seconds.
+Button/Tooltip/ActiveElectronicallyScannedArrayRadarUpgraded=Increases <c val="ffff8a">WarHounds'</c> anti-air attack range by +<c val="FFFF80">3</c>.
+Button/Tooltip/AmphibiousShip=Air transport.
+Button/Tooltip/AmphibiousShipLoad=Loads units into the Amphibious Ship's hold.
+Button/Tooltip/AmphibiousShipUnloadAll=Unloads all units.
+Button/Tooltip/AntiTankMissile=Diamondback deals <d ref="Effect,AntiTankMissileDamage,Amount"/> damage to target with firing anti-tank missile.
+Button/Tooltip/Aquila=Umojan Fleet Flagship. Armed with Missile Pods and Enterprise Gun. Can Activate Point Defense System. Can be upgraded to deploy Praetoria as escort.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/AresArtillery=Mobile Artillery. Can provide long-range fire support without any arrange.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/ArmMaelstromRounds=Arm Maelstrom Round on the Ares Artillery. Maelstrom Rounds provide +<d ref="Behavior,MaelstromRoundsRange,Modification.RangedWeaponRange"/> additional weapon range, deals +<d ref="Effect,GaussShockCannonDamageMaelstromRounds,Amount-Effect,GaussShockCannonDamageMaelstromRoundsSplash,Amount"/> additional damage to primary target.
+Button/Tooltip/ArmTacticalCruiseMissile=Arms the Silo with a Tactical Cruise Missiles.<n/><n/>Tactical Cruise Missiles take <d ref="Effect,TacticalCruiseMissileCP,PeriodicPeriodArray[0]*Effect,TacticalCruiseMissileCP,PeriodCount"/> seconds to launch, flying to the target unit, can be intercepted by anti-air attack, but they deal <d ref="Effect,TacticalCruiseMissileGroundDamage,Amount*Effect,TacticalCruiseMissileGroundDamage,AreaArray[0].Fraction+1"/> damage to target, and 100 damage to nearby enemy units.<n/><n/>Use a Shadowguard to designate the target.
+Button/Tooltip/ArmamentFacility=Contains weapon and armor upgrades for Umojan units and shield upgrades for Umojan Power Shields.<n/><n/><c val="ffff8a">Enables:</c><n/>- Sentry Posts from Pioneers
+Button/Tooltip/Arsenal=Vehicle-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Recon UAVs<n/>- WarHounds<n/>- Diamondbacks
+Button/Tooltip/Artemis=Air-superiority Destroyer. Missile Salvo can deal devastating damage to enemy air targets.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
+Button/Tooltip/ArtemisUpgraded=Air-superiority Destroyer. Missile Salvo can deal devastating damage to enemy air targets.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Athena=Air-superiority Fighter. Armed with powerful anti-air missiles.<n/><n/><c val="#ColorAttackInfo">Can attack air units.</c>
+Button/Tooltip/AthenaWeaponSwitchRanger=Athena switches its weapon to Ranger Missiles.<n/><n/>Athena moves and attacks faster.
+Button/Tooltip/AthenaWeaponSwitchVympel=Athena switches its weapon to Vympel Missiles.<n/><n/>Athena deals more damage with longer range.
+Button/Tooltip/Berkut=Aerial Support unit. Can switch into Seeker Mode to gain additional sight and detection range, while providing additional attack range to nearby ally units.  Can use Nano Cleanse,  and be upgraded to use Electro-Magnetic Suppression Field.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/Centurion=Field officer who leads infantry company. Can restore nearby ally infantry units' shields. Can be upgraded to enhance nearby ally infantry units' movement speed and attack damage.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/CenturionInspiration=Centurion inspires nearby ally Warriors, Crusaders, and Strikers. Increase their movement speed by <d ref="(Behavior,InspirationMovement,Modification.AdditiveMoveSpeedFactor)*100"/>%, and increase Warriors' attack damage by <d ref="Behavior,InspirationAttackDamage,Modification.DamageDealtUnscaled[Ranged]"/> for <d ref="Behavior,InspirationMovement,Duration"/> seconds.
+Button/Tooltip/CenturionPlasmaSurge=Centurions regenerate nearby ally Warriors, Crusaders, and Strikers' shields up to <d ref="(Effect,CenturionPlasmaSurgeCP,PeriodCount*Effect,CenturionPlasmaSurgeCP,PeriodicPeriodArray[0])*Behavior,CenturionPlasmaSurge,Modification.VitalRegenArray[Shields]"/> for <d ref="Effect,CenturionPlasmaSurgeCP,PeriodCount*Effect,CenturionPlasmaSurgeCP,PeriodicPeriodArray[0]"/> seconds.
+Button/Tooltip/CloakOffShadowAssassin=Decloaks the selected unit, making it visible to enemies.
+Button/Tooltip/CloakOnShadowAssassin=Cloaks the unit, preventing enemy units from seeing or attacking it. A cloaked unit will only be revealed by detectors or effects.<n/><n/><c val="f078ff">Drains <d ref="-1 * (Behavior,ShadowAssassinCloak,Modification.VitalRegenArray[2] + Unit,ShadowAssassin,EnergyRegenRate)" precision="1"/> energy per second.</c>
+Button/Tooltip/CommandPost=Primary structure. Used to receive gathered resources. Can deploy Mineral Resonators to increase nearby ally Pioneers' harvesting Minerals, and deploy Vespene Harvesters to increase nearby ally Pioneers' harvesting Vespene.<n/><n/><c val="ffff8a">Enables:</c><n/>- Pioneers
+Button/Tooltip/Crusader=Heavy assault infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/DeactivatePointDefenseSystem=Missie Cruiser deactivates Point Defense System.
+Button/Tooltip/DeployMineralResonator=Deploy Mineral Resonator on the Command Post. Increase <c val="FFFF80">Pioneers'</c> harvesting amount from nearby Mineral Fields by <c val="80C0FF">1</c>(<c val="FFFF80">2</c> from nearby Rich Mineral Fields).
+Button/Tooltip/DeployPsionicSuppressionField=Deploy Electro-Magnetic Suppression Field on the target area.<n/>All enemy units in the area reduce their attack speed by <d ref="(1-Behavior,PsionicSuppressionField,Modification.AttackSpeedMultiplier)*100"/>%, and attack range by <d ref="Behavior,PsionicSuppressionField,Modification.RangedWeaponRange*(-1)"/> for <d ref="Behavior,PsionicSuppressionField,Duration"/> seconds.
+Button/Tooltip/Diamondback=Heavy Tank with durability and weapon with powerful strike.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/EngineeringFactory=Contains Recon UAV, WarHound, Diamondback, Ares Artillery upgrades.<n/><n/><c val="ffff8a">Enables:</c><n/>- Ares Artillery at the Arsenal<n/>- Zeus at the Future Warfare Lab
+Button/Tooltip/FleetHeadquarters=Contains Athena, Artemis, Berkut, Missile Cruiser upgrades.<n/><n/><c val="ffff8a">Enables:</c><n/>- Berkut (Star Station)<n/>- Missile Cruiser at the Star Station<n/>- Aquila at the Future Warfare Lab
+Button/Tooltip/FragmentShrapnelUpgraded=<c val="FFFF80">Crusaders'</c> attack deals <c val="FFFF80"><d ref="Effect,CrusaderShrapnelDamage,Amount"/></c>(<c val="FFFF80"><d ref="Effect,CrusaderShrapnelDamage,Amount+Effect,CrusaderShrapnelDamage,AttributeBonus[Light]"/></c> against Light units) damage to enemy units behind target.<n/>Also, <c val="FFFF80">Crusaders</c> regenerate <d ref="Effect,CrusaderShrapnelMU,VitalArray[Shields].Change"/> shield per units attacked additionally after research Umojan Power Shields.
+Button/Tooltip/FutureWarfareLab=Requests Void Assaulters, Zeus, and Aquila, the Umojan Next-Generation Units. Contains Void Assaulters, Zeus, Aquila upgrades.<n/><n/><c val="ffff8a">Enables:</c><n/>- Void Assaulter (Spec Ops Command)<n/>- Zeus (Engineering Factory)<n/>- Aquila (Fleeet Headquarters)
+Button/Tooltip/GatherUmoj=Orders Pioneer to gather resources from a selected Mineral Field or Vespene Geyser.
+Button/Tooltip/HaywireMissile=WarHound launches electrically charged missiles at its weapon target, dealing <d ref="Effect,HaywireMissileDamage,Amount*Effect,HaywireMissileCP,PeriodCount"/> damage per volley.<n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/HeraProtocol=Zeus bombards all enemy units within target area. Deals up to <d ref="Effect,BarrageDamage,Amount"/> damage to target and nearby units against ground units for each strike, and <d ref="Effect,BarrageDamageAntiAir,Amount"/> damage to target unit against air units for each strike.
+Button/Tooltip/InfantryQuarter=Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Warrior
+Button/Tooltip/LogisticsDepot=Provides supply.<n/>Supply allows you to create more units.
+Button/Tooltip/MaverickMissilesUpgraded=<c val="FFFF80">Artemis</c> can attack ground units with <c val="FFFF80">Maverick Missile Pods</c> weapon.
+Button/Tooltip/MineralResonator=<c val="FFFF80">Pioneers</c> harvest <c val="80C0FF">1</c>(<c val="FFFF80">2</c> from nearby Rich Mineral Fields) more Minerals from nearby Mineral Fields.
+Button/Tooltip/MissileCruiser=Powerful warship. Attack enemies with missile salvo. Can be upgraded to use Zircon Cruise Missiles.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/NanoCleanse=Deploy barrier lasts for <d ref="Behavior,NanoCleanse,Duration"/> seconds on the target. Provides <d ref="Accumulator,ShieldAmountNanoCleanse,Amount"/> amount of barrier, cleanse all debuffs from target.<n/>Unstoppable against all debuffs while maintaining the barrier.
+Button/Tooltip/NanoDisassembleRepair=Disassemble the Pioneer to use as repair material. Repair target structure's health and shields by <d ref="Effect,NanoDisassembleRepairMU,VitalArray[Life].Change*Effect,NanoDisassembleRepairCP,PeriodCount"/> for <d ref="Effect,NanoDisassembleRepairCP,PeriodCount*Effect,NanoDisassembleRepairCP,PeriodicPeriodArray[0]"/> seconds.
+Button/Tooltip/PermanentCloakVoidAssaulter=This unit is permanently cloaked.
+Button/Tooltip/PermanentlyCloakedReconUAV=This unit is permanently cloaked.
+Button/Tooltip/Pioneer=Basic worker unit. Can gather resources, build Umojan structures, and repair ally structures with using this unit as repair material.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/PowerPlant=Contains Umojan Power Shields upgrades.<n/><n/><c val="ffff8a">Enables:</c><n/>- Crusader at the Infantry Quarter<n/>- Striker at the Infantry Quarter<n/>- Recovery Device from Pioneers
+Button/Tooltip/Praetoria=Umojan Prototype Fighter. Deployed as Aquila's escort.
+Button/Tooltip/PsionicDisruptionStorm=Void Assaulter creates Psionic Disruption Storm on the target area that lasts <d ref="Effect,PsionicDisruptionStormCP,PeriodicPeriodArray[0]*(Effect,PsionicDisruptionStormCP,PeriodCount+1)"/> seconds, causing up to <d ref="(Effect,PsionicDisruptionStormCP,PeriodCount+2)*Effect,PsionicDisruptionStormDamage,Amount"/> damage to all enemy units in the target area.<n/><n/>All units affected by Psionic Disruption Storm deals <d ref="Behavior,PsionicDisruptionStormCripple,Modification.DamageDealtFraction[Melee]*(-100)"/>% reduced attack damage, loses <d ref="Behavior,PsionicDisruptionStormEnergyReduction,Modification.VitalRegenArray[Energy]*(-1)"/> energy per second without heroic units.
+Button/Tooltip/PsionicLockdown=Shadowguard fires Psionic Suppression Field to target.<n/><n/>Psionic Suppression Field provides barrier that absorbs <d ref="Accumulator,ShieldAmountPsionicLockdown,Amount"/> damage for <d ref="Behavior,PsionicLockdown,Duration"/> second, but while the barrier maintains, target can’t move, attack, or use ability.
+Button/Tooltip/ReconUAV=Flying spy. Cloak renders the unit invisible to enemies without detection.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/ReconUAVOvercharge=Recon UAV loses Permanently Cloak and Detector, reduces its sight to <d ref="Unit,ReconUAV,Sight+Behavior,ReconUAVOvercharge,Modification.SightBonus"/>, but instead of them, it gains <d ref="Behavior,ReconUAVOverchargeMovementSpeed,MaxStackCount*Behavior,ReconUAVOverchargeMovementSpeed,Modification.AdditiveMoveSpeedFactor*100"/>% additional movement speed with acceleration through <d ref="Behavior,ReconUAVOvercharge,Period*Behavior,ReconUAVOverchargeMovementSpeed,MaxStackCount"/> seconds, can suicide into enemy air unit, deals <d ref="Effect,ReconUAVDamage,Amount"/> damage to target.<n/><n/>After <d ref="Behavior,ReconUAVOvercharge,Duration"/> seconds from activate this ability, the Recon UAV gets self-destruction.
+Button/Tooltip/RecoveryDevice=Restores shields to nearby friendly units and structures.
+Button/Tooltip/RecoveryDeviceRecharge=Restores target unit or structure's shields.<n/><n/><c val="f078ff"><c val="f078ff">Restores up to <d ref="Effect,RecoveryDeviceRechargeChanneled,RechargeVitalRate"/> shields per second.<n/><n/><c val="f078ff">Restores <d ref="1/Effect,RecoveryDeviceRechargeChanneled,DrainVitalCostFactor"/> shields per 1 energy.</c><n/><n/><c val="#ColorAttackInfo">Autocasting targets units and defensive structures only.</c>
+Button/Tooltip/ResearchActiveElectronicallyScannedArrayRadar=Increases <c val="ffff8a">WarHounds'</c> anti-air attack range by +<c val="FFFF80">3</c>.
+Button/Tooltip/ResearchAntiTankMissile=<c val="FFFF80">Diamondback</c> deals massive damage to target with firing <c val="FFFF80">Anti-Tank Missile</c>.
+Button/Tooltip/ResearchAthenaJotunBoosters=<c val="FFFF80">Athena</c> switches weapon between <c val="FFFF80">Vympel Missiles</c> which deals powerful damage from long range and <c val="FFFF80">Ranger Missiles</c> with swift agility.
+Button/Tooltip/ResearchCenturionInspiration=<c val="FFFF80">Centurions</c> inspire nearby ally Warriors, Crusaders, and Strikers to increase their movement speed and attack damage with <c val="FFFF80">Inspiration</c> ability.
+Button/Tooltip/ResearchDeployPsionicSuppressionField=<c val="FFFF80">Berkuts</c> reduce enemy units' attack speed and attack range with <c val="FFFF80">Electro-Magnetic Suppression Field</c>ability.
+Button/Tooltip/ResearchFragmentShrapnel=<c val="FFFF80">Crusaders'</c> attack deals <c val="FFFF80"><d ref="Effect,CrusaderShrapnelDamage,Amount"/></c>(<c val="FFFF80"><d ref="Effect,CrusaderShrapnelDamage,Amount+Effect,CrusaderShrapnelDamage,AttributeBonus[Light]"/></c> against Light units) damage to enemy units behind target.<n/>Also, <c val="FFFF80">Crusaders</c> regenerate <d ref="Effect,CrusaderShrapnelMU,VitalArray[Shields].Change"/> shield per units attacked additionally after research Umojan Power Shields.
+Button/Tooltip/ResearchHeraProtocol=<c val="FFFF80">Zeus</c> bombards all enemy units within target area, deals devastating damage with <c val="FFFF80">Hera Protocol</c> ability.
+Button/Tooltip/ResearchMaelstromRounds=<c val="FFFF80">Ares Artilleries</c> gain additional attack damage and attack range with <c val="FFFF80">Maelstrom Rounds</c>.
+Button/Tooltip/ResearchMaverickMissiles=<c val="FFFF80">Artemis</c> can attack ground units with <c val="FFFF80">Maverick Missile Pods</c> weapon.
+Button/Tooltip/ResearchPersonalCloakingShadowAssassin=Enables <c val="ffff8a">Shadowguards</c> to use the Cloak ability. Cloak renders a unit invisible to enemies unless it's revealed by detectors or effects.
+Button/Tooltip/ResearchPraetoriaHangar=<c val="FFFF80">Aquila</c> deploys <c val="FFFF80">Praetoriae</c> as her escort.
+Button/Tooltip/ResearchPsionicLockdown=<c val="FFFF80">Shadowguards</c> can neutralize enemy units with <c val="FFFF80">Psionic Suppresion Field</c> ability.
+Button/Tooltip/ResearchReconUAVOvercharge=<c val="FFFF80">Recon UAVs</c> can deal massive damage to enemy unit as suicide attack with <c val="FFFF80">Reactor Overload</c> ability.
+Button/Tooltip/ResearchSentryPostAccelerator=Add +1 range to <c val="FFFF80">Sentry Posts</c>. After research Umojan Power Shields, <c val="FFFF80">Sentry Posts</c> gain +1 range with Shields.
+Button/Tooltip/ResearchShapedBlastWarhead=<c val="FFFF80">Strikers'</c> deal +<c val="FFFF80"><d ref="Effect,TheseusAntiTankMissilesDamageUpgraded,AttributeBonus[Armored]"/></c> damage against Armored units.
+Button/Tooltip/ResearchTacticalVisor=<c val="FFFF80">Warriors</c> gain +<c val="FFFF80">1</c> weapon range.
+Button/Tooltip/ResearchUmojanPowerShields=All units having Umojan Power Shields gain helpful effects.<n/><n/>The effects are different by unit types.
+Button/Tooltip/ResearchUmojanShieldsBattery=All Umojan Units regenerate shields steadily while out of combat.
+Button/Tooltip/ResearchVoidAssaulterPsionicLash=<c val="FFFF80">Void Assaulters</c> can deal overwhelming damage with <c val="FFFF80">Psionic Lash</c> ability.
+Button/Tooltip/ResearchZirconCruiseMissile=<c val="FFFF80">Missile Cruisers</c> can deal massive damage to enemy units with <c val="FFFF80">Zircon Cruise Missile</c> ability.
+Button/Tooltip/SeekerMode=Berkut activates Seeker Mode.<n/>In Seeker Mode, Berkut gains +<d ref="Behavior,SeekerMode,Modification.SightBonus"/> additional sight, detection range, and ability range, but can’t move.<n/>All ally range units within <d ref="Effect,SeekerModeSquadSightSearch,AreaArray[0].Radius"/> distance from the Berkut on Seeker Mode gain +<d ref="Behavior,SeekerModeSquadSight,Modification.RangedWeaponRange"/> additional weapon range.
+Button/Tooltip/SeekerModeOff=Berkut deactivates Seeker Mode to move.
+Button/Tooltip/SentryPost=Primary defensive structure.<n/><n/><c val="ffff8a">Can attack ground and air units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/SentryPostAccelerator=Add +1 range to <c val="FFFF80">Sentry Posts</c>. After research Umojan Power Shields, <c val="FFFF80">Sentry Posts</c> gain +1 range with Shields.
+Button/Tooltip/ShadowAssassin=Sniper. Can be upgraded to use Cloak and Psionic Suppression Field. Can call down Tactical Cruise Missiles built at the Spec Ops Command.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/ShapedBlastWarheadUpgraded=<c val="FFFF80">Strikers'</c> deal +<c val="FFFF80"><d ref="Effect,TheseusAntiTankMissilesDamageUpgraded,AttributeBonus[Armored]"/></c> damage against Armored units.
+Button/Tooltip/SnipeOffShadowAssassin=Shadowguard relaxes from Snipe.
+Button/Tooltip/SnipeOnShadowAssassin=Shadowguard prepares for Snipe.<n/><n/>Gains +<d ref="Behavior,ShadowAssassinSnipe,Modification.RangedWeaponRange"/> weapon range, and each attack deals <d ref="Effect,ShadowAssassinSnipeDamage,Amount"/> damage.<n/><n/><c val="f078ff">Each attack costs <d ref="Effect,ShadowAssassinSnipeCost,VitalArray[Energy].Change*(-1)"/> energy.</c>
+Button/Tooltip/SpecOpsCommand=Train Shadowguards. Contains Shadowguard upgrades. Can build Tactical Cruise Missiles for Shadowguards.<n/><n/><c val="ffff8a">Enables:</c><n/>- Shadowguards<n/>- Void Assaulters at the Future Warfare Lab
+Button/Tooltip/StarStation=Air-unit production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Athena<n/>- Artemis<n/>- Amphibious Ship
+Button/Tooltip/Striker=Infantry unit equips powerful missile with long-range. Effective against armored units.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TacticalCruiseMissile=Designate target unit for Tactical Cruise Missile.<n/><n/>Tactical Cruise Missile takes <d ref="Effect,TacticalCruiseMissileCP,PeriodicPeriodArray[0]*Effect,TacticalCruiseMissileCP,PeriodCount"/> seconds to launch, flying to the target unit, can be intercepted by anti-air attack, but they deal <d ref="Effect,TacticalCruiseMissileGroundDamage,Amount"/> damage to target, and <d ref="Effect,TacticalCruiseMissileGroundDamage,Amount*Effect,TacticalCruiseMissileGroundDamage,AreaArray[0].Fraction+1"/> damage to nearby enemy units.
+Button/Tooltip/TacticalVisorUpgraded=<c val="FFFF80">Warriors</c> gain +<c val="FFFF80">1</c> weapon range.
+Button/Tooltip/TacticsAcademy=Contains upgrades for Umojan infantry units.<n/><n/><c val="ffff8a">Enables:</c><n/>- Centurion at the Infantry Quarter
+Button/Tooltip/TomahawkCruiseMissile=Zeus launches Cruise Missiles, deals <d ref="Effect,TomahawkCruiseMissileDamage,Amount"/> damage to the target unit.
+Button/Tooltip/UmojanAirArmorUpgradeLevel1=Upgrades the armor of Umojan air units.
+Button/Tooltip/UmojanAirArmorUpgradeLevel2=Further upgrades the armor of Umojan air units.
+Button/Tooltip/UmojanAirArmorUpgradeLevel3=Maximizes the armor of Umojan air units.
+Button/Tooltip/UmojanAirWeaponsUpgradeLevel1=Upgrades the damage dealt by Umojan air units.
+Button/Tooltip/UmojanAirWeaponsUpgradeLevel2=Further upgrades the damage dealt by Umojan air units.
+Button/Tooltip/UmojanAirWeaponsUpgradeLevel3=Maximizes the damage dealt by Umojan air units.
+Button/Tooltip/UmojanBuild=A list of basic structures.
+Button/Tooltip/UmojanBuildAdvanced=A list of advanced structures.
+Button/Tooltip/UmojanGroundArmorUpgradeLevel1=Upgrades the armor of Umojan ground units.
+Button/Tooltip/UmojanGroundArmorUpgradeLevel2=Further upgrades the armor of Umojan ground units.
+Button/Tooltip/UmojanGroundArmorUpgradeLevel3=Maximizes the armor of Umojan ground units.
+Button/Tooltip/UmojanGroundWeaponsUpgradeLevel1=Upgrades the damage dealt by Umojan ground units.
+Button/Tooltip/UmojanGroundWeaponsUpgradeLevel2=Further upgrades the damage dealt by Umojan ground units.
+Button/Tooltip/UmojanGroundWeaponsUpgradeLevel3=Maximizes the damage dealt by Umojan ground units.
+Button/Tooltip/UmojanHeroicUnitsRegenerationAquila=<c val="FFFF80">Aquila</c> regenerates her health by <c val="FFFF80"><d ref="Unit,Aquila,LifeRegenRate" precision="1"/></c> per second while not taken damage for <c val="FFFF80"><d ref="Unit,Aquila,LifeRegenDelay"/></c>seconds.<n/><n/><c val="FFFF80">Passive</c>
+Button/Tooltip/UmojanHeroicUnitsRegenerationVoidAssaulter=<c val="FFFF80">Void Assaulter</c> regenerates his health by <c val="FFFF80"><d ref="Unit,VoidAssaulter,LifeRegenRate" precision="1"/></c> per second while not taken damage for <c val="FFFF80"><d ref="Unit,VoidAssaulter,LifeRegenDelay"/></c>seconds.<n/><n/><c val="FFFF80">Passive</c>
+Button/Tooltip/UmojanHeroicUnitsRegenerationZeus=<c val="FFFF80">Zeus</c> regenerates its health by <c val="FFFF80"><d ref="Unit,Zeus,LifeRegenRate" precision="1"/></c> per second while not taken damage for <c val="FFFF80"><d ref="Unit,Zeus,LifeRegenDelay"/></c>seconds.<n/><n/><c val="FFFF80">Passive</c>>
+Button/Tooltip/UmojanPowerShieldAmphibiousShip=<c val="80C0FF">While Maintaing Shield</c>, Amphibious Ship gains <c val="FFFF80"><d ref="Behavior,AmphibiousShipUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c> additional movement speed.
+Button/Tooltip/UmojanPowerShieldAresArtillery=<c val="80C0FF">While Maintaing Shield</c>, Ares Artillery gains <c val="FFFF80"><d ref="Behavior,AresArtilleryUmojanPowerShields,Modification.RangedWeaponRange" precision="1"/></c> additional weapon range.
+Button/Tooltip/UmojanPowerShieldArtemis=<c val="80C0FF">While Maintaing Shield</c>, Artemis gains <c val="FFFF80"><d ref="Behavior,ArtemisUmojanPowerShields,Modification.AdditiveAttackSpeedFactor*100"/>%</c> additional attack speed.
+Button/Tooltip/UmojanPowerShieldAthena=<c val="80C0FF">While Maintaing Shield</c>, Athena gains these effects.<n/><n/><c val="FFFF80">Ranger Missiles</c> : deals <c val="FFFF80"><d ref="Effect,RangerMissilesDamageShield,AttributeBonus[Armored]-Effect,RangerMissilesDamage,AttributeBonus[Armored]"/></c> additional damage against armored units.<n/><n/><c val="FFFF80">Vympel Missiles</c> : gains <c val="FFFF80"><d ref="Behavior,AthenaUmojanPowerShieldsVympel,Modification.RangedWeaponRange" precision="1"/></c> additional weapon range.
+Button/Tooltip/UmojanPowerShieldBerkut=<c val="80C0FF">While Maintaing Shield</c>, Berkut on <c val="FFFF80">Seeker Mode</c> heals ally nearby units’ health by <c val="FFFF80"><d ref="Behavior,SeekerModeHealthRegen,Modification.VitalRegenArray[Life]" precision="1"/></c> per second.
+Button/Tooltip/UmojanPowerShieldCenturion=<c val="80C0FF">While Maintaing Shield</c>, Centurion gains <c val="FFFF80"><d ref="Behavior,CenturionUmojanPowerShield,Modification.AdditiveMoveSpeedFactor*100"/></c>% additional movement speed. Nearby ally <c val="FFFF80">Warriors</c>, <c val="FFFF80">Crusaders</c>, <c val="FFFF80">Strikers</c> regenerates their health by <c val="FFFF80"><d ref="Behavior,CenturionHealthRegen,Modification.VitalRegenArray[Life]" precision="1"/></c> per second with Umojan Power Shields. 
+Button/Tooltip/UmojanPowerShieldCrusader=<c val="80C0FF">While Maintaing Shield</c>, Crusader gains <c val="FFFF80"><d ref="Behavior,CrusaderUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c> additional movement speed.<n/><n/>Also, each attack by Crusader regenerates his shield by <c val="FFFF80"><d ref="Effect,DominatorGrenadesMU,VitalArray[Shields].Change"/></c>.
+Button/Tooltip/UmojanPowerShieldDiamondback=<c val="80C0FF">While Maintaing Shield</c>, Diamondback absorbs taken damage over 10 by <c val="FFFF80"><d ref="Behavior,HardenedShieldDiamondback,DamageResponse.ModifyAmount*(-1)+(Unit,Diamondback,ShieldArmorLevel)"/></c>, taken 10 damage at minimal.
+Button/Tooltip/UmojanPowerShieldReconUAV=<c val="80C0FF">While Maintaing Shield</c>, Recon UAV gains <c val="FFFF80"><d ref="Behavior,ReconUAVUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c> additional movement speed.
+Button/Tooltip/UmojanPowerShieldShadowAssassin=<c val="80C0FF">While Maintaing Shield</c>, Shadowguard gains <c val="FFFF80"><d ref="Behavior,ShadowAssassinUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c> additional movement speed, deals <c val="FFFF80"><d ref="Effect,ShadowAssassinSnipeDamageShields,Amount-Effect,ShadowAssassinSnipeDamage,Amount"/></c> damage with Snipe.
+Button/Tooltip/UmojanPowerShieldStriker=<c val="80C0FF">While Maintaing Shield</c>, Striker gains <c val="FFFF80"><d ref="Behavior,StrikerUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c> additional movement speed and <c val="FFFF80"><d ref="Behavior,StrikerUmojanPowerShields,Modification.RangedWeaponRange" precision="1"/></c> additional weapon range.
+Button/Tooltip/UmojanPowerShieldWarHound=<c val="80C0FF">While Maintaing Shield</c>, WarHound gains <c val="FFFF80"><d ref="Behavior,WarhoundUmojanPowerShields,Modification.AdditiveAttackSpeedFactor*100"/>%</c> additional attack speed.
+Button/Tooltip/UmojanPowerShieldWarrior=<c val="80C0FF">While Maintaing Shield</c>, Warrior gains <c val="FFFF80"><d ref="Behavior,WarriorUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c> additional movement speed and <c val="FFFF80"><d ref="Behavior,WarriorUmojanPowerShields,Modification.AdditiveAttackSpeedFactor*100"/>%</c> additional attack speed.
+Button/Tooltip/UmojanPowerShieldsUpgradeLevel1=Upgrades the shields of all Umojan units and structures.
+Button/Tooltip/UmojanPowerShieldsUpgradeLevel2=Further upgrades the shields of all Umojan units and structures.
+Button/Tooltip/UmojanPowerShieldsUpgradeLevel3=Maximizes the shields of all Umojan units and structures.
+Button/Tooltip/VespeneHarvesterUmojan=Deploy Vespene Harvester on the Vespene Plant.<n/><n/>Pioneers can harvest +<c val="80FF80">1</c> additional Vespene(+<c val="8000FF">2</c> additional Vespene from Rich Vespene Geyser) from Vespene Plants with Vespene Harvester.
+Button/Tooltip/VespenePlant=Built over a Vespene Geyser to allow harvesting of vespene gas.
+Button/Tooltip/VespenePlantRich=Built over a Vespene Geyser to allow harvesting of vespene gas.
+Button/Tooltip/VoidAssaulter=Special Operation Agent with overwhelming psionic combat power. Cloak renders the unit invisible to enemies without detection. Can use Psionic Disruption Storm, and can be upgraded to use Psionic Lash. Can call down Orbital Strike from Orbit.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/VoidAssaulterOrbitalStrike=Fires laser onto the battlefield from orbit after <d ref="Effect,VoidAssaulterOrbitalStrikeCastingTime,InitialDelay"/> seconds. Deals <d ref="Effect,VoidAssaulterOrbitalStrikeDamage,Amount"/>(<d ref="Effect,VoidAssaulterOrbitalStrikeDamage,AttributeBonus[Armored]+Effect,VoidAssaulterOrbitalStrikeDamage,Amount"/> against armored units) damage.<n/><n/><c val="ffff8a">Can attack ground and air units.</c><n/><c val="ffff8a">Requires vision on target area.</c>
+Button/Tooltip/VoidAssaulterPsionicLash=Deals <d ref="Effect,VoidAssaulterPsionicLashDamage,Amount"/> damage immediately to target enemy unit.
+Button/Tooltip/WarHoundUmojan=Multi-purpose Mech. Efficient against armored air units. Haywire missiles do bonus damage to weapon target.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Warrior=General-purpose infantry.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/WeaponsFreeShadowAssassin=Orders selected units to fire at will. They will engage enemy units within range and chase them as normal.
+Button/Tooltip/Zeus=Massive siege walker capable of scorching enemy forces. Can strike enemy with cruise missiles. Can be upgraded to annihilate enemy forces with devastating barrage.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c></c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/ZirconCruiseMissile=Missile Cruiser launches Zircon Cruise Missile to the target unit.<n/>Missile launches after <d ref="Effect,ZirconCruiseMissileLaunchCP,PeriodCount*Effect,ZirconCruiseMissileLaunchCP,PeriodicPeriodArray[0]"/> seconds, deals up to <d ref="Effect,ZirconCruiseMissileDamage,Amount"/> damage to the target and nearby enemy units against ground units, and deals <d ref="Effect,ZirconCruiseMissileDamageAntiAir,Amount"/> damage to the target unit against air units.
+ConsoleSkin/Name/ConsoleTerran_Umojan=Umojan
+DocInfo/DescLong=Umojan Protectorate Data Dependency for SC : Revolution Overdrive<n/><n/>Models Developed By : Comrade Mikhail<n/><n/>Special Thanks for Providing Models : ChonkyKat, DaveSpectre, WingedArchon, Gumba_54, ghostnova91, CerberusSC2, VastanX, arghzad
+DocInfo/DescShort=Melee Players
+DocInfo/Name=Umojan Protectorate Mod for SC : Revolution Overdrive
+Error/VespeneDroneTarget=Must target Vespene Harvester without Vespene Harvester.
+Race/Name/Umoj=Umojan
+RequirementNode/Tooltip/CountUnitTacticalCruiseMissileUnitCompleteOnly=Build Tactical Cruise Missile at the Spec Ops Command
+RequirementNode/Tooltip/CountUpgradeActiveElectronicallyScannedArrayRadarCompleteOnly=Research Active Electronically Scanned Array Radar at the Engineering Factory
+RequirementNode/Tooltip/CountUpgradeAntiTankMissileCompleteOnly=Research Anti Tank Missile at the Engineering Factory
+RequirementNode/Tooltip/CountUpgradeAthenaJotunBoostersCompleteOnly2042770557=Research Jotun Boosters at the Fleet Headquarters
+RequirementNode/Tooltip/CountUpgradeCenturionInspirationCompleteOnly=Research Inspiration at the Tactics Academy
+RequirementNode/Tooltip/CountUpgradeFragmentShrapnelCompleteOnly=Research Fragment Shrapnel at the Tactics Academy
+RequirementNode/Tooltip/CountUpgradeHeraProtocolCompleteOnly=Research Hera Protocol at the Future Warfare Lab
+RequirementNode/Tooltip/CountUpgradeMaelstromRoundsCompleteOnly=Research Maelstrom Rounds at the Engineering Factory
+RequirementNode/Tooltip/CountUpgradeMaverickMissilesCompleteOnly=Research Maverick Missile Pods at the Fleet Headquarters
+RequirementNode/Tooltip/CountUpgradePersonalCloakingShadowAssassinCompleteOnlyTechTreeCheat=Research Personal Cloaking at the Spec Ops Command
+RequirementNode/Tooltip/CountUpgradePraetoriaHangarCompleteOnly=Research Praetoria Hangar at the Future Warfare Lab
+RequirementNode/Tooltip/CountUpgradePsionicLockdownCompleteOnly=Research Psionic Suppression Field at the Spec Ops Command
+RequirementNode/Tooltip/CountUpgradePsionicSuppressionFieldCompleteOnly=Research Electro-Magnetic Suppression Field at the Fleet Headquarters
+RequirementNode/Tooltip/CountUpgradeReconUAVOverchargeCompleteOnly=Research Reactor Overload at the Engineering Factory
+RequirementNode/Tooltip/CountUpgradeSentryPostAcceleratorCompleteOnly=Research Sentry Post Accelerator at the Power Plant
+RequirementNode/Tooltip/CountUpgradeShapedBlastWarheadCompleteOnly=Research Shaped Blast Warhead at the Tactics Academy
+RequirementNode/Tooltip/CountUpgradeTacticalVisorCompleteOnly=Research Tactical Visor at the Tactics Academy
+RequirementNode/Tooltip/CountUpgradeUmojanPowerShieldsCompleteOnly=Research Umojan Power Shields at the Power Plant
+RequirementNode/Tooltip/CountUpgradeUmojanShieldsBatteryCompleteOnly=Research Shield Battery at the Power Plant
+RequirementNode/Tooltip/CountUpgradeVoidAssaulterPsionicLashCompleteOnly=Research Psionic Lash at the Future Warfare Lab
+RequirementNode/Tooltip/CountUpgradeZirconCruiseMissilesCompleteOnly=Research Zircon Cruise Missiles at the Fleet Headquarters
+RequirementNode/Tooltip/LTCountUnitAquilaQueuedOrBetter1=No Aquila
+RequirementNode/Tooltip/LTCountUnitMaelstromRoundsUnitQueuedOrBetterAtUnit5=Less Than 5 Maelstrom Rounds in the Ares Artillery
+RequirementNode/Tooltip/LTCountUnitPraetoriaQueuedOrBetterAtUnit2=Less than 2 Praetoriae
+RequirementNode/Tooltip/LTCountUnitTacticalCruiseMissileUnitQueuedOrBetterAtUnit3=Less Than 3 Tactical Cruise Missiles on the Spec Ops Command
+RequirementNode/Tooltip/LTCountUnitVoidAssaulterQueuedOrBetter1=No Void Assaulter
+RequirementNode/Tooltip/LTCountUnitVoidAssaulterQueuedOrBetter3=Less than 3 Void Assaulters
+RequirementNode/Tooltip/LTCountUnitZeusQueuedOrBetter1=No Zeus
+RequirementNode/Tooltip/NotCountUnitFutureWarfareLabQueuedOrBetter=No Future Warfare Lab
+RequirementNode/Tooltip/OrCountUnitEngineeringFactoryCompleteOnlyCountUnitFleetHeadquartersCompleteOnlyCountUnitSpecOpsCommandCompleteOnly=Engineering Factory or Fleet Headquarters or Spec Ops Command
+UI/ResourceSupplyToolTip_Umoj=All living units cost supply. Build Logistics Depots to increase supply. 
+Unit/Category/UmojanUnits=Umojan
+Unit/LifeArmorName/UmojanBuildingPlating=Umojan Builidng Plating
+Unit/LifeArmorName/UmojanInfantryArmor=Umojan Infantry Armor
+Unit/LifeArmorName/UmojanShipPlating=Umojan Ship Plating
+Unit/LifeArmorName/UmojanVehiclePlating=Umojan Vehicle Plating
+Unit/Name/AmphibiousShip=Amphibious Ship
+Unit/Name/Aquila=Aquila
+Unit/Name/AresArtillery=Ares Artillery
+Unit/Name/ArmamentFacility=Armament Facility
+Unit/Name/Arsenal=Arsenal
+Unit/Name/Artemis=Artemis
+Unit/Name/Athena=Athena
+Unit/Name/AthenaWeapon=Athena Weapon
+Unit/Name/Berkut=Berkut
+Unit/Name/Centurion=Centurion
+Unit/Name/Changeling=Changeling
+Unit/Name/CommandPost=Command Post
+Unit/Name/Crusader=Crusader
+Unit/Name/Diamondback=Diamondback
+Unit/Name/DominatorrGrenadesLMWeapon=Dominator Grenades
+Unit/Name/EngineeringFactory=Engineering Factory
+Unit/Name/FleetHeadquarters=Fleet Headquarters
+Unit/Name/FutureWarfareLab=Future Warfare Lab
+Unit/Name/HaywireMissileWeapon=Haywire Missile Weapon
+Unit/Name/InfantryQuarter=Infantry Quarter
+Unit/Name/LogisticsDepot=Logistics Depot
+Unit/Name/MissileCruiser=Missile Cruiser
+Unit/Name/Pioneer=Pioneer
+Unit/Name/PowerPlant=Power Plant
+Unit/Name/Praetoria=Praetoria
+Unit/Name/ReconUAV=Recon UAV
+Unit/Name/RecoveryDevice=Recovery Device
+Unit/Name/SentryPost=Sentry Post
+Unit/Name/SentryPostWeapon=Snetry Post Weapon
+Unit/Name/ShadowAssassin=Shadowguard
+Unit/Name/SpecOpsCommand=Spec Ops Command
+Unit/Name/StarStation=Star Station
+Unit/Name/Striker=Striker
+Unit/Name/TacticsAcademy=Tactics Academy
+Unit/Name/TheseusAntiTankMissilesUpgradeWeapon=Theseus Anti Tank Missiles Upgrade
+Unit/Name/TheseusAntiTankMissilesWeapon=Theseus Anti Tank Missiles
+Unit/Name/VespenePlant=Vespene Plant
+Unit/Name/VespenePlantRich=Vespene Plant
+Unit/Name/VoidAssaulter=Void Assaulter
+Unit/Name/WarHoundUmojan=WarHound
+Unit/Name/WarHoundUmojanAntiAirWeapon=WarHound
+Unit/Name/WarHoundUmojanWeapon=WarHound
+Unit/Name/Warrior=Warrior
+Unit/Name/Zeus=Zeus
+Unit/ShieldArmorName/UmojanPowerShields=Umojan Power Shields
+Upgrade/Name/ActiveElectronicallyScannedArrayRadar=Active Electronically Scanned Array Radar
+Upgrade/Name/AntiTankMissile=Anti-Tank Missile
+Upgrade/Name/AthenaJotunBoosters=Jotun Boosters
+Upgrade/Name/CenturionInspiration=Inspiration
+Upgrade/Name/FragmentShrapnel=Fragment Shrapnel
+Upgrade/Name/HeraProtocol=Hera Protocol
+Upgrade/Name/MaelstromRounds=Maelstrom Rounds
+Upgrade/Name/MaverickMissiles=Maverick Missile Pods
+Upgrade/Name/PersonalCloakingShadowAssassin=Personal Cloaking
+Upgrade/Name/PraetoriaHangar=Praetoria Hangar
+Upgrade/Name/PsionicLockdown=Psionic Suppression Field
+Upgrade/Name/PsionicSuppressionField=Electro-Magnetic Suppression Field
+Upgrade/Name/ReconUAVOvercharge=Reactor Overload
+Upgrade/Name/SentryPostAccelerator=Sentry Post Accelerator
+Upgrade/Name/ShapedBlastWarhead=Shaped Blast Warhead
+Upgrade/Name/TacticalVisor=Tactical Visor
+Upgrade/Name/UmojanAirArmorUpgrade=Umojan Air Armor
+Upgrade/Name/UmojanAirArmorUpgradeLevel1=Umojan Air Armor Upgrade Level 1
+Upgrade/Name/UmojanAirArmorUpgradeLevel2=Umojan Air Armor Upgrade Level 2
+Upgrade/Name/UmojanAirArmorUpgradeLevel3=Umojan Air Armor Upgrade Level 3
+Upgrade/Name/UmojanAirWeaponsUpgrade=Umojan Air Weapons
+Upgrade/Name/UmojanAirWeaponsUpgradeLevel1=Umojan Air Weapons Upgrade Level 1
+Upgrade/Name/UmojanAirWeaponsUpgradeLevel2=Umojan Air Weapons Upgrade Level 2
+Upgrade/Name/UmojanAirWeaponsUpgradeLevel3=Umojan Air Weapons Upgrade Level 3
+Upgrade/Name/UmojanGroundArmorUpgrade=Umojan Ground Armor
+Upgrade/Name/UmojanGroundArmorUpgradeLevel1=Umojan Ground Armor Upgrade Level 1
+Upgrade/Name/UmojanGroundArmorUpgradeLevel2=Umojan Ground Armor Upgrade Level 2
+Upgrade/Name/UmojanGroundArmorUpgradeLevel3=Umojan Ground Armor Upgrade Level 3
+Upgrade/Name/UmojanGroundWeaponsUpgrade=Umojan Ground Weapons
+Upgrade/Name/UmojanGroundWeaponsUpgradeLevel1=Umojan Ground Weapons Upgrade Level 1
+Upgrade/Name/UmojanGroundWeaponsUpgradeLevel2=Umojan Ground Weapons Upgrade Level 2
+Upgrade/Name/UmojanGroundWeaponsUpgradeLevel3=Umojan Ground Weapons Upgrade Level 3
+Upgrade/Name/UmojanPowerShields=Umojan Power Shields
+Upgrade/Name/UmojanPowerShieldsUpgrade=Umojan Power Shields
+Upgrade/Name/UmojanPowerShieldsUpgradeLevel1=Umojan Power Shields Upgrade Level 1
+Upgrade/Name/UmojanPowerShieldsUpgradeLevel2=Umojan Power Shields Upgrade Level 2
+Upgrade/Name/UmojanPowerShieldsUpgradeLevel3=Umojan Power Shields Upgrade Level 3
+Upgrade/Name/UmojanShieldsBattery=Shields Battery
+Upgrade/Name/VoidAssaulterPsionicLash=Psionic Lash
+Upgrade/Name/ZirconCruiseMissiles=Zircon Cruise Missiles
+Weapon/Name/AGR15AssaultRifle=AGR-15 Assault Rifle
+Weapon/Name/ArtemisHALOMissiles=HALO Missile Pods
+Weapon/Name/CrusaderGrenades=Dominator Grenades
+Weapon/Name/Diamondback=Evisceration Railgun
+Weapon/Name/EnterpriseGun=Enterprise Gun
+Weapon/Name/GaussShockCannon=Gauss Shock Cannon
+Weapon/Name/MaverickMissiles=Maverick Missile Pods
+Weapon/Name/MeteorMissilePods=Meteor Missile Pods
+Weapon/Name/OdysseusMissileBarrage=Odysseus Missile Pods
+Weapon/Name/PhoenixMissile=Phoenix Missiles
+Weapon/Name/Pioneer=Fusion Cutter
+Weapon/Name/RangerMissiles=Ranger Missiles
+Weapon/Name/SentryPost=Longbolt Missiles
+Weapon/Name/ShadowAssassinSnipe=Operator Anti-Matter Sniper Rifle
+Weapon/Name/TheseusAntiTankMissiles=Theseus Anti-Tank Missiles
+Weapon/Name/VoidAssaulter=IWS-9000 Anti-Matter Sniper Rifle
+Weapon/Name/VympelMissiles=Vympel Missiles
+Weapon/Name/WarHoundUmojan=Railgun
+Weapon/Name/WarHoundUmojanAntiAir=Railgun
+Weapon/Name/WarHoundUmojanMelee=WarHound Melee
+Weapon/Name/WarriorGaussRifle=AR-47 Gauss Rifle
+Weapon/Name/Zeus=T-1000 Cannons
+Weapon/Name/ZeusAntiAir=Buran Anti-Air Missiles
+e_cmdCantBuildOnThat_Umoj=Must place on an active Vespene Geyser
+e_cmdFoodUsageImpossible_Umoj=Request not possible<n/>Supply limit reached
+e_cmdMustBuildRefineryFirst_Umoj=Must build vespene plant first
+e_cmdNotEnoughFood_Umoj=Not enough supply<n/>Build more Logistics Depots

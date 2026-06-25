@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff default="1" id="TerranBuildingSCBW@AddonAttached">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="AirStackingBase">
+        <?token id="Race" value="Zerg"?>
+        <?token id="morphTo" value="Ball"?>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="AirStacking"/>
+        <FinalEffect value="##morphTo##@MorphDelay"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff default="1" id="AirStackingUndoBase">
+        <?token id="Race" value="Zerg"?>
+        <?token id="morphTo" value="Ball"?>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="AirStacking@Undo"/>
+        <FinalEffect value="##morphTo##@MorphDelay"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SCBW_NoUpgradeQueue">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+        <Requirements value="SCBW_NoUpgradeQueue"/>
+        <Modification QueueSize="-4"/>
+    </CBehaviorBuff>
+    <CBehaviorPowerSource id="PowerSource">
+        <CliffLevelFlags index="Higher" value="1"/>
+    </CBehaviorPowerSource>
+    <CBehaviorBuff id="SCBW_SuppressRegen">
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <StateFlags index="SuppressLifeRegen" value="1"/>
+            <StateFlags index="SuppressShieldsRegen" value="1"/>
+            <StateFlags index="SuppressEnergyRegen" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorPowerUser id="PowerUserBaseDefenseSmall">
+        <PowerStageArray index="0">
+            <Modification>
+                <AbilTechAliasEnableArray value="_BuildInProgress"/>
+            </Modification>
+        </PowerStageArray>
+    </CBehaviorPowerUser>
+    <CBehaviorPowerUser id="PowerUserQueue">
+        <PowerStageArray index="0">
+            <Modification>
+                <AbilTechAliasEnableArray value="_BuildInProgress"/>
+            </Modification>
+        </PowerStageArray>
+    </CBehaviorPowerUser>
+    <CBehaviorPowerUser id="PowerUserQueueSmall">
+        <PowerStageArray index="0">
+            <Modification>
+                <AbilTechAliasEnableArray value="_BuildInProgress"/>
+            </Modification>
+        </PowerStageArray>
+    </CBehaviorPowerUser>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGas">
+        <InitialEffect value="CarryHarvestableVespeneGeyserGasInitial"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGasProtoss">
+        <InitialEffect value="CarryHarvestableVespeneGeyserGasInitial"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGasZerg">
+        <InitialEffect value="CarryHarvestableVespeneGeyserGasInitial"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGas">
+        <InitialEffect value="CarryHarvestableVespeneGeyserGasInitial"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGasProtoss">
+        <InitialEffect value="CarryHarvestableVespeneGeyserGasInitial"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGasZerg">
+        <InitialEffect value="CarryHarvestableVespeneGeyserGasInitial"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ChangelingDisguisePlayerIndex">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SCBW_LineMovement">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="LineMovement" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FungalGrowth">
+        <BehaviorCategories index="Restorable" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GeyserExhaustedRaw">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\icon-gas.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="GeyserRawIsExhausted"/>
+        <RemoveValidatorArray value="HasVespene"/>
+        <FinalEffect value="GeyserExhausted"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GeyserExhaustedHarvestable">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\icon-gas.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <ResourceHarvestAmountMultiplier index="Vespene" value="-0.75"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GeyserExhaustedRawRich">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\icon-gas.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="GeyserRawIsExhausted"/>
+        <Period value="0.0625"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffect value="RichGeyserExhausted"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGas">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGasProtoss">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGasZerg">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGas">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGasProtoss">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGasZerg">
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawRichVespeneGeyserGas">
+        <Capacity value="1000000"/>
+        <Contents value="5000"/>
+        <HarvestAmount value="16"/>
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawVespeneGeyserGas">
+        <Capacity value="1000000"/>
+        <Contents value="5000"/>
+        <HarvestAmount value="8"/>
+        <EmptyHarvestAmount value="2"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="AddonIsWorkingSCBW">
+        <BehaviorFlags index="Permanent" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="AddonIsWorkingSCBW@Disable"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SCBW_WorkerDropOffStun">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotDead"/>
+        <RemoveValidatorArray value="SCBW_Harvesting"/>
+        <Duration value="0.625"/>
+        <Modification>
+            <StateFlags index="Stun" value="1"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SCVSCBWIsBuilding">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="LegacyMovement@WorkerIsMining"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SCBW_Unkillable">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <StateFlags index="CannotDie" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Yoink">
+        <BehaviorCategories index="Stun" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ZergGenericDeath">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+</Catalog>

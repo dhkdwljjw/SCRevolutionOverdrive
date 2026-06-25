@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton default="1" id="ReturnCargoSCBW">
+        <Icon value="Assets\Textures\btn-command-returncargo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-returncargo.dds"/>
+        <EditorCategories value="Race:Neutral"/>
+        <TintRacially value="1"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton default="1" id="SCBW_ResearchPassive">
+        <?token id="x" value="SCBW_ResearchPassive"?>
+        <Name value="Upgrade/Name/##x##"/>
+        <Tooltip value="Button/Tooltip/##x##"/>
+        <AlertName value="Upgrade/Name/##x##"/>
+        <AlertTooltip value="Button/Tooltip/##x##"/>
+        <Hotkey value=""/>
+        <HotkeyAlias value=""/>
+        <UseHotkeyLabel value="0"/>
+    </CButton>
+    <CButton default="1" id="SCBW_UnitPassive">
+        <?token id="x" value="SCBW_UnitPassive"?>
+        <Name value="Unit/Name/##x##"/>
+        <AlertName value="Unit/Name/##x##"/>
+        <Hotkey value=""/>
+        <HotkeyAlias value=""/>
+        <UseHotkeyLabel value="0"/>
+    </CButton>
+    <CButton default="1" id="SCBW_PassiveInfo">
+        <Hotkey value=""/>
+        <HotkeyAlias value=""/>
+        <UseHotkeyLabel value="0"/>
+    </CButton>
+    <CButton id="BurrowUpSCBW" parent="BurrowUp">
+        <Hotkey value="Button/Hotkey/BurrowUpSCBW"/>
+        <HotkeyAlias value="BurrowUpSCBW"/>
+        <HotkeySet value="BurrowUnburrowModes"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="BurrowDownSCBW" parent="BurrowDown">
+        <Hotkey value="Button/Hotkey/BurrowDownSCBW"/>
+        <HotkeyAlias value="BurrowDownSCBW"/>
+        <HotkeySet value="BurrowUnburrowModes"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="AttackGhost">
+        <HidesForSimpleText value="1"/>
+    </CButton>
+    <CButton id="DetectorSCBW@Detector">
+        <Icon value="Assets\Textures\BTN-Status-Detector.dds"/>
+        <EditorCategories value="Race:Neutral"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="Detector"/>
+    </CButton>
+    <CButton id="LurkerCancelHoldFire">
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="LurkerHoldFire">
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="SalvageRedirect">
+        <Icon value="Assets\Textures\btn-ability-terran-salvage.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-salvage.dds"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="BuildCancelSCBW">
+        <Icon value="Assets\Textures\btn-command-cancel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-cancel.dds"/>
+        <EditorCategories value="Race:Neutral"/>
+        <TintRacially value="1"/>
+        <Universal value="1"/>
+        <DefaultButtonLayout Row="2" Column="4"/>
+        <Hotkey value="Button/Hotkey/Cancel"/>
+        <HotkeyAlias value="Cancel"/>
+    </CButton>
+</Catalog>

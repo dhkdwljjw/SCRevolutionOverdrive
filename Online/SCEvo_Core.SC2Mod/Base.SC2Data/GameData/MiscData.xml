@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectTransferBehavior default="1" id="SCBW_CopyBuffsBase">
+        <?token id="x"?>
+        <LaunchUnit Value="Caster"/>
+        <ImpactUnit Value="Target"/>
+        <Copy value="1"/>
+        <Behavior value="##x##"/>
+    </CEffectTransferBehavior>
+    <CEffectSet id="SCBW_CopyBuffs@Buffs1">
+        <EffectArray value="SCBW_CopyBuffs@MatrixSet"/>
+        <EffectArray value="SCBW_CopyBuffs@EnsnareBuffs"/>
+        <EffectArray value="SCBW_CopyBuffs@Plague"/>
+        <EffectArray value="SCBW_CopyBuffs@Irradiate"/>
+        <EffectArray value="SCBW_CopyBuffs@Parasite"/>
+        <EffectArray value="SCBW_CopyBuffs@Blinded"/>
+        <EffectArray value="SCBW_CopyBuffs@AcidSpore"/>
+    </CEffectSet>
+    <CEffectSet id="SCBW_CopyBuffs@Buffs2"/>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@AcidSpore" parent="SCBW_CopyBuffsBase" x="DevourerSCBWWeapon"/>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@Blinded" parent="SCBW_CopyBuffsBase" x="MedicSCBWOpticFlare">
+        <ValidatorArray value="NotStructureTarget"/>
+    </CEffectTransferBehavior>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@Ensnare" parent="SCBW_CopyBuffsBase" x="QueenSCBWEnsnare">
+        <ValidatorArray value="QueenSCBWEnsnare@AB"/>
+    </CEffectTransferBehavior>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@EnsnareMovement" parent="SCBW_CopyBuffsBase" x="QueenSCBWEnsnare@Movement">
+        <ValidatorArray value="QueenSCBWEnsnare@MovementAB"/>
+    </CEffectTransferBehavior>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@EnsnareAttack" parent="SCBW_CopyBuffsBase" x="QueenSCBWEnsnare@Attack">
+        <ValidatorArray value="QueenSCBWEnsnare@AttackAB"/>
+    </CEffectTransferBehavior>
+    <CEffectSet id="SCBW_CopyBuffs@EnsnareBuffs">
+        <EffectArray value="SCBW_CopyBuffs@Ensnare"/>
+        <EffectArray value="SCBW_CopyBuffs@EnsnareMovement"/>
+        <EffectArray value="SCBW_CopyBuffs@EnsnareAttack"/>
+    </CEffectSet>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@Irradiate" parent="SCBW_CopyBuffsBase" x="ScienceVesselSCBWIrradiate@Irradiated"/>
+    <CEffectUserData id="SCBW_CopyBuffs@MatrixDuration">
+        <Key value="DefensiveMatrixDuration"/>
+        <Amount value="0">
+            <AccumulatorArray value="ScienceVesselSCBWDefensiveMatrix@RemainingDuration"/>
+        </Amount>
+        <SourceKey value="DefensiveMatrixDuration"/>
+        <Operation value="Set"/>
+        <TargetLocationType value="Unit"/>
+        <BehaviorScope Value="Target"/>
+    </CEffectUserData>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@Parasite" parent="SCBW_CopyBuffsBase" x="QueenSCBWParasite">
+        <ValidatorArray value="NotStructureTarget"/>
+    </CEffectTransferBehavior>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@Plague" parent="SCBW_CopyBuffsBase" x="DefilerSCBWPlague"/>
+    <CEffectTransferBehavior id="SCBW_CopyBuffs@Matrix" parent="SCBW_CopyBuffsBase" x="ScienceVesselSCBWDefensiveMatrix">
+        <Preserve value="1"/>
+    </CEffectTransferBehavior>
+    <CEffectSet id="SCBW_CopyBuffs">
+        <EffectArray value="SCBW_CopyBuffs@Buffs1"/>
+        <EffectArray value="SCBW_CopyBuffs@Buffs2"/>
+        <ValidatorArray value="ExtractorSCBW@NotAlias"/>
+    </CEffectSet>
+    <CEffectSet id="SCBW_CopyBuffs@MatrixSet">
+        <ValidatorArray value="ScienceVesselSCBWDefensiveMatrix@HasShieldSource"/>
+        <ValidatorArray value="ScienceVesselSCBWDefensiveMatrix@NoShield"/>
+        <ValidatorArray value="NotStructureTarget"/>
+        <EffectArray value="SCBW_CopyBuffs@MatrixDuration"/>
+        <EffectArray value="SCBW_CopyBuffs@Matrix"/>
+        <EffectArray value="ScienceVesselSCBWDefensiveMatrix@UDTransfer"/>
+    </CEffectSet>
+    <CEffectDamage id="SCBWUnitSwapDummy">
+        <LaunchLocation Value="CasterUnit"/>
+        <ImpactLocation Value="CasterUnit"/>
+    </CEffectDamage>
+    <CValidatorUnitType id="SCBW_IsBrutalisk" parent="SCBW_UnitAlias" x="Brutalisk"/>
+    <CValidatorUnitType id="SCBW_IsReaper" parent="SCBW_Unit" x="Reaper"/>
+    <CValidatorUnitType id="SCBW_IsLurker" parent="SCBW_UnitAlias" x="LurkerMP"/>
+    <CValidatorUnitType id="IsBaneling" parent="SCBW_Unit" x="Baneling"/>
+    <CValidatorUnitType id="IsNexus" parent="SCBW_Unit" x="Nexus"/>
+    <CValidatorUnitType id="IsPylon" parent="SCBW_Unit" x="Pylon"/>
+    <CValidatorUnitType id="IsAssimilator" parent="SCBW_Unit" x="Assimilator"/>
+    <CValidatorUnitType id="IsAssimilatorRich" parent="SCBW_Unit" x="AssimilatorRich"/>
+    <CValidatorUnitType id="IsAssimilatorProtossGeyser" parent="SCBW_Unit" x="AssimilatorProtossGeyser"/>
+    <CValidatorUnitType id="IsGateway" parent="SCBW_Unit" x="Gateway"/>
+    <CValidatorUnitType id="IsForge" parent="SCBW_Unit" x="Forge"/>
+    <CValidatorUnitType id="IsPhotonCannon" parent="SCBW_Unit" x="PhotonCannon"/>
+    <CValidatorUnitType id="IsShieldBattery" parent="SCBW_Unit" x="ShieldBattery"/>
+    <CValidatorUnitType id="IsCyberneticsCore" parent="SCBW_Unit" x="CyberneticsCore"/>
+    <CValidatorUnitType id="IsRoboticsFacility" parent="SCBW_Unit" x="RoboticsFacility"/>
+    <CValidatorUnitType id="IsRoboticsBay" parent="SCBW_Unit" x="RoboticsBay"/>
+    <CValidatorUnitType id="IsTwilightCouncil" parent="SCBW_Unit" x="TwilightCouncil"/>
+    <CValidatorUnitType id="IsTemplarArchive" parent="SCBW_Unit" x="TemplarArchive"/>
+    <CValidatorUnitType id="IsStargate" parent="SCBW_Unit" x="Stargate"/>
+    <CValidatorUnitType id="IsFleetBeacon" parent="SCBW_Unit" x="FleetBeacon"/>
+    <CValidatorUnitType id="IsProbe" parent="SCBW_Unit" x="Probe"/>
+    <CValidatorUnitType id="IsZealot" parent="SCBW_Unit" x="Zealot"/>
+    <CValidatorUnitType id="IsDragoon" parent="SCBW_Unit" x="Dragoon"/>
+    <CValidatorUnitType id="IsHighTemplar" parent="SCBW_Unit" x="HighTemplar"/>
+    <CValidatorUnitType id="IsDarkTemplar" parent="SCBW_Unit" x="DarkTemplar"/>
+    <CValidatorUnitType id="IsArchon" parent="SCBW_Unit" x="Archon"/>
+    <CValidatorUnitType id="IsDarkArchon" parent="SCBW_Unit" x="DarkArchon"/>
+    <CValidatorUnitType id="IsWarpPrism" parent="SCBW_Unit" x="WarpPrism"/>
+    <CValidatorUnitType id="IsReaver" parent="SCBW_Unit" x="Reaver"/>
+    <CValidatorUnitType id="IsObserver" parent="SCBW_Unit" x="Observer"/>
+    <CValidatorUnitType id="IsScout" parent="SCBW_Unit" x="Scout"/>
+    <CValidatorUnitType id="IsCorsairMP" parent="SCBW_Unit" x="CorsairMP"/>
+    <CValidatorUnitType id="IsCarrier" parent="SCBW_Unit" x="Carrier"/>
+    <CValidatorUnitType id="IsArbiterMP" parent="SCBW_Unit" x="ArbiterMP"/>
+    <!-- Terran -->
+    <CValidatorUnitType id="IsCommandCenter" parent="SCBW_Unit" x="CommandCenter"/>
+    <CValidatorUnitType id="IsCommandCenterFlying" parent="SCBW_Unit" x="CommandCenterFlying"/>
+    <CValidatorUnitType id="IsOrbitalCommand" parent="SCBW_Unit" x="OrbitalCommand"/>
+    <CValidatorUnitType id="IsOrbitalCommandFlying" parent="SCBW_Unit" x="OrbitalCommandFlying"/>
+    <CValidatorUnitType id="IsSupplyDepot" parent="SCBW_Unit" x="SupplyDepot"/>
+    <CValidatorUnitType id="IsRefinery" parent="SCBW_Unit" x="Refinery"/>
+    <CValidatorUnitType id="IsMissileTurret" parent="SCBW_Unit" x="MissileTurret"/>
+    <CValidatorUnitType id="IsBarracks" parent="SCBW_Unit" x="Barracks"/>
+    <CValidatorUnitType id="IsEngineeringBay" parent="SCBW_Unit" x="EngineeringBay"/>
+    <CValidatorUnitType id="IsBunker" parent="SCBW_Unit" x="Bunker"/>
+    <CValidatorUnitType id="IsFactory" parent="SCBW_Unit" x="Factory"/>
+    <CValidatorUnitType id="IsStarport" parent="SCBW_Unit" x="Starport"/>
+    <CValidatorUnitType id="IsArmory" parent="SCBW_Unit" x="Armory"/>
+    <CValidatorUnitType id="IsFusionCore" parent="SCBW_Unit" x="FusionCore"/>
+    <CValidatorUnitType id="IsSCV" parent="SCBW_Unit" x="SCV"/>
+    <CValidatorUnitType id="IsMarine" parent="SCBW_Unit" x="Marine"/>
+    <CValidatorUnitType id="IsFirebat" parent="SCBW_Unit" x="Firebat"/>
+    <CValidatorUnitType id="IsMedic" parent="SCBW_Unit" x="Medic"/>
+    <CValidatorUnitType id="IsGhost" parent="SCBW_UnitAlias" x="Ghost"/>
+    <CValidatorUnitType id="IsVulture" parent="SCBW_Unit" x="Vulture"/>
+    <CValidatorUnitType id="IsGoliath" parent="SCBW_Unit" x="Goliath"/>
+    <CValidatorUnitType id="IsSiegeTank" parent="SCBW_Unit" x="SiegeTank"/>
+    <CValidatorUnitType id="IsWraith" parent="SCBW_Unit" x="Wraith"/>
+    <CValidatorUnitType id="IsMedivac" parent="SCBW_Unit" x="Medivac"/>
+    <CValidatorUnitType id="IsScienceVessel" parent="SCBW_Unit" x="ScienceVessel"/>
+    <CValidatorUnitType id="IsBattlecruiser" parent="SCBW_Unit" x="Battlecruiser"/>
+    <CValidatorUnitType id="IsCyclone" parent="SCBW_Unit" x="Cyclone"/>
+    <CValidatorUnitType id="IsHercules" parent="SCBW_Unit" x="Hercules"/>
+    <CValidatorUnitType id="IsHerculesLander" parent="SCBW_Unit" x="HerculesLander"/>
+    <CValidatorUnitType id="IsHerculesLanderFlying" parent="SCBW_Unit" x="HerculesLanderFlying"/>
+    <CValidatorCombine id="IsHerculesCombineSCBW">
+        <CombineArray value="IsHercules"/>
+        <CombineArray value="IsHerculesLander"/>
+        <CombineArray value="IsHerculesLanderFlying"/>
+    </CValidatorCombine>
+    <!-- Zerg -->
+    <CValidatorUnitType id="IsHatchery" parent="SCBW_Unit" x="Hatchery"/>
+    <CValidatorUnitType id="IsLair" parent="SCBW_Unit" x="Lair"/>
+    <CValidatorUnitType id="IsHive" parent="SCBW_Unit" x="Hive"/>
+    <CValidatorUnitType id="IsSporeCrawler" parent="SCBW_Unit" x="SporeCrawler"/>
+    <CValidatorUnitType id="IsSpineCrawler" parent="SCBW_Unit" x="SpineCrawler"/>
+    <CValidatorUnitType id="IsExtractor" parent="SCBW_Unit" x="Extractor"/>
+    <CValidatorUnitType id="IsSpawningPool" parent="SCBW_Unit" x="SpawningPool"/>
+    <CValidatorUnitType id="IsEvolutionChamber" parent="SCBW_Unit" x="EvolutionChamber"/>
+    <CValidatorUnitType id="IsHydraliskDen" parent="SCBW_Unit" x="HydraliskDen"/>
+    <CValidatorUnitType id="IsSpire" parent="SCBW_Unit" x="Spire"/>
+    <CValidatorUnitType id="IsInfestationPit" parent="SCBW_Unit" x="InfestationPit"/>
+    <CValidatorUnitType id="IsNydusCanal" parent="SCBW_Unit" x="NydusCanal"/>
+    <CValidatorUnitType id="IsUltraliskCavern" parent="SCBW_Unit" x="UltraliskCavern"/>
+    <CValidatorUnitType id="IsLarva" parent="SCBW_Unit" x="Larva"/>
+    <CValidatorUnitType id="IsDrone" parent="SCBW_Unit" x="Drone"/>
+    <CValidatorUnitType id="IsZergling" parent="SCBW_Unit" x="Zergling"/>
+    <CValidatorUnitType id="IsOverlord" parent="SCBW_Unit" x="Overlord"/>
+    <CValidatorUnitType id="IsHydralisk" parent="SCBW_Unit" x="Hydralisk"/>
+    <CValidatorUnitType id="IsMutalisk" parent="SCBW_Unit" x="Mutalisk"/>
+    <CValidatorUnitType id="IsScourge" parent="SCBW_Unit" x="Scourge"/>
+    <CValidatorUnitType id="IsQueenMP" parent="SCBW_Unit" x="QueenMP"/>
+    <CValidatorUnitType id="IsUltralisk" parent="SCBW_Unit" x="Ultralisk"/>
+    <CValidatorUnitType id="IsDefilerMP" parent="SCBW_Unit" x="DefilerMP"/>
+    <CValidatorUnitType id="IsBroodling" parent="SCBW_Unit" x="Broodling"/>
+    <CValidatorUnitType id="IsInfestedTerran" parent="SCBW_Unit" x="InfestedTerran"/>
+    <!-- Protoss -->
+    <CValidatorUnitType id="CasterIsNexus" parent="SCBW_UnitCaster" x="Nexus"/>
+    <CValidatorUnitType id="CasterIsPylon" parent="SCBW_UnitCaster" x="Pylon"/>
+    <CValidatorUnitType id="CasterIsAssimilator" parent="SCBW_UnitCaster" x="Assimilator"/>
+    <CValidatorUnitType id="CasterIsAssimilatorProtossGeyser" parent="SCBW_UnitCaster" x="AssimilatorProtossGeyser"/>
+    <CValidatorUnitType id="CasterIsAssimilatorRich" parent="SCBW_UnitCaster" x="AssimilatorRich"/>
+    <CValidatorUnitType id="CasterIsGateway" parent="SCBW_UnitCaster" x="Gateway"/>
+    <CValidatorUnitType id="CasterIsForge" parent="SCBW_UnitCaster" x="Forge"/>
+    <CValidatorUnitType id="CasterIsPhotonCannon" parent="SCBW_UnitCaster" x="PhotonCannon"/>
+    <CValidatorUnitType id="CasterIsShieldBattery" parent="SCBW_UnitCaster" x="ShieldBattery"/>
+    <CValidatorUnitType id="CasterIsCyberneticsCore" parent="SCBW_UnitCaster" x="CyberneticsCore"/>
+    <CValidatorUnitType id="CasterIsRoboticsFacility" parent="SCBW_UnitCaster" x="RoboticsFacility"/>
+    <CValidatorUnitType id="CasterIsRoboticsBay" parent="SCBW_UnitCaster" x="RoboticsBay"/>
+    <CValidatorUnitType id="CasterIsTwilightCouncil" parent="SCBW_UnitCaster" x="TwilightCouncil"/>
+    <CValidatorUnitType id="CasterIsTemplarArchive" parent="SCBW_UnitCaster" x="TemplarArchive"/>
+    <CValidatorUnitType id="CasterIsStargate" parent="SCBW_UnitCaster" x="Stargate"/>
+    <CValidatorUnitType id="CasterIsFleetBeacon" parent="SCBW_UnitCaster" x="FleetBeacon"/>
+    <CValidatorUnitType id="CasterIsProbe" parent="SCBW_UnitCaster" x="Probe"/>
+    <CValidatorUnitType id="CasterIsZealot" parent="SCBW_UnitCaster" x="Zealot"/>
+    <CValidatorUnitType id="CasterIsDragoon" parent="SCBW_UnitCaster" x="Dragoon"/>
+    <CValidatorUnitType id="CasterIsHighTemplar" parent="SCBW_UnitCaster" x="HighTemplar"/>
+    <CValidatorUnitType id="CasterIsDarkTemplar" parent="SCBW_UnitCaster" x="DarkTemplar"/>
+    <CValidatorUnitType id="CasterIsArchon" parent="SCBW_UnitCaster" x="Archon"/>
+    <CValidatorUnitType id="CasterIsDarkArchon" parent="SCBW_UnitCaster" x="DarkArchon"/>
+    <CValidatorUnitType id="CasterIsWarpPrism" parent="SCBW_UnitCaster" x="WarpPrism"/>
+    <CValidatorUnitType id="CasterIsReaver" parent="SCBW_UnitCaster" x="Reaver"/>
+    <CValidatorUnitType id="CasterIsObserver" parent="SCBW_UnitCaster" x="Observer"/>
+    <CValidatorUnitType id="CasterIsScout" parent="SCBW_UnitCaster" x="Scout"/>
+    <CValidatorUnitType id="CasterIsCorsairMP" parent="SCBW_UnitCaster" x="CorsairMP"/>
+    <CValidatorUnitType id="CasterIsCarrier" parent="SCBW_UnitCaster" x="Carrier"/>
+    <CValidatorUnitType id="CasterIsArbiterMP" parent="SCBW_UnitCaster" x="ArbiterMP"/>
+    <!-- Terran -->
+    <CValidatorUnitType id="CasterIsCommandCenter" parent="SCBW_UnitCaster" x="CommandCenter"/>
+    <CValidatorUnitType id="CasterIsSupplyDepot" parent="SCBW_UnitCaster" x="SupplyDepot"/>
+    <CValidatorUnitType id="CasterIsRefinery" parent="SCBW_UnitCaster" x="Refinery"/>
+    <CValidatorUnitType id="CasterIsRefineryRich" parent="SCBW_UnitCaster" x="RefineryRich"/>
+    <CValidatorUnitType id="CasterIsMissileTurret" parent="SCBW_UnitCaster" x="MissileTurret"/>
+    <CValidatorUnitType id="CasterIsBarracks" parent="SCBW_UnitCaster" x="Barracks"/>
+    <CValidatorUnitType id="CasterIsEngineeringBay" parent="SCBW_UnitCaster" x="EngineeringBay"/>
+    <CValidatorUnitType id="CasterIsBunker" parent="SCBW_UnitCaster" x="Bunker"/>
+    <CValidatorUnitType id="CasterIsFactory" parent="SCBW_UnitCaster" x="Factory"/>
+    <CValidatorUnitType id="CasterIsStarport" parent="SCBW_UnitCaster" x="Starport"/>
+    <CValidatorUnitType id="CasterIsArmory" parent="SCBW_UnitCaster" x="Armory"/>
+    <CValidatorUnitType id="CasterIsFusionCore" parent="SCBW_UnitCaster" x="FusionCore"/>
+    <CValidatorUnitType id="CasterIsSCV" parent="SCBW_UnitCaster" x="SCV"/>
+    <CValidatorUnitType id="CasterIsMarine" parent="SCBW_UnitCaster" x="Marine"/>
+    <CValidatorUnitType id="CasterIsFirebat" parent="SCBW_UnitCaster" x="Firebat"/>
+    <CValidatorUnitType id="CasterIsMedic" parent="SCBW_UnitCaster" x="Medic"/>
+    <CValidatorUnitType id="CasterIsGhost" parent="SCBW_UnitCaster" x="Ghost">
+        <Type value="SelectAlias"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="CasterIsVulture" parent="SCBW_UnitCaster" x="Vulture"/>
+    <CValidatorUnitType id="CasterIsGoliath" parent="SCBW_UnitCaster" x="Goliath"/>
+    <CValidatorUnitType id="CasterIsSiegeTank" parent="SCBW_UnitCaster" x="SiegeTank"/>
+    <CValidatorUnitType id="CasterIsWraith" parent="SCBW_UnitCaster" x="Wraith"/>
+    <CValidatorUnitType id="CasterIsMedivac" parent="SCBW_UnitCaster" x="Medivac"/>
+    <CValidatorUnitType id="CasterIsScienceVessel" parent="SCBW_UnitCaster" x="ScienceVessel"/>
+    <CValidatorUnitType id="CasterIsBattlecruiser" parent="SCBW_UnitCaster" x="Battlecruiser"/>
+    <!-- Zerg -->
+    <CValidatorUnitType id="CasterIsHatchery" parent="SCBW_UnitCaster" x="Hatchery"/>
+    <CValidatorUnitType id="CasterIsLair" parent="SCBW_UnitCaster" x="Lair"/>
+    <CValidatorUnitType id="CasterIsHive" parent="SCBW_UnitCaster" x="Hive"/>
+    <CValidatorUnitType id="CasterIsSporeCrawler" parent="SCBW_UnitCaster" x="SporeCrawler"/>
+    <CValidatorUnitType id="CasterIsSpineCrawler" parent="SCBW_UnitCaster" x="SpineCrawler"/>
+    <CValidatorUnitType id="CasterIsExtractor" parent="SCBW_UnitCaster" x="Extractor"/>
+    <CValidatorUnitType id="CasterIsExtractorRich" parent="SCBW_UnitCaster" x="ExtractorRich"/>
+    <CValidatorUnitType id="CasterIsSpawningPool" parent="SCBW_UnitCaster" x="SpawningPool"/>
+    <CValidatorUnitType id="CasterIsEvolutionChamber" parent="SCBW_UnitCaster" x="EvolutionChamber"/>
+    <CValidatorUnitType id="CasterIsHydraliskDen" parent="SCBW_UnitCaster" x="HydraliskDen"/>
+    <CValidatorUnitType id="CasterIsSpire" parent="SCBW_UnitCaster" x="Spire"/>
+    <CValidatorUnitType id="CasterIsGreaterSpire" parent="SCBW_UnitCaster" x="GreaterSpire"/>
+    <CValidatorUnitType id="CasterIsInfestationPit" parent="SCBW_UnitCaster" x="InfestationPit"/>
+    <CValidatorUnitType id="CasterIsRoachWarren" parent="SCBW_UnitCaster" x="RoachWarren"/>
+    <CValidatorUnitType id="CasterIsUltraliskCavern" parent="SCBW_UnitCaster" x="UltraliskCavern"/>
+    <CValidatorUnitType id="CasterIsNydusCanal" parent="SCBW_UnitCaster" x="NydusCanal"/>
+    <CValidatorUnitType id="CasterIsLarva" parent="SCBW_UnitCaster" x="Larva"/>
+    <CValidatorUnitType id="CasterIsDrone" parent="SCBW_UnitCaster" x="Drone"/>
+    <CValidatorUnitType id="CasterIsZergling" parent="SCBW_UnitCaster" x="Zergling"/>
+    <CValidatorUnitType id="CasterIsOverlord" parent="SCBW_UnitCaster" x="Overlord"/>
+    <CValidatorUnitType id="CasterIsHydralisk" parent="SCBW_UnitCaster" x="Hydralisk"/>
+    <CValidatorUnitType id="CasterIsMutalisk" parent="SCBW_UnitCaster" x="Mutalisk"/>
+    <CValidatorUnitType id="CasterIsScourge" parent="SCBW_UnitCaster" x="Scourge"/>
+    <CValidatorUnitType id="CasterIsQueenMP" parent="SCBW_UnitCaster" x="QueenMP"/>
+    <CValidatorUnitType id="CasterIsUltralisk" parent="SCBW_UnitCaster" x="Ultralisk"/>
+    <CValidatorUnitType id="CasterIsDefilerMP" parent="SCBW_UnitCaster" x="DefilerMP"/>
+    <CValidatorUnitType id="CasterIsBroodling" parent="SCBW_UnitCaster" x="Broodling"/>
+    <CValidatorUnitType id="CasterIsInfestedTerran" parent="SCBW_UnitCaster" x="InfestedTerran"/>
+    <CValidatorUnitType id="NotShieldBattery" parent="SCBW_UnitNot" x="ShieldBattery"/>
+    <CValidatorCombine id="SCBWUnitSwapValidator">
+        <CombineArray value="CasterIsNexus"/>
+        <CombineArray value="CasterIsPylon"/>
+        <CombineArray value="CasterIsAssimilator"/>
+        <CombineArray value="CasterIsAssimilatorRich"/>
+        <CombineArray value="CasterIsGateway"/>
+        <CombineArray value="CasterIsForge"/>
+        <CombineArray value="CasterIsCyberneticsCore"/>
+        <CombineArray value="CasterIsShieldBattery"/>
+        <CombineArray value="CasterIsPhotonCannon"/>
+        <CombineArray value="CasterIsRoboticsFacility"/>
+        <CombineArray value="CasterIsRoboticsBay"/>
+        <CombineArray value="CasterIsTwilightCouncil"/>
+        <CombineArray value="CasterIsTemplarArchive"/>
+        <CombineArray value="CasterIsStargate"/>
+        <CombineArray value="CasterIsFleetBeacon"/>
+        <CombineArray value="CasterIsProbe"/>
+        <CombineArray value="CasterIsZealot"/>
+        <CombineArray value="CasterIsDragoon"/>
+        <CombineArray value="CasterIsHighTemplar"/>
+        <CombineArray value="CasterIsArchon"/>
+        <CombineArray value="CasterIsDarkTemplar"/>
+        <CombineArray value="CasterIsDarkArchon"/>
+        <CombineArray value="CasterIsWarpPrism"/>
+        <CombineArray value="CasterIsReaver"/>
+        <CombineArray value="CasterIsObserver"/>
+        <CombineArray value="CasterIsScout"/>
+        <CombineArray value="CasterIsCorsairMP"/>
+        <CombineArray value="CasterIsCarrier"/>
+        <CombineArray value="CasterIsArbiterMP"/>
+        <!-- Terran -->
+        <CombineArray value="CasterIsCommandCenter"/>
+        <CombineArray value="CasterIsSupplyDepot"/>
+        <CombineArray value="CasterIsRefinery"/>
+        <CombineArray value="CasterIsRefineryRich"/>
+        <CombineArray value="CasterIsMissileTurret"/>
+        <CombineArray value="CasterIsBarracks"/>
+        <CombineArray value="CasterIsEngineeringBay"/>
+        <CombineArray value="CasterIsBunker"/>
+        <CombineArray value="CasterIsFactory"/>
+        <CombineArray value="CasterIsStarport"/>
+        <CombineArray value="CasterIsArmory"/>
+        <CombineArray value="CasterIsSCV"/>
+        <CombineArray value="CasterIsMarine"/>
+        <CombineArray value="CasterIsFirebat"/>
+        <CombineArray value="CasterIsMedic"/>
+        <CombineArray value="CasterIsGhost"/>
+        <CombineArray value="CasterIsVulture"/>
+        <CombineArray value="CasterIsGoliath"/>
+        <CombineArray value="CasterIsSiegeTank"/>
+        <CombineArray value="CasterIsWraith"/>
+        <CombineArray value="CasterIsMedivac"/>
+        <CombineArray value="CasterIsScienceVessel"/>
+        <CombineArray value="CasterIsBattlecruiser"/>
+        <!-- Zerg -->
+        <CombineArray value="CasterIsHatchery"/>
+        <CombineArray value="CasterIsLair"/>
+        <CombineArray value="CasterIsHive"/>
+        <CombineArray value="CasterIsSporeCrawler"/>
+        <CombineArray value="CasterIsSpineCrawler"/>
+        <CombineArray value="CasterIsExtractor"/>
+        <CombineArray value="CasterIsExtractorRich"/>
+        <CombineArray value="CasterIsSpawningPool"/>
+        <CombineArray value="CasterIsEvolutionChamber"/>
+        <CombineArray value="CasterIsHydraliskDen"/>
+        <CombineArray value="CasterIsSpire"/>
+        <CombineArray value="CasterIsGreaterSpire"/>
+        <CombineArray value="CasterIsInfestationPit"/>
+        <CombineArray value="CasterIsRoachWarren"/>
+        <CombineArray value="CasterIsNydusCanal"/>
+        <CombineArray value="CasterIsUltraliskCavern"/>
+        <CombineArray value="CasterIsLarva"/>
+        <CombineArray value="CasterIsDrone"/>
+        <CombineArray value="CasterIsZergling"/>
+        <CombineArray value="CasterIsOverlord"/>
+        <CombineArray value="CasterIsHydralisk"/>
+        <CombineArray value="CasterIsMutalisk"/>
+        <CombineArray value="CasterIsScourge"/>
+        <CombineArray value="CasterIsQueenMP"/>
+        <CombineArray value="CasterIsUltralisk"/>
+        <CombineArray value="CasterIsDefilerMP"/>
+        <CombineArray value="CasterIsBroodling"/>
+        <CombineArray value="CasterIsInfestedTerran"/>
+    </CValidatorCombine>
+    <CAccumulatorUserData id="SCBW_CopyBuffs@MatrixDuration">
+        <Key value="DefensiveMatrixDuration"/>
+        <BehaviorScope Value="Target"/>
+    </CAccumulatorUserData>
+    <CPlayerResponseUnitBirth id="SCBWUnitSwap">
+        <Handled value="SCBWUnitSwapDummy"/>
+        <TargetFilters value="-;Missile,Dead"/>
+        <Priority value="100"/>
+        <CasterFilters value="-;Ally,Neutral,Enemy,Missile,Destructible,Item"/>
+        <ValidatorArray value="SCBWUnitSwapValidator"/>
+    </CPlayerResponseUnitBirth>
+    <CDataCollectionAbil id="SCBW_CopyBuffs">
+        <EditorCategories value="DataFamily:Melee,Race:Neutral"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@Buffs1"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@MatrixSet"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@EnsnareBuffs"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@Plague"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@Irradiate"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@Parasite"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@Blinded"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@AcidSpore"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@Buffs2"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@Ensnare"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@EnsnareMovement"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@EnsnareAttack"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@MatrixDuration"/>
+        <DataRecord Entry="Effect,SCBW_CopyBuffs@Matrix"/>
+        <DataRecord Entry="Accumulator,SCBW_CopyBuffs@MatrixDuration"/>
+    </CDataCollectionAbil>
+</Catalog>

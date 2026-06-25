@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade default="1" id="HiddenUpgrade">
+        <Flags index="UpgradeCheat" value="0"/>
+        <Alert value=""/>
+        <LeaderAlias value=""/>
+    </CUpgrade>
+    <CUpgrade default="1" id="SCBW_Upgrade">
+        <?token id="icon" type="CImagePath" value="Assets\Textures\blank.dds"?>
+        <Icon value="##icon##"/>
+        <Flags index="IgnoreInvalidReferenceInTemplate" value="1"/>
+        <DataCollection value="##parent##"/>
+        <WebPriority value="0"/>
+        <!--
+        <LevelButton value="##id##@Lvl2"/>
+        <LevelButton value="##id##@Lvl3"/>
+        <LevelRequirements value="##id##@Lvl2"/>
+        <LevelRequirements value="##id##@Lvl3"/>
+        <BonusTimePerLevel value="15"/>
+        -->
+    </CUpgrade>
+    <CUpgrade default="1" id="SCBW_LeveledWeaponUpgrade" parent="SCBW_Upgrade">
+        <!-- Weapon -->
+        <EffectArrayTemplate Reference="Weapon,^ParamId^Weapon,Level" Value="1"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^Weapon@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^Weapon@DamageExpl,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice*0.75}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^Weapon@DamageConc,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice*0.5}"/>
+        <EffectArrayTemplate Reference="Accumulator,^ParamId^Weapon@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^Weapon,Icon" Value="##icon##"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^Weapon@DamageBounce1,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice / DataCollection,^ParamId^,UpgradeInfoWeapon[2].DamagePerDice}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^Weapon@DamageBounce2,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice / DataCollection,^ParamId^,UpgradeInfoWeapon[3].DamagePerDice}"/>
+        <!-- Weapon Ground -->
+        <EffectArrayTemplate Reference="Weapon,^ParamId^WeaponGround,Level" Value="1"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponGround@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponGround@DamageExpl,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice*0.75}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponGround@DamageConc,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice*0.5}"/>
+        <EffectArrayTemplate Reference="Accumulator,^ParamId^WeaponGround@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[0].DamagePerDice}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^WeaponGround,Icon" Value="##icon##"/>
+        <!-- Weapon Air -->
+        <EffectArrayTemplate Reference="Weapon,^ParamId^WeaponAir,Level" Value="1"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponAir@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponAir@DamageExpl,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice*0.75}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponAir@DamageConc,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice*0.5}"/>
+        <EffectArrayTemplate Reference="Accumulator,^ParamId^WeaponAir@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^WeaponAir,Icon" Value="##icon##"/>
+        <!-- Weapon Alt -->
+        <EffectArrayTemplate Reference="Weapon,^ParamId^WeaponAlt,Level" Value="1"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponAlt@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponAlt@DamageExpl,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice*0.75}"/>
+        <EffectArrayTemplate Reference="Effect,^ParamId^WeaponAlt@DamageConc,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice*0.5}"/>
+        <EffectArrayTemplate Reference="Accumulator,^ParamId^WeaponAlt@Damage,Amount" Value="{DataCollection,^ParamId^,UpgradeInfoWeapon[1].DamagePerDice}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Weapon,^ParamId^WeaponAlt,Icon" Value="##icon##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="SCBW_Research">
+        <!-- Dummy Effect Set on Dummy unit so techtree cheat gets registered -->
+        <EffectArray Operation="Set" Reference="Unit,SCBW_DummyUpgradeTarget,SubgroupPriorityDelta" Value="0"/>
+        <Flags index="TechTreeCheat" value="1"/>
+        <Flags index="IgnoreInvalidReferenceInTemplate" value="1"/>
+        <Alert value="ResearchComplete"/>
+        <DataCollection value="##id##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="SCBW_SpeedUpgrade" parent="SCBW_Research">
+        <EffectArrayTemplate Operation="Multiply" Reference="Unit,^ParamId^,Speed" Value="1.5"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="SCBW_EnergyUpgrade" parent="SCBW_Research">
+        <EffectArrayTemplate Reference="Unit,^ParamId^,EnergyStart" Value="12"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,EnergyMax" Value="50"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ProtossAirArmorsSCBW" parent="SCBW_Upgrade">
+        <Race value="BWPr"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Actor,^ParamId^,LifeArmorIcon" Value="##icon##"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:ArmorBonus"/>
+        <LeaderAlias value="##parent##"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ProtossAirWeaponsSCBW" parent="SCBW_LeveledWeaponUpgrade">
+        <Race value="BWPr"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <!-- Weapon Dummy (Carrier) -->
+        <EffectArrayTemplate Reference="Weapon,^ParamId^Weapon@Dummy,Level" Value="1"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:AttackBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ProtossGroundArmorsSCBW" parent="SCBW_Upgrade">
+        <Race value="BWPr"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Actor,^ParamId^,LifeArmorIcon" Value="##icon##"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:ArmorBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ProtossGroundWeaponsSCBW" parent="SCBW_LeveledWeaponUpgrade">
+        <Race value="BWPr"/>
+        <ScoreAmount value="200"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:AttackBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ProtossShieldsSCBW" parent="SCBW_Upgrade">
+        <Race value="BWPr"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,ShieldArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,ShieldArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Actor,^ParamId^,ShieldArmorIcon" Value="##icon##"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:ArmorBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TerranInfantryWeaponsSCBW" parent="SCBW_LeveledWeaponUpgrade">
+        <InfoTooltipPriority value="61"/>
+        <Race value="BWTe"/>
+        <ScoreAmount value="200"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:AttackBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TerranInfantryArmorsSCBW" parent="SCBW_Upgrade">
+        <Race value="BWTe"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Actor,^ParamId^,LifeArmorIcon" Value="##icon##"/>
+        <EditorCategories value="Race:Terran,UpgradeType:ArmorBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TerranVehicleWeaponsSCBW" parent="SCBW_LeveledWeaponUpgrade">
+        <Race value="BWTe"/>
+        <ScoreAmount value="200"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:AttackBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TerranVehiclePlatingSCBW" parent="SCBW_Upgrade">
+        <Race value="BWTe"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Actor,^ParamId^,LifeArmorIcon" Value="##icon##"/>
+        <EditorCategories value="Race:Terran,UpgradeType:ArmorBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TerranShipWeaponsSCBW" parent="SCBW_LeveledWeaponUpgrade">
+        <Race value="BWTe"/>
+        <ScoreAmount value="200"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:AttackBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="50"/>
+        <BonusResourcePerLevel index="Vespene" value="50"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="TerranShipPlatingSCBW" parent="SCBW_Upgrade">
+        <Race value="BWTe"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Actor,^ParamId^,LifeArmorIcon" Value="##icon##"/>
+        <EditorCategories value="Race:Terran,UpgradeType:ArmorBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="MechPlating" parent="SCBW_Upgrade">
+        <?token id="icon" type="CImagePath" value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"?>
+        <?token id="otherIcon" type="CImagePath" value="Assets\Textures\btn-upgrade-terran-shipplatinglevel0.dds"?>
+        <Race value="BWTe"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Actor,DropshipSCBW,LifeArmorIcon" Value="##otherIcon##"/>
+        <EffectArray Operation="Set" Reference="Actor,WraithSCBW,LifeArmorIcon" Value="##otherIcon##"/>
+        <EffectArray Operation="Set" Reference="Actor,ValkyrieSCBW,LifeArmorIcon" Value="##otherIcon##"/>
+        <EffectArray Operation="Set" Reference="Actor,ScienceVesselSCBW,LifeArmorIcon" Value="##otherIcon##"/>
+        <EffectArray Operation="Set" Reference="Actor,BattlecruiserSCBW,LifeArmorIcon" Value="##otherIcon##"/>
+        <EffectArray Operation="Set" Reference="Actor,VultureSCBW,LifeArmorIcon" Value="##icon##"/>
+        <EffectArray Operation="Set" Reference="Actor,SiegeTankSCBW,LifeArmorIcon" Value="##icon##"/>
+        <EffectArray Operation="Set" Reference="Actor,SiegeTankSCBWSieged,LifeArmorIcon" Value="##icon##"/>
+        <EffectArray Operation="Set" Reference="Actor,GoliathSCBW,LifeArmorIcon" Value="##icon##"/>
+        <EffectArray Operation="Set" Reference="Actor,StingerSCBW,LifeArmorIcon" Value="##icon##"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EditorCategories value="Race:Terran,UpgradeType:ArmorBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ZergFlyerAttacksSCBW" parent="SCBW_LeveledWeaponUpgrade">
+        <Race value="BWZe"/>
+        <ScoreAmount value="200"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:AttackBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ZergFlyerCarapaceSCBW" parent="SCBW_Upgrade">
+        <Race value="BWZe"/>
+        <ScoreAmount value="300"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Actor,^ParamId^,LifeArmorIcon" Value="##icon##"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:ArmorBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ZergGroundCarapaceSCBW" parent="SCBW_Upgrade">
+        <Race value="BWZe"/>
+        <ScoreAmount value="300"/>
+        <ScoreCount value="ArmorTechnologyCount"/>
+        <ScoreValue value="ArmorTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmorLevel" Value="1"/>
+        <EffectArrayTemplate Reference="Unit,^ParamId^,LifeArmor" Value="{DataCollection,^ParamId^,UpgradeInfoUnitLifeArmorPerLevel}"/>
+        <EffectArrayTemplate Operation="Set" Reference="Actor,^ParamId^,LifeArmorIcon" Value="##icon##"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:ArmorBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ZergMeleeAttacksSCBW" parent="SCBW_LeveledWeaponUpgrade">
+        <Race value="BWZe"/>
+        <ScoreAmount value="200"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:AttackBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="ZergMissileAttacksSCBW" parent="SCBW_LeveledWeaponUpgrade">
+        <Race value="BWZe"/>
+        <ScoreAmount value="200"/>
+        <ScoreCount value="WeaponTechnologyCount"/>
+        <ScoreValue value="WeaponTechnologyValue"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:AttackBonus"/>
+        <BonusResourcePerLevel index="Minerals" value="75"/>
+        <BonusResourcePerLevel index="Vespene" value="75"/>
+        <LeaderAlias value="##parent##"/>
+    </CUpgrade>
+    <CUpgrade id="SCBW_AllowProtossRepair" parent="HiddenUpgrade"/>
+    <CUpgrade id="SCBW_CasterWeapons" parent="HiddenUpgrade">
+        <EffectArray Operation="Set" Reference="Weapon,HighTemplarSCBWWeapon,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,HighTemplarSCBWWeapon,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DarkArchonSCBWWeapon,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DarkArchonSCBWWeapon,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DefilerSCBWWeapon,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,DefilerSCBWWeapon,Options[Hidden]" Value="0"/>
+    </CUpgrade>
+    <CUpgrade id="SCBW_AutoCastShieldRestore" parent="HiddenUpgrade"/>
+    <CUpgrade id="SCBW_LimitedRally" parent="HiddenUpgrade">
+        <EffectArray Reference="Effect,SCBW_LimitedRally@TrainFinish,Chance" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="SCBW_DisableRallyGather" parent="HiddenUpgrade"/>
+    <CUpgrade id="SCBW_NoUpgradeQueue" parent="HiddenUpgrade"/>
+    <CUpgrade id="SCEV_LegacyBuffScanRadius" parent="HiddenUpgrade">
+        <EffectArray Reference="Weapon,ArchonSCBWWeapon,MinScanRange" Value="2"/>
+        <EffectArray Reference="Weapon,DragoonSCBWWeapon,MinScanRange" Value="1"/>
+        <EffectArray Reference="Weapon,BroodlingSCBWWeapon,MinScanRange" Value="2"/>
+        <EffectArray Reference="Weapon,DarkTemplarSCBWWeapon,MinScanRange" Value="2"/>
+        <EffectArray Reference="Weapon,FirebatSCBWWeapon,MinScanRange" Value="2"/>
+        <EffectArray Reference="Weapon,MarineSCBWWeapon,MinScanRange" Value="1"/>
+        <EffectArray Reference="Weapon,HydraliskSCBWWeapon,MinScanRange" Value="1"/>
+        <EffectArray Reference="Weapon,HydraliskSCBWWeaponAlt,MinScanRange" Value="1"/>
+        <EffectArray Reference="Weapon,MutaliskSCBWWeapon,MinScanRange" Value="2"/>
+        <EffectArray Reference="Weapon,ScourgeSCBWWeapon,MinScanRange" Value="2"/>
+        <EffectArray Reference="Weapon,ScoutSCBWWeaponAir,MinScanRange" Value="1"/>
+        <EffectArray Reference="Weapon,ScoutSCBWWeaponGround,MinScanRange" Value="1"/>
+        <EffectArray Reference="Weapon,UltraliskSCBWWeapon,MinScanRange" Value="2"/>
+        <EffectArray Reference="Weapon,ZealotSCBWWeapon,MinScanRange" Value="2"/>
+        <EffectArray Reference="Weapon,ZerglingSCBWWeapon,MinScanRange" Value="2"/>
+    </CUpgrade>
+    <CUpgrade id="SCEV_HideWorkerCount" parent="HiddenUpgrade">
+        <AffectedUnitArray value="CommandCenterSCBW"/>
+        <AffectedUnitArray value="NexusSCBW"/>
+        <AffectedUnitArray value="HatcherySCBW"/>
+        <AffectedUnitArray value="LairSCBW"/>
+        <AffectedUnitArray value="HiveSCBW"/>
+        <AffectedUnitArray value="RefinerySCBW"/>
+        <AffectedUnitArray value="RefinerySCBW@Rich"/>
+        <AffectedUnitArray value="ExtractorSCBW"/>
+        <AffectedUnitArray value="ExtractorSCBW@Rich"/>
+        <AffectedUnitArray value="AssimilatorSCBW"/>
+        <AffectedUnitArray value="AssimilatorSCBW@Rich"/>
+    </CUpgrade>
+    <CUpgrade id="SCBW_MultipleUnitsSelected" parent="HiddenUpgrade"/>
+</Catalog>

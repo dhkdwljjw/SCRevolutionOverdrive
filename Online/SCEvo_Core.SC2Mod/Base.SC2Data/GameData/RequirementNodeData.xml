@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementAllowUpgrade default="1" id="SCBW_AllowUpgrade">
+        <?token id="x" value="Ball"?>
+        <Link value="##x##"/>
+    </CRequirementAllowUpgrade>
+    <CRequirementCountUpgrade default="1" id="SCBW_UpgradeCount">
+        <?token id="x" type="CUpgradeLink" value="Research"?>
+        <Count Link="##x##" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade default="1" id="SCBW_UpgradeQoB">
+        <?token id="x" type="CUpgradeLink" value="Research"?>
+        <Count Link="##x##" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementAllowUnit default="1" id="SCBW_AllowUnit">
+        <?token id="x" type="CUnitLink" value="Ball"?>
+        <Link value="##x##"/>
+    </CRequirementAllowUnit>
+    <CRequirementAnd default="1" id="SCBW_UnitReq">
+        <?token id="x" type="CUnitLink" value="##id##"?>
+        <OperandArray value="##x##@AllowUnit"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit default="1" id="SCBW_UnitQoB">
+        <?token id="x" type="CUnitLink" value="Ball"?>
+        <Count Link="##x##" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit default="1" id="SCBW_UnitQoBAtUnit">
+        <?token id="x" type="CUnitLink" value="Ball"?>
+        <Count Link="##x##" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit default="1" id="SCBW_UnitCount">
+        <?token id="x" type="CUnitLink" value="Ball"?>
+        <Count Link="##x##" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit default="1" id="SCBW_UnitCountAtUnit">
+        <?token id="x" type="CUnitLink" value="Ball"?>
+        <Count Link="##x##" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit default="1" id="SCBW_AddonCount">
+        <?token id="x" type="CUnitLink" value="Ball"?>
+        <Count Link="##x##" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountBehavior default="1" id="SCBW_BehaviorCount">
+        <?token id="x" value="Dofus"?>
+        <Count Link="##x##" State="CompleteOnly"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior default="1" id="SCBW_BehaviorCountNoTech">
+        <?token id="x" value="Dofus"?>
+        <Count Link="##x##" State="CompleteOnly"/>
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior default="1" id="SCBW_BehaviorCountAtUnit">
+        <?token id="x" value="Dofus"?>
+        <Count Link="##x##" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior default="1" id="SCBW_BehaviorCountAtUnitNoTech">
+        <?token id="x" value="Dofus"?>
+        <Count Link="##x##" State="CompleteOnlyAtUnit"/>
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior default="1" id="SCBW_AddonBehaviorCount">
+        <?token id="x" type="CBehavior" value="Dofus"?>
+        <Count Link="##x##" State="CompleteOnly"/>
+    </CRequirementCountBehavior>
+    <CRequirementNot default="1" id="SCBW_Not">
+        <?token id="x" type="CRequirementNode" value="Dofus"?>
+        <OperandArray index="0" value="##x##"/>
+    </CRequirementNot>
+    <CRequirementAnd default="1" id="SCBW_BuildingShow">
+        <?token id="x" value="Dofus"?>
+        <OperandArray value="##x##@AllowUnit"/>
+        <OperandArray value="SCBW_MultipleUnitsSelected@Not"/>
+    </CRequirementAnd>
+    <CRequirementCountUpgrade id="SCBW_AllowProtossRepair" parent="SCBW_UpgradeCount" x="SCBW_AllowProtossRepair">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUnit id="CountUnitAlias_CommandCenterSCBWCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_CommandCenterSCBW" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="SCBW_AdrenalGlandsUse">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="zerglingattackspeed" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="SCBW_AutoCastShieldRestore" parent="SCBW_UpgradeCount" x="SCBW_AutoCastShieldRestore">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="SCBW_DisableRallyGather" parent="SCBW_UpgradeCount" x="SCBW_DisableRallyGather">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="SCBW_LimitedRally" parent="SCBW_UpgradeCount" x="SCBW_LimitedRally">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="SCBW_NoUpgradeQueue">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SCBW_NoUpgradeQueue" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementOr id="SCBW_NotHallucination">
+        <OperandArray value="HighTemplarSCBWHallucination@NotAtUnit"/>
+    </CRequirementOr>
+    <CRequirementNot id="SCBW_NotDetectionSuppressed">
+        <OperandArray index="0" value="SCBW_DetectionSuppressed"/>
+    </CRequirementNot>
+    <CRequirementOr id="SCBW_DetectionSuppressed">
+        <OperandArray value="CountBehaviorUnderConstructionCompleteOnlyAtUnit"/>
+        <OperandArray value="ArbiterSCBWStasisField@CountAtUnit"/>
+        <OperandArray value="HighTemplarSCBWHallucination@CountAtUnit"/>
+        <OperandArray value="GhostSCBWLockdown@CountAtUnit"/>
+        <OperandArray value="MedicSCBWOpticFlare@CountAtUnit"/>
+    </CRequirementOr>
+    <CRequirementCountUpgrade id="SCBW_MultipleUnitsSelected">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SCBW_MultipleUnitsSelected" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementNot id="SCBW_MultipleUnitsSelected@Not">
+        <OperandArray index="0" value="SCBW_MultipleUnitsSelected"/>
+    </CRequirementNot>
+    <CRequirementCountUpgrade id="UnfriendlyNukeIndicator@Count" parent="SCBW_UpgradeCount" x="UnfriendlyNukeIndicator">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CRequirementCountUpgrade>
+    <CRequirementOr id="SCBW_IsHallucination">
+        <OperandArray value="HighTemplarSCBWHallucination@CountAtUnit"/>
+    </CRequirementOr>
+</Catalog>

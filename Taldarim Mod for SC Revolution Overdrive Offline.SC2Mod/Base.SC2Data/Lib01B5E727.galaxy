@@ -1,0 +1,206 @@
+include "TriggerLibs/NativeLib"
+
+include "Lib01B5E727_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Triggers
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void lib01B5E727_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Variable Initialization
+bool lib01B5E727_InitVariables_completed = false;
+
+void lib01B5E727_InitVariables () {
+    if (lib01B5E727_InitVariables_completed) {
+        return;
+    }
+
+    lib01B5E727_InitVariables_completed = true;
+
+    lib01B5E727_gv_supplicantWarpTrainActualUnitCost = UnitTypeGetCost("Supplicant", c_unitCostMinerals);
+    lib01B5E727_gv_supplicantWarpTrainActualCommand = AbilityCommand("WarpGateTrainSupplicantTrue", 11);
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Supplicant Warp Train
+//--------------------------------------------------------------------------------------------------
+bool lib01B5E727_gt_SupplicantWarpTrain_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+    unit lv_actualCreator;
+    unit lv_warpGate;
+    point lv_p;
+    order lv_order1;
+    order lv_order2;
+    int lv_player;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = EventUnitCreatedUnit();
+    lv_warpGate = EventUnit();
+    lv_p = UnitGetPosition(lv_u);
+    lv_order1 = OrderTargetingPoint(lib01B5E727_gv_supplicantWarpTrainActualCommand, PointWithOffset(lv_p, -0.5, 0.0));
+    lv_order2 = OrderTargetingPoint(lib01B5E727_gv_supplicantWarpTrainActualCommand, PointWithOffset(lv_p, 0.5, 0.0));
+    lv_player = UnitGetOwner(lv_u);
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(lv_u) == lib01B5E727_gv_supplicantWarpTrainDummyUnitLink))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitCreate(1, lib01B5E727_gv_supplicantWarpTrainCreatorUnitLink, c_unitCreateIgnorePlacement, lv_player, lv_p, 270.0);
+    lv_actualCreator = UnitLastCreated();
+    if ((UnitOrderIsValid(lv_actualCreator, lv_order1) == false) && (UnitOrderIsValid(lv_actualCreator, lv_order2) == false)) {
+        UnitAbilityAddChargeUsed(lv_warpGate, lib01B5E727_gv_warpGateTrainAbility, "WarpGateTrain", -1.0);
+        UnitRemove(lv_actualCreator);
+        return true;
+    }
+
+    UnitIssueOrder(lv_actualCreator, lv_order1, c_orderQueueAddToFront);
+    UnitIssueOrder(lv_actualCreator, lv_order2, c_orderQueueAddToFront);
+    UnitBehaviorAdd(lv_actualCreator, lib01B5E727_gv_supplicantWarpTrainCreatorWarpGateFinderBehaviorLink, lv_warpGate, 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib01B5E727_gt_SupplicantWarpTrain_Init () {
+    lib01B5E727_gt_SupplicantWarpTrain = TriggerCreate("lib01B5E727_gt_SupplicantWarpTrain_Func");
+    TriggerAddEventUnitCreated(lib01B5E727_gt_SupplicantWarpTrain, null, lib01B5E727_gv_warpGateTrainAbility, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Supplicant Actual Train
+//--------------------------------------------------------------------------------------------------
+bool lib01B5E727_gt_SupplicantActualTrain_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_u;
+    unit lv_warpSource;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_u = EventUnitCreatedUnit();
+    lv_warpSource = EventUnit();
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAdd(lv_u, lib01B5E727_gv_supplicantWarpTrainWarpPowerCheckBehaviorLink, lv_warpSource, 1);
+    UnitBehaviorAdd(lv_u, lib01B5E727_gv_supplicantWarpTrainCreatorFinderBehaviorLink, lv_warpSource, 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib01B5E727_gt_SupplicantActualTrain_Init () {
+    lib01B5E727_gt_SupplicantActualTrain = TriggerCreate("lib01B5E727_gt_SupplicantActualTrain_Func");
+    TriggerAddEventUnitCreated(lib01B5E727_gt_SupplicantActualTrain, null, lib01B5E727_gv_supplicantWarpTrainActualAbility, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Supplicant Warp Finish
+//--------------------------------------------------------------------------------------------------
+bool lib01B5E727_gt_SupplicantWarpFinish_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_supplicant;
+    unit lv_creator;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_supplicant = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitHasBehavior2(lv_supplicant, lib01B5E727_gv_supplicantWarpTrainCreatorFinderBehaviorLink) == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_creator = UnitBehaviorEffectUnit(lv_supplicant, lib01B5E727_gv_supplicantWarpTrainCreatorFinderBehaviorLink, c_effectUnitCaster, 0);
+    UnitBehaviorRemove(lv_supplicant, lib01B5E727_gv_supplicantWarpTrainCreatorFinderBehaviorLink, 1);
+    UnitRemove(lv_creator);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib01B5E727_gt_SupplicantWarpFinish_Init () {
+    lib01B5E727_gt_SupplicantWarpFinish = TriggerCreate("lib01B5E727_gt_SupplicantWarpFinish_Func");
+    TriggerAddEventPlayerEffectUsed(lib01B5E727_gt_SupplicantWarpFinish, c_playerAny, lib01B5E727_gv_supplicantWarpTrainActualUnitBirthEventLink);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Supplicant Warp Cancel
+//--------------------------------------------------------------------------------------------------
+bool lib01B5E727_gt_SupplicantWarpCancel_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_supplicant;
+    unit lv_creator;
+    unit lv_warpGate;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+    lv_supplicant = EventPlayerEffectUsedUnit(c_effectUnitTarget);
+    lv_creator = EventPlayerEffectUsedUnit(c_effectUnitCaster);
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitBehaviorCount(lv_creator, lib01B5E727_gv_supplicantWarpTrainWarpRefundBehaviorLink) > 0)) {
+        lv_warpGate = UnitBehaviorEffectUnit(lv_creator, lib01B5E727_gv_supplicantWarpTrainCreatorWarpGateFinderBehaviorLink, c_effectUnitCaster, 0);
+        UnitAbilityAddChargeUsed(lv_warpGate, lib01B5E727_gv_warpGateTrainAbility, "WarpGateTrain", -1.0);
+        UnitRemove(lv_creator);
+    }
+    else {
+        UnitBehaviorAdd(lv_creator, lib01B5E727_gv_supplicantWarpTrainWarpRefundBehaviorLink, lv_supplicant, 1);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib01B5E727_gt_SupplicantWarpCancel_Init () {
+    lib01B5E727_gt_SupplicantWarpCancel = TriggerCreate("lib01B5E727_gt_SupplicantWarpCancel_Func");
+    TriggerAddEventPlayerEffectUsed(lib01B5E727_gt_SupplicantWarpCancel, c_playerAny, lib01B5E727_gv_supplicantWarpTrainActualUnitCancelEventLink);
+}
+
+void lib01B5E727_InitTriggers () {
+    lib01B5E727_gt_SupplicantWarpTrain_Init();
+    lib01B5E727_gt_SupplicantActualTrain_Init();
+    lib01B5E727_gt_SupplicantWarpFinish_Init();
+    lib01B5E727_gt_SupplicantWarpCancel_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool lib01B5E727_InitLib_completed = false;
+
+void lib01B5E727_InitLib () {
+    if (lib01B5E727_InitLib_completed) {
+        return;
+    }
+
+    lib01B5E727_InitLib_completed = true;
+
+    lib01B5E727_InitLibraries();
+    lib01B5E727_InitVariables();
+    lib01B5E727_InitTriggers();
+}
+

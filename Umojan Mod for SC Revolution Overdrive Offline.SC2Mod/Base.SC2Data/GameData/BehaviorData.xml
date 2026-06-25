@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGasUmojan">
+        <InfoFlags index="Hidden" value="1"/>
+        <BehaviorCategories index="User6" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGasUmojan">
+        <InfoFlags index="Hidden" value="1"/>
+        <BehaviorCategories index="User6" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HardenedShieldDiamondback">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\BTN-Ability-Protoss-HardenedShields.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <DisableValidatorArray value="HardenedShieldDiamondbackValidator"/>
+        <DamageResponse ClampMinimum="10" Minimum="10">
+            <Kind index="Spell" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ModifyAmount value="-60"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <Requirements value="HaveUmojanPowerShields"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGasUmojan">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\icon-gas.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Capacity value="32000"/>
+        <HarvestTime value="1.981"/>
+        <HarvestAmount value="4"/>
+        <Flags index="HideHarvesters" value="1"/>
+        <RequiredAlliance value="Control"/>
+        <ExhaustedAlert value="ResourceExhausted_Vespene"/>
+        <IdealHarvesterCount value="3"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGasUmojan">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\icon-gas.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Capacity value="32000"/>
+        <HarvestTime value="1.981"/>
+        <HarvestAmount value="4"/>
+        <Flags index="HideHarvesters" value="1"/>
+        <RequiredAlliance value="Control"/>
+        <ExhaustedAlert value="ResourceExhausted_Vespene"/>
+        <IdealHarvesterCount value="3"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="MineralResonator">
+        <InfoIcon value="Assets\Textures\mineralshields_coop.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Period value="0.25"/>
+        <InitialEffect value="MineralResonatorSearch"/>
+        <PeriodicEffect value="MineralResonatorSearch"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MineralResonatorAmplify">
+        <InfoIcon value="Assets\Textures\mineralshields_coop.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.3125"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MineralResonatorAmplifyAdditionalHarvest">
+        <InfoIcon value="Assets\Textures\mineralshields_coop.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="WorkerIsGatheringSet"/>
+        <Modification>
+            <ResourceHarvestAmountBonus index="Minerals" value="1"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MineralResonatorAmplifyAdditionalHarvestRich">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\mineralshields_coop.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="WorkerIsGatheringSet"/>
+        <Modification>
+            <ResourceHarvestAmountBonus index="Minerals" value="2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VespeneHarvesterUmojanAdditionalHarvest">
+        <InfoIcon value="Assets\Textures\talent-swann-level05-vespenedrone.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="WorkerIsGatheringSet"/>
+        <Modification>
+            <ResourceHarvestAmountBonus index="Vespene" value="1"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VespeneHarvesterUmojanAdditionalHarvestRich">
+        <InfoIcon value="Assets\Textures\talent-swann-level05-vespenedrone.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="WorkerIsGatheringSet"/>
+        <Modification>
+            <ResourceHarvestAmountBonus index="Vespene" value="2"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NanoCleanseData">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="TargetHaveNanoCleanse"/>
+        <DamageResponse Handled="NanoCleanseInheritedDamageSave" Priority="31" HandledValue="Original">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NanoCleanseMelee">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Priority value="30"/>
+            <HandledValue value="Original"/>
+            <Kind index="Spell" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="TargetHaveNanoCleanse"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NanoCleanseRanged">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Priority value="30"/>
+            <HandledValue value="Original"/>
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="TargetHaveNanoCleanse"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NanoCleanseSplash">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Priority value="30"/>
+            <HandledValue value="Original"/>
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="TargetHaveNanoCleanse"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NanoCleanseSpell">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Priority value="30"/>
+            <HandledValue value="Original"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="TargetHaveNanoCleanse"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicLockdownData">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="TargetHavePsionicLockdown"/>
+        <DamageResponse Handled="PsionicLockdownInheritedDamageSave" Priority="111" HandledValue="Original">
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicLockdownMelee">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Priority value="110"/>
+            <HandledValue value="Original"/>
+            <Kind index="Spell" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="TargetHavePsionicLockdown"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicLockdownRanged">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Priority value="110"/>
+            <HandledValue value="Original"/>
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="TargetHavePsionicLockdown"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicLockdownSplash">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Priority value="110"/>
+            <HandledValue value="Original"/>
+            <Kind index="Spell" value="0"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="TargetHavePsionicLockdown"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicLockdownSpell">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <ModifyFraction value="0"/>
+            <ModifyMinimumDamage value="1"/>
+            <Priority value="110"/>
+            <HandledValue value="Original"/>
+            <Kind index="Melee" value="0"/>
+            <Kind index="Ranged" value="0"/>
+            <Kind index="Splash" value="0"/>
+            <Kind index="NoProc" value="0"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+            <ExcludeEffectArray value="GhostMengskEMPDamage"/>
+            <ExcludeEffectArray value="EMPDamage"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+            <Chance value="1"/>
+        </DamageResponse>
+        <InfoFlags index="Hidden" value="1"/>
+        <RemoveValidatorArray value="TargetHavePsionicLockdown"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReconUAVOvercharge">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification SightBonus="-6">
+            <StateFlags index="SuppressCloak" value="1"/>
+            <WeaponEnableArray value="ReconUAV"/>
+        </Modification>
+        <Duration value="5"/>
+        <Period value="0.0625"/>
+        <PeriodicEffect value="ReconUAVOverchargeMovementSpeedAB"/>
+        <FinalEffect value="Suicide"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReconUAVOverchargeMovementSpeed">
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.025"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+        <MaxStackCount value="40"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ZeusLoad">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <StateFlags index="UnitAttrOnHeroic" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AresArtilleryUnloadDelay">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Duration value="2"/>
+        <Modification>
+            <StateFlags index="SuppressAttack" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SentryPostUmojanPowerShields">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <DisableValidatorArray value="HaveSentryPostAccelerator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification RangedWeaponRange="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WarriorUmojanPowerShields">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.1"/>
+            <AdditiveAttackSpeedFactor value="0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CrusaderUmojanPowerShields">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="StrikerUmojanPowerShields">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification RangedWeaponRange="0.5">
+            <AdditiveMoveSpeedFactor value="0.1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReconUAVUmojanPowerShields">
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.16"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AmphibiousShipUmojanPowerShields">
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.16"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AthenaUmojanPowerShieldsRanger">
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <DisableValidatorArray value="CasterHasNoAthenaWeaponSwitch"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AthenaUmojanPowerShieldsVympel">
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <DisableValidatorArray value="CasterHasAthenaWeaponSwitch"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification RangedWeaponRange="0.5" WeaponScanBonus="0.5"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArtemisUmojanPowerShields">
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.1"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowAssassinUmojanPowerShields">
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.1"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WarhoundUmojanPowerShields">
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+        <Modification>
+            <AdditiveAttackSpeedFactor value="0.1"/>
+        </Modification>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AresArtilleryUmojanPowerShields">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification RangedWeaponRange="0.5" WeaponScanBonus="0.5"/>
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Requirements value="HaveUmojanPowerShields"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MaelstromRoundsRange">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Requirements value="MaelstromRoundsArmed"/>
+        <Modification RangedWeaponRange="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MaelstromRoundsTimedLife">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.0625"/>
+        <InitialEffect value="SuicideRemove"/>
+        <ExpireEffect value="SuicideRemove"/>
+        <Modification>
+            <StateFlags index="Summoned" value="1"/>
+        </Modification>
+        <KillCredit Value="Caster"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InspirationMovement">
+        <InfoIcon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadenergy.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InspirationAttackDamage">
+        <InfoIcon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadenergy.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification>
+            <DamageDealtUnscaled index="Ranged" value="2"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlindingCloud">
+        <RemoveValidatorArray value="TargetIsNotCCImmune"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowAssassinHoldFire">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-holdfire.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.07"/>
+        <ExpireEffect value="ShadowAssassinHoldFireB"/>
+        <Modification>
+            <StateFlags index="Passive" value="1"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowAssassinHoldFireB">
+        <InfoIcon value="Assets\Textures\btn-ability-terran-holdfire.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CasterNotAttacking"/>
+        <Modification>
+            <StateFlags index="Passive" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowAssassinCloak">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-cloak.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Modification>
+            <StateFlags index="Cloak" value="1"/>
+            <VitalRegenArray index="Energy" value="-1.4765"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ShadowAssassinSnipe">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="ShadowAssassinSnipeValidator"/>
+        <Modification RangedWeaponRange="2" WeaponScanBonus="2"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicLockdown">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-nova-pulsegrenade.dds"/>
+        <BehaviorCategories index="Restorable" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <DisableValidatorArray value="TargetNotTacticalJumping"/>
+        <RemoveValidatorArray value="NotOracleStasisTrapped"/>
+        <RemoveValidatorArray value="TargetIsNotCCImmune"/>
+        <BuffFlags index="UpdateDurationWhileDisabled" value="1"/>
+        <Duration value="25"/>
+        <Modification AttackTargetPriority="15">
+            <ModifyFlags index="OverrideAttackTargetPriority" value="1"/>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+            <ModifyFlags index="Detected" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressCloak" value="1"/>
+            <StateFlags index="SuppressCombat" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <BehaviorLinkDisableArray value="BarrierDamageResponse"/>
+        </Modification>
+        <InitialEffect value="PsionicLockdownInitSet"/>
+        <RefreshEffect value="PsionicLockdownInitSet"/>
+        <FinalEffect value="PsionicLockdownDataRB"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TacticalCruiseMissileHoldFire">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.5"/>
+        <Modification>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TacticalCruiseMissileTarget">
+        <InfoIcon value="Assets\Textures\btn-upgrade-mengsk-ghostacademy-guidedtacticalstrike.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <MaxStackCount value="65535"/>
+        <InitialEffect value="TacticalCruiseMissileFlyingCP"/>
+        <FinalEffect value="TacticalCruiseMissileFlyingCPRemove"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AthenaWeaponSwitchCooldown">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DamageResponse Handled="AthenaWeaponSwitchCooldown">
+            <Chance value="1"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AthenaWeaponSwitch">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification AccelerationBonus="-1.25">
+            <AdditiveMoveSpeedFactor value="-0.3125"/>
+            <WeaponEnableArray value="VympelMissiles"/>
+            <WeaponDisableArray value="RangerMissiles"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ActivatePointDefenseSystem">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification>
+            <WeaponEnableArray value="PointDefenseSystemLaser"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlindingCloudStructure">
+        <DisableValidatorArray value="TargetIsNotCCImmune"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Detector13" parent="Detector">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
+        <Modification Detect="13"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FungalGrowthMovement">
+        <RemoveValidatorArray value="TargetIsNotCCImmune"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FungalGrowthSlowMovement">
+        <RemoveValidatorArray value="TargetIsNotCCImmune"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NeuralParasite">
+        <RemoveValidatorArray value="TargetIsNotCCImmune"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ParasiticBomb">
+        <RemoveValidatorArray value="TargetIsNotCCImmune"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PointDefenseSystemAquila">
+        <InfoIcon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <MaxStackCount value="20"/>
+        <Duration value="25"/>
+        <Modification>
+            <WeaponEnableArray value="PointDefenseSystemLaserAquila"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicDisruptionStormEnergyReduction">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Restorable" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="0.4375"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="-25"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenScramblerMissile">
+        <RemoveValidatorArray value="TargetIsNotCCImmune"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenScramblerMissileCarrier">
+        <RemoveValidatorArray value="TargetIsNotCCImmune"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TomahawkCruiseMissileA">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TomahawkCruiseMissileB">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="TomahawkCruiseMissileC">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ZirconCruiseMissile">
+        <InfoIcon value="Assets\Textures\btn-ability-wraith-longrangemissiles.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.2"/>
+        <Alignment value="Negative"/>
+        <AINotifyEffect value="ZirconCruiseMissileDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicDisruptionStorm">
+        <InfoIcon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="0.4287"/>
+        <Period value="0.375"/>
+        <InitialEffect value="PsionicDisruptionStormDamageInitial"/>
+        <PeriodicEffect value="PsionicDisruptionStormDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicDisruptionStormCripple">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+        <BehaviorCategories index="Restorable" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="0.4375"/>
+        <Modification>
+            <DamageDealtFraction index="Spell" value="-0.5"/>
+            <DamageDealtFraction index="Melee" value="-0.5"/>
+            <DamageDealtFraction index="Ranged" value="-0.5"/>
+            <DamageDealtFraction index="Splash" value="-0.5"/>
+        </Modification>
+        <RemoveValidatorArray value="IsNotTacticalCruiseMissile"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NanoCleanse">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-terran-defensivematrix.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <Duration value="25"/>
+        <FinalEffect value="NanoCleanseFinalSet"/>
+        <Modification>
+            <BehaviorCategoriesDisable index="Restorable" value="1"/>
+        </Modification>
+        <RefreshEffect value="NanoCleanseInitSet"/>
+        <InitialEffect value="NanoCleanseInitSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicSuppressionField">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-energy.dds"/>
+        <BehaviorCategories index="Restorable" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="0.75" RangedWeaponRange="-2">
+            <RateMultiplierArray index="Queueable" value="0.75"/>
+            <RateMultiplierArray index="Spawn" value="0.75"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PsionicSuppressionFieldFirebat">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-energy.dds"/>
+        <BehaviorCategories index="Restorable" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="15"/>
+        <Modification AttackSpeedMultiplier="0.75">
+            <RateMultiplierArray index="Queueable" value="0.75"/>
+            <RateMultiplierArray index="Spawn" value="0.75"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ChannelStop">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="0.125"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SeekerMode">
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-raven-radar.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.25"/>
+        <InitialEffect value="SeekerModeSquadSet"/>
+        <PeriodicEffect value="SeekerModeSquadSet"/>
+        <FinalEffect value="SeekerModeOffCasting"/>
+        <Modification SightBonus="6" Detect="18"/>
+        <DisableValidatorArray value="CasterNotStunned"/>
+        <DisableValidatorArray value="CasterDoesNotHaveScramblerMissileBehavior"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SeekerModeCantMove">
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-ability-hornerhan-raven-radar.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SeekerModeSquadSight">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-squadsight.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.3125"/>
+        <Modification RangedWeaponRange="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SeekerModeHealthRegen">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-squadsight.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.3125"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="1.5"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SeekerModeCasting">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Modification Height="1">
+            <HeightTime index="Start" value="3"/>
+            <HeightTime index="Stop" value="3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CenturionUmojanPowerShield">
+        <InfoIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.25"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InitialEffect value="CenturionHealthRegenSearch"/>
+        <PeriodicEffect value="CenturionHealthRegenSearch"/>
+        <DisableValidatorArray value="UmojanPowerShieldValidator"/>
+        <Modification>
+            <AdditiveMoveSpeedFactor value="0.1"/>
+        </Modification>
+        <Requirements value="HaveUmojanPowerShields"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CenturionHealthRegen">
+        <InfoIcon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadhealth.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.3125"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <VitalRegenArray index="Life" value="0.625"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CenturionPlasmaSurge">
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-doubleshieldrecharge.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.125"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <Modification>
+            <VitalRegenArray index="Shields" value="6"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VespeneHarvesterUmojanTarget">
+        <InfoIcon value="Assets\Textures\Talent-Swann-Level05-VespeneDrone.dds"/>
+    </CBehaviorBuff>
+</Catalog>

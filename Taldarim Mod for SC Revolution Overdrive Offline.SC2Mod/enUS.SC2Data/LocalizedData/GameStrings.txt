@@ -1,0 +1,491 @@
+﻿Abil/Name/BlinkTaldarim=Phase Blink
+Abil/Name/CarrierTaldarimHangar=Hangar
+Abil/Name/CyberneticsCoreTaldarimResearch=Research
+Abil/Name/DarkShrineResearch2=Research (Hunter's Shelter)
+Abil/Name/FleetBeaconResearchTaldarim=Research
+Abil/Name/ForgeResearchTaldarim=Research (Forge)
+Abil/Name/GatewayTrainTaldarim=Warp (Gateway)
+Abil/Name/HarbingerDisruptionTrapBuild=Disruption Trap Build
+Abil/Name/HarbingerDisruptoinTrapActivate=Disruption Trap Activate
+Abil/Name/HarbingerForesee=Foresee
+Abil/Name/MorphBackToGatewayTaldarim=Morph Back to Gateway
+Abil/Name/NexusTaldarimTrain=Warp (Nexus)
+Abil/Name/NexusTrainTaldarimMothership=Warp Taldarim Mothership
+Abil/Name/ObserverMorphtoObserverSiege2=Observer Morph to Observer Siege
+Abil/Name/ObserverSiegeMorphtoObserver2=Observer Siege Morph to Observer
+Abil/Name/PhasingModeTaldarim=Phasing Mode
+Abil/Name/ProbeHarvestTaldarim=Harvest (Probe)
+Abil/Name/PulsarBlast=Pulsar Blast
+Abil/Name/RoboticsBayTaldarimResearch=Research (Robotics Facility)
+Abil/Name/RoboticsFacilityTaldarimTrain=Warp (Robotics Facility)
+Abil/Name/SOAMothershipBlink=SOA Mothership Blink
+Abil/Name/SOAMothershipLineAttack=SOA Mothership Line Attack
+Abil/Name/StargateTrainTaldarim=Warp (Stargate)
+Abil/Name/StructureOvercharge=Structure Overcharge
+Abil/Name/TaldarimBuild=Build (Probe)
+Abil/Name/TemplarArchivesTaldarimResearch=Research (Ascendant Archives)
+Abil/Name/TransportModeTaldarim=Transport Mode
+Abil/Name/TwilightCouncilTaldarimResearch=Research
+Abil/Name/UpgradeToWarpGateTaldarim=Morpht to Warp Gate
+Abil/Name/VoidSentryBlackHole=Black Hole
+Abil/Name/WarpGateTrainTaldarim=Warp (Warp Gate)
+Alert/Text/AmmoComplete_Tal=Ammo complete.
+Alert/Text/BuildComplete_Tal=Structure complete.
+Alert/Text/CommandCenterUpgradeComplete2=Upgrade complete.
+Alert/Text/CommandCenterUpgradeComplete_Tal=Upgrade complete.
+Alert/Text/MergeComplete_Tal=Merge complete.
+Alert/Text/MorphComplete_Tal=Morph complete.
+Alert/Text/ResearchComplete_Tal=Research complete.
+Alert/Text/ResourceExhausted_HighYieldMineral_Tal=Rich Mineral Fields have been exhausted.
+Alert/Text/SpecializeComplete_Tal=Specialization complete.
+Alert/Text/TrainComplete_Tal=Unit complete.
+Alert/Text/TrainWorkerComplete_Tal=Unit complete.
+Alert/Text/UpgradeComplete_Tal=Upgrade complete.
+Alert/Text/WarpTrainComplete_Tal=Warp complete.
+Behavior/Name/AlarakStalkerPhasingArmorBuff=Phasing Armor
+Behavior/Name/AlarakStructureOvercharge=Structure Overcharge
+Behavior/Name/AlarakStructureOverchargeShield=Overcharge Amplification
+Behavior/Name/DarkTemplarVoidStasis=Void Stasis
+Behavior/Name/HarbingerForesee=Foresee
+Behavior/Name/LightningBombTaldarim=Disintegration
+Behavior/Name/ObserverSquadSight=Squad Sight
+Behavior/Name/ObserverTargetLock=Target Lock
+Behavior/Name/PhaseBlinkDamage=Phase Blink
+Behavior/Name/PowerUserWarpableAnywhere=Warping In
+Behavior/Name/PulsarBlastDamageIncrease=Damage Amplification
+Behavior/Name/VoidSentryBlackHole=Black Hole
+Behavior/Tooltip/AlarakStalkerPhasingArmorBuff=This unit absorbs 50% of damage.
+Behavior/Tooltip/AlarakStructureOvercharge=This structure has a powerful long-range attack.
+Behavior/Tooltip/AlarakStructureOverchargeShield=This structure is absorbing damage dealt to it.
+Behavior/Tooltip/DarkTemplarVoidStasis=This unit or structure cannot move, attack, or be damaged.
+Behavior/Tooltip/HarbingerForesee=This unit can't use abilities except stop, move, and attack.
+Behavior/Tooltip/LightningBombTaldarim=This unit or structure is taking damage over time.
+Behavior/Tooltip/ObserverSquadSight=This unit's non-melee weapons have increased range.
+Behavior/Tooltip/ObserverTargetLock=This unit is taking increased damage.
+Behavior/Tooltip/PhaseBlinkDamage=This unit's next attack will deal 50% increased damage.
+Behavior/Tooltip/PowerUserWarpableAnywhere=This unit is being materialized.
+Behavior/Tooltip/PulsarBlastDamageIncrease=This unit gains additional damage.
+Behavior/Tooltip/VoidSentryBlackHole=This unit cannot move or attack.
+Button/Name/ActivateDisruptionTrap=Disruption Trap
+Button/Name/AlarakColossusAerialTracking=Aerial Tracking
+Button/Name/AlarakColossusChargedBlastChargeTime=Rapid Power Cycling
+Button/Name/AlarakHavocAbilityRange=Bloodshard Resonance
+Button/Name/AlarakStalkerPhasingArmor=Phasing Armor
+Button/Name/AlarakStructureOvercharge=Structure Overcharge
+Button/Name/AlarakSupplicantMaxShields=Soul Augmentation
+Button/Name/AlarakTargetLockBuff=Detect Weakness
+Button/Name/AlarakVanguardIncreaseSplashArea=Matter Dispersion
+Button/Name/AnionPulseCrystalsTaldarim=Research Anion Pulse-Crystals
+Button/Name/ArmorResearchSupplicantShieldArmor=Research Blood Shields
+Button/Name/AscendantSacrifice=Sacrifice
+Button/Name/AssimilatorTaldarim=Warp In Assimilator
+Button/Name/BlinkTaldarim=Phase Blink
+Button/Name/CarrierTaldarim=Warp In Skylord
+Button/Name/CliffWalkTaldarim=Cliff Walk
+Button/Name/ColossusTaldarim=Warp In Wrathwalker
+Button/Name/ColossusTaldarimThermalExplosion=Thermal Explosion
+Button/Name/CyberneticsCoreTaldarim=Warp In Cybernetics Core
+Button/Name/DarkShrineTaldarim=Warp In Hunter's Shelter
+Button/Name/DarkTemplarTaldarim=Warp In Blood Hunter
+Button/Name/FleetBeaconTaldarim=Warp In Fleet Beacon
+Button/Name/ForgeTaldarim=Warp In Forge
+Button/Name/GatewayTaldarim=Warp In Gateway
+Button/Name/Harbinger=Warp In Harbinger
+Button/Name/HarbingerBuildDisruptionTrap=Disruption Trap
+Button/Name/HarbingerForesee=Foresee
+Button/Name/HavocPermanentCloak=Cloaking Module
+Button/Name/HighTemplarTaldarim=Warp In Ascendant
+Button/Name/ImmortalTaldarim=Warp In Vanguard
+Button/Name/ImmortalTaldarimScatterCannon=Scatter Cannon
+Button/Name/InterceptorTaldarim=Warp In Interceptor
+Button/Name/Monitor=Warp In Havoc
+Button/Name/MorphBackToGatewayTaldarim=Transform to Gateway
+Button/Name/NexusTaldarim=Warp In Nexus
+Button/Name/ObserverTaldarim=Warp In Observer
+Button/Name/PHSupplicantShieldArmor=Blood Shields
+Button/Name/PermanentlyCloakedDisruption=Permanently Cloaked
+Button/Name/PermanentlyCloakedTaldarim=Permanently Cloaked
+Button/Name/PhasingModeTaldarim=Phasing Mode
+Button/Name/PhoenixBomberGround=Destruction Strike
+Button/Name/PhoenixTaldarim=Warp In Skytalon
+Button/Name/PhotonCannonTaldarim=Warp In Photon Cannon
+Button/Name/ProbeTaldarim=Warp In Probe
+Button/Name/PulsarBlast=Pulsar Blast
+Button/Name/PylonTaldarim=Warp In Pylon
+Button/Name/ReleaseInterceptorsTaldarim=Release Interceptors
+Button/Name/ResearchAlarakColossusChargedBlastAirAttack=Research Aerial Tracking
+Button/Name/ResearchAlarakColossusChargedBlastChargeTime=Research Rapid Power Cycling
+Button/Name/ResearchAlarakHavocAbilityRange=Research Bloodshard Resonance
+Button/Name/ResearchAlarakHighTemplarPsionicOrbTravelDistance=Research Chaotic Attunement
+Button/Name/ResearchAlarakHighTemplarPsionicOrbTravelDistancePassive=Chaotic Attunement
+Button/Name/ResearchAlarakSupplicantMaxShields=Research Soul Augmentation
+Button/Name/ResearchAlarakTargetLockBuff=Research Detect Weakness
+Button/Name/ResearchAlarakVanguardIncreaseSplashArea=Research Matter Dispersion
+Button/Name/ResearchAscendantSacrifice=Research Sacrifice
+Button/Name/ResearchCarrierTaldarimInterceptorUpgrade=Research Graviton Catapult
+Button/Name/ResearchColossusTaldarimThermalExplosion=Research Thermal Explosion
+Button/Name/ResearchGraviticBoosterTaldarim=Research Gravitic Boosters
+Button/Name/ResearchHavocPermanentCloak=Research Cloaking Module
+Button/Name/ResearchPhaseBlink=Research Phase Blink
+Button/Name/ResearchPhasedArmor=Research Phasing Armor
+Button/Name/ResearchVanguardArmoredDamage=Research Fusion Mortars
+Button/Name/ResearchVoidHighTemplarMindBlast=Research Mind Blast
+Button/Name/ResearchVoidRayTaldarimSpeedUpgrade=Research Flux Vanes
+Button/Name/ResearchVoidStasis=Research Void Stasis
+Button/Name/ResearchWarpGateTaldarim=Research Warp Gate
+Button/Name/RoboticsBayTaldarim=Warp In Robotics Bay
+Button/Name/RoboticsFacilityTaldarim=Warp In Robotics Facility
+Button/Name/SOAMothershipBlink=Blink
+Button/Name/SOAMothershipLineAttack=Thermal Lance
+Button/Name/SOAMothershipv4=Warp In Tal'Darim Mothership
+Button/Name/SentryTaldarimForceField=Force Field
+Button/Name/ShieldBatteryTaldarim=Warp In Shield Battery
+Button/Name/SquadSight=Squad Sight
+Button/Name/StalkerTaldarim=Warp In Slayer
+Button/Name/StargateTaldarim=Warp In Stargate
+Button/Name/TaldarimAirArmorLevel1=Upgrade Air Armor Level 1
+Button/Name/TaldarimAirArmorLevel2=Upgrade Air Armor Level 2
+Button/Name/TaldarimAirArmorLevel3=Upgrade Air Armor Level 3
+Button/Name/TaldarimAirWeaponsLevel1=Upgrade Air Weapons Level 1
+Button/Name/TaldarimAirWeaponsLevel2=Upgrade Air Weapons Level 2
+Button/Name/TaldarimAirWeaponsLevel3=Upgrade Air Weapons Level 3
+Button/Name/TaldarimGroundArmorLevel1=Upgrade Ground Armor Level 1
+Button/Name/TaldarimGroundArmorLevel2=Upgrade Ground Armor Level 2
+Button/Name/TaldarimGroundArmorLevel3=Upgrade Ground Armor Level 3
+Button/Name/TaldarimGroundWeaponsLevel1=Upgrade Ground Weapons Level 1
+Button/Name/TaldarimGroundWeaponsLevel2=Upgrade Ground Weapons Level 2
+Button/Name/TaldarimGroundWeaponsLevel3=Upgrade Ground Weapons Level 3
+Button/Name/TaldarimShieldsLevel1=Upgrade Shields Level 1
+Button/Name/TaldarimShieldsLevel2=Upgrade Shields Level 2
+Button/Name/TaldarimShieldsLevel3=Upgrade Shields Level 3
+Button/Name/TargetLock=Target Lock
+Button/Name/TempestTaldarim=Warp In Conqueror
+Button/Name/TempestTaldarimGroundAttackUpgrade=Tectonic Destabilizers
+Button/Name/TempestTaldarimResearchGroundAttackUpgrade=Research Tectonic Destabilizers
+Button/Name/TemplarArchivesTaldarim=Warp In Ascendant Archives
+Button/Name/TransportModeTaldarim=Transport Mode
+Button/Name/TwilightCouncilTaldarim=Warp In Death Council
+Button/Name/UpgradeToWarpGateTaldarim=Transform to Warp Gate
+Button/Name/VanguardArmoredDamage=Scatter Cannon
+Button/Name/VoidColossusChargedBlast=Charged Blast
+Button/Name/VoidHighTemplarMindBlast=Mind Blast
+Button/Name/VoidHighTemplarPsiOrb=Psionic Orb
+Button/Name/VoidRayTaldarim=Warp In Destroyer
+Button/Name/VoidSentryBlackHole=Black Hole
+Button/Name/VoidStasis=Void Stasis
+Button/Name/VoidVoidRayBeamBounce=Destruction Beam
+Button/Name/WarpInSupplicant=Warp In Supplicant
+Button/Name/WarpInSupplicantHidden=Warp In Supplicant
+Button/Name/WarpPrismTaldarim=Warp In War Prism
+Button/Tooltip/ActivateDisruptionTrap=Deals <d ref="Effect,HarbingerDisruptionTrapDamage,Amount"/> damage to nearby enemies.
+Button/Tooltip/AlarakColossusAerialTracking=Allows the Wrathwalker to attack air units.
+Button/Tooltip/AlarakColossusChargedBlastChargeTime=Reduces the charging time of the Wrathwalker's Charged Blast.
+Button/Tooltip/AlarakHavocAbilityRange=Increases the radius of Squad Sight and the range of Target Lock and Force Field.
+Button/Tooltip/AlarakStalkerPhasingArmor=Reduces Slayers' taking damage by 50% for <d ref="Behavior,AlarakStalkerPhasingArmorBuff,Duration"/> seconds. Cannot occur more than once every <d ref="Behavior,AlarakStalkerPhasingArmor,DamageResponse.Cost.Cooldown.TimeUse"/> seconds.
+Button/Tooltip/AlarakStructureOvercharge=Energizes target friendly structure or War Prism in phasing mode, allowing it to attack nearby enemy ground and air units for <d ref="Effect,AlarakStructureOverchargeDamage,Amount[0]"/> damage. This effect lasts for <d ref="Behavior,AlarakStructureOvercharge,Duration[0]"/> seconds.
+Button/Tooltip/AlarakSupplicantMaxShields=Supplicants gain +25 shields.
+Button/Tooltip/AlarakTargetLockBuff=Increases Target Lock's damage bonus by an additional 15%.
+Button/Tooltip/AlarakVanguardIncreaseSplashArea=Increases the area of Scatter Cannon's splash damage by <d ref="($UpgradeEffectArrayValue:AlarakVanguardIncreaseSplashArea:Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius$/Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius-1)*100" player="0"/>%.
+Button/Tooltip/AnionPulseCrystalsTaldarim=Allows <c val="ffff8a">Skytalons</c> to deal damage to ground units with Destruction Strike.
+Button/Tooltip/ArmorResearchSupplicantShieldArmor=Reduces the damage enemies deal to the <c val="ffff8a">Supplicant's</c> shields by 2.
+Button/Tooltip/AscendantSacrifice=Reduces target friendly unit to <d ref="Effect,AscendantSacrificeDamage,Amount"/> life (shields are not affected).<n/><n/>Grants the Ascendant <d ref="Effect,AscendantSacrificeDamage25,LeechFraction[Energy]"/> energy for each life point reduced, up to its maximum energy.<n/><n/><c val="#ColorAttackInfo">Can only target friendly units.</c>
+Button/Tooltip/AssimilatorTaldarim=Warped in over a Vespene Geyser to allow harvesting of vespene gas.
+Button/Tooltip/AssimilatorTaldarimRich=Warped in over a Vespene Geyser to allow harvesting of vespene gas.
+Button/Tooltip/BlinkTaldarim=Teleports the Slayer to a nearby target location. Ability can only be used once every <d ref="Abil,Blink,Cost[0].Cooldown.TimeUse"/> seconds. After using Phase Blink, the Slayer's next attack within <d ref="Behavior,PhaseBlinkDamage,Duration"/> seconds will deal 50% increased damage.
+Button/Tooltip/CarrierTaldarim=Capital ship. Builds and launches Interceptors that attack enemy targets.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/CliffWalkTaldarim=This unit can walk up and down cliffs.
+Button/Tooltip/ColossusTaldarim=Battle strider with a powerful single target attack. Can walk up and down cliffs.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/ColossusTaldarimAA=Battle strider with a powerful single target attack. Can walk up and down cliffs.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/ColossusTaldarimThermalExplosion=Wrathwalkers' ground attack missile explodes, deals <d ref="Effect,ColossusTaldarimSplashDamage,Amount"/> damage to nearby enemy ground units.
+Button/Tooltip/CyberneticsCoreTaldarim=Contains weapon and armor upgrades for Tal'Darim air units, Havocs, and Gateways.<n/><n/><c val="ffff8a">Enables:</c><n/>- Slayers at the Gateway<n/>- Havocs at the Gateway<n/>- Shield Battery from Probes
+Button/Tooltip/DarkShrineTaldarim=Contains an upgrade for Blood Hunter.<n/><n/><c val="ffff8a">Enables:</c><n/>- Blood Hunters at the Gateway 
+Button/Tooltip/DarkTemplarTaldarim=Deadly warrior-assassin. Permanently cloaked. Can use Void Stasis.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/FleetBeaconTaldarim=Contains upgrades for Skytalons, Destroyers, Conquerors, and Skylords.<n/><n/><c val="ffff8a">Enables:</c><n/>- Conquerors at the Stargate<n/>- Skylords at the Stargate</n>- Tal'Darim Mothership at the Nexus
+Button/Tooltip/ForgeTaldarim=Contains weapon and armor upgrades for Tal'Darim ground units and shield upgrades for all Tal'Darim units and structures.<n/><n/><c val="ffff8a">Enables:</c><n/>- Photon Cannons from Probes
+Button/Tooltip/GatewayTaldarim=Warps in Tal'Darim ground units.<n/><n/><c val="ffff8a">Enables:</c><n/>- Supplicants
+Button/Tooltip/Harbinger=Flying Caster. Can use Pulsar Blast, Foresee, and Disruption Trap.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/HarbingerBuildDisruptionTrap=Places a cloaked Disruption Trap at the target location that lasts <d ref="Behavior,DisruptionTrapTimedLife,Duration"/> seconds. Once activated by an enemy ground unit, the ward deals <d ref="Effect,HarbingerDisruptionTrapDamage,Amount"/> damage to nearby enemies.
+Button/Tooltip/HarbingerDisruptionTrap=Ground unit trap. Cloak renders the Disruption Trap invisible to enemies without detection.
+Button/Tooltip/HarbingerForesee=Silence all non-worker units in effected area for <d ref="Behavior,HarbingerForesee,Duration"/> seconds. Silenced units can't use abilities except stop, move, and attack.
+Button/Tooltip/HavocPermanentCloak=Permanently cloaks the Havoc.
+Button/Tooltip/HighTemplarTaldarim=Potent psionic master. Can use Psionic Orb, Mind Blast, and Sacrifice.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/ImmortalTaldarim=Assault Strider. Attacks deal damage in an area around target enemy unit.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/ImmortalTaldarimScatterCannon=Attacks deal damage to target enemy ground unit and other enemy ground units near it.<n/><n/><c val="ffff8a">Damages enemy ground units only.</c>
+Button/Tooltip/InterceptorTaldarim=Builds Interceptors that automatically attack the  Skylord's target. Skylords may not attack without Interceptors.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/InterceptorTaldarimUnit=Combat drones that automatically strafe their Skylord's target. Skylords may not attack without Interceptors.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Monitor=Robotic support unit. Can use Target Lock, Squad Sight, and Force Field.
+Button/Tooltip/MorphBackToGatewayTaldarim=Transforms this Warp Gate back to a Gateway.
+Button/Tooltip/NexusTaldarim=Primary structure. Can receive gathered resources. Can use the Chrono Boost, Mass Recall, and Structure Overcharge abilities..<n/><n/><c val="ffff8a">Enables:</c><n/>- Probes<n/>- Tal'Darim Mothership
+Button/Tooltip/ObserverTaldarim=Flying spy. Cloak renders the unit invisible to enemies without detection.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/PHSupplicantShieldArmor=Reduces the damage enemies deal to the Supplicant's shields.
+Button/Tooltip/PermanentlyCloakedDisruption=The Disruption Trap is permanently cloaked.
+Button/Tooltip/PermanentlyCloakedTaldarim=The Blood Hunter is permanently cloaked.
+Button/Tooltip/PhasingModeTaldarim=Transforms the War Prism to Phasing Mode and generates a power radius similar to that of a Pylon. The War Prism cannot move in this mode.
+Button/Tooltip/PhoenixBomberGround=Fires Lightning to target and nearby 4 ground units. Each lightning deals <d ref="Effect,PhoenixBomberCarpetBombDamage,Amount"/> damage to effected enemy ground units.</n></n><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/PhoenixTaldarim=Air-superiority fighter.<n/><n/><c val="ffff8a">Can attack air units.</c>
+Button/Tooltip/PhoenixTaldarimAG=Air-superiority fighter.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/PhotonCannonTaldarim=Primary defensive structure.<n/><n/><c val="ffff8a">Can attack ground and air units.</c><n/><c val="FFE303">Detector</c>
+Button/Tooltip/ProbeTaldarim=Basic worker unit. Can gather resources and warp in Tal'Darim structures.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/PulsarBlast=Fires Pulsar Blast to the target enemy unit. Target unit became unstable for <d ref="Behavior,PulsarBlastDamageIncrease,Duration"/> seconds. Unstable unit gets doubled damage, and destroyed unit while unstable deals <d ref="Effect,PulsarBlastDamage,Amount"/> damage to nearby units.
+Button/Tooltip/PylonTaldarim=Provides supply.<n/>Supply allows you to warp in more units.<n/>Creates power for nearby structures.
+Button/Tooltip/ReleaseInterceptorsTaldarim=Skylord launches all Interceptors at the target point with a <d ref="Behavior,ReleaseInterceptorsTimedLife,Duration"/> second timed life. Interceptors remain at the area until they expire.
+Button/Tooltip/ResearchAlarakColossusChargedBlastAirAttack=Allows <c val="ffff8a">Wrathwalkers</c> to attack air units.
+Button/Tooltip/ResearchAlarakColossusChargedBlastChargeTime=Reduces the charging time of the <c val="ffff8a">Wrathwalker's</c> Charged Blast.
+Button/Tooltip/ResearchAlarakHavocAbilityRange=Increases the radius of the <c val="ffff8a">Havoc's</c> Squad Sight and the range of Target Lock and Force Field.
+Button/Tooltip/ResearchAlarakHighTemplarPsionicOrbTravelDistance=Increases the travel distance of the <c val="ffff8a">Ascendant's </c>Psionic Orb by 25%.
+Button/Tooltip/ResearchAlarakHighTemplarPsionicOrbTravelDistancePassive=Increases Psionic Orb's travel distance by 25%.
+Button/Tooltip/ResearchAlarakSupplicantMaxShields=<c val="ffff8a">Supplicants</c> gain +2 shields.
+Button/Tooltip/ResearchAlarakTargetLockBuff=Increases the damage bonus from the <c val="ffff8a">Havoc's</c> Target Lock by an additional 15%.
+Button/Tooltip/ResearchAlarakVanguardIncreaseSplashArea=Increases the area of the <c val="ffff8a">Vanguard's</c> splash damage by <d ref="($UpgradeEffectArrayValue:AlarakVanguardIncreaseSplashArea:Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius$/Effect,ImmortalTaldarimWeaponSearch,AreaArray[0].Radius-1)*100" player="0"/>%.
+Button/Tooltip/ResearchAscendantSacrifice=Allows <c val="ffff8a">Ascendants</c> to use Sacrifice ability to consume target friendly unit's life to gain energy.
+Button/Tooltip/ResearchCarrierTaldarimInterceptorUpgrade=Allows <c val="ffff8a">Skylords</c> to use Release Interceptors ability. With this ability, Skylord launches all Interceptors at the target point with a <d ref="Behavior,ReleaseInterceptorsTimedLife,Duration"/> second timed life. Interceptors remain at the area until they expire.
+Button/Tooltip/ResearchColossusTaldarimThermalExplosion=Allows <c val="ffff8a">Wrathwalkers'</c> attack against ground units explodes, deals <d ref="Effect,ColossusTaldarimSplashDamage,Amount"/> damage to enemy units nearby the target.
+Button/Tooltip/ResearchGraviticBoosterTaldarim=Increases the movement speed of <c val="ffff8a">Observers</c> and <c val="ffff8a">War Prisms</c>.
+Button/Tooltip/ResearchHavocPermanentCloak=Allows <c val="ffff8a">Havocs</c> to remain permanently cloaked.
+Button/Tooltip/ResearchPhaseBlink=Allows <c val="ffff8a">Slayers</c> to teleport to a nearby target location. After using Phase Blink, the Slayer's next attack within <d ref="Behavior,PhaseBlinkDamage,Duration"/> seconds will deal 50% increased damage.
+Button/Tooltip/ResearchPhasedArmor=Reduces Slayers' taking damage by 50% for <d ref="Behavior,AlarakStalkerPhasingArmorBuff,Duration"/> seconds. Cannot occur more than once every <d ref="Behavior,AlarakStalkerPhasingArmor,DamageResponse.Cost.Cooldown.TimeUse"/> seconds.
+Button/Tooltip/ResearchVanguardArmoredDamage=Increases the damage <c val="ffff8a">Vanguards</c> deal to armored units
+Button/Tooltip/ResearchVoidHighTemplarMindBlast=Allows <c val="ffff8a">Ascendants</c> to use Mind Blast, which deals <d ref="Effect,VoidHighTemplarMindBlastDamage,Amount"/> damage to target enemy unit.</n></n><c val="#ColorAttackInfo">Can target ground and air units.</c>
+Button/Tooltip/ResearchVoidRayTaldarimSpeedUpgrade=Increases the speed and acceleration of the <c val="ffff8a">Destroyer</c>.
+Button/Tooltip/ResearchVoidStasis=Grants <c val="ffff8a">Blood Hunters</c> an ability to phase a target unit or structure out of existence for <d ref="Behavior,DarkTemplarVoidStasis,Duration"/> seconds. This disables it entirely and prevents it from being attacked by units or abilities.<n/><n/><c val="#ColorAttackInfo">Can target structures or ground units.</c>
+Button/Tooltip/ResearchWarpGateTaldarim=Enables <c val="ffff8a">Gateways</c> to upgrade to Warp Gates.
+Button/Tooltip/RoboticsBayTaldarim=Contains upgrades for the Observer, War Prism, Vanguard, and Wrathwalker.<n/><n/><c val="ffff8a">Enables:</c><n/>- Wrathwalkers at the Robotics Facility
+Button/Tooltip/RoboticsFacilityTaldarim=Warps in Tal'Darim robotic units.<n/><n/><c val="ffff8a">Enables:</c><n/>- Observers<n/>- War Prisms<n/>- Vanguards
+Button/Tooltip/SOAMothershipBlink=Teleports the Tal'Darim Mothership to target location.
+Button/Tooltip/SOAMothershipLineAttack=Deals <d ref="Effect,SOAMothershipLineAttackDamage,Amount"/> damage to all enemies in a straight line up to 10 range away.
+Button/Tooltip/SOAMothershipv4=Ultimate Tal'Darim vessel. Can use Black Hole, Blink, and Thermal Lance.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/SentryTaldarimForceField=Creates a solid barrier that lasts for <d ref="Behavior,ForceFieldFate,Duration"/> seconds and impedes movement of ground units.<n/><n/><c val="#ColorAttackInfo">Massive units shatter Force Fields on contact.</c>
+Button/Tooltip/ShieldBatteryTaldarim=Defensive structure. Recharges shields of nearby units.
+Button/Tooltip/SquadSight=Increases the non-melee attack range of all nearby friendly units by <d ref="Behavior,ObserverSquadSight,Modification.RangedWeaponRange"/>.
+Button/Tooltip/StalkerTaldarim=Ranged support strider. Can use Phase Blink and Phasing Armor.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/StargateTaldarim=Warps in Tal'Darim air units.<n/><n/><c val="ffff8a">Enables:</c><n/>- Skytalons<n/>- Destroyers<n/>- Harbingers
+Button/Tooltip/TaldarimAirArmorLevel1=Upgrades the armor of Tal'Darim air units.
+Button/Tooltip/TaldarimAirArmorLevel2=Further upgrades the armor of Tal'Darim air units.
+Button/Tooltip/TaldarimAirArmorLevel3=Maximizes the armor of Tal'Darim air units.
+Button/Tooltip/TaldarimAirWeaponsLevel1=Upgrades the damage dealt by Tal'Darim air units.
+Button/Tooltip/TaldarimAirWeaponsLevel2=Further upgrades the damage dealt by Tal'Darim air units.
+Button/Tooltip/TaldarimAirWeaponsLevel3=Maximizes the damage dealt by Tal'Darim air units.
+Button/Tooltip/TaldarimGroundArmorLevel1=Upgrades the armor of Tal'Darim ground units.
+Button/Tooltip/TaldarimGroundArmorLevel2=Further upgrades the armor of Tal'Darim ground units.
+Button/Tooltip/TaldarimGroundArmorLevel3=Maximizes the armor of Tal'Darim ground units.
+Button/Tooltip/TaldarimGroundWeaponsLevel1=Upgrades the damage dealt by Tal'Darim ground units.
+Button/Tooltip/TaldarimGroundWeaponsLevel2=Further upgrades the damage dealt by Tal'Darim ground units.
+Button/Tooltip/TaldarimGroundWeaponsLevel3=Maximizes the damage dealt by Tal'Darim ground units.
+Button/Tooltip/TaldarimShieldsLevel1=Upgrades the shields of all Tal'Darim units and structures.
+Button/Tooltip/TaldarimShieldsLevel2=Further upgrades the shields of all Tal'Darim units and structures.
+Button/Tooltip/TaldarimShieldsLevel3=Maximizes the shields of all Tal'Darim units and structures.
+Button/Tooltip/TargetLock=Increases damage dealt to target enemy unit by <d ref="Behavior,ObserverTargetLock,Modification.DamageTakenFraction[Splash]*100"/>%. Effect lasts as long as the Havoc remains locked onto the target.
+Button/Tooltip/TempestTaldarim=Siege artillery craft. Attacks from long range.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/TempestTaldarimGroundAttackUpgrade=Conqueror's Resonance Coil deals <d ref="(Behavior,LightningBombTaldarim,Duration/Behavior,LightningBombTaldarim,Period)*Effect,LightningBombTaldarimDamage,Amount"/> damage to target enemy unit for <d ref="Behavior,LightningBombTaldarim,Duration"/> seconds.
+Button/Tooltip/TempestTaldarimResearchGroundAttackUpgrade=<c val="ffff8a">Conqueror's</c> Resonance Coil deals <d ref="(Behavior,LightningBombTaldarim,Duration/Behavior,LightningBombTaldarim,Period)*Effect,LightningBombTaldarimDamage,Amount"/> damage to target enemy unit for <d ref="Behavior,LightningBombTaldarim,Duration"/> seconds.
+Button/Tooltip/TemplarArchivesTaldarim=Contains an upgrade for Ascendant.<n/><n/><c val="ffff8a">Enables:</c><n/>- Ascendant at the Gateway
+Button/Tooltip/TransportModeTaldarim=Reverts the War Prism back to Transport Mode, allowing it to move.
+Button/Tooltip/TwilightCouncilTaldarim=Contains upgrades for Supplicants and Slayers.
+Button/Tooltip/UpgradeToWarpGateTaldarim=Upgrades this Gateway to a Warp Gate, allowing it to warp in ground units to any location powered by a Pylon or War Prism.
+Button/Tooltip/VanguardArmoredDamage=Increases the damage dealt to armored units.
+Button/Tooltip/VoidColossusChargedBlast=Attacks a single unit or structure for heavy damage. Can attack while moving.
+Button/Tooltip/VoidHighTemplarMindBlast=After <d ref="Effect,MindBlastCP,PeriodCount*Effect,MindBlastCP,PeriodicPeriodArray[0]"/> seconds of channel, Deals <d ref="Effect,VoidHighTemplarMindBlastDamage,Amount"/> damage to target enemy unit.
+Button/Tooltip/VoidHighTemplarPsiOrb=Unleashes a traveling Psionic Orb that deals <d ref="Effect,VoidHighTemplarPsiOrbDamage,Amount/Effect,VoidHighTemplarPsiOrbPersistent,PeriodicPeriodArray[0]"/> damage per second to all enemies along its path. Each units can be damaged by 3 Psionic Orbs at maximal.
+Button/Tooltip/VoidRayTaldarim=Area assault craft. Can use Destruction Beam to attack multiple units.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/VoidSentryBlackHole=Stuns enemy units in the target area for <d ref="Effect,VoidSentryBlackHolePersistent,PeriodCount*Effect,VoidSentryBlackHolePersistent,PeriodicPeriodArray[0]"/> seconds.
+Button/Tooltip/VoidStasis=Disables the target's attacks, abilities, movement, detection, production and tech for <d ref="Behavior,DarkTemplarVoidStasis,Duration"/> seconds. Units and structures in stasis cannot be attacked or affected by abilities.<n/><n/><c val="#ColorAttackInfo">Can target ground units and structures.</c>
+Button/Tooltip/VoidVoidRayBeamBounce=Prismatic Beam splits and deals damage to additional nearby targets as the Destroyer continues to attack, up to a maximum of 3 additional targets.
+Button/Tooltip/WarpGateTaldarim=Enables warp in of Tal'Darim ground units.
+Button/Tooltip/WarpInSupplicant=Short range warrior. Supplicants are warped in two at a time.<n/></n><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/WarpInSupplicantHidden=Short range warrior. Supplicants are warped in two at a time.<n/></n><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/WarpPrismPhasingTaldarim=Immobile power provider. Can load units from a distance. Can switch to a mobile Transport Mode.
+Button/Tooltip/WarpPrismTaldarim=Flying transport. Can load units from a distance. Can also deploy to create a power field.
+Commander/Name/UITaldarim=UITaldarim
+DocInfo/DescLong=Taldarim Mod for SC: Revolution Overdrive
+DocInfo/Name=Taldarim Mod for SC: Revolution Overdrive
+Effect/Name/CarrierTaldarimInterceptor=CarrierTaldarimInterceptor
+Effect/Name/ColossusTaldarimSet=ColossusTaldarimSet
+Effect/Name/ColossusTaldarimSplashDamage=ColossusTaldarimSplashDamage
+Effect/Name/ColossusTaldarimSplashLM=ColossusTaldarimSplashLM
+Effect/Name/ColossusTaldarimSplashSearch=ColossusTaldarimSplashSearch
+Effect/Name/ForeseeSet=ForeseeSet
+Effect/Name/HarbingerDisruptionTrapActivateSearch=HarbingerDisruptionTrapActivateSearch
+Effect/Name/HarbingerDisruptionTrapActivateSet=Harbinger Disruption Trap Activate Set
+Effect/Name/HarbingerDisruptionTrapBuildBeamOff=Harbinger Disruption Trap Build Beam Off
+Effect/Name/HarbingerDisruptionTrapBuildBeamOn=Harbinger Disruption Trap Build Beam On
+Effect/Name/HarbingerDisruptionTrapDamage=Harbinger Disruption Trap Damage
+Effect/Name/HarbingerDisruptionTrapReveal=Harbinger Disruption Trap Reveal
+Effect/Name/HarbingerForeseeAB=HarbingerForeseeAB
+Effect/Name/HarbingerForeseeDummyDamage=HarbingerForeseeDummyDamage
+Effect/Name/HarbingerForeseeSearch=HarbingerForeseeSearch
+Effect/Name/ImmortalTaldarimWeaponDamageUpgraded=ImmortalTaldarimWeaponDamageUpgraded 
+Effect/Name/InterceptorTaldarimBeamDamage=InterceptorTaldarimBeamDamage
+Effect/Name/InterceptorTaldarimBeamPersistent=InterceptorTaldarimBeamPersistent
+Effect/Name/InterceptorTaldarimLaunchPersistent=InterceptorTaldarimLaunchPersistent
+Effect/Name/IonCannonsTaldarim=IonCannonsTaldarim
+Effect/Name/IonCannonsTaldarimGround=IonCannonsTaldarimGround
+Effect/Name/IonCannonsTaldarimGroundRight=IonCannonsTaldarimGroundRight
+Effect/Name/IonCannonsTaldarimU=IonCannonsTaldarimU
+Effect/Name/LightningBombTaldarimAB=Lightning Bomb Taldarim AB
+Effect/Name/LightningBombTaldarimDamage=Lightning Bomb Taldarim Damage
+Effect/Name/ParticleBeamTaldarim=ParticleBeamTaldarim
+Effect/Name/ParticleDisruptorsTaldarim=ParticleDisruptorsTaldarim
+Effect/Name/ParticleDisruptorsTaldarimU=ParticleDisruptorsTaldarimU
+Effect/Name/PhoenixBomberCarpetBombAutoSearchSet=PhoenixBomberCarpetBombAutoSearchSet
+Effect/Name/PhoenixBomberCarpetBombAutoSearchSetCooldown=PhoenixBomberCarpetBombAutoSearchSetCooldown
+Effect/Name/PhoenixBomberCarpetBombDamageLeft=PhoenixBomberCarpetBombDamageLeft
+Effect/Name/PhoenixBomberCarpetBombPersistent=PhoenixBomberCarpetBombPersistent
+Effect/Name/PhoenixBomberCarpetBombSearchArea=PhoenixBomberCarpetBombSearchArea
+Effect/Name/PhoenixBomberCarpetBombSearchTarget=PhoenixBomberCarpetBombSearchTarget
+Effect/Name/PhoenixBomberCarpetBombSearchTargetAutoCast=PhoenixBomberCarpetBombSearchTargetAutoCast
+Effect/Name/PhoenixBomberCarpetBombSet=PhoenixBomberCarpetBombSet
+Effect/Name/PulsarBlastAB=PulsarBlastAB
+Effect/Name/PulsarBlastDamage=PulsarBlastDamage
+Effect/Name/PulsarBlastLM=PulsarBlastLM
+Effect/Name/PulsarBlastSearch=PulsarBlastSearch
+Effect/Name/SOAMothershipLineAttackCasterImpactDummy=SOAMothershipLineAttackCasterImpactDummy
+Effect/Name/SOAMothershipLineAttackCasterLM=SOAMothershipLineAttackCasterLM
+Effect/Name/SOAMothershipLineAttackDamage=SOAMothershipLineAttackDamage
+Effect/Name/SOAMothershipLineAttackInitialCP=SOAMothershipLineAttackInitialCP
+Effect/Name/SOAMothershipLineAttackScanCP=SOAMothershipLineAttackScanCP
+Effect/Name/SOAMothershipLineAttackSearch=SOAMothershipLineAttackSearch
+Effect/Name/SOAMothershipv4BeamDamage=SOAMothershipv4BeamDamage
+Effect/Name/SOAMothershipv4BeamDummy=SOAMothershipv4BeamDummy
+Effect/Name/SOAMothershipv4BeamPersistent=SOAMothershipv4BeamPersistent
+Effect/Name/SOAMothershipv4BeamSet=SOAMothershipv4BeamSet
+Effect/Name/SOAMothershipv4SecondaryBeamPersistent=SOAMothershipv4SecondaryBeamPersistent
+Effect/Name/TempestTaldarimDamage=TempestTaldarimDamage
+Effect/Name/TempestTaldarimDamageGround=TempestTaldarimDamageGround
+Effect/Name/TempestTaldarimGroundDamageSet=TempestTaldarimGroundDamageSet
+Effect/Name/TempestTaldarimLaunchMissile=TempestTaldarimLaunchMissile
+Effect/Name/TempestTaldarimLaunchMissileGround=TempestTaldarimLaunchMissileGround
+Effect/Name/UpgradeToWarpGateAutoCastDisablerTaldarim=UpgradeToWarpGateAutoCastDisablerTaldarim
+Effect/Name/UpgradeToWarpGateAutoCastOffTaldarim=UpgradeToWarpGateAutoCastOffTaldarim
+Effect/Name/VoidSentryBlackHoleAB=VoidSentryBlackHoleAB
+Effect/Name/VoidSentryBlackHoleForce=VoidSentryBlackHoleForce
+Effect/Name/VoidSentryBlackHoleForceOffset=VoidSentryBlackHoleForceOffset
+Effect/Name/VoidSentryBlackHoleImpactSet=VoidSentryBlackHoleImpactSet
+Effect/Name/VoidSentryBlackHolePersistent=VoidSentryBlackHolePersistent
+Effect/Name/VoidSentryBlackHoleSearch=VoidSentryBlackHoleSearch
+Race/Name/Tal=Tal'Darim
+RequirementNode/Tooltip/CountUnitAlias_Gateway_TaldarimCompleteOnly3321547334TechTreeCheat=Gateway
+RequirementNode/Tooltip/CountUpgradeCarrierTaldarimInterceptorUpgradeCompleteOnly2620646877=Research Graviton Catapult at the Fleet Beacon
+RequirementNode/Tooltip/CountUpgradeColossusTaldarimThermalExplosionCompleteOnly4213684408=Research Thermal Explosion at the Robotics Bay
+RequirementNode/Tooltip/CountUpgradePhaseBlinkCompleteOnly1215822746=Research Phase Blink at the Death Council
+RequirementNode/Tooltip/CountUpgradePhoenixTaldarimGroundAttackUpgradeCompleteOnly2751618249=Research Anion Pulse-Crystals at the Fleet Beacon
+RequirementNode/Tooltip/CountUpgradeResearchSacrificeCompleteOnly1308047646=Research Sacrifice at the Ascendant Archives
+RequirementNode/Tooltip/CountUpgradeTempestTaldarimGroundAttackUpgradeCompleteOnly2179728934=Research Tectonic Destabilizers at the Fleet Beacon
+RequirementNode/Tooltip/CountUpgradeVoidHighTemplarMindBlastCompleteOnly1522811427=Research Mind Blast at the Ascendant Archives
+RequirementNode/Tooltip/CountUpgradeVoidStasisCompleteOnly619326569=Research Void Stasis at the Hunter's Shelter
+RequirementNode/Tooltip/CountUpgradeWarpGateResearchTaldarimCompleteOnly2487229854TechTreeCheat=Research Warp Gate at the Cybernetics Core
+RequirementNode/Tooltip/Eq1478448419CountUnitSOAMothershipv4QueuedOrBetter0=No Tal'Darim Mothership
+RequirementNode/Tooltip/LT4069678448CountUnitInterceptorTaldarimQueuedOrBetterAtUnit8=Skylord must have fewer than 8 Interceptors
+Text/MindBlastValidatorSet=Only the unit which can keep chanelling can cast Mind Blast.
+Text/Validator/Error/AlreadyHasStructureOvercharge=This structure already activates Structure Overcharge.
+UI/ResourceSupplyToolTip_Tal=All living units cost supply. Build Pylons to increase supply. 
+Unit/Category/TaldarimUnits=Tal'Darim
+Unit/Name/AssimilatorTaldarim=Assimilator
+Unit/Name/AssimilatorTaldarimRich=Assimilator
+Unit/Name/CarrierTaldarim=Skylord
+Unit/Name/ColossusTaldarim=Wrathwalker
+Unit/Name/ColossusTaldarimRuptureMissile=Colossus Taldarim Rupture Missile
+Unit/Name/CyberneticsCoreTaldarim=Cybernetics Core
+Unit/Name/DarkShrineTaldarim=Hunter's Shelter
+Unit/Name/DarkTemplarTaldarim=Blood Hunter
+Unit/Name/FleetBeaconTaldarim=Fleet Beacon
+Unit/Name/ForgeTaldarim=Forge
+Unit/Name/GatewayTaldarim=Gateway
+Unit/Name/Harbinger=Harbinger
+Unit/Name/HarbingerDisruptionTrap=Disruption Trap
+Unit/Name/HighTemplarTaldarim=Ascendant
+Unit/Name/ImmortalTaldarim=Vanguard
+Unit/Name/InterceptorTaldarim=Interceptor
+Unit/Name/IonCannonsTaldarimWeapon=IonCannonsTaldarimWeapon
+Unit/Name/IonCannonsWeaponTaldarimGround=IonCannonsWeaponTaldarimGround
+Unit/Name/Monitor=Havoc
+Unit/Name/NexusTaldarim=Nexus
+Unit/Name/ObserverTaldarim=Observer
+Unit/Name/PhoenixTaldarim=Skytalon
+Unit/Name/PhotonCannonTaldarim=Photon Cannon
+Unit/Name/ProbeTaldarim=Probe
+Unit/Name/PulsarBlastWeapon=PulsarBlastWeapon
+Unit/Name/PylonTaldarim=Pylon
+Unit/Name/RoboticsBayTaldarim=Robotics Bay
+Unit/Name/RoboticsFacilityTaldarim=Robotics Facility
+Unit/Name/SOAMothershipv4=Tal'Darim Mothership
+Unit/Name/ShieldBatteryTaldarim=Shield Battery
+Unit/Name/StalkerTaldarim=Slayer
+Unit/Name/StalkerTaldarimWeapon=SlayerWeapon
+Unit/Name/StargateTaldarim=Stargate
+Unit/Name/Supplicant=Supplicant
+Unit/Name/TempestTaldarim=Conqueror
+Unit/Name/TempestTaldarimWeapon=TempestTaldarimWeapon
+Unit/Name/TempestTaldarimWeaponGround=TempestTaldarimWeaponGround
+Unit/Name/TemplarArchivesTaldarim=Ascendant Archives
+Unit/Name/TwilightCouncilTaldarim=Death Council
+Unit/Name/VoidRayTaldarim=Destroyer
+Unit/Name/WarpGateTaldarim=Warp Gate
+Unit/Name/WarpPrismPhasingTaldarim=War Prism
+Unit/Name/WarpPrismTaldarim=War Prism
+Upgrade/Name/AlarackHavocPermanentCloak=Cloaking Module
+Upgrade/Name/AlarakAdvisor=Alarak Advisor
+Upgrade/Name/AlarakColossusChargedBlastAirAttack=Aerial Tracking
+Upgrade/Name/AlarakColossusChargedBlastChargeTime=Rapid Power Cycling
+Upgrade/Name/AlarakHavocAbilityRange=Bloodshard Resonance
+Upgrade/Name/AlarakHavocTargetLockBuff=Detect Weakness
+Upgrade/Name/AlarakHighTemplarPsionicOrbTravelDistance=Chaotic Attunement
+Upgrade/Name/AlarakStalkerPhasingArmor=Phasing Armor
+Upgrade/Name/AlarakSupplicantMaxShields=Soul Augmentation
+Upgrade/Name/AlarakSupplicantShieldArmor=Blood Shields
+Upgrade/Name/AlarakVanguardIncreaseSplashArea=Matter Dispersion
+Upgrade/Name/CarrierTaldarimInterceptorUpgrade=Graviton Catapult
+Upgrade/Name/ColossusTaldarimThermalExplosion=Thermal Explosion
+Upgrade/Name/PhaseBlink=Phase Blink
+Upgrade/Name/PhoenixTaldarimGroundAttackUpgrade=Anion Pulse-Crystals
+Upgrade/Name/ResearchSacrifice=Sacrifice
+Upgrade/Name/TaldarimAirArmorLevel1=Tal'Darim Air Armor Level 1
+Upgrade/Name/TaldarimAirArmorLevel2=Tal'Darim Air Armor Level 2
+Upgrade/Name/TaldarimAirArmorLevel3=Tal'Darim Air Armor Level 3
+Upgrade/Name/TaldarimAirArmors=Tal'Darim Air Armors
+Upgrade/Name/TaldarimAirWeapons=Tal'Darim Air Weapons
+Upgrade/Name/TaldarimAirWeaponsLevel1=Tal'Darim Air Weapons Level 1
+Upgrade/Name/TaldarimAirWeaponsLevel2=Tal'Darim Air Weapons Level 2
+Upgrade/Name/TaldarimAirWeaponsLevel3=Tal'Darim Air Weapons Level 3
+Upgrade/Name/TaldarimGraviticBooster=Gravitic Boosters
+Upgrade/Name/TaldarimGroundArmor=Tal'Darim Ground Armors
+Upgrade/Name/TaldarimGroundArmorLevel1=Tal'Darim Ground Armor Level 1
+Upgrade/Name/TaldarimGroundArmorLevel2=Tal'Darim Ground Armor Level 2
+Upgrade/Name/TaldarimGroundArmorLevel3=Tal'Darim Ground Armor Level 3
+Upgrade/Name/TaldarimGroundWeapons=Tal'Darim Ground Weapons
+Upgrade/Name/TaldarimGroundWeaponsLevel1=Tal'Darim Ground Weapons Level 1
+Upgrade/Name/TaldarimGroundWeaponsLevel2=Tal'Darim Ground Weapons Level 2
+Upgrade/Name/TaldarimGroundWeaponsLevel3=Tal'Darim Ground Weapons Level 3
+Upgrade/Name/TaldarimIcons=Tal'Darim Icons
+Upgrade/Name/TaldarimShields=Tal'Darim Shields
+Upgrade/Name/TaldarimShieldsLevel1=Tal'Darim Shields Level 1
+Upgrade/Name/TaldarimShieldsLevel2=Tal'Darim Shields Level 2
+Upgrade/Name/TaldarimShieldsLevel3=Tal'Darim Shields Level 3
+Upgrade/Name/TempestTaldarimGroundAttackUpgrade=Tectonic Destabilizers
+Upgrade/Name/VanguardArmoredDamage=Fusion Mortars
+Upgrade/Name/VoidHighTemplarMindBlast=Mind Blast
+Upgrade/Name/VoidRayTaldarimSpeedUpgrade=Flux Vanes
+Upgrade/Name/VoidStasis=Void Stasis
+Upgrade/Name/WarpGateResearchTaldarim=Warp Gate
+Weapon/Name/AlarakStructureOvercharge=Structure Overcharge
+Weapon/Name/Ascendant=Agonizing Blast
+Weapon/Name/ColossusTaldarimChargedBeam=Charged Blast
+Weapon/Name/ColossusTaldarimChargedBeamFast=Charged Blast
+Weapon/Name/DarkTemplarTaldarim=Bane Blades
+Weapon/Name/ImmortalTaldarim=Scatter Cannon
+Weapon/Name/InterceptorTaldarimBeam=Interceptor Beam
+Weapon/Name/InterceptorTaldarimLaunch=Interceptor Launch
+Weapon/Name/InterceptorsTaldarimDummy=Interceptors
+Weapon/Name/IonCannonsGround=Ion Cannons
+Weapon/Name/IonCannonsTaldarim=Ion Cannons
+Weapon/Name/ParticleBeamTaldarim=Particle Bean
+Weapon/Name/ParticleDisruptorsTaldarim=Particle Disruptors
+Weapon/Name/SOAMothershipv4Weapon=Terminator Beam
+Weapon/Name/SupplicantWeapon=Blood Orb
+Weapon/Name/TempestTaldarim=Kinetic Overload
+Weapon/Name/TempestTaldarimGround=Resonance Coil
+Weapon/Name/VoidRayTaldarim=Destruction Beam
+Weapon/Name/WarpPrismTaldarimWeapon=Phase Blaster
+e_cmdCantBuildOnThat_Tal=Must place on an active Vespene Geyser
+e_cmdFoodUsageImpossible_Tal=Request not possible<n/>Supply limit reached
+e_cmdMustBuildRefineryFirst_Tal=Must build assimilator first
+e_cmdNotEnoughFood_Tal=Not enough psi<n/>Construct additional Pylons

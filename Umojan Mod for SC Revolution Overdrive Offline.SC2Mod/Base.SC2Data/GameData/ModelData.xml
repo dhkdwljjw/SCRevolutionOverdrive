@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="InfantryQuarter" parent="BarracksBase">
+        <Model value="Assets\Buildings\Umojan\Barracks_Umojan.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.250000"/>
+    </CModel>
+    <CModel id="InfantryQuarterBuild" parent="BarracksBuildBase"/>
+    <CModel id="InfantryQuarterDeath" parent="BarracksDeathBase">
+        <Model value="Assets\Buildings\Terran\BarracksDeathEx1\BarracksDeathEx1.m3"/>
+    </CModel>
+    <CModel id="InfantryQuarterPlacement" parent="BarracksPlacementBase" low="InfantryQuarter">
+        <Model value="Assets\Buildings\Terran\BarracksPlacement\BarracksPlacement.m3"/>
+    </CModel>
+    <CModel id="InfantryQuarterPortrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portrait\Umojan\Adjutant_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\Adjutant_Umojan_Portrait_Static.dds"/>
+        <Lighting value="Adjutant_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="InfantryQuarterSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Barracks\Splat_Barracks.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="CarryHarvestableRichVespeneGeyserGasUmojan" parent="FX">
+        <Model value="Assets\Buildings\Resources\GasCanister_HighYield\GasCanister_HighYield.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CarryHarvestableVespeneGeyserGasUmojan" parent="FX">
+        <Model value="Assets\Buildings\Resources\GasCanister\GasCanister.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CarryHarvestableVespeneGeyserGasDeathUmojan" parent="UnitDeath">
+        <Model value="Assets\Units\Neutral\GasCube_Death\GasCube_Death.m3"/>
+        <Flags index="Wait" value="0"/>
+    </CModel>
+    <CModel id="LogisticsDepot" parent="SupplyDepotBase">
+        <Model value="Assets\Buildings\Umojan\SupplyDepot_UmojanV2.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.500000"/>
+    </CModel>
+    <CModel id="LogisticsDepotBuild" parent="SupplyDepotBuildBase"/>
+    <CModel id="LogisticsDepotDeath" parent="SupplyDepotDeathBase">
+        <Model value="Assets\Buildings\Terran\SupplyDepotDeathEx1\SupplyDepotDeathEx1.m3"/>
+    </CModel>
+    <CModel id="LogisticsDepotPlacement" parent="SupplyDepotPlacementBase">
+        <Model value="Assets\Buildings\Terran\SupplyDepotPlacement\SupplyDepotPlacement.m3"/>
+    </CModel>
+    <CModel id="LogisticsDepotPortrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portrait\Umojan\Adjutant_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\Adjutant_Umojan_Portrait_Static.dds"/>
+        <Lighting value="Adjutant_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="LogisticsDepotSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_SupplyDepot\Splat_SupplyDepot.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="SentryPost" parent="MissileTurretBase">
+        <Model value="Assets\Buildings\Umojan\Umojan_MissileTurret.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.500000"/>
+    </CModel>
+    <CModel id="SentryPostBuild" parent="MissileTurretBuildBase"/>
+    <CModel id="SentryPostDeath" parent="MissileTurretDeathBase">
+        <Model value="Assets\Buildings\Terran\MissileTurretDeathEx1\MissileTurretDeathEx1.m3"/>
+    </CModel>
+    <CModel id="SentryPostPlacement" parent="MissileTurretPlacementBase">
+        <Model value="Assets\Buildings\Terran\MissileTurretPlacement\MissileTurretPlacement.m3"/>
+    </CModel>
+    <CModel id="SentryPostSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_MissileTurret\Splat_MissileTurret.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SentryPostWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MissileTurretMissile\MissileTurretMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="SentryPostAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MissileTurretMissileImpact\MissileTurretMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VespenePlant" parent="RefineryBase">
+        <Model value="Assets\Buildings\Umojan\Refinery_UmojanV1.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+    </CModel>
+    <CModel id="VespenePlantDeath" parent="RefineryDeathBase">
+        <Model value="Assets\Buildings\Terran\Refinery_CovertOps_Death\Refinery_CovertOps_Death.m3"/>
+    </CModel>
+    <CModel id="VespenePlantEmptyDeath" parent="RefineryEmptyDeathBase">
+        <Model value="Assets\Buildings\Terran\Refinery_CovertOps_Empty_Death\Refinery_CovertOps_Empty_Death.m3"/>
+    </CModel>
+    <CModel id="VespenePlantPlacement" parent="RefineryPlacementBase">
+        <Model value="Assets\Buildings\Terran\Refinery_CovertOps_Placement\Refinery_CovertOps_Placement.m3"/>
+    </CModel>
+    <CModel id="VespenePlantPortrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portrait\Umojan\Adjutant_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\Adjutant_Umojan_Portrait_Static.dds"/>
+        <Lighting value="Adjutant_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="VespenePlantRich" parent="RefineryBase">
+        <Model value="Assets\Buildings\Umojan\Refinery_UmojanV1_HighYield.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+    </CModel>
+    <CModel id="VespenePlantRichDeath" parent="RefineryDeathBase">
+        <Model value="Assets\Buildings\Terran\Refinery_CovertOps_HighYield_Death\Refinery_CovertOps_HighYield_Death.m3"/>
+    </CModel>
+    <CModel id="VespenePlantSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Refinery\Splat_Refinery.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="VespeneHarvesterUmojanBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\SwannVespeneDrone_Beam\SwannVespeneDrone_Beam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VespeneHarvesterUmojanDeathModel" parent="PersistentSpellFX">
+        <Model value="Assets\Units\Terran\SwannVespeneDrone_Death\SwannVespeneDrone_Death.m3"/>
+    </CModel>
+    <CModel id="VespeneHarvesterUmojanModel" parent="PersistentSpellFX">
+        <Model value="Assets\Units\Terran\SwannVespeneDrone\SwannVespeneDrone.m3"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="AdjutantUmojanPortrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portrait\Umojan\Adjutant_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\Adjutant_Umojan_Portrait_Static.dds"/>
+        <Lighting value="Adjutant_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="CommandPostBuild" parent="CommandCenterBuildBase"/>
+    <CModel id="CommandPostMorphDeath" parent="CommandCenterMorphDeathBase">
+        <Model value="Assets\Buildings\Terran\CommandCenter_Silver_Morph_Death\CommandCenter_Silver_Morph_Death.m3"/>
+    </CModel>
+    <CModel id="CommandPost" parent="CommandCenterBase">
+        <Model value="Assets\Buildings\Umojan\Umojan_CommandCenter_1.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="3.000000"/>
+    </CModel>
+    <CModel id="CommandPostDeath" parent="CommandCenterDeathBase">
+        <Model value="Assets\Buildings\Terran\CommandCenter_Silver_Death\CommandCenter_Silver_Death.m3"/>
+    </CModel>
+    <CModel id="OrbitalCommandPostDeath" parent="BuildingDeathEx">
+        <Model value="Assets\Buildings\Terran\OrbitalCommand_Silver_Death\OrbitalCommand_Silver_Death.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.500000"/>
+        </Events>
+        <Flags index="TeenSafe" value="1"/>
+    </CModel>
+    <CModel id="CommandPostPlacement" parent="CommandCenterPlacementBase" low="CommandPost">
+        <Model value="Assets\Buildings\Terran\CommandCenter_Silver_Placement\CommandCenter_Silver_Placement.m3"/>
+    </CModel>
+    <CModel id="CommandPostPortrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portrait\Umojan\Adjutant_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\Adjutant_Umojan_Portrait_Static.dds"/>
+        <Lighting value="Adjutant_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="CommandPostSplat" parent="Splat">
+        <Model value="Assets\Splats\splat_commandcenter\splat_commandcenter.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="RecoveryDevice" parent="Building">
+        <Model value="Assets\Buildings\Umojan\HiveMindEmulator_Umojan.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.200000"/>
+        <EditorCategories value="Race:Terran"/>
+        <SelectionRadius value="1.100000"/>
+        <SelectionLayer value="2"/>
+        <ShadowRadius value="1.100000"/>
+        <TechPurchaseCamera value="Star2CameraHigher10"/>
+        <UnitGlossaryCamera value="Star2CameraHigher10"/>
+        <PlanetPanelCamera value="Star2CameraHigher10"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="RecoveryDevicePlacement" parent="Placement" Race="Terran">
+        <SelectionRadius value="0.000000"/>
+        <Radius value="-1.000000"/>
+        <ShadowRadius value="0.000000"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+        <Model value="Assets\Buildings\Umojan\HiveMindEmulator_Umojan_Placement.m3"/>
+    </CModel>
+    <CModel id="RecoveryDeviceBuild" parent="TerranBuildingBuildSmall"/>
+    <CModel id="RecoveryDeviceDeath" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Terran\HiveMindEmulatorDeath\HiveMindEmulatorDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.300000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionMedium"/>
+            <Type value="Sound"/>
+            <Time value="3.333000"/>
+        </Events>
+    </CModel>
+    <CModel id="RecoveryDeviceSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_MissileTurret\Splat_MissileTurret.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="FireSuppressionBots" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\FireSuppressionBots\FireSuppressionBots.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Spray"/>
+            <Type value="Sound"/>
+            <Time value="0.833000"/>
+            <Payload value="FireSuppressionBots_Water"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Spray"/>
+            <Type value="Sound"/>
+            <Time value="1.666000"/>
+            <Payload value="FireSuppressionBots_Water"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Spray"/>
+            <Type value="Sound"/>
+            <Time value="4.000000"/>
+            <Payload value="FireSuppressionBots_Water"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Spray"/>
+            <Type value="Sound"/>
+            <Time value="5.666000"/>
+            <Payload value="FireSuppressionBots_Water"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Spray"/>
+            <Type value="Sound"/>
+            <Time value="7.666000"/>
+            <Payload value="FireSuppressionBots_Water"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Whizzby"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+            <Payload value="FireSuppressionBots_Whizzby"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Whizzby"/>
+            <Type value="Sound"/>
+            <Time value="2.166000"/>
+            <Payload value="FireSuppressionBots_Whizzby"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Whizzby"/>
+            <Type value="Sound"/>
+            <Time value="5.000000"/>
+            <Payload value="FireSuppressionBots_Whizzby"/>
+        </Events>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="Whizzby"/>
+            <Type value="Sound"/>
+            <Time value="8.666000"/>
+            <Payload value="FireSuppressionBots_Whizzby"/>
+        </Events>
+    </CModel>
+    <CModel id="CrusaderShrapnelImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Umojan\Nova_PenetratingShot_Impact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="CrusaderShrapnelLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Umojan\Marauder_Mengsk_COOP_Shrapnel.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="AntiTankMissileWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\OrdnanceTowerMissile\OrdinanceTowerMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="AntiTankMissileAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\OrdnanceTowerMissileImpact\OrdinanceTowerMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="Diamondback" parent="Unit" Race="Terran">
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid07"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="0.866400"/>
+        <ShadowRadius value="0.866400"/>
+        <TechPurchaseCamera value="TechPurchaseDiamondback"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="1.000000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraMid07"/>
+        <Model value="Assets\Units\Umojan\Umojan_SuperDiamondback_V2.m3"/>
+    </CModel>
+    <CModel id="DiamondbackAttackBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\DiamondbackBeam\DiamondbackBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="DiamondbackDeath" parent="UnitDeath" Race="Terran">
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="DiamondbackPortrait" parent="FXAPortrait" Race="Terran"/>
+    <CModel id="Crusader" parent="MarauderBase">
+        <Model value="Assets\Units\Umojan\Elite_Marauder.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.200000"/>
+    </CModel>
+    <CModel id="CrusaderAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarauderMissileLaunch\MarauderMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CrusaderBaseAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MarauderBaseMissileImpact\MarauderBaseMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CrusaderUpgradedAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MarauderMissileImpact\MarauderMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="DominatorGrenadesLMWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MarauderMissile\MarauderMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="DominatorGrenadesUpgradedLMWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Marauder_ConcussiveShell_MP_Missile\Marauder_ConcussiveShell_MP_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RecoveryDeviceRechargeChanneledBeam" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\ProtossShield_Battery_Beam\ProtossShield_Battery_Beam.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="RecoveryDeviceRechargeChanneledModel" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\ProtossShield_Battery_Beam_Impact\ProtossShield_Battery_Beam_Impact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="SpecOpsCommandBuild" parent="GhostAcademyBuildBase"/>
+    <CModel id="SpecOpsCommand" parent="GhostAcademyBase">
+        <Model value="Assets\Buildings\Umojan\GhostAcademy_UmojanV1.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.500000"/>
+    </CModel>
+    <CModel id="SpecOpsCommandDeath" parent="GhostAcademyDeathBase">
+        <Model value="Assets\Buildings\Terran\GhostAcademyDeathEx1\GhostAcademyDeathEx1.m3"/>
+    </CModel>
+    <CModel id="SpecOpsCommandPlacement" parent="GhostAcademyPlacementBase" low="SpecOpsCommand">
+        <Model value="Assets\Buildings\Terran\GhostAcademyPlacement\GhostAcademyPlacement.m3"/>
+    </CModel>
+    <CModel id="SpecOpsCommandPortrait" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portrait\Umojan\Adjutant_Umojan_Portrait.m3"/>
+        <Image value="Assets\Textures\Adjutant_Umojan_Portrait_Static.dds"/>
+        <Lighting value="Adjutant_Umojan_Portrait"/>
+    </CModel>
+    <CModel id="SpecOpsCommandSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_ShadowOps\Splat_ShadowOps.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Pioneer" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Umojan\Umojan_SCB_default.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="0.800000"/>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="Work" value="0"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid05"/>
+        <Radius value="0.450000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionRadius value="0.468700"/>
+        <ShadowRadius value="0.468700"/>
+        <SquibTypeDefault value="Flesh"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.400000"/>
+        <TipabilityWidth value="0.400000"/>
+        <UnitGlossaryCamera value="Star2CameraMid05"/>
+    </CModel>
+    <CModel id="PioneerAttackLaunch" parent="RaceImpactFX" Race="Terran">
+        <Model value="Assets\Effects\Other\PhysicsImpactSparksLight\PhysicsImpactSparksLight.m3"/>
+    </CModel>
+    <CModel id="PioneerDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Critters\LabBotDeath\LabBotDeath.m3"/>
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="PioneerPortrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Portrait\Umojan\SCB_Portrait.m3"/>
+        <Flags index="Facial" value="1"/>
+        <Image value="Assets\Textures\scb_portrait_static.dds"/>
+    </CModel>
+    <CModel id="Warrior" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Umojan\Elite_Marine_(Alternate).m3"/>
+        <Occlusion value="Show"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.000000"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="WarriorAttackImpact" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarriorAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponLaunch\ScoutWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarriorBunkerAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\ScoutWeaponLaunch\ScoutWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Striker" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Umojan\Umojan_Rocketeer.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.000000"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+        <ScaleMax value="1.200000,1.200000,1.200000"/>
+        <ScaleMin value="1.200000,1.200000,1.200000"/>
+    </CModel>
+    <CModel id="TheseusAntiTankMissilesLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TheseusAntiTankMissilesImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TheseusAntiTankMissilesWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\GoliathAirMissile\GoliathAirMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ReconUAVAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\HunterKillerMissileImpact\HunterKillerMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="ReconUAV" parent="Unit" Race="Protoss">
+        <Model value="Assets\Units\Umojan\SeekerDrone_Toshs_GoonsCollection.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow05"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.000000"/>
+        <Radius value="0.400000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.350000"/>
+        <SelectionRadius value="0.470200"/>
+        <ShadowRadius value="0.470200"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow05"/>
+        <UnitGlossaryCamera value="Star2CameraLow05"/>
+    </CModel>
+    <CModel id="ReconUAVDeath" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Units\Terran\SwannVespeneDrone_Death\SwannVespeneDrone_Death.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="ReconUAVPortrait" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portrait\Umojan\seekerdrone_toshsgoons_collection_portrait.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Image value="Assets\Textures\seekerdrone_toshsgoons_portrait_Static.dds"/>
+    </CModel>
+    <CModel id="RangerMissiles" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\WraithMissile\WraithMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RangerMissilesAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\WraithMissileImpact\WraithMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="RangerMissilesAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ShieldAbsorbDiamondbackViz" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Protoss\DragoonForceShield\DragoonForceShield.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="MaverickMissilesAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MaverickMissilesAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\WraithMissileImpact\WraithMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MaverickMissiles" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\WraithMissile\WraithMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Artemis" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Umojan\Umojan_Valkyrie_V1.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.800000"/>
+        <Radius value="0.875000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.400000"/>
+        <SelectionRadius value="0.750000"/>
+        <ShadowRadius value="1.250000"/>
+        <SquibTypeDefault value="Metal"/>
+        <UnitGlossaryCamera value="Star2CameraLow06"/>
+    </CModel>
+    <CModel id="ArtemisAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissileImpact\WarHoundHaywireMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ArtemisDamageMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Xanthos_Missile\Xanthos_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ArtemisDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Doodads\DOM_Explosion_Med\DOM_Explosion_Med.m3"/>
+    </CModel>
+    <CModel id="AresArtillery" parent="Unit">
+        <Model value="Assets\Units\Umojan\Umojan_Waffentrager_Max.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.250000"/>
+        <SelectionRadius value="1.500000"/>
+        <ShadowRadius value="1.250000"/>
+        <SquibTypeDefault value="Metal"/>
+        <Tipability value="1.250000"/>
+        <TipabilityLength value="1.250000"/>
+        <TipabilityWidth value="1.250000"/>
+    </CModel>
+    <CModel id="CenturionInspirationImpact" parent="Glaze">
+        <Model value="Assets\Effects\Glaze\Glaze_Alarak_COOP_Empower\Glaze_Alarak_COOP_Empower.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CenturionInspirationLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\Fenix_ShieldCapacitor\Fenix_ShieldCapacitor.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="CenturionPlasmaSurgeImpact" parent="PersistentSpellFX">
+        <Model value="Assets\COOP\Stetmann\Effects\Ultralisk_Stetmann_COOP_Stunned\Ultralisk_Stetmann_COOP_Stunned.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CenturionPlasmaSurgeLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Protoss\PlasmaSurgeLaunch\PlasmaSurgeLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="CenturionAttackImpact" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CenturionAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="CenturionBunkerAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Centurion" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Umojan\Umojan_Marine_officer_V1.m3"/>
+        <RequiredAnims value="Assets\Units\Terran\Marine_SwarmAnims\Marine_SwarmAnims.m3a"/>
+        <AttachProps Id="Ref_Center" RadiusShield="0.600000"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid03"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid03"/>
+    </CModel>
+    <CModel id="AmphibiousShip" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Umojan\Umojan_Dropship.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.500000"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow09"/>
+        <Radius value="0.750000"/>
+        <ScaleMax value="0.700000,0.700000,0.700000"/>
+        <ScaleMin value="0.700000,0.700000,0.700000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.500000"/>
+        <SelectionRadius value="1.071200"/>
+        <ShadowRadius value="1.071200"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="TechPurchaseMedivac"/>
+        <UnitGlossaryCamera value="Star2CameraLow09"/>
+    </CModel>
+    <CModel id="ShadowAssassin" parent="GhostBase">
+        <Model value="Assets\Units\Terran\Ghost_Umojan\Ghost_Umojan.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="0.600000"/>
+    </CModel>
+    <CModel id="ShadowAssassinAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponLaunch\GhostWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ShadowAssassinBunkerAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponLaunch\GhostWeaponLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ShadowAssassinAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ShadowAssassinSnipeAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\SnipeLaunch\SnipeLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ShadowAssassinSnipeAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\SnipeImpact\SnipeImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PsionicLockdownWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Raven_Scrambler_Missile_MP\Raven_Scrambler_Missile_MP.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="1.500000,1.500000,1.500000"/>
+        <ScaleMin value="1.500000,1.500000,1.500000"/>
+    </CModel>
+    <CModel id="PsionicLockdownBehavior" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown\Goliath_Lockdown.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PsionicLockdownImpact" parent="RaceImpactFX" Race="Terran">
+        <Model value="Assets\Effects\Terran\Goliath_Lockdown_Impact\Goliath_Lockdown_Impact.m3"/>
+        <Priority value="32"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+    </CModel>
+    <CModel id="TacticalCruiseMissileIndicatorTrackingBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\HunterSeekerTargetingBeam\HunterSeekerTargetingBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TacticalCruiseMissileExplode" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\TerranLargeUnitDeath\TerranLargeUnitDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="TacticalCruiseMissileDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Effects\Terran\ThorAirCannonImpact\ThorAirCannonImpact.m3"/>
+    </CModel>
+    <CModel id="TacticalCruiseMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Mutator_Nuke_Missile\Mutator_Nuke_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="1.000000"/>
+    </CModel>
+    <CModel id="TacticalCruiseMissileIndicatorModel" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_AirBomb_MissileA\Dragoon_Purifier_Coop_AirBomb_MissileA.m3"/>
+    </CModel>
+    <CModel id="TacticalCruiseMissileIndicator" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\Dragoon_Purifier_Coop_AirBomb_MissileA\Dragoon_Purifier_Coop_AirBomb_MissileA.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MissileCruiser" parent="Unit" Race="Terran">
+        <Model value="Assets\Units\Umojan\Umojan_Scylla.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.500000"/>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="SetC" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetC" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetC" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetC" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetC" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="SetC" value="5"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="SetB" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="SetB" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 08">
+            <Keys index="SetB" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 09">
+            <Keys index="SetB" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 10">
+            <Keys index="SetB" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 11">
+            <Keys index="SetB" value="5"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 14">
+            <Keys index="SetA" value="2"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <Radius value="1.000000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.700000"/>
+        <SelectionRadius value="1.562500"/>
+        <ShadowRadius value="1.562500"/>
+        <SquibTypeDefault value="Metal"/>
+        <Tipability value="0.150000"/>
+        <UnitGlossaryCamera value="Star2CameraHigh15"/>
+    </CModel>
+    <CModel id="MissileCruiserDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\CerberusDeath\CerberusDeath.m3"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="MissileCruiserPortrait" parent="Battlecruiser_Umojan_Portrait" Prefix="Portraits\"/>
+    <CModel id="MeteorMissileLeftImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="MeteorMissileLeftLMWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MissileTurretMissile\MissileTurretMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MeteorMissileRightImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="MeteorMissileRightLMWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MissileTurretMissile\MissileTurretMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Berkut" parent="RavenBase">
+        <Model value="Assets\Units\Umojan\UmojanCrow2.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.800000"/>
+    </CModel>
+    <CModel id="ZeusTransit" parent="ThorTransitBase">
+        <Model value="Assets\Units\Terran\Thor_Silver_Transit\Thor_Silver_Transit.m3"/>
+    </CModel>
+    <CModel id="Athena" parent="VikingFighterBase">
+        <AttachProps Id="Ref_Center" RadiusShield="1.600000"/>
+        <Model value="Assets\Units\Umojan\Umojan_Fighter_V2.m3"/>
+    </CModel>
+    <CModel id="AthenaAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="AthenaAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileLaunch\VikingFighterMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="AthenaWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissile\VikingFighterMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="HaywireMissileAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissileImpact\WarHoundHaywireMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="HaywireMissileAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissileLaunch\WarHoundHaywireMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="HaywireMissileWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\WarHoundHaywireMissile\WarHoundHaywireMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarHoundUmojan" parent="Unit">
+        <Model value="Assets\Units\Umojan\Warhound_Umojan.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="1.600000"/>
+        <EditorCategories value="Race:Terran"/>
+        <PlanetPanelCamera value="Star2CameraHigh07"/>
+        <Radius value="0.820000"/>
+        <SelectionRadius value="0.700000"/>
+        <ShadowRadius value="2.000000"/>
+        <UnitGlossaryCamera value="Star2CameraHigh07"/>
+    </CModel>
+    <CModel id="WarHoundUmojanAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\WarHoundRailGunMissileImpact\WarHoundRailGunMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarHoundUmojanAntiAirAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\WarHoundRailGunMissileImpact\WarHoundRailGunMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarHoundUmojanBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\WarHoundRailGunMissile\WarHoundRailGunMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarHoundUmojanAntiAirBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\WarHoundRailGunMissile\WarHoundRailGunMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="WarhoundUmojanPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\Portrait\Umojan\WarhoundBlackOpsPortrait.m3"/>
+        <FacialController value="LocalizedData\Facial\WarhoundPortrait.fxa"/>
+        <Image value="Assets\Textures\WarhoundBlackOpsPortrait_Static.dds"/>
+    </CModel>
+    <CModel id="ZirconCruiseMissileAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\HunterKillerMissileImpact\HunterKillerMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ZirconCruiseMissileWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\Mutator_Standard_Missile\Mutator_Standard_Missile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <PhysicsMaterialOverride value="MetalLight"/>
+    </CModel>
+    <CModel id="ZirconCruiseMissileDeath" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\Mutator_MissileMadness_ShotDown\Mutator_MissileMadness_ShotDown.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ZirconCruiseMissileTargetCursorSplat" parent="OneShotSpellFX">
+        <Model value="Assets\UI\BossTargetCursorSplat\BossTargetCursorSplat.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PointDefenseSystemAttackBeam" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\TargetingDroneBeam\TargetingDroneBeam.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PointDefenseSystemBeamImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\PointDefenseBeamImpact\PointDefenseBeamImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="MouseCursor_Alternate" parent="UI">
+        <Model value="Assets\UI\SOA_MouseCursor\SOA_MouseCursor.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+    </CModel>
+    <CModel id="VoidAssaulterOrbitalStrikeImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\SOA_OrbitalStrike_Impact_Upgrade\SOA_OrbitalStrike_Impact_Upgrade.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VoidAssaulterOrbitalStrikeMissile" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\SOA_OrbitalStrike_Missile_Upgrade\SOA_OrbitalStrike_Missile_Upgrade.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events>
+            <Anim value="Stand,00"/>
+            <Name value="VoidAssaulter_Orbital_Strike_Missile"/>
+            <Type value="Sound"/>
+            <Time value="0.033000"/>
+            <Payload value="VoidAssaulter_Orbital_Strike_Missile"/>
+        </Events>
+    </CModel>
+    <CModel id="VoidAssaulterOrbitalStrikeTargetModel" Race="Neutral">
+        <Model value="Assets\Effects\Protoss\SOA_GroundTargetCursor\SOA_GroundTargetCursor.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Priority value="16"/>
+        <ScaleMax value="0.550000,0.550000,0.550000"/>
+        <ScaleMin value="0.550000,0.550000,0.550000"/>
+    </CModel>
+    <CModel id="PsionicDisruptionStormModel" parent="PersistentSpellFX">
+        <Model value="Assets\COOP\Tychus\Effects\Spectre_Heavens_COOP_UltrasonicPulse\Spectre_Heavens_COOP_UltrasonicPulse.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <RadiusLoose value="1.000000"/>
+    </CModel>
+    <CModel id="PsionicDisruptionStormImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\PsiStormImpact\PsiStormImpact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Radius value="1.000000"/>
+    </CModel>
+    <CModel id="VoidAssaulterObliterateCasterChannel" parent="OneShotSpellFX">
+        <Model value="Assets\Effects\Terran\PsionicLashCasterLaunch\PsionicLashCasterLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VoidAssaulterObliterateExplosion" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\PsionicLashImpact\PsionicLashImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Zeus" parent="Unit" Race="Terran">
+        <Occlusion value="Show"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="1.333000"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.500000"/>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="CustomA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="CustomA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="CustomB" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 08">
+            <Keys index="CustomB" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Center">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <Radius value="1.200000"/>
+        <ShadowRadius value="1.333000"/>
+        <TechPurchaseCamera value="Star2CameraHigher16"/>
+        <UnitGlossaryCamera value="Star2CameraHigher16"/>
+        <PlanetPanelCamera value="Star2CameraHigher16"/>
+        <Model value="Assets\Units\Umojan\Umojan_Odin_V3.m3"/>
+    </CModel>
+    <CModel id="ZeusDeath" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\OdinDeath\OdinDeath.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+    </CModel>
+    <CModel id="ZeusGroundAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\ThorArmMissileLaunch\ThorArmMissileLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ZeusGroundAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ThorShoulderMissileImpact\ThorShoulderMissileImpact.m3"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ZeusAAWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\ThorShoulderMissile\ThorShoulderMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ZeusAAAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\ThorShoulderMissileLaunch\ThorShoulderMissileLaunch.m3"/>
+        <ScaleMax value="1.400000,1.400000,1.400000"/>
+        <ScaleMin value="1.400000,1.400000,1.400000"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ZeusAAAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\OdinShoulderMissileImpact\OdinShoulderMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.500000,0.500000,0.500000"/>
+        <ScaleMin value="0.500000,0.500000,0.500000"/>
+    </CModel>
+    <CModel id="BarrageModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ThorShoulderMissileImpact\ThorShoulderMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="EnterpriseGun" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\CerberusYamatoMissile\CerberusYamatoMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="EnterpriseGunImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\CerberusYamatoMissileImpact\CerberusYamatoMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="OdysseusMissileRightImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="OdysseusMissileRightLMWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MissileTurretMissile\MissileTurretMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="OdysseusMissileLeftImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingFighterMissileImpact\VikingFighterMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <SelectionRadius value="0.250000"/>
+        <ShadowRadius value="0.250000"/>
+    </CModel>
+    <CModel id="OdysseusMissileLeftLMWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\MissileTurretMissile\MissileTurretMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="Aquila" parent="Unit">
+        <Model value="Assets\Units\Umojan\Umojan_Battlecruiser_loki_V1.m3"/>
+        <AttachProps Id="Ref_Center" RadiusShield="2.500000"/>
+        <EditorCategories value="Race:Terran"/>
+        <Occlusion value="Show"/>
+        <Radius value="1.300000"/>
+        <ScaleMax value="0.800000,0.800000,0.800000"/>
+        <ScaleMin value="0.800000,0.800000,0.800000"/>
+        <SelectionOffset value="0.000000,0.000000,-0.700000"/>
+        <SelectionRadius value="1.562500"/>
+        <Tipability value="0.150000"/>
+        <ShadowRadius value="1.562500"/>
+        <UnitGlossaryCamera value="Star2CameraLow12"/>
+    </CModel>
+    <CModel id="AquilaDeath" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\BattlecruiserLokiDeath\BattlecruiserLokiDeath.m3"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.333000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.666000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="1.000000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.600000"/>
+        </Events>
+    </CModel>
+    <CModel id="UmojanHeroRepairGlaze" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Glaze\Glaze_RegenerativeBioSteel\Glaze_RegenerativeBioSteel.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TomahawkCruiseMissileA" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\OrdnanceTowerMissile\OrdinanceTowerMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TomahawkCruiseMissileB" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\OrdnanceTowerMissile\OrdinanceTowerMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TomahawkCruiseMissileC" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\OrdnanceTowerMissile\OrdinanceTowerMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TomahawkCruiseMissileD" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\OrdnanceTowerMissile\OrdinanceTowerMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TomahawkCruiseMissileAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\HunterKillerMissileImpact\HunterKillerMissileImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="Praetoria" parent="VikingFighterBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <Model value="Assets\Units\Umojan\Umojan_VikingTitanFighter.m3"/>
+    </CModel>
+    <CModel id="PraetoriaDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\VikingTitanFighterDeath\VikingTitanFighterDeath.m3"/>
+        <Occlusion value="Show"/>
+        <VariationCount value="2"/>
+    </CModel>
+    <CModel id="VoidAssaulter" parent="Unit">
+        <Model value="Assets\Units\Umojan\Spectre_ShadowSword_collection_Male.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Flags index="AutoUnload" value="1"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid04"/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+        <ShadowRadius value="0.375000"/>
+        <SquibTypeDefault value="Flesh"/>
+        <TechPurchaseCamera value="TechPurchaseInfantry"/>
+        <UnitGlossaryCamera value="Star2CameraMid04"/>
+        <AttachProps Id="Ref_Center" RadiusShield="0.600000"/>
+    </CModel>
+    <CModel id="VoidAssaulterPortrait" parent="Portrait" Race="Terran">
+        <Model value="Assets\Portrait\Umojan\Spectre_ShadowSword_Collection_Male_Portrait.m3"/>
+    </CModel>
+    <CModel id="VoidAssaulterDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Units\Terran\SpectreDeath\SpectreDeath.m3"/>
+    </CModel>
+    <CModel id="VoidAssaulterAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\SnipeImpact\SnipeImpact.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VoidAssaulterAttackLaunch" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\SnipeLaunch\SnipeLaunch.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="NanoCleanseModel" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Terran\BattlecruiserDefensiveMatrix\BattlecruiserDefensiveMatrix.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Radius value="2.000000"/>
+        <ScaleMax value="0.900000,0.900000,0.900000"/>
+        <ScaleMin value="0.900000,0.900000,0.900000"/>
+        <SelectionRadius value="0.555400"/>
+        <ShadowRadius value="0.555400"/>
+    </CModel>
+    <CModel id="PsionicSuppressionFieldWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\ArcadeVikingMissileBomb\ArcadeVikingMissileBomb.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="PsionicSuppressionFieldAttackImpactEffect" parent="OneShotSpellFX">
+        <Model value="Assets\COOP\Stetmann\Effects\Ultralisk_Stetmann_COOP_StunAOE\Ultralisk_Stetmann_COOP_StunAOE.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <RadiusLoose value="0.600000"/>
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="PsionicSuppressionFieldGlaze" parent="PersistentSpellFX">
+        <Model value="Assets\Effects\Glaze\Glaze_Fenix_Scout_StunMissile\Glaze_Fenix_Scout_StunMissile.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="ArmamentFacility" parent="EngineeringBayBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <Model value="Assets\Buildings\Umojan\EngineeringBay_UmojanV1.m3"/>
+    </CModel>
+    <CModel id="ArmamentFacilityBuild" parent="EngineeringBayBuildBase"/>
+    <CModel id="ArmamentFacilityDeath" parent="EngineeringBayDeathBase">
+        <Model value="Assets\Buildings\Terran\EngineeringBay_Silver_Death\EngineeringBay_Silver_Death.m3"/>
+    </CModel>
+    <CModel id="ArmamentFacilityPlacement" parent="EngineeringBayPlacementBase">
+        <Model value="Assets\Buildings\Terran\EngineeringBay_Silver_Placement\EngineeringBay_Silver_Placement.m3"/>
+    </CModel>
+    <CModel id="ArmamentFacilitySplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_EngineeringBay\Splat_EngineeringBay.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="TacticsAcademy" parent="GhostAcademyBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <SelectionRadius value="2.000000"/>
+        <Model value="Assets\Buildings\Umojan\Umojan_Academy_SCBW.m3"/>
+    </CModel>
+    <CModel id="TacticsAcademyBuild" parent="GhostAcademyBuildBase"/>
+    <CModel id="TacticsAcademyDeath" parent="GhostAcademyDeathBase">
+        <Model value="Assets\Buildings\Umojan\AcademySCBW@Death.m3"/>
+        <AnimSpeed value="0.700000"/>
+        <Events index="0">
+            <Anim value="Death,00"/>
+            <Name value="Terran_PreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.020000"/>
+            <Payload value="Terran_PreExplosionSmall"/>
+        </Events>
+        <Events index="1">
+            <Anim value="Death,00"/>
+            <Name value="Terran_ExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.900000"/>
+            <Payload value="Terran_ExplosionLarge"/>
+        </Events>
+        <Events index="2">
+            <Anim value="Death,01"/>
+            <Name value="Terran_PrePreExplosion"/>
+            <Type value="Sound"/>
+            <Time value="0.000000"/>
+            <Payload value="Terran_PrePreExplosion"/>
+        </Events>
+        <Events index="3">
+            <Anim value="Death,01"/>
+            <Name value="Terran_PreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.600000"/>
+            <Payload value="Terran_PreExplosionSmall"/>
+        </Events>
+        <Events index="4">
+            <Anim value="Death,01"/>
+            <Name value="Terran_ExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.800000"/>
+            <Payload value="Terran_ExplosionLarge"/>
+        </Events>
+        <SelectionRadius value="1.900000"/>
+    </CModel>
+    <CModel id="TacticsAcademyPlacement" parent="GhostAcademyPlacementBase">
+        <Model value="Assets\Buildings\Umojan\AcademySCBW@Placement.m3"/>
+    </CModel>
+    <CModel id="TacticsAcademySplat" parent="Splat">
+        <Model value="Assets\Buildings\Umojan\Splat_AcademySCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.950000,0.950000,0.950000"/>
+        <ScaleMin value="0.950000,0.950000,0.950000"/>
+    </CModel>
+    <CModel id="PowerPlant" parent="FactoryBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <ScaleMax value="0.722500,0.722500,0.722500"/>
+        <ScaleMin value="0.722500,0.722500,0.722500"/>
+        <Model value="Assets\Buildings\Umojan\Umojan_ScienceFacility2.m3"/>
+    </CModel>
+    <CModel id="PowerPlantBuilding" parent="FactoryBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <ScaleMax value="0.722500,0.722500,0.722500"/>
+        <ScaleMin value="0.722500,0.722500,0.722500"/>
+        <Model value="Assets\Buildings\Umojan\ScienceFacilitySCBW.m3"/>
+    </CModel>
+    <CModel id="PowerPlantBuild" parent="FactoryBuildBase"/>
+    <CModel id="PowerPlantDeath" parent="BuildingDeathEx">
+        <Model value="Assets\Buildings\Umojan\ScienceFacilitySCBW@Death.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.450000"/>
+        </Events>
+        <Events>
+            <Anim value="Death"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="1.400000"/>
+        </Events>
+    </CModel>
+    <CModel id="PowerPlantPlacement" parent="FactoryPlacementBase">
+        <Model value="Assets\Buildings\Umojan\ScienceFacilitySCBW@Placement.m3"/>
+        <ScaleMax value="0.722500,0.722500,0.722500"/>
+        <ScaleMin value="0.722500,0.722500,0.722500"/>
+    </CModel>
+    <CModel id="PowerPlantSplat" parent="Splat">
+        <Model value="Assets\Buildings\Umojan\Splat_ScienceFacilitySCBW.m3"/>
+        <EditorCategories value="Race:Terran"/>
+        <ScaleMax value="0.750000,0.750000,0.750000"/>
+        <ScaleMin value="0.750000,0.750000,0.750000"/>
+    </CModel>
+    <CModel id="Arsenal" parent="FactoryBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <Model value="Assets\Buildings\Umojan\Factory_UmojanV1.m3"/>
+    </CModel>
+    <CModel id="ArsenalBuild" parent="FactoryBuildBase"/>
+    <CModel id="ArsenalDeath" parent="FactoryDeathBase">
+        <Model value="Assets\Buildings\Terran\Factory_Silver_Death\Factory_Silver_Death.m3"/>
+    </CModel>
+    <CModel id="ArsenalPlacement" parent="FactoryPlacementBase">
+        <Model value="Assets\Buildings\Terran\Factory_Silver_Placement\Factory_Silver_Placement.m3"/>
+    </CModel>
+    <CModel id="ArsenalSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Factory\Splat_Factory.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="EngineeringFactory" parent="ArmoryBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <Model value="Assets\Buildings\Umojan\Umojan_Armory2.m3"/>
+    </CModel>
+    <CModel id="EngineeringFactoryBuild" parent="ArmoryBuildBase"/>
+    <CModel id="EngineeringFactoryDeath" parent="ArmoryDeathBase">
+        <Model value="Assets\Buildings\Terran\Armory_Silver_Death\Armory_Silver_Death.m3"/>
+    </CModel>
+    <CModel id="EngineeringFactoryPlacement" parent="ArmoryPlacementBase">
+        <Model value="Assets\Buildings\Terran\Armory_Silver_Placement\Armory_Silver_Placement.m3"/>
+    </CModel>
+    <CModel id="EngineeringFactorySplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Armory\Splat_Armory.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="StarStation" parent="StarportBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <Model value="Assets\Buildings\Umojan\Starport_UmojanV1.m3"/>
+    </CModel>
+    <CModel id="StarStationBuild" parent="StarportBuildBase"/>
+    <CModel id="StarStationDeath" parent="StarportDeathBase">
+        <Model value="Assets\Buildings\Terran\Starport_CovertOps_Death\Starport_CovertOps_Death.m3"/>
+    </CModel>
+    <CModel id="StarStationPlacement" parent="StarportPlacementBase">
+        <Model value="Assets\Buildings\Terran\Starport_CovertOps_Placement\Starport_CovertOps_Placement.m3"/>
+    </CModel>
+    <CModel id="StarStationSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_Starport\Splat_Starport.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="FleetHeadquarters" parent="FusionCoreBase">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <Model value="Assets\Buildings\Umojan\FusionCore_UmojanV1.m3"/>
+    </CModel>
+    <CModel id="FleetHeadquartersBuild" parent="FusionCoreBuildBase"/>
+    <CModel id="FleetHeadquartersDeath" parent="FusionCoreDeathBase">
+        <Model value="Assets\Buildings\Terran\FusionCoreDeath\FusionCoreDeath.m3"/>
+    </CModel>
+    <CModel id="FleetHeadquartersPlacement" parent="FusionCorePlacementBase">
+        <Model value="Assets\Buildings\Terran\FusionCorePlacement\FusionCorePlacement.m3"/>
+    </CModel>
+    <CModel id="FleetHeadquartersSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_FusionCore\Splat_FusionCore.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="FutureWarfareLab" parent="Building">
+        <AttachProps Id="Ref_Center" RadiusShield="2.000000"/>
+        <SelectionLayer value="2"/>
+        <SelectionRadius value="2.300000"/>
+        <SquibTypeDefault value="Metal"/>
+        <Radius value="1.500000"/>
+        <ShadowRadius value="2.300000"/>
+        <Model value="Assets\Buildings\Umojan\Umojan_MercCompound_V3.m3"/>
+    </CModel>
+    <CModel id="FutureWarfareLabPlacement" parent="Placement">
+        <Model value="Assets\Buildings\Terran\MercCompoundPlacement\MercCompoundPlacement.m3"/>
+    </CModel>
+    <CModel id="FutureWarfareLabDeath" parent="BuildingDeath">
+        <Model value="Assets\Buildings\Terran\MercCompoundDeath\MercCompoundDeath.m3"/>
+        <SelectionRadius value="0.000000"/>
+        <Radius value="-1.000000"/>
+        <EditorCategories value="Race:Terran"/>
+        <ShadowRadius value="0.000000"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranPreExplosionSmall"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.633000"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="TerranExplosionLarge"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+        </Events>
+    </CModel>
+    <CModel id="FutureWarfareLabBuild" parent="TerranBuildingBuild">
+        <SelectionRadius value="2.000000"/>
+        <Radius value="2.000000"/>
+        <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="FutureWarfareLabSplat" parent="Splat">
+        <Model value="Assets\Splats\Splat_MercCompound\Splat_MercCompound.m3"/>
+        <EditorCategories value="Race:Terran"/>
+    </CModel>
+    <CModel id="VespenePlantBuild" parent="RefineryBuildBase">
+        <Model value="Assets\Buildings\Terran\RefineryBuild\RefineryBuild.m3"/>
+    </CModel>
+</Catalog>

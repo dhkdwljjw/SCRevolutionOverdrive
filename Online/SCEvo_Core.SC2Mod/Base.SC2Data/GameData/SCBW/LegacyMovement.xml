@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUser id="LegacyMining@GatherAbils">
+        <Fields Id="Ability" Type="AbilCmd"/>
+        <Instances Id="[Default]"/>
+        <Instances Id="SCVSCBW@Harvest">
+            <AbilCmd Abil="SCVSCBW@Harvest">
+                <Field Id="Ability"/>
+            </AbilCmd>
+        </Instances>
+        <Instances Id="DroneSCBW@Harvest">
+            <AbilCmd Abil="DroneSCBW@Harvest">
+                <Field Id="Ability"/>
+            </AbilCmd>
+        </Instances>
+        <Instances Id="ProbeSCBW@Harvest">
+            <AbilCmd Abil="ProbeSCBW@Harvest">
+                <Field Id="Ability"/>
+            </AbilCmd>
+        </Instances>
+        <Instances Id="SCVHarvest">
+            <AbilCmd Abil="SCVHarvest">
+                <Field Id="Ability"/>
+            </AbilCmd>
+        </Instances>
+        <Instances Id="DroneHarvest">
+            <AbilCmd Abil="DroneHarvest">
+                <Field Id="Ability"/>
+            </AbilCmd>
+        </Instances>
+        <Instances Id="ProbeHarvest">
+            <AbilCmd Abil="ProbeHarvest">
+                <Field Id="Ability"/>
+            </AbilCmd>
+        </Instances>
+    </CUser>
+    <CEffectCancelOrder id="LegacyMining@CancelCurrentOrder"/>
+    <CEffectApplyBehavior id="LegacyMovement@AirUnitBeingSpread">
+        <Behavior value="LegacyMovement@AirBeingSpread"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyForce id="LegacyMovement@AirUnitSpreadForce">
+        <ValidatorArray value="LegacyMovement@AirUnitNotBeingSpread"/>
+        <WhichLocation Effect="LegacyMovement@AirUnitSpreadSearch" Value="TargetPoint"/>
+        <Amount value="0.025"/>
+        <MassFraction value="0"/>
+    </CEffectApplyForce>
+    <CEffectEnumArea id="LegacyMovement@AirUnitSpreadSearch">
+        <AreaArray Radius="1" Effect="LegacyMovement@AirUnitSpreadSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="LegacyMovement@AirUnitSpreadSet">
+        <EffectArray value="LegacyMovement@AirUnitSpreadForce"/>
+        <EffectArray value="LegacyMovement@AirUnitBeingSpread"/>
+        <TargetLocationType value="Point"/>
+    </CEffectSet>
+    <CValidatorUnitCompareField id="LegacyMining@ResourceMinerals">
+        <Field value="ResourceType"/>
+        <Value value="Minerals"/>
+    </CValidatorUnitCompareField>
+    <CValidatorLocationEnumArea id="LegacyMovement@AirUnitStackCheck">
+        <WhichLocation Value="SourceUnit"/>
+        <AreaArray Radius="0.31" Validator="IsFlying"/>
+        <Compare value="LE"/>
+        <Count value="1"/>
+        <LaunchLocation Value="OuterPoint"/>
+        <SearchFilters value="-;Missile,Dead,Hidden"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitCompareBehaviorCount id="LegacyMovement@AirUnitBeingSpread">
+        <Compare value="GE"/>
+        <Value value="1"/>
+        <Behavior value="LegacyMovement@AirBeingSpread"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="LegacyMovement@AirUnitNotBeingSpread">
+        <Behavior value="LegacyMovement@AirBeingSpread"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitOrderQueue id="LegacyMovement@WorkerIsGathering">
+        <AbilClass value="CAbilHarvest"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="LegacyMovement@WorkerIsReturningCargo">
+        <AbilClass value="CAbilHarvest"/>
+        <AbilCmdIndex value="1"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorCombine id="LegacyMovement@WorkerIsMining">
+        <CombineArray value="LegacyMovement@WorkerIsGathering"/>
+        <CombineArray value="LegacyMovement@WorkerIsReturningCargo"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AirStacking@TargetValidator">
+        <Type value="And"/>
+        <CombineArray value="NotDeadOrConstruction"/>
+        <CombineArray value="SCBW_NotStasisNotStunned"/>
+        <CombineArray value="SCBW_NotMorphing"/>
+        <CombineArray value="NotHidden"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AirStacking@UndoValidator">
+        <CombineArray value="AirStacking@SpeedThreshold"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="AirStacking@Validator">
+        <CombineArray value="AirStacking@IsIdle"/>
+        <CombineArray value="AirStacking@SpeedThresholdNegate"/>
+    </CValidatorCombine>
+    <CValidatorCondition id="AirStacking@Undo">
+        <IfArray Test="AirStacking@TargetValidator" Return="AirStacking@UndoValidator"/>
+    </CValidatorCondition>
+    <CValidatorUnitState id="AirStacking@IsIdle">
+        <WhichUnit Value="Caster"/>
+        <Enabled value="1"/>
+        <State value="Idle"/>
+    </CValidatorUnitState>
+    <CValidatorLocationCompareRange id="LegacyMining@MineralAcquireable">
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <Compare value="LE"/>
+        <Range value="10"/>
+        <Pathing value="1"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareSpeed id="AirStacking@SpeedThreshold">
+        <WhichUnit Value="Caster"/>
+        <Compare value="GT"/>
+        <Value value="0.3984"/>
+    </CValidatorUnitCompareSpeed>
+    <CValidatorCombine id="AirStacking@SpeedThresholdNegate">
+        <CombineArray value="AirStacking@SpeedThreshold"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorCondition id="AirStacking">
+        <IfArray Test="AirStacking@TargetValidator" Return="AirStacking@Validator"/>
+    </CValidatorCondition>
+    <CValidatorUnitCompareResourceHarvesters id="LegacyMining@HarvesterGT1">
+        <Compare value="GT"/>
+        <Value value="1"/>
+        <Active value="1"/>
+        <Queued value="1"/>
+    </CValidatorUnitCompareResourceHarvesters>
+    <CValidatorUnitCompareResourceHarvesters id="LegacyMining@HarvesterGT0">
+        <Compare value="GT"/>
+        <Active value="1"/>
+    </CValidatorUnitCompareResourceHarvesters>
+    <CDataCollection id="LegacyMining">
+        <EditorCategories value="Race:Neutral"/>
+        <DataRecord Entry="Effect,LegacyMining@CancelCurrentOrder"/>
+        <DataRecord Entry="User,LegacyMining@GatherAbils"/>
+        <DataRecord Entry="Validator,LegacyMining@ResourceMinerals"/>
+        <DataRecord Entry="Validator,LegacyMining@MineralAcquireable"/>
+        <DataRecord Entry="Validator,LegacyMining@HarvesterGT1"/>
+        <DataRecord Entry="Validator,LegacyMining@HarvesterGT0"/>
+    </CDataCollection>
+    <CDataCollection id="AirStacking">
+        <EditorCategories value="Race:Neutral"/>
+        <DataRecord Entry="Validator,AirStacking"/>
+        <DataRecord Entry="Validator,AirStacking@Undo"/>
+        <DataRecord Entry="Validator,AirStacking@TargetValidator"/>
+        <DataRecord Entry="Validator,AirStacking@UndoValidator"/>
+        <DataRecord Entry="Validator,AirStacking@SpeedThreshold"/>
+        <DataRecord Entry="Validator,AirStacking@Validator"/>
+        <DataRecord Entry="Validator,AirStacking@IsIdle"/>
+        <DataRecord Entry="Validator,AirStacking@SpeedThresholdNegate"/>
+    </CDataCollection>
+    <CDataCollection id="LegacyMovement">
+        <EditorCategories value="Race:Neutral"/>
+        <DataRecord Entry="Behavior,LegacyMovement@WorkerIsMining"/>
+        <DataRecord Entry="Behavior,LegacyMovement@AirBeingSpread"/>
+        <DataRecord Entry="Behavior,LegacyMovement@AirStackCheck"/>
+        <DataRecord Entry="Behavior,LegacyMovement@Stop"/>
+        <DataRecord Entry="Behavior,LegacyMovement@Stop0Dot625"/>
+        <DataRecord Entry="Behavior,LegacyMovement@Stop0Dot25"/>
+        <DataRecord Entry="Effect,LegacyMovement@AirUnitBeingSpread"/>
+        <DataRecord Entry="Effect,LegacyMovement@AirUnitSpreadForce"/>
+        <DataRecord Entry="Effect,LegacyMovement@AirUnitSpreadSearch"/>
+        <DataRecord Entry="Effect,LegacyMovement@AirUnitSpreadSet"/>
+        <DataRecord Entry="Validator,LegacyMovement@WorkerIsMining"/>
+        <DataRecord Entry="Validator,LegacyMovement@AirUnitNotBeingSpread"/>
+        <DataRecord Entry="Validator,LegacyMovement@AirUnitStackCheck"/>
+        <DataRecord Entry="Validator,LegacyMovement@AirUnitBeingSpread"/>
+        <DataRecord Entry="Validator,LegacyMovement@WorkerIsGathering"/>
+        <DataRecord Entry="Validator,LegacyMovement@WorkerIsReturningCargo"/>
+    </CDataCollection>
+    <CBehaviorBuff id="LegacyMovement@AirBeingSpread">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.0625"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LegacyMovement@AirStackCheck">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="LegacyMovement@AirUnitStackCheck"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LegacyMovement@Stop">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.5"/>
+        <Modification MoveSpeedMultiplier="0.01"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LegacyMovement@Stop0Dot625">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.0625"/>
+        <Modification>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LegacyMovement@Stop0Dot25">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.25"/>
+        <Modification>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="LegacyMovement@WorkerIsMining">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisableValidatorArray value="LegacyMovement@WorkerIsMining"/>
+    </CBehaviorBuff>
+</Catalog>

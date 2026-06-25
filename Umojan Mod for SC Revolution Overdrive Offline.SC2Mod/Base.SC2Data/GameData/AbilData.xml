@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilTrain id="InfantryQuarterTrain">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="40">
+            <Button DefaultButtonFace="Warrior"/>
+            <Unit value="Warrior"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="45">
+            <Button DefaultButtonFace="Crusader" Requirements="HavePowerPlant"/>
+            <Unit value="Crusader"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="45">
+            <Button DefaultButtonFace="Striker" Requirements="HavePowerPlant"/>
+            <Unit value="Striker"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="60">
+            <Button DefaultButtonFace="Centurion" Requirements="HaveTacticsAcademy"/>
+            <Unit value="Centurion"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectTarget id="CalldownVespeneHarvesterUmojan">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="VespeneHarvesterUmojanCastDelayCP"/>
+        <Cost>
+            <Resource index="Minerals" value="150"/>
+        </Cost>
+        <TargetFilters value="-;Ally,Neutral,Enemy,Missile,Stasis,Dead,Hidden"/>
+        <Range value="15"/>
+        <Arc value="360"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VespeneHarvesterUmojan" Requirements="HavePowerPlant"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="CommandPostSpecialization">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Activity value="UI/Upgrading"/>
+        <InfoArray index="Train1" Time="35" Effect="MineralResonatorAB">
+            <Button DefaultButtonFace="DeployMineralResonator" Requirements="MineralResonatorRequirements">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+            <Unit value="CommandPostMineralResonatorDummy"/>
+        </InfoArray>
+        <Alert value="UpgradeComplete"/>
+    </CAbilTrain>
+    <CAbilTrain id="CommandPostTrain">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="17">
+            <Button DefaultButtonFace="Pioneer">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Unit value="Pioneer"/>
+        </InfoArray>
+        <Alert value="TrainWorkerComplete"/>
+    </CAbilTrain>
+    <CAbilRally id="RallyCommandPost">
+        <OrderArray index="0">
+            <DisplayType value="Rally"/>
+            <Color value="255,245,140,70"/>
+            <Model value="Assets\UI\Feedback\WayPointRally\WayPointRally.m3"/>
+            <LineTexture value="Assets\Textures\WayPointLine.dds"/>
+        </OrderArray>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+    </CAbilRally>
+    <CAbilResearch id="ArmamentFacilityResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="160" Upgrade="UmojanGroundWeaponsUpgradeLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="UmojanGroundWeaponsUpgradeLevel1" Requirements="LearnUmojanGroundWeaponsUpgradeLevel1">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="190" Upgrade="UmojanGroundWeaponsUpgradeLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="UmojanGroundWeaponsUpgradeLevel2" Requirements="LearnUmojanGroundWeaponsUpgradeLevel2">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="220" Upgrade="UmojanGroundWeaponsUpgradeLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="UmojanGroundWeaponsUpgradeLevel3" Requirements="LearnUmojanGroundWeaponsUpgradeLevel3">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research4" Time="160" Upgrade="UmojanGroundArmorUpgradeLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="UmojanGroundArmorUpgradeLevel1" Requirements="LearnUmojanGroundArmorUpgradeLevel1">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research5" Time="190" Upgrade="UmojanGroundArmorUpgradeLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="UmojanGroundArmorUpgradeLevel2" Requirements="LearnUmojanGroundArmorUpgradeLevel2">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research6" Time="220" Upgrade="UmojanGroundArmorUpgradeLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="UmojanGroundArmorUpgradeLevel3" Requirements="LearnUmojanGroundArmorUpgradeLevel3">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research7" Time="160" Upgrade="UmojanAirWeaponsUpgradeLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="UmojanAirWeaponsUpgradeLevel1" Requirements="LearnUmojanAirWeaponsUpgradeLevel1">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research8" Time="190" Upgrade="UmojanAirWeaponsUpgradeLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="UmojanAirWeaponsUpgradeLevel2" Requirements="LearnUmojanAirWeaponsUpgradeLevel2">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research9" Time="220" Upgrade="UmojanAirWeaponsUpgradeLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="UmojanAirWeaponsUpgradeLevel3" Requirements="LearnUmojanAirWeaponsUpgradeLevel3">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research10" Time="160" Upgrade="UmojanAirArmorUpgradeLevel1">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="UmojanAirArmorUpgradeLevel1" Requirements="LearnUmojanAirArmorUpgradeLevel1">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research11" Time="190" Upgrade="UmojanAirArmorUpgradeLevel2">
+            <Resource index="Minerals" value="175"/>
+            <Resource index="Vespene" value="175"/>
+            <Button DefaultButtonFace="UmojanAirArmorUpgradeLevel2" Requirements="LearnUmojanAirArmorUpgradeLevel2">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research12" Time="220" Upgrade="UmojanAirArmorUpgradeLevel3">
+            <Resource index="Minerals" value="250"/>
+            <Resource index="Vespene" value="250"/>
+            <Button DefaultButtonFace="UmojanAirArmorUpgradeLevel3" Requirements="LearnUmojanAirArmorUpgradeLevel3">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research13" Time="180" Upgrade="UmojanPowerShieldsUpgradeLevel1">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="UmojanPowerShieldsUpgradeLevel1" Requirements="LearnUmojanPowerShieldsUpgradeLevel1">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research14" Time="215" Upgrade="UmojanPowerShieldsUpgradeLevel2">
+            <Resource index="Minerals" value="300"/>
+            <Resource index="Vespene" value="300"/>
+            <Button DefaultButtonFace="UmojanPowerShieldsUpgradeLevel2" Requirements="LearnUmojanPowerShieldsUpgradeLevel2">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research15" Time="250" Upgrade="UmojanPowerShieldsUpgradeLevel3">
+            <Resource index="Minerals" value="400"/>
+            <Resource index="Vespene" value="400"/>
+            <Button DefaultButtonFace="UmojanPowerShieldsUpgradeLevel3" Requirements="LearnUmojanPowerShieldsUpgradeLevel3">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="PowerPlantResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="140" Upgrade="UmojanShieldsBattery">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchUmojanShieldsBattery" Requirements="LearnUmojanShieldsBattery">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="140" Upgrade="UmojanPowerShields">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchUmojanPowerShields" Requirements="LearnUmojanPowerShields">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="80" Upgrade="SentryPostAccelerator">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchSentryPostAccelerator" Requirements="LearnSentryPostAccelerator">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch id="TacticsAcademyResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="120" Upgrade="TacticalVisor">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchTacticalVisor" Requirements="LearnTacticalVisor">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="110" Upgrade="FragmentShrapnel">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchFragmentShrapnel" Requirements="LearnFragmentShrapnel">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="140" Upgrade="ShapedBlastWarhead">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchShapedBlastWarhead" Requirements="LearnShapedBlastWarhead">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research4" Time="100" Upgrade="CenturionInspiration">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchCenturionInspiration" Requirements="LearnCenturionInspiration">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="ArsenalTrain">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="30">
+            <Button DefaultButtonFace="ReconUAV"/>
+            <Unit value="ReconUAV"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="45">
+            <Button DefaultButtonFace="WarHoundUmojan"/>
+            <Unit value="WarHoundUmojan"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="50">
+            <Button DefaultButtonFace="Diamondback"/>
+            <Unit value="Diamondback"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="70">
+            <Button DefaultButtonFace="AresArtillery" Requirements="HaveEngineeringFactory"/>
+            <Unit value="AresArtillery"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="EngineeringFactoryResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="80" Upgrade="ReconUAVOvercharge">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchReconUAVOvercharge" Requirements="LearnReconUAVOvercharge">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="120" Upgrade="ActiveElectronicallyScannedArrayRadar">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchActiveElectronicallyScannedArrayRadar" Requirements="LearnAESARadar">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="110" Upgrade="AntiTankMissile">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchAntiTankMissile" Requirements="LearnAntiTankMissile">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research4" Time="180" Upgrade="MaelstromRounds">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchMaelstromRounds" Requirements="LearnMaelstromRounds">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="StarStationTrain">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="50">
+            <Button DefaultButtonFace="Athena"/>
+            <Unit value="Athena"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="80">
+            <Button DefaultButtonFace="Artemis"/>
+            <Unit value="Artemis"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="40">
+            <Button DefaultButtonFace="AmphibiousShip"/>
+            <Unit value="AmphibiousShip"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="90">
+            <Button DefaultButtonFace="Berkut" Requirements="HaveFleetHeadquarters"/>
+            <Unit value="Berkut"/>
+        </InfoArray>
+        <InfoArray index="Train5" Time="120">
+            <Button DefaultButtonFace="MissileCruiser" Requirements="HaveFleetHeadquarters"/>
+            <Unit value="MissileCruiser"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="FleetHeadquartersResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="120" Upgrade="AthenaJotunBoosters">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchAthenaJotunBoosters" Requirements="LearnAthenaJotunBoosters">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="140" Upgrade="MaverickMissiles">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchMaverickMissiles" Requirements="LearnMaverickMissiles">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="110" Upgrade="PsionicSuppressionField">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchDeployPsionicSuppressionField" Requirements="LearnPsionicSuppressionField">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research4" Time="180" Upgrade="ZirconCruiseMissiles">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchZirconCruiseMissile" Requirements="LearnZirconCruiseMissiles">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="FutureWarfareLabTrain">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Train1" Time="80">
+            <Button DefaultButtonFace="VoidAssaulter" Requirements="VoidAssaulterRequirements"/>
+            <Unit value="VoidAssaulter"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="160">
+            <Button DefaultButtonFace="Zeus" Requirements="ZeusRequirements"/>
+            <Unit value="Zeus"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="160">
+            <Button DefaultButtonFace="Aquila" Requirements="AquilaRequirements"/>
+            <Unit value="Aquila"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="FutureWarfareLabResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="180" Upgrade="VoidAssaulterPsionicLash">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchVoidAssaulterPsionicLash" Requirements="LearnVoidAssaulterPsionicLash">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="180" Upgrade="HeraProtocol">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchHeraProtocol" Requirements="LearnHeraProtocol">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="180" Upgrade="PraetoriaHangar">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchPraetoriaHangar" Requirements="LearnPraetoriaHangar">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilEffectTarget id="RecoveryDeviceShieldRecovery">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="RecoveryDeviceRechargeChanneledSet"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="ReExecutable" value="1"/>
+        <Flags index="Smart" value="1"/>
+        <TargetFilters value="Visible;Self,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden"/>
+        <TargetSorts RequestCount="1">
+            <SortArray value="TSAlliancePassive"/>
+            <SortArray value="TSShieldsFraction"/>
+            <SortArray value="TSDistance"/>
+        </TargetSorts>
+        <Range value="6"/>
+        <Arc value="360"/>
+        <AutoCastAcquireLevel value="Defensive"/>
+        <AutoCastFilters value="Visible;Self,Neutral,Enemy,Missile,UnderConstruction,Dead,Hidden"/>
+        <AutoCastRange value="6"/>
+        <AutoCastValidatorArray value="CasterHas10Energy"/>
+        <AutoCastValidatorArray value="UnitOrAttackingStructure"/>
+        <UseMarkerArray index="Approach" value="0"/>
+        <UseMarkerArray index="Prep" value="0"/>
+        <CancelableArray index="Channel" value="1"/>
+        <DefaultError value="RequiresHealTarget"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="RecoveryDeviceRecharge"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Stop">
+            <Flags index="ShowInGlossary" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilResearch id="SpecOpsCommandResearch">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <InfoArray index="Research1" Time="120" Upgrade="PersonalCloakingShadowAssassin">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchPersonalCloakingShadowAssassin" Requirements="LearnPersonalCloakingShadowAssassin">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="140" Upgrade="PsionicLockdown">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchPsionicLockdown" Requirements="LearnPsionicLockdown">
+                <Flags index="ShowInGlossary" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilEffectTarget id="NanoDisassembleRepair">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <TargetFilters value="Structure,Visible;Ally,Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden,Invulnerable"/>
+        <Effect index="0" value="NanoDisassembleRepairSet"/>
+        <Range value="0.2"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NanoDisassembleRepair"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="AthenaWeaponSwitchToVympel">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown Link="Abil/AthenaWeaponSwitch" Location="Unit" TimeUse="10"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AthenaWeaponSwitchVympel" Requirements="SwitchToVympelMissiles"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="AthenaWeaponSwitchToRanger">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown Link="Abil/AthenaWeaponSwitch" Location="Unit" TimeUse="10"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AthenaWeaponSwitchRanger" Requirements="SwitchToRangerMissiles"/>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="AntiTankMissile">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <TargetFilters value="Ground,Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Arc value="360"/>
+        <Effect index="0" value="AntiTankMissileLM"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Cooldown TimeUse="45"/>
+        </Cost>
+        <Range value="10"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="AntiTankMissile" Requirements="HaveAntiTankMissile"/>
+    </CAbilEffectTarget>
+    <CAbilArmMagazine id="MaelstromRoundsHangar">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Leash value="20"/>
+        <InfoArray index="Ammo1" Time="6" Unit="MaelstromRoundsUnit">
+            <Charge Location="Unit"/>
+            <Button DefaultButtonFace="ArmMaelstromRounds" Requirements="ArmMaelstromRounds">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Flags index="AutoBuild" value="1"/>
+            <Flags index="AutoBuildOn" value="1"/>
+        </InfoArray>
+        <MaxCount value="5"/>
+        <Alert value=""/>
+    </CAbilArmMagazine>
+    <CAbilEffectInstant id="CenturionInspiration">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="InspirationSearch"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CenturionInspiration" Requirements="HaveCenturionInspiration"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="CenturionPlasmaSurge">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="CenturionPlasmaSurgeCP"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Cooldown TimeUse="15"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="CenturionPlasmaSurge"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Transient" value="1"/>
+    </CAbilEffectInstant>
+    <CAbilTransport id="AmphibiousShipTransport">
+        <AbilSetId value="ULdM"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Load" DefaultButtonFace="AmphibiousShipLoad"/>
+        <CmdButtonArray index="UnloadAll">
+            <Flags index="Hidden" value="1"/>
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="UnloadAt" DefaultButtonFace="AmphibiousShipUnloadAll"/>
+        <CmdButtonArray index="UnloadUnit">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="LoadAll">
+            <Flags index="Hidden" value="1"/>
+        </CmdButtonArray>
+        <Flags index="CargoDeath" value="1"/>
+        <MaxCargoCount value="8"/>
+        <MaxCargoSize value="8"/>
+        <TotalCargoSpace value="8"/>
+        <LoadTransportEffect value="ZeusLoadAB"/>
+        <UnloadCargoEffect value="AresArtilleryUnloadDelayAB"/>
+        <UnloadTransportEffect value="ZeusLoadRB"/>
+        <UnloadPeriod value="1"/>
+        <TargetFilters value="Visible;Self,Ally,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden"/>
+        <LoadValidatorArray value="NotWidowMineTarget"/>
+    </CAbilTransport>
+    <CAbilEffectInstant id="ReconUAVSuicide">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ReconUAVSuicideSet"/>
+        <Flags index="BestUnit" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ReconUAVOvercharge" Requirements="HaveReconUAVOvercharge"/>
+    </CAbilEffectInstant>
+    <CAbilHarvest id="PioneerHarvest">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CancelableArray index="ApproachResource" value="1"/>
+        <CancelableArray index="WaitAtResource" value="1"/>
+        <Effect value="PioneerAdditionalHarvestSet"/>
+    </CAbilHarvest>
+    <CAbilHarvest id="PioneerHarvestInfinite">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CancelableArray index="ApproachResource" value="1"/>
+        <CancelableArray index="WaitAtResource" value="1"/>
+        <Effect value="PioneerAdditionalHarvestSet"/>
+        <FlagArray index="BypassResourceQueue" value="1"/>
+    </CAbilHarvest>
+    <CAbilEffectInstant id="ShadowAssassinSnipeOn">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="Transient" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SnipeOnShadowAssassin" Requirements="NotHaveShadowAssassinSnipe">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Effect index="0" value="ShadowAssassinSnipeAB"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="ShadowAssassinSnipeOff">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="Transient" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SnipeOffShadowAssassin" Requirements="HaveShadowAssassinSnipe">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Effect index="0" value="ShadowAssassinSnipeRB"/>
+    </CAbilEffectInstant>
+    <CAbilBehavior id="ShadowAssassinCloak">
+        <AbilSetId value="Clok"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="CloakOnShadowAssassin" Requirements="HavePersonalCloakingShadowAssassin">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="CloakOffShadowAssassin">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="25"/>
+        </Cost>
+        <BehaviorArray value="ShadowAssassinCloak"/>
+    </CAbilBehavior>
+    <CAbilEffectInstant id="ShadowAssassinHoldFire">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="Transient" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HoldFire" Requirements="ShadowAssassinNotHoldingFire">
+            <Flags index="ShowInGlossary" value="0"/>
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="ShadowAssassinWeaponsFree">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="Transient" value="1"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="WeaponsFreeShadowAssassin" Requirements="ShadowAssassinHoldingFire">
+            <Flags index="ShowInGlossary" value="0"/>
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilEffectTarget id="PsionicLockdown">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoTooltipPriority value="1"/>
+        <Effect index="0" value="PsionicLockdownLM"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="ChannelingMinimum" value="0"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <TargetFilters value="Visible;Self,Player,Ally,Neutral,Structure,Heroic,Missile,Stasis,Dead,Invulnerable"/>
+        <Range value="10"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ValidatedArray index="Wait" value="1"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PsionicLockdown" Requirements="HavePsionicLockdown"/>
+        <DefaultError value="MustTargetUnit,Error/MustTargetMechanicalorPsionic"/>
+    </CAbilEffectTarget>
+    <CAbilArmMagazine id="ArmTacticalCruiseMissile">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <Launch value="ReleaseAtSource"/>
+        <Flags index="BestUnit" value="1"/>
+        <InfoArray index="Ammo1" Time="30" Unit="TacticalCruiseMissileUnit">
+            <Button DefaultButtonFace="ArmTacticalCruiseMissile" Requirements="ArmTacticalCruiseMissile"/>
+        </InfoArray>
+        <CalldownEffect value="TacticalCruiseMissile"/>
+    </CAbilArmMagazine>
+    <CAbilTrain id="SpecOpsCommandTrain">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoArray index="Train1" Time="60">
+            <Button DefaultButtonFace="ShadowAssassin"/>
+            <Unit value="ShadowAssassin"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilEffectTarget id="TacticalCruiseMissile">
+        <TechPlayer value="Owner"/>
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="TacticalCruiseMissileCP"/>
+        <TargetFilters value="Visible;Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="11"/>
+        <CancelableArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <CalldownEffect value="TacticalCruiseMissile"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TacticalCruiseMissile" Requirements="HaveTacticalCruiseMissile"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+    </CAbilEffectTarget>
+    <CAbilBehavior id="ActivatePointDefenseSystem">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="ActivatePointDefenseSystem" Requirements="ActivatePointDefenseSystem"/>
+        <CmdButtonArray index="Off" DefaultButtonFace="DeactivatePointDefenseSystem" Requirements="DeactivatePointDefenseSystem"/>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="ActivatePointDefenseSystem"/>
+    </CAbilBehavior>
+    <CAbilQueue id="HangarQueue2">
+        <EditorCategories value="Race:Neutral,AbilityorEffectType:Structures"/>
+        <QueueSize value="2"/>
+        <Flags index="Passive" value="1"/>
+    </CAbilQueue>
+    <CAbilEffectInstant id="PointDefenseSystemAquila">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PointDefenseSystemLaserAquilaAB"/>
+        <Cost>
+            <Cooldown TimeUse="90"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ActivatePointDefenseSystemAquila"/>
+    </CAbilEffectInstant>
+    <CAbilAugment id="HaywireMissile">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HaywireMissile"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <AbilCmd value="attack,Execute"/>
+        <Cost>
+            <Cooldown TimeUse="8"/>
+        </Cost>
+        <Effect value="HaywireMissileCP"/>
+        <AutoCastFilters value="Visible;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilAugment>
+    <CAbilBuild id="UmojanBuild">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <FlagArray index="PeonDisableCollision" value="1"/>
+        <FlagArray index="PeonMaintained" value="0"/>
+        <InfoArray index="Build1" Unit="CommandPost" Time="100">
+            <Button DefaultButtonFace="CommandPost"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="LogisticsDepot" Time="30">
+            <Button DefaultButtonFace="LogisticsDepot"/>
+        </InfoArray>
+        <InfoArray index="Build3" Unit="VespenePlant" Time="30">
+            <Button DefaultButtonFace="VespenePlant"/>
+            <ValidatorArray value="HasVespene"/>
+        </InfoArray>
+        <InfoArray index="Build4" Unit="InfantryQuarter" Time="65">
+            <Button DefaultButtonFace="InfantryQuarter" Requirements="HaveLogisticsDepot"/>
+        </InfoArray>
+        <InfoArray index="Build5" Unit="ArmamentFacility" Time="45">
+            <Button DefaultButtonFace="ArmamentFacility" Requirements="HaveLogisticsDepot"/>
+        </InfoArray>
+        <InfoArray index="Build6" Unit="SentryPost" Time="45">
+            <Button DefaultButtonFace="SentryPost" Requirements="HavePowerPlantAndArmamentFacility"/>
+        </InfoArray>
+        <InfoArray index="Build7" Unit="PowerPlant" Time="45">
+            <Button DefaultButtonFace="PowerPlant" Requirements="HaveInfantryQuarter"/>
+        </InfoArray>
+        <InfoArray index="Build8" Unit="VespenePlantRich" Time="30">
+            <Button DefaultButtonFace="VespenePlant"/>
+            <ValidatorArray value="HasVespene"/>
+        </InfoArray>
+        <InfoArray index="Build9" Unit="RecoveryDevice" Time="40">
+            <Button DefaultButtonFace="RecoveryDevice" Requirements="HavePowerPlant"/>
+        </InfoArray>
+        <InfoArray index="Build10" Unit="TacticsAcademy" Time="65">
+            <Button DefaultButtonFace="TacticsAcademy" Requirements="HavePowerPlant"/>
+        </InfoArray>
+        <InfoArray index="Build11" Unit="Arsenal" Time="65">
+            <Button DefaultButtonFace="Arsenal" Requirements="HavePowerPlant"/>
+        </InfoArray>
+        <InfoArray index="Build12" Unit="StarStation" Time="65">
+            <Button DefaultButtonFace="StarStation" Requirements="HavePowerPlant"/>
+        </InfoArray>
+        <InfoArray index="Build13" Unit="SpecOpsCommand" Time="80">
+            <Button DefaultButtonFace="SpecOpsCommand" Requirements="HaveTacticsAcademy"/>
+        </InfoArray>
+        <InfoArray index="Build14" Unit="EngineeringFactory" Time="80">
+            <Button DefaultButtonFace="EngineeringFactory" Requirements="HaveArsenal"/>
+        </InfoArray>
+        <InfoArray index="Build15" Unit="FleetHeadquarters" Time="80">
+            <Button DefaultButtonFace="FleetHeadquarters" Requirements="HaveStarStation"/>
+        </InfoArray>
+        <InfoArray index="Build16" Unit="FutureWarfareLab" Time="100">
+            <Button DefaultButtonFace="FutureWarfareLab" Requirements="FutureWarfareLabRequirements"/>
+        </InfoArray>
+        <FidgetDelayMax value="8.5"/>
+        <FidgetDelayMin value="6.5"/>
+        <ConstructionMover value="Construction"/>
+    </CAbilBuild>
+    <CAbilEffectTarget id="ZirconCruiseMissile">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="ZirconCruiseMissileLaunchCP"/>
+        <Flags index="AllowMovement" value="1"/>
+        <TargetFilters value="Visible;Self,Player,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="10"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="ZirconCruiseMissile" Requirements="HaveZirconCruiseMissiles"/>
+        <Alignment value="Negative"/>
+        <Arc value="29.9926"/>
+        <InfoTooltipPriority value="1"/>
+        <Cost>
+            <Charge>
+                <CountMax value="2"/>
+                <CountStart value="2"/>
+                <CountUse value="1"/>
+                <TimeUse value="60"/>
+            </Charge>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="VoidAssaulterOrbitalStrikeExecute">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="VoidAssaulterOrbitalStrikeCastingTime"/>
+        <Cost>
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Cooldown TimeUse="60"/>
+        </Cost>
+        <Range value="13"/>
+        <CursorEffect value="VoidAssaulterOrbitalStrikeImpactSearch"/>
+        <AINotifyEffect value="VoidAssaulterOrbitalStrikeImpactSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidAssaulterOrbitalStrike"/>
+        <FinishTime value="0.5"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PsionicDisruptionStorm">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PsionicDisruptionStormCP"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+            <Cooldown TimeUse="2"/>
+        </Cost>
+        <Range value="10"/>
+        <FinishTime value="0.5"/>
+        <CursorEffect value="PsionicDisruptionStormSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="PsionicDisruptionStorm"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="VoidAssaulterPsionicLash">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="VoidAssaulterPsionicLashDamage"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+            <Cooldown TimeUse="8"/>
+        </Cost>
+        <TargetFilters value="Visible;Player,Ally,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="11"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="VoidAssaulterPsionicLash" Requirements="HaveVoidAssaulterPsionicLash">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <FinishTime value="0.5"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="HeraProtocol">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="BarragePersistent"/>
+        <Cost>
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Cooldown TimeUse="120"/>
+        </Cost>
+        <Range value="11"/>
+        <CastIntroTime value="2"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Channel" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ValidatedArray index="Channel" value="0"/>
+        <CursorEffect value="BarrageSearchArea"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="HeraProtocol" Requirements="HaveHeraProtocol"/>
+        <CmdButtonArray index="Cancel" DefaultButtonFace="Cancel"/>
+        <FinishTime value="2"/>
+        <CancelableArray index="Cast" value="1"/>
+        <CancelableArray index="Channel" value="1"/>
+        <Alignment value="Negative"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="TomahawkCruiseMissile">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="TomahawkCruiseMissileSwitch"/>
+        <TargetFilters value="Visible;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="16"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="TomahawkCruiseMissile"/>
+        <Cost>
+            <Resource index="Minerals" value="25"/>
+            <Resource index="Vespene" value="25"/>
+            <Charge>
+                <CountMax value="4"/>
+                <CountStart value="4"/>
+                <CountUse value="1"/>
+                <TimeUse value="60"/>
+            </Charge>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilArmMagazine id="TrainPraetoria">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="Retarget" value="1"/>
+        <Leash value="5"/>
+        <InfoArray index="Ammo1" Time="60" Distance="2" Manage="Recall" Unit="Praetoria">
+            <Button DefaultButtonFace="Praetoria" Requirements="PraetoriaRequirements"/>
+            <Flags index="External" value="1"/>
+        </InfoArray>
+        <ExternalAngle value="59.9963"/>
+        <ExternalAngle value="299.9926"/>
+    </CAbilArmMagazine>
+    <CAbilEffectTarget id="NanoCleanse">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Cooldown Location="Unit" TimeUse="0.5"/>
+        </Cost>
+        <TargetFilters value="Visible;Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden"/>
+        <Range value="8"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NanoCleanse" Requirements="NotShowSeekerMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="NanoCleanseSeekerMode">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <Effect index="0" value="NanoCleanse"/>
+        <Flags index="AllowMovement" value="1"/>
+        <Flags index="NoDeceleration" value="1"/>
+        <Cost>
+            <Vital index="Energy" value="50"/>
+            <Cooldown Link="Abil/NanoCleanse" Location="Unit" TimeUse="0.5"/>
+        </Cost>
+        <TargetFilters value="Visible;Neutral,Enemy,Structure,Missile,Stasis,Dead,Hidden"/>
+        <Range value="14"/>
+        <Arc value="360"/>
+        <AINotifyEffect value="NanoCleanse"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="NanoCleanse" Requirements="ShowSeekerMode">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PsionicSuppressionField">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PsionicSuppressionFieldLM"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <Range value="10"/>
+        <CursorEffect value="PsionicSuppressionFieldSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DeployPsionicSuppressionField" Requirements="HavePsionicSuppressionFieldNotSeekerMode"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="PsionicSuppressionFieldSeekerMode">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="PsionicSuppressionFieldLM"/>
+        <Cost>
+            <Vital index="Energy" value="100"/>
+        </Cost>
+        <Range value="16"/>
+        <CursorEffect value="PsionicSuppressionFieldSearch"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DeployPsionicSuppressionField" Requirements="HavePsionicSuppressionFieldSeekerMode"/>
+        <Arc value="360"/>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant id="SeekerMode">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Flags index="BestUnit" value="1"/>
+        <PrepEffect value="SeekerModeCasting"/>
+        <CastIntroTime value="3"/>
+        <ShowProgressArray index="Cast" value="1"/>
+        <UninterruptibleArray index="Cast" value="1"/>
+        <ProgressButtonArray index="Cast" value="SeekerMode"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SeekerMode" Requirements="NotShowSeekerMode"/>
+        <Effect index="0" value="SeekerModeSet"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="SeekerModeOff">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <FinishTime value="3"/>
+        <ShowProgressArray index="Finish" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <ProgressButtonArray index="Finish" value="SeekerModeOff"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SeekerModeOff" Requirements="ShowSeekerMode"/>
+        <Effect index="0" value="SeekerModeOffSet"/>
+    </CAbilEffectInstant>
+</Catalog>

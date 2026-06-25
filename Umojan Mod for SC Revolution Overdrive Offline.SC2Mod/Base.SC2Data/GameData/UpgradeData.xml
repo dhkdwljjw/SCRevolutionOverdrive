@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade default="1" id="UmojanGroundWeaponsUpgrade">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Race value="Umoj"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,WarriorGaussRifle,Level" Value="1"/>
+        <EffectArray Reference="Weapon,CrusaderGrenades,Level" Value="1"/>
+        <EffectArray Reference="Weapon,TheseusAntiTankMissiles,Level" Value="1"/>
+        <EffectArray Reference="Weapon,AGR15AssaultRifle,Level" Value="1"/>
+        <EffectArray Reference="Weapon,ShadowAssassinSnipe,Level" Value="1"/>
+        <EffectArray Reference="Weapon,WarHoundUmojan,Level" Value="1"/>
+        <EffectArray Reference="Weapon,WarHoundUmojanAntiAir,Level" Value="1"/>
+        <EffectArray Reference="Weapon,WarHoundUmojanMelee,Level" Value="1"/>
+        <EffectArray Reference="Weapon,Diamondback,Level" Value="1"/>
+        <EffectArray Reference="Weapon,GaussShockCannon,Level" Value="1"/>
+        <EffectArray Reference="Weapon,VoidAssaulter,Level" Value="1"/>
+        <EffectArray Reference="Weapon,Zeus,Level" Value="1"/>
+        <EffectArray Reference="Weapon,ZeusAntiAir,Level" Value="1"/>
+        <EffectArray Reference="Effect,WarriorGaussRifle,Amount" Value="2"/>
+        <EffectArray Reference="Effect,DominatorGrenadesDamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,DominatorGrenadesDamage,AttributeBonus[Light]" Value="1"/>
+        <EffectArray Reference="Effect,CrusaderShrapnelDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,TheseusAntiTankMissilesDamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,TheseusAntiTankMissilesDamageUpgraded,Amount" Value="2"/>
+        <EffectArray Reference="Effect,TheseusAntiTankMissilesDamageUpgraded,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,AGR15AssaultRifle,Amount" Value="1"/>
+        <EffectArray Reference="Effect,AWPRifle,Amount" Value="1"/>
+        <EffectArray Reference="Effect,AWPRifle,AttributeBonus[Light]" Value="1"/>
+        <EffectArray Reference="Effect,ShadowAssassinSnipeDamage,Amount" Value="5"/>
+        <EffectArray Reference="Effect,ShadowAssassinSnipeDamageShields,Amount" Value="5"/>
+        <EffectArray Reference="Effect,WarHoundUmojan,Amount" Value="2"/>
+        <EffectArray Reference="Effect,WarHoundUmojanMelee,Amount" Value="2"/>
+        <EffectArray Reference="Effect,WarHoundUmojanAntiAir,Amount" Value="2"/>
+        <EffectArray Reference="Effect,WarHoundUmojanAntiAir,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,HaywireMissileDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,Diamondback,Amount" Value="2"/>
+        <EffectArray Reference="Effect,Diamondback,AttributeBonus[Armored]" Value="3"/>
+        <EffectArray Reference="Effect,GaussShockCannonDamage,Amount" Value="4"/>
+        <EffectArray Reference="Effect,GaussShockCannonDamage,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,GaussShockCannonDamageMaelstromRoundsSplash,Amount" Value="4"/>
+        <EffectArray Reference="Effect,GaussShockCannonDamageMaelstromRoundsSplash,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,GaussShockCannonDamageMaelstromRounds,Amount" Value="4"/>
+        <EffectArray Reference="Effect,GaussShockCannonDamageMaelstromRounds,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,VoidAssaulter,Amount" Value="5"/>
+        <EffectArray Reference="Effect,ZeusDamage,Amount" Value="5"/>
+        <EffectArray Reference="Effect,ZeusAADamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,BarrageDamage,Amount" Value="5"/>
+        <EffectArray Reference="Effect,BarrageDamageAntiAir,Amount" Value="8"/>
+        <EffectArray Reference="Effect,BarrageDamageGround,Amount" Value="5"/>
+        <EditorCategories value="Race:Terran,UpgradeType:AttackBonus"/>
+        <AffectedUnitArray value="Warrior"/>
+        <AffectedUnitArray value="Crusader"/>
+        <AffectedUnitArray value="Striker"/>
+        <AffectedUnitArray value="Centurion"/>
+        <AffectedUnitArray value="ShadowAssassin"/>
+        <AffectedUnitArray value="WarHoundUmojan"/>
+        <AffectedUnitArray value="Diamondback"/>
+        <AffectedUnitArray value="AresArtillery"/>
+        <AffectedUnitArray value="VoidAssaulter"/>
+        <AffectedUnitArray value="Zeus"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="UmojanGroundArmorUpgrade">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Race value="Umoj"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Pioneer,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Pioneer,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Warrior,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Warrior,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Crusader,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Crusader,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Striker,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Striker,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Centurion,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Centurion,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ShadowAssassin,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ShadowAssassin,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,WarHoundUmojan,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarHoundUmojan,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Diamondback,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Diamondback,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AresArtillery,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,AresArtillery,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,VoidAssaulter,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,VoidAssaulter,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Zeus,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Zeus,LifeArmorLevel" Value="1"/>
+        <EditorCategories value="Race:Terran,UpgradeType:ArmorBonus"/>
+        <AffectedUnitArray value="Pioneer"/>
+        <AffectedUnitArray value="Warrior"/>
+        <AffectedUnitArray value="Crusader"/>
+        <AffectedUnitArray value="Striker"/>
+        <AffectedUnitArray value="Centurion"/>
+        <AffectedUnitArray value="ShadowAssassin"/>
+        <AffectedUnitArray value="WarHoundUmojan"/>
+        <AffectedUnitArray value="Diamondback"/>
+        <AffectedUnitArray value="AresArtillery"/>
+        <AffectedUnitArray value="VoidAssaulter"/>
+        <AffectedUnitArray value="Zeus"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="UmojanAirWeaponsUpgrade">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Race value="Umoj"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,RangerMissiles,Level" Value="1"/>
+        <EffectArray Reference="Weapon,VympelMissiles,Level" Value="1"/>
+        <EffectArray Reference="Weapon,ArtemisHALOMissiles,Level" Value="1"/>
+        <EffectArray Reference="Weapon,MaverickMissiles,Level" Value="1"/>
+        <EffectArray Reference="Weapon,MeteorMissilePods,Level" Value="1"/>
+        <EffectArray Reference="Weapon,EnterpriseGun,Level" Value="1"/>
+        <EffectArray Reference="Weapon,OdysseusMissileBarrage,Level" Value="1"/>
+        <EffectArray Reference="Weapon,PhoenixMissile,Level" Value="1"/>
+        <EffectArray Reference="Effect,RangerMissilesDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,RangerMissilesDamage,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,RangerMissilesDamageShield,Amount" Value="1"/>
+        <EffectArray Reference="Effect,RangerMissilesDamageShield,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,VympelMissilesDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,VympelMissilesDamage,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Effect,ArtemisMissileDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,ArtemisMissileDamageTarget,Amount" Value="1"/>
+        <EffectArray Reference="Effect,MeteorMissileDamage,Amount" Value="1"/>
+        <EffectArray Reference="Effect,OdysseusMissileDamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,EnterpriseGun,Amount" Value="5"/>
+        <EffectArray Reference="Effect,PhoenixMissileDamage,Amount" Value="2"/>
+        <EffectArray Reference="Effect,PhoenixMissileDamage,AttributeBonus[Armored]" Value="1"/>
+        <EditorCategories value="Race:Terran,UpgradeType:AttackBonus"/>
+        <AffectedUnitArray value="Athena"/>
+        <AffectedUnitArray value="Artemis"/>
+        <AffectedUnitArray value="MissileCruiser"/>
+        <AffectedUnitArray value="Aquila"/>
+        <AffectedUnitArray value="Praetoria"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="UmojanAirArmorUpgrade">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Race value="Umoj"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,ReconUAV,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,ReconUAV,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Athena,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Athena,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Artemis,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Artemis,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AmphibiousShip,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,AmphibiousShip,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Berkut,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Berkut,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,MissileCruiser,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,MissileCruiser,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Aquila,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Aquila,LifeArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Praetoria,LifeArmor" Value="1"/>
+        <EffectArray Reference="Unit,Praetoria,LifeArmorLevel" Value="1"/>
+        <EditorCategories value="Race:Terran,UpgradeType:ArmorBonus"/>
+        <AffectedUnitArray value="ReconUAV"/>
+        <AffectedUnitArray value="Athena"/>
+        <AffectedUnitArray value="Artemis"/>
+        <AffectedUnitArray value="AmphibiousShip"/>
+        <AffectedUnitArray value="Berkut"/>
+        <AffectedUnitArray value="MissileCruiser"/>
+        <AffectedUnitArray value="Aquila"/>
+        <AffectedUnitArray value="Praetoria"/>
+    </CUpgrade>
+    <CUpgrade default="1" id="UmojanPowerShieldsUpgrade">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Race value="Umoj"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Unit,Pioneer,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Pioneer,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Warrior,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Warrior,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Crusader,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Crusader,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Striker,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Striker,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Centurion,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Centurion,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ShadowAssassin,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ShadowAssassin,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,WarHoundUmojan,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,WarHoundUmojan,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Diamondback,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Diamondback,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AresArtillery,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,AresArtillery,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,VoidAssaulter,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,VoidAssaulter,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Zeus,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Zeus,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ReconUAV,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ReconUAV,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Athena,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Athena,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Artemis,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Artemis,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,AmphibiousShip,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,AmphibiousShip,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Berkut,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Berkut,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,MissileCruiser,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,MissileCruiser,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Aquila,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Aquila,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Praetoria,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Praetoria,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,CommandPost,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,CommandPost,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,LogisticsDepot,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,LogisticsDepot,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,VespenePlant,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,VespenePlant,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,VespenePlantRich,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,VespenePlantRich,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,InfantryQuarter,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,InfantryQuarter,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,ArmamentFacility,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,ArmamentFacility,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,SentryPost,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,SentryPost,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,PowerPlant,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,PowerPlant,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,RecoveryDevice,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,RecoveryDevice,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,TacticsAcademy,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,TacticsAcademy,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,Arsenal,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,Arsenal,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,StarStation,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,StarStation,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,SpecOpsCommand,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,SpecOpsCommand,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,EngineeringFactory,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,EngineeringFactory,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FleetHeadquarters,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,FleetHeadquarters,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Unit,FutureWarfareLab,ShieldArmor" Value="1"/>
+        <EffectArray Reference="Unit,FutureWarfareLab,ShieldArmorLevel" Value="1"/>
+        <EffectArray Reference="Effect,DominatorGrenadesMU,VitalArray[Shields].Change" Value="1"/>
+        <EffectArray Reference="Effect,ShadowAssassinSnipeDamageShields,Amount" Value="5"/>
+        <EffectArray Reference="Effect,RangerMissilesDamageShield,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray Reference="Behavior,WarriorUmojanPowerShields,Modification.AdditiveMoveSpeedFactor" Value="0.05"/>
+        <EffectArray Reference="Behavior,WarriorUmojanPowerShields,Modification.AdditiveAttackSpeedFactor" Value="0.05"/>
+        <EffectArray Reference="Behavior,CrusaderUmojanPowerShields,Modification.AdditiveMoveSpeedFactor" Value="0.05"/>
+        <EffectArray Reference="Behavior,StrikerUmojanPowerShields,Modification.AdditiveMoveSpeedFactor" Value="0.05"/>
+        <EffectArray Reference="Behavior,StrikerUmojanPowerShields,Modification.RangedWeaponRange" Value="0.5"/>
+        <EffectArray Reference="Behavior,StrikerUmojanPowerShields,Modification.WeaponScanBonus" Value="0.5"/>
+        <EffectArray Reference="Behavior,ShadowAssassinUmojanPowerShields,Modification.AdditiveMoveSpeedFactor" Value="0.05"/>
+        <EffectArray Reference="Behavior,CenturionHealthRegen,Modification.VitalRegenArray[Life]" Value="0.5"/>
+        <EffectArray Operation="Subtract" Reference="Behavior,HardenedShieldDiamondback,DamageResponse.ModifyAmount" Value="9"/>
+        <EffectArray Reference="Behavior,ReconUAVUmojanPowerShields,Modification.AdditiveMoveSpeedFactor" Value="0.08"/>
+        <EffectArray Reference="Behavior,WarhoundUmojanPowerShields,Modification.AdditiveAttackSpeedFactor" Value="0.05"/>
+        <EffectArray Reference="Behavior,AresArtilleryUmojanPowerShields,Modification.RangedWeaponRange" Value="0.5"/>
+        <EffectArray Reference="Behavior,AresArtilleryUmojanPowerShields,Modification.WeaponScanBonus" Value="0.5"/>
+        <EffectArray Reference="Behavior,AthenaUmojanPowerShieldsVympel,Modification.RangedWeaponRange" Value="0.5"/>
+        <EffectArray Reference="Behavior,AthenaUmojanPowerShieldsVympel,Modification.WeaponScanBonus" Value="0.5"/>
+        <EffectArray Reference="Behavior,ArtemisUmojanPowerShields,Modification.AdditiveAttackSpeedFactor" Value="0.05"/>
+        <EffectArray Reference="Behavior,AmphibiousShipUmojanPowerShields,Modification.AdditiveMoveSpeedFactor" Value="0.08"/>
+        <EffectArray Reference="Behavior,SeekerModeHealthRegen,Modification.VitalRegenArray[Life]" Value="0.5"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Pioneer"/>
+        <AffectedUnitArray value="Warrior"/>
+        <AffectedUnitArray value="Crusader"/>
+        <AffectedUnitArray value="Striker"/>
+        <AffectedUnitArray value="Centurion"/>
+        <AffectedUnitArray value="ShadowAssassin"/>
+        <AffectedUnitArray value="ReconUAV"/>
+        <AffectedUnitArray value="WarHoundUmojan"/>
+        <AffectedUnitArray value="Diamondback"/>
+        <AffectedUnitArray value="AresArtillery"/>
+        <AffectedUnitArray value="VoidAssaulter"/>
+        <AffectedUnitArray value="Zeus"/>
+        <AffectedUnitArray value="Athena"/>
+        <AffectedUnitArray value="Artemis"/>
+        <AffectedUnitArray value="AmphibiousShip"/>
+        <AffectedUnitArray value="Berkut"/>
+        <AffectedUnitArray value="MissileCruiser"/>
+        <AffectedUnitArray value="Aquila"/>
+        <AffectedUnitArray value="Praetoria"/>
+        <AffectedUnitArray value="CommandPost"/>
+        <AffectedUnitArray value="LogisticsDepot"/>
+        <AffectedUnitArray value="VespenePlant"/>
+        <AffectedUnitArray value="VespenePlantRich"/>
+        <AffectedUnitArray value="InfantryQuarter"/>
+        <AffectedUnitArray value="ArmamentFacility"/>
+        <AffectedUnitArray value="SentryPost"/>
+        <AffectedUnitArray value="PowerPlant"/>
+        <AffectedUnitArray value="RecoveryDevice"/>
+        <AffectedUnitArray value="TacticsAcademy"/>
+        <AffectedUnitArray value="Arsenal"/>
+        <AffectedUnitArray value="StarStation"/>
+        <AffectedUnitArray value="SpecOpsCommand"/>
+        <AffectedUnitArray value="EngineeringFactory"/>
+        <AffectedUnitArray value="FleetHeadquarters"/>
+        <AffectedUnitArray value="FutureWarfareLab"/>
+    </CUpgrade>
+    <CUpgrade id="ActiveElectronicallyScannedArrayRadar">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,WarHoundUmojanAntiAir,Range" Value="3"/>
+        <EffectArray Reference="Weapon,WarHoundUmojanAntiAir,MinScanRange" Value="3"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="WarHoundUmojan"/>
+    </CUpgrade>
+    <CUpgrade id="AntiTankMissile">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-raynor-ripwavemissiles.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Diamondback"/>
+    </CUpgrade>
+    <CUpgrade id="AthenaJotunBoosters">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-liberatorrangeupgrade.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Weapon,VympelMissiles,Options[Hidden]" Value="0"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Athena"/>
+    </CUpgrade>
+    <CUpgrade id="SentryPostAccelerator" parent="Research">
+        <Flags index="TechTreeCheat" value="1"/>
+        <InfoTooltipPriority value="31"/>
+        <Icon value="Assets\Textures\BTN-Upgrade-Terran-hisecautotracking.dds"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,SentryPost,Range" Value="1"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="SentryPost"/>
+    </CUpgrade>
+    <CUpgrade id="TacticalVisor">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-ghostvisor.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,WarriorGaussRifle,Range" Value="1"/>
+        <EffectArray Reference="Weapon,WarriorGaussRifle,MinScanRange" Value="1"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Warrior"/>
+    </CUpgrade>
+    <CUpgrade id="FragmentShrapnel">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-explosiveshrapnelshells.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Crusader"/>
+    </CUpgrade>
+    <CUpgrade id="ShapedBlastWarhead">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-mengsk-marauder-shrapnel.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Weapon,TheseusAntiTankMissiles,DisplayEffect" Value="TheseusAntiTankMissilesDamageUpgraded"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Striker"/>
+    </CUpgrade>
+    <CUpgrade id="MaverickMissiles">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Weapon,MaverickMissiles,Options[Disabled]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,MaverickMissiles,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Unit,Artemis,Description" Value="Button/Tooltip/ArtemisUpgraded"/>
+        <EffectArray Operation="Set" Reference="Button,Artemis,AlertTooltip" Value="Button/Tooltip/ArtemisUpgraded"/>
+        <EffectArray Operation="Set" Reference="Button,Artemis,Tooltip" Value="Button/Tooltip/ArtemisUpgraded"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Artemis"/>
+    </CUpgrade>
+    <CUpgrade id="MaelstromRounds">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-maelstromrounds.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="AresArtillery"/>
+    </CUpgrade>
+    <CUpgrade id="CenturionInspiration">
+        <Icon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadenergy.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Centurion"/>
+    </CUpgrade>
+    <CUpgrade id="PersonalCloakingShadowAssassin">
+        <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="ShadowAssassin"/>
+    </CUpgrade>
+    <CUpgrade id="PraetoriaHangar">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-unit-terran-vikingarchangel.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Aquila"/>
+    </CUpgrade>
+    <CUpgrade id="ReconUAVOvercharge">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ReconUAV"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanGroundWeaponsUpgradeLevel1" parent="UmojanGroundWeaponsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarriorGaussRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,CrusaderGrenades,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TheseusAntiTankMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,AGR15AssaultRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ShadowAssassinSnipe,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojan,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojanAntiAir,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojanMelee,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Diamondback,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,GaussShockCannon,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VoidAssaulter,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Zeus,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ZeusAntiAir,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel1.dds"/>
+        <LeaderAlias value="UmojanGroundWeaponsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanGroundWeaponsUpgradeLevel2" parent="UmojanGroundWeaponsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <ScoreAmount value="350"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarriorGaussRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,CrusaderGrenades,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TheseusAntiTankMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,AGR15AssaultRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ShadowAssassinSnipe,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojan,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojanAntiAir,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojanMelee,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Diamondback,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,GaussShockCannon,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VoidAssaulter,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Zeus,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ZeusAntiAir,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel2.dds"/>
+        <LeaderAlias value="UmojanGroundWeaponsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanGroundWeaponsUpgradeLevel3" parent="UmojanGroundWeaponsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <ScoreAmount value="500"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarriorGaussRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,CrusaderGrenades,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,TheseusAntiTankMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,AGR15AssaultRifle,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ShadowAssassinSnipe,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojan,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojanAntiAir,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,WarHoundUmojanMelee,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Diamondback,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,GaussShockCannon,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VoidAssaulter,Icon" Value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,Zeus,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ZeusAntiAir,Icon" Value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel3.dds"/>
+        <LeaderAlias value="UmojanGroundWeaponsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanGroundArmorUpgradeLevel1" parent="UmojanGroundArmorUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Actor,Pioneer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Warrior,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Crusader,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Striker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Centurion,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShadowAssassin,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidAssaulter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarHoundUmojan,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Diamondback,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AresArtillery,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Zeus,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel1.dds"/>
+        <LeaderAlias value="UmojanGroundArmorUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanGroundArmorUpgradeLevel2" parent="UmojanGroundArmorUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Actor,Pioneer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Warrior,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Crusader,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Striker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Centurion,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShadowAssassin,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidAssaulter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarHoundUmojan,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Diamondback,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AresArtillery,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Zeus,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel2.dds"/>
+        <LeaderAlias value="UmojanGroundArmorUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanGroundArmorUpgradeLevel3" parent="UmojanGroundArmorUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Actor,Pioneer,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Warrior,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Crusader,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Striker,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Centurion,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShadowAssassin,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidAssaulter,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarHoundUmojan,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Diamondback,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AresArtillery,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Zeus,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel3.dds"/>
+        <LeaderAlias value="UmojanGroundArmorUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanAirWeaponsUpgradeLevel1" parent="UmojanAirWeaponsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Weapon,RangerMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VympelMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ArtemisHALOMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,MaverickMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,MeteorMissilePods,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,EnterpriseGun,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,OdysseusMissileBarrage,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,PhoenixMissile,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <LeaderAlias value="UmojanAirWeaponsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanAirWeaponsUpgradeLevel2" parent="UmojanAirWeaponsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <ScoreAmount value="350"/>
+        <EffectArray Operation="Set" Reference="Weapon,RangerMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VympelMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ArtemisHALOMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,MaverickMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,MeteorMissilePods,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,EnterpriseGun,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,OdysseusMissileBarrage,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,PhoenixMissile,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <LeaderAlias value="UmojanAirWeaponsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanAirWeaponsUpgradeLevel3" parent="UmojanAirWeaponsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <ScoreAmount value="500"/>
+        <EffectArray Operation="Set" Reference="Weapon,RangerMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,VympelMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,ArtemisHALOMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,MaverickMissiles,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,MeteorMissilePods,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,EnterpriseGun,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,OdysseusMissileBarrage,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Weapon,PhoenixMissile,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <LeaderAlias value="UmojanAirWeaponsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanAirArmorUpgradeLevel1" parent="UmojanAirArmorUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Actor,ReconUAV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Athena,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Artemis,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AmphibiousShip,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Berkut,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,MissileCruiser,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Aquila,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Praetoria,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <LeaderAlias value="UmojanAirArmorUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanAirArmorUpgradeLevel2" parent="UmojanAirArmorUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Actor,ReconUAV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Athena,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Artemis,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AmphibiousShip,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Berkut,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,MissileCruiser,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Aquila,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Praetoria,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <LeaderAlias value="UmojanAirArmorUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanAirArmorUpgradeLevel3" parent="UmojanAirArmorUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <ScoreAmount value="200"/>
+        <EffectArray Operation="Set" Reference="Actor,ReconUAV,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Athena,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Artemis,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AmphibiousShip,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Berkut,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,MissileCruiser,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Aquila,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Praetoria,LifeArmorIcon" Value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <LeaderAlias value="UmojanAirArmorUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanPowerShieldsUpgradeLevel1" parent="UmojanPowerShieldsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <ScoreAmount value="400"/>
+        <EffectArray Operation="Set" Reference="Actor,Pioneer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Warrior,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Crusader,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Striker,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Centurion,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShadowAssassin,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidAssaulter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarHoundUmojan,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Diamondback,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AresArtillery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Zeus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ReconUAV,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Athena,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Artemis,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AmphibiousShip,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Berkut,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,MissileCruiser,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Aquila,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Praetoria,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CommandPost,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,LogisticsDepot,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VespenePlant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VespenePlantRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,InfantryQuarter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ArmamentFacility,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SentryPost,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PowerPlant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RecoveryDevice,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TacticsAcademy,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Arsenal,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StarStation,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SpecOpsCommand,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,EngineeringFactory,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FleetHeadquarters,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FutureWarfareLab,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel1.dds"/>
+        <LeaderAlias value="UmojanPowerShieldsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanPowerShieldsUpgradeLevel2" parent="UmojanPowerShieldsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <ScoreAmount value="600"/>
+        <EffectArray Operation="Set" Reference="Actor,Pioneer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Warrior,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Crusader,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Striker,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Centurion,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShadowAssassin,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidAssaulter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarHoundUmojan,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Diamondback,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AresArtillery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Zeus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ReconUAV,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Athena,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Artemis,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AmphibiousShip,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Berkut,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,MissileCruiser,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Aquila,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Praetoria,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CommandPost,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,LogisticsDepot,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VespenePlant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VespenePlantRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,InfantryQuarter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ArmamentFacility,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SentryPost,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PowerPlant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RecoveryDevice,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TacticsAcademy,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Arsenal,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StarStation,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SpecOpsCommand,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,EngineeringFactory,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FleetHeadquarters,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FutureWarfareLab,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel2.dds"/>
+        <LeaderAlias value="UmojanPowerShieldsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanPowerShieldsUpgradeLevel3" parent="UmojanPowerShieldsUpgrade">
+        <Icon value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <ScoreAmount value="800"/>
+        <EffectArray Operation="Set" Reference="Actor,Pioneer,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Warrior,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Crusader,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Striker,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Centurion,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ShadowAssassin,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VoidAssaulter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,WarHoundUmojan,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Diamondback,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AresArtillery,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Zeus,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ReconUAV,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Athena,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Artemis,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,AmphibiousShip,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Berkut,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,MissileCruiser,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Aquila,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Praetoria,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,CommandPost,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,LogisticsDepot,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VespenePlant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,VespenePlantRich,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,InfantryQuarter,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,ArmamentFacility,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SentryPost,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,PowerPlant,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,RecoveryDevice,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,TacticsAcademy,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,Arsenal,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,StarStation,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,SpecOpsCommand,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,EngineeringFactory,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FleetHeadquarters,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <EffectArray Operation="Set" Reference="Actor,FutureWarfareLab,ShieldArmorIcon" Value="Assets\Textures\btn-upgrade-protoss-shieldslevel3.dds"/>
+        <LeaderAlias value="UmojanPowerShieldsUpgrade"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanShieldsBattery">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-protoss-shieldrecharge.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <EffectArray Reference="Unit,Pioneer,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Pioneer,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Warrior,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Warrior,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Crusader,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Crusader,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Striker,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Striker,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Centurion,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Centurion,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,ShadowAssassin,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,ShadowAssassin,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,ReconUAV,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,ReconUAV,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,WarHoundUmojan,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,WarHoundUmojan,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Diamondback,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Diamondback,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,AresArtillery,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,AresArtillery,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Athena,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Athena,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Artemis,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Artemis,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,AmphibiousShip,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,AmphibiousShip,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Berkut,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Berkut,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,MissileCruiser,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,MissileCruiser,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,VoidAssaulter,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,VoidAssaulter,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Zeus,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Zeus,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Aquila,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Aquila,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Praetoria,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Praetoria,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,CommandPost,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,CommandPost,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,VespenePlant,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,VespenePlant,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,VespenePlantRich,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,VespenePlantRich,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,LogisticsDepot,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,LogisticsDepot,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,InfantryQuarter,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,InfantryQuarter,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,ArmamentFacility,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,ArmamentFacility,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,SentryPost,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,SentryPost,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,PowerPlant,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,PowerPlant,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,RecoveryDevice,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,RecoveryDevice,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,TacticsAcademy,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,TacticsAcademy,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,Arsenal,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,Arsenal,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,StarStation,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,StarStation,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,SpecOpsCommand,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,SpecOpsCommand,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,EngineeringFactory,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,EngineeringFactory,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,FleetHeadquarters,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,FleetHeadquarters,ShieldRegenDelay" Value="10.000000"/>
+        <EffectArray Reference="Unit,FutureWarfareLab,ShieldRegenRate" Value="2.000000"/>
+        <EffectArray Reference="Unit,FutureWarfareLab,ShieldRegenDelay" Value="10.000000"/>
+        <AffectedUnitArray value="Pioneer"/>
+        <AffectedUnitArray value="Warrior"/>
+        <AffectedUnitArray value="Crusader"/>
+        <AffectedUnitArray value="Striker"/>
+        <AffectedUnitArray value="Centurion"/>
+        <AffectedUnitArray value="ShadowAssassin"/>
+        <AffectedUnitArray value="ReconUAV"/>
+        <AffectedUnitArray value="WarHoundUmojan"/>
+        <AffectedUnitArray value="Diamondback"/>
+        <AffectedUnitArray value="AresArtillery"/>
+        <AffectedUnitArray value="VoidAssaulter"/>
+        <AffectedUnitArray value="Zeus"/>
+        <AffectedUnitArray value="Athena"/>
+        <AffectedUnitArray value="Artemis"/>
+        <AffectedUnitArray value="AmphibiousShip"/>
+        <AffectedUnitArray value="Berkut"/>
+        <AffectedUnitArray value="MissileCruiser"/>
+        <AffectedUnitArray value="Aquila"/>
+        <AffectedUnitArray value="Praetoria"/>
+        <AffectedUnitArray value="CommandPost"/>
+        <AffectedUnitArray value="VespenePlant"/>
+        <AffectedUnitArray value="VespenePlantRich"/>
+        <AffectedUnitArray value="LogisticsDepot"/>
+        <AffectedUnitArray value="InfantryQuarter"/>
+        <AffectedUnitArray value="ArmamentFacility"/>
+        <AffectedUnitArray value="SentryPost"/>
+        <AffectedUnitArray value="PowerPlant"/>
+        <AffectedUnitArray value="RecoveryDevice"/>
+        <AffectedUnitArray value="TacticsAcademy"/>
+        <AffectedUnitArray value="Arsenal"/>
+        <AffectedUnitArray value="StarStation"/>
+        <AffectedUnitArray value="SpecOpsCommand"/>
+        <AffectedUnitArray value="EngineeringFactory"/>
+        <AffectedUnitArray value="FleetHeadquarters"/>
+        <AffectedUnitArray value="FutureWarfareLab"/>
+    </CUpgrade>
+    <CUpgrade id="ZirconCruiseMissiles">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-wraith-longrangemissiles.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="MissileCruiser"/>
+    </CUpgrade>
+    <CUpgrade id="PsionicLockdown">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-upgrade-nova-pulsegrenade.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="ShadowAssassin"/>
+    </CUpgrade>
+    <CUpgrade id="PsionicSuppressionField">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-stetzonegenerator-energy.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Berkut"/>
+    </CUpgrade>
+    <CUpgrade id="HeraProtocol">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-terran-bombardmentstrike-color.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Zeus"/>
+    </CUpgrade>
+    <CUpgrade id="VoidAssaulterPsionicLash">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-annihilatepsionic.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="VoidAssaulter"/>
+    </CUpgrade>
+    <CUpgrade id="UmojanPowerShields">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Umoj"/>
+        <ScoreAmount value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+    </CUpgrade>
+</Catalog>

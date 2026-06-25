@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAlert id="AddOnComplete_PZrg">
+        <Sound value="Alert_TerranAddOnComplete_PZrg"/>
+        <Text value="Alert/Text/AddOnComplete"/>
+    </CAlert>
+    <CAlert id="AmmoComplete_PZrg">
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/AmmoComplete_Zerg"/>
+    </CAlert>
+    <CAlert id="AttackTownAlly_PZrg" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="Alert_PZrgAllyBaseUnderAttack"/>
+        <Text value="Alert/Text/AttackTownAlly"/>
+        <Peripheral value="AllyBaseUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackTown_PZrg" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <PingModel value="PingBaseAttack"/>
+        <Sound value="Alert_PZrgBaseUnderAttack"/>
+        <Text value="Alert/Text/AttackTown"/>
+        <Voice value="Help"/>
+        <Peripheral value="SelfBaseUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackUnitAlly_PZrg" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="Alert_PZrgAllyUnderAttack"/>
+        <Text value="Alert/Text/AttackUnitAlly"/>
+        <Peripheral value="AllyUnitUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackUnit_PZrg" parent="Attack">
+        <Icon value="Assets\Textures\btn-command-attack.dds"/>
+        <Sound value="Alert_PZrgForcesUnderAttack"/>
+        <Text value="Alert/Text/AttackUnit"/>
+        <Voice value="Help"/>
+        <Peripheral value="SelfUnitUnderAttack"/>
+    </CAlert>
+    <CAlert id="BuildComplete_PZrg">
+        <Voice value="Ready"/>
+        <Peripheral value="BuildingComplete"/>
+        <Text value="Alert/Text/BuildComplete_Terr"/>
+    </CAlert>
+    <CAlert id="CalldownLaunch_PZrg" parent="Global">
+        <Flags index="SoundFromLocalPlayer" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-terran-nuclearstrike.dds"/>
+        <QueueTime value="10.000000"/>
+        <Sound value="Alert_PZrgCalldownLaunch"/>
+        <Text value="Alert/Text/CalldownLaunch"/>
+        <Peripheral value="CalldownLaunch"/>
+    </CAlert>
+    <CAlert id="CommandCenterUpgradeComplete_PZrg">
+        <Sound value="Alert_TerranCommandCenterUpgradeComplete"/>
+        <Peripheral value="UpgradeComplete"/>
+        <Text value="Alert/Text/CommandCenterUpgradeComplete"/>
+    </CAlert>
+    <CAlert id="MergeComplete_PZrg">
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/MergeComplete_Zerg"/>
+    </CAlert>
+    <CAlert id="MorphComplete_PZrg">
+        <Voice value="Ready"/>
+        <Peripheral value="MorphComplete"/>
+        <Text value="Alert/Text/MorphComplete_Zerg"/>
+    </CAlert>
+    <CAlert id="ResearchComplete_PZrg">
+        <Sound value="Alert_PZrgReasearchComplete"/>
+        <Peripheral value="ResearchComplete"/>
+        <Text value="Alert/Text/ResearchComplete_Zerg"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_HighYieldMineral_PZrg">
+        <Icon value="Assets\Textures\icon-highyieldmineral-protoss.dds"/>
+        <Sound value="Alert_PZrgMineralsDepleted"/>
+        <Peripheral value="ResourceExhausted"/>
+        <Text value="Alert/Text/ResourceExhausted_HighYieldMineral_Zerg"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_Mineral_PZrg">
+        <Icon value="Assets\Textures\icon-mineral-protoss.dds"/>
+        <Sound value="Alert_PZrgMineralsDepleted"/>
+        <Text value="Alert/Text/ResourceExhausted_Mineral"/>
+        <Peripheral value="ResourceExhausted"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_Vespene_PZrg">
+        <Icon value="Assets\Textures\icon-gas-protoss.dds"/>
+        <Sound value="Alert_PZrgVespeneGeyserExhausted"/>
+        <Text value="Alert/Text/ResourceExhausted_Vespene"/>
+        <Peripheral value="ResourceExhausted"/>
+    </CAlert>
+    <CAlert id="SpecializeComplete_PZrg">
+        <Peripheral value="SpecializationComplete"/>
+        <Text value="Alert/Text/SpecializeComplete_Zerg"/>
+    </CAlert>
+    <CAlert id="TrainComplete_PZrg">
+        <Voice value="Ready"/>
+        <Peripheral value="TrainComplete"/>
+        <Text value="Alert/Text/TrainComplete_Zerg"/>
+    </CAlert>
+    <CAlert id="TrainError_PZrg">
+        <Display index="Self" value="0"/>
+        <Icon value="Assets\Textures\icon-supply-protoss.dds"/>
+        <QueueTime value="4.000000"/>
+    </CAlert>
+    <CAlert id="TrainWorkerComplete_PZrg">
+        <Flags index="Hide" value="1"/>
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/TrainWorkerComplete_Zerg"/>
+    </CAlert>
+    <CAlert id="UpgradeComplete_PZrg">
+        <Sound value="Alert_PZrgUpgradeComplete"/>
+        <Peripheral value="UpgradeComplete"/>
+        <Text value="Alert/Text/UpgradeComplete_Zerg"/>
+    </CAlert>
+    <CAlert id="WarpTrainComplete_PZrg">
+        <Sound value="Alert_PZrgWarpTrainComplete"/>
+        <Voice value="Ready"/>
+        <Peripheral value="WarpInComplete"/>
+        <Text value="Alert/Text/WarpTrainComplete_Zerg"/>
+    </CAlert>
+</Catalog>

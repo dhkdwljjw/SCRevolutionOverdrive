@@ -1,0 +1,2739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUnit id="SentryPostWeapon" parent="MISSILE_HALFLIFE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="InfantryQuarter">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="600"/>
+        <ShieldsMax value="600"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="InfantryQuarterTrain"/>
+        <AbilArray Link="Rally"/>
+        <CardLayouts>
+            <LayoutButtons Face="Warrior" Type="AbilCmd" AbilCmd="InfantryQuarterTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Crusader" Type="AbilCmd" AbilCmd="InfantryQuarterTrain,Train2" Row="0" Column="1"/>
+            <LayoutButtons Face="Striker" Type="AbilCmd" AbilCmd="InfantryQuarterTrain,Train3" Row="0" Column="2"/>
+            <LayoutButtons Face="Centurion" Type="AbilCmd" AbilCmd="InfantryQuarterTrain,Train4" Row="0" Column="3"/>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.75"/>
+        <SeparationRadius value="1.75"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="150"/>
+        <ScoreKill value="150"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="24"/>
+        <MinimapRadius value="1.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="20"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <TechTreeProducedUnitArray value="Warrior"/>
+        <TechTreeProducedUnitArray value="Crusader"/>
+        <TechTreeProducedUnitArray value="Striker"/>
+        <TechTreeProducedUnitArray value="Centurion"/>
+    </CUnit>
+    <CUnit id="ArmamentFacility">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="500"/>
+        <ShieldsMax value="500"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="ArmamentFacilityResearch"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="UmojanGroundWeaponsUpgradeLevel1" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="UmojanGroundArmorUpgradeLevel1" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research4" Row="0" Column="1"/>
+            <LayoutButtons Face="UmojanAirWeaponsUpgradeLevel1" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research7" Row="1" Column="0"/>
+            <LayoutButtons Face="UmojanAirArmorUpgradeLevel1" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research10" Row="1" Column="1"/>
+            <LayoutButtons Face="UmojanPowerShieldsUpgradeLevel1" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research13" Row="0" Column="2"/>
+            <LayoutButtons Face="UmojanGroundWeaponsUpgradeLevel2" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="UmojanGroundArmorUpgradeLevel2" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research5" Row="0" Column="1"/>
+            <LayoutButtons Face="UmojanAirWeaponsUpgradeLevel2" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research8" Row="1" Column="0"/>
+            <LayoutButtons Face="UmojanAirArmorUpgradeLevel2" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research11" Row="1" Column="1"/>
+            <LayoutButtons Face="UmojanPowerShieldsUpgradeLevel2" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research14" Row="0" Column="2"/>
+            <LayoutButtons Face="UmojanGroundWeaponsUpgradeLevel3" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="UmojanGroundArmorUpgradeLevel3" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research6" Row="0" Column="1"/>
+            <LayoutButtons Face="UmojanAirWeaponsUpgradeLevel3" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research9" Row="1" Column="0"/>
+            <LayoutButtons Face="UmojanAirArmorUpgradeLevel3" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research12" Row="1" Column="1"/>
+            <LayoutButtons Face="UmojanPowerShieldsUpgradeLevel3" Type="AbilCmd" AbilCmd="ArmamentFacilityResearch,Research15" Row="0" Column="2"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="150"/>
+        <ScoreKill value="150"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="21"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="22"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="SentryPost">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="AIDefense" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="150"/>
+        <LifeMax value="150"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="150"/>
+        <ShieldsMax value="150"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Sight value="11"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <BehaviorArray Link="Detector11"/>
+        <BehaviorArray Link="SentryPostUmojanPowerShields"/>
+        <WeaponArray Link="SentryPost" Turret="SentryPost"/>
+        <CardLayouts>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="AttackBuilding" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Detector" Type="Passive" Requirements="NotUnderConstruction" Row="2" Column="3"/>
+            <LayoutButtons Face="SentryPostAccelerator" Type="Passive" Requirements="HaveSentryPostAccelerator" Row="2" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <PlacementFootprint value="Footprint2x2"/>
+        <ScoreMake value="150"/>
+        <ScoreKill value="150"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="14"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="31"/>
+        <GlossaryStrongArray value="Banshee"/>
+        <GlossaryStrongArray value="Mutalisk"/>
+        <GlossaryStrongArray value="Phoenix"/>
+        <GlossaryWeakArray value="Marine"/>
+        <GlossaryWeakArray value="Zergling"/>
+        <GlossaryWeakArray value="Zealot"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="PowerPlant">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="600"/>
+        <ShieldsMax value="600"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="PowerPlantResearch"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="ResearchUmojanShieldsBattery" Type="AbilCmd" AbilCmd="PowerPlantResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ResearchUmojanPowerShields" Type="AbilCmd" AbilCmd="PowerPlantResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="ResearchSentryPostAccelerator" Type="AbilCmd" AbilCmd="PowerPlantResearch,Research3" Row="1" Column="0"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="21"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="21"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="TacticsAcademy">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="500"/>
+        <ShieldsMax value="500"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="TacticsAcademyResearch"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="ResearchTacticalVisor" Type="AbilCmd" AbilCmd="TacticsAcademyResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ResearchFragmentShrapnel" Type="AbilCmd" AbilCmd="TacticsAcademyResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="ResearchShapedBlastWarhead" Type="AbilCmd" AbilCmd="TacticsAcademyResearch,Research3" Row="0" Column="2"/>
+            <LayoutButtons Face="ResearchCenturionInspiration" Type="AbilCmd" AbilCmd="TacticsAcademyResearch,Research4" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="300"/>
+        <ScoreKill value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="21"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="40"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="Arsenal">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="600"/>
+        <ShieldsMax value="600"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="ArsenalTrain"/>
+        <AbilArray Link="Rally"/>
+        <CardLayouts>
+            <LayoutButtons Face="ReconUAV" Type="AbilCmd" AbilCmd="ArsenalTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="WarHoundUmojan" Type="AbilCmd" AbilCmd="ArsenalTrain,Train2" Row="0" Column="1"/>
+            <LayoutButtons Face="Diamondback" Type="AbilCmd" AbilCmd="ArsenalTrain,Train3" Row="0" Column="2"/>
+            <LayoutButtons Face="AresArtillery" Type="AbilCmd" AbilCmd="ArsenalTrain,Train4" Row="0" Column="3"/>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.75"/>
+        <SeparationRadius value="1.75"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="400"/>
+        <ScoreKill value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="24"/>
+        <MinimapRadius value="1.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="41"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <TechTreeProducedUnitArray value="ReconUAV"/>
+        <TechTreeProducedUnitArray value="WarHoundUmojan"/>
+        <TechTreeProducedUnitArray value="Diamondback"/>
+        <TechTreeProducedUnitArray value="AresArtillery"/>
+    </CUnit>
+    <CUnit id="EngineeringFactory">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="500"/>
+        <ShieldsMax value="500"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="150"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="EngineeringFactoryResearch"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="ResearchReconUAVOvercharge" Type="AbilCmd" AbilCmd="EngineeringFactoryResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ResearchActiveElectronicallyScannedArrayRadar" Type="AbilCmd" AbilCmd="EngineeringFactoryResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="ResearchAntiTankMissile" Type="AbilCmd" AbilCmd="EngineeringFactoryResearch,Research3" Row="0" Column="2"/>
+            <LayoutButtons Face="ResearchMaelstromRounds" Type="AbilCmd" AbilCmd="EngineeringFactoryResearch,Research4" Row="0" Column="3"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="250"/>
+        <ScoreKill value="250"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="21"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="51"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="StarStation">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="600"/>
+        <ShieldsMax value="600"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="150"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="StarStationTrain"/>
+        <AbilArray Link="Rally"/>
+        <CardLayouts>
+            <LayoutButtons Face="Athena" Type="AbilCmd" AbilCmd="StarStationTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Artemis" Type="AbilCmd" AbilCmd="StarStationTrain,Train2" Row="0" Column="1"/>
+            <LayoutButtons Face="AmphibiousShip" Type="AbilCmd" AbilCmd="StarStationTrain,Train3" Row="0" Column="2"/>
+            <LayoutButtons Face="Berkut" Type="AbilCmd" AbilCmd="StarStationTrain,Train4" Row="0" Column="3"/>
+            <LayoutButtons Face="MissileCruiser" Type="AbilCmd" AbilCmd="StarStationTrain,Train5" Row="0" Column="4"/>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.75"/>
+        <SeparationRadius value="1.75"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="300"/>
+        <ScoreKill value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="24"/>
+        <MinimapRadius value="1.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="42"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <TechTreeProducedUnitArray value="Athena"/>
+        <TechTreeProducedUnitArray value="Artemis"/>
+        <TechTreeProducedUnitArray value="AmphibiousShip"/>
+        <TechTreeProducedUnitArray value="Berkut"/>
+        <TechTreeProducedUnitArray value="MissileCruiser"/>
+    </CUnit>
+    <CUnit id="FleetHeadquarters">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="600"/>
+        <ShieldsMax value="600"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="200"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="FleetHeadquartersResearch"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="ResearchAthenaJotunBoosters" Type="AbilCmd" AbilCmd="FleetHeadquartersResearch,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ResearchMaverickMissiles" Type="AbilCmd" AbilCmd="FleetHeadquartersResearch,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="ResearchDeployPsionicSuppressionField" Type="AbilCmd" AbilCmd="FleetHeadquartersResearch,Research3" Row="0" Column="2"/>
+            <LayoutButtons Face="ResearchZirconCruiseMissile" Type="AbilCmd" AbilCmd="FleetHeadquartersResearch,Research4" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="500"/>
+        <ScoreKill value="500"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="21"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="52"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="FutureWarfareLab">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="600"/>
+        <ShieldsMax value="600"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="300"/>
+        <CostResource index="Vespene" value="300"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="FutureWarfareLabTrain"/>
+        <AbilArray Link="FutureWarfareLabResearch"/>
+        <AbilArray Link="Rally"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="VoidAssaulter" Type="AbilCmd" AbilCmd="FutureWarfareLabTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Zeus" Type="AbilCmd" AbilCmd="FutureWarfareLabTrain,Train2" Row="0" Column="1"/>
+            <LayoutButtons Face="Aquila" Type="AbilCmd" AbilCmd="FutureWarfareLabTrain,Train3" Row="0" Column="2"/>
+            <LayoutButtons Face="ResearchVoidAssaulterPsionicLash" Type="AbilCmd" AbilCmd="FutureWarfareLabResearch,Research1" Row="1" Column="0"/>
+            <LayoutButtons Face="ResearchHeraProtocol" Type="AbilCmd" AbilCmd="FutureWarfareLabResearch,Research2" Row="1" Column="1"/>
+            <LayoutButtons Face="ResearchPraetoriaHangar" Type="AbilCmd" AbilCmd="FutureWarfareLabResearch,Research3" Row="1" Column="2"/>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.75"/>
+        <SeparationRadius value="1.75"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="600"/>
+        <ScoreKill value="600"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="24"/>
+        <MinimapRadius value="1.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="60"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="CommandPost">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventReveal" value="1"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="TownCamera" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <ResourceDropOff index="Minerals" value="1"/>
+        <ResourceDropOff index="Vespene" value="1"/>
+        <ResourceDropOff index="Terrazine" value="1"/>
+        <ResourceDropOff index="Custom" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="1000"/>
+        <LifeMax value="1000"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="1000"/>
+        <ShieldsMax value="1000"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="11"/>
+        <Food value="15"/>
+        <CostCategory value="Economy"/>
+        <CostResource index="Minerals" value="400"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5CancelToSelection"/>
+        <AbilArray Link="CommandPostTrain"/>
+        <AbilArray Link="RallyCommandPost"/>
+        <AbilArray Link="CommandPostSpecialization"/>
+        <AbilArray Link="CalldownVespeneHarvesterUmojan"/>
+        <EffectArray index="Create" value="CCCreateSet"/>
+        <EffectArray index="Birth" value="CCBirthSet"/>
+        <CardLayouts>
+            <LayoutButtons Face="Pioneer" Type="AbilCmd" AbilCmd="CommandPostTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="RallyCommandPost,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5CancelToSelection,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="DeployMineralResonator" Type="AbilCmd" AbilCmd="CommandPostSpecialization,Train1" Row="0" Column="1"/>
+            <LayoutButtons Face="MineralResonator" Type="Passive" Requirements="HaveMineralResonator" Row="0" Column="1"/>
+            <LayoutButtons Face="VespeneHarvesterUmojan" Type="AbilCmd" AbilCmd="CalldownVespeneHarvesterUmojan,Execute" Row="0" Column="2"/>
+        </CardLayouts>
+        <Radius value="2.5"/>
+        <SeparationRadius value="2.5"/>
+        <Footprint value="Footprint5x5Contour"/>
+        <PlacementFootprint value="Footprint5x5DropOff"/>
+        <ScoreMake value="400"/>
+        <ScoreKill value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="32"/>
+        <MinimapRadius value="2.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="10"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <TechTreeProducedUnitArray value="Pioneer"/>
+    </CUnit>
+    <CUnit id="RangerMissilesShield" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="MissileDefault"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="RecoveryDevice">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <EnergyStart value="50"/>
+        <EnergyMax value="100"/>
+        <EnergyRegenRate value="0.5625"/>
+        <ShieldsStart value="200"/>
+        <ShieldsMax value="200"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="100"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="RecoveryDeviceShieldRecovery"/>
+        <TurretArray value="RecoveryDeviceRotate"/>
+        <CardLayouts>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="RecoveryDeviceRecharge" Type="AbilCmd" AbilCmd="RecoveryDeviceShieldRecovery,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="RecoveryDeviceShieldRecovery,Cancel" Row="0" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <PlacementFootprint value="Footprint2x2"/>
+        <ScoreMake value="100"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Campaign"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="30"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="LogisticsDepot">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="300"/>
+        <LifeMax value="300"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="300"/>
+        <ShieldsMax value="300"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <Food value="8"/>
+        <CostCategory value="Economy"/>
+        <CostResource index="Minerals" value="100"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <CardLayouts>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.25"/>
+        <SeparationRadius value="1.25"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <PlacementFootprint value="Footprint2x2"/>
+        <ScoreMake value="100"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="11"/>
+        <MinimapRadius value="1.25"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="11"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="VespenePlant">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <ResourceState value="Harvestable"/>
+        <ResourceType value="Vespene"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="300"/>
+        <LifeMax value="300"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="300"/>
+        <ShieldsMax value="300"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Economy"/>
+        <CostResource index="Minerals" value="75"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <BehaviorArray Link="HarvestableVespeneGeyserGasUmojan"/>
+        <BehaviorArray Link="WorkerPeriodicRefineryCheck"/>
+        <EffectArray index="Create" value="VespenePlantRichSearch"/>
+        <CardLayouts>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="FootprintGeyserRoundedBuilt"/>
+        <PlacementFootprint value="Footprint3x3CappedGeyser"/>
+        <BuiltOn value="VespeneGeyser"/>
+        <BuiltOn value="SpacePlatformGeyser"/>
+        <BuiltOn value="RichVespeneGeyser"/>
+        <BuiltOn value="ProtossVespeneGeyser"/>
+        <BuiltOn value="PurifierVespeneGeyser"/>
+        <BuiltOn value="ShakurasVespeneGeyser"/>
+        <BuildOnAs value="VespenePlantRich"/>
+        <ScoreMake value="75"/>
+        <ScoreKill value="75"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="1"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="12"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="VespenePlantRich">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <ResourceState value="Harvestable"/>
+        <ResourceType value="Vespene"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="300"/>
+        <LifeMax value="300"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="300"/>
+        <ShieldsMax value="300"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Economy"/>
+        <CostResource index="Minerals" value="75"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <BehaviorArray Link="HarvestableRichVespeneGeyserGasUmojan"/>
+        <BehaviorArray Link="WorkerPeriodicRefineryCheck"/>
+        <EffectArray index="Create" value="VespenePlantRichSearch"/>
+        <CardLayouts>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="FootprintGeyserRoundedBuilt"/>
+        <PlacementFootprint value="Footprint3x3CappedGeyser"/>
+        <BuiltOn value="RichVespeneGeyser"/>
+        <ScoreMake value="75"/>
+        <ScoreKill value="75"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="1"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <HotkeyAlias value="VespenePlant"/>
+        <SelectAlias value="VespenePlant"/>
+        <SubgroupAlias value="VespenePlant"/>
+        <GlossaryPriority value="12"/>
+        <GlossaryAlias value="VespenePlant"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="SpecOpsCommand">
+        <DeathRevealRadius value="3"/>
+        <Facing value="315"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Phased" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="500"/>
+        <LifeMax value="500"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanBuildingPlating"/>
+        <ShieldsStart value="500"/>
+        <ShieldsMax value="500"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="200"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <AbilArray Link="que5"/>
+        <AbilArray Link="ArmTacticalCruiseMissile"/>
+        <AbilArray Link="SpecOpsCommandResearch"/>
+        <AbilArray Link="SpecOpsCommandTrain"/>
+        <AbilArray Link="Rally"/>
+        <CardLayouts>
+            <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="ArmTacticalCruiseMissile" Type="AbilCmd" AbilCmd="ArmTacticalCruiseMissile,Ammo1" Row="2" Column="0"/>
+            <LayoutButtons Face="ResearchPersonalCloakingShadowAssassin" Type="AbilCmd" AbilCmd="SpecOpsCommandResearch,Research1" Row="1" Column="0"/>
+            <LayoutButtons Face="ShadowAssassin" Type="AbilCmd" AbilCmd="SpecOpsCommandTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="ResearchPsionicLockdown" Type="AbilCmd" AbilCmd="SpecOpsCommandResearch,Research2" Row="1" Column="1"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <Footprint value="Footprint3x3Contour"/>
+        <PlacementFootprint value="Footprint3x3"/>
+        <ScoreMake value="350"/>
+        <ScoreKill value="350"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="24"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryPriority value="50"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <TechTreeUnlockedUnitArray value="ShadowAssassin"/>
+    </CUnit>
+    <CUnit id="Crusader">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanInfantryArmor"/>
+        <ShieldsStart value="80"/>
+        <ShieldsMax value="80"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="69.125"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="125"/>
+        <CostResource index="Vespene" value="50"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="15"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <WeaponArray Link="CrusaderGrenades"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="UmojanPowerShieldCrusader" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+            <LayoutButtons Face="FragmentShrapnelUpgraded" Type="Passive" Requirements="HaveFragmentShrapnel" Row="2" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.625"/>
+        <InnerRadius value="0.5625"/>
+        <CargoSize value="4"/>
+        <ScoreMake value="175"/>
+        <ScoreKill value="175"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="76"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="22"/>
+        <GlossaryStrongArray value="Thor"/>
+        <GlossaryStrongArray value="Roach"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryWeakArray value="Marine"/>
+        <GlossaryWeakArray value="Zergling"/>
+        <GlossaryWeakArray value="Zealot"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <TauntDuration index="Cheer" value="5"/>
+        <TauntDuration index="Dance" value="5"/>
+        <BehaviorArray Link="CrusaderUmojanPowerShields"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="DominatorGrenadesLMWeaponUpgraded" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="DominatorGrenadesWeapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="DominatorrGrenadesLMWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="DominatorGrenadesWeapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Pioneer">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Worker" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <DefaultAcquireLevel value="Defensive"/>
+        <Response value="Flee"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="20"/>
+        <LifeMax value="20"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanInfantryArmor"/>
+        <ShieldsStart value="20"/>
+        <ShieldsMax value="20"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Speed value="2.8125"/>
+        <Acceleration value="2.5"/>
+        <LateralAcceleration value="46"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="8"/>
+        <Food value="-1"/>
+        <CostCategory value="Economy"/>
+        <CostResource index="Minerals" value="50"/>
+        <AttackTargetPriority value="20"/>
+        <AIOverideTargetPriority value="10"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="10"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="PioneerHarvest"/>
+        <AbilArray Link="UmojanBuild"/>
+        <AbilArray Link="NanoDisassembleRepair"/>
+        <AbilArray Link="WorkerStopIdleAbilityVespene"/>
+        <WeaponArray Link="Pioneer"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="AttackWorker" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="NanoDisassembleRepair" Type="AbilCmd" AbilCmd="NanoDisassembleRepair,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="GatherUmoj" Type="AbilCmd" AbilCmd="PioneerHarvest,Gather" Row="1" Column="0"/>
+            <LayoutButtons Face="ReturnCargo" Type="AbilCmd" AbilCmd="PioneerHarvest,Return" Row="1" Column="1"/>
+            <LayoutButtons Face="UmojanBuild" Type="Submenu" SubmenuCardId="TBl1" Row="2" Column="0"/>
+            <LayoutButtons Face="UmojanBuildAdvanced" Type="Submenu" SubmenuCardId="TBl2" Row="2" Column="1"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="UmojanBuild,Halt" Row="2" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="TBl1">
+            <LayoutButtons Face="CommandPost" Type="AbilCmd" AbilCmd="UmojanBuild,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="LogisticsDepot" Type="AbilCmd" AbilCmd="UmojanBuild,Build2" Row="0" Column="1"/>
+            <LayoutButtons Face="VespenePlant" Type="AbilCmd" AbilCmd="UmojanBuild,Build3" Row="0" Column="2"/>
+            <LayoutButtons Face="InfantryQuarter" Type="AbilCmd" AbilCmd="UmojanBuild,Build4" Row="1" Column="0"/>
+            <LayoutButtons Face="ArmamentFacility" Type="AbilCmd" AbilCmd="UmojanBuild,Build5" Row="1" Column="1"/>
+            <LayoutButtons Face="SentryPost" Type="AbilCmd" AbilCmd="UmojanBuild,Build6" Row="1" Column="2"/>
+            <LayoutButtons Face="PowerPlant" Type="AbilCmd" AbilCmd="UmojanBuild,Build7" Row="2" Column="0"/>
+            <LayoutButtons Face="RecoveryDevice" Type="AbilCmd" AbilCmd="UmojanBuild,Build9" Row="2" Column="1"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <CardLayouts CardId="TBl2">
+            <LayoutButtons Face="TacticsAcademy" Type="AbilCmd" AbilCmd="UmojanBuild,Build10" Row="0" Column="0"/>
+            <LayoutButtons Face="Arsenal" Type="AbilCmd" AbilCmd="UmojanBuild,Build11" Row="0" Column="1"/>
+            <LayoutButtons Face="StarStation" Type="AbilCmd" AbilCmd="UmojanBuild,Build12" Row="0" Column="2"/>
+            <LayoutButtons Face="SpecOpsCommand" Type="AbilCmd" AbilCmd="UmojanBuild,Build13" Row="1" Column="0"/>
+            <LayoutButtons Face="EngineeringFactory" Type="AbilCmd" AbilCmd="UmojanBuild,Build14" Row="1" Column="1"/>
+            <LayoutButtons Face="FleetHeadquarters" Type="AbilCmd" AbilCmd="UmojanBuild,Build15" Row="1" Column="2"/>
+            <LayoutButtons Face="FutureWarfareLab" Type="AbilCmd" AbilCmd="UmojanBuild,Build16" Row="2" Column="0"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.3125"/>
+        <CargoSize value="1"/>
+        <ScoreMake value="50"/>
+        <ScoreKill value="50"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="58"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="10"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="CommandPostMineralResonatorDummy">
+        <Race value="Umoj"/>
+        <EditorFlags index="NoPlacement" value="1"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="150"/>
+        <EffectArray index="Create" value="SuicideRemove"/>
+        <EffectArray index="Birth" value="SuicideRemove"/>
+        <ScoreMake value="150"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="TheseusAntiTankMissilesUpgradeWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="TheseusAntiTankMissilesWeapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Warrior">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="60"/>
+        <LifeMax value="60"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanInfantryArmor"/>
+        <ShieldsStart value="40"/>
+        <ShieldsMax value="40"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="9"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="100"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="10"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <WeaponArray Link="WarriorGaussRifle"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="UmojanPowerShieldWarrior" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+            <LayoutButtons Face="TacticalVisorUpgraded" Type="Passive" Requirements="HaveTacticalVisor" Row="2" Column="2"/>
+        </CardLayouts>
+        <InnerRadius value="0.5"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="100"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="78"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="21"/>
+        <GlossaryStrongArray value="Marauder"/>
+        <GlossaryStrongArray value="Mutalisk"/>
+        <GlossaryStrongArray value="Immortal"/>
+        <GlossaryWeakArray value="SiegeTank"/>
+        <GlossaryWeakArray value="Baneling"/>
+        <GlossaryWeakArray value="Colossus"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <BehaviorArray Link="WarriorUmojanPowerShields"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="Striker">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="40"/>
+        <LifeMax value="40"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanInfantryArmor"/>
+        <ShieldsStart value="25"/>
+        <ShieldsMax value="25"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="125"/>
+        <CostResource index="Vespene" value="50"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="10"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <WeaponArray Link="TheseusAntiTankMissiles"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="UmojanPowerShieldStriker" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+            <LayoutButtons Face="ShapedBlastWarheadUpgraded" Type="Passive" Requirements="HaveShapedBlastWarhead" Row="2" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.4375"/>
+        <SeparationRadius value="0.4375"/>
+        <InnerRadius value="0.4375"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="175"/>
+        <ScoreKill value="175"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="70"/>
+        <MinimapRadius value="0.4375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="23"/>
+        <GlossaryStrongArray value="Marauder"/>
+        <GlossaryStrongArray value="Mutalisk"/>
+        <GlossaryStrongArray value="Immortal"/>
+        <GlossaryWeakArray value="SiegeTank"/>
+        <GlossaryWeakArray value="Baneling"/>
+        <GlossaryWeakArray value="Colossus"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <BehaviorArray Link="StrikerUmojanPowerShields"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="TheseusAntiTankMissilesWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="ReconUAV">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Cloaked" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="40"/>
+        <LifeMax value="40"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanShipPlating"/>
+        <ShieldsStart value="20"/>
+        <ShieldsMax value="20"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Mover value="Fly"/>
+        <Speed value="2.25"/>
+        <Acceleration value="2.25"/>
+        <Sight value="11"/>
+        <Height value="3.75"/>
+        <VisionHeight value="15"/>
+        <Food value="-1"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="25"/>
+        <CostResource index="Vespene" value="75"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="20"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="ReconUAVSuicide"/>
+        <BehaviorArray Link="Detector11"/>
+        <BehaviorArray Link="ReconUAVUmojanPowerShields"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Detector" Type="Passive" Row="2" Column="3"/>
+            <LayoutButtons Face="UmojanPowerShieldReconUAV" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+            <LayoutButtons Face="ReconUAVOvercharge" Type="AbilCmd" AbilCmd="ReconUAVSuicide,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="PermanentlyCloakedReconUAV" Type="Passive" Row="2" Column="2"/>
+        </CardLayouts>
+        <ScoreMake value="100"/>
+        <ScoreKill value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="40"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="30"/>
+        <GlossaryStrongArray value="Banshee"/>
+        <GlossaryStrongArray value="LurkerMP"/>
+        <GlossaryStrongArray value="DarkTemplar"/>
+        <GlossaryWeakArray value="MissileTurret"/>
+        <GlossaryWeakArray value="SporeCrawler"/>
+        <GlossaryWeakArray value="PhotonCannon"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <WeaponArray Link="ReconUAV"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="RangerMissiles" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="MissileDefault"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="AntiTankMissile" parent="MISSILE_INVULNERABLE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Diamondback">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <LifeArmor value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanVehiclePlating"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="115.1875"/>
+        <StationaryTurningRate value="1499.9414"/>
+        <Sight value="11"/>
+        <Food value="-4"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="250"/>
+        <CostResource index="Vespene" value="125"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="100"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="AntiTankMissile"/>
+        <BehaviorArray Link="HardenedShieldDiamondback"/>
+        <WeaponArray Link="Diamondback" Turret="Diamondback"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AntiTankMissile" Type="AbilCmd" AbilCmd="AntiTankMissile,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="UmojanPowerShieldDiamondback" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.875"/>
+        <SeparationRadius value="0.875"/>
+        <InnerRadius value="0.875"/>
+        <CargoSize value="4"/>
+        <ScoreMake value="400"/>
+        <ScoreKill value="400"/>
+        <SubgroupPriority value="82"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="32"/>
+        <GlossaryStrongArray value="Ultralisk"/>
+        <GlossaryStrongArray value="Colossus"/>
+        <GlossaryStrongArray value="SiegeTank"/>
+        <GlossaryWeakArray value="Zergling"/>
+        <GlossaryWeakArray value="Zealot"/>
+        <GlossaryWeakArray value="Marauder"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="AmphibiousShip">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanShipPlating"/>
+        <ShieldsStart value="80"/>
+        <ShieldsMax value="80"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Mover value="Fly"/>
+        <Speed value="2.8125"/>
+        <Acceleration value="2.75"/>
+        <LateralAcceleration value="1000"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="11"/>
+        <Height value="3.75"/>
+        <VisionHeight value="15"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="25"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="40"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="AmphibiousShipTransport"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
+            <LayoutButtons Face="AmphibiousShipLoad" Type="AbilCmd" AbilCmd="AmphibiousShipTransport,Load" Row="2" Column="0"/>
+            <LayoutButtons Face="AmphibiousShipUnloadAll" Type="AbilCmd" AbilCmd="AmphibiousShipTransport,UnloadAt" Row="2" Column="1"/>
+            <LayoutButtons Face="UmojanPowerShieldAmphibiousShip" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="60"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="42"/>
+        <GlossaryWeakArray value="MissileTurret"/>
+        <GlossaryWeakArray value="SporeCrawler"/>
+        <GlossaryWeakArray value="PhotonCannon"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <BehaviorArray Link="AmphibiousShipUmojanPowerShields"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="Artemis">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="150"/>
+        <LifeMax value="150"/>
+        <LifeArmor value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanShipPlating"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Mover value="Fly"/>
+        <Speed value="3.375"/>
+        <Acceleration value="4"/>
+        <StationaryTurningRate value="1499.9414"/>
+        <TurningRate value="1499.9414"/>
+        <Sight value="10"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-4"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="250"/>
+        <CostResource index="Vespene" value="150"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="50"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="attack"/>
+        <WeaponArray Link="ArtemisHALOMissiles"/>
+        <WeaponArray Link="MaverickMissiles"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="UmojanPowerShieldArtemis" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+            <LayoutButtons Face="MaverickMissilesUpgraded" Type="Passive" Requirements="HaveMaverickMissiles" Row="2" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.875"/>
+        <SeparationRadius value="0.875"/>
+        <ScoreMake value="400"/>
+        <ScoreKill value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="66"/>
+        <MinimapRadius value="0.875"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="41"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <BehaviorArray Link="ArtemisUmojanPowerShields"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="ArtemisDamageMissile" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="LiberatorMissile"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="MaverickMissiles" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="MissileDefault"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="MaelstromRoundsUnit">
+        <Race value="Umoj"/>
+        <PlaneArray index="Air" value="1"/>
+        <LifeStart value="10"/>
+        <LifeMax value="10"/>
+        <CostResource index="Minerals" value="5"/>
+        <CostResource index="Vespene" value="5"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="AresArtillery">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="AIPressForwardDisabled" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanVehiclePlating"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="64"/>
+        <TurningRate value="360"/>
+        <Sight value="11"/>
+        <Food value="-4"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Vespene" value="200"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="120"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="MaelstromRoundsHangar"/>
+        <AbilArray Link="HangarQueue5"/>
+        <WeaponArray Link="GaussShockCannon" Turret="AresArtilleryTurret"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="ArmMaelstromRounds" Type="AbilCmd" AbilCmd="MaelstromRoundsHangar,Ammo1" Row="2" Column="0"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="HangarQueue5,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="UmojanPowerShieldAresArtillery" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.875"/>
+        <SeparationRadius value="0.875"/>
+        <InnerRadius value="0.875"/>
+        <CargoSize value="4"/>
+        <ScoreMake value="400"/>
+        <ScoreKill value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="72"/>
+        <MinimapRadius value="0.875"/>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Unit"/>
+        <Mass value="0.5"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="33"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <BehaviorArray Link="AresArtilleryUmojanPowerShields"/>
+        <BehaviorArray Link="MaelstromRoundsRange"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="Centurion">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="40"/>
+        <LifeMax value="40"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanInfantryArmor"/>
+        <Speed value="2.8125"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="11"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="75"/>
+        <CostResource index="Vespene" value="125"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="10"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="CenturionPlasmaSurge"/>
+        <AbilArray Link="CenturionInspiration"/>
+        <WeaponArray Link="AGR15AssaultRifle"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="CenturionPlasmaSurge" Type="AbilCmd" AbilCmd="CenturionPlasmaSurge,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="UmojanPowerShieldCenturion" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+            <LayoutButtons Face="CenturionInspiration" Type="AbilCmd" AbilCmd="CenturionInspiration,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Detector" Type="Passive" Behavior="Detector11" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.4375"/>
+        <SeparationRadius value="0.4375"/>
+        <InnerRadius value="0.4375"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="200"/>
+        <ScoreKill value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="96"/>
+        <MinimapRadius value="0.4375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="24"/>
+        <GlossaryStrongArray value="Marauder"/>
+        <GlossaryStrongArray value="Mutalisk"/>
+        <GlossaryStrongArray value="Immortal"/>
+        <GlossaryWeakArray value="SiegeTank"/>
+        <GlossaryWeakArray value="Baneling"/>
+        <GlossaryWeakArray value="Colossus"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <EnergyStart value="50"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="0.5625"/>
+        <ShieldsStart value="40"/>
+        <ShieldsMax value="40"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <BehaviorArray Link="Detector11"/>
+        <BehaviorArray Link="CenturionUmojanPowerShield"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="ShadowAssassin">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <LifeStart value="60"/>
+        <LifeMax value="60"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanInfantryArmor"/>
+        <EnergyStart value="50"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="0.5625"/>
+        <Speed value="2.8125"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="11"/>
+        <Food value="-3"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="125"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="30"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="ShadowAssassinCloak"/>
+        <AbilArray Link="ShadowAssassinSnipeOn"/>
+        <AbilArray Link="ShadowAssassinSnipeOff"/>
+        <AbilArray Link="TacticalCruiseMissile"/>
+        <AbilArray Link="ShadowAssassinHoldFire"/>
+        <AbilArray Link="PsionicLockdown"/>
+        <AbilArray Link="ShadowAssassinWeaponsFree"/>
+        <WeaponArray Link="ShadowAssassinSnipe"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="HoldFire" Type="AbilCmd" AbilCmd="ShadowAssassinHoldFire,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="CloakOffShadowAssassin" Type="AbilCmd" AbilCmd="ShadowAssassinCloak,Off" Row="2" Column="4"/>
+            <LayoutButtons Face="AttackGhost" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="TacticalCruiseMissile" Type="AbilCmd" AbilCmd="TacticalCruiseMissile,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="PsionicLockdown" Type="AbilCmd" AbilCmd="PsionicLockdown,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="CloakOnShadowAssassin" Type="AbilCmd" AbilCmd="ShadowAssassinCloak,On" Row="2" Column="3"/>
+            <LayoutButtons Face="SnipeOnShadowAssassin" Type="AbilCmd" AbilCmd="ShadowAssassinSnipeOn,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SnipeOffShadowAssassin" Type="AbilCmd" AbilCmd="ShadowAssassinSnipeOff,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="WeaponsFreeShadowAssassin" Type="AbilCmd" AbilCmd="ShadowAssassinWeaponsFree,Execute" Row="1" Column="3"/>
+            <LayoutButtons Face="UmojanPowerShieldShadowAssassin" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="1"/>
+        </CardLayouts>
+        <Radius value="0.4375"/>
+        <SeparationRadius value="0.4375"/>
+        <InnerRadius value="0.4375"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="300"/>
+        <ScoreKill value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="100"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="25"/>
+        <GlossaryStrongArray value="Raven"/>
+        <GlossaryStrongArray value="Infestor"/>
+        <GlossaryStrongArray value="HighTemplar"/>
+        <GlossaryWeakArray value="Thor"/>
+        <GlossaryWeakArray value="Roach"/>
+        <GlossaryWeakArray value="Stalker"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <ShieldsStart value="60"/>
+        <ShieldsMax value="60"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <BehaviorArray Link="ShadowAssassinUmojanPowerShields"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="TacticalCruiseMissileUnit">
+        <Race value="Umoj"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="Unselectable" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <EditorFlags index="NoPlacement" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <VisionHeight value="4"/>
+        <CostCategory value="Technology"/>
+        <CostResource index="Minerals" value="50"/>
+        <CostResource index="Vespene" value="50"/>
+        <AbilArray Link="move"/>
+        <ScoreMake value="100"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="15"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="TacticalCruiseMissileIndicator" parent="MISSILE_INVULNERABLE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="TacticalCruiseMissile" parent="MISSILE_HALFLIFE">
+        <Race value="Umoj"/>
+        <FlagArray index="Untargetable" value="0"/>
+        <FlagArray index="Missile" value="0"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="NoDeathEvent" value="0"/>
+        <FlagArray index="IgnoreAttackAlert" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <Sight value="4"/>
+        <AttackTargetPriority value="20"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="MissileCruiser">
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <LifeStart value="350"/>
+        <LifeMax value="350"/>
+        <LifeArmor value="4"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanShipPlating"/>
+        <Mover value="Fly"/>
+        <Speed value="1.875"/>
+        <Acceleration value="1"/>
+        <Sight value="12"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-6"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="400"/>
+        <CostResource index="Vespene" value="300"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="160"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="ZirconCruiseMissile"/>
+        <AbilArray Link="ActivatePointDefenseSystem"/>
+        <WeaponArray Link="MeteorMissilePods"/>
+        <WeaponArray Link="PointDefenseSystemLaser"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="ZirconCruiseMissile" Type="AbilCmd" AbilCmd="ZirconCruiseMissile,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="ActivatePointDefenseSystem" Type="AbilCmd" AbilCmd="ActivatePointDefenseSystem,On" Row="2" Column="1"/>
+            <LayoutButtons Face="DeactivatePointDefenseSystem" Type="AbilCmd" AbilCmd="ActivatePointDefenseSystem,Off" Row="2" Column="2"/>
+        </CardLayouts>
+        <Radius value="1.25"/>
+        <SeparationRadius value="1.25"/>
+        <ScoreMake value="700"/>
+        <ScoreKill value="700"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="84"/>
+        <MinimapRadius value="1.25"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="44"/>
+        <GlossaryStrongArray value="Liberator"/>
+        <GlossaryStrongArray value="Mutalisk"/>
+        <GlossaryStrongArray value="Carrier"/>
+        <GlossaryWeakArray value="VikingFighter"/>
+        <GlossaryWeakArray value="Corruptor"/>
+        <GlossaryWeakArray value="VoidRay"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <ShieldsStart value="200"/>
+        <ShieldsMax value="200"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="MeteorMissileLMLeft" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="MeteorMissileLeftLMWeapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="MeteorMissileLMRight" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="MeteorMissileRightLMWeapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Athena">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanShipPlating"/>
+        <Mover value="Fly"/>
+        <Speed value="4"/>
+        <Acceleration value="4.25"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="10"/>
+        <Height value="3.75"/>
+        <VisionHeight value="15"/>
+        <Food value="-2"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="30"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="AthenaWeaponSwitchToVympel"/>
+        <AbilArray Link="AthenaWeaponSwitchToRanger"/>
+        <WeaponArray Link="RangerMissiles"/>
+        <WeaponArray Link="VympelMissiles"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AthenaWeaponSwitchVympel" Type="AbilCmd" AbilCmd="AthenaWeaponSwitchToVympel,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="AthenaWeaponSwitchRanger" Type="AbilCmd" AbilCmd="AthenaWeaponSwitchToRanger,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="UmojanPowerShieldAthena" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <ScoreMake value="225"/>
+        <ScoreKill value="225"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="74"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="40"/>
+        <GlossaryStrongArray value="Battlecruiser"/>
+        <GlossaryStrongArray value="BroodLord"/>
+        <GlossaryStrongArray value="Tempest"/>
+        <GlossaryWeakArray value="Marine"/>
+        <GlossaryWeakArray value="Hydralisk"/>
+        <GlossaryWeakArray value="Stalker"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <LifeArmor value="1"/>
+        <ShieldsStart value="60"/>
+        <ShieldsMax value="60"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <BehaviorArray Link="AthenaUmojanPowerShieldsVympel"/>
+        <BehaviorArray Link="AthenaUmojanPowerShieldsRanger"/>
+        <BehaviorArray Link="AthenaWeaponSwitchCooldown"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="AthenaWeapon" parent="MISSILE_HALFLIFE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="HaywireMissileWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="WarHoundUmojan">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <LifeArmor value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanVehiclePlating"/>
+        <Speed value="2.8125"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <TurningRate value="360"/>
+        <Sight value="11"/>
+        <Food value="-3"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="100"/>
+        <AttackTargetPriority value="20"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HaywireMissile"/>
+        <WeaponArray Link="WarHoundUmojanAntiAir"/>
+        <WeaponArray Link="WarHoundUmojanMelee"/>
+        <WeaponArray Link="WarHoundUmojan"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="HaywireMissile" Type="AbilCmd" AbilCmd="HaywireMissile,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="UmojanPowerShieldWarHound" Type="Passive" Requirements="HaveUmojanPowerShields" Row="1" Column="0"/>
+            <LayoutButtons Face="ActiveElectronicallyScannedArrayRadarUpgraded" Type="Passive" Requirements="HaveAESARadar" Row="2" Column="2"/>
+        </CardLayouts>
+        <Radius value="0.8125"/>
+        <SeparationRadius value="0.8125"/>
+        <InnerRadius value="0.75"/>
+        <CargoSize value="4"/>
+        <ScoreMake value="250"/>
+        <ScoreKill value="250"/>
+        <SubgroupPriority value="68"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Unit"/>
+        <GlossaryPriority value="31"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryStrongArray value="SiegeTankSieged"/>
+        <GlossaryWeakArray value="Roach"/>
+        <GlossaryWeakArray value="Zealot"/>
+        <GlossaryWeakArray value="Marauder"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <BehaviorArray Link="WarhoundUmojanPowerShields"/>
+        <RankDisplay value="Never"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+    </CUnit>
+    <CUnit id="WarHoundUmojanWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="WarHoundUmojanAntiAirWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="ZirconCruiseMissileWeapon" parent="MISSILE_INVULNERABLE">
+        <Race value="Umoj"/>
+        <Mover value="ZirconCruiseMissile"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Zeus">
+        <DeathRevealRadius value="3"/>
+        <Facing value="135"/>
+        <Race value="Umoj"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <PushPriority value="11"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="800"/>
+        <LifeMax value="800"/>
+        <LifeArmor value="4"/>
+        <LifeRegenDelay value="10"/>
+        <LifeRegenRate value="5"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanVehiclePlating"/>
+        <ShieldsStart value="400"/>
+        <ShieldsMax value="400"/>
+        <ShieldArmor value="2"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Speed value="1.875"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="360"/>
+        <TurningRate value="360"/>
+        <Sight value="13"/>
+        <Food value="-12"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="800"/>
+        <CostResource index="Vespene" value="600"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="160"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="TomahawkCruiseMissile"/>
+        <AbilArray Link="HeraProtocol"/>
+        <BehaviorArray Link="Detector13"/>
+        <WeaponArray Link="Zeus"/>
+        <WeaponArray Link="ZeusAntiAir"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="HeraProtocol" Type="AbilCmd" AbilCmd="HeraProtocol,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="HeraProtocol,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="TomahawkCruiseMissile" Type="AbilCmd" AbilCmd="TomahawkCruiseMissile,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="UmojanHeroicUnitsRegenerationZeus" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="Detector" Type="Passive" Behavior="Detector13" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <InnerRadius value="1.25"/>
+        <CargoSize value="8"/>
+        <ScoreMake value="1400"/>
+        <ScoreKill value="1400"/>
+        <SubgroupPriority value="90"/>
+        <MinimapRadius value="1.25"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="51"/>
+        <GlossaryWeakArray value="Banshee"/>
+        <GlossaryWeakArray value="Battlecruiser"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <RankDisplay value="Never"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="10"/>
+            <ChanceArray index="Idle" value="90"/>
+        </Fidget>
+    </CUnit>
+    <CUnit id="ZeusAAWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="ThorAA"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Aquila">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Massive" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="600"/>
+        <LifeMax value="600"/>
+        <LifeArmor value="4"/>
+        <LifeRegenDelay value="10"/>
+        <LifeRegenRate value="5"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanShipPlating"/>
+        <ShieldsStart value="300"/>
+        <ShieldsMax value="300"/>
+        <ShieldArmor value="1"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Mover value="Fly"/>
+        <Speed value="1.875"/>
+        <Acceleration value="1"/>
+        <Sight value="13"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-12"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="800"/>
+        <CostResource index="Vespene" value="600"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="1400"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="HangarQueue2"/>
+        <AbilArray Link="PointDefenseSystemAquila"/>
+        <AbilArray Link="TrainPraetoria"/>
+        <BehaviorArray Link="Detector13"/>
+        <WeaponArray Link="EnterpriseGun"/>
+        <WeaponArray Link="OdysseusMissileBarrage"/>
+        <WeaponArray Link="PointDefenseSystemLaserAquila"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="ActivatePointDefenseSystemAquila" Type="AbilCmd" AbilCmd="PointDefenseSystemAquila,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="Praetoria" Type="AbilCmd" AbilCmd="TrainPraetoria,Ammo1" Row="2" Column="0"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="HangarQueue2,CancelLast" Row="2" Column="4"/>
+            <LayoutButtons Face="UmojanHeroicUnitsRegenerationAquila" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="Detector" Type="Passive" Behavior="Detector13" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.5"/>
+        <SeparationRadius value="1.5"/>
+        <ScoreMake value="1400"/>
+        <ScoreKill value="1400"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="88"/>
+        <MinimapRadius value="1.5"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <Mass value="0.6"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="52"/>
+        <GlossaryStrongArray value="Thor"/>
+        <GlossaryStrongArray value="Mutalisk"/>
+        <GlossaryStrongArray value="Carrier"/>
+        <GlossaryWeakArray value="VikingFighter"/>
+        <GlossaryWeakArray value="Corruptor"/>
+        <GlossaryWeakArray value="VoidRay"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="OdysseusMissileLeftLMWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="OdysseusMissileRightLMWeapon" parent="MISSILE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="EnterpriseGun" parent="MISSILE">
+        <Race value="Umoj"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="TomahawkCruiseMissileA" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="TomahawkCruiseMissile"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="TomahawkCruiseMissileB" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="TomahawkCruiseMissile"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="TomahawkCruiseMissileC" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="TomahawkCruiseMissile"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="TomahawkCruiseMissileD" parent="MISSILE">
+        <Race value="Umoj"/>
+        <Mover value="TomahawkCruiseMissile"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Praetoria">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Uncommandable" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <LifeArmor value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanShipPlating"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Mover value="Fly"/>
+        <Speed value="3.375"/>
+        <Acceleration value="3"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="11"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Vespene" value="200"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="140"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <WeaponArray Link="PhoenixMissile"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.875"/>
+        <SeparationRadius value="0.875"/>
+        <ScoreMake value="400"/>
+        <ScoreKill value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="62"/>
+        <MinimapRadius value="0.875"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="53"/>
+        <GlossaryStrongArray value="Battlecruiser"/>
+        <GlossaryStrongArray value="BroodLord"/>
+        <GlossaryStrongArray value="Tempest"/>
+        <GlossaryWeakArray value="Marine"/>
+        <GlossaryWeakArray value="Hydralisk"/>
+        <GlossaryWeakArray value="Stalker"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="PhoenixMissile" parent="MISSILE_HALFLIFE">
+        <Race value="Umoj"/>
+        <Mover value="VikingFighterMissile"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="VoidAssaulter">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="Cloaked" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <Attributes index="Psionic" value="1"/>
+        <Attributes index="Heroic" value="1"/>
+        <LifeStart value="100"/>
+        <LifeMax value="100"/>
+        <LifeRegenDelay value="10"/>
+        <LifeRegenRate value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanInfantryArmor"/>
+        <EnergyStart value="75"/>
+        <EnergyMax value="250"/>
+        <EnergyRegenRate value="0.5625"/>
+        <ShieldsStart value="100"/>
+        <ShieldsMax value="100"/>
+        <ShieldArmor value="1"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Speed value="3.375"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="11"/>
+        <Food value="-4"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="350"/>
+        <AttackTargetPriority value="20"/>
+        <KillXP value="60"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="PsionicDisruptionStorm"/>
+        <AbilArray Link="VoidAssaulterPsionicLash"/>
+        <AbilArray Link="VoidAssaulterOrbitalStrikeExecute"/>
+        <WeaponArray Link="VoidAssaulter"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="VoidAssaulterOrbitalStrike" Type="AbilCmd" AbilCmd="VoidAssaulterOrbitalStrikeExecute,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="AttackGhost" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="PsionicDisruptionStorm" Type="AbilCmd" AbilCmd="PsionicDisruptionStorm,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="VoidAssaulterPsionicLash" Type="AbilCmd" AbilCmd="VoidAssaulterPsionicLash,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="PermanentCloakVoidAssaulter" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="UmojanHeroicUnitsRegenerationVoidAssaulter" Type="Passive" Row="1" Column="1"/>
+        </CardLayouts>
+        <InnerRadius value="0.5"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="500"/>
+        <ScoreKill value="500"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="104"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="50"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+        <LifeArmor value="1"/>
+        <RankDisplay value="Never"/>
+    </CUnit>
+    <CUnit id="PsionicSuppressionField" parent="MISSILE_INVULNERABLE">
+        <Race value="Umoj"/>
+        <Mover value="EMP2Weapon"/>
+        <EditorCategories value="ObjectType:Projectile,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit id="Berkut">
+        <DeathRevealRadius value="3"/>
+        <Race value="Umoj"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="AlwaysThreatens" value="1"/>
+        <FlagArray index="AIThreatGround" value="1"/>
+        <FlagArray index="AIThreatAir" value="1"/>
+        <FlagArray index="AICaster" value="1"/>
+        <FlagArray index="AISupport" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <LifeArmor value="2"/>
+        <LifeArmorName value="Unit/LifeArmorName/UmojanShipPlating"/>
+        <EnergyStart value="50"/>
+        <EnergyMax value="200"/>
+        <EnergyRegenRate value="0.5625"/>
+        <ShieldsStart value="150"/>
+        <ShieldsMax value="150"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/UmojanPowerShields"/>
+        <Mover value="Fly"/>
+        <Speed value="2.8125"/>
+        <Acceleration value="2"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="12"/>
+        <Height value="3.75"/>
+        <VisionHeight value="4"/>
+        <Food value="-4"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="150"/>
+        <CostResource index="Vespene" value="300"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="45"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="SeekerMode"/>
+        <AbilArray Link="NanoCleanse"/>
+        <AbilArray Link="PsionicSuppressionField"/>
+        <AbilArray Link="SeekerModeOff"/>
+        <AbilArray Link="NanoCleanseSeekerMode"/>
+        <AbilArray Link="PsionicSuppressionFieldSeekerMode"/>
+        <BehaviorArray Link="Detector12"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="NanoCleanse" Type="AbilCmd" AbilCmd="NanoCleanse,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="NanoCleanse" Type="AbilCmd" AbilCmd="NanoCleanseSeekerMode,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
+            <LayoutButtons Face="UmojanPowerShieldBerkut" Type="Passive" Requirements="HaveUmojanPowerShields" Row="2" Column="2"/>
+            <LayoutButtons Face="DeployPsionicSuppressionField" Type="AbilCmd" AbilCmd="PsionicSuppressionField,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="DeployPsionicSuppressionField" Type="AbilCmd" AbilCmd="PsionicSuppressionFieldSeekerMode,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="SeekerMode" Type="AbilCmd" AbilCmd="SeekerMode,Execute" Row="1" Column="0"/>
+            <LayoutButtons Face="SeekerModeOff" Type="AbilCmd" AbilCmd="SeekerModeOff,Execute" Row="1" Column="1"/>
+            <LayoutButtons Face="Detector" Type="Passive" Row="2" Column="3"/>
+        </CardLayouts>
+        <Radius value="1"/>
+        <SeparationRadius value="1"/>
+        <ScoreMake value="450"/>
+        <ScoreKill value="450"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="102"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <GlossaryCategory value="Unit/Category/UmojanUnits"/>
+        <GlossaryPriority value="43"/>
+        <GlossaryStrongArray value="Banshee"/>
+        <GlossaryStrongArray value="LurkerMP"/>
+        <GlossaryStrongArray value="DarkTemplar"/>
+        <GlossaryWeakArray value="VikingFighter"/>
+        <GlossaryWeakArray value="Mutalisk"/>
+        <GlossaryWeakArray value="HighTemplar"/>
+        <HotkeyCategory value="Unit/Category/UmojanUnits"/>
+        <KillDisplay value="Always"/>
+        <RankDisplay value="Never"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+        </Fidget>
+    </CUnit>
+    <CUnit id="ChangelingWarrior" parent="Warrior">
+        <Name value="Unit/Name/Changeling"/>
+        <Race value="Zerg"/>
+        <FlagArray index="NoScore" value="1"/>
+        <FlagArray index="AILifetime" value="1"/>
+        <FlagArray index="AIChangeling" value="1"/>
+        <FlagArray index="ArmySelect" value="0"/>
+        <Food value="0"/>
+        <CostResource index="Minerals" value="0"/>
+        <AbilArray index="1" Link="move"/>
+        <AbilArray index="2" removed="1"/>
+        <BehaviorArray Link="ChangelingDisable"/>
+        <CardLayouts index="0">
+            <LayoutButtons index="4" Face="AcquireMove" Type="AbilCmd" AbilCmd="move,AcquireMove" Row="0" Column="4"/>
+            <LayoutButtons index="5">
+                <Face value="MovePatrol"/>
+                <Type value="AbilCmd"/>
+                <AbilCmd value="move,Patrol"/>
+                <Requirements value="HaveUmojanPowerShields"/>
+                <Row value="0"/>
+                <Column value="3"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CargoSize value="0"/>
+        <ScoreMake value="0"/>
+        <ScoreKill value="0"/>
+        <SubgroupPriority value="64"/>
+        <LeaderAlias value="Changeling"/>
+        <HotkeyAlias value="Changeling"/>
+        <SelectAlias value="Changeling"/>
+        <SubgroupAlias value="Changeling"/>
+        <GlossaryCategory value=""/>
+        <GlossaryPriority value="0"/>
+        <GlossaryStrongArray index="0" removed="1"/>
+        <GlossaryStrongArray index="1" removed="1"/>
+        <GlossaryStrongArray index="2" removed="1"/>
+        <GlossaryWeakArray index="0" removed="1"/>
+        <GlossaryWeakArray index="1" removed="1"/>
+        <GlossaryWeakArray index="2" removed="1"/>
+        <HotkeyCategory value=""/>
+    </CUnit>
+</Catalog>

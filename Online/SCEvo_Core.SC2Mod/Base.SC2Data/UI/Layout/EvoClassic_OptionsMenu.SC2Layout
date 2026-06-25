@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+
+
+    <!-- CheckBox -->
+
+    <Frame type="CheckBox" name="EvoClassicCheckBoxTemplate">
+        <CheckImage val="CheckMarkImage"/>
+        <Button val="Button"/>
+        <CheckSound val="@UI_Classic_Toggle"/>
+        <Width val="32"/>
+        <Height val="32"/>
+
+        <StateGroup name="Checked">
+            <DefaultState val="False"/>
+
+            <State name="True">
+                <When type="Property" Checked="True"/>
+                <Action type="SetProperty" frame="Button/NormalImage" Texture="@UI/Classic/OptionsMenu/CheckBoxChecked" undo="False"/>
+            </State>
+        
+            <State name="False">
+                <Action type="SetProperty" frame="Button/NormalImage" Texture="@UI/Classic/OptionsMenu/CheckBox" undo="False"/>
+            </State>
+        </StateGroup>
+
+        <Frame type="Button" name="Button">
+            <NormalImage val="NormalImage"/>
+            <HoverImage val="HoverImage"/>
+            <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Width val="32"/>
+            <Height val="32"/>
+
+            <Frame type="Image" name="NormalImage">
+                <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+                <Texture val="@UI/Classic/OptionsMenu/CheckBox"/>
+                <StateCount val="1"/>
+                <DesaturateOnDisable val="false"/>
+                <DisabledAlpha val="64"/>
+            </Frame>
+
+            <Frame type="Image" name="HoverImage">
+                <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+                <Texture val="@UI/Classic/OptionsMenu/CheckBoxHover"/>
+                <StateCount val="1"/>
+                <DesaturateOnDisable val="false"/>
+                <DisabledAlpha val="64"/>
+            </Frame>
+
+        </Frame>
+
+        <Frame type="Image" name="CheckMarkImage">
+            <Anchor side="Top" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/CheckBoxMark"/>
+            <DesaturateOnDisable val="false"/>
+            <DisabledAlpha val="64"/>
+            <RenderPriority val="514"/>
+            <DescFlags val="Internal"/>
+            <Width val="22"/>
+            <Height val="22"/>
+        </Frame>
+    </Frame>
+
+    <Frame type="Button" name="DifficultyPresetButtonTemplate">
+
+        <Width val="220"/>
+        <Height val="58"/>
+
+        <Toggleable val="True"/>
+        <Toggled val="False"/>
+
+        <NormalImage val="NormalImage"/>
+        <HoverImage val="HoverImage"/>
+
+        <ClickSound val="@UI_Classic_Click"/>
+        <HoverSound val="@UI_Classic_MouseOver"/>
+
+        <Style val="Evo_Options_DifficultyPresetButton"/>
+
+        <Frame type="Image" name="Background">
+            <Anchor relative="$parent"/>
+
+            <Texture val="@UI/Classic/OptionsMenu/StandardButtonBorderless_Normal"/>
+            <TextureType val="NineSlice"/>
+        </Frame>
+
+        <Frame type="Image" name="NormalImage">
+            <Anchor relative="$parent"/>
+
+            <Texture val="@UI/Classic/OptionsMenu/StandardButtonBorderless_Over"/>
+            <TextureType val="NineSlice"/>
+            <ColorAdjustMode val="Colorize"/>
+            <LightAdjustColor val="2cd322"/>
+            <DarkAdjustColor val="2cd322"/>
+        </Frame>
+
+        <Frame type="Image" name="HoverImage">
+            <Anchor relative="$parent"/>
+
+            <Texture val="@UI/Classic/OptionsMenu/StandardButtonBorderless_Over"/>
+            <TextureType val="NineSlice"/>
+            <ColorAdjustMode val="Colorize"/>
+            <AdjustmentColor val="84ff74"/>
+            <DarkAdjustColor val="84ff74"/>
+        </Frame>
+
+        <Frame type="Image" name="DifficultyIcon">
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="21"/>
+
+            <Width val="44"/>
+            <Height val="44"/>
+            <Unclipped val="True"/>
+        </Frame>
+    </Frame>
+
+    <Frame type="Image" name="InfoTipTemplate">
+        <AcceptsMouse val="True"/>
+        <Texture val="@UI/Classic/OptionsMenu/InfoTip"/>
+        <Width val="12"/>
+        <Height val="12"/>
+    </Frame>
+
+    <Frame type="Image" name="ImageTemplate">
+        <SubpixelRendering val="True"/>
+    </Frame>
+
+    <Frame type="StandardTooltip" name="OptionsMenuTooltip" template="StandardTooltip/StandardTooltip">
+        <PositionFixed val="False"/>
+        <StateGroup name="TextNullCheck">
+            <DefaultState val="Shown"/>
+            <State name="Shown">
+                <Action type="SetProperty" PositionFixed="false"/>
+            </State>
+            <State name="Hidden">
+                <When type="Property" frame="Label" Text=""/>
+                <Action type="SetProperty" frame="Label" Visible="False"/>
+                <Action type="SetProperty" frame="Label" Visible="true" on="Exit"/>
+            </State>
+        </StateGroup>
+
+        <Frame type="Image" name="BackgroundImage">
+            <Anchor relative="$parent" offset="-5"/> 
+            <Texture val="@UI/Classic/OptionsMenu/TooltipBackground"/>
+            <TextureType val="NineSlice"/>
+            <Visible val="{$parent/Label/@Visible}"/>
+        </Frame>
+
+        <Frame type="Label" name="Label">
+            <Style val="Evo_Options_Tooltip"/>
+        </Frame>
+    </Frame>
+    
+
+    <Frame type="Frame" name="DifficultyOptionTemplate">
+        
+        <Frame type="CheckBox" name="CheckBox" template="EvoClassic_OptionsMenu/EvoClassicCheckBoxTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Width val="50"/>
+            <Height val="50"/>
+            <AcceptsMouse val="True"/>
+            <TooltipAnchorPosition val="BottomRight"/>
+            <TooltipFrame val="OptionsMenuTooltip"/>
+            <Tooltip val="{$parent/Label/@Tooltip}"/>
+        </Frame>
+
+        <Frame type="Label" name="Label">
+            <Anchor side="Top" relative="$parent/CheckBox" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/CheckBox" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/CheckBox" pos="Max" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Style val="Evo_Options_OptionDescription"/>
+            <AcceptsMouse val="False"/>
+            <AcceptsMouseTooltip val="True"/>
+            <TooltipAnchorPosition val="BottomCenter"/>
+            <TooltipFrame val="OptionsMenuTooltip"/>
+        </Frame>
+
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOptionsContainerTemplate">
+        <Frame type="Label" name="Title">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="10"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Style val="Evo_Options_ContainerTitle"/>
+        </Frame>
+
+        <Frame type="Label" name="TitleDescription">
+            <Anchor side="Top" relative="$parent/Title" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent/Title" pos="Min" offset="2"/>
+            <Style val="Evo_Options_ContainerTitleDescription"/>
+        </Frame>
+
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOptionsContainerWithDividerTemplate" template="EvoClassic_OptionsMenu/DifficultyOptionsContainerTemplate">
+        <Frame type="Image" name="Divider">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Height val="2"/>
+            <Color val="6C0000"/>
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="Label" name="Title">
+            <Anchor side="Top" relative="$parent/Divider" pos="Max" offset="8"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+        </Frame>
+    </Frame>
+    <Frame type="Frame" name="DifficultyPanelTemplate">
+        <Frame type="Label" name="Header">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="5"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+            <Width val="450"/>
+            <Height val="65"/>
+            <Style val="Evo_Options_DifficultyHeader"/>
+            <Text val="@UI/Classic/OptionsMenu/DifficultyHeader"/>
+            <Tooltip val="@UI/Classic/OptionsMenu/DifficultyHeaderTip"/>
+            <TooltipFrame val="OptionsMenuTooltip"/>
+            <TooltipAnchorPosition val="TopCenter"/>
+            <AcceptsMouse val="True"/>
+        </Frame>
+
+        <Frame type="Button" name="PresetHardcore" template="EvoClassic_OptionsMenu/DifficultyPresetButtonTemplate">
+            <Anchor side="Top" relative="$parent/PresetLegacy" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/PresetLegacy" pos="Min" offset="-34"/>
+            <Text val="@UI/Classic/OptionsMenu/PresetHardcore"/>
+
+            <Frame type="Image" name="DifficultyIcon">
+                <Texture val="Assets/Textures/glues_difficultyoptions_hardcore.dds"/>
+            </Frame>
+
+            <StateGroup name="ToggleState">
+                <State name="Default">
+
+                </State>
+
+                <State name="Toggled">
+                    <When type="Property" frame="$this" Toggled="True"/>
+
+                    <Action type="SetProperty" frame="$this/NormalImage" LightAdjustColor="ff0000"/>
+                    <Action type="SetProperty" frame="$this/NormalImage" DarkAdjustColor="ff0000"/>
+                    <Action type="SetProperty" frame="$this/HoverImage" LightAdjustColor="ff0000"/>
+                    <Action type="SetProperty" frame="$this/HoverImage" DarkAdjustColor="ff0000"/>
+                    <Action type="SetProperty" frame="$this" Style="Evo_Options_Preset_HardcoreToggled"/>
+                </State>
+            </StateGroup>
+        </Frame>
+
+        <Frame type="Button" name="PresetLegacy" template="EvoClassic_OptionsMenu/DifficultyPresetButtonTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="80"/>
+            <Anchor side="Right" relative="$parent" pos="Mid" offset="-17"/>
+            <Text val="@UI/Classic/OptionsMenu/PresetLegacy"/>
+
+            <Frame type="Image" name="DifficultyIcon">
+                <Texture val="Assets/Textures/glues_difficultyoptions_legacy.dds"/>
+            </Frame>
+
+            <StateGroup name="ToggleState">
+                <State name="Default">
+
+                </State>
+
+                <State name="Toggled">
+                    <When type="Property" frame="$this" Toggled="True"/>
+
+                    <Action type="SetProperty" frame="$this/NormalImage" LightAdjustColor="fffc00"/>
+                    <Action type="SetProperty" frame="$this/NormalImage" DarkAdjustColor="fffc00"/>
+                    <Action type="SetProperty" frame="$this/HoverImage" LightAdjustColor="fffc00"/>
+                    <Action type="SetProperty" frame="$this/HoverImage" DarkAdjustColor="fffc00"/>
+                    <Action type="SetProperty" frame="$this" Style="Evo_Options_Preset_LegacyToggled"/>
+                </State>
+            </StateGroup>
+        </Frame>
+
+        <Frame type="Button" name="PresetRemastered" template="EvoClassic_OptionsMenu/DifficultyPresetButtonTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="80"/>
+            <Anchor side="Left" relative="$parent" pos="Mid" offset="17"/>
+            <Text val="@UI/Classic/OptionsMenu/PresetRemastered"/>
+
+            <Frame type="Image" name="DifficultyIcon">
+                <Texture val="Assets/Textures/glues_difficultyoptions_remastered.dds"/>
+            </Frame>
+
+            <StateGroup name="ToggleState">
+                <State name="Default">
+
+                </State>
+
+                <State name="Toggled">
+                    <When type="Property" frame="$this" Toggled="True"/>
+
+                    <Action type="SetProperty" frame="$this/NormalImage" LightAdjustColor="0042ff"/>
+                    <Action type="SetProperty" frame="$this/NormalImage" DarkAdjustColor="0042ff"/>
+                    <Action type="SetProperty" frame="$this/HoverImage" LightAdjustColor="0042ff"/>
+                    <Action type="SetProperty" frame="$this/HoverImage" DarkAdjustColor="0042ff"/>
+                    <Action type="SetProperty" frame="$this" Style="Evo_Options_Preset_RemasteredToggled"/>
+                </State>
+            </StateGroup>
+        </Frame>
+
+        <Frame type="Button" name="PresetCustom" template="EvoClassic_OptionsMenu/DifficultyPresetButtonTemplate">
+            <Anchor side="Top" relative="$parent/PresetRemastered" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/PresetRemastered" pos="Max" offset="34"/>
+            <Text val="@UI/Classic/OptionsMenu/PresetCustom"/>
+
+            <Frame type="Image" name="DifficultyIcon">
+                <Texture val="Assets/Textures/glues_difficultyoptions_custom.dds"/>
+            </Frame>
+
+            <StateGroup name="ToggleState">
+                <State name="Default">
+
+                </State>
+
+                <State name="Toggled">
+                    <When type="Property" frame="$this" Toggled="True"/>
+
+                    <Action type="SetProperty" frame="$this/NormalImage" LightAdjustColor="00c6ff"/>
+                    <Action type="SetProperty" frame="$this/NormalImage" DarkAdjustColor="00c6ff"/>
+                    <Action type="SetProperty" frame="$this/HoverImage" LightAdjustColor="00c6ff"/>
+                    <Action type="SetProperty" frame="$this/HoverImage" DarkAdjustColor="00c6ff"/>
+                    <Action type="SetProperty" frame="$this" Style="Evo_Options_Preset_CustomToggled"/>
+                </State>
+            </StateGroup>
+        </Frame>
+        <Frame type="Image" name="Divider">
+            <Anchor side="Top" relative="$parent/PresetHardcore" pos="Max" offset="25"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="50"/>
+            <Width val="1100"/>
+            <Height val="2"/>
+            <Color val="6C0000"/>
+            <Alpha val="255"/>
+        </Frame>
+        <Frame type="ScrollableFrame" name="ScrollableFrame">
+            <Anchor side="Top" relative="$parent/Divider" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-2"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+
+            <AcceptsMouse val="true"/>
+
+            <Frame type="Frame" name="ContainerFrame">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent/ContainerFrameBottomAnchor" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent/ScrollBarBackground" pos="Min" offset="0"/>
+            </Frame>
+            <Frame type="Image" name="ScrollBarBackground" template="EvoClassic_StandardTemplates/ScrollBarBackgroundTemplate">
+                <Visible val="{$parent/ScrollBar/@Visible}"/>
+                <CollapseLayout val="True"/>
+            </Frame>
+    
+            <Frame type="ScrollBar" name="ScrollBar" template="EvoClassic_StandardTemplates/ScrollBarTemplate">
+                <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="-15"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="-12"/>
+            </Frame>
+
+            <Frame type="Frame" name="ContainerFrameBottomAnchor">
+                <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+                <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+                <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+                <Height val="1"/>
+            </Frame>
+
+        </Frame>
+
+    </Frame>
+
+    <Frame type="Button" name="TabButtonTemplate">
+
+        <Width val="335"/>
+        <Height val="104"/>
+
+        <HitTestFrame val="HitTestFrame"/>
+        <ClickSound val="@UI_Classic_Click"/>
+        <HoverSound val="@UI_Classic_MouseOver"/>
+        
+        <Toggleable val="True"/>
+        <Style val="Evo_Options_TabButtonLabel"/>
+        
+        <Enabled val="False"/>
+
+        <Frame type="Frame" name="HitTestFrame">
+            <Anchor relative="$parent"/>
+        </Frame>
+
+        <Frame type="Image" name="Image">
+            <Texture val="@UI/Classic/OptionsMenu/TabButton"/>
+            <Anchor relative="$parent"/>
+            <SubpixelRendering val="True"/>
+        </Frame>
+
+        <Frame type="Image" name="TabFiller">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="1"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="0"/>
+
+            <DesaturateOnDisable val="False"/>
+            <SubpixelRendering val="True"/>
+
+            <Texture val="@UI/Classic/OptionsMenu/TabButtonFiller"/>
+
+            <StateGroup name="Visibility">
+                <State name="Normal">
+                    <When type="Property" frame="$parent" Toggled="False"/>
+
+                    <Action type="SetProperty" frame="$this" Visible="True"/>
+                </State>
+
+                <State name="Toggled">
+                    <When type="Property" frame="$parent" Toggled="True"/>
+
+                    <Action type="SetProperty" frame="$this" Visible="False"/>
+                </State>
+            </StateGroup>
+        </Frame>
+    </Frame>
+
+    <Frame type="Button" name="ButtonTemplate">
+        <Width val="400"/>
+        <Height val="85"/>
+
+        <ClickSound val="@UI_Classic_Click"/>
+        <HoverSound val="@UI_Classic_MouseOver"/>
+        
+        <Toggleable val="True"/>
+        <Style val="Evo_Options_TabButtonLabel"/>
+
+        <NormalImage val="NormalImage"/>
+        <HoverImage val="NormalImage"/>
+        <Frame type="Image" name="NormalImage">
+            <Anchor relative="$parent"/>
+            <Texture val="Assets\Textures\evo_ui_optionsmenu_button.dds"/>
+            <TextureType val="NineSlice"/>
+        </Frame>
+
+    </Frame>
+
+    
+    <!-- Options Container Template -->
+    <Constant name="Evo_OptionsMenu_BottomOffset" val="-166"/>
+    <Frame type="Frame" name="OptionsContainerTemplate">
+        
+        <Frame type="StandardTooltip" name="OptionsMenuTooltip" template="EvoClassic_OptionsMenu/OptionsMenuTooltip"/>
+
+        <Anchor side="Top" relative="$parent" pos="Mid" offset="25"/>
+        <Anchor side="Left" relative="$parent" pos="Mid" offset="0"/>
+        <Anchor side="Bottom" relative="$parent" pos="Mid" offset="25"/>
+        <Anchor side="Right" relative="$parent" pos="Mid" offset="0"/>
+        <Width val="1540"/>
+        <Height val="1150"/>
+        <!-- <Height val="984"/> -->
+        <StateGroup name="VisibilityState">
+            <DefaultState val="None"/>
+            <State name="Shown">
+                <When type="AnimationState" frame="$this" CustomizeMenuIsOnline="True"/>
+                <When type="AnimationState" frame="$this" CustomizeMenuVisible="True"/>
+                <When type="Property" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/ObserverPreviewFrame" Visible="False"/>
+                <When type="Property" frame="$ancestor[@name=UIContainer]/ConsolePanel" Visible="True"/>
+                <Action type="SetProperty" frame="BlackoutFrame" Alpha="200"/>
+                <Action type="SetProperty" frame="$this" Visible="True"/>
+                <Action type="SetAnchor" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/MenuBar" relative="$parent/MenuBarFullscreenAnchor" pos="Min" offset="0" side="Top"/>
+                <Action type="SetAnchor" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/MenuBar" relative="$parent/MenuBarFullscreenAnchor" pos="Min" offset="0" side="Left"/>
+                <Action type="SetAnchor" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/MenuBar" relative="$parent/MenuBarFullscreenAnchor" pos="Max" offset="0" side="Bottom"/>
+                <Action type="SetAnchor" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/MenuBar" relative="$parent/MenuBarFullscreenAnchor" pos="Max" offset="0" side="Right"/>
+            </State>
+            <State name="Hidden">
+                <When type="AnimationState" frame="$this" CustomizeMenuIsOnline="True"/>
+                <When type="AnimationState" frame="$this" CustomizeMenuVisible="False"/>
+                <When type="Property" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/ObserverPreviewFrame" Visible="False"/>
+                <When type="Property" frame="$ancestor[@name=UIContainer]/ConsolePanel" Visible="True"/>
+                <Action type="SetProperty" frame="$this" Visible="False"/>
+                <Action type="SetAnchor" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/MenuBar" relative="$parent/MenuBarConsoleAnchor" pos="Min" offset="0" side="Top"/>
+                <Action type="SetAnchor" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/MenuBar" relative="$parent/MenuBarConsoleAnchor" pos="Min" offset="0" side="Left"/>
+                <Action type="SetAnchor" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/MenuBar" relative="$parent/MenuBarConsoleAnchor" pos="Max" offset="0" side="Bottom"/>
+                <Action type="SetAnchor" frame="$ancestor[@name=UIContainer]/FullscreenUpperContainer/MenuBar" relative="$parent/MenuBarConsoleAnchor" pos="Max" offset="0" side="Right"/>
+            </State>
+
+            <State name="NoneOnline">
+                <When type="AnimationState" frame="$this" CustomizeMenuIsOnline="True"/>
+                <Action type="SetProperty" frame="$this" Visible="False"/>
+            </State>
+
+            <State name="None">
+            </State>
+        </StateGroup>
+
+        <Frame type="Image" name="BlackoutFrame">
+            <Anchor relative="$parent/$parent"/>
+
+            <Alpha val="150"/>
+            <Color val="000000"/>
+            <AcceptsMouse val="True"/>
+            <Unclipped val="True"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_TopLeft" template="EvoClassic_OptionsMenu/ImageTemplate">
+
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/CornerTopLeft"/>
+            <SubpixelRendering val="True"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_TopRight" template="EvoClassic_OptionsMenu/ImageTemplate">
+
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/CornerTopRight"/>
+            <SubpixelRendering val="True"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_BottomLeft" template="EvoClassic_OptionsMenu/ImageTemplate">
+
+            <Anchor side="Top" relative="$parent" pos="Min" offset="122"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/CornerTopLeft"/>
+            <TextureCoords top="1" left="0" bottom="0" right="1"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_BottomRight" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Bottom" relative="$parent/TopContainer_BottomLeft" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent/TopContainer_BottomLeft" pos="Max" offset="256"/>
+            <Texture val="@UI/Classic/OptionsMenu/TabButtonConnector"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_LeftBarFill" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Top" relative="$parent/TopContainer_TopLeft" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/TopContainer_BottomLeft" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/FillerLeft"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_TopBarFill" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/TopContainer_TopLeft" pos="Max" offset="0"/>
+            <Anchor side="Right" relative="$parent/TopContainer_TopRight" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/FillerTop"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_BottomBarFill" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Bottom" relative="$parent/TopContainer_BottomLeft" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent/TopContainer_BottomLeft" pos="Max" offset="0"/>
+            <Anchor side="Right" relative="$parent/TopContainer_BottomRight" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/FillerTop"/>
+            <TextureCoords top="1" left="0" bottom="0" right="1"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_Filler">
+            <Anchor side="Top" relative="$parent/TopContainer_TopBarFill" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent/TopContainer_LeftBarFill" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/TopContainer_BottomBarFill" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/RightBarFill" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/Filler"/>
+            <Tiled val="True"/>
+        </Frame>
+
+        <Frame type="Image" name="TopContainer_Filler2">
+            <Anchor side="Top" relative="$parent/TopContainer_BottomRight" pos="Min" offset="0"/>
+            <Anchor side="Left" relative="$parent/TopContainer_BottomRight" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/TopContainer_BottomRight" pos="Max" offset="0"/>
+            <Anchor side="Right" relative="$parent/RightBarFill" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/Filler"/>
+            <Tiled val="True"/>
+        </Frame>
+
+        <!-- Bottom Container -->
+        <Frame type="Image" name="BottomContainer_BottomRight" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="#Evo_OptionsMenu_BottomOffset"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/CornerBottomRight"/>
+        </Frame>
+
+        <Frame type="Image" name="BottomContainer_BottomLeft" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="#Evo_OptionsMenu_BottomOffset"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="322"/>
+            <Texture val="@UI/Classic/OptionsMenu/CornerBottomLeft"/>
+            <RotationPosition val="MiddleCenter"/>
+        </Frame>
+
+        <Frame type="Image" name="BottomContainer_LeftBarFill" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Top" relative="$parent/CollectionsTab" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent/BottomContainer_BottomLeft" pos="Min" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/BottomContainer_BottomLeft" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/FillerLeft"/>
+        </Frame>
+
+        <Frame type="Image" name="BottomContainer_BottomBarFill" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="#Evo_OptionsMenu_BottomOffset"/>
+            <Anchor side="Left" relative="$parent/BottomContainer_BottomLeft" pos="Max" offset="0"/>
+            <Anchor side="Right" relative="$parent/BottomContainer_BottomRight" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/FillerBottom"/>
+        </Frame>
+
+        <Frame type="Image" name="BottomContainer_Filler">
+            <Anchor side="Top" relative="$parent/TopContainer_Filler2" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent/DifficultyTab" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/BottomContainer_LeftBarFill" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/RightBarFill" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/Filler"/>
+            <Tiled val="True"/>
+        </Frame>
+
+        <Frame type="Image" name="BottomContainer_Filler2">
+            <Anchor side="Top" relative="$parent/BottomContainer_Filler" pos="Max" offset="0"/>
+            <Anchor side="Left" relative="$parent/BottomContainer_LeftBarFill" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/BottomContainer_BottomBarFill" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent/RightBarFill" pos="Min" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/Filler"/>
+            <Tiled val="True"/>
+        </Frame>
+
+        <Frame type="Image" name="RightBarFill" template="EvoClassic_OptionsMenu/ImageTemplate">
+            <Anchor side="Top" relative="$parent/TopContainer_TopRight" pos="Max" offset="0"/>
+            <Anchor side="Bottom" relative="$parent/BottomContainer_BottomRight" pos="Min" offset="0"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Texture val="@UI/Classic/OptionsMenu/FillerRight"/>
+            <TextureCoords top="0" left="1" bottom="1" right="0"/>
+        </Frame>
+
+
+        <!-- CONTENT -->
+        <Frame type="Label" name="HeaderLabel">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="35"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="20"/>
+            <Width val="350"/>
+            <Height val="100"/>
+            <Text val="@UI/Classic/OptionsMenu/Header"/>
+            <Style val="Evo_Options_Header"/>
+        </Frame>
+        <Frame type="Button" name="HiddenTab">
+            <Anchor side="Top" relative="$parent/TopContainer_BottomLeft" pos="Max" offset="-3"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Height val="1"/>
+            <Width val="1"/>
+            <Visible val="False"/>
+            <Enabled val="False"/>
+        </Frame>
+
+        <Frame type="Button" name="DifficultyTab" template="EvoClassic_OptionsMenu/TabButtonTemplate">
+            <Anchor side="Top" relative="$parent/TopContainer_BottomLeft" pos="Max" offset="-3"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Text val="@UI/Classic/OptionsMenu/DifficultyTab"/>
+            <Shortcut val="@UI/Classic/OptionsMenu/DifficultyTab_Hotkey"/>
+        </Frame>
+
+        <Frame type="Button" name="SkinsTab" template="EvoClassic_OptionsMenu/TabButtonTemplate">
+            <Anchor side="Top" relative="$parent/DifficultyTab" pos="Max" offset="-11"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Text val="@UI/Classic/OptionsMenu/SkinsTab"/>
+            <Shortcut val="@UI/Classic/OptionsMenu/SkinsTab_Hotkey"/>
+        </Frame>
+
+        <Frame type="Button" name="CollectionsTab" template="EvoClassic_OptionsMenu/TabButtonTemplate">
+            <Anchor side="Top" relative="$parent/SkinsTab" pos="Max" offset="-11"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Text val="@UI/Classic/OptionsMenu/CollectionsTab"/>
+            <Shortcut val="@UI/Classic/OptionsMenu/CollectionsTab_Hotkey"/>
+
+            <Enabled val="False"/>
+        </Frame>
+
+        <Frame type="Frame" name="TabContainer">
+            <Anchor side="Top" relative="$parent" pos="Min" offset="11"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="333"/>
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-175"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="-9"/>
+
+            <Frame type="Frame" name="CustomizePanel_Hidden">
+                <Anchor relative="$parent"/>
+            </Frame>
+
+            <Frame type="Frame" name="CustomizePanel_Difficulty" template="EvoClassic_OptionsMenu/DifficultyPanelTemplate">
+                <Anchor relative="$parent"/>
+            </Frame>
+
+            <Frame type="Frame" name="CustomizePanel_Skins" template="EvoClassic_SkinsMenuTemplates/SkinsPanelTemplate">
+                <Anchor relative="$parent"/>
+            </Frame>
+
+            <Frame type="Frame" name="CustomizePanel_Collections" template="EvoClassic_SkinsMenuTemplates/CollectionsPanelTemplate">
+                <Anchor relative="$parent"/>
+            </Frame>
+        </Frame>
+        <Frame type="TabControl" name="TabControl">
+            <SelectedIndex val="0"/>
+
+            <TabListItem val="$parent/HiddenTab"/>
+            <TabListItem val="$parent/DifficultyTab"/>
+            <TabListItem val="$parent/SkinsTab"/>
+            <TabListItem val="$parent/CollectionsTab"/>
+
+            <PanelListItem val="$parent/TabContainer/CustomizePanel_Hidden"/>
+            <PanelListItem val="$parent/TabContainer/CustomizePanel_Difficulty"/>
+            <PanelListItem val="$parent/TabContainer/CustomizePanel_Skins"/>
+            <PanelListItem val="$parent/TabContainer/CustomizePanel_Collections"/>
+
+            <StateGroup name="InitialSelection">
+                <State name="DifficultyTab">
+                    <When type="Property" frame="$parent/DifficultyTab" Visible="True" />
+                    <When type="Property" frame="$parent/DifficultyTab" Enabled="True" />
+                    <Action type="SetProperty" frame="$this" SelectedIndex="1" on="Enter" undo="False"/>
+                </State>
+                <State name="SkinsTab">
+                    <When type="Property" frame="$parent/SkinsTab" Visible="True" />
+                    <When type="Property" frame="$parent/SkinsTab" Enabled="True" />
+                    <Action type="SetProperty" frame="$this" SelectedIndex="2" on="Enter" undo="False"/>
+                </State>
+                <State name="CollectionsTab">
+                    <When type="Property" frame="$parent/CollectionsTab" Visible="True" />
+                    <When type="Property" frame="$parent/CollectionsTab" Enabled="True" />
+                    <Action type="SetProperty" frame="$this" SelectedIndex="3" on="Enter" undo="False"/>
+                </State>
+            </StateGroup>
+
+        </Frame>
+        <Frame type="Button" name="CloseButton" template="EvoClassic_OptionsMenu/ButtonTemplate">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-60"/>
+            <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+            <Text val="@UI/Classic/OptionsMenu/CloseButton"/>
+            <Shortcut val="@UI/Classic/OptionsMenu/CloseButton_Hotkey"/>
+        </Frame>
+
+        <Frame type="Button" name="RestoreButton" template="EvoClassic_OptionsMenu/ButtonTemplate">
+            <Anchor side="Bottom" relative="$parent" pos="Max" offset="-60"/>
+            <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+            <Text val="@UI/Classic/OptionsMenu/RestoreButton"/>
+            <Shortcut val="@UI/Classic/OptionsMenu/RestoreButton_Hotkey"/>
+            <Visible val="False"/>
+            <Enabled val="False"/>
+        </Frame>
+
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption0" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$parent/TitleDescription" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption1" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption2" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption3" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption4" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption5" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption6" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption7" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption8" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption9" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption10" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+    
+    <Frame type="Frame" name="DifficultyOption11" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption12" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+    <Frame type="Frame" name="DifficultyOption13" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption14" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption15" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption16" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption17" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption18" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-2" pos="Max" offset="0"/>
+        <Anchor side="Left" relative="$sibling-2" pos="Min" offset="0"/>
+    </Frame>
+
+    <Frame type="Frame" name="DifficultyOption19" template="EvoClassic_OptionsMenu/DifficultyOptionTemplate">
+        <Anchor side="Top" relative="$sibling-1" pos="Min" offset="0"/>
+        <Anchor side="Left" relative="$sibling-1" pos="Max" offset="0"/>
+    </Frame>
+
+</Desc>

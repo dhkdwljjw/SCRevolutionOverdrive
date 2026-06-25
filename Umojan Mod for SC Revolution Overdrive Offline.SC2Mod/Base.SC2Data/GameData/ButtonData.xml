@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="AmphibiousShip">
+        <Icon value="Assets\Textures\btn-unit-terran-medivac-umojan.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-medivac-umojan.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Aquila">
+        <Icon value="Assets\Textures\btn-unit-terran-battlecruiserloki.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-battlecruiserloki.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="AresArtillery">
+        <Icon value="Assets\Textures\btn-unit-waffentrager-max.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-waffentrager-max.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ArmamentFacility">
+        <Icon value="Assets\Textures\btn-building-terran-engineeringbay-silver.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-engineeringbay-silver.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Arsenal">
+        <Icon value="Assets\Textures\btn-building-terran-factory-silver.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-factory-silver.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Artemis">
+        <Icon value="Assets\Textures\btn-unit-umojan-valkyrie.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-umojan-valkyrie.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Athena">
+        <Icon value="Assets\Textures\btn-unit-terran-mecha-viking.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-mecha-viking.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Berkut">
+        <Icon value="Assets\Textures\btn-unit-terran-raven-umojan.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-raven-umojan.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Diamondback">
+        <Icon value="Assets\Textures\btn-unit-terran-diamondback.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-diamondback.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="EngineeringFactory">
+        <Icon value="Assets\Textures\btn-building-terran-armory-silver.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-armory-silver.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FleetHeadquarters">
+        <Icon value="Assets\Textures\btn-building-terran-fusioncore-silver.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-fusioncore-silver.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FutureWarfareLab">
+        <Icon value="Assets\Textures\btn-building-terran-merccompound.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-merccompound.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="InfantryQuarter">
+        <Icon value="Assets\Textures\btn-building-terran-barracks.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-barracks.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="MissileCruiser">
+        <Icon value="Assets\Textures\btn-unit-terran-cerberus.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-cerberus.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SentryPost">
+        <Icon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-missileturret.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ReconUAV">
+        <Icon value="Assets\Textures\btn-unit-terran-seekerdrone-toshsgoons.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-seekerdrone-toshsgoons.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchSentryPostAccelerator">
+        <Icon value="Assets\Textures\BTN-Upgrade-Terran-hisecautotracking.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Upgrade-Terran-hisecautotracking.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchMaelstromRounds">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-maelstromrounds.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-raynor-maelstromrounds.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchAntiTankMissile">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-ripwavemissiles.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-raynor-ripwavemissiles.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchActiveElectronicallyScannedArrayRadar">
+        <Icon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Centurion">
+        <Icon value="Assets\Textures\btn-unit-collection-marine-covertops.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-collection-marine-covertops.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchReconUAVOvercharge">
+        <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchHeraProtocol">
+        <Icon value="Assets\Textures\BTN-Ability-Terran-BombardmentStrike-color.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Ability-Terran-BombardmentStrike-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchPraetoriaHangar">
+        <Icon value="Assets\Textures\btn-unit-terran-vikingarchangel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-vikingarchangel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchDeployPsionicSuppressionField">
+        <Icon value="Assets\Textures\btn-ability-stetmann-stetzonegenerator-energy.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-stetzonegenerator-energy.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchMaverickMissiles">
+        <Icon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SentryPostAccelerator">
+        <Icon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-hisecautotracking.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="StarStation">
+        <Icon value="Assets\Textures\btn-building-terran-starport-covertops.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-starport-covertops.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldsUpgradeLevel1">
+        <Icon value="Assets\Textures\BTN-Upgrade-Protoss-ShieldsLevel1.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Upgrade-Protoss-ShieldsLevel1.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldsUpgradeLevel2">
+        <Icon value="Assets\Textures\BTN-Upgrade-Protoss-ShieldsLevel2.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Upgrade-Protoss-ShieldsLevel2.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldsUpgradeLevel3">
+        <Icon value="Assets\Textures\BTN-Upgrade-Protoss-ShieldsLevel3.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Upgrade-Protoss-ShieldsLevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanAirArmorUpgradeLevel1">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel1.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanAirArmorUpgradeLevel2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel2.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanAirArmorUpgradeLevel3">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipplatinglevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanAirWeaponsUpgradeLevel1">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanAirWeaponsUpgradeLevel2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanAirWeaponsUpgradeLevel3">
+        <Icon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanGroundArmorUpgradeLevel1">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel1.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanGroundArmorUpgradeLevel2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel2.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanGroundArmorUpgradeLevel3">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanGroundWeaponsUpgradeLevel1">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel1.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanGroundWeaponsUpgradeLevel2">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel2.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanGroundWeaponsUpgradeLevel3">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel3.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchFragmentShrapnel">
+        <Icon value="Assets\Textures\btn-upgrade-terran-explosiveshrapnelshells.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-explosiveshrapnelshells.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchCenturionInspiration">
+        <Icon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadenergy.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadenergy.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Crusader">
+        <Icon value="Assets\Textures\btn-unit-umojan-elitemarauder.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-umojan-elitemarauder.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="LogisticsDepot">
+        <Icon value="Assets\Textures\btn-building-terran-supplydepotxpreward.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-supplydepotxpreward.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="PowerPlant">
+        <Icon value="Assets\Textures\btn-building-terran-sciencefacility@scbw.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-sciencefacility@scbw.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchShapedBlastWarhead">
+        <Icon value="Assets\Textures\btn-ability-mengsk-marauder-shrapnel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-marauder-shrapnel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchUmojanShieldsBattery">
+        <Icon value="Assets\Textures\btn-ability-protoss-shieldrecharge.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-shieldrecharge.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Striker">
+        <Icon value="Assets\Textures\btn-unit-terran-rocketeer.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-rocketeer.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchTacticalVisor">
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-ghostvisor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-nova-equipment-ghostvisor.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TacticsAcademy">
+        <Icon value="Assets\Textures\btn-building-terran-academy@scbw.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-academy@scbw.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchUmojanPowerShields">
+        <Icon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-spearofadun-shieldovercharge.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="VespeneHarvesterUmojan">
+        <Icon value="Assets\Textures\Talent-Swann-Level05-VespeneDrone.dds"/>
+        <AlertIcon value="Assets\Textures\Talent-Swann-Level05-VespeneDrone.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="CommandPost">
+        <Icon value="Assets\Textures\btn-building-terran-commandcenter-silver.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-commandcenter-silver.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="DeployMineralResonator">
+        <Icon value="Assets\Textures\btn-ability-protoss-entomb.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-entomb.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="MineralResonator">
+        <Icon value="Assets\Textures\btn-ability-protoss-entomb.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-entomb.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="GatherUmoj">
+        <Icon value="Assets\Textures\btn-ability-terran-gather.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-gather.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="GatherProt"/>
+        <Universal value="1"/>
+        <SimpleDisplayText value="SimpleDisplay/Gather"/>
+    </CButton>
+    <CButton id="NanoDisassembleRepair">
+        <Icon value="Assets\Textures\btn-upgrade-swann-nanorepair.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-nanorepair.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RecoveryDevice">
+        <Icon value="Assets\Textures\btn-structure-terran-hivemindemulator-umojan.dds"/>
+        <AlertIcon value="Assets\Textures\btn-structure-terran-hivemindemulator-umojan.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchPersonalCloakingShadowAssassin">
+        <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Pioneer">
+        <Icon value="Assets\Textures\btn-unit-terran-scb.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-scb.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="ShadowAssassin">
+        <Icon value="Assets\Textures\btn-unit-terran-ghost-umojan.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-ghost-umojan.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="RecoveryDeviceRecharge">
+        <Icon value="Assets\Textures\btn-ability-protoss-shieldbattery-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-shieldbattery-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SpecOpsCommand">
+        <Icon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TacticalVisorUpgraded">
+        <Icon value="Assets\Textures\btn-upgrade-nova-equipment-ghostvisor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-nova-equipment-ghostvisor.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="FragmentShrapnelUpgraded">
+        <Icon value="Assets\Textures\btn-upgrade-terran-explosiveshrapnelshells.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-explosiveshrapnelshells.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ShapedBlastWarheadUpgraded">
+        <Icon value="Assets\Textures\btn-ability-mengsk-marauder-shrapnel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-marauder-shrapnel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ActiveElectronicallyScannedArrayRadarUpgraded">
+        <Icon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="MaverickMissilesUpgraded">
+        <Icon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-mengsk-viking-freshperspective.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldWarrior">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldCrusader">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldStriker">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldCenturion">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldShadowAssassin">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldReconUAV">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldWarHound">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldDiamondback">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldAresArtillery">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldAthena">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldArtemis">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldAmphibiousShip">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanPowerShieldBerkut">
+        <Name value="Button/Name/UmojanPowerShield"/>
+        <AlertName value="Button/Name/UmojanPowerShield"/>
+        <Icon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-garystetelliteovercharge-speed.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="PermanentCloakVoidAssaulter">
+        <Icon value="Assets\Textures\btn-upgrade-shadowswordspectre-permanentcloak.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-shadowswordspectre-permanentcloak.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanHeroicUnitsRegenerationVoidAssaulter">
+        <Icon value="Assets\Textures\btn-ability-spectre-psionicshockandheal.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-spectre-psionicshockandheal.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanHeroicUnitsRegenerationZeus">
+        <Icon value="Assets\Textures\btn-ability-spearofadun-reconstructionbeam.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-spearofadun-reconstructionbeam.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanHeroicUnitsRegenerationAquila">
+        <Icon value="Assets\Textures\btn-ability-spearofadun-reconstructionbeam.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-spearofadun-reconstructionbeam.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchAthenaJotunBoosters">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-liberatorrangeupgrade.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-liberatorrangeupgrade.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="AthenaWeaponSwitchVympel">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-hellfiremissiles.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="AthenaWeaponSwitchRanger">
+        <Icon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-nova-bansheemissilestrik.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="AntiTankMissile">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-ripwavemissiles.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-raynor-ripwavemissiles.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ArmMaelstromRounds">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-maelstromrounds.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-raynor-maelstromrounds.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="CenturionInspiration">
+        <Icon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadenergy.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadenergy.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="CenturionPlasmaSurge">
+        <Icon value="Assets\Textures\btn-ability-protoss-doubleshieldrecharge.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-doubleshieldrecharge.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="AmphibiousShipLoad">
+        <Icon value="Assets\Textures\btn-ability-terran-load.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-load.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="BunkerLoad"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="AmphibiousShipUnloadAll">
+        <Icon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-unloadall.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeyAlias value="BunkerUnloadAll"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="PermanentlyCloakedReconUAV">
+        <Icon value="Assets\Textures\btn-upgrade-seekerdrone-permanentlycloaked.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-seekerdrone-permanentlycloaked.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ReconUAVOvercharge">
+        <Icon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-recalibratedexplosives.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SnipeOffShadowAssassin">
+        <Icon value="Assets\Textures\btn-ability-terran-snipe.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-snipe.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SnipeOnShadowAssassin">
+        <Icon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-snipe-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="CloakOnShadowAssassin">
+        <Icon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-cloak-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeyAlias value="CloakOnBanshee"/>
+        <HotkeySet value="Cloak"/>
+    </CButton>
+    <CButton id="CloakOffShadowAssassin">
+        <Icon value="Assets\Textures\BTN-Ability-Terran-Decloak-color.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Ability-Terran-Decloak-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <HotkeySet value="Cloak"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="HaywireMissile">
+        <Icon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Ability-Terran-HaywireMissile.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="VespenePlant">
+        <Icon value="Assets\Textures\btn-building-terran-refinery-covertops.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-terran-refinery-covertops.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchVoidAssaulterPsionicLash">
+        <Icon value="Assets\Textures\btn-ability-annihilatepsionic.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-annihilatepsionic.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="VoidAssaulter">
+        <Icon value="Assets\Textures\btn-unit-terran-spectre-shadowsword-male.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-spectre-shadowsword-male.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="WarHoundUmojan">
+        <Icon value="Assets\Textures\btn-unit-terran-warhound-umojan.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-warhound-umojan.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Warrior">
+        <Icon value="Assets\Textures\btn-unit-umojan-elitemarine.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-umojan-elitemarine.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="WeaponsFreeShadowAssassin">
+        <Icon value="Assets\Textures\btn-ability-terran-weaponsfree.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-weaponsfree.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+        <HotkeySet value="HoldFire"/>
+        <HidesForSimpleText value="0"/>
+    </CButton>
+    <CButton id="ResearchPsionicLockdown">
+        <Icon value="Assets\Textures\btn-upgrade-nova-pulsegrenade.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-nova-pulsegrenade.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="PsionicLockdown">
+        <Icon value="Assets\Textures\btn-upgrade-nova-pulsegrenade.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-nova-pulsegrenade.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ArmTacticalCruiseMissile">
+        <Icon value="Assets\Textures\btn-upgrade-mengsk-ghostacademy-guidedtacticalstrike.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-mengsk-ghostacademy-guidedtacticalstrike.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TacticalCruiseMissile">
+        <Icon value="Assets\Textures\btn-upgrade-mengsk-ghostacademy-guidedtacticalstrike.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-mengsk-ghostacademy-guidedtacticalstrike.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ActivatePointDefenseSystem">
+        <Icon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="DeactivatePointDefenseSystem">
+        <Icon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Zeus">
+        <Icon value="Assets\Textures\btn-unit-terran-odin.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-odin.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ZirconCruiseMissile">
+        <Icon value="Assets\Textures\btn-ability-wraith-longrangemissiles.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-wraith-longrangemissiles.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="VoidAssaulterOrbitalStrike">
+        <Icon value="Assets\Textures\btn-upgrade-karax-orbitalassault_stun.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-karax-orbitalassault_stun.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="PsionicDisruptionStorm">
+        <Icon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-tychus-spectre-ultrasonicpulse.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="VoidAssaulterPsionicLash">
+        <Icon value="Assets\Textures\btn-ability-annihilatepsionic.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-annihilatepsionic.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="HeraProtocol">
+        <Icon value="Assets\Textures\BTN-Ability-Terran-BombardmentStrike-color.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Ability-Terran-BombardmentStrike-color.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ActivatePointDefenseSystemAquila">
+        <Icon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-targetingdrone.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="TomahawkCruiseMissile">
+        <Icon value="Assets\Textures\btn-ability-stetmann-hydraliskmissilepoweron.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-hydraliskmissilepoweron.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="Praetoria">
+        <Icon value="Assets\Textures\btn-unit-terran-vikingarchangel.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-vikingarchangel.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="NanoCleanse">
+        <Icon value="Assets\Textures\btn-upgrade-swann-defensivematrix.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-defensivematrix.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="DeployPsionicSuppressionField">
+        <Icon value="Assets\Textures\btn-ability-stetmann-stetzonegenerator-energy.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-stetzonegenerator-energy.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SeekerMode">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-raven-radar.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-raven-radar.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="SeekerModeOff">
+        <Icon value="Assets\Textures\btn-ability-hornerhan-raven-radar.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-hornerhan-raven-radar.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchZirconCruiseMissile">
+        <Icon value="Assets\Textures\btn-ability-wraith-longrangemissiles.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-wraith-longrangemissiles.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="UmojanBuild">
+        <Icon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+    </CButton>
+    <CButton id="UmojanBuildAdvanced">
+        <Icon value="Assets\Textures\btn-command-terran-buildadvancedstructure.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-terran-buildadvancedstructure.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <TintRacially value="1"/>
+    </CButton>
+</Catalog>

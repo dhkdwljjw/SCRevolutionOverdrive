@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CSkin default="1" id="BroodLordBase">
+        <CollectionDisplayUnitAlternate value="Broodling"/>
+    </CSkin>
+    <CSkin default="1" id="RavenBase">
+        <CollectionDisplayUnitAlternate value="AutoTurret"/>
+        <CollectionDisplayModelAlternate value="AutoTurret_##collection##"/>
+    </CSkin>
+    <CSkin default="1" id="SCBWCollectionSkinDefault">
+        <?token id="race" value="Neutral"?>
+        <?token id="unit"?>
+        <VariationIcon value="Assets\Textures\btn-unit-##race##-##unit##.dds"/>
+        <DisplayModel value="##unit##"/>
+        <Camera value="Star2CameraMid06"/>
+        <Rotation value="35"/>
+        <CollectionDisplayModel value="##unit##"/>
+        <CollectionDisplayUnit value="##unit##"/>
+    </CSkin>
+    <CSkin default="1" id="SCBWCollectionSkinBuildingDefault" parent="SCBWCollectionSkinDefault">
+        <VariationIcon value="Assets\Textures\btn-building-##race##-##unit##.dds"/>
+    </CSkin>
+    <CSkin default="1" id="SCBWCollectionSkinBase">
+        <?token id="collection" value="Bogus"?>
+        <?token id="race" value="Neutral"?>
+        <?token id="unit"?>
+        <ReplacementArray Catalog="Model" From="##unit##" To="##unit##_##collection##"/>
+        <VariationIcon value="Assets\Textures\btn-unit-##race##-##unit##-##collection##.dds"/>
+        <DisplayModel value="##unit##_##collection##"/>
+        <Rotation value="35"/>
+        <WarChestUILight value="WarChestSkinPreview_##collection##"/>
+        <CollectionDisplayModel value="##unit##_##collection##"/>
+        <CollectionDisplayUnit value="##unit##"/>
+    </CSkin>
+    <CSkin default="1" id="SCBWCollectionSkinBuildingBase">
+        <?token id="collection" value="Bogus"?>
+        <?token id="race" value="Neutral"?>
+        <?token id="unit"?>
+        <ReplacementArray Catalog="Model" From="##unit##" To="##unit##_##collection##"/>
+        <VariationIcon value="Assets\Textures\btn-building-##race##-##unit##-##collection##.dds"/>
+        <DisplayModel value="##unit##_##collection##"/>
+        <Rotation value="35"/>
+        <WarChestUILight value="WarChestSkinPreview_##collection##"/>
+        <CollectionDisplayModel value="##unit##_##collection##"/>
+        <CollectionDisplayUnit value="##unit##"/>
+        <Camera value="Star2CameraMid06"/>
+    </CSkin>
+    <CSkin id="BroodLord">
+        <CollectionDisplayModelAlternate value="Broodling"/>
+        <CollectionDisplayUnitAlternate value="Broodling"/>
+    </CSkin>
+    <CSkin id="BroodLordMecha">
+        <CollectionDisplayModelAlternate value="Broodling_Mecha"/>
+        <CollectionDisplayUnitAlternate value="Broodling"/>
+    </CSkin>
+    <CSkin id="BroodLordPrimal">
+        <CollectionDisplayModelAlternate value="Broodling_Primal"/>
+        <CollectionDisplayUnitAlternate value="Broodling"/>
+    </CSkin>
+    <CSkin id="BroodLordRCZ">
+        <CollectionDisplayModelAlternate value="Broodling_RCZ"/>
+        <CollectionDisplayUnitAlternate value="Broodling"/>
+    </CSkin>
+    <CSkin id="BroodLordWebby">
+        <CollectionDisplayModelAlternate value="Broodling_Webby"/>
+        <CollectionDisplayUnitAlternate value="Broodling"/>
+    </CSkin>
+    <CSkin id="BroodLord_PremiumSkin_Aquatic">
+        <CollectionDisplayModelAlternate value="Broodling_Aquatic"/>
+        <CollectionDisplayUnitAlternate value="Broodling"/>
+    </CSkin>
+    <CSkin id="Evo_SC2Ore">
+        <VariationIcon value="Assets\Textures\evo_ui_thumb_collection_sc2ore.dds"/>
+    </CSkin>
+    <CSkin id="Evo_BWOre">
+        <VariationIcon value="Assets\Textures\evo_ui_thumb_collection_bwore.dds"/>
+    </CSkin>
+    <CSkin id="Evo_WireSC2">
+        <VariationIcon value="Assets\Textures\evo_ui_thumb_collection_wiresc2.dds"/>
+    </CSkin>
+    <CSkin id="Evo_WireBW">
+        <VariationIcon value="Assets\Textures\evo_ui_thumb_collection_wirebw.dds"/>
+    </CSkin>
+    <CSkin id="Raven">
+        <CollectionDisplayModelAlternate value="AutoTurret"/>
+        <CollectionDisplayUnitAlternate value="AutoTurret"/>
+    </CSkin>
+    <CSkin id="RavenCovertOps">
+        <CollectionDisplayUnitAlternate value="AutoTurret"/>
+        <CollectionDisplayModelAlternate value="AutoTurret_CovertOps"/>
+    </CSkin>
+    <CSkin id="RavenJunker">
+        <CollectionDisplayUnitAlternate value="AutoTurret"/>
+        <CollectionDisplayModelAlternate value="AutoTurret_Junker_Collection"/>
+    </CSkin>
+    <CSkin id="RavenSilver">
+        <CollectionDisplayUnitAlternate value="AutoTurret"/>
+        <CollectionDisplayModelAlternate value="AutoTurret_Silver"/>
+    </CSkin>
+    <CSkin id="RavenUmojan">
+        <CollectionDisplayUnitAlternate value="AutoTurret"/>
+        <CollectionDisplayModelAlternate value="AutoTurret_Umojan"/>
+    </CSkin>
+    <!--Protoss Building Defaults-->
+    <CSkin id="ArbiterTribunalSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="ArbiterTribunalSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-arbitertribunal@scbw.dds"/>
+    </CSkin>
+    <CSkin id="AssimilatorSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="AssimilatorSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-assimilator@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="AssimilatorSCBW@Rich"/>
+        <CollectionDisplayUnitAlternate value="AssimilatorSCBW@Rich"/>
+    </CSkin>
+    <CSkin id="CitadelOfAdunSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="CitadelOfAdunSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-citadelofadun@scbw.dds"/>
+    </CSkin>
+    <CSkin id="CyberneticsCoreSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="CyberneticsCoreSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-cyberneticscore@scbw.dds"/>
+    </CSkin>
+    <CSkin id="FleetBeaconSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="FleetBeaconSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-fleetbeacon@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ForgeSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="ForgeSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-forge@scbw.dds"/>
+    </CSkin>
+    <CSkin id="GatewaySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="GatewaySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-gateway@scbw.dds"/>
+    </CSkin>
+    <CSkin id="Larva"/>
+    <CSkin id="NexusSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="NexusSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-nexus@scbw.dds"/>
+        <Name value="Unit/Name/NexusSCBW"/>
+    </CSkin>
+    <CSkin id="ObservatorySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="ObservatorySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-observatory@scbw.dds"/>
+    </CSkin>
+    <CSkin id="PhotonCannonSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="PhotonCannonSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-photoncannon@scbw.dds"/>
+    </CSkin>
+    <CSkin id="PylonSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="PylonSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-pylon@scbw.dds"/>
+    </CSkin>
+    <CSkin id="RoboticsFacilitySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="RoboticsFacilitySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-roboticsfacility@scbw.dds"/>
+    </CSkin>
+    <CSkin id="RoboticsBaySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="RoboticsBaySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-roboticsbay@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ShieldBatterySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="ShieldBatterySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-shieldbattery@scbw.dds"/>
+    </CSkin>
+    <CSkin id="StargateSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="StargateSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-stargate@scbw.dds"/>
+    </CSkin>
+    <CSkin id="TemplarArchiveSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Protoss" unit="TemplarArchiveSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-protoss-templararchive@scbw.dds"/>
+    </CSkin>
+    <!--Terran Building Defaults-->
+    <CSkin id="AcademySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="AcademySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-academy@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ArmorySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="ArmorySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-armory@scbw.dds"/>
+    </CSkin>
+    <CSkin id="BarracksSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="BarracksSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-barracks@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="BarracksSCBW"/>
+        <CollectionDisplayUnitAlternate value="BarracksSCBW@Flying"/>
+    </CSkin>
+    <CSkin id="BunkerSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="BunkerSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-bunker@scbw.dds"/>
+    </CSkin>
+    <CSkin id="CommandCenterSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="CommandCenterSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-commandcenter@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="CommandCenterSCBW"/>
+        <CollectionDisplayUnitAlternate value="CommandCenterSCBW@Flying"/>
+    </CSkin>
+    <CSkin id="ComsatStationSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="ComsatStationSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-comsatstation@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ControlTowerSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="ControlTowerSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-controltower@scbw.dds"/>
+    </CSkin>
+    <CSkin id="CovertOpsSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="CovertOpsSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-covertops@scbw.dds"/>
+    </CSkin>
+    <CSkin id="EngineeringBaySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="EngineeringBaySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-engineeringbay@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="EngineeringBaySCBW"/>
+        <CollectionDisplayUnitAlternate value="EngineeringBaySCBW@Flying"/>
+    </CSkin>
+    <CSkin id="FactorySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="FactorySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-factory@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="FactorySCBW"/>
+        <CollectionDisplayUnitAlternate value="FactorySCBW@Flying"/>
+    </CSkin>
+    <CSkin id="MachineShopSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="MachineShopSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-machineshop@scbw.dds"/>
+    </CSkin>
+    <CSkin id="MissileTurretSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="MissileTurretSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-missileturret@scbw.dds"/>
+    </CSkin>
+    <CSkin id="NuclearSiloSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="NuclearSiloSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-nuclearsilo@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="GhostSCBWNuclearStrike@Explode"/>
+        <CollectionDisplayUnitAlternate value="NukeSCBW"/>
+    </CSkin>
+    <CSkin id="PhysicsLabSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="PhysicsLabSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-physicslab@scbw.dds"/>
+    </CSkin>
+    <CSkin id="RefinerySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="RefinerySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-refinery@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="RefinerySCBW@Rich"/>
+        <CollectionDisplayUnitAlternate value="RefinerySCBW@Rich"/>
+    </CSkin>
+    <CSkin id="ScienceFacilitySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="ScienceFacilitySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-sciencefacility@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="ScienceFacilitySCBW"/>
+        <CollectionDisplayUnitAlternate value="ScienceFacilitySCBW@Flying"/>
+    </CSkin>
+    <CSkin id="StarportSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="StarportSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-starport@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="StarportSCBW"/>
+        <CollectionDisplayUnitAlternate value="StarportSCBW@Flying"/>
+    </CSkin>
+    <CSkin id="SupplyDepotSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Terran" unit="SupplyDepotSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-terran-supplydepot@scbw.dds"/>
+    </CSkin>
+    <!--Zerg Building Defaults-->
+    <CSkin id="CreepColonySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="CreepColonySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-creepcolony@scbw.dds"/>
+    </CSkin>
+    <CSkin id="DefilerMoundSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="DefilerMoundSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-defilermound@scbw.dds"/>
+    </CSkin>
+    <CSkin id="EvolutionChamberSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="EvolutionChamberSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-evolutionchamber@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ExtractorSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="ExtractorSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-extractor@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="ExtractorSCBW@Rich"/>
+        <CollectionDisplayUnitAlternate value="ExtractorSCBW@Rich"/>
+    </CSkin>
+    <CSkin id="HatcherySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="HatcherySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-hatchery@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="HiveSCBW"/>
+        <CollectionDisplayUnitAlternate value="HiveSCBW"/>
+    </CSkin>
+    <CSkin id="HydraliskDenSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="HydraliskDenSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-hydraliskden@scbw.dds"/>
+    </CSkin>
+    <CSkin id="NydusCanalSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="NydusCanalSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-nyduscanal@scbw.dds"/>
+    </CSkin>
+    <CSkin id="QueensNestSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="QueensNestSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-queensnest@scbw.dds"/>
+    </CSkin>
+    <CSkin id="SpawningPoolSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="SpawningPoolSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-spawningpool@scbw.dds"/>
+    </CSkin>
+    <CSkin id="SpireSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="SpireSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-spire@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="GreaterSpireSCBW"/>
+        <CollectionDisplayUnitAlternate value="GreaterSpireSCBW"/>
+    </CSkin>
+    <CSkin id="SporeColonySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="SporeColonySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-sporecolony@scbw.dds"/>
+    </CSkin>
+    <CSkin id="SunkenColonySCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="SunkenColonySCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-sunkencolony@scbw.dds"/>
+    </CSkin>
+    <CSkin id="UltraliskCavernSCBW_Default" parent="SCBWCollectionSkinBuildingDefault" race="Zerg" unit="UltraliskCavernSCBW">
+        <VariationIcon value="Assets\Textures\btn-building-zerg-ultraliskcavern@scbw.dds"/>
+    </CSkin>
+    <!--Protoss Unit Defaults-->
+    <CSkin id="ArbiterSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="ArbiterSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-arbiter@scbw.dds"/>
+    </CSkin>
+    <CSkin id="CarrierSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="CarrierSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-carrier@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="InterceptorSCBW"/>
+        <CollectionDisplayUnitAlternate value="InterceptorSCBW"/>
+    </CSkin>
+    <CSkin id="CorsairSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="CorsairSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-corsair@scbw.dds"/>
+    </CSkin>
+    <CSkin id="DarkTemplarSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="DarkTemplarSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-darktemplar@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="DarkArchonSCBW"/>
+        <CollectionDisplayUnitAlternate value="DarkArchonSCBW"/>
+    </CSkin>
+    <CSkin id="DragoonSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="DragoonSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-dragoon@scbw.dds"/>
+    </CSkin>
+    <CSkin id="HighTemplarSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="HighTemplarSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-hightemplar@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="ArchonSCBW"/>
+        <CollectionDisplayUnitAlternate value="ArchonSCBW"/>
+    </CSkin>
+    <CSkin id="ObserverSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="ObserverSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-observer@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ProbeSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="ProbeSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-probe@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ReaverSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="ReaverSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-reaver@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ScoutSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="ScoutSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-scout@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ShuttleSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="ShuttleSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-shuttle@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ZealotSCBW_Default" parent="SCBWCollectionSkinDefault" race="Protoss" unit="ZealotSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-protoss-zealot@scbw.dds"/>
+    </CSkin>
+    <!--Terran Unit Defaults-->
+    <CSkin id="BattlecruiserSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="BattlecruiserSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-battlecruiser@scbw.dds"/>
+    </CSkin>
+    <CSkin id="FirebatSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="FirebatSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-firebat@scbw.dds"/>
+    </CSkin>
+    <CSkin id="GhostSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="GhostSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-ghost@scbw.dds"/>
+    </CSkin>
+    <CSkin id="GoliathSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="GoliathSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-goliath@scbw.dds"/>
+    </CSkin>
+    <CSkin id="MarineSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="MarineSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-marine@scbw.dds"/>
+    </CSkin>
+    <CSkin id="MedicSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="MedicSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-medic@scbw.dds"/>
+    </CSkin>
+    <CSkin id="DropshipSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="DropshipSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-dropship@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ScienceVesselSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="ScienceVesselSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-sciencevessel@scbw.dds"/>
+    </CSkin>
+    <CSkin id="SCVSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="SCVSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-scv@scbw.dds"/>
+    </CSkin>
+    <CSkin id="SiegeTankSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="SiegeTankSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-siegetank@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="SiegeTankSCBWSieged"/>
+        <CollectionDisplayUnitAlternate value="SiegeTankSCBWSieged"/>
+    </CSkin>
+    <CSkin id="ValkyrieSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="ValkyrieSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-valkyrie@scbw.dds"/>
+    </CSkin>
+    <CSkin id="VultureSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="VultureSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-vulture@scbw.dds"/>
+    </CSkin>
+    <CSkin id="WraithSCBW_Default" parent="SCBWCollectionSkinDefault" race="Terran" unit="WraithSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-terran-wraith@scbw.dds"/>
+    </CSkin>
+    <!--Zerg Unit Defaults-->
+    <CSkin id="BroodlingSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="BroodlingSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-broodling@scbw.dds"/>
+    </CSkin>
+    <CSkin id="DefilerSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="DefilerSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-defiler@scbw.dds"/>
+    </CSkin>
+    <CSkin id="DevourerSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="DevourerSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-devourer@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="DevourerSCBWEgg"/>
+        <CollectionDisplayUnitAlternate value="DevourerSCBWEgg"/>
+    </CSkin>
+    <CSkin id="DroneSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="DroneSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-drone@scbw.dds"/>
+    </CSkin>
+    <CSkin id="GuardianSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="GuardianSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-guardian@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="GuardianSCBWEgg"/>
+        <CollectionDisplayUnitAlternate value="GuardianSCBWEgg"/>
+    </CSkin>
+    <CSkin id="HydraliskSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="HydraliskSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-hydralisk@scbw.dds"/>
+    </CSkin>
+    <CSkin id="LarvaSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="LarvaSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-larva@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="EggSCBW"/>
+        <CollectionDisplayUnitAlternate value="EggSCBW"/>
+    </CSkin>
+    <CSkin id="LurkerSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="LurkerSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-lurker@scbw.dds"/>
+        <CollectionDisplayModelAlternate value="LurkerSCBWEgg"/>
+        <CollectionDisplayUnitAlternate value="LurkerSCBWEgg"/>
+    </CSkin>
+    <CSkin id="MutaliskSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="MutaliskSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-mutalisk@scbw.dds"/>
+    </CSkin>
+    <CSkin id="OverlordSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="OverlordSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-overlord@scbw.dds"/>
+    </CSkin>
+    <CSkin id="QueenSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="QueenSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-queen@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ScourgeSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="ScourgeSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-scourge@scbw.dds"/>
+    </CSkin>
+    <CSkin id="UltraliskSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="UltraliskSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-ultralisk@scbw.dds"/>
+    </CSkin>
+    <CSkin id="ZerglingSCBW_Default" parent="SCBWCollectionSkinDefault" race="Zerg" unit="ZerglingSCBW">
+        <VariationIcon value="Assets\Textures\btn-unit-zerg-zergling@scbw.dds"/>
+    </CSkin>
+</Catalog>

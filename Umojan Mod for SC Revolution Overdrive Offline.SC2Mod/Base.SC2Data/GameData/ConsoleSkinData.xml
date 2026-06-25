@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CConsoleSkin id="ConsoleTerran_Umojan" parent="ConsoleBase_Reward" race="Umojan"/>
+</Catalog>

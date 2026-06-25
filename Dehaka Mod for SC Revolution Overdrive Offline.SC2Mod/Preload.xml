@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Abil id="DehakaLearn"/>
+<Actor id="SYSTEM_ActorConfig"/>
+<Behavior id="TransportingHeroicUnit"/>
+<Behavior id="EssenceTravelling"/>
+<Behavior id="EssenceBuff1"/>
+<Behavior id="EssenceBuff10"/>
+<Behavior id="EssenceBuff100"/>
+<Behavior id="DehakaMassive"/>
+<Behavior id="DehakaCoopAirTargetable"/>
+<Behavior id="SuppressCollisionRevive"/>
+<Behavior id="DehakaNormalReviveTimer"/>
+<Commander id="DehakaConsole"/>
+<Effect id="PostMorphHeal"/>
+<Effect id="DehakaConsumeEffectHealBiological"/>
+<Effect id="DehakaConsumeEffectHealOther"/>
+<Effect id="EssencePickupFullLM"/>
+<Effect id="CancelDehakaLearn"/>
+<Sound id="MusicDehakaMaxLevel"/>
+<Unit id="DehakaCoop"/>
+<Unit id="EssencePickup"/>
+<Unit id="DehakaCoopReviveCocoonFootPrint"/>
+</Preload>

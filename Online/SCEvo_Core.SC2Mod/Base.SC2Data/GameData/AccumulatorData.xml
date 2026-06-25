@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAccumulatorTrackedUnitCount default="1"/>
+    <CAccumulatorArithmetic id="SCBW_WeaponCooldown@AdditiveFactor">
+        <Parameters value="1"/>
+    </CAccumulatorArithmetic>
+    <CAccumulatorArithmetic id="SCBW_WeaponCooldown@Final">
+        <MinAccumulation value="0.0625"/>
+        <Parameters value="-0.0625">
+            <AccumulatorArray value="SCBW_WeaponCooldown@Reciprocal"/>
+        </Parameters>
+    </CAccumulatorArithmetic>
+    <CAccumulatorConstant id="Zero"/>
+    <CAccumulatorConstant id="Minus1">
+        <Amount value="-1"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="1">
+        <Amount value="1"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="2">
+        <Amount value="2"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="3">
+        <Amount value="3"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="4">
+        <Amount value="4"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="5">
+        <Amount value="5"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="6">
+        <Amount value="6"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="7">
+        <Amount value="7"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="8">
+        <Amount value="8"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="9">
+        <Amount value="9"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="10">
+        <Amount value="10"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="11">
+        <Amount value="11"/>
+    </CAccumulatorConstant>
+    <CAccumulatorConstant id="12">
+        <Amount value="12"/>
+    </CAccumulatorConstant>
+    <CAccumulatorEffectAmount id="DamageAbsorbed">
+        <AmountType value="Absorbed"/>
+    </CAccumulatorEffectAmount>
+    <CAccumulatorVitals id="UnitVital_LifeMax_Target">
+        <Ratio value="1"/>
+        <UnitSource Value="Target"/>
+        <ModificationType value="PerUnitMaxVital"/>
+    </CAccumulatorVitals>
+    <CAccumulatorSwitch id="UnitVital_ShieldsMaxCheck_Target">
+        <CaseArray Validator="SCBW_CanHaveShields" Accumulator="UnitVital_ShieldsMax_Target"/>
+        <CaseDefault value="Zero"/>
+    </CAccumulatorSwitch>
+    <CAccumulatorArithmetic id="UnitVital_LifeShieldsCombine_Target">
+        <Parameters value="0">
+            <AccumulatorArray value="UnitVital_ShieldsMaxCheck_Target"/>
+        </Parameters>
+        <Parameters value="0">
+            <AccumulatorArray value="UnitVital_LifeMax_Target"/>
+        </Parameters>
+    </CAccumulatorArithmetic>
+    <CAccumulatorVitals id="UnitVital_LifeCurr_Target">
+        <Ratio value="1"/>
+        <UnitSource Value="Target"/>
+        <ModificationType value="PerUnit"/>
+    </CAccumulatorVitals>
+    <CAccumulatorEffectAmount id="InheritedDamage">
+        <AmountType value="DamageInherited"/>
+    </CAccumulatorEffectAmount>
+    <CAccumulatorEffectAmount id="InheritedDamageMultiply">
+        <ApplicationRule value="Multiply"/>
+        <AmountType value="DamageInherited"/>
+    </CAccumulatorEffectAmount>
+    <CAccumulatorEffectAmount id="DamageInherited">
+        <AmountType value="DamageInherited"/>
+    </CAccumulatorEffectAmount>
+    <CAccumulatorVitals id="UnitVital_ShieldsCurr_Target">
+        <VitalType value="Shields"/>
+        <UnitSource Value="Target"/>
+        <ModificationType value="PerUnit"/>
+        <Ratio value="1"/>
+    </CAccumulatorVitals>
+    <CAccumulatorVitals id="UnitVital_ShieldsCurr_Caster">
+        <VitalType value="Shields"/>
+        <ModificationType value="PerUnit"/>
+        <Ratio value="1"/>
+    </CAccumulatorVitals>
+    <CAccumulatorVitals id="UnitVital_ShieldsMax_Target">
+        <VitalType value="Shields"/>
+        <UnitSource Value="Target"/>
+        <ModificationType value="PerUnitMaxVital"/>
+        <Ratio value="1"/>
+    </CAccumulatorVitals>
+    <CAccumulatorVitals id="UnitVital_ShieldsMax_Caster">
+        <VitalType value="Shields"/>
+        <ModificationType value="PerUnitMaxVital"/>
+        <Ratio value="1"/>
+    </CAccumulatorVitals>
+    <CAccumulatorArithmetic id="SCBW_WeaponCooldown@Multipliers">
+        <MinAccumulation value="0.25"/>
+        <MaxAccumulation value="128"/>
+        <Parameters value="0">
+            <AccumulatorArray value="SCBW_WeaponCooldown@SporeSwitch"/>
+        </Parameters>
+        <Parameters value="0">
+            <AccumulatorArray value="SCBW_WeaponCooldown@EnsnareSwitch"/>
+        </Parameters>
+        <Operation value="Multiply"/>
+    </CAccumulatorArithmetic>
+    <CAccumulatorArithmetic id="SCBW_WeaponCooldown@Reciprocal">
+        <Parameters value="0">
+            <AccumulatorArray value="SCBW_WeaponCooldown"/>
+        </Parameters>
+        <Parameters value="0">
+            <AccumulatorArray value="SCBW_WeaponCooldown@Multipliers"/>
+        </Parameters>
+        <Operation value="Divide"/>
+    </CAccumulatorArithmetic>
+    <CAccumulatorSwitch id="SCBW_WeaponCooldown@EnsnareSwitch">
+        <CaseArray Validator="QueenSCBWEnsnare@AttackSlowCaster" Accumulator="QueenSCBWEnsnare@AttackSpeedFactor"/>
+        <CaseDefault value="1"/>
+    </CAccumulatorSwitch>
+    <CAccumulatorSwitch id="SCBW_WeaponCooldown@SporeSwitch">
+        <CaseArray Validator="DevourerSCBWWeapon@Caster" Accumulator="DevourerSCBWWeapon@AttackSpeedFactor"/>
+        <CaseDefault value="1"/>
+    </CAccumulatorSwitch>
+    <CAccumulatorUserData id="SCBW_WeaponCooldown">
+        <Key value="SCBW_WeaponCooldown"/>
+    </CAccumulatorUserData>
+</Catalog>

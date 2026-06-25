@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CSound default="1" id="AckSCBW" parent="Voice">
+        <?token id="BaseDir" value="LocalizedData\Sounds"?>
+        <?token id="Folder" value="##id##"?>
+        <?token id="Race" value="Terran"?>
+        <EditorCategories value="Race:##Race##"/>
+        <AssetArrayTemplate>
+            <File value="##BaseDir##\##Race##UnitVO\##Folder##\^TemplateParam2^.ogg"/>
+            <FacialAnim value="^TemplateParam1^"/>
+            <FacialGroup value="^TemplateParam1^"/>
+            <FacialFile value="LocalizedData\Sounds\VO\##Race##\^TemplateParam1^.fxe"/>
+        </AssetArrayTemplate>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound default="1" id="AlertSCBW" parent="Alert">
+        <?token id="BaseDir" value="LocalizedData\Sounds"?>
+        <?token id="Race" value="Terran"?>
+        <?token id="Folder" value="##id##"?>
+        <EditorCategories value="Race:##Race##"/>
+        <AssetArrayTemplate>
+            <File value="##BaseDir##\##Race##UnitVO\##Folder##\^TemplateParam2^.ogg"/>
+            <FacialAnim value="^TemplateParam1^"/>
+            <FacialGroup value="^TemplateParam1^"/>
+            <FacialFile value="LocalizedData\Sounds\VO\##Race##\^TemplateParam1^.fxe"/>
+        </AssetArrayTemplate>
+    </CSound>
+    <CSound default="1" id="ReadySCBW" parent="Ready">
+        <?token id="BaseDir" value="LocalizedData\Sounds"?>
+        <?token id="Folder" value="##id##"?>
+        <?token id="Race" value="Terran"?>
+        <EditorCategories value="Race:##Race##"/>
+        <AssetArrayTemplate>
+            <File value="##BaseDir##\##Race##UnitVO\##Folder##\^TemplateParam2^.ogg"/>
+            <FacialAnim value="^TemplateParam1^"/>
+            <FacialGroup value="^TemplateParam1^"/>
+            <FacialFile value="LocalizedData\Sounds\VO\##Race##\^TemplateParam1^.fxe"/>
+        </AssetArrayTemplate>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound default="1" id="DeathSCBW" parent="Death">
+        <?token id="BaseDir" value="LocalizedData\Sounds"?>
+        <?token id="Race" value="Terran"?>
+        <?token id="Folder" value="##id##"?>
+        <EditorCategories value="Race:##Race##"/>
+        <AssetArrayTemplate>
+            <File value="##BaseDir##\##Race##UnitVO\##Folder##\^TemplateParam2^.ogg"/>
+            <FacialAnim value="^TemplateParam1^"/>
+            <FacialGroup value="^TemplateParam1^"/>
+            <FacialFile value="LocalizedData\Sounds\VO\##Race##\^TemplateParam1^.fxe"/>
+        </AssetArrayTemplate>
+    </CSound>
+    <CSound default="1" id="AlertTerranSCBW" parent="AlertSCBW"/>
+    <CSound default="1" id="AlertZergSCBW" parent="AlertSCBW">
+        <?token id="Race" value="Zerg"?>
+    </CSound>
+    <CSound default="1" id="AlertProtossSCBW" parent="AlertSCBW">
+        <?token id="Race" value="Protoss"?>
+    </CSound>
+    <CSound default="1" id="TerranReadySCBW" parent="ReadySCBW"/>
+    <CSound default="1" id="ZergReadySCBW" parent="ReadySCBW">
+        <?token id="Race" value="Zerg"?>
+    </CSound>
+    <CSound default="1" id="ProtossReadySCBW" parent="ReadySCBW">
+        <?token id="Race" value="Protoss"?>
+    </CSound>
+    <CSound default="1" id="TerranDeathSCBW" parent="DeathSCBW"/>
+    <CSound default="1" id="ZergDeathSCBW" parent="DeathSCBW">
+        <?token id="Race" value="Zerg"?>
+    </CSound>
+    <CSound default="1" id="ProtossDeathSCBW" parent="DeathSCBW">
+        <?token id="Race" value="Protoss"?>
+    </CSound>
+    <CSound default="1" id="TerranAckSCBW" parent="AckSCBW"/>
+    <CSound default="1" id="ZergAckSCBW" parent="AckSCBW">
+        <?token id="Race" value="Zerg"?>
+    </CSound>
+    <CSound default="1" id="ProtossAckSCBW" parent="AckSCBW">
+        <?token id="Race" value="Protoss"?>
+    </CSound>
+    <CSound default="1" id="TerranBuildingSCBW@LiftOff" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffectsSCBW\TerranBuildingSCBW@LiftOff00.ogg"/>
+    </CSound>
+    <CSound default="1" id="TerranBuildingSCBW@Land" parent="Spell">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffectsSCBW\TerranBuildingSCBW@Land00.ogg"/>
+        <!--<Volume value="-3.000000,-3.000000"/>-->
+    </CSound>
+    <CSound id="Alert_ZergEvolutionCompleteSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergUpgradeCompleteSCBW.ogg"/>
+        <Category value="Ready"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="GameMusicObserver_SCI" parent="MUSIC">
+        <AssetArray File="Assets\Music\SC1_Protoss1.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Protoss2.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Protoss3.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Protoss4.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Terran1.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Terran2.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Terran3.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Terran4.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Zerg1.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Zerg2.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Zerg3.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Zerg4.ogg"/>
+        <Volume value="2.000000,2.000000"/>
+    </CSound>
+    <CSound id="Alert_ZergEconomyUnderAttack_BWZe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@Pissed02.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergBuildError_BWZe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="Bullet_Whiz" parent="Combat">
+        <EditorCategories value="Race:Neutral"/>
+        <AssetArray File="Assets\Sounds\Neutral\Bullet_Whiz\bullet_whizby01.wav" Weight="50"/>
+        <AssetArray File="Assets\Sounds\Neutral\Bullet_Whiz\bullet_whizby02.wav" Weight="50"/>
+        <AssetArray File="Assets\Sounds\Neutral\Bullet_Whiz\bullet_whizby03.wav" Weight="50"/>
+        <AssetArray File="Assets\Sounds\Neutral\Bullet_Whiz\bullet_whizby04.wav" Weight="50"/>
+        <AssetArray File="Assets\Sounds\Neutral\Bullet_Whiz\bullet_whizby05.wav" Weight="50"/>
+        <AssetArray File="Assets\Sounds\Neutral\Bullet_Whiz\bullet_whizby06.wav" Weight="86"/>
+        <Pitch value="3.000000,5.000000"/>
+        <Volume value="-13.000000,-12.000000"/>
+    </CSound>
+    <CSound id="GameMusicObserver_ALL" parent="GameMusicObserver">
+        <AssetArray File="Assets\Music\SC1_Protoss1.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Protoss2.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Protoss3.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Protoss4.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Terran1.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Terran2.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Terran3.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Terran4.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Zerg1.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Zerg2.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Zerg3.ogg"/>
+        <AssetArray File="Assets\Music\SC1_Zerg4.ogg"/>
+    </CSound>
+    <CSound id="PhysicsImpactBoneLight" parent="PhysicsImpactDirtLight">
+        <Pitch value="0.000000,4.000000"/>
+    </CSound>
+    <CSound id="PhysicsImpactBoneMedium" parent="PhysicsImpactDirtMedium">
+        <Pitch value="0.000000,4.000000"/>
+    </CSound>
+    <CSound id="PhysicsImpactBoneHeavy" parent="PhysicsImpactDirtHeavy">
+        <Pitch value="0.000000,6.000000"/>
+    </CSound>
+    <CSound id="PhysicsImpactBoneMassive" parent="PhysicsImpactDirtMassive">
+        <Pitch value="0.000000,10.000000"/>
+    </CSound>
+    <CSound id="SCBW_Silent" parent="Spell">
+        <AssetArray File="Assets\Sounds\Swarm_Silent.wav"/>
+        <Flags index="Purgable" value="0"/>
+        <Category value="Voice"/>
+        <Mode value="2D"/>
+        <ReverbBalance Room="-10000"/>
+        <Volume value="-96.000000,-96.000000"/>
+    </CSound>
+    <CSound id="DroneSCBW_AlertJobFinished" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffectsSCBW\ZergBuildingSCBW@Ready00.ogg" FacialAnim="SCV_JobsFinished00"/>
+    </CSound>
+    <CSound id="Terran_PrePreExplosion" parent="Combat">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_00.wav"/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_03.wav"/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_06.wav"/>
+        <AssetArray File="Assets\Sounds\Doodad_DominionEnergyCannon_PreCast_07.wav"/>
+        <DupeDestroyCount value="6"/>
+        <DupeMaximumMethod value="Replace"/>
+        <DupeMuteCount value="6"/>
+        <ResourcePriority value="16"/>
+        <SustainFade index="1" Time="1000"/>
+    </CSound>
+    <CSound id="Alert_ProtossBaseUnderAttackSCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossBaseUnderAttackSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossCalldownLaunchSCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossCalldownLaunchSCBW.ogg"/>
+        <Flags index="Ignorable" value="0"/>
+    </CSound>
+    <CSound id="Alert_ProtossForcesUnderAttackSCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossForcesUnderAttackSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossNeedMoreFoodSCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossNeedMoreFoodSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossNeedMoreGasSCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossNeedMoreGasSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossNeedMoreMineralsSCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossNeedMoreMineralsSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossNotEnoughEnergySCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossNotEnoughEnergySCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossResearchCompleteSCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossResearchCompleteSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_TerranBaseUnderAttackSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranBaseUnderAttackSCBW.ogg" FacialAnim="Alert_TerranBaseUnderAttack"/>
+    </CSound>
+    <CSound id="Alert_ProtossUpgradeCompleteSCBW" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossUpgradeCompleteSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_TerranCalldownLaunchSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranCalldownLaunchSCBW.ogg" FacialAnim="Alert_TerranCalldownLaunch"/>
+        <Flags index="Ignorable" value="0"/>
+    </CSound>
+    <CSound id="Alert_TerranForcesUnderAttackSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranForcesUnderAttackSCBW.ogg" FacialAnim="Alert_TerranForcesUnderAttack"/>
+    </CSound>
+    <CSound id="Alert_TerranNeedMoreFoodSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNeedMoreFoodSCBW.ogg" FacialAnim="Alert_TerranNeedMoreFood"/>
+    </CSound>
+    <CSound id="Alert_TerranNeedMoreGasSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNeedMoreGasSCBW.ogg" FacialAnim="Alert_TerranNeedMoreGas"/>
+    </CSound>
+    <CSound id="Alert_TerranNeedMoreMineralsSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNeedMoreMineralsSCBW.ogg" FacialAnim="Alert_TerranNeedMoreMinerals"/>
+    </CSound>
+    <CSound id="Alert_TerranNotEnoughEnergySCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNotEnoughEnergySCBW.ogg" FacialAnim="Alert_TerranNotEnoughEnergy"/>
+    </CSound>
+    <CSound id="Alert_ZergBaseUnderAttackSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergBaseUnderAttackSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergAllyBaseUnderAttackSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\Queen\Alert_ZergAllyBaseUnderAttack.ogg"/>
+    </CSound>
+    <CSound id="Alert_TerranResearchCompleteSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranResearchCompleteSCBW.ogg" FacialAnim="Alert_TerranResearchComplete"/>
+    </CSound>
+    <CSound id="Alert_TerranUpgradeCompleteSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUpgradeCompleteSCBW.ogg" FacialAnim="Alert_TerranUpgradeComplete"/>
+    </CSound>
+    <CSound id="Alert_ZergCalldownLaunchSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergCalldownLaunchSCBW.ogg"/>
+        <Flags index="Ignorable" value="0"/>
+    </CSound>
+    <CSound id="Alert_ZergForcesUnderAttackSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergForcesUnderAttackSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergAllyForcesUnderAttackSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\Queen\Alert_ZergAllyUnderAttack.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergNeedMoreFoodSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergNeedMoreFoodSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergNeedMoreGasSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergNeedMoreGasSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergNeedMoreMineralsSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergNeedMoreMineralsSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergNotEnoughEnergySCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergNotEnoughEnergySCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergResearchCompleteSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergResearchCompleteSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergUpgradeCompleteSCBW" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergUpgradeCompleteSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ZergVespeneGeyserExhaustedSCBW" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Neutral\Alert@VespeneGeyserExhaustedSCBW.ogg"/>
+    </CSound>
+    <CSound id="UI_Classic_Toggle" parent="UI">
+        <AssetArray File="Assets\Sounds\UI\Star1\button.ogg"/>
+    </CSound>
+    <CSound id="UI_Classic_MouseOver" parent="UI">
+        <AssetArray File="Assets\Sounds\UI\Star1\mouseover.ogg"/>
+    </CSound>
+    <CSound id="UI_Classic_Click" parent="UI">
+        <AssetArray File="Assets\Sounds\UI\Star1\mousedown2.ogg"/>
+    </CSound>
+    <CSound id="ZergUnitSCBW@Burrow" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffectsSCBW\ZergBurrowSCBW@BurrowDown00.ogg"/>
+        <Flags index="Purgable" value="0"/>
+        <DupeDestroyCount value="8"/>
+        <DupeMuteCount value="3"/>
+    </CSound>
+    <CSound id="ZergUnitSCBW@Unburrow" parent="Spell">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffectsSCBW\ZergBurrowSCBW@BurrowUp00.ogg"/>
+        <Flags index="Purgable" value="0"/>
+        <DupeDestroyCount value="8"/>
+        <DupeMuteCount value="3"/>
+        <Volume value="2.000000,3.000000"/>
+    </CSound>
+    <CSound id="Alert_TerranAddOnComplete_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranAddOnComplete.ogg" FacialAnim="Alert_TerranAddOnComplete"/>
+    </CSound>
+    <CSound id="Alert_TerranAllyBaseUnderAttack_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Adjutant\Alert_TerranAllyBaseUnderAttack.ogg" FacialAnim="Alert_TerranAllyBaseUnderAttack"/>
+    </CSound>
+    <CSound id="Alert_TerranAllyUnderAttack_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\Adjutant\Alert_TerranAllyUnderAttack.ogg" FacialAnim="Alert_TerranAllyUnderAttack"/>
+    </CSound>
+    <CSound id="Alert_TerranAtMaximumSupply_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Uni\UI\UI_Error.wav"/>
+    </CSound>
+    <CSound id="Alert_TerranBaseUnderAttackBWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranBaseUnderAttackSCBW.ogg" FacialAnim="Alert_TerranBaseUnderAttack"/>
+    </CSound>
+    <CSound id="Alert_TerranBuildError_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="Alert_TerranCalldownLaunch_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranCalldownLaunchSCBW.ogg" FacialAnim="Alert_TerranCalldownLaunch"/>
+        <Flags index="Ignorable" value="0"/>
+    </CSound>
+    <CSound id="Alert_TerranEconomyUnderAttack_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@Help00.ogg" FacialAnim="Alert_TerranEconomyUnderAttack"/>
+    </CSound>
+    <CSound id="Alert_TerranForcesUnderAttack_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranForcesUnderAttackSCBW.ogg" FacialAnim="Alert_TerranForcesUnderAttack"/>
+    </CSound>
+    <CSound id="Alert_TerranLandingSequenceInterrupted_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranLandingSequenceInterrupted.ogg" FacialAnim="Alert_TerranLandingSequenceInterrupted"/>
+    </CSound>
+    <CSound id="Alert_TerranMineralsDepleted_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+    </CSound>
+    <CSound id="Alert_BWTerranNukeReady" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNukeReady.ogg" FacialAnim="Alert_TerranNukeReady"/>
+    </CSound>
+    <CSound id="Alert_TerranPlaceOnVespeneGeyser_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="Alert_TerranPlaceOnVespeneGeyser"/>
+    </CSound>
+    <CSound id="Alert_BWTerranResearchComplete" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranResearchCompleteSCBW.ogg" FacialAnim="Alert_TerranResearchComplete"/>
+    </CSound>
+    <CSound id="Alert_BWTerranUnacceptableLandingZone" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUnnacceptableLandingZone.ogg" FacialAnim="Alert_TerranUnacceptableLandingZone"/>
+    </CSound>
+    <CSound id="Alert_BWTerranVespeneGeyserExhausted" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Neutral\Alert@VespeneGeyserExhaustedSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_BWTerranUpgradeComplete" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUpgradeCompleteSCBW.ogg" FacialAnim="Alert_TerranUpgradeComplete"/>
+    </CSound>
+    <CSound id="SCVSCBW_AlertJobFinished" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@UPD00.ogg" FacialAnim="SCV_JobsFinished00"/>
+    </CSound>
+    <CSound id="SCVSCBW_CantBuildAlert" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCVSCBW@err01"/>
+        <Pitch value="-1.000000,1.000000"/>
+        <Volume value="-2.000000,1.000000"/>
+    </CSound>
+    <CSound id="e_cmdBuildTechRequirementsNotMet_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdBuildTechRequirementsNotMet_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffectsSCBW\Alert@TerranErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildLocationInvalid_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildLocationInvalid_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildLocationInvalid_BWZe_NP" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildOnThat_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildOnThat_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToCreepSource_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToCreepSource_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToDropOff_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToDropOff_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToResources_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToResources_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooFarFromCreepSource_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@Pissed02.ogg"/>
+        <Flags index="Ignorable" value="0"/>
+        <Flags index="Stream" value="0"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooFarFromWater_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooFarFromWater_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="e_cmdCantFinishBuildingLocationBlocked_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantFinishBuildingLocationBlocked_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err00"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="e_cmdCantFinishLandingLocationBlocked_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantFinishLandingLocationBlocked_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranLandingSequenceInterrupted.ogg" FacialAnim="Alert_TerranLandingSequenceInterrupted"/>
+    </CSound>
+    <CSound id="e_cmdCantLandLocationInvalid_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandLocationInvalid_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUnnacceptableLandingZone.ogg" FacialAnim="Alert_TerranUnacceptableLandingZone"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooCloseToResources_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooCloseToResources_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUnnacceptableLandingZone.ogg" FacialAnim="Alert_TerranUnacceptableLandingZone"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromBuildPowerSource_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromBuildPowerSource_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUnnacceptableLandingZone.ogg" FacialAnim="Alert_TerranUnacceptableLandingZone"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromTrainPowerSource_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromTrainPowerSource_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUnnacceptableLandingZone.ogg" FacialAnim="Alert_TerranUnacceptableLandingZone"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromWater_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromWater_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUnnacceptableLandingZone.ogg" FacialAnim="Alert_TerranUnacceptableLandingZone"/>
+    </CSound>
+    <CSound id="e_cmdCantSeeBuildLocation_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantSeeBuildLocation_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err00.ogg" FacialAnim="SCVSCBW@err01"/>
+    </CSound>
+    <CSound id="e_cmdCantSeeLandLocation_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantSeeLandLocation_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranUnnacceptableLandingZone.ogg" FacialAnim="Alert_TerranUnacceptableLandingZone"/>
+    </CSound>
+    <CSound id="e_cmdCouldntReachTarget_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCouldntReachTarget_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\SCVSCBW\SCVSCBW@err01.ogg" FacialAnim="SCV_CantBuild02"/>
+    </CSound>
+    <CSound id="e_cmdFoodUsageImpossible_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="e_cmdFoodUsageImpossible_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffectsSCBW\Alert@TerranErrorSCBW.ogg"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughEnergy_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergNotEnoughEnergySCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughEnergy_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNotEnoughEnergySCBW.ogg" FacialAnim="Alert_TerranNotEnoughEnergy"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughFood_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergNeedMoreFoodSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughFood_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNeedMoreFoodSCBW.ogg" FacialAnim="Alert_TerranNeedMoreFood"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughMinerals_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergNeedMoreMineralsSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughMinerals_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNeedMoreMineralsSCBW.ogg" FacialAnim="Alert_TerranNeedMoreMinerals"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughVespene_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="LocalizedData\Sounds\ZergUnitVO\ZergAdvisorSCBW\Alert@ZergNeedMoreGasSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughVespene_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="LocalizedData\Sounds\TerranUnitVO\TerranAdvisorSCBW\Alert@TerranNeedMoreGasSCBW.ogg" FacialAnim="Alert_TerranNeedMoreGas"/>
+    </CSound>
+    <CSound id="Alert_ProtossAllyBaseUnderAttack_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\Executor\Alert_ProtossAllysBaseUnderAttack.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossAllyUnderAttack_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\Executor\Alert_ProtossAllyUnderAttack.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossAtMaximumSupply_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Uni\UI\UI_Error.wav"/>
+    </CSound>
+    <CSound id="Alert_ProtossBaseUnderAttackBWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossBaseUnderAttackSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossBuildError_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err01.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossCalldownLaunch_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossCalldownLaunchSCBW.ogg"/>
+        <Flags index="Ignorable" value="0"/>
+    </CSound>
+    <CSound id="Alert_ProtossEconomyUnderAttack_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@Help00.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossForcesUnderAttack_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossForcesUnderAttackSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossLandingSequenceInterrupted_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_ProtossMineralsDepleted_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+    </CSound>
+    <CSound id="Alert_ProtossPlaceOnVespeneGeyser_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="Alert_BWProtossResearchComplete" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossResearchCompleteSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_BWProtossUnacceptableLandingZone" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_BWProtossVespeneGeyserExhausted" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Neutral\Alert@VespeneGeyserExhaustedSCBW.ogg"/>
+    </CSound>
+    <CSound id="Alert_BWProtossUpgradeComplete" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossUpgradeCompleteSCBW.ogg"/>
+    </CSound>
+    <CSound id="ProbeSCBW_AlertJobFinished" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+    </CSound>
+    <CSound id="e_cmdBuildTechRequirementsNotMet_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildLocationInvalid_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildOnThat_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToCreepSource_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err01.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToDropOff_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err01.ogg"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooCloseToResources_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err01.ogg"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantBuildTooFarFromWater_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err01.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantFinishBuildingLocationBlocked_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err01.ogg"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantFinishLandingLocationBlocked_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandLocationInvalid_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooCloseToResources_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromBuildPowerSource_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromTrainPowerSource_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantLandTooFarFromWater_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantSeeBuildLocation_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err01.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCantSeeLandLocation_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdCouldntReachTarget_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\ProbeSCBW\ProbeSCBW@err00.ogg" FacialAnim="SCV_CantBuild02"/>
+    </CSound>
+    <CSound id="e_cmdFoodUsageImpossible_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+        <Volume value="-9.000000,-9.000000"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughEnergy_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossNotEnoughEnergySCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughFood_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossNeedMoreFoodSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughMinerals_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossNeedMoreMineralsSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdNotEnoughVespene_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="LocalizedData\Sounds\ProtossUnitVO\ProtossAdvisorSCBW\Alert@ProtossNeedMoreGasSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdError_BWPr" parent="Alert">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdError_BWTe" parent="Alert">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffectsSCBW\Alert@TerranErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="e_cmdError_BWZe" parent="Alert">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="UI_GenericError_BWPr" parent="UI">
+        <EditorCategories value="Race:Protoss"/>
+        <AssetArray File="Assets\Sounds\Protoss\SharedEffectsSCBW\Alert@ProtossErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="UI_GenericError_BWTe" parent="UI">
+        <EditorCategories value="Race:Terran"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffectsSCBW\Alert@TerranErrorSCBW.ogg"/>
+    </CSound>
+    <CSound id="UI_GenericError_BWZe" parent="UI">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\DroneSCBW\DroneSCBW@err00.ogg"/>
+    </CSound>
+    <CSound id="e_cmdQueueIsFull_BWPr" parent="e_cmdError_BWPr"/>
+    <CSound id="e_cmdQueueIsFull_BWTe" parent="e_cmdError_BWTe"/>
+    <CSound id="e_cmdQueueIsFull_BWZe" parent="e_cmdError_BWZe"/>
+    <CSound id="e_cmdCantTargetThatUnit_BWPr" parent="e_cmdError_BWPr"/>
+    <CSound id="e_cmdCantTargetThatUnit_BWTe" parent="e_cmdError_BWTe"/>
+    <CSound id="e_cmdCantTargetThatUnit_BWZe" parent="e_cmdError_BWZe"/>
+    <CSound id="e_cmdCantTargetCaster_BWPr" parent="e_cmdError_BWPr"/>
+    <CSound id="e_cmdCantTargetCaster_BWTe" parent="e_cmdError_BWTe"/>
+    <CSound id="e_cmdCantTargetCaster_BWZe" parent="e_cmdError_BWZe"/>
+    <CSound id="e_cmdMustTargetUnit_BWPr" parent="e_cmdError_BWPr"/>
+    <CSound id="e_cmdMustTargetUnit_BWTe" parent="e_cmdError_BWTe"/>
+    <CSound id="e_cmdMustTargetUnit_BWZe" parent="e_cmdError_BWZe"/>
+    <!-- Protoss -->
+    <CSound id="e_cmdNotEnoughTerrazine_BWPr" parent="e_cmdNotEnoughFood_BWTe"/>
+    <CSound id="e_cmdNotEnoughCustom_BWPr" parent="e_cmdNotEnoughFood_BWZe"/>
+    <CSound id="e_cmdNotEnoughTerrazine_Prot" parent="e_cmdNotEnoughFood"/>
+    <CSound id="e_cmdNotEnoughCustom_Prot" parent="e_cmdNotEnoughFood_Zerg"/>
+    <!-- Terran -->
+    <CSound id="e_cmdNotEnoughTerrazine_BWTe" parent="e_cmdNotEnoughFood_BWPr"/>
+    <CSound id="e_cmdNotEnoughCustom_BWTe" parent="e_cmdNotEnoughFood_BWZe"/>
+    <CSound id="e_cmdNotEnoughTerrazine_Terr" parent="e_cmdNotEnoughFood_Prot"/>
+    <CSound id="e_cmdNotEnoughCustom_Terr" parent="e_cmdNotEnoughFood_Zerg"/>
+    <!-- Zerg -->
+    <CSound id="e_cmdNotEnoughTerrazine_BWZe" parent="e_cmdNotEnoughFood_BWPr"/>
+    <CSound id="e_cmdNotEnoughCustom_BWZe" parent="e_cmdNotEnoughFood_BWTe"/>
+    <CSound id="e_cmdNotEnoughTerrazine_Zerg" parent="e_cmdNotEnoughFood_Prot"/>
+    <CSound id="e_cmdNotEnoughCustom_Zerg" parent="e_cmdNotEnoughFood"/>
+    <CSound id="ZergBuilding@Ready" parent="Ready">
+        <EditorCategories value="Race:Zerg"/>
+        <AssetArray File="Assets\Sounds\Zerg\SharedEffectsSCBW\ZergBuildingSCBW@Ready00.ogg"/>
+    </CSound>
+</Catalog>

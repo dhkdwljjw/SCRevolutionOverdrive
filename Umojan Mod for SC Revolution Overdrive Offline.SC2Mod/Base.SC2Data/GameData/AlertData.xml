@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAlert id="BuildComplete_Umoj">
+        <Peripheral value="BuildingComplete"/>
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/BuildComplete"/>
+    </CAlert>
+    <CAlert id="AttackTownAlly_Umoj" parent="AttackTownAlly">
+        <Sound value="Alert_TerranAllyBaseUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackTown_Umoj" parent="AttackTown">
+        <Sound value="Alert_TerranBaseUnderAttack"/>
+    </CAlert>
+    <CAlert id="MorphComplete_Umoj">
+        <Peripheral value="MorphComplete"/>
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/MorphComplete"/>
+    </CAlert>
+    <CAlert id="WarpTrainComplete_Umoj">
+        <Peripheral value="WarpInComplete"/>
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/WarpTrainComplete"/>
+    </CAlert>
+    <CAlert id="UpgradeComplete_Umoj">
+        <Peripheral value="UpgradeComplete"/>
+        <Sound value="Alert_TerranUpgradeComplete"/>
+        <Text value="Alert/Text/UpgradeComplete"/>
+    </CAlert>
+    <CAlert id="ResearchComplete_Umoj">
+        <Peripheral value="ResearchComplete"/>
+        <Sound value="Alert_TerranResearchComplete"/>
+        <Text value="Alert/Text/ResearchComplete"/>
+    </CAlert>
+    <CAlert id="AttackUnitAlly_Umoj" parent="AttackUnitAlly">
+        <Sound value="Alert_TerranAllyUnderAttack"/>
+    </CAlert>
+    <CAlert id="AttackUnit_Umoj" parent="AttackUnit">
+        <Sound value="Alert_TerranForcesUnderAttack"/>
+    </CAlert>
+    <CAlert id="TrainWorkerComplete_Umoj">
+        <Flags index="Hide" value="1"/>
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/TrainWorkerComplete"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_HighYieldMineral_Umoj" parent="ResourceExhausted_HighYieldMineral">
+        <Icon value="Assets\Textures\icon-highyieldmineral-terran.dds"/>
+        <Sound value="Alert_TerranMineralsDepleted"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_Mineral_Umoj" parent="ResourceExhausted_Mineral">
+        <Sound value="Alert_TerranMineralsDepleted"/>
+        <Icon value="Assets\Textures\icon-mineral-terran.dds"/>
+    </CAlert>
+    <CAlert id="ResourceExhausted_Vespene_Umoj" parent="ResourceExhausted_Vespene">
+        <Sound value="Alert_TerranVespeneGeyserExhausted"/>
+        <Icon value="Assets\Textures\icon-gas-terran.dds"/>
+    </CAlert>
+    <CAlert id="ReviveError_Umoj" parent="ReviveError">
+        <Icon value="Assets\Textures\icon-supply-terran.dds"/>
+    </CAlert>
+    <CAlert id="MothershipComplete_Umoj" parent="TrainComplete_Terr">
+        <Peripheral value="MothershipComplete"/>
+    </CAlert>
+    <CAlert id="AmmoComplete_Umoj">
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/AmmoComplete"/>
+    </CAlert>
+    <CAlert id="SpecializeComplete_Umoj">
+        <Peripheral value="SpecializationComplete"/>
+        <Text value="Alert/Text/SpecializeComplete"/>
+    </CAlert>
+    <CAlert id="CalldownLaunch_Umoj" parent="CalldownLaunch">
+        <Sound value="Alert_TerranCalldownLaunch"/>
+        <QueueTime value="10.000000"/>
+    </CAlert>
+    <CAlert id="MergeComplete_Umoj">
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/MergeComplete"/>
+    </CAlert>
+    <CAlert id="TrainError_Umoj" parent="TrainError">
+        <Icon value="Assets\Textures\icon-supply-terran.dds"/>
+    </CAlert>
+    <CAlert id="TrainComplete_Umoj">
+        <Peripheral value="TrainComplete"/>
+        <Voice value="Ready"/>
+        <Text value="Alert/Text/TrainComplete"/>
+    </CAlert>
+</Catalog>

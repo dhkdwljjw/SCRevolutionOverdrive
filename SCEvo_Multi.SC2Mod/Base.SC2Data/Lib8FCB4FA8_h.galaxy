@@ -1,0 +1,9 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: SCEvo: Multi
+//--------------------------------------------------------------------------------------------------
+// Trigger Declarations
+trigger lib8FCB4FA8_gt_Initialization;
+trigger lib8FCB4FA8_gt_LiberatorEnsnareTransferHandler;
+

@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUnit default="1" id="SCBW_Unit">
+        <Mob value="Multiplayer"/>
+        <EditorCategories value="ObjectFamily:Melee,ObjectType:Unit"/>
+        <EnergyRegenRate value="0.5"/>
+    </CUnit>
+    <CUnit default="1" id="ProtossUnitSCBW" parent="SCBW_Unit">
+        <Race value="BWPr"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <ShieldArmorName value="Unit/ShieldArmorName/ProtossPlasmaShields"/>
+        <GlossaryCategory value="Unit/Category/ProtossUnitsSCBW"/>
+        <HotkeyCategory value="Unit/Category/ProtossUnitsSCBW"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <DeathRevealRadius value="3"/>
+        <ShieldRegenRate value="0.4375"/>
+    </CUnit>
+    <CUnit default="1" id="ProtossBuildingSCBW" parent="ProtossUnitSCBW">
+        <DeathRevealRadius value="2"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <GlossaryCategory value=""/>
+    </CUnit>
+    <CUnit default="1" id="TerranUnitSCBW" parent="SCBW_Unit">
+        <Race value="BWTe"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <GlossaryCategory value="Unit/Category/TerranUnitsSCBW"/>
+        <HotkeyCategory value="Unit/Category/TerranUnitsSCBW"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+    </CUnit>
+    <CUnit default="1" id="ZergUnitSCBW" parent="SCBW_Unit">
+        <Race value="BWZe"/>
+        <LifeRegenRate value="0.25"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <GlossaryCategory value="Unit/Category/ZergUnitsSCBW"/>
+        <HotkeyCategory value="Unit/Category/ZergUnitsSCBW"/>
+    </CUnit>
+    <CUnit default="1" id="TerranGroundUnitSCBW" parent="TerranUnitSCBW">
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+    </CUnit>
+    <CUnit default="1" id="TerranInfantrySCBW" parent="TerranGroundUnitSCBW">
+        <CostCategory value="Army"/>
+        <FlagArray index="ArmySelect" value="1"/>
+    </CUnit>
+    <CUnit default="1" id="TerranShipSCBW" parent="TerranUnitSCBW">
+        <CostCategory value="Army"/>
+        <Attributes index="Mechanical" value="1"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <Mover value="Fly"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranShipPlating"/>
+    </CUnit>
+    <CUnit default="1" id="TerranVehicleSCBW" parent="TerranUnitSCBW">
+        <CostCategory value="Army"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+    </CUnit>
+    <CUnit default="1" id="TerranBuildingSCBWBase">
+        <DeathRevealRadius value="3"/>
+        <Race value="BWTe"/>
+        <Mob value="Multiplayer"/>
+        <Gender value="Neutral"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <Sight value="9"/>
+        <CostCategory value="Technology"/>
+        <AttackTargetPriority value="11"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="3"/>
+        <EditorCategories value="ObjectType:Structure,ObjectFamily:Melee"/>
+        <AIKiteRange value="1"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <BehaviorArray Link="TerranBuildingSCBW@Burnout"/>
+        <TechAliasArray value="Alias_##id##"/>
+    </CUnit>
+    <CUnit default="1" id="TerranBuildingSCBW" parent="TerranBuildingSCBWBase">
+        <FlagArray index="Turnable" value="0"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <AbilArray Link="BuildInProgress"/>
+    </CUnit>
+    <CUnit default="1" id="TerranBuildingSCBW@Flying" parent="TerranBuildingSCBWBase">
+        <?token id="AliasUnit" value="##id##"?>
+        <Name value="Unit/Name/##AliasUnit##"/>
+        <PlaneArray index="Air" value="1"/>
+        <Collide index="Flying" value="1"/>
+        <FogVisibility value="Hidden"/>
+        <Mover value="Fly"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="stop"/>
+        <Speed value="0.9375"/>
+        <Acceleration value="1.3125"/>
+        <Height value="3.25"/>
+        <LeaderAlias value="##AliasUnit##"/>
+        <HotkeyAlias value="##AliasUnit##"/>
+        <TechAliasArray index="0" value="Alias_##AliasUnit##"/>
+        <GlossaryAlias value="##AliasUnit##"/>
+    </CUnit>
+    <CUnit default="1" id="TerranBuildingSCBW@AddOnBase" parent="TerranBuildingSCBWBase">
+        <?token id="AddedOnBehavior" value="##id##@Attached"?>
+        <?token id="AddedOnUnit" value="Ball"?>
+        <FlagArray index="Turnable" value="0"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Facing value="315"/>
+        <AbilArray Link="que5Addon"/>
+        <AbilArray Link="BuildInProgress"/>
+        <Radius value="1"/>
+        <SeparationRadius value="1"/>
+        <Footprint value="Footprint2x2Contour"/>
+        <AddedOnArray UnitLink="##AddedOnUnit##" BehaviorLink="##AddedOnBehavior##" ParentBehaviorLink="AddonIsWorkingSCBW"/>
+        <SubgroupPriority value="2"/>
+        <MinimapRadius value="1"/>
+        <AIKiteRange value="0"/>
+        <GlossaryPriority value="337"/>
+        <Sight value="8"/>
+    </CUnit>
+    <CUnit default="1" id="TerranBuildingSCBW@AddOn" parent="TerranBuildingSCBW@AddOnBase">
+        <PlacementFootprint value="Footprint3x3AddOn2x2"/>
+        <AddOnOffsetX value="2.5"/>
+        <AddOnOffsetY value="-0.5"/>
+    </CUnit>
+    <CUnit default="1" id="TerranBuildingSCBW@AddOnCC" parent="TerranBuildingSCBW@AddOnBase">
+        <?token id="AddedOnUnit" value="CommandCenterSCBW"?>
+        <PlacementFootprint value="Footprint5x5AddOn2x2SCBW"/>
+        <AddOnOffsetX value="3.5"/>
+        <AddOnOffsetY value="-1.5"/>
+    </CUnit>
+    <CUnit id="Assimilator">
+        <BuiltOn value="TempleVespeneGeyserSCBW"/>
+    </CUnit>
+    <CUnit id="CommandCenter">
+        <AbilArray Link="InfestedCommandCenterSC2@Morph"/>
+    </CUnit>
+    <CUnit id="CommandCenterFlying">
+        <AbilArray Link="InfestedCommandCenterSC2@MorphFlyer"/>
+    </CUnit>
+    <CUnit id="Extractor">
+        <BuiltOn value="TempleVespeneGeyserSCBW"/>
+    </CUnit>
+    <CUnit id="OrbitalCommand">
+        <AbilArray Link="InfestedOrbitalCommandSCBW@Morph"/>
+    </CUnit>
+    <CUnit id="OrbitalCommandFlying">
+        <AbilArray Link="InfestedOrbitalCommandSCBW@MorphFlyer"/>
+    </CUnit>
+    <CUnit id="PlanetaryFortress">
+        <AbilArray Link="InfestedPlanetaryFortressSCBW@Morph"/>
+    </CUnit>
+    <CUnit id="Refinery">
+        <BuiltOn value="TempleVespeneGeyserSCBW"/>
+    </CUnit>
+    <CUnit id="SCBW_DummyUpgradeTarget">
+        <!-- Dummy target for upgrades so techtree cheat gets registered -->
+        <EditorFlags index="NoPlacement" value="1"/>
+        <EditorFlags index="NoPalettes" value="1"/>
+        <Mover value=""/>
+        <FlagArray index="NoScore" value="1"/>
+    </CUnit>
+    <CUnit id="SCBW_InvulnerableDummy" parent="InvisibleTargetDummy">
+        <Name value="Unit/Name/SCBW_InvulnerableDummy"/>
+        <FlagArray index="Untargetable" value="1"/>
+        <FlagArray index="Invulnerable" value="1"/>
+        <FlagArray index="NoScore" value="1"/>
+        <BehaviorArray index="0" removed="1"/>
+    </CUnit>
+    <CUnit id="AbilResearchHolderSCBW">
+        <AbilArray Link="TerranInfantryWeaponsSCBW"/>
+        <AbilArray Link="TerranInfantryArmorsSCBW"/>
+        <AbilArray Link="TerranVehicleWeaponsSCBW"/>
+        <AbilArray Link="TerranVehiclePlatingSCBW"/>
+        <AbilArray Link="TerranShipWeaponsSCBW"/>
+        <AbilArray Link="TerranShipPlatingSCBW"/>
+        <AbilArray Link="ProtossAirArmorsSCBW"/>
+        <AbilArray Link="ProtossAirWeaponsSCBW"/>
+        <AbilArray Link="ProtossShieldsSCBW"/>
+        <AbilArray Link="ProtossGroundArmorsSCBW"/>
+        <AbilArray Link="ProtossGroundWeaponsSCBW"/>
+        <AbilArray Link="ZergFlyerAttacksSCBW"/>
+        <AbilArray Link="ZergFlyerCarapaceSCBW"/>
+        <AbilArray Link="ZergGroundCarapaceSCBW"/>
+        <AbilArray Link="ZergMeleeAttacksSCBW"/>
+        <AbilArray Link="ZergMissileAttacksSCBW"/>
+        <CardLayouts>
+            <LayoutButtons Face="TerranVehicleWeaponsSCBW@Lvl1" Type="AbilCmd" AbilCmd="TerranVehicleWeaponsSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="TerranVehicleWeaponsSCBW@Lvl2" Type="AbilCmd" AbilCmd="TerranVehicleWeaponsSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="TerranVehicleWeaponsSCBW@Lvl3" Type="AbilCmd" AbilCmd="TerranVehicleWeaponsSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="TerranVehiclePlatingSCBW@Lvl1" Type="AbilCmd" AbilCmd="TerranVehiclePlatingSCBW,Research1" Row="0" Column="1"/>
+            <LayoutButtons Face="TerranVehiclePlatingSCBW@Lvl2" Type="AbilCmd" AbilCmd="TerranVehiclePlatingSCBW,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="TerranVehiclePlatingSCBW@Lvl3" Type="AbilCmd" AbilCmd="TerranVehiclePlatingSCBW,Research3" Row="0" Column="1"/>
+            <LayoutButtons Face="TerranShipWeaponsSCBW@Lvl1" Type="AbilCmd" AbilCmd="TerranShipWeaponsSCBW,Research1" Row="1" Column="0"/>
+            <LayoutButtons Face="TerranShipWeaponsSCBW@Lvl2" Type="AbilCmd" AbilCmd="TerranShipWeaponsSCBW,Research2" Row="1" Column="0"/>
+            <LayoutButtons Face="TerranShipWeaponsSCBW@Lvl3" Type="AbilCmd" AbilCmd="TerranShipWeaponsSCBW,Research3" Row="1" Column="0"/>
+            <LayoutButtons Face="TerranShipPlatingSCBW@Lvl1" Type="AbilCmd" AbilCmd="TerranShipPlatingSCBW,Research1" Row="1" Column="1"/>
+            <LayoutButtons Face="TerranShipPlatingSCBW@Lvl2" Type="AbilCmd" AbilCmd="TerranShipPlatingSCBW,Research2" Row="1" Column="1"/>
+            <LayoutButtons Face="TerranShipPlatingSCBW@Lvl3" Type="AbilCmd" AbilCmd="TerranShipPlatingSCBW,Research3" Row="1" Column="1"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="ProtossAirArmorsSCBW@Lvl1" Type="AbilCmd" AbilCmd="ProtossAirArmorsSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossAirArmorsSCBW@Lvl2" Type="AbilCmd" AbilCmd="ProtossAirArmorsSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossAirArmorsSCBW@Lvl3" Type="AbilCmd" AbilCmd="ProtossAirArmorsSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossAirWeaponsSCBW@Lvl1" Type="AbilCmd" AbilCmd="ProtossAirWeaponsSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossAirWeaponsSCBW@Lvl2" Type="AbilCmd" AbilCmd="ProtossAirWeaponsSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossAirWeaponsSCBW@Lvl3" Type="AbilCmd" AbilCmd="ProtossAirWeaponsSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossShieldsSCBW@Lvl1" Type="AbilCmd" AbilCmd="ProtossShieldsSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossShieldsSCBW@Lvl2" Type="AbilCmd" AbilCmd="ProtossShieldsSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossShieldsSCBW@Lvl3" Type="AbilCmd" AbilCmd="ProtossShieldsSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossGroundArmorsSCBW@Lvl1" Type="AbilCmd" AbilCmd="ProtossGroundArmorsSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossGroundArmorsSCBW@Lvl2" Type="AbilCmd" AbilCmd="ProtossGroundArmorsSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossGroundArmorsSCBW@Lvl3" Type="AbilCmd" AbilCmd="ProtossGroundArmorsSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossGroundWeaponsSCBW@Lvl1" Type="AbilCmd" AbilCmd="ProtossGroundWeaponsSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossGroundWeaponsSCBW@Lvl2" Type="AbilCmd" AbilCmd="ProtossGroundWeaponsSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ProtossGroundWeaponsSCBW@Lvl3" Type="AbilCmd" AbilCmd="ProtossGroundWeaponsSCBW,Research3" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="ZergFlyerAttacksSCBW@Lvl1" Type="AbilCmd" AbilCmd="ZergFlyerAttacksSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergFlyerAttacksSCBW@Lvl2" Type="AbilCmd" AbilCmd="ZergFlyerAttacksSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergFlyerAttacksSCBW@Lvl3" Type="AbilCmd" AbilCmd="ZergFlyerAttacksSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergFlyerCarapaceSCBW@Lvl1" Type="AbilCmd" AbilCmd="ZergFlyerCarapaceSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergFlyerCarapaceSCBW@Lvl2" Type="AbilCmd" AbilCmd="ZergFlyerCarapaceSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergFlyerCarapaceSCBW@Lvl3" Type="AbilCmd" AbilCmd="ZergFlyerCarapaceSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergGroundCarapaceSCBW@Lvl1" Type="AbilCmd" AbilCmd="ZergGroundCarapaceSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergGroundCarapaceSCBW@Lvl2" Type="AbilCmd" AbilCmd="ZergGroundCarapaceSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergGroundCarapaceSCBW@Lvl3" Type="AbilCmd" AbilCmd="ZergGroundCarapaceSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergMeleeAttacksSCBW@Lvl1" Type="AbilCmd" AbilCmd="ZergMeleeAttacksSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergMeleeAttacksSCBW@Lvl2" Type="AbilCmd" AbilCmd="ZergMeleeAttacksSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergMeleeAttacksSCBW@Lvl3" Type="AbilCmd" AbilCmd="ZergMeleeAttacksSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergMissileAttacksSCBW@Lvl1" Type="AbilCmd" AbilCmd="ZergMissileAttacksSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergMissileAttacksSCBW@Lvl2" Type="AbilCmd" AbilCmd="ZergMissileAttacksSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="ZergMissileAttacksSCBW@Lvl3" Type="AbilCmd" AbilCmd="ZergMissileAttacksSCBW,Research3" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="TerranInfantryArmorsSCBW@Lvl1" Type="AbilCmd" AbilCmd="TerranInfantryArmorsSCBW,Research1" Row="0" Column="0"/>
+            <LayoutButtons Face="TerranInfantryArmorsSCBW@Lvl2" Type="AbilCmd" AbilCmd="TerranInfantryArmorsSCBW,Research2" Row="0" Column="0"/>
+            <LayoutButtons Face="TerranInfantryArmorsSCBW@Lvl3" Type="AbilCmd" AbilCmd="TerranInfantryArmorsSCBW,Research3" Row="0" Column="0"/>
+            <LayoutButtons Face="TerranInfantryWeaponsSCBW@Lvl1" Type="AbilCmd" AbilCmd="TerranInfantryWeaponsSCBW,Research1" Row="0" Column="1"/>
+            <LayoutButtons Face="TerranInfantryWeaponsSCBW@Lvl2" Type="AbilCmd" AbilCmd="TerranInfantryWeaponsSCBW,Research2" Row="0" Column="1"/>
+            <LayoutButtons Face="TerranInfantryWeaponsSCBW@Lvl3" Type="AbilCmd" AbilCmd="TerranInfantryWeaponsSCBW,Research3" Row="0" Column="1"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="AbilTrainHolderSCBW">
+        <ReviveType value="AbilBuildHolderSCBW"/>
+        <AbilArray Link="BarracksSCBW@Train"/>
+        <AbilArray Link="CommandCenterSCBW@Train"/>
+        <AbilArray Link="FactorySCBW@Train"/>
+        <AbilArray Link="GatewaySCBW@Train"/>
+        <AbilArray Link="InfestedCommandCenterSCBW@Train"/>
+        <AbilArray Link="LarvaSCBW@Train"/>
+        <AbilArray Link="NexusSCBW@Train"/>
+        <AbilArray Link="RoboticsFacilitySCBW@Train"/>
+        <AbilArray Link="StargateSCBW@Train"/>
+        <AbilArray Link="StarportSCBW@Train"/>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BarracksSCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="GatewaySCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="LarvaSCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NexusSCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="RoboticsFacilitySCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StargateSCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="InfestedCommandCenterSCBW@Train,Train9" Row="0" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="AbilBuildHolderSCBW">
+        <AbilArray Link="DroneSCBW@Build"/>
+        <AbilArray Link="DroneSCBW@BuildAdv"/>
+        <AbilArray Link="NydusCanalSCBW@Build"/>
+        <AbilArray Link="ProbeSCBW@Build"/>
+        <AbilArray Link="ProbeSCBW@BuildAdv"/>
+        <AbilArray Link="SCVSCBW@Build"/>
+        <AbilArray Link="SCVSCBW@BuildAdv"/>
+        <AbilArray Link="CommandCenterSCBW@AddOns"/>
+        <AbilArray Link="FactorySCBW@AddOns"/>
+        <AbilArray Link="StarportSCBW@AddOns"/>
+        <AbilArray Link="ScienceFacilitySCBW@AddOns"/>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build9" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build10" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build11" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build12" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build13" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build14" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build15" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build16" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build17" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build18" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build19" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build20" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build21" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build22" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build23" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build24" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build25" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build26" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build27" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build28" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build29" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@Build,Build30" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build9" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build10" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build11" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build12" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build13" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build14" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build15" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build16" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build17" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build18" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build19" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build20" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build21" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build22" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build23" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build24" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build25" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build26" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build27" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build28" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build29" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="DroneSCBW@BuildAdv,Build30" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build9" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build10" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build11" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build12" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build13" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build14" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build15" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build16" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build17" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build18" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build19" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build20" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build21" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build22" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build23" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build24" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build25" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build26" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build27" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build28" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build29" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="NydusCanalSCBW@Build,Build30" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build9" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build10" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build11" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build12" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build13" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build14" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build15" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build16" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build17" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build18" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build19" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build20" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build21" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build22" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build23" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build24" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build25" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build26" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build27" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build28" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build29" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@Build,Build30" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build9" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build10" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build11" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build12" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build13" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build14" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build15" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build16" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build17" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build18" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build19" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build20" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build21" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build22" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build23" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build24" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build25" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build26" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build27" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build28" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build29" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ProbeSCBW@BuildAdv,Build30" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build9" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build10" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build11" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build12" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build13" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build14" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build15" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build16" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build17" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build18" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build19" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build20" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build21" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build22" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build23" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build24" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build25" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build26" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build27" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build28" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build29" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@Build,Build30" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build3" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build4" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build5" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build6" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build7" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build8" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build9" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build10" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build11" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build12" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build13" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build14" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build15" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build16" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build17" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build18" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build19" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build20" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build21" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build22" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build23" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build24" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build25" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build26" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build27" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build28" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build29" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="SCVSCBW@BuildAdv,Build30" Row="0" Column="0"/>
+        </CardLayouts>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@AddOns,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="CommandCenterSCBW@AddOns,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@AddOns,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="FactorySCBW@AddOns,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ScienceFacilitySCBW@AddOns,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="ScienceFacilitySCBW@AddOns,Build2" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@AddOns,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="StarportSCBW@AddOns,Build2" Row="0" Column="0"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="AbilMorphHolderSCBW">
+        <AbilArray Link="GreaterSpireSCBW@Morph"/>
+        <AbilArray Link="HiveSCBW@Morph"/>
+        <AbilArray Link="LairSCBW@Morph"/>
+        <AbilArray Link="SporeColonySCBW@Morph"/>
+        <AbilArray Link="SunkenColonySCBW@Morph"/>
+        <AbilArray Link="DevourerSCBW@Morph"/>
+        <AbilArray Link="GuardianSCBW@Morph"/>
+        <AbilArray Link="LurkerSCBW@Morph"/>
+        <AbilArray Link="LurkerSCBW@MorphBurrowed"/>
+        <CardLayouts>
+            <LayoutButtons Face="GreaterSpireSCBW" Type="AbilCmd" AbilCmd="GreaterSpireSCBW@Morph,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="HiveSCBW" Type="AbilCmd" AbilCmd="HiveSCBW@Morph,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="LairSCBW" Type="AbilCmd" AbilCmd="LairSCBW@Morph,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SporeColonySCBW" Type="AbilCmd" AbilCmd="SporeColonySCBW@Morph,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="LurkerSCBW" Type="AbilCmd" AbilCmd="LurkerSCBW@Morph,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="LurkerSCBW" Type="AbilCmd" AbilCmd="LurkerSCBW@MorphBurrowed,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="DevourerSCBW" Type="AbilCmd" AbilCmd="DevourerSCBW@Morph,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="SunkenColonySCBW" Type="AbilCmd" AbilCmd="SunkenColonySCBW@Morph,Execute" Row="2" Column="1"/>
+            <LayoutButtons Face="GuardianSCBW" Type="AbilCmd" AbilCmd="DevourerSCBW@Morph,Execute" Row="2" Column="1"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="ProtossVespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="PurifierVespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="RichVespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="ShakurasVespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="SpacePlatformGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+    <CUnit id="VespeneGeyser">
+        <BehaviorArray Link="GeyserExhaustedRaw"/>
+    </CUnit>
+</Catalog>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="ActivatePointDefenseSystem">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="AndNotCountBehaviorActivatePointDefenseSystemCompleteOnlyAtUnitCountUpgradeUmojanPowerShieldsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="AquilaRequirements">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitFleetHeadquartersCompleteOnlyLTCountUnitVoidAssaulterQueuedOrBetter1LTCountUnitZeusQueuedOrBetter1LTCountUnitAquilaQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="ArmMaelstromRounds">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="AndCountUpgradeMaelstromRoundsCompleteOnlyLTCountUnitMaelstromRoundsUnitQueuedOrBetterAtUnit5"/>
+    </CRequirement>
+    <CRequirement id="ArmTacticalCruiseMissile">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="LTCountUnitTacticalCruiseMissileUnitQueuedOrBetterAtUnit3"/>
+    </CRequirement>
+    <CRequirement id="DeactivatePointDefenseSystem">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountBehaviorActivatePointDefenseSystemCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveAESARadar">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeActiveElectronicallyScannedArrayRadarCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveAntiTankMissile">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeAntiTankMissileCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveArmamentFacility">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitArmamentFacilityCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveArsenal">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitArsenalCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveCenturionInspiration">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeCenturionInspirationCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveCommandPost">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitCommandPostCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveEngineeringFactory">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitEngineeringFactoryCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveFleetHeadquarters">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitFleetHeadquartersCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveFragmentShrapnel">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeFragmentShrapnelCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveInfantryQuarter">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitInfantryQuarterCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveLogisticsDepot">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitLogisticsDepotCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveMaverickMissiles">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeMaverickMissilesCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveMineralResonator">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorMineralResonatorCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HavePowerPlant">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitPowerPlantCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HavePowerPlantAndArmamentFacility">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitPowerPlantCompleteOnlyCountUnitArmamentFacilityCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveReconUAVOvercharge">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeReconUAVOverchargeCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountBehaviorReconUAVOverchargeCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveSentryPostAccelerator">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeSentryPostAcceleratorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveShadowAssassinSnipe">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorShadowAssassinSnipeCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveShapedBlastWarhead">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeShapedBlastWarheadCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveSpecOpsCommand">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitSpecOpsCommandCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveStarStation">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitStarStationCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveTacticsAcademy">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUnitTacticsAcademyCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveTacticalVisor">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeTacticalVisorCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveUmojanPowerShields">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeUmojanPowerShieldsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveUmojanShieldsBattery">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeUmojanShieldsBatteryCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnAESARadar">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeActiveElectronicallyScannedArrayRadarQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnAntiTankMissile">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAntiTankMissileQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnAthenaJotunBoosters">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAthenaJotunBoostersQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnCenturionInspiration">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeCenturionInspirationQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnFragmentShrapnel">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeFragmentShrapnelQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMaelstromRounds">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMaelstromRoundsQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnMaverickMissiles">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountUpgradeMaverickMissilesQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPraetoriaHangar">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradePraetoriaHangarCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnReconUAVOvercharge">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeReconUAVOverchargeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnSentryPostAccelerator">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeSentryPostAcceleratorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnShapedBlastWarhead">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeShapedBlastWarheadQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTacticalVisor">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTacticalVisorQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanGroundWeaponsUpgradeLevel1">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanGroundWeaponsUpgradeLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanGroundWeaponsUpgradeLevel2">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanGroundWeaponsUpgradeLevel1CompleteOnlyCountUnitTacticsAcademyCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanGroundWeaponsUpgradeLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanGroundWeaponsUpgradeLevel3">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanGroundWeaponsUpgradeLevel2CompleteOnlyCountUnitTacticsAcademyCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanGroundWeaponsUpgradeLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanGroundArmorUpgradeLevel1">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanGroundArmorUpgradeLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanGroundArmorUpgradeLevel2">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanGroundArmorUpgradeLevel1CompleteOnlyCountUnitTacticsAcademyCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanGroundArmorUpgradeLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanGroundArmorUpgradeLevel3">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanGroundArmorUpgradeLevel2CompleteOnlyCountUnitTacticsAcademyCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanGroundArmorUpgradeLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanAirWeaponsUpgradeLevel1">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanAirWeaponsUpgradeLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanAirWeaponsUpgradeLevel2">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanAirWeaponsUpgradeLevel1CompleteOnlyCountUnitFleetHeadquartersCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanAirWeaponsUpgradeLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanAirWeaponsUpgradeLevel3">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanAirWeaponsUpgradeLevel2CompleteOnlyCountUnitFleetHeadquartersCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanAirWeaponsUpgradeLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanAirArmorUpgradeLevel1">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanAirArmorUpgradeLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanAirArmorUpgradeLevel2">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanAirArmorUpgradeLevel1CompleteOnlyCountUnitFleetHeadquartersCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanAirArmorUpgradeLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanAirArmorUpgradeLevel3">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanAirArmorUpgradeLevel2CompleteOnlyCountUnitFleetHeadquartersCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanAirArmorUpgradeLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanPowerShieldsUpgradeLevel1">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanPowerShieldsUpgradeLevel1QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanPowerShieldsUpgradeLevel2">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanPowerShieldsUpgradeLevel1CompleteOnlyCountUnitTacticsAcademyCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanPowerShieldsUpgradeLevel2QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanPowerShieldsUpgradeLevel3">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="AndCountUpgradeUmojanPowerShieldsUpgradeLevel2CompleteOnlyCountUnitTacticsAcademyCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanPowerShieldsUpgradeLevel3QueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanPowerShields">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanPowerShieldsQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnUmojanShieldsBattery">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeUmojanShieldsBatteryQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="MaelstromRoundsArmed">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="GTCountUnitMaelstromRoundsUnitCompleteOnlyAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="MineralResonatorRequirements">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUnitPowerPlantCompleteOnly"/>
+        <NodeArray index="Show" Link="AndNotCountBehaviorMineralResonatorCompleteOnlyAtUnitNotCountUnitCommandPostMineralResonatorDummyQueuedOrBetterAtUnit"/>
+    </CRequirement>
+    <CRequirement id="NotHaveShadowAssassinSnipe">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountBehaviorShadowAssassinSnipeCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="FutureWarfareLabRequirements">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndOrCountUnitEngineeringFactoryCompleteOnlyCountUnitFleetHeadquartersCompleteOnlyCountUnitSpecOpsCommandCompleteOnlyNotCountUnitFutureWarfareLabQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ShadowAssassinHoldingFire">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorShadowAssassinHoldFireBCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="ShadowAssassinNotHoldingFire">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountBehaviorShadowAssassinHoldFireBCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HavePsionicLockdown">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradePsionicLockdownCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HavePsionicSuppressionFieldSeekerMode">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradePsionicSuppressionFieldCompleteOnly"/>
+        <NodeArray index="Show" Link="CountBehaviorSeekerModeCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HavePsionicSuppressionFieldNotSeekerMode">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradePsionicSuppressionFieldCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountBehaviorSeekerModeCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HaveTacticalCruiseMissile">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUnitTacticalCruiseMissileUnitCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveVoidAssaulterPsionicLash">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeVoidAssaulterPsionicLashCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveZirconCruiseMissiles">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeZirconCruiseMissilesCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnHeraProtocol">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeHeraProtocolQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveHeraProtocol">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeHeraProtocolCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="LearnPersonalCloakingShadowAssassin">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountUpgradePersonalCloakingShadowAssassinQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPsionicLockdown">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradePsionicLockdownQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPsionicSuppressionField">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradePsionicSuppressionFieldQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnVoidAssaulterPsionicLash">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeVoidAssaulterPsionicLashQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnZirconCruiseMissiles">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeZirconCruiseMissilesQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="NotShowSeekerMode">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountBehaviorSeekerModeCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="PraetoriaRequirements">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUpgradePraetoriaHangarCompleteOnlyLTCountUnitPraetoriaQueuedOrBetterAtUnit2"/>
+    </CRequirement>
+    <CRequirement id="ShowSeekerMode">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountBehaviorSeekerModeCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="HavePersonalCloakingShadowAssassin">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradePersonalCloakingShadowAssassinCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="SwitchToRangerMissiles">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeAthenaJotunBoostersCompleteOnly2042770557"/>
+        <NodeArray index="Show" Link="CountBehaviorAthenaWeaponSwitchCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="SwitchToVympelMissiles">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeAthenaJotunBoostersCompleteOnly2042770557"/>
+        <NodeArray index="Show" Link="NotCountBehaviorAthenaWeaponSwitchCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="VoidAssaulterRequirements">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitSpecOpsCommandCompleteOnlyLTCountUnitVoidAssaulterQueuedOrBetter3LTCountUnitZeusQueuedOrBetter1LTCountUnitAquilaQueuedOrBetter1"/>
+    </CRequirement>
+    <CRequirement id="ZeusRequirements">
+        <EditorCategories value="Race:Terran,TechType:Unit"/>
+        <NodeArray index="Use" Link="AndCountUnitEngineeringFactoryCompleteOnlyLTCountUnitVoidAssaulterQueuedOrBetter1LTCountUnitZeusQueuedOrBetter1LTCountUnitAquilaQueuedOrBetter1"/>
+    </CRequirement>
+</Catalog>

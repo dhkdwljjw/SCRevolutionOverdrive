@@ -1,0 +1,3 @@
+﻿DocInfo/DescLong=SC: Evo Zerg Assets
+DocInfo/DescShort=Any
+DocInfo/Name=SCEvo_ZergAssets_Public

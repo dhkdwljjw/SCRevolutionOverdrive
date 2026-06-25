@@ -1,0 +1,2377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectSet id="AssaultMode@Finish">
+        <EffectArray value="SCBW_MissChance@AB"/>
+    </CEffectSet>
+    <CEffectSet id="FighterMode@Start">
+        <EffectArray value="SCBW_MissChance@ClearBuffs"/>
+    </CEffectSet>
+    <CEffectSet id="FeedbackSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="FungalGrowthSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="GravitonBeamPeriodicSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="NeuralParasitePersistentSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="OracleStasisTrapSearchSet">
+        <EffectArray index="1" value="ArbiterSCBWStasisField@HaltIssueOrder"/>
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="ParasiticBombInitialSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectEnumArea id="PsiStormSearch">
+        <AreaArray index="0" Effect="PsiStormSearchSet"/>
+    </CEffectEnumArea>
+    <CEffectSet id="PsiStormSearchSet">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="PsiStormApplyBehavior"/>
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="RevelationSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="ChannelSnipeDamageSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSwitch id="RavenScramblerMissileABswitch">
+        <CaseArray index="0" Validator="IsCarrierOrCarrierSCBW"/>
+    </CEffectSwitch>
+    <CEffectLaunchMissile id="RavenScramblerMissileLM">
+        <FinishEffect value="RavenScramblerMissileLMImpactSet"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="RavenScramblerMissileLMImpactSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="RavenScramblerMissileABswitch"/>
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="RavenShredderMissileSearchImpactSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="EMPSet">
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectSet id="BroodLordHangarCreate">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="BroodLordHangarHallucination"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="BroodLordHangarHallucination">
+        <ValidatorArray index="0" value="SCBW_CasterIsHallucinated"/>
+        <EditorCategories value="Race:Zerg"/>
+        <Behavior value="HighTemplarSCBWHallucination"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="BroodlingEscortLaunchB">
+        <EffectArray value="BroodLordHangarHallucination"/>
+    </CEffectSet>
+    <CEffectEnumArea id="MothershipStrategicRecallSearch">
+        <SearchFilters value="-;Self,Neutral,Enemy,Structure,Missile,Item,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectSet id="MothershipBeamFriendlyFireSet">
+        <EffectArray index="0" value="MothershipWeapon@BeamImpact"/>
+        <EffectArray index="1" value="MothershipWeapon@BeamSecondaryImpact"/>
+    </CEffectSet>
+    <CEffectSet id="MothershipBeamSet">
+        <EffectArray index="0" value="MothershipWeapon@BeamImpact"/>
+        <EffectArray index="1" value="MothershipWeapon@BeamSecondaryImpact"/>
+    </CEffectSet>
+    <CEffectDamage id="MothershipBeamDamage">
+        <ImpactUnitValidator value="MothershipWeapon@ImpactValidator"/>
+    </CEffectDamage>
+    <CEffectApplyBehavior id="MothershipWeapon@BeamSecondaryMissed">
+        <EditorCategories value="Race:Protoss"/>
+        <ValidatorArray index="0" value="SCBW_MissChance@CheckPrimary"/>
+        <Chance value="0.4687"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="MothershipWeapon@BeamImpact">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="MothershipWeapon@BeamMissed"/>
+        <EffectArray value="MothershipBeamPersistent"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="MothershipWeapon@BeamMissed">
+        <ValidatorArray index="0" value="SCBW_MissChance@CheckPrimary"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Chance value="0.4687"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="MothershipWeapon@BeamSecondaryImpact">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="MothershipWeapon@BeamSecondaryMissed"/>
+        <EffectArray value="MothershipSecondaryBeamPersistent"/>
+    </CEffectSet>
+    <CEffectSet id="VoidRayWeapon@Impact">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="VoidRaySwarmDamage"/>
+        <EffectArray value="SCBW_MissChance@Reset"/>
+    </CEffectSet>
+    <CEffectSet id="VoidRayWeaponPeriodicSet">
+        <EffectArray index="0" value="VoidRayWeapon@Impact"/>
+    </CEffectSet>
+    <CEffectSet id="SentryWeaponPeriodicSet">
+        <EffectArray index="0" value="SentryWeapon@Impact"/>
+    </CEffectSet>
+    <CEffectSet id="SentryWeapon@Impact">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="DisruptionBeamDamage"/>
+        <EffectArray value="SCBW_MissChance@Reset"/>
+    </CEffectSet>
+    <CEffectDamage id="DisruptionBeamDamage">
+        <ImpactUnitValidator value="SCBW_BeamWeaponImpactValidator"/>
+    </CEffectDamage>
+    <CEffectDamage id="VoidRaySwarmDamage">
+        <ImpactUnitValidator value="SCBW_BeamWeaponImpactValidator"/>
+    </CEffectDamage>
+    <CEffectDamage id="HellionWeapon@CPDummy">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Effect="HellionWeapon@EndLocation" Value="TargetPoint"/>
+        <AreaArray Arc="0"/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+        <SearchFlags index="SameCliff" value="0"/>
+        <SearchFilters value="-;Player,Ally,Neutral,Enemy"/>
+    </CEffectDamage>
+    <CEffectSet id="HellionWeapon@Impact">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="HellionWeapon@EndLocation"/>
+    </CEffectSet>
+    <CEffectSet id="HellionWeapon@CPSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="InfernalFlameThrower"/>
+        <EffectArray value="HellionWeapon@CPDummy"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="HellionWeapon@Offset">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="SourcePoint"/>
+        <InitialEffect value="HellionWeapon@Impact"/>
+        <InitialOffset value="0,-6.5,0"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="HellionWeapon@InitialSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="HellionWeapon@MissSwitch"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="HellionWeapon@Miss">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnitOrPoint"/>
+        <Flags index="RandomOffset" value="1"/>
+        <PeriodCount value="1"/>
+        <PeriodicEffectArray value="HellionWeapon@Offset"/>
+        <PeriodicOffsetArray value="-0.7,0,0"/>
+        <PeriodicOffsetArray value="0.7,0,0"/>
+        <PeriodicPeriodArray value="0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="HellionWeapon@EndLocation">
+        <EditorCategories value="Race:Terran"/>
+        <InitialEffect value="InfernalFlameThrowerCP"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="HellionWeapon@MissMedium" parent="HellionWeapon@Miss">
+        <Name value="Effect/Name/HellionWeapon@MissMedium"/>
+        <PeriodicOffsetArray index="0" value="-1.5,0,0"/>
+        <PeriodicOffsetArray index="1" value="1.5,0,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="HellionWeapon@MissLarge" parent="HellionWeapon@Miss">
+        <Name value="Effect/Name/HellionWeapon@MissLarge"/>
+        <PeriodicOffsetArray index="0" value="-1.9,0,0"/>
+        <PeriodicOffsetArray index="1" value="1.9,0,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="HellionWeapon@MissMassive" parent="HellionWeapon@Miss">
+        <Name value="Effect/Name/HellionWeapon@MissMassive"/>
+        <PeriodicOffsetArray index="0" value="-2.3,0,0"/>
+        <PeriodicOffsetArray index="1" value="2.3,0,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="HellionWeapon@MissNormal" parent="HellionWeapon@Miss">
+        <Name value="Effect/Name/HellionWeapon@MissNormal"/>
+        <PeriodicOffsetArray index="0" value="-1.1,0,0"/>
+        <PeriodicOffsetArray index="1" value="1.1,0,0"/>
+    </CEffectCreatePersistent>
+    <CEffectSwitch id="HellionWeapon@MissOffsetSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusMassive" Effect="HellionWeapon@MissMassive"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusLarge" Effect="HellionWeapon@MissLarge"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusMedium" Effect="HellionWeapon@MissMedium"/>
+        <CaseArray Validator="HellionWeapon@RadiusNormal" Effect="HellionWeapon@MissNormal"/>
+        <CaseDefault value="HellionWeapon@Miss"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectCreatePersistent id="InfernalFlameThrowerCP">
+        <OffsetVectorEndLocation Effect="HellionWeapon@EndLocation"/>
+        <InitialEffect value="HellionWeapon@CPSet"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumArea id="InfernalFlameThrowerE">
+        <IncludeArray Effect="HellionWeapon@InitialSet" Value="Target"/>
+    </CEffectEnumArea>
+    <CEffectSwitch id="HellionWeapon@MissSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="HellionWeapon@MissOffsetSwitch"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="HellionWeapon@MissOffsetSwitch"/>
+        <CaseDefault value="HellionWeapon@Offset"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectDamage id="CrucioShockCannonBlast">
+        <AreaArray index="1" Validator="SiegeTankSCBWSiegedWeapon@Splash"/>
+        <AreaArray index="2" Validator="SiegeTankSCBWSiegedWeapon@Splash"/>
+    </CEffectDamage>
+    <CEffectSet id="ColossusWeapon@InitialSet">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="ColossusWeapon@MissSwitch"/>
+    </CEffectSet>
+    <CEffectSwitch id="ColossusWeapon@MissSwitch">
+        <EditorCategories value="Race:Protoss"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="ColossusWeapon@MissOffsetSwitch"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="ColossusWeapon@MissOffsetSwitch"/>
+        <CaseDefault value="ThermalLances"/>
+    </CEffectSwitch>
+    <CEffectSwitch id="ColossusWeapon@MissOffsetSwitch">
+        <EditorCategories value="Race:Protoss"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusMassive" Effect="ColossusWeapon@MissMassive"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusLarge" Effect="ColossusWeapon@MissLarge"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusMedium" Effect="ColossusWeapon@MissMedium"/>
+        <CaseDefault value="ColossusWeapon@Miss"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectCreatePersistent id="ColossusWeapon@Miss">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Effect="ColossusWeapon@MissSwitch" Value="TargetUnitOrPoint"/>
+        <OffsetVectorStartLocation Effect="ColossusWeapon@MissSwitch" Value="TargetUnitOrPoint"/>
+        <OffsetVectorEndLocation Value="CasterUnitOrPoint"/>
+        <InitialOffset value="0,-1.1,0"/>
+        <FinalEffect value="ThermalLances"/>
+        <FinalOffset value="0,-1.1,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="ColossusWeapon@MissMedium" parent="ColossusWeapon@Miss">
+        <Name value="Effect/Name/ColossusWeapon@MissMedium"/>
+        <InitialOffset value="0,-1.4,0"/>
+        <FinalOffset value="0,-1.4,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="ColossusWeapon@MissLarge" parent="ColossusWeapon@Miss">
+        <Name value="Effect/Name/ColossusWeapon@MissLarge"/>
+        <InitialOffset value="0,-1.7,0"/>
+        <FinalOffset value="0,-1.7,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="ColossusWeapon@MissMassive" parent="ColossusWeapon@Miss">
+        <Name value="Effect/Name/ColossusWeapon@MissMassive"/>
+        <InitialOffset value="0,-2,0"/>
+        <FinalOffset value="0,-2,0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SiegeTankSiegedWeapon@DamageCliff" parent="CrucioShockCannonBlast">
+        <Name value="Effect/Name/SiegeTankSiegedWeapon@DamageCliff"/>
+        <SearchFlags index="SameCliff" value="0"/>
+    </CEffectDamage>
+    <CEffectSwitch id="SiegeTankSiegedWeapon@ImpactSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="Pathable" Effect="CrucioShockCannonBlast"/>
+        <CaseDefault value="SiegeTankSiegedWeapon@DamageCliff"/>
+    </CEffectSwitch>
+    <CEffectCreatePersistent id="HyperjumpInitialCP">
+        <ValidatorArray value="GhostSCBWLockdown@NotCaster"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="MothershipStrategicRecallWarpOutSet">
+        <ValidatorArray value="LarvaSCBW@Not"/>
+        <ValidatorArray value="EggSCBW@Not"/>
+        <ValidatorArray value="SCBW_NoMassTransport"/>
+        <ValidatorArray value="ArbiterSCBWRecall@SharedControl"/>
+    </CEffectSet>
+    <CEffectSet id="NexusMassRecallWarpOutSet">
+        <ValidatorArray value="LarvaSCBW@Not"/>
+        <ValidatorArray value="EggSCBW@Not"/>
+        <ValidatorArray value="SCBW_NoMassTransport"/>
+    </CEffectSet>
+    <CEffectCreateHealer id="ShieldBatteryRechargeEx5">
+        <ValidatorArray value="InterceptorSCBW@Not"/>
+    </CEffectCreateHealer>
+    <CEffectApplyBehavior id="InstantMorphUnburrowAB">
+        <ValidatorArray value="SiegeTankSCBW@NotAlias"/>
+    </CEffectApplyBehavior>
+    <CEffectTeleport id="MothershipStrategicRecallTeleport">
+        <TeleportEffect value="SCBW_CategoryRemoveTeleportRemove"/>
+    </CEffectTeleport>
+    <CEffectTeleport id="NexusMassRecallTeleport">
+        <TeleportEffect value="SCBW_CategoryRemoveTeleportRemove"/>
+    </CEffectTeleport>
+    <CEffectCreatePersistent id="WorkerChannelStopIdle">
+        <PeriodicValidator value="WorkerChannelStopIdlePeriodicValidator"/>
+    </CEffectCreatePersistent>
+    <CEffectIssueOrder id="CommandStructureOrderAutoRally">
+        <ValidatorArray value="CasterNotHatcherySCBW"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="CommandStructureOrderAutoRally2">
+        <Abil value=""/>
+        <AbilTechAlias value="_HatchRally"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="WorkerIssueGatherOrderGeneric">
+        <ValidatorArray value="NotUnderConstruction"/>
+        <WhichUnit Value="Caster"/>
+        <AbilTechAlias value="_Gather"/>
+        <CmdFlags index="Preempt" value="1"/>
+        <CmdFlags index="AutoQueued" value="1"/>
+        <Target Value="TargetUnit"/>
+    </CEffectIssueOrder>
+    <CEffectIssueOrder id="WorkerRemoveGatherOrderGeneric">
+        <AbilTechAlias value="_Gather"/>
+        <AbilCmdIndex value="2"/>
+        <CmdFlags index="Preempt" value="1"/>
+        <CmdFlags index="AutoQueued" value="1"/>
+    </CEffectIssueOrder>
+    <CEffectSet id="WorkerRemoveGatherOrderSet">
+        <EffectArray value="WorkerRemoveGatherOrderGeneric"/>
+    </CEffectSet>
+    <CEffectSet id="WidowMineAttack">
+        <ValidatorArray value="LarvaSCBW@Not"/>
+    </CEffectSet>
+    <CEffectSet id="PunisherGrenadesSet">
+        <ValidatorArray value="SCBW_MissChance@WeaponNotMissed"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="MarauderWeapon@MissLM" parent="PunisherGrenadesLM">
+        <Name value="Effect/Name/MarauderWeapon@MissLM"/>
+        <ImpactLocation Value="TargetPoint"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="MarauderWeapon@MissCheck">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="MarauderWeapon@MissSwitch"/>
+        <EffectArray value="SCBW_MissChance@Reset"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="MarauderWeapon@Miss">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <OffsetVectorStartLocation Value="TargetUnit"/>
+        <OffsetVectorEndLocation Value="CasterUnitOrPoint"/>
+        <InitialOffset value="0,-1.1,0"/>
+        <FinalEffect value="MarauderWeapon@MissLM"/>
+        <FinalOffset value="0,-1.1,0"/>
+    </CEffectCreatePersistent>
+    <CEffectSwitch id="MarauderWeapon@MissSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="MarauderWeapon@Miss"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="MarauderWeapon@Miss"/>
+        <CaseDefault value="PunisherGrenadesLM"/>
+    </CEffectSwitch>
+    <CEffectCreateUnit id="LurkerMPCU">
+        <SpawnUnit index="0" value="SCBW_InvulnerableDummy"/>
+    </CEffectCreateUnit>
+    <CEffectDamage id="PsionicShockwaveDamage">
+        <ImpactUnitValidator value="NotUnderDarkSwarmCombine"/>
+        <AreaArray index="0" Validator="ArchonSCBWWeapon@SplashInner"/>
+        <AreaArray index="1" Validator="ArchonSCBWWeapon@Splash"/>
+        <AreaArray index="2" Validator="ArchonSCBWWeapon@Splash"/>
+        <SearchFilters value="-;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectSet id="SiegeTankSiegedWeapon@InitialSet">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="SiegeTankSiegedWeapon@MissChance"/>
+        <EffectArray value="SiegeTankSiegedWeapon@MissSwitch"/>
+    </CEffectSet>
+    <CEffectUserData id="SiegeTankSiegedWeapon@MissChance" parent="MissChanceBase">
+        <EditorCategories value="Race:Terran"/>
+    </CEffectUserData>
+    <CEffectSwitch id="SiegeTankSiegedWeapon@MissSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="SiegeTankSiegedWeapon@MissOffsetSwitch"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="SiegeTankSiegedWeapon@MissOffsetSwitch"/>
+        <CaseDefault value="CrucioShockCannonSwitch"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectCreatePersistent id="SiegeTankSiegedWeapon@Miss">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Effect="SiegeTankSiegedWeapon@InitialSet" Value="TargetUnitOrPoint"/>
+        <OffsetVectorStartLocation Effect="SiegeTankSiegedWeapon@InitialSet" Value="TargetUnitOrPoint"/>
+        <OffsetVectorEndLocation Value="CasterUnitOrPoint"/>
+        <InitialEffect value="SiegeTankSiegedWeapon@MissDummy"/>
+        <InitialOffset value="0,-1.1,0"/>
+        <FinalEffect value="SiegeTankSiegedWeapon@ImpactSwitch"/>
+        <FinalOffset value="0,-1.1,0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="SiegeTankSiegedWeapon@MissDummy">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AreaArray/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectCreatePersistent id="SiegeTankSiegedWeapon@MissMassive" parent="SiegeTankSiegedWeapon@Miss">
+        <Name value="Effect/Name/SiegeTankSiegedWeapon@MissMassive"/>
+        <InitialOffset value="0,-1.85,0"/>
+        <FinalOffset value="0,-1.85,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="SiegeTankSiegedWeapon@MissLarge" parent="SiegeTankSiegedWeapon@Miss">
+        <Name value="Effect/Name/SiegeTankSiegedWeapon@MissLarge"/>
+        <InitialOffset value="0,-1.7,0"/>
+        <FinalOffset value="0,-1.7,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="SiegeTankSiegedWeapon@MissMedium" parent="SiegeTankSiegedWeapon@Miss">
+        <Name value="Effect/Name/SiegeTankSiegedWeapon@MissMedium"/>
+        <InitialOffset value="0,-1.4,0"/>
+        <FinalOffset value="0,-1.4,0"/>
+    </CEffectCreatePersistent>
+    <CEffectSwitch id="SiegeTankSiegedWeapon@MissOffsetSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusMassive" Effect="SiegeTankSiegedWeapon@MissMassive"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusLarge" Effect="SiegeTankSiegedWeapon@MissLarge"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusMedium" Effect="SiegeTankSiegedWeapon@MissMedium"/>
+        <CaseDefault value="SiegeTankSiegedWeapon@Miss"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectSet id="GlaiveWurm@InitialSet">
+        <EditorCategories value="Race:Zerg"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="GlaiveWurm@MissSwitch"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="GlaiveWurm@LMMiss" parent="GlaiveWurm">
+        <Name value="Effect/Name/GlaiveWurm@LMMiss"/>
+        <Marker Link="Effect/GlaiveWurm@LMMiss"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="GlaiveWurm@MissDummy"/>
+    </CEffectLaunchMissile>
+    <CEffectSwitch id="GlaiveWurm@MissSwitch">
+        <EditorCategories value="Race:Zerg"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="GlaiveWurm@Miss"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="GlaiveWurm@Miss"/>
+        <CaseDefault value="GlaiveWurm"/>
+    </CEffectSwitch>
+    <CEffectCreatePersistent id="GlaiveWurm@Miss">
+        <EditorCategories value="Race:Zerg"/>
+        <WhichLocation Effect="GlaiveWurm@InitialSet" Value="TargetUnit"/>
+        <OffsetVectorStartLocation Effect="GlaiveWurm@InitialSet" Value="TargetUnit"/>
+        <OffsetVectorEndLocation Value="CasterUnitOrPoint"/>
+        <InitialOffset value="0,-1,0"/>
+        <FinalEffect value="GlaiveWurm@LMMiss"/>
+        <FinalOffset value="0,-1,0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="GlaiveWurm@MissDummy">
+        <EditorCategories value="Race:Zerg"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AreaArray/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectRemoveBehavior id="AdeptPhaseShiftRemoveDisablesSCBW">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichUnit Effect="AdeptPhaseShiftTimerSpawnAB" Value="Caster"/>
+        <BehaviorCategories index="Slow" value="1"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <BehaviorCategories index="Magic" value="1"/>
+        <BehaviorCategories index="User3" value="1"/>
+        <BehaviorCategories index="User7" value="1"/>
+        <MatchesAll value="0"/>
+    </CEffectRemoveBehavior>
+    <CEffectSet id="AdeptPhaseShiftTeleportSet">
+        <EffectArray index="1" value="AdeptPhaseShiftRemoveDisablesSCBW"/>
+        <EffectArray index="2" value="AdeptPhaseShiftSelect"/>
+        <EffectArray index="3" value="AdeptPhaseShiftKillDummy"/>
+        <EffectArray index="4" value="AdeptPhaseShiftTeleport"/>
+        <EffectArray value="AdeptPhaseUnitOrderQueue"/>
+    </CEffectSet>
+    <!--CEffectSet id="CycloneWeaponLaunchMissileLeftSetNew">
+        <EffectArray index="0" value="CycloneWeapon@MissCheckLeft"/>
+    </CEffectSet>
+    <CEffectSet id="CycloneWeaponLaunchMissileRightSetNew">
+        <EffectArray index="0" value="CycloneWeapon@MissCheckRight"/>
+    </CEffectSet-->
+    <CEffectApplyBehavior id="OracleStasisTrapActivateAB">
+        <ValidatorArray value="LarvaSCBW@Not"/>
+        <ValidatorArray value="EggSCBW@Not"/>
+        <ValidatorArray value="LurkerSCBWEgg@Not"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="YoinkImpactSpiderMine">
+        <ValidatorArray index="0" value="SpiderMineSCBW@IsAlias"/>
+        <ValidatorArray value="EnemyTarget"/>
+        <KillHallucination value="1"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="RavenScramblerMissileCarrierRecallSet">
+        <EffectArray value="SCBW_CarrierRecall"/>
+        <SetSource value="1"/>
+    </CEffectSet>
+    <CEffectDamage id="TwinIbiksCannon">
+        <ImpactUnitValidator value="NotUnderDarkSwarmCombine"/>
+        <AreaArray index="0" Validator="ArchonSCBWWeapon@SplashInner"/>
+        <AreaArray index="1" Validator="ArchonSCBWWeapon@Splash"/>
+        <AreaArray index="2" Validator="ArchonSCBWWeapon@Splash"/>
+        <SearchFilters value="Ground;Self,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectCreateUnit id="YoinkStartCreatePlaceholder">
+        <ValidatorArray value="LarvaSCBW@Not"/>
+    </CEffectCreateUnit>
+    <CEffectSet id="InstantUnburrow">
+        <EffectArray value="InstantUnburrowMore"/>
+    </CEffectSet>
+    <CEffectSet id="InstantUnburrowMore" parent="DisguiseSetDefault">
+        <EditorCategories value="Race:Neutral"/>
+        <EffectArray index="0" value="LurkerSCBW@BurrowCancel"/>
+        <EffectArray index="1" value="LurkerSCBW@Unburrow"/>
+        <EffectArray value="ZergSCBW@BurrowCancel"/>
+        <EffectArray value="ZergSCBW@Unburrow"/>
+        <EffectArray value="SpiderMineSCBW@BurrowCancel"/>
+        <EffectArray value="SpiderMineSCBW@Unburrow"/>
+    </CEffectSet>
+    <CEffectSet id="GravitonBeamUnburrowTake2Set">
+        <EffectArray value="InstantUnburrowMore"/>
+    </CEffectSet>
+    <CEffectLaunchMissile id="ParasiticBombLM">
+        <ValidatorArray value="IsNotInterceptor"/>
+        <ValidatorArray value="InterceptorSCBW@Not"/>
+    </CEffectLaunchMissile>
+    <CEffectTeleport id="DarkTemplarBlink">
+        <TeleportEffect value="BlinkBehaviors"/>
+    </CEffectTeleport>
+    <CEffectSet id="BlinkBehaviors">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="SCBW_CategoryRemoveTeleportRemoveCaster"/>
+        <EffectArray value="DarkTemplarBlinkAB"/>
+    </CEffectSet>
+    <CEffectSet id="YoinkSet">
+        <EffectArray value="SCBW_CategoryRemoveTeleportRemove"/>
+        <EffectArray value="YoinkImpactSpiderMine"/>
+        <EffectArray value="HighTemplarSCBWHallucination@KillHallucination"/>
+    </CEffectSet>
+    <CEffectTeleport id="AdeptPhaseShiftTeleport">
+        <TeleportEffect value="SCBW_CategoryRemoveTeleportRemoveCaster"/>
+    </CEffectTeleport>
+    <CEffectTeleport id="Blink">
+        <TeleportEffect value="SCBW_CategoryRemoveTeleportRemoveCaster"/>
+    </CEffectTeleport>
+    <CEffectDamage id="BroodlingEscortDamageUnit">
+        <ImpactUnitValidator value="SCBW_MissChance@WeaponNotMissedTarget"/>
+    </CEffectDamage>
+    <CEffectUserData id="BroodlordEscort@MissChance" parent="MissChanceBase">
+        <ValidatorArray index="0" value="BroodlordEscort@MissCheck"/>
+    </CEffectUserData>
+    <CEffectSet id="BroodlordEscort@MissCheck">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="BroodlordEscort@MissChance"/>
+        <EffectArray value="BroodlingEscort"/>
+    </CEffectSet>
+    <CEffectSet id="ArchonWeapon@InitialSet">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="ArchonWeapon@MissSwitch"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="ArchonWeapon@Miss">
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Effect="ArchonWeapon@InitialSet"/>
+        <OffsetVectorStartLocation Effect="ArchonWeapon@InitialSet" Value="TargetPoint"/>
+        <OffsetVectorEndLocation Value="CasterUnitOrPoint"/>
+        <InitialEffect value="ArchonWeapon@MissDummy"/>
+        <InitialOffset value="0,-1.2,0"/>
+        <FinalEffect value="PsionicShockwaveDamage"/>
+        <FinalOffset value="0,-1.2,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="ArchonWeapon@MissMedium" parent="ArchonWeapon@Miss">
+        <Name value="Effect/Name/ArchonWeapon@MissMedium"/>
+        <InitialOffset value="0,-1.5,0"/>
+        <FinalOffset value="0,-1.5,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="ArchonWeapon@MissLarge" parent="ArchonWeapon@Miss">
+        <Name value="Effect/Name/ArchonWeapon@MissLarge"/>
+        <InitialOffset value="0,-1.7,0"/>
+        <FinalOffset value="0,-1.7,0"/>
+    </CEffectCreatePersistent>
+    <CEffectSwitch id="ArchonWeapon@MissOffsetSwitch">
+        <EditorCategories value="Race:Protoss"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusLarge" Effect="ArchonWeapon@MissLarge"/>
+        <CaseArray Validator="SiegeTankSCBWSiegedWeapon@RadiusMedium" Effect="ArchonWeapon@MissMedium"/>
+        <CaseDefault value="ArchonWeapon@Miss"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectDamage id="ArchonWeapon@MissDummy">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AreaArray/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectSwitch id="ArchonWeapon@MissSwitch">
+        <EditorCategories value="Race:Protoss"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="ArchonWeapon@MissOffsetSwitch"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="ArchonWeapon@MissOffsetSwitch"/>
+        <CaseDefault value="PsionicShockwaveDamage"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectSet id="CycloneWeapon@MissCheckLeft">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="CycloneWeapon@MissSwitchLeft"/>
+        <EffectArray value="SCBW_MissChance@Reset"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="CycloneWeapon@MissLeft">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <OffsetVectorStartLocation Value="TargetUnit"/>
+        <OffsetVectorEndLocation Value="CasterUnitOrPoint"/>
+        <InitialEffect value="CycloneWeapon@MissDummy"/>
+        <InitialOffset value="0,-1.1,0"/>
+        <FinalEffect value="CycloneWeaponLaunchMissileLeftPoint"/>
+        <FinalOffset value="0,-1.1,0"/>
+    </CEffectCreatePersistent>
+    <CEffectSwitch id="CycloneWeapon@MissSwitchLeft">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="CycloneWeapon@MissLeft"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="CycloneWeapon@MissLeft"/>
+        <CaseDefault value="CycloneWeaponLaunchMissileLeft"/>
+    </CEffectSwitch>
+    <CEffectSet id="CycloneWeapon@MissCheckRight">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="CycloneWeapon@MissSwitchRight"/>
+        <EffectArray value="SCBW_MissChance@Reset"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="CycloneWeapon@MissRight">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Value="TargetUnit"/>
+        <OffsetVectorStartLocation Value="TargetUnit"/>
+        <OffsetVectorEndLocation Value="CasterUnitOrPoint"/>
+        <InitialEffect value="CycloneWeapon@MissDummy"/>
+        <InitialOffset value="0,-1.1,0"/>
+        <FinalEffect value="CycloneWeaponLaunchMissileRightPoint"/>
+        <FinalOffset value="0,-1.1,0"/>
+    </CEffectCreatePersistent>
+    <CEffectSwitch id="CycloneWeapon@MissSwitchRight">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="CycloneWeapon@MissRight"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="CycloneWeapon@MissRight"/>
+        <CaseDefault value="CycloneWeaponLaunchMissileRight"/>
+    </CEffectSwitch>
+    <CEffectDamage id="CycloneWeapon@MissDummy">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AreaArray/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectSet id="PlanetaryFortressWeapon@MissCheck">
+        <EditorCategories value="Race:Terran"/>
+        <EffectArray value="SCBW_MissChance@Check"/>
+        <EffectArray value="PlanetaryFortressWeapon@MissSwitch"/>
+    </CEffectSet>
+    <CEffectCreatePersistent id="PlanetaryFortressWeapon@Miss">
+        <EditorCategories value="Race:Terran"/>
+        <WhichLocation Effect="PlanetaryFortressWeapon@MissCheck"/>
+        <OffsetVectorStartLocation Effect="PlanetaryFortressWeapon@MissCheck" Value="TargetPoint"/>
+        <OffsetVectorEndLocation Value="CasterUnitOrPoint"/>
+        <InitialEffect value="PlanetaryFortressWeapon@MissDummy"/>
+        <InitialOffset value="0,-1.25,0"/>
+        <FinalEffect value="TwinIbiksCannon"/>
+        <FinalOffset value="0,-1.25,0"/>
+    </CEffectCreatePersistent>
+    <CEffectCreatePersistent id="PlanetaryFortressWeapon@MissAlt" parent="PlanetaryFortressWeapon@Miss">
+        <Name value="Effect/Name/PlanetaryFortressWeapon@MissAlt"/>
+        <InitialOffset value="0,1.25,0"/>
+        <FinalOffset value="0,1.25,0"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="PlanetaryFortressWeapon@MissDummy">
+        <EditorCategories value="Race:Terran"/>
+        <ImpactLocation Value="TargetPoint"/>
+        <AreaArray/>
+        <SearchFlags index="OffsetAreaByAngle" value="1"/>
+    </CEffectDamage>
+    <CEffectSwitch id="PlanetaryFortressWeapon@MissSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseArray Validator="SCBW_MissChance@CheckDarkSwarm" Effect="PlanetaryFortressWeapon@MissDirectionSwitch"/>
+        <CaseArray Validator="SCBW_MissChance@WeaponMissed" Effect="PlanetaryFortressWeapon@MissDirectionSwitch"/>
+        <CaseDefault value="TwinIbiksCannon"/>
+        <TargetLocationType value="UnitOrPoint"/>
+    </CEffectSwitch>
+    <CEffectSwitch id="PlanetaryFortressWeapon@MissDirectionSwitch">
+        <EditorCategories value="Race:Terran"/>
+        <CaseDefault value="PlanetaryFortressWeapon@Miss"/>
+        <CaseArray Validator="SCBW_DistanceLessThanDot5" Effect="PlanetaryFortressWeapon@MissAlt"/>
+    </CEffectSwitch>
+    <CEffectSet id="WorkerIssueGatherOrderSet">
+        <EffectArray index="3" value="WorkerIssueGatherOrderGeneric"/>
+        <EffectArray value="WorkerVespeneWalkRemoveBehavior"/>
+    </CEffectSet>
+    <CEffectCreateUnit id="ReaperKD8Knockback">
+        <ValidatorArray value="IsNotRecallingNexus"/>
+        <ValidatorArray value="IsStrategicWarpOut"/>
+    </CEffectCreateUnit>
+    <CAbilMorph id="FactoryLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Collide">
+                <EffectArray index="Start" value="TerranBuildingSCBW@LiftOffStart"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="FighterMode">
+        <InfoArray index="0">
+            <SectionArray index="Mover">
+                <EffectArray index="Start" value="FighterMode@Start"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorphPlacement id="BarracksLand">
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="TerranBuildingSCBW@LandFinish"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="BarracksLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Collide">
+                <EffectArray index="Start" value="TerranBuildingSCBW@LiftOffStart"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorphPlacement id="CommandCenterLand">
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="CommandCenterLand@Finish"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="CommandCenterLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Collide">
+                <EffectArray index="Start" value="TerranBuildingSCBW@LiftOffStart"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorphPlacement id="FactoryLand">
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="TerranBuildingSCBW@LandFinish"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="OrbitalLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Collide">
+                <EffectArray index="Start" value="TerranBuildingSCBW@LiftOffStart"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorphPlacement id="StarportLand">
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="TerranBuildingSCBW@LandFinish"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph id="StarportLiftOff">
+        <InfoArray index="0">
+            <SectionArray index="Collide">
+                <EffectArray index="Start" value="TerranBuildingSCBW@LiftOffStart"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilMorph id="AssaultMode">
+        <InfoArray index="0">
+            <SectionArray index="Stats">
+                <EffectArray index="Finish" value="AssaultMode@Finish"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="PsiStorm">
+        <AbilSetId value="Storm"/>
+        <CmdButtonArray index="Execute">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilMerge id="ArchonWarp">
+        <Effect value="SCBW_MergeBegin"/>
+    </CAbilMerge>
+    <CAbilBuild id="ZergBuild">
+        <EffectArray index="Start" value="DroneSCBW@TrainStart"/>
+    </CAbilBuild>
+    <CAbilRally id="RallyHatchery">
+        <TechAliasArray value="_HatchRally"/>
+    </CAbilRally>
+    <CAbilArmMagazine id="ArmSiloWithNuke">
+        <CalldownEffect value="GhostSCBWNuclearStrike@CalldownDummy"/>
+    </CAbilArmMagazine>
+    <CAbilTransport id="BunkerTransport">
+        <LoadValidatorArray index="0" value="RequiresTerranSCBWORTerran"/>
+    </CAbilTransport>
+    <CAbilEffectTarget id="Feedback">
+        <TargetFilters index="0" value="CanHaveEnergy,Visible,HasEnergy;Self,Player,Ally,Neutral,Structure,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="LarvaTrain">
+        <InfoArray index="Train1" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train2" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train3" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train4" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train5" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train7" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train10" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train11" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train12" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train13" Effect="LarvaSCBW@TrainFinish"/>
+        <InfoArray index="Train15" Effect="LarvaSCBW@TrainFinish"/>
+        <RefundFraction>
+            <Resource index="Terrazine" value="0"/>
+            <Resource index="Custom" value="0"/>
+        </RefundFraction>
+    </CAbilTrain>
+    <CAbilMorph id="MorphToBroodLord">
+        <RefundFraction>
+            <Resource index="Terrazine" value="0"/>
+            <Resource index="Custom" value="0"/>
+        </RefundFraction>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToLurker">
+        <RefundFraction>
+            <Resource index="Terrazine" value="0"/>
+            <Resource index="Custom" value="0"/>
+        </RefundFraction>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToRavager">
+        <RefundFraction>
+            <Resource index="Terrazine" value="0"/>
+            <Resource index="Custom" value="0"/>
+        </RefundFraction>
+    </CAbilMorph>
+    <CAbilEffectTarget id="LockOn">
+        <AutoCastValidatorArray value="LarvaSCBW@Not"/>
+        <AutoCastValidatorArray value="EggSCBW@Not"/>
+        <AutoCastValidatorArray value="InterceptorSCBW@Not"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="TacNukeStrike">
+        <Effect index="0" value="GhostSCBWNuclearStrike@CalldownDummy"/>
+        <CalldownEffect value="GhostSCBWNuclearStrike@CalldownDummy"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="Unsiege">
+        <CmdButtonArray index="Execute">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilMorph>
+    <CAbilEffectTarget id="WidowMineAttack">
+        <TechAliasArray value="_Disruptable"/>
+        <AutoCastValidatorArray value="EggSCBW@Not"/>
+    </CAbilEffectTarget>
+    <CValidatorCombine id="TimeWarpViableTargets">
+        <CombineArray index="0" value="CanTrain"/>
+        <CombineArray index="1" value="CanWarpTrain"/>
+        <CombineArray value="CanResearch"/>
+        <CombineArray value="CanArmMagazine"/>
+    </CValidatorCombine>
+    <CValidatorUnitAbil id="CanArmMagazine">
+        <Find value="1"/>
+        <AbilClass value="CAbilArmMagazine"/>
+    </CValidatorUnitAbil>
+    <CValidatorCombine id="ContaminateTargetFilters">
+        <CombineArray value="CanArmMagazine"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="MothershipWeapon@BeamMissed">
+        <Compare value="GT"/>
+        <Behavior value="MothershipWeapon@BeamMissed"/>
+        <RequireCasterUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MothershipWeapon@BeamSecondaryMissed">
+        <Compare value="GT"/>
+        <Behavior value="MothershipWeapon@BeamSecondaryMissed"/>
+        <RequireCasterUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="MothershipWeapon@BeamMissedNot">
+        <CombineArray value="MothershipWeapon@BeamMissed"/>
+        <CombineArray value="MothershipWeapon@BeamSecondaryMissed"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="MothershipWeapon@ImpactValidator">
+        <Type value="And"/>
+        <CombineArray value="NotUnderDarkSwarmCombine"/>
+        <CombineArray value="MothershipWeapon@BeamMissedNot"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareField id="HellionWeapon@RadiusNormal">
+        <Compare value="GE"/>
+        <Field value="Radius"/>
+        <Value value="0.5"/>
+    </CValidatorUnitCompareField>
+    <CValidatorCombine id="IsNotEggUnit">
+        <CombineArray value="IsNotTransportOverlordCocoon"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareOrderCount id="WorkerChannelNoQueuedOrders">
+        <Value value="1"/>
+    </CValidatorUnitCompareOrderCount>
+    <CValidatorCombine id="ActivateStasisWardValidators">
+        <CombineArray value="LarvaSCBW@Not"/>
+        <CombineArray value="EggSCBW@Not"/>
+        <CombineArray value="LurkerSCBWEgg@Not"/>
+        <CombineArray value="SCBW_NoMassTransport"/>
+        <CombineArray value="ScarabSCBW@Not"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="IsNotRecallingCombine">
+        <CombineArray value="SCBW_NoMassTransport"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="BroodlordEscort@MissCheck">
+        <Type value="And"/>
+        <CombineArray value="SCBW_MissChance"/>
+        <CombineArray value="SCBW_MissChance@Shrub"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="SCBW_CasterDoesNotHaveScramblerMissileBehaviorCarrier">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="RavenScramblerMissileCarrier"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="IsCarrierOrCarrierSCBW" unitName="Carrier">
+        <CombineArray value="IsCarrier"/>
+        <CombineArray value="CarrierSCBW@Is"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="IsNotHallucination">
+        <Behavior value=""/>
+        <Categories index="Temporary" value="1"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitOrderQueue id="SCBW_WorkerConstructing_RefinerySCBW" parent="WorkerConstructingThisRefinery">
+        <AbilLink value="SCVSCBW@Build"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorCombine id="WorkerCasterGatheringThisCombine">
+        <CombineArray value="SCBW_WorkerConstructing_RefinerySCBW"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="WorkerChannelStopIdlePeriodicValidator">
+        <Type value="And"/>
+        <CombineArray value="IsUnderConstruction"/>
+        <CombineArray value="WorkerChannelNoQueuedOrders"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="YoinkCancelOrder">
+        <CombineArray value="SiegeTankSCBW@NotAlias"/>
+    </CValidatorCombine>
+    <CRequirement id="WarpPrismPowerSourceFastRequirement">
+        <NodeArray index="Use" Link="WarpPrismPowerSourceFastRequirement"/>
+    </CRequirement>
+    <CButton id="CaduceusReactor">
+        <HotkeyAlias value=""/>
+    </CButton>
+    <CRequirementNot id="WarpPrismPowerSourceFastRequirement">
+        <OperandArray index="0" value="SCBW_HaveAbilityDisablerBehavior"/>
+    </CRequirementNot>
+    <CActorSound id="ActorSound_ParasiticBombLaunch">
+        <Flags index="SuppressSaveLoad" value="1"/>
+        <InheritType value="OneShot"/>
+        <On Terms="SoundDone; SoundIsFinalSound" Send="Destroy"/>
+    </CActorSound>
+    <CActorAction id="MothershipAttack">
+        <ImpactSite value="MothershipAttackImpactSite"/>
+        <DamageSite value="MothershipAttackDamageSite"/>
+    </CActorAction>
+    <CActorAction id="MothershipSecondaryAttack">
+        <ImpactSite value="MothershipSecondaryAttackImpactSite"/>
+        <DamageSite value="MothershipSecondaryAttackDamageSite"/>
+        <LaunchSite value="MothershipAttackLaunchSite"/>
+    </CActorAction>
+    <CActorSite id="MothershipAttackDamageSite" parent="GenericAttackDamageSite">
+        <On Terms="ActorCreation; ValidateUnit UnderDarkSwarmCombine" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+        <On Terms="ActorCreation; ValidateCreationEffect MothershipWeapon@BeamMissed" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+    </CActorSite>
+    <CActorSite id="MothershipSecondaryAttackDamageSite" parent="MothershipAttackDamageSite">
+        <On index="1" Terms="ActorCreation; ValidateCreationEffect MothershipWeapon@BeamSecondaryMissed" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+    </CActorSite>
+    <CActorSite id="MothershipAttackImpactSite" parent="GenericAttackImpactSite">
+        <On Terms="ActorCreation; ValidateUnit UnderDarkSwarmCombine" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+        <On Terms="ActorCreation; ValidateCreationEffect MothershipWeapon@BeamMissed" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+        <On Terms="ActorCreation" Send="TimerSet 2.000000 Destroy"/>
+        <On Terms="TimerExpired; TimerName Destroy" Send="Destroy"/>
+    </CActorSite>
+    <CActorSite id="MothershipSecondaryAttackImpactSite" parent="MothershipAttackImpactSite">
+        <On index="1" Terms="ActorCreation; ValidateCreationEffect MothershipWeapon@BeamSecondaryMissed" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+    </CActorSite>
+    <CActorSite id="MothershipAttackLaunchSite" parent="GenericAttackLaunchSite">
+        <On Terms="ActorCreation" Send="TimerSet 2.000000 Destroy"/>
+        <On Terms="TimerExpired; TimerName Destroy" Send="Destroy"/>
+    </CActorSite>
+    <CActorAction id="SentryAttack">
+        <DamageSite value="SentryAttackDamageSite"/>
+    </CActorAction>
+    <CActorSite id="SentryAttackDamageSite" parent="GenericAttackDamageSite">
+        <On Terms="ActorCreation; ValidateUnit UnderDarkSwarmCombine" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+        <On Terms="ActorCreation; ValidateCreationEffect SCBW_MissChance@WeaponMissed" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+    </CActorSite>
+    <CActorAction id="VoidRaySwarmAttack">
+        <DamageSite value="VoidRaySwarmAttackDamageSite"/>
+    </CActorAction>
+    <CActorSite id="VoidRaySwarmAttackDamageSite" parent="GenericAttackDamageSite">
+        <On Terms="ActorCreation; ValidateUnit UnderDarkSwarmCombine" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+        <On Terms="ActorCreation; ValidateCreationEffect SCBW_MissChance@WeaponMissed" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetDirect SOpForwardLaunchGuide SOpShadow SOpMoveUpByDot1} 1 1"/>
+    </CActorSite>
+    <CActorBeamSimple id="HellionAttackBeam">
+        <Remove Terms="Effect.InfernalFlameThrowerE.Start; EffectExecuteIndex 24" Send="RefSet ::HostImpact HellionAttackBeamImpactSite"/>
+        <On Terms="Effect.HellionWeapon@CPDummy.Start" Send="RefSet ::HostImpact HellionAttackBeamImpactSite"/>
+    </CActorBeamSimple>
+    <!-- Attack                                                                                  -->
+    <CActorSite id="HellionAttackBeamImpactSite">
+        <Remove Terms="Effect.InfernalFlameThrowerE.Start; EffectExecuteIndex 24; At Caster" Send="Create"/>
+        <On Terms="Effect.HellionWeapon@CPDummy.Start; At Caster" Send="Create"/>
+    </CActorSite>
+    <CActorModel id="SiegeTankedSiegedAttackImpactFix">
+        <On Terms="Effect.SiegeTankSiegedWeapon@DamageCliff.Start; At Effect" Send="Create"/>
+    </CActorModel>
+    <CActorAction id="SiegeTankSiegedAttack">
+        <On Terms="Effect.SiegeTankSiegedWeapon@DamageCliff.Stop; FromEffectTreeDescendant" Send="ActionImpactPhysics"/>
+        <On Terms="Effect.SiegeTankSiegedWeapon@DamageCliff.Start; At Caster" Send="Create"/>
+    </CActorAction>
+    <CActorDoodad id="AgriaCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="AiurCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="BelShirCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharCurtain45">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharCurtain4590C">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharCurtain45C">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharCurtain45E">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharCurtain90">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharCurtain9045C">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharCurtain90C">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharCurtain90E">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="CharDunesCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="DesertWorldCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="Elsecaro_Curtain1x1">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="Elsecaro_Curtain2x2">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="Elsecaro_Curtain4x4">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="HavenCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="HybridLabCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="IceWorldCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="InvisibleCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="KorhalCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="KorhalOutskirtsCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="MarSaraCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="MeinhoffCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="MonlythCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="NewFolsomCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="ProtossCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="RedstoneCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="ShakurasCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorForceSphere id="SiegeTankSiegedWeapon@MissAttackUpForce" parent="SiegeTankSiegedUpForce">
+        <Host Subject=""/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOp2DRotation SOp180 SOpRotVariancerUp35 SOpPointDown1ByDot25 SOpRotationRandomPitch30"/>
+        <Magnitude value="27.000000,10.000000"/>
+        <Radius value="2.500000,0.200000"/>
+    </CActorForceSphere>
+    <CActorForceSphere id="SiegeTankSiegedWeapon@MissAttackForce" parent="SiegeTankSiegedForce">
+        <On index="0" Terms="ActorCreation" Send="Create SiegeTankSiegedWeapon@MissAttackUpForce"/>
+        <HostSiteOps Ops="SOpTargetPointStationary SOpMoveUpBy1 SOpRandomPointInSphereDot15"/>
+        <Magnitude value="40.000000,10.000000"/>
+        <Radius value="2.500000,0.200000"/>
+    </CActorForceSphere>
+    <CActorModel id="SiegeTankSiegedWeapon@MissImpact" parent="GenericAttackModelPoint">
+        <On Terms="Effect.SiegeTankSiegedWeapon@MissDummy.Start; At Effect" Send="Create"/>
+        <On Terms="ActorCreation" Send="Create SiegeTankSiegedWeapon@MissAttackForce"/>
+        <Model value="SiegeTankSiegedAttackImpact"/>
+    </CActorModel>
+    <CActorDoodad id="SpacePlatformCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorSite id="SpineCrawlerAttackImpactSite">
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit NotInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetMissile SOpForwardLaunchGuide SOpShadow} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed; ValidateUnit IsInAir" Send="HostSiteOpsSet ::Host {SOpAttachHarness SOpAttachCenter WhiffOffsetMissile SOpForwardLaunchGuide} 1 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Send="StatusSet Missed 1"/>
+        <On Terms="ActorCreation; ScopeContains _Missed" Target="_Missed" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Target="_Whiff" Send="Destroy"/>
+        <On Terms="Signal.*.Impact; HasStatus Missed" Send="TimerSet 1.000000 A"/>
+        <On Terms="TimerExpired; TimerName A" Send="Destroy"/>
+    </CActorSite>
+    <CActorUnit id="Queen">
+        <Macros value="WhiffSequenceUnitMacro"/>
+    </CActorUnit>
+    <CActorDoodad id="StarshipCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="SwarmTestCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorSite id="TalonsLMAttackImpactSite">
+        <Macros value="WhiffSequenceSiteMacro"/>
+    </CActorSite>
+    <CActorAction id="TalonsLMAttack">
+        <ImpactSite value="TalonsLMAttackImpactSite"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <Macros value="WhiffSequenceAttackSiteMacro"/>
+    </CActorAction>
+    <CActorAction id="QueenAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="SpineCrawlerAttack">
+        <ImpactSite value="SpineCrawlerAttackImpactSite"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="LocustMPAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="RoachAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="RavagerAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="HydraliskAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="InterceptorAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="AdeptAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="HighTemplarAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorDoodad id="TarsonisCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorAction id="TempestAttackGround">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="PhotonCannonAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="ImmortalAttack">
+        <ImpactModel value="GenericAttackImpactModelWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="SiegeTankAttack">
+        <ImpactModel value="GenericAttackImpactModelWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorUnit id="Thor">
+        <Macros value="WhiffSequenceUnitMacro"/>
+    </CActorUnit>
+    <CActorModel id="ThorAttackImpactModel" parent="GenericAttackModel">
+        <Macros value="WhiffSequenceModelMacro"/>
+    </CActorModel>
+    <CActorAction id="ThorAttack">
+        <ImpactModel value="ThorAttackImpactModel"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <Macros value="WhiffSequenceAttackMacro"/>
+    </CActorAction>
+    <CActorDoodad id="TyphonCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="UlaanCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="UlnarCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="ValhallaCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorAction id="VikingAssaultAttack">
+        <ImpactModel value="GenericAttackImpactModelBulletWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <ImpactSound value="GenericAttackImpactSoundWhiff"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorUnit id="Marauder">
+        <On Terms="Effect.MarauderWeapon@MissLM.Start; At Caster" Send="StatusIncrement WeaponNext"/>
+        <On Terms="Effect.MarauderWeapon@MissLM.Start; At Caster; IsStatus WeaponNext 2" Send="StatusSet WeaponNext 0"/>
+        <On Terms="Effect.MarauderWeapon@MissLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimClear AttackRight"/>
+        <On Terms="Effect.MarauderWeapon@MissLM.Start; At Caster; IsStatus WeaponNext 0" Send="AnimPlay AttackLeft Attack,Left"/>
+        <On Terms="Effect.MarauderWeapon@MissLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimClear AttackLeft"/>
+        <On Terms="Effect.MarauderWeapon@MissLM.Start; At Caster; IsStatus WeaponNext 1" Send="AnimPlay AttackRight Attack,Right"/>
+    </CActorUnit>
+    <CActorAction id="MarauderAttackMiss" parent="MarauderAttack" effectLaunch="MarauderWeapon@MissLM">
+        <On index="5" Terms="Effect.MarauderWeapon@MissLM.Start; At Caster; !ValidateEffect PunisherGrenadesResearched"/>
+    </CActorAction>
+    <CActorAction id="MarauderUpgradedAttackMiss" parent="MarauderUpgradedAttack" effectLaunch="MarauderWeapon@MissLM">
+        <On index="5" Terms="Effect.MarauderWeapon@MissLM.Start; At Caster; ValidateEffect PunisherGrenadesResearched"/>
+    </CActorAction>
+    <CActorAction id="StalkerAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="GhostAttack">
+        <ImpactModel value="GenericAttackImpactModelBulletWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <ImpactSound value="GenericAttackImpactSoundWhiff"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="MarineAttack">
+        <ImpactModel value="GenericAttackImpactModelBulletWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <ImpactSound value="GenericAttackImpactSoundWhiff"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorMissile id="Reaper">
+        <Macros value="WhiffSequenceUnitMacro"/>
+    </CActorMissile>
+    <CActorModel id="ReaperAttackImpactModel" parent="GenericAttackModel">
+        <On index="1" Terms="AnimBracketState.*.AfterClosing; !AnimBracketExitReason ModelSwap; AnimName BSD" Send="Destroy"/>
+        <Macros value="WhiffSequenceBulletModelMacro"/>
+    </CActorModel>
+    <CActorAction id="ReaperAttack">
+        <ImpactModel value="ReaperAttackImpactModel"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <ImpactSound value="GenericAttackImpactSoundWhiff"/>
+        <Macros value="WhiffSequenceAttackMacro"/>
+    </CActorAction>
+    <CActorAction id="AutoTurretAttack">
+        <ImpactModel value="GenericAttackImpactModelBulletWhiff"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <ImpactSound value="GenericAttackImpactSoundWhiff"/>
+        <On Terms="EffectActionCommence" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorUnit id="Banshee">
+        <Macros value="WhiffSequenceUnitMacro"/>
+    </CActorUnit>
+    <CActorSite id="BansheeAttackImpactSite">
+        <Macros value="WhiffSequenceSiteMacro"/>
+    </CActorSite>
+    <CActorAction id="BansheeAttack">
+        <ImpactSite value="BansheeAttackImpactSite"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <Macros value="WhiffSequenceAttackSiteMacro"/>
+    </CActorAction>
+    <CActorAction id="BattlecruiserGroundAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="LiberatorAGAttack">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="CycloneWeaponAttackLeft">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <CActorAction id="CycloneWeaponAttackRight">
+        <ImpactSite value="GenericAttackImpactSiteWhiffMissile"/>
+        <ImpactModelReaction value="GenericAttackImpactModelReactionWhiff"/>
+        <On Terms="EffectActionCenter" Target="::HostImpactInternal" Send="Signal Impact"/>
+    </CActorAction>
+    <!--CActorAction id="CycloneAttackLeftMiss" parent="GenericAttack" effectImpact="CycloneWeapon@MissDummy" effectLaunch="CycloneWeaponLaunchMissileLeftPoint">
+        <LaunchAttachQuery Methods="Weapon 1"/>
+        <LaunchAssets Model="CycloneAttackLeftLaunch" Sound="Cyclone_Missile_Launch"/>
+        <Missile value="CycloneMissileLarge"/>
+        <ImpactMap index="None" Model="CycloneMissileImpactLarge" Sound="Cyclone_Missile_Impact" ModelReaction="CycloneAttackLeftImpactReaction"/>
+        <ImpactPhysics Name="90mmCannonImpact" MatchKeys="Basic" Physics="SiegeTankAttackForce"/>
+    </CActorAction>
+    <CActorAction id="CycloneAttackRightMiss" parent="GenericAttack" effectImpact="CycloneWeapon@MissDummy" effectLaunch="CycloneWeaponLaunchMissileRightPoint">
+        <LaunchAttachQuery Methods="Weapon 2"/>
+        <LaunchAssets Model="CycloneAttackRightLaunch" Sound="Cyclone_Missile_Launch"/>
+        <Missile value="CycloneMissileLarge"/>
+        <ImpactMap index="None" Model="CycloneMissileImpactLarge" Sound="Cyclone_Missile_Impact" ModelReaction="CycloneAttackRightImpactReaction"/>
+        <ImpactPhysics Name="90mmCannonImpact" MatchKeys="Basic" Physics="SiegeTankAttackForce"/>
+    </CActorAction-->
+    <CActorModel id="PlanetaryFortressWeapon@MissImpact" parent="GenericAttackModelPoint">
+        <On Terms="Effect.PlanetaryFortressWeapon@MissDummy.Start; At Effect" Send="Create"/>
+        <On Terms="ActorCreation" Send="Create PlanetaryFortressAttackForce"/>
+        <Model value="PlanetaryFortressAttackImpact"/>
+    </CActorModel>
+    <CActorSound id="Adept_Death">
+        <Aliases value="_DeathVoice"/>
+        <Remove Terms="UnitDeathCustomize.Adept; ValidateUnit IsNotHallucination; PassChance 25.000000" Send="Create"/>
+        <On Terms="UnitDeathCustomize.Adept; ValidateUnit IsHallucinationSCBW@Not; PassChance 25.000000" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="Archon_Death">
+        <Aliases value="_DeathVoice"/>
+        <Remove Terms="UnitDeathCustomize.Archon; ValidateUnit IsNotHallucination; PassChance 25.000000" Send="Create"/>
+        <On Terms="UnitDeathCustomize.Archon; ValidateUnit IsHallucinationSCBW@Not; PassChance 25.000000" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="BanelingDeathNormalSound">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="BanelingDeathSuicideSound">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="BanelingEgg_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="BroodLord_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Broodling_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Changeling_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Cocoon_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Corruptor_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="DarkTemplar_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Drone_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Egg_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="GhostAlternate_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Ghost_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="HeroNova_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="HighTemplar_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Hydralisk_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorUnit id="Immortal">
+        <On Terms="Behavior.BarrierDamageResponse.Blocked" Send="Create Immortal_Barrier_OnSound"/>
+        <On Terms="Behavior.BarrierDamageResponse.Blocked" Send="AnimBracketStart Cover Cover,Start IGNORE Cover,End ContentPlayOnce 1.500000 AsTimeScale"/>
+    </CActorUnit>
+    <CActorSound id="Infestor_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Larva_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorEventMacro id="LiberatorFieldMacro">
+        <On Terms="Behavior.ArbiterSCBWStasisField.On" Send="StatusSet Stunned 1"/>
+        <On Terms="Behavior.ArbiterSCBWStasisField.Off" Send="StatusSet Stunned 0"/>
+        <On Terms="Behavior.RavenScramblerMissile.On" Send="StatusSet Stunned 1"/>
+        <On Terms="Behavior.RavenScramblerMissile.Off" Send="StatusSet Stunned 0"/>
+        <On Terms="Behavior.GhostSCBWLockdown.On" Send="StatusSet Stunned 1"/>
+        <On Terms="Behavior.GhostSCBWLockdown.Off" Send="StatusSet Stunned 0"/>
+        <On Terms="Signal.*.DummyRange" Send="RefSetFromMsg ::actor.DummyRange ::Sender"/>
+        <On Terms="StatusSet.*.Stunned; IsStatus Stunned 1" Target="::actor.DummyRange" Send="Signal HideRange"/>
+        <On Terms="StatusSet.*.Stunned; IsStatus Stunned 0" Target="::actor.DummyRange" Send="Signal ShowRange"/>
+        <On Terms="Signal.*.DummyRange" Send="TimerSet 0.062500 Delay"/>
+        <On Terms="TimerExpired; TimerName Delay" Target="::actor.DummyRange" Send="Signal RefSet"/>
+        <On Terms="Signal.*.RefResponse; IsStatus Stunned 1" Target="::Sender" Send="Signal HideRange"/>
+        <On Terms="Signal.*.RefResponse; IsStatus Stunned 0" Target="::Sender" Send="Signal ShowRange"/>
+    </CActorEventMacro>
+    <CActorUnit id="Liberator">
+        <Macros value="LiberatorFieldMacro"/>
+    </CActorUnit>
+    <CActorUnit id="LiberatorAG">
+        <Macros value="LiberatorFieldMacro"/>
+    </CActorUnit>
+    <CActorUnit id="LiberatorAGMorphModel">
+        <Macros value="LiberatorFieldMacro"/>
+    </CActorUnit>
+    <CActorModel id="LiberatorDummyRange">
+        <Supporter Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <On Terms="ActorCreation" Send="RefSetFromMsg ::actor.RangeHoster ::Supporter"/>
+        <On Terms="ActorCreation" Target="::Supporter" Send="Signal DummyRange"/>
+        <On Terms="Signal.*.HideRange" Send="SetVisibility"/>
+        <On Terms="Signal.*.ShowRange" Send="SetVisibility 1"/>
+        <On Terms="Signal.*.RefSet" Target="::Sender" Send="Signal RefResponse"/>
+    </CActorModel>
+    <CActorSound id="Liberator_Death_ActorSound">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="LurkerEgg_DeathMP">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="LurkerEgg_DeathMP_ActorSound">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Lurker_DeathMP">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Lyote_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Marauder_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Marauder_Death_NP">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Marine_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Marine_Death_NP">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Mutalisk_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Oracle_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="OverlordEgg_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Overlord_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Overseer_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Queen_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="RavagerCocoonDeathSound">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Roach_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorDoodad id="XilCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorSound id="Zealot_Death">
+        <Aliases value="_DeathVoice"/>
+        <Remove Terms="UnitDeathCustomize.Zealot; ValidateUnit IsNotHallucination; PassChance 25.000000" Send="Create"/>
+        <On Terms="UnitDeathCustomize.Zealot; ValidateUnit IsHallucinationSCBW@Not; PassChance 25.000000" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="Zergling_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorSound id="Tempest_Death">
+        <Aliases value="_DeathVoice"/>
+    </CActorSound>
+    <CActorUnit id="Cyclone">
+        <On Terms="Behavior.OracleStasisTrapTarget.On" Target="CycloneWeaponTurretLookAt" Send="LookAtDisengage"/>
+        <On Terms="Behavior.ArbiterSCBWStasisField.On" Target="CycloneWeaponTurretLookAt" Send="LookAtDisengage"/>
+        <On Terms="Behavior.GhostSCBWLockdown.On" Target="CycloneWeaponTurretLookAt" Send="LookAtDisengage"/>
+    </CActorUnit>
+    <CActorAction id="MutaliskAttackSegment1Miss" parent="MutaliskAttackSegment1" effectImpact="GlaiveWurm@MissDummy" effectLaunch="GlaiveWurm@LMMiss">
+        <On index="1" Terms="Effect.GlaiveWurm@MissDummy.Start; FromEffectTreeDescendant"/>
+        <On index="2" Terms="Effect.GlaiveWurm@MissDummy.Stop; FromEffectTreeDescendant"/>
+        <On index="6" Terms="Effect.GlaiveWurm@LMMiss.Start; At Caster"/>
+    </CActorAction>
+    <CActorDoodad id="ZerusCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorDoodad id="ZhakulDasCurtain">
+        <ShadowWhenTransparent value="1"/>
+    </CActorDoodad>
+    <CActorUnit id="Carrier">
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+        <DeathCustoms ModelLink="HallucinationDeath" SoundLink="Sentry_HallucinationDeathLarge" Name="Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Tempest">
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+        <DeathCustoms ModelLink="HallucinationDeath" SoundLink="Sentry_HallucinationDeathLarge" Name="Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Sentry">
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+        <DeathCustoms ModelLink="HallucinationDeath" SoundLink="Sentry_HallucinationDeathLarge" Name="Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="DarkTemplar">
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+        <DeathCustoms ModelLink="HallucinationDeath" SoundLink="Sentry_HallucinationDeathLarge" Name="Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Observer">
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitBirth.ObserverSiegeMode" Send="AnimBracketStart Work Stand,Work,Start Stand,Work Stand,Work,End Instant 1.750000 AsTimeScale"/>
+        <DeathCustoms ModelLink="HallucinationDeath" SoundLink="Sentry_HallucinationDeathLarge" Name="Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Colossus">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Probe">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Zealot">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Adept">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <Remove Terms="UnitDeathCustomize; !ValidateUnit IsHallucination" Send="Create AdeptProtossSpiritDeathModel"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; !ValidateUnit IsHallucinationSCBW" Send="Create AdeptProtossSpiritDeathModel"/>
+    </CActorUnit>
+    <CActorUnit id="Stalker">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="HighTemplar">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Archon">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="VoidRay">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Phoenix">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="WarpPrism">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="WarpPrismPhasing">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Oracle">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorUnit id="Disruptor">
+        <Remove Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit IsHallucinationSCBW" Send="DeathCustomize Hallucination"/>
+    </CActorUnit>
+    <CActorAction id="LarvaRelease">
+        <!--On Terms="MissilePreHost; ValidateUnit SCBW_IsHatcheryLairOrHive" Target="::Sender" Send="ModelSwap LarvaSCBW@ReleaseMissile"/-->
+    </CActorAction>
+    <CWeaponLegacy id="LurkerMP">
+        <Tip value="Weapon/Tip/PierceWeapon"/>
+        <AttackType value="Chaos"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Oracle">
+        <Tip value="Weapon/Tip/PierceWeapon"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Spinesdisabled">
+        <Tip value="Weapon/Tip/PierceWeapon"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CrucioShockCannon">
+        <Effect value="SiegeTankSiegedWeapon@InitialSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GlaiveWurm">
+        <AttackType value="Chaos"/>
+        <Effect value="GlaiveWurm@InitialSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BattlecruiserWeaponSwitch">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BroodlingEscort">
+        <Effect value="BroodlordEscort@MissCheck"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ImpalerTentacle">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PsionicShockwave">
+        <Effect value="ArchonWeapon@InitialSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TalonsMissile">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TwinIbiksCannon">
+        <Effect value="PlanetaryFortressWeapon@MissCheck"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AcidSaliva">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Adept">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BacklashRockets">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HellionTank">
+        <AttackType value="Chaos"/>
+        <Tip value="Weapon/Tip/PierceWeapon"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HighTemplarWeapon">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HydraliskMelee">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfernalFlameThrower">
+        <AttackType value="Chaos"/>
+        <Effect value="HellionWeapon@InitialSet"/>
+    </CWeaponLegacy>
+    <CWeaponStrafe id="InterceptorBeam">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponStrafe>
+    <CWeaponLegacy id="LocustMP">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LocustMPMelee">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NeedleSpines">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="P38ScytheGuassPistol">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParticleDisruptors">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PhaseDisruptors">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PhotonCannon">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RavagerWeapon">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RoachMelee">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Talons">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TempestGround">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ThermalLances">
+        <AttackType value="Chaos"/>
+        <Effect value="ColossusWeapon@InitialSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="WidowMineDummy">
+        <AttackType value="Chaos"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="90mmCannons">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AutoTurret">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="C10CanisterRifle">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GuassRifle">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LiberatorAGWeapon">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PunisherGrenades">
+        <Effect value="MarauderWeapon@MissCheck"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ThorsHammer">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TwinGatlingCannon">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TyphoonMissilePod">
+        <Options index="NeverMiss" value="0"/>
+    </CWeaponLegacy>
+    <CDataCollection id="MothershipWeapon">
+        <EditorCategories value="DataGroup:Weapon,Race:Protoss,DataFamily:Melee,ObjectType:Equipment"/>
+        <DataRecord Entry="Behavior,MothershipWeapon@BeamSecondaryMissed"/>
+        <DataRecord Entry="Behavior,MothershipWeapon@BeamMissed"/>
+        <DataRecord Entry="Effect,MothershipWeapon@BeamImpact"/>
+        <DataRecord Entry="Effect,MothershipWeapon@BeamSecondaryImpact"/>
+        <DataRecord Entry="Effect,MothershipWeapon@BeamSecondaryMissed"/>
+        <DataRecord Entry="Effect,MothershipWeapon@BeamMissed"/>
+        <DataRecord Entry="Validator,MothershipWeapon@ImpactValidator"/>
+        <DataRecord Entry="Validator,MothershipWeapon@BeamMissed"/>
+        <DataRecord Entry="Validator,MothershipWeapon@BeamSecondaryMissed"/>
+        <DataRecord Entry="Validator,MothershipWeapon@BeamMissedNot"/>
+    </CDataCollection>
+    <CDataCollection id="HellionWeapon">
+        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Melee,ObjectType:Equipment"/>
+        <DataRecord Entry="Effect,HellionWeapon@CPDummy"/>
+        <DataRecord Entry="Effect,HellionWeapon@EndLocation"/>
+        <DataRecord Entry="Effect,HellionWeapon@Impact"/>
+        <DataRecord Entry="Effect,HellionWeapon@CPSet"/>
+        <DataRecord Entry="Effect,HellionWeapon@Offset"/>
+        <DataRecord Entry="Effect,HellionWeapon@InitialSet"/>
+        <DataRecord Entry="Effect,HellionWeapon@MissSwitch"/>
+        <DataRecord Entry="Effect,HellionWeapon@Miss"/>
+        <DataRecord Entry="Effect,HellionWeapon@MissMedium"/>
+        <DataRecord Entry="Effect,HellionWeapon@MissLarge"/>
+        <DataRecord Entry="Effect,HellionWeapon@MissMassive"/>
+        <DataRecord Entry="Effect,HellionWeapon@MissNormal"/>
+        <DataRecord Entry="Effect,HellionWeapon@MissOffsetSwitch"/>
+        <DataRecord Entry="Validator,HellionWeapon@RadiusNormal"/>
+    </CDataCollection>
+    <CUnit id="WarpPrismPhasing">
+        <CardLayouts index="0">
+            <LayoutButtons index="9" Requirements="WarpPrismPowerSourceFastRequirement"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="BroodLordCocoon">
+        <Food value="-4"/>
+    </CUnit>
+    <CUnit id="LurkerMPEgg">
+        <Food value="-3"/>
+    </CUnit>
+    <CUnit id="RavagerCocoon">
+        <Food value="-3"/>
+    </CUnit>
+    <CUnit id="Observer">
+        <CardLayouts index="0">
+            <LayoutButtons index="7" Requirements="SCBW_NotDetectionSuppressed"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="ObserverSiegeMode">
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Requirements="SCBW_NotDetectionSuppressed"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Overseer">
+        <CardLayouts index="0">
+            <LayoutButtons index="7" Requirements="SCBW_NotDetectionSuppressed"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="OverseerSiegeMode">
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Requirements="SCBW_NotDetectionSuppressed"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Raven">
+        <CardLayouts index="0">
+            <LayoutButtons index="6" Requirements="SCBW_NotDetectionSuppressed"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="Banshee">
+        <CardLayouts index="0">
+            <LayoutButtons index="5" Column="2"/>
+            <LayoutButtons index="6" Column="3"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="MULE">
+        <Attributes index="Robotic" value="1"/>
+        <Attributes index="Hover" value="1"/>
+    </CUnit>
+    <CUnit id="MissileTurret">
+        <CardLayouts index="0">
+            <LayoutButtons index="3" Requirements="SCBW_NotDetectionSuppressed" Column="2"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="PhotonCannon">
+        <CardLayouts index="0">
+            <LayoutButtons index="3" Requirements="SCBW_NotDetectionSuppressed"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="SporeCrawler">
+        <CardLayouts index="0">
+            <LayoutButtons index="4" Requirements="SCBW_NotDetectionSuppressed"/>
+        </CardLayouts>
+    </CUnit>
+    <CUnit id="AssimilatorRich">
+        <LeaderAlias value="Assimilator"/>
+    </CUnit>
+    <CUnit id="ExtractorRich">
+        <LeaderAlias value="Extractor"/>
+    </CUnit>
+    <CUnit id="RefineryRich">
+        <LeaderAlias value="Refinery"/>
+    </CUnit>
+    <CUnit id="Archon">
+        <Attributes index="Hover" value="1"/>
+    </CUnit>
+    <CUnit id="Colossus">
+        <Attributes index="Robotic" value="1"/>
+    </CUnit>
+    <CUnit id="Disruptor">
+        <Attributes index="Robotic" value="1"/>
+        <Attributes index="Hover" value="1"/>
+    </CUnit>
+    <CUnit id="Drone">
+        <Attributes index="Hover" value="1"/>
+    </CUnit>
+    <CUnit id="Nuke">
+        <TechAliasArray value="Alias_Nuke"/>
+    </CUnit>
+    <CUnit id="Probe">
+        <Attributes index="Robotic" value="1"/>
+        <Attributes index="Hover" value="1"/>
+    </CUnit>
+    <CUnit id="Reaper">
+        <Attributes index="Hover" value="1"/>
+    </CUnit>
+    <CUnit id="SCV">
+        <Attributes index="Hover" value="1"/>
+    </CUnit>
+    <CUnit id="Sentry">
+        <Attributes index="Robotic" value="1"/>
+        <Attributes index="Hover" value="1"/>
+    </CUnit>
+    <CUnit id="Ultralisk">
+        <FlagArray index="Resistant" value="1"/>
+    </CUnit>
+    <CUnit id="UltraliskBurrowed">
+        <FlagArray index="Resistant" value="1"/>
+    </CUnit>
+    <CUnit id="WidowMine">
+        <Attributes index="Robotic" value="1"/>
+    </CUnit>
+    <CUnit id="WidowMineBurrowed">
+        <Attributes index="Robotic" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsiblePurifierTowerDebris">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsiblePurifierTowerDiagonal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerDebrisRampLeftGreen">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerDebrisRampRightGreen">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerRampLeftGreen">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerRampRightGreen">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleExpeditionGate6x6">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleGarage">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleGarageLarge">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleZergInfestation3x3">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="BraxisAlphaDestructible1x1">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="BraxisAlphaDestructible2x2">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTower">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerDebris">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerDebrisRampLeft">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerDebrisRampRight">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerDiagonal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerRampLeft">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleRockTowerRampRight">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleTerranTower">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleTerranTowerDebris">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleTerranTowerDiagonal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleTerranTowerRampLeft">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="CollapsibleTerranTowerRampRight">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DebrisRampLeft">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DebrisRampRight">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleCityDebris2x4Horizontal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleCityDebris2x4Vertical">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleCityDebris2x6Horizontal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleCityDebris2x6Vertical">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleCityDebris4x4">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleCityDebris6x6">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleCityDebrisHugeDiagonalBLUR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleCityDebrisHugeDiagonalULBR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleDebris4x4">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleDebris6x6">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleDebrisRampDiagonalHugeBLUR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleDebrisRampDiagonalHugeULBR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIce2x4Horizontal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIce2x4Vertical">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIce2x6Horizontal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIce2x6Vertical">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIce4x4">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIce6x6">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIceDiagonalHugeBLUR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIceDiagonalHugeULBR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIceHorizontalHuge">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleIceVerticalHuge">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRampDiagonalHugeBLUR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRampDiagonalHugeULBR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRampHorizontalHuge">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRampVerticalHuge">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRock2x4Horizontal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRock2x4Vertical">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRock2x6Horizontal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRock2x6Vertical">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRock4x4">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRock6x6">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRock6x6Weak">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx12x4Horizontal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx12x4Vertical">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx12x6Horizontal">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx12x6Vertical">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx14x4">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx16x6">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx1DiagonalHugeBLUR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx1DiagonalHugeULBR">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx1HorizontalHuge">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="DestructibleRockEx1VerticalHuge">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="UnbuildableBricksDestructible">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="UnbuildablePlatesDestructible">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="UnbuildableRocksDestructible">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker6E">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker6N">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker6NE">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker6NW">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker6S">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker6SE">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker6SW">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker6W">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker8E">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker8N">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker8NE">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker8NW">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker8S">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker8SE">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker8SW">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CUnit id="XelNagaDestructibleRampBlocker8W">
+        <UserFlagArray index="Destructible" value="1"/>
+    </CUnit>
+    <CBehaviorBuff id="GravitonBeam">
+        <Modification>
+            <BehaviorLinkDisableArray value="SCBW_MissChance"/>
+            <BehaviorLinkDisableArray value="SCBW_MissChance@Shrub"/>
+            <BehaviorLinkDisableArray value="SCBW_MissChance@ShrubCheck"/>
+            <BehaviorLinkDisableArray value="SCBW_MissChance@HighGroundFake"/>
+            <BehaviorLinkDisableArray value="SCBW_MissChance@HighGroundShrub"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorPowerSource id="WarpPrismPowerSourceFast">
+        <Requirements value="WarpPrismPowerSourceFastRequirement"/>
+    </CBehaviorPowerSource>
+    <CBehaviorBuff id="BanelingExplode">
+        <DisableValidatorArray value="NotHallucinationTarget"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipStrategicWarpOut">
+        <BehaviorCategories index="User7" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NexusMassRecallCasting">
+        <RemoveValidatorArray value="GhostSCBWLockdown@NotCaster"/>
+        <RemoveValidatorArray value="SCBW_CasterNoStasisCategory"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipWeapon@BeamMissed">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="65535"/>
+        <MaxStackCountPerCaster value="1"/>
+        <Duration value="0.8"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipWeapon@BeamSecondaryMissed">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="65535"/>
+        <MaxStackCountPerCaster value="1"/>
+        <Duration value="1.05"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlindingCloud">
+        <Modification>
+            <WeaponDisableArray value="FirebatSCBWWeapon@Melee"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="YoinkImpactSpiderMine">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="0.0625"/>
+        <DurationRandomMin value="0.0625"/>
+        <DurationRandomMax value="0.125"/>
+        <ExpireEffect value="SpiderMineSCBWWeapon@Impact"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WidowMineTargeted">
+        <RemoveValidatorArray value="SCBW_CasterNotStasis"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Slow">
+        <BehaviorCategories index="Restorable" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AdeptPhaseShiftTimer">
+        <RemoveValidatorArray value="SCBW_CasterNoMassTransport"/>
+        <RemoveValidatorArray value="DarkArchonSCBWMindControl@ActivationNotCaster"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BarrierDamageResponse">
+        <DamageResponse Priority="95">
+            <ExcludeEffectArray value="ScienceVesselSCBWDefensiveMatrix@LeakDamage"/>
+            <ExcludeEffectArray value="ScienceVesselSCBWDefensiveMatrix@LeakDamagePassShields"/>
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+        </DamageResponse>
+        <DisableValidatorArray value="SCBW_NotStunned"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Contaminated">
+        <Modification>
+            <BehaviorLinkDisableArray value="HatcherySCBW@SpawnLarva"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FungalGrowth">
+        <BehaviorCategories index="User15" value="1"/>
+        <RemoveValidatorArray value="SCBW_NoStasisCategory"/>
+        <TechAliasArray value="_Transfer"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FungalGrowthSlowMovement">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <RemoveValidatorArray value="SCBW_NoStasisCategory"/>
+        <TechAliasArray value="_Transfer"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Hallucination">
+        <DamageResponse>
+            <ExcludeEffectArray value="ScienceVesselSCBWEMPShockwave@Damage"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ImmortalOverload">
+        <DamageResponse Priority="90">
+            <ExcludeEffectArray value="DefilerSCBWPlague@Damage"/>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <!--CBehaviorBuff id="LockOnDisableAttack">
+        <BehaviorCategories index="User9" value="1"/>
+    </CBehaviorBuff
+    <CAccumulatorConstant id="QueenSCBWEnsnare@LockOnCD">
+        <Amount value="0.25"/>
+        <ApplicationRule value="AdditiveMultiply"/>
+    </CAccumulatorConstant>
+    <CAccumulatorSwitch id="QueenSCBWEnsnare@LockOn">
+        <CaseArray Validator="QueenSCBWEnsnare" Accumulator="QueenSCBWEnsnare@LockOnCD"/>
+        <MinAccumulation value="0"/>
+    </CAccumulatorSwitch>
+    <CBehaviorBuff id="CycloneLockOnCooldown">
+        <Duration value="0.812">
+            <AccumulatorArray value="QueenSCBWEnsnare@LockOn"/>
+        </Duration>
+    </CBehaviorBuff-->
+    <CBehaviorBuff id="MothershipCoreRecalling">
+        <BehaviorCategories index="User7" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipRecalling">
+        <BehaviorCategories index="User7" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NeuralParasite">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <Modification>
+            <AbilClassDisableArray index="CAbilMerge" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NexusMassRecallWarpOut">
+        <BehaviorCategories index="User7" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OracleRevelation">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <RemoveValidatorArray index="0" value="SCBW_NoStasisCategory"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OracleStasisTrapTarget">
+        <BehaviorCategories index="Magic" value="1"/>
+        <TechAliasArray value="_AbilityDisable"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ParasiticBomb">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <BehaviorCategories index="User15" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ParasiticBombTimer">
+        <BehaviorCategories index="Restorable" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="PurificationNovaTargettedTarget">
+        <RemoveValidatorArray value="SCBW_CasterNoStasisCategory"/>
+        <RemoveValidatorArray value="SCBW_CasterNoMassTransport"/>
+        <RemoveValidatorArray value="SCBW_CasterNotStunned"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenScramblerMissile">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <Modification>
+            <WeaponDisableArray value="CarrierSCBWWeapon"/>
+        </Modification>
+        <RemoveValidatorArray value="SCBW_NoStasisCategory"/>
+        <TechAliasArray value="_AbilityDisable"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenScramblerMissileCarrier">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <InitialEffect value="RavenScramblerMissileCarrierRecallSet"/>
+        <Modification>
+            <WeaponDisableArray value="CarrierSCBWWeapon"/>
+        </Modification>
+        <RemoveValidatorArray value="SCBW_NoStasisCategory"/>
+        <TechAliasArray value="_AbilityDisable"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenShredderMissileArmorReduction">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <TechAliasArray value="_Transfer"/>
+        <RemoveValidatorArray value="SCBW_NoStasisCategory"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenShredderMissileArmorReductionUIAdd">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <TechAliasArray value="_Transfer"/>
+        <RemoveValidatorArray value="SCBW_NoStasisCategory"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenShredderMissileArmorReductionUISubtruct">
+        <BehaviorCategories index="Restorable" value="1"/>
+        <RemoveValidatorArray value="SCBW_NoStasisCategory"/>
+        <TechAliasArray value="_Transfer"/>
+        <InitialEffect value="SCBW_DamageFormula@FractionalArmorUpdate"/>
+        <FinalEffect value="SCBW_DamageFormula@FractionalArmorUpdate"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Transfusion">
+        <TechAliasArray value="_Transfer"/>
+    </CBehaviorBuff>
+    <CUpgrade id="LocustLifetimeIncrease">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="ArmorPiercingRockets">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="BattlecruiserBehemothReactor">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CarrierCarrierCapacity">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CarrierLaunchSpeedUpgrade">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CarrierLeashRangeUpgrade">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CycloneLockOnRangeUpgrade">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CycloneRapidFireLaunchers">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="DurableMaterials">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="GhostMoebiusReactor">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="OracleEnergyUpgrade">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="RavenCorvidReactor">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="ReaperSpeed">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="RestoreShields">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="SecretedCoating">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="hydraliskspeed">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel1">
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,Amount" Value="4"/>
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,AttributeBonus[Armored]" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel2">
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,Amount" Value="4"/>
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,AttributeBonus[Armored]" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel3">
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,Amount" Value="4"/>
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,AttributeBonus[Armored]" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleAndShipWeaponsLevel1">
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,Amount" Value="4"/>
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,AttributeBonus[Armored]" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleAndShipWeaponsLevel2">
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,Amount" Value="4"/>
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,AttributeBonus[Armored]" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleAndShipWeaponsLevel3">
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,Amount" Value="4"/>
+        <EffectArray Reference="Effect,SiegeTankSiegedWeapon@DamageCliff,AttributeBonus[Armored]" Value="1"/>
+    </CUpgrade>
+</Catalog>

@@ -1,0 +1,2 @@
+﻿DocInfo/DescLong=Assets for SC Evolution Complete Mod
+DocInfo/Name=SCEvo_LocalizedAssets_Public

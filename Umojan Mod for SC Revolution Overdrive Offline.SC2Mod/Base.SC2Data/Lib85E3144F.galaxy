@@ -1,0 +1,338 @@
+include "TriggerLibs/NativeLib"
+
+include "Lib85E3144F_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Umojan
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void lib85E3144F_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Functions
+void lib85E3144F_gf_UmojanInfiniteMoneyMapAction (unitgroup lp_unitGroup) {
+    // Variable Declarations
+    unit lv_unit;
+
+    // Automatic Variable Declarations
+    unitgroup autoA298FD08_g;
+    int autoA298FD08_u;
+
+    // Variable Initialization
+
+    // Implementation
+    autoA298FD08_g = lp_unitGroup;
+    autoA298FD08_u = UnitGroupCount(autoA298FD08_g, c_unitCountAll);
+    for (;; autoA298FD08_u -= 1) {
+        lv_unit = UnitGroupUnitFromEnd(autoA298FD08_g, autoA298FD08_u);
+        if (lv_unit == null) { break; }
+        if ((UnitGetType(lv_unit) == "Pioneer")) {
+            lib85E3144F_gf_UmojanInfiniteMoneyMapNewOrder(lv_unit, AbilityCommand("PioneerHarvest", 0), AbilityCommand("PioneerHarvestInfinite", 0));
+        }
+        else if (true) {
+        }
+    }
+}
+
+void lib85E3144F_gf_UmojanInfiniteMoneyMapNewOrder (unit lp_unit, abilcmd lp_oldAbil, abilcmd lp_newAbil) {
+    // Variable Declarations
+    int lv_i;
+    int lv_count;
+    order[4] lv_orders;
+    order lv_currOrder;
+
+    // Automatic Variable Declarations
+    const int autoA8A5D88A_ae = 3;
+    const int autoA8A5D88A_ai = 1;
+    int autoED22DEF8_ae;
+    const int autoED22DEF8_ai = 1;
+
+    // Variable Initialization
+    lv_count = -1;
+
+    // Implementation
+    lv_i = 0;
+    for ( ; ( (autoA8A5D88A_ai >= 0 && lv_i <= autoA8A5D88A_ae) || (autoA8A5D88A_ai < 0 && lv_i >= autoA8A5D88A_ae) ) ; lv_i += autoA8A5D88A_ai ) {
+        lv_currOrder = UnitOrder(lp_unit, lv_i);
+        if ((lv_currOrder != null)) {
+            if ((OrderGetAbilityCommand(lv_currOrder) == lp_oldAbil)) {
+                lv_orders[lv_i] = OrderTargetingUnit(lp_newAbil, OrderGetTargetUnit(lv_currOrder));
+            }
+            else {
+                lv_orders[lv_i] = UnitOrder(lp_unit, lv_i);
+            }
+            lv_count = lv_i;
+        }
+        else {
+            break;
+        }
+    }
+    UnitAbilityAdd(lp_unit, AbilityCommandGetAbility(lp_newAbil));
+    UnitAbilityRemove(lp_unit, AbilityCommandGetAbility(lp_oldAbil));
+    if ((lv_count == -1)) {
+        return;
+    }
+
+    autoED22DEF8_ae = lv_count;
+    lv_i = 0;
+    for ( ; ( (autoED22DEF8_ai >= 0 && lv_i <= autoED22DEF8_ae) || (autoED22DEF8_ai < 0 && lv_i >= autoED22DEF8_ae) ) ; lv_i += autoED22DEF8_ai ) {
+        if ((lv_i == 0)) {
+            UnitIssueOrder(lp_unit, lv_orders[lv_i], c_orderQueueReplace);
+        }
+        else {
+            UnitIssueOrder(lp_unit, lv_orders[lv_i], c_orderQueueAddToEnd);
+        }
+    }
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Nano Cleanse
+//--------------------------------------------------------------------------------------------------
+bool lib85E3144F_gt_NanoCleanse_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_inheritedDamage;
+    fixed lv_reducedDamage;
+    fixed lv_nanoCleanseTargetShield;
+    unit lv_nanoCleanseTarget;
+
+    // Automatic Variable Declarations
+    string auto7330E48B_val;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_nanoCleanseTarget = EventUnit();
+    lv_inheritedDamage = UnitBehaviorEffectTreeUserData(UnitBehaviorEffectUnit(lv_nanoCleanseTarget, EventUnitBehavior(), c_effectUnitTarget, 0), "NanoCleanseData", "InheritedDamageNanoCleanse");
+    lv_nanoCleanseTargetShield = UnitBehaviorEffectTreeUserData(lv_nanoCleanseTarget, "NanoCleanseData", "NanoCleanseShield");
+    lv_reducedDamage = MinF(lv_inheritedDamage, lv_nanoCleanseTargetShield);
+    UnitBehaviorEffectTreeSetUserData(lv_nanoCleanseTarget, "NanoCleanseData", "NanoCleanseShield", (lv_nanoCleanseTargetShield - lv_reducedDamage));
+    lv_inheritedDamage -= lv_reducedDamage;
+    if (((lv_nanoCleanseTargetShield - lv_reducedDamage) <= 0.0)) {
+        UnitBehaviorRemove(lv_nanoCleanseTarget, "NanoCleanse", 1);
+    }
+
+    if ((lv_inheritedDamage > 0.0)) {
+        auto7330E48B_val = EventUnitBehavior();
+        if (auto7330E48B_val == "NanoCleanseMelee") {
+            if ((libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogEffect, EventUnitDamageEffect(), "ArmorReduction", EventUnitDamageSourcePlayer()) == 1.0)) {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageMeleeArmorReducted", lv_nanoCleanseTarget, lv_inheritedDamage);
+            }
+            else {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageMeleeArmorIgnored", lv_nanoCleanseTarget, lv_inheritedDamage);
+            }
+        }
+        else if (auto7330E48B_val == "NanoCleanseRanged") {
+            if ((libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogEffect, EventUnitDamageEffect(), "ArmorReduction", EventUnitDamageSourcePlayer()) == 1.0)) {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageRangedArmorReducted", lv_nanoCleanseTarget, lv_inheritedDamage);
+            }
+            else {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageRangedArmorIgnored", lv_nanoCleanseTarget, lv_inheritedDamage);
+            }
+        }
+        else if (auto7330E48B_val == "NanoCleanseSplash") {
+            if ((libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogEffect, EventUnitDamageEffect(), "ArmorReduction", EventUnitDamageSourcePlayer()) == 1.0)) {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageSplashArmorReducted", lv_nanoCleanseTarget, lv_inheritedDamage);
+            }
+            else {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageSplashArmorIgnored", lv_nanoCleanseTarget, lv_inheritedDamage);
+            }
+        }
+        else if (auto7330E48B_val == "NanoCleanseSpell") {
+            if ((libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogEffect, EventUnitDamageEffect(), "ArmorReduction", EventUnitDamageSourcePlayer()) == 1.0)) {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageSpellArmorReducted", lv_nanoCleanseTarget, lv_inheritedDamage);
+            }
+            else {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageSpellArmorIgnored", lv_nanoCleanseTarget, lv_inheritedDamage);
+            }
+        }
+        else {
+        }
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib85E3144F_gt_NanoCleanse_Init () {
+    lib85E3144F_gt_NanoCleanse = TriggerCreate("lib85E3144F_gt_NanoCleanse_Func");
+    TriggerAddEventUnitDamageAbsorbed(lib85E3144F_gt_NanoCleanse, null, "NanoCleanseMelee");
+    TriggerAddEventUnitDamageAbsorbed(lib85E3144F_gt_NanoCleanse, null, "NanoCleanseRanged");
+    TriggerAddEventUnitDamageAbsorbed(lib85E3144F_gt_NanoCleanse, null, "NanoCleanseSplash");
+    TriggerAddEventUnitDamageAbsorbed(lib85E3144F_gt_NanoCleanse, null, "NanoCleanseSpell");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Psionic Lockdown
+//--------------------------------------------------------------------------------------------------
+bool lib85E3144F_gt_PsionicLockdown_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    fixed lv_inheritedDamage;
+    fixed lv_reducedDamage;
+    fixed lv_psionicLockdownTargetShield;
+    unit lv_psionicLockdownTarget;
+
+    // Automatic Variable Declarations
+    string auto6D674406_val;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_psionicLockdownTarget = EventUnit();
+    lv_inheritedDamage = UnitBehaviorEffectTreeUserData(UnitBehaviorEffectUnit(lv_psionicLockdownTarget, EventUnitBehavior(), c_effectUnitTarget, 0), "PsionicLockdownData", "InheritedDamagePsionicLockdown");
+    lv_psionicLockdownTargetShield = UnitBehaviorEffectTreeUserData(lv_psionicLockdownTarget, "PsionicLockdownData", "PsionicLockdownShield");
+    lv_reducedDamage = MinF(lv_inheritedDamage, lv_psionicLockdownTargetShield);
+    UnitBehaviorEffectTreeSetUserData(lv_psionicLockdownTarget, "PsionicLockdownData", "PsionicLockdownShield", (lv_psionicLockdownTargetShield - lv_reducedDamage));
+    lv_inheritedDamage -= lv_reducedDamage;
+    if (((lv_psionicLockdownTargetShield - lv_reducedDamage) <= 0.0)) {
+        UnitBehaviorRemove(lv_psionicLockdownTarget, "PsionicLockdown", 1);
+    }
+
+    if ((lv_inheritedDamage > 0.0)) {
+        auto6D674406_val = EventUnitBehavior();
+        if (auto6D674406_val == "PsionicLockdownMelee") {
+            if ((libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogEffect, EventUnitDamageEffect(), "ArmorReduction", EventUnitDamageSourcePlayer()) == 1.0)) {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageMeleeArmorReducted", lv_psionicLockdownTarget, lv_inheritedDamage);
+            }
+            else {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageMeleeArmorIgnored", lv_psionicLockdownTarget, lv_inheritedDamage);
+            }
+        }
+        else if (auto6D674406_val == "PsionicLockdownRanged") {
+            if ((libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogEffect, EventUnitDamageEffect(), "ArmorReduction", EventUnitDamageSourcePlayer()) == 1.0)) {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageRangedArmorReducted", lv_psionicLockdownTarget, lv_inheritedDamage);
+            }
+            else {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageRangedArmorIgnored", lv_psionicLockdownTarget, lv_inheritedDamage);
+            }
+        }
+        else if (auto6D674406_val == "PsionicLockdownSplash") {
+            if ((libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogEffect, EventUnitDamageEffect(), "ArmorReduction", EventUnitDamageSourcePlayer()) == 1.0)) {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageSplashArmorReducted", lv_psionicLockdownTarget, lv_inheritedDamage);
+            }
+            else {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageSplashArmorIgnored", lv_psionicLockdownTarget, lv_inheritedDamage);
+            }
+        }
+        else if (auto6D674406_val == "PsionicLockdownSpell") {
+            if ((libNtve_gf_CatalogFieldValueGetAsReal(c_gameCatalogEffect, EventUnitDamageEffect(), "ArmorReduction", EventUnitDamageSourcePlayer()) == 1.0)) {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageSpellArmorReducted", lv_psionicLockdownTarget, lv_inheritedDamage);
+            }
+            else {
+                UnitDamage(EventUnitDamageSourceUnit(), "DamageSpellArmorIgnored", lv_psionicLockdownTarget, lv_inheritedDamage);
+            }
+        }
+        else {
+        }
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib85E3144F_gt_PsionicLockdown_Init () {
+    lib85E3144F_gt_PsionicLockdown = TriggerCreate("lib85E3144F_gt_PsionicLockdown_Func");
+    TriggerAddEventUnitDamageAbsorbed(lib85E3144F_gt_PsionicLockdown, null, "PsionicLockdownMelee");
+    TriggerAddEventUnitDamageAbsorbed(lib85E3144F_gt_PsionicLockdown, null, "PsionicLockdownRanged");
+    TriggerAddEventUnitDamageAbsorbed(lib85E3144F_gt_PsionicLockdown, null, "PsionicLockdownSplash");
+    TriggerAddEventUnitDamageAbsorbed(lib85E3144F_gt_PsionicLockdown, null, "PsionicLockdownSpell");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: UmojanInit
+//--------------------------------------------------------------------------------------------------
+bool lib85E3144F_gt_UmojanInit_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto4B61DA2F_g;
+    int auto4B61DA2F_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((UnitTypeGetProperty("SCV", c_unitPropSuppliesUsed) == 0.0) && (UnitTypeGetProperty("Probe", c_unitPropSuppliesUsed) == 0.0) && (UnitTypeGetProperty("Drone", c_unitPropSuppliesUsed) == 0.0) && (UnitTypeGetProperty("DroneBurrowed", c_unitPropSuppliesUsed) == 0.0))) {
+        auto4B61DA2F_g = PlayerGroupActive();
+        auto4B61DA2F_var = -1;
+        while (true) {
+            auto4B61DA2F_var = PlayerGroupNextPlayer(auto4B61DA2F_g, auto4B61DA2F_var);
+            if (auto4B61DA2F_var < 0) { break; }
+            CatalogFieldValueSet(c_gameCatalogUnit, "Pioneer", "Food", auto4B61DA2F_var, "0");
+        }
+    }
+
+    if (((CatalogFieldValueGetAsInt(c_gameCatalogAbil, "SCVHarvest", "FlagArray[" + IntToString(0) + "]", c_playerAny) == 1) && (CatalogFieldValueGetAsInt(c_gameCatalogAbil, "ProbeHarvest", "FlagArray[" + IntToString(0) + "]", c_playerAny) == 1) && (CatalogFieldValueGetAsInt(c_gameCatalogAbil, "DroneHarvest", "FlagArray[" + IntToString(0) + "]", c_playerAny) == 1))) {
+        TriggerEnable(lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger, true);
+        lib85E3144F_gf_UmojanInfiniteMoneyMapAction(UnitGroup("Pioneer", c_playerAny, RegionEntireMap(), UnitFilter((1 << c_targetFilterWorker), 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32))), 0));
+    }
+    else {
+        TriggerEnable(lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger, false);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib85E3144F_gt_UmojanInit_Init () {
+    lib85E3144F_gt_UmojanInit = TriggerCreate("lib85E3144F_gt_UmojanInit_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: UmojanInfiniteMoneyMap:Trigger
+//--------------------------------------------------------------------------------------------------
+bool lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetType(EventUnit()) == "Pioneer")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lib85E3144F_gf_UmojanInfiniteMoneyMapAction(libNtve_gf_ConvertUnitToUnitGroup(EventUnit()));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger_Init () {
+    lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger = TriggerCreate("lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger_Func");
+    TriggerEnable(lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger, false);
+    TriggerAddEventUnitRegion(lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger, null, RegionEntireMap(), true);
+}
+
+void lib85E3144F_InitTriggers () {
+    lib85E3144F_gt_NanoCleanse_Init();
+    lib85E3144F_gt_PsionicLockdown_Init();
+    lib85E3144F_gt_UmojanInit_Init();
+    lib85E3144F_gt_UmojanInfiniteMoneyMapTrigger_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool lib85E3144F_InitLib_completed = false;
+
+void lib85E3144F_InitLib () {
+    if (lib85E3144F_InitLib_completed) {
+        return;
+    }
+
+    lib85E3144F_InitLib_completed = true;
+
+    lib85E3144F_InitLibraries();
+    lib85E3144F_InitTriggers();
+}
+

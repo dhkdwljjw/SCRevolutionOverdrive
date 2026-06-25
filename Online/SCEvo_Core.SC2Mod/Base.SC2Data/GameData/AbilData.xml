@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilEffectTarget default="1" id="SCBW_AbilTarget">
+        <CmdButtonArray index="Execute" DefaultButtonFace="##id##" Requirements="##id##">
+            <Flags index="UseDefaultButton" value="1"/>
+            <Flags index="CreateDefaultButton" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilEffectInstant default="1" id="SCBW_AbilInstant">
+        <CmdButtonArray index="Execute" DefaultButtonFace="##id##" Requirements="##id##">
+            <Flags index="UseDefaultButton" value="1"/>
+            <Flags index="CreateDefaultButton" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectInstant>
+    <CAbilResearch default="1" id="SCBW_Research">
+        <?token id="race" value="Neutral"?>
+        <EditorCategories value="Race:##race##,AbilityorEffectType:Structures"/>
+        <AbilityCategories index="CanBeIllusionDisabled" value="1"/>
+        <Flags index="SmartRequirement" value="1"/>
+        <InfoArray index="Research1" Time="1" Upgrade="##id##">
+            <Resource index="Minerals" value="1"/>
+            <Resource index="Vespene" value="1"/>
+            <Button DefaultButtonFace="##id##" State="Restricted" Requirements="##id##">
+                <Flags index="ShowInGlossary" value="1"/>
+                <Flags index="ToSelection" value="1"/>
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research2" Time="1">
+            <Resource index="Minerals" value="1"/>
+            <Resource index="Vespene" value="1"/>
+            <Button State="Restricted">
+                <Flags index="ShowInGlossary" value="1"/>
+                <Flags index="ToSelection" value="1"/>
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Research3" Time="1">
+            <Resource index="Minerals" value="1"/>
+            <Resource index="Vespene" value="1"/>
+            <Button State="Restricted">
+                <Flags index="ShowInGlossary" value="1"/>
+                <Flags index="ToSelection" value="1"/>
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilResearch default="1" id="SCBW_ResearchLeveled" parent="SCBW_Research">
+        <InfoArray index="Research1" Upgrade="##id##_Lvl1">
+            <Button DefaultButtonFace="##id##@Lvl1" Requirements="##id##@Lvl1"/>
+        </InfoArray>
+        <InfoArray index="Research2" Upgrade="##id##_Lvl2">
+            <Button DefaultButtonFace="##id##@Lvl2" Requirements="##id##@Lvl2"/>
+        </InfoArray>
+        <InfoArray index="Research3" Upgrade="##id##_Lvl3">
+            <Button DefaultButtonFace="##id##@Lvl3" Requirements="##id##@Lvl3"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilMorphPlacement default="1" id="TerranBuildingSCBW@Land">
+        <?token id="unit"?>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Land"/>
+        <ActorKey value="LiftOffLand"/>
+        <Flags index="IgnorePlacement" value="0"/>
+        <Flags index="RallyReset" value="1"/>
+        <Flags index="SuppressMovement" value="1"/>
+        <InfoArray Unit="##unit##" CollideRange="0">
+            <SectionArray index="Abils">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+            <SectionArray index="Actor">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Facing">
+                <DurationArray index="Duration" value="0.5"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Delay" value="0.5"/>
+                <DurationArray index="Duration" value="0.733"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="2"/>
+                <EffectArray index="Finish" value="TerranBuildingSCBW@LandFinish"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorphPlacement>
+    <CAbilMorph default="1" id="TerranBuildingSCBW@LiftOff">
+        <?token id="unit"?>
+        <ValidatorArray value="AddonIsNotWorkingSCBW"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:MorphsandBurrows"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Lift"/>
+        <ActorKey value="LiftOffLand"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="RallyReset" value="1"/>
+        <InfoArray Unit="##unit##">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="1.5"/>
+            </SectionArray>
+            <SectionArray index="Collide">
+                <EffectArray index="Start" value="TerranBuildingSCBW@LiftOffStart"/>
+            </SectionArray>
+            <SectionArray index="Mover">
+                <DurationArray index="Duration" value="1.6333"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Delay" value="2"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
+    <CAbilBuild default="1" id="TerranBuildingSCBW@AddOns">
+        <!--<Name value="Abil/Name/TerranAddOns"/>-->
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
+        <FlagArray index="IgnoreUnitBuildTime" value="0"/>
+        <FlagArray index="InstantPlacement" value="1"/>
+        <FlagArray index="PeonDisableAbils" value="1"/>
+        <FlagArray index="ShowProgress" value="1"/>
+        <Alert value="AddOnComplete"/>
+        <InfoArray index="Build1" AddOnParentCmdPriority="-1">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2" AddOnParentCmdPriority="1">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <Type value="AddOn"/>
+        <HaltCmdButton DefaultButtonFace="BuildCancelSCBW">
+            <Flags index="UseDefaultButton" value="1"/>
+            <Flags index="CreateDefaultButton" value="1"/>
+        </HaltCmdButton>
+    </CAbilBuild>
+    <CAbilArmMagazine default="1" id="SCBW_ArmMagazine">
+        <?token id="Ammo1"?>
+        <InfoArray index="Ammo1" Unit="##Ammo1##">
+            <Charge Link="##Ammo1##" Location="Unit"/>
+            <Cooldown Link="##Ammo1##" TimeUse="0.01"/>
+            <Button DefaultButtonFace="##Ammo1##" Requirements="##id##@Arm">
+                <Flags index="ToSelection" value="1"/>
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilArmMagazine>
+    <CAbilBuild default="1" id="SCBW_Build">
+        <!--<DefaultButtonCardId value="Bld1"/>-->
+        <DefaultButtonCardId value="Bld1"/>
+        <FlagArray index="IgnoreUnitBuildTime" value="0"/>
+        <FlagArray index="Interruptible" value="1"/>
+        <FlagArray index="PeonDisableCollision" value="1"/>
+        <FlagArray index="AutoHarvest" value="1"/>
+        <InfoArray index="Build1">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build2">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build3">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build4">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build5">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build6">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build7">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build8">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build9">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build10">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build11">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build12">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build13">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build14">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build15">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build16">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build17">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build18">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build19">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build20">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build21">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build22">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build23">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build24">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build25">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build26">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build27">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build28">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build29">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Build30">
+            <Button State="Suppressed">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilTrain default="1" id="SCBW_Train">
+        <AbilityCategories index="CanBeIllusionDisabled" value="1"/>
+        <!--<Activity value="UI/TRAINING"/>-->
+        <Flags index="IgnoreUnitBuildTime" value="0"/>
+        <InfoArray index="Train1" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train2" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train3" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train4" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train5" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train6" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train7" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train8" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train9" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train10" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train11" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train12" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train13" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train14" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train15" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train16" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train17" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train18" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train19" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train20" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train21" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train22" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train23" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train24" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train25" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train26" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train27" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train28" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train29" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <InfoArray index="Train30" Effect="SCBW_TrainFinish">
+            <Button State="Restricted">
+                <Flags index="UseDefaultButton" value="1"/>
+                <Flags index="CreateDefaultButton" value="1"/>
+            </Button>
+        </InfoArray>
+        <RefundFraction>
+            <Resource index="Terrazine" value="0"/>
+            <Resource index="Custom" value="0"/>
+        </RefundFraction>
+    </CAbilTrain>
+    <CAbilTrain default="1" id="ProtossSCBWTrain" parent="SCBW_Train">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Structures"/>
+        <Activity value="UI/Warping"/>
+    </CAbilTrain>
+    <CAbilMorph default="1" id="AirStackingMorphBase">
+        <?token id="morphTo" value="Ball"?>
+        <?token id="Race" value="Neutral"?>
+        <EditorCategories value="AbilityorEffectType:Units,Race:##Race##"/>
+        <Flags index="IgnoreFacing" value="1"/>
+        <Flags index="IgnoreFood" value="1"/>
+        <Flags index="IgnoreUnitCost" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <InfoArray Unit="##morphTo##"/>
+    </CAbilMorph>
+    <CAbilBuildable id="BuildInProgress">
+        <TechAliasArray value="_BuildInProgress"/>
+    </CAbilBuildable>
+    <CAbilEffectInstant id="GhostHoldFire">
+        <AbilSetId value="HoldFire"/>
+        <TechAliasArray value="_IllusionEnabled"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="GhostWeaponsFree">
+        <AbilSetId value="WeaponsFree"/>
+        <TechAliasArray value="_IllusionEnabled"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="LurkerHoldFire">
+        <TechAliasArray value="_IllusionEnabled"/>
+    </CAbilEffectInstant>
+    <CAbilEffectInstant id="LurkerRemoveHoldFire">
+        <TechAliasArray value="_IllusionEnabled"/>
+    </CAbilEffectInstant>
+    <CAbilBuildable id="MutateInProgressSCBW">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <TechAliasArray value="_BuildInProgress"/>
+        <Activity value="UI/Mutating"/>
+    </CAbilBuildable>
+    <CAbilRally id="ProgressRally">
+        <InfoArray index="0">
+            <AllowSetValidators value="SCBW_DisableRallyGather@Condition"/>
+        </InfoArray>
+    </CAbilRally>
+    <CAbilRally id="Rally">
+        <InfoArray index="0">
+            <AllowSetValidators value="SCBW_DisableRallyGather@Condition"/>
+        </InfoArray>
+    </CAbilRally>
+    <CAbilEffectTarget id="ScannerSweep">
+        <AbilSetId value="ScanSweep"/>
+        <CmdButtonArray index="Execute">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+    </CAbilEffectTarget>
+    <CAbilBuildable id="WarpInProgressSCBW">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <TechAliasArray value="_BuildInProgress"/>
+        <Activity value="UI/Warping"/>
+    </CAbilBuildable>
+    <CAbilTransport id="BunkerTransport">
+        <LoadValidatorArray value="SCBW_IsTransportable"/>
+    </CAbilTransport>
+    <CAbilTransport id="CommandCenterTransport">
+        <LoadValidatorArray value="SCBW_IsTransportable"/>
+    </CAbilTransport>
+    <CAbilTransport id="MedivacTransport">
+        <LoadValidatorArray value="SCBW_IsTransportable"/>
+    </CAbilTransport>
+    <CAbilTransport id="NydusCanalTransport">
+        <LoadValidatorArray value="SCBW_IsTransportable"/>
+    </CAbilTransport>
+    <CAbilTransport id="NydusWormTransport">
+        <LoadValidatorArray value="SCBW_IsTransportable"/>
+    </CAbilTransport>
+    <CAbilTransport id="OverlordTransport">
+        <LoadValidatorArray value="SCBW_IsTransportable"/>
+    </CAbilTransport>
+    <CAbilEffectInstant id="MedivacSpeedBoost">
+        <AbilSetId value="Boost"/>
+    </CAbilEffectInstant>
+    <CAbilRedirectInstant id="SalvageRedirect">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Neutral"/>
+        <Abil value="Salvage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SalvageRedirect">
+            <Flags index="AllowMinimap" value="0"/>
+        </CmdButtonArray>
+    </CAbilRedirectInstant>
+    <CAbilBuild id="TerranBuild">
+        <TechAliasArray value="_SCVBuild"/>
+    </CAbilBuild>
+    <CAbilTransport id="WarpPrismTransport">
+        <LoadValidatorArray value="SCBW_IsTransportable"/>
+    </CAbilTransport>
+    <CAbilSpecialize id="SegmentedWireframes">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <SharedFlags index="Disabled" value="1"/>
+        <InfoArray index="Specialize1">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg0_0"/>
+        </InfoArray>
+        <InfoArray index="Specialize2">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg0_1"/>
+        </InfoArray>
+        <InfoArray index="Specialize3">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg1_0"/>
+        </InfoArray>
+        <InfoArray index="Specialize4">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg1_1"/>
+        </InfoArray>
+        <InfoArray index="Specialize5">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg2_0"/>
+        </InfoArray>
+        <InfoArray index="Specialize6">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg2_1"/>
+        </InfoArray>
+        <InfoArray index="Specialize7">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg3_0"/>
+        </InfoArray>
+        <InfoArray index="Specialize8">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg3_1"/>
+        </InfoArray>
+        <InfoArray index="Specialize9">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg4_0"/>
+        </InfoArray>
+        <InfoArray index="Specialize10">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg4_1"/>
+        </InfoArray>
+        <InfoArray index="Specialize11">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg5_0"/>
+        </InfoArray>
+        <InfoArray index="Specialize12">
+            <Charge CountMax="100" CountStart="100" Link="Unit/WFSeg5_1"/>
+        </InfoArray>
+        <InfoArray index="Specialize13">
+            <Charge CountMax="6" CountStart="6" Link="Unit/WFSegCount"/>
+        </InfoArray>
+    </CAbilSpecialize>
+</Catalog>

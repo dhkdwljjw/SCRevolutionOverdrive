@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementAnd id="BarracksSCBW">
+        <OperandArray index="0" value="SupplyDepotSCBW@Count"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitNukeCompleteOnly421500357">
+        <Count Link="Alias_Nuke"/>
+    </CRequirementCountUnit>
+    <CRequirementCountBehavior id="Hallucination@CountAtUnit" parent="SCBW_BehaviorCountAtUnitNoTech" x="Hallucination"/>
+    <CRequirementCountBehavior id="OracleStasisTrapTarget@CountAtUnit" parent="SCBW_BehaviorCountAtUnitNoTech" x="OracleStasisTrapTarget"/>
+    <CRequirementCountBehavior id="GravitonBeam@CountAtUnit" parent="SCBW_BehaviorCountAtUnitNoTech" x="GravitonBeam"/>
+    <CRequirementCountUnit id="NukeSCBW@Count">
+        <Count Link="Alias_Nuke"/>
+    </CRequirementCountUnit>
+    <CRequirementOr id="SCBW_DetectionSuppressed">
+        <OperandArray value="Hallucination@CountAtUnit"/>
+        <OperandArray value="OracleStasisTrapTarget@CountAtUnit"/>
+        <OperandArray value="GravitonBeam@CountAtUnit"/>
+    </CRequirementOr>
+    <CRequirementCountBehavior id="SCBW_HaveAbilityDisablerBehavior">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="_AbilityDisable" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUpgrade id="zerglingmovementspeed@Count" parent="SCBW_UpgradeCount" x="zerglingmovementspeed"/>
+    <CRequirementCountUpgrade id="overlordspeed@Count" parent="SCBW_UpgradeCount" x="overlordspeed"/>
+    <CRequirementCountUpgrade id="CentrificalHooks@Count" parent="SCBW_UpgradeCount" x="CentrificalHooks"/>
+    <CRequirementCountUpgrade id="EvolveMuscularAugments@Count" parent="SCBW_UpgradeCount" x="EvolveMuscularAugments"/>
+    <CRequirementCountUpgrade id="GlialReconstitution@Count" parent="SCBW_UpgradeCount" x="GlialReconstitution"/>
+    <CRequirementCountUpgrade id="TunnelingClaws@Count" parent="SCBW_UpgradeCount" x="TunnelingClaws"/>
+    <CRequirementCountUpgrade id="Charge@Count" parent="SCBW_UpgradeCount" x="Charge"/>
+    <CRequirementCountUpgrade id="ObserverGraviticBooster@Count" parent="SCBW_UpgradeCount" x="ObserverGraviticBooster"/>
+    <CRequirementCountUpgrade id="GraviticDrive@Count" parent="SCBW_UpgradeCount" x="GraviticDrive"/>
+    <CRequirementCountUpgrade id="VoidRaySpeedUpgrade@Count" parent="SCBW_UpgradeCount" x="VoidRaySpeedUpgrade"/>
+    <CRequirementCountUpgrade id="BansheeSpeed@Count" parent="SCBW_UpgradeCount" x="BansheeSpeed"/>
+</Catalog>

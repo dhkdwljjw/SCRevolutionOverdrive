@@ -1,0 +1,32 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Triggers
+//--------------------------------------------------------------------------------------------------
+// Constants
+const string lib01B5E727_gv_warpGateTrainAbility = "WarpGateTrainTaldarim";
+const string lib01B5E727_gv_supplicantWarpTrainActualAbility = "WarpGateTrainSupplicantTrue";
+const string lib01B5E727_gv_supplicantWarpTrainDummyUnitLink = "AlarakSupplicantWarpTrainDummy";
+const string lib01B5E727_gv_supplicantWarpTrainCreatorUnitLink = "AlarakSupplicantWarpTrainCreator";
+const string lib01B5E727_gv_supplicantWarpTrainActualUnitLink = "Supplicant";
+const string lib01B5E727_gv_supplicantWarpTrainWarpPowerCheckBehaviorLink = "SupplicantWarpPowerCheck";
+const string lib01B5E727_gv_supplicantWarpTrainWarpRefundBehaviorLink = "SupplicantCancelCheck";
+const string lib01B5E727_gv_supplicantWarpTrainCreatorFinderBehaviorLink = "SupplicantCreatorCheck";
+const string lib01B5E727_gv_supplicantWarpTrainCreatorWarpGateFinderBehaviorLink = "SupplicantCreatorWarpGateCheck";
+const string lib01B5E727_gv_supplicantWarpTrainActualUnitBirthEventLink = "SupplicantBirth";
+const string lib01B5E727_gv_supplicantWarpTrainActualUnitCancelEventLink = "SuplicantWarpCancel";
+const string lib01B5E727_gv_cM_SupplicantWarpGateMarkerPrefix = "CM_SupplicantCreatorWarpGate";
+
+// Variable Declarations
+fixed lib01B5E727_gv_supplicantWarpTrainActualUnitCost;
+abilcmd lib01B5E727_gv_supplicantWarpTrainActualCommand;
+
+// Trigger Declarations
+trigger lib01B5E727_gt_SupplicantWarpTrain;
+trigger lib01B5E727_gt_SupplicantActualTrain;
+trigger lib01B5E727_gt_SupplicantWarpFinish;
+trigger lib01B5E727_gt_SupplicantWarpCancel;
+
+// Library Initialization
+void lib01B5E727_InitVariables ();
+

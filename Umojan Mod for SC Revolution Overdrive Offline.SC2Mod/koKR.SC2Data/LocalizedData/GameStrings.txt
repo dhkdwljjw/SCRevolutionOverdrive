@@ -1,0 +1,449 @@
+﻿Alert/Text/AmmoComplete=장전 완료
+Alert/Text/BuildComplete=건설 완료
+Alert/Text/MergeComplete=합체 완료
+Alert/Text/MorphComplete=변태 완료
+Alert/Text/ResearchComplete=연구 완료
+Alert/Text/ResourceExhausted_HighYieldMineral=풍부한 광맥 고갈
+Alert/Text/SpecializeComplete=전문화 완료
+Alert/Text/TrainComplete=유닛 완성
+Alert/Text/TrainWorkerComplete=유닛 완성
+Alert/Text/UpgradeComplete=업그레이드 완료
+Alert/Text/WarpTrainComplete=소환 완료
+Behavior/Name/InspirationAttackDamage=사기 고양
+Behavior/Name/InspirationMovement=사기 고양
+Behavior/Name/NanoCleanse=나노 정화
+Behavior/Name/PointDefenseSystemAquila=국지 방어 시스템 가동
+Behavior/Name/PsionicDisruptionStorm=사이오닉 분열 폭풍
+Behavior/Name/PsionicLockdown=사이오닉 억제장
+Behavior/Name/PsionicSuppressionField=전자기 제압장
+Behavior/Name/PsionicSuppressionFieldFirebat=전자기 제압장
+Behavior/Name/ReconUAVOvercharge=반응로 과부하
+Behavior/Name/SeekerMode=감시 모드
+Behavior/Name/SeekerModeSquadSight=시야 공유
+Behavior/Name/ShadowAssassinCloak=은폐
+Behavior/Name/ShadowAssassinHoldFire=공격 중지
+Behavior/Name/ShadowAssassinHoldFireB=공격 중지
+Behavior/Name/VespeneHarvesterUmojanTarget=베스핀 채취기
+Behavior/Name/ZirconCruiseMissile=지르콘 순항 미사일
+Behavior/Tooltip/InspirationAttackDamage=이 유닛의 공격력이 증가했습니다.
+Behavior/Tooltip/InspirationMovement=이 유닛의 이동 속도가 증가했습니다.
+Behavior/Tooltip/NanoCleanse=이 유닛은 방어막을 받고 있으며 모든 해로운 효과에 면역입니다.<n/><n/>남은 방어막: <c val="0080FF"><d ref= "$RunAccumulators:ShieldRemainingNanoCleanseSource$"/></c>
+Behavior/Tooltip/PointDefenseSystemAquila=이 유닛은 국지 방어 시스템을 가동하여, 주변의 적 투사체 공격을 요격하고 있습니다.
+Behavior/Tooltip/PsionicDisruptionStorm=사이오닉 분열 폭풍에 공격받고 있습니다. 효과 지역에 있는 동안 막대한 피해를 받으며, 공격력이 감소합니다.
+Behavior/Tooltip/PsionicLockdown=이 유닛은 방어막을 갖춘 대신 이동, 공격, 능력 사용을 봉쇄당했습니다.<n/><n/>남은 방어막: <c val="0080FF"><d ref= "$RunAccumulators:ShieldRemainingPsionicLockdownSource$"/></c>
+Behavior/Tooltip/PsionicSuppressionField=이 유닛의 공격 속도와 공격 사거리가 감소했습니다.
+Behavior/Tooltip/PsionicSuppressionFieldFirebat=이 유닛의 공격 속도가 감소했습니다.
+Behavior/Tooltip/ReconUAVOvercharge=이 유닛은 적 공중 유닛에 자폭하여 큰 피해를 줄 수 있습니다.
+Behavior/Tooltip/SeekerMode=이 유닛은 추가 시야와 탐지 거리, 능력 사거리를 획득했으며, 주변 아군에 추가 공격 사거리를 제공합니다.
+Behavior/Tooltip/SeekerModeSquadSight=이 유닛의 공격 사거리가 증가했습니다.
+Behavior/Tooltip/ShadowAssassinCloak=이 유닛은 은폐 상태이며 탐지기나 탐지 효과로만 적에게 드러납니다.
+Behavior/Tooltip/VespeneHarvesterUmojanTarget=이 베스핀 처리장에서 개척자가 한 번에 채취하는 베스핀의 양이 증가합니다.
+Behavior/Tooltip/ZirconCruiseMissile=이 유닛은 지르콘 순항 미사일의 목표로 지정되었습니다.
+Button/Name/ActivatePointDefenseSystem=국지 방어 시스템 가동
+Button/Name/ActivatePointDefenseSystemAquila=국지 방어 시스템 가동
+Button/Name/ActiveElectronicallyScannedArrayRadarUpgraded=능동 위상배열 레이더
+Button/Name/AmphibiousShip=강습상륙함 생산
+Button/Name/AmphibiousShipLoad=들이기
+Button/Name/AmphibiousShipUnloadAll=모두 내보내기
+Button/Name/AntiTankMissile=대전차 미사일
+Button/Name/Aquila=아퀼라 호출
+Button/Name/AresArtillery=아레스 자주포 생산
+Button/Name/ArmMaelstromRounds=소용돌이 포탄 장전
+Button/Name/ArmTacticalCruiseMissile=순항 미사일 장전
+Button/Name/ArmamentFacility=병기창 건설
+Button/Name/Arsenal=조병창 건설
+Button/Name/Artemis=아르테미스 생산
+Button/Name/Athena=아테나 생산
+Button/Name/AthenaWeaponSwitchRanger=레인저 미사일 사용
+Button/Name/AthenaWeaponSwitchVympel=빔펠 미사일 사용
+Button/Name/Berkut=베르쿠트 생산
+Button/Name/Centurion=백인대장 훈련
+Button/Name/CenturionInspiration=사기 고양
+Button/Name/CenturionPlasmaSurge=플라즈마 쇄도
+Button/Name/CloakOffShadowAssassin=비은폐
+Button/Name/CloakOnShadowAssassin=은폐
+Button/Name/CommandPost=지휘소 건설
+Button/Name/Crusader=크루세이더 훈련
+Button/Name/DeactivatePointDefenseSystem=국지 방어 시스템 해제
+Button/Name/DeployMineralResonator=광물 공명기 장착
+Button/Name/DeployPsionicSuppressionField=전자기 제압장
+Button/Name/Diamondback=코브라 생산
+Button/Name/EngineeringFactory=기계공학 공장 건설
+Button/Name/FleetHeadquarters=함대 지휘소 건설
+Button/Name/FragmentShrapnelUpgraded=파편 유산탄
+Button/Name/FutureWarfareLab=미래전 연구소 건설
+Button/Name/GatherUmoj=채취
+Button/Name/HaywireMissile=폭주 미사일
+Button/Name/HeraProtocol=헤라 프로토콜
+Button/Name/InfantryQuarter=생활관 건설
+Button/Name/LogisticsDepot=병참 기지 건설
+Button/Name/MaverickMissilesUpgraded=매버릭 미사일 포대
+Button/Name/MineralResonator=광물 공명기
+Button/Name/MissileCruiser=미사일 순양함 생산
+Button/Name/NanoCleanse=나노 정화
+Button/Name/NanoDisassembleRepair=나노 분해
+Button/Name/PermanentCloakVoidAssaulter=영구 은폐
+Button/Name/PermanentlyCloakedReconUAV=영구 은폐
+Button/Name/Pioneer=개척자 생산
+Button/Name/PowerPlant=발전소 건설
+Button/Name/Praetoria=프리토리아 생산
+Button/Name/PsionicDisruptionStorm=사이오닉 분열 폭풍
+Button/Name/PsionicLockdown=사이오닉 억제장
+Button/Name/ReconUAV=정찰 드론 생산
+Button/Name/ReconUAVOvercharge=반응로 과부하
+Button/Name/RecoveryDevice=수복탑 건설
+Button/Name/RecoveryDeviceRecharge=회복
+Button/Name/ResearchActiveElectronicallyScannedArrayRadar=능동 위상배열 레이더 연구
+Button/Name/ResearchAntiTankMissile=대전차 미사일 연구
+Button/Name/ResearchAthenaJotunBoosters=요툰 증폭기 연구
+Button/Name/ResearchCenturionInspiration=사기 고양 연구
+Button/Name/ResearchDeployPsionicSuppressionField=전자기 제압장 연구
+Button/Name/ResearchFragmentShrapnel=파편 유산탄 연구
+Button/Name/ResearchHeraProtocol=헤라 프로토콜 연구
+Button/Name/ResearchMaelstromRounds=소용돌이 포탄 연구
+Button/Name/ResearchMaverickMissiles=매버릭 미사일 포대 연구
+Button/Name/ResearchPersonalCloakingShadowAssassin=개인 은폐 연구
+Button/Name/ResearchPraetoriaHangar=프리토리아 격납고 연구
+Button/Name/ResearchPsionicLockdown=사이오닉 억제장 연구
+Button/Name/ResearchReconUAVOvercharge=반응로 과부하 연구
+Button/Name/ResearchSentryPostAccelerator=파수 초소 가속기 연구
+Button/Name/ResearchShapedBlastWarhead=성형작약 탄두 연구
+Button/Name/ResearchTacticalVisor=전술 조준경 연구
+Button/Name/ResearchUmojanPowerShields=우모자 동력 보호막 연구
+Button/Name/ResearchUmojanShieldsBattery=보호막 축전지 연구
+Button/Name/ResearchVoidAssaulterPsionicLash=사이오닉 채찍 연구
+Button/Name/ResearchZirconCruiseMissile=지르콘 순항 미사일 연구
+Button/Name/SeekerMode=감시 모드
+Button/Name/SeekerModeOff=감시 모드 해제
+Button/Name/SentryPost=파수 초소 건설
+Button/Name/SentryPostAccelerator=파수 초소 가속기
+Button/Name/ShadowAssassin=그림자 수호자 훈련
+Button/Name/ShapedBlastWarheadUpgraded=성형작약 탄두
+Button/Name/SnipeOffShadowAssassin=저격 태세 해제
+Button/Name/SnipeOnShadowAssassin=저격 태세
+Button/Name/SpecOpsCommand=특수전 사령부 건설
+Button/Name/StarStation=우주 정거장 건설
+Button/Name/Striker=타격대 훈련
+Button/Name/TacticalCruiseMissile=순항 미사일 공습
+Button/Name/TacticalVisorUpgraded=전술 조준경
+Button/Name/TacticsAcademy=전술 연구소 건설
+Button/Name/TomahawkCruiseMissile=토마호크 순항 미사일
+Button/Name/UmojanAirArmorUpgradeLevel1=공중 장갑 업그레이드 1단계
+Button/Name/UmojanAirArmorUpgradeLevel2=공중 장갑 업그레이드 2단계
+Button/Name/UmojanAirArmorUpgradeLevel3=공중 장갑 업그레이드 3단계
+Button/Name/UmojanAirWeaponsUpgradeLevel1=공중 무기 업그레이드 1단계
+Button/Name/UmojanAirWeaponsUpgradeLevel2=공중 무기 업그레이드 2단계
+Button/Name/UmojanAirWeaponsUpgradeLevel3=공중 무기 업그레이드 3단계
+Button/Name/UmojanBuild=건물 건설
+Button/Name/UmojanBuildAdvanced=고급 건물 건설
+Button/Name/UmojanGroundArmorUpgradeLevel1=지상 장갑 업그레이드 1단계
+Button/Name/UmojanGroundArmorUpgradeLevel2=지상 장갑 업그레이드 2단계
+Button/Name/UmojanGroundArmorUpgradeLevel3=지상 장갑 업그레이드 3단계
+Button/Name/UmojanGroundWeaponsUpgradeLevel1=지상 무기 업그레이드 1단계
+Button/Name/UmojanGroundWeaponsUpgradeLevel2=지상 무기 업그레이드 2단계
+Button/Name/UmojanGroundWeaponsUpgradeLevel3=지상 무기 업그레이드 3단계
+Button/Name/UmojanHeroicUnitsRegeneration=재구축
+Button/Name/UmojanHeroicUnitsRegenerationAquila=재구축
+Button/Name/UmojanHeroicUnitsRegenerationVoidAssaulter=공허의 안식
+Button/Name/UmojanHeroicUnitsRegenerationZeus=재구축
+Button/Name/UmojanPowerShield=우모자 동력 보호막
+Button/Name/UmojanPowerShieldsUpgradeLevel1=우모자 동력 보호막 업그레이드 1단계
+Button/Name/UmojanPowerShieldsUpgradeLevel2=우모자 동력 보호막 업그레이드 2단계
+Button/Name/UmojanPowerShieldsUpgradeLevel3=우모자 동력 보호막 업그레이드 3단계
+Button/Name/VespeneHarvesterUmojan=베스핀 채취기 장착
+Button/Name/VespenePlant=베스핀 처리장 건설
+Button/Name/VoidAssaulter=공허 습격자 호출
+Button/Name/VoidAssaulterOrbitalStrike=궤도 폭격
+Button/Name/VoidAssaulterPsionicLash=사이오닉 채찍
+Button/Name/WarHoundUmojan=투견 생산
+Button/Name/Warrior=기간병 훈련
+Button/Name/WeaponsFreeShadowAssassin=무기 사용
+Button/Name/Zeus=제우스 호출
+Button/Name/ZirconCruiseMissile=지르콘 순항 미사일
+Button/Tooltip/ActivatePointDefenseSystem=미사일 순양함이 국지 방어 시스템을 작동하여, 주변의 모든 적 미사일 공격을 요격합니다. 특수 공격은 요격할 수 없으며, 요격 당 보호막 <d ref="Effect,PointDefenseSystemLaserCost,VitalArray[Shields].Change*(-1)"/>을 소모합니다.<n/><n/>미사일 순양함의 현재 보호막이 50 이상이어야 합니다.
+Button/Tooltip/ActivatePointDefenseSystemAquila=아퀼라가 국지 방어 시스템을 작동하여, <d ref="Behavior,PointDefenseSystemAquila,Duration"/>초 동안 주변의 모든 적 미사일 공격을 최대 <d ref="Behavior,PointDefenseSystemAquila,MaxStackCount"/>회 요격합니다. 특수 공격은 요격할 수 없습니다.
+Button/Tooltip/ActiveElectronicallyScannedArrayRadarUpgraded=<c val="FFFF80">투견</c>의 공중 공격 사거리가 +<c val="FFFF80">3</c> 증가합니다.
+Button/Tooltip/AmphibiousShip=공중 수송기입니다.
+Button/Tooltip/AmphibiousShipLoad=강습상륙함의 탑승칸에 유닛을 들입니다.
+Button/Tooltip/AmphibiousShipUnloadAll=모든 유닛을 내보냅니다.
+Button/Tooltip/AntiTankMissile=코브라가 대상 적 유닛에 대전차 미사일을 발사하여 <d ref="Effect,AntiTankMissileDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/Aquila=우모자의 함대 기함입니다. 미사일 포대와 엔터프라이즈 포를 장착하고 있습니다. 국지 방어기를 사용할 수 있습니다. 업그레이드하면 호위 전투기로 프리토리아를 배치할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/AresArtillery=자주포입니다. 별도의 공성 절차 없이 장거리 지원 포격을 할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/ArmMaelstromRounds=아레스 자주포가 소용돌이 포탄을 장전합니다. 소용돌이 포탄은 +<d ref="Behavior,MaelstromRoundsRange,Modification.RangedWeaponRange"/>의 추가 공격 사거리를 가지고, 공격 대상에 <d ref="Effect,GaussShockCannonDamageMaelstromRounds,Amount-Effect,GaussShockCannonDamageMaelstromRoundsSplash,Amount"/>의 추가 피해를 줍니다.
+Button/Tooltip/ArmTacticalCruiseMissile=격납고에 전술 순항 미사일을 배치합니다.<n/><n/>전술 순항 미사일은 <d ref="Effect,TacticalCruiseMissileCP,PeriodicPeriodArray[0]*Effect,TacticalCruiseMissileCP,PeriodCount"/>초 후 발사되어 대상 유닛을 향해 비행, 폭발하여 대상 유닛에 <d ref="Effect,TacticalCruiseMissileGroundDamage,Amount"/>의 피해, 주변 유닛에 <d ref="Effect,TacticalCruiseMissileGroundDamage,Amount*Effect,TacticalCruiseMissileGroundDamage,AreaArray[0].Fraction+1"/>의 피해를 줍니다. 비행하는 전술 순항 미사일은 적의 대공 공격으로 요격될 수 있습니다.<n/><n/>그림자 수호자가 타격 유닛을 지정합니다.
+Button/Tooltip/ArmamentFacility=모든 우모자 유닛의 무기와 장갑, 그리고 우모자 동력 보호막을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 파수 초소 (개척자 건설)
+Button/Tooltip/Arsenal=차량 생산 시설입니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 정찰 드론<n/>- 투견<n/>- 코브라
+Button/Tooltip/Artemis=제공 호위함입니다. 파괴적인 미사일 일제사격을 통해 적 공중 대상에 광역 피해를 줄 수 있습니다.<n/><n/><c val="#ColorAttackInfo">공중 유닛 공격 가능</c>
+Button/Tooltip/ArtemisUpgraded=제공 호위함입니다. 파괴적인 미사일 일제사격을 통해 적 공중 대상에 광역 피해를 줄 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/Athena=제공 전투기입니다. 강력한 대공 미사일을 탑재하고 있습니다.<n/><n/><c val="#ColorAttackInfo">공중 유닛 공격 가능</c>
+Button/Tooltip/AthenaWeaponSwitchRanger=아테나가 무기를 레인저 미사일로 전환합니다.<n/><n/>아테나의 이동 속도와 공격 속도가 증가합니다.
+Button/Tooltip/AthenaWeaponSwitchVympel=아테나가 무기를 빔펠 미사일로 전환합니다.<n/><n/>아테나의 사거리와 공격력이 증가합니다.
+Button/Tooltip/Berkut=공중 지원 유닛입니다. 감시 모드로 변환하여 추가 시야와 탐지 거리를 얻고 주변 아군 유닛에 추가 사거리를 제공할 수 있습니다. 나노 정화를 사용할 수 있습니다. 업그레이드하면 전자기 제압장을 사용할 수 있습니다.<n/><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/Centurion=보병대를 지휘하는 장교입니다. 주변 아군 보병의 보호막을 회복시킬 수 있습니다. 업그레이드를 통해 주변 아군 보병의 이동 속도와 공격력을 잠시 강화할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/CenturionInspiration=백인대장이 주변의 아군 기간병과 크루세이더, 타격대의 전투 의지를 북돋아 <d ref="Behavior,InspirationMovement,Duration"/>초 동안 이들의 이동 속도를 <d ref="(Behavior,InspirationMovement,Modification.AdditiveMoveSpeedFactor)*100"/>%만큼 증가시키고, 기간병의 공격력을 <d ref="Behavior,InspirationAttackDamage,Modification.DamageDealtUnscaled[Ranged]"/>만큼 증가시킵니다.
+Button/Tooltip/CenturionPlasmaSurge=백인대장이 <d ref="Effect,CenturionPlasmaSurgeCP,PeriodCount*Effect,CenturionPlasmaSurgeCP,PeriodicPeriodArray[0]"/>초에 걸쳐 주변의 아군 기간병과 크루세이더, 타격대의 보호막을 <d ref="(Effect,CenturionPlasmaSurgeCP,PeriodCount*Effect,CenturionPlasmaSurgeCP,PeriodicPeriodArray[0])*Behavior,CenturionPlasmaSurge,Modification.VitalRegenArray[Shields]"/>만큼 회복시킵니다.
+Button/Tooltip/CloakOffShadowAssassin=선택한 유닛의 은폐 상태를 해제합니다. 적이 볼 수 있습니다.
+Button/Tooltip/CloakOnShadowAssassin=적 유닛이 보거나 공격하지 못하게 유닛을 은폐합니다. 은폐 상태인 유닛은 탐지기나 탐지 효과로만 적에게 드러납니다.<n/><n/><c val="f078ff">초당 <d ref="-1 * (Behavior,ShadowAssassinCloak,Modification.VitalRegenArray[2] + Unit,ShadowAssassin,EnergyRegenRate)" precision="1"/>의 에너지 소모</c>
+Button/Tooltip/CommandPost=주 건물입니다. 채취한 자원을 수집합니다. 광물 공명기를 장착하여 주변 아군 개척자의 광물 채취량을 늘리거나, 베스핀 채취기를 사용하여 주변 아군 개척자의 베스핀 채취량을 늘릴 수 있습니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 개척자
+Button/Tooltip/Crusader=중돌격 보병입니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/DeactivatePointDefenseSystem=미사일 순양함이 국지 방어 시스템을 작동 해제합니다.
+Button/Tooltip/DeployMineralResonator=지휘소에 광물 공명기를 장착합니다. 주변 광물 지대에 대한 <c val="FFFF80">개척자</c>의 채취량이 <c val="80C0FF">1</c>(풍부한 광물 지대의 경우 <c val="FFFF80">2</c>) 증가합니다.
+Button/Tooltip/DeployPsionicSuppressionField=지정한 지점에 전자기 제압장을 폭발시킵니다.<n/>폭발 범위 안의 모든 적 유닛은 <d ref="Behavior,PsionicSuppressionField,Duration"/>초 동안 공격 속도가 <d ref="(1-Behavior,PsionicSuppressionField,Modification.AttackSpeedMultiplier)*100"/>%만큼, 공격 사거리가 <d ref="Behavior,PsionicSuppressionField,Modification.RangedWeaponRange*(-1)"/>만큼 감소합니다.
+Button/Tooltip/Diamondback=내구력과 공격력이 강한 중전차입니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/EngineeringFactory=정찰 드론, 투견, 코브라, 아레스 자주포를 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 아레스 자주포 (조병창)<n/>- 제우스 (미래전 연구소)
+Button/Tooltip/FleetHeadquarters=아테나, 아르테미스, 베르쿠트, 미사일 순양함을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 베르쿠트 (우주 정거장)<n/>- 미사일 순양함 (우주 정거장)<n/>- 아퀼라 (미래전 연구소)
+Button/Tooltip/FragmentShrapnelUpgraded=<c val="FFFF80">크루세이더</c>가 공격 대상 뒤 부채꼴 범위 안의 적 유닛에 <c val="FFFF80"><d ref="Effect,CrusaderShrapnelDamage,Amount"/></c>(경장갑 유닛 상대로는 <c val="FFFF80"><d ref="Effect,CrusaderShrapnelDamage,Amount+Effect,CrusaderShrapnelDamage,AttributeBonus[Light]"/></c>)의 피해를 줍니다.<n/>우모자 동력 보호막을 연구하면 <c val="FFFF80">크루세이더</c>가 추가로 타격한 적 유닛 1기마다 보호막을 <d ref="Effect,CrusaderShrapnelMU,VitalArray[Shields].Change"/>만큼 회복합니다.
+Button/Tooltip/FutureWarfareLab=우모자의 차세대 유닛들인 공허 습격자, 제우스, 아퀼라를 호출하고 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 공허 습격자 (특수전 사령부)<n/>- 제우스 (기계공학 공장)<n/>- 아퀼라 (함대 지휘소)
+Button/Tooltip/GatherUmoj=선택한 광물 지대나 베스핀 간헐천에서 개척자가 자원을 채취합니다.
+Button/Tooltip/HaywireMissile=투견이 4발의 전기 충전 미사일을 발사하여 <d ref="Effect,HaywireMissileDamage,Amount*Effect,HaywireMissileCP,PeriodCount"/>의 피해를 줍니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/HeraProtocol=제우스가 범위를 지정해, 그 안의 모든 적에 정밀 포격을 난사합니다. 지상 유닛을 상대로는 대상과 그 주변에 포격 당 <d ref="Effect,BarrageDamage,Amount"/>의 피해를 주며, 공중 유닛을 상대로는 대상에 <d ref="Effect,BarrageDamageAntiAir,Amount"/>의 피해를 줍니다.
+Button/Tooltip/InfantryQuarter=보병 생산 시설입니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 기간병
+Button/Tooltip/LogisticsDepot=보급품을 공급합니다.<n/>보급품을 늘리면 더 많은 유닛을 훈련할 수 있습니다.
+Button/Tooltip/MaverickMissilesUpgraded=<c val="FFFF80">아르테미스</c>가 지상 유닛을 <c val="FFFF80">매버릭 미사일 무기</c>로 공격할 수 있습니다.
+Button/Tooltip/MineralResonator=주변 광물 지대에 대한 <c val="FFFF80">개척자</c>의 채취량이 <c val="80C0FF">1</c>(풍부한 광물 지대의 경우 <c val="FFFF80">2</c>) 증가합니다.
+Button/Tooltip/MissileCruiser=강력한 주력함입니다. 적에게 대량의 미사일을 난사하여 공격합니다. 업그레이드하면 적 유닛에 순항 미사일을 발사할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/NanoCleanse=대상에 <d ref="Behavior,NanoCleanse,Duration"/>초 동안 유지되는 방어막을 전개하여, <d ref="Accumulator,ShieldAmountNanoCleanse,Amount"/>의 방어막을 제공하며 대상에 걸려 있던 모든 방해 효과를 제거합니다.<n/>방어막이 유지되는 동안 모든 방해 효과에 면역이 됩니다.
+Button/Tooltip/NanoDisassembleRepair=이 유닛을 분해하여 수리 자재로 사용함으로써, 대상 아군 건물의 체력과 보호막을 <d ref="Effect,NanoDisassembleRepairCP,PeriodCount*Effect,NanoDisassembleRepairCP,PeriodicPeriodArray[0]"/>초에 걸쳐 최대 <d ref="Effect,NanoDisassembleRepairMU,VitalArray[Life].Change*Effect,NanoDisassembleRepairCP,PeriodCount"/>만큼 수리합니다.
+Button/Tooltip/PermanentCloakVoidAssaulter=공허 습격자는 영구 은폐 상태입니다.
+Button/Tooltip/PermanentlyCloakedReconUAV=정찰 드론은 영구 은폐 상태입니다.
+Button/Tooltip/Pioneer=기본 일꾼 유닛입니다. 자원을 채취하고, 건물을 건설할 수 있습니다. 나노 분해를 통해 개척자를 부품으로 소모하여 아군 건물을 수리할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 유닛 공격 가능</c>
+Button/Tooltip/PowerPlant=우모자 동력 보호막을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 크루세이더 (생활관)<n/>- 타격대 (생활관)<n/>- 수복탑 (개척자 건설)
+Button/Tooltip/Praetoria=우모자의 시험생산형 최첨단 전투기입니다. 아퀼라의 호위 전투기로 배치됩니다.
+Button/Tooltip/PsionicDisruptionStorm=공허 습격자가 지정한 위치에 <d ref="Effect,PsionicDisruptionStormCP,PeriodicPeriodArray[0]*(Effect,PsionicDisruptionStormCP,PeriodCount+1)"/>초 동안 유지되는 사이오닉 분열 폭풍을 형성하여 이 동안 총 <d ref="(Effect,PsionicDisruptionStormCP,PeriodCount+2)*Effect,PsionicDisruptionStormDamage,Amount"/>의 피해를 줍니다.<n/><n/>사이오닉 분열 폭풍의 영향을 받는 유닛은 공격력이 <d ref="Behavior,PsionicDisruptionStormCripple,Modification.DamageDealtFraction[Melee]*(-100)"/>%만큼 감소하며, 영웅이 아닌 모든 유닛의 에너지를 초당 <d ref="Behavior,PsionicDisruptionStormEnergyReduction,Modification.VitalRegenArray[Energy]*(-1)"/>만큼 파괴합니다.
+Button/Tooltip/PsionicLockdown=그림자 수호자가 대상에 최대 <d ref="Behavior,PsionicLockdown,Duration"/>초 동안 유지되는 사이오닉 억제장을 발사합니다.<n/>사이오닉 억제장은 대상에 <d ref="Accumulator,ShieldAmountPsionicLockdown,Amount"/>의 피해를 흡수하는 보호막을 주지만, 보호막이 유지되는 동안 대상의 이동, 공격, 능력 사용을 봉쇄합니다.
+Button/Tooltip/ReconUAV=정찰용 비행 유닛입니다. 은폐 능력이 있으며, 탐지 능력이 없는 적에게는 보이지 않습니다.<n/><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/ReconUAVOvercharge=정찰 드론이 즉시 영구 은폐와 탐지 능력을 잃고 시야가 <d ref="Unit,ReconUAV,Sight+Behavior,ReconUAVOvercharge,Modification.SightBonus"/>로 감소하는 대신, <d ref="Behavior,ReconUAVOvercharge,Period*Behavior,ReconUAVOverchargeMovementSpeed,MaxStackCount"/>초에 걸쳐 이동 속도가 <d ref="Behavior,ReconUAVOverchargeMovementSpeed,MaxStackCount*Behavior,ReconUAVOverchargeMovementSpeed,Modification.AdditiveMoveSpeedFactor*100"/>% 증가하며, 적 공중 유닛에 충돌하여 <d ref="Effect,ReconUAVDamage,Amount"/>의 피해를 주고 자폭할 수 있게 됩니다.<n/><n/><d ref="Behavior,ReconUAVOvercharge,Duration"/>초가 지나면 정찰 드론은 자폭하여 파괴됩니다.
+Button/Tooltip/RecoveryDevice=방어 구조물입니다. 주위 유닛의 보호막을 재충전시킵니다.
+Button/Tooltip/RecoveryDeviceRecharge=대상 유닛 또는 구조물의 보호막을 회복시킵니다.<n/><n/><c val="f078ff">초당 최대 <d ref="Effect,RecoveryDeviceRechargeChanneled,RechargeVitalRate"/>의 보호막을 회복시킵니다. 보호막을 <d ref="1/Effect,RecoveryDeviceRechargeChanneled,DrainVitalCostFactor"/> 회복시킬 때마다 충전소의 에너지가 1 소모됩니다.</c><n/><n/><c val="#ColorAttackInfo">자동 시전은 유닛과 방어 구조물만 대상으로 합니다.</c>
+Button/Tooltip/ResearchActiveElectronicallyScannedArrayRadar=<c val="FFFF80">투견</c>의 공중 공격 사거리가 +<c val="FFFF80">3</c> 증가합니다.
+Button/Tooltip/ResearchAntiTankMissile=<c val="FFFF80">코브라</c>가 적 유닛에 <c val="FFFF80">대전차 미사일</c>을 발사하여 큰 피해를 줍니다.
+Button/Tooltip/ResearchAthenaJotunBoosters=<c val="FFFF80">아테나</c>가 무기를 전환하여 긴 사거리와 강력한 공격력을 갖춘 미사일인 <c val="FFFF80">빔펠 미사일</c>과, 강한 공격력과 민첩성을 갖춘 <c val="FFFF80">레인저 미사일</c>을 사용합니다.
+Button/Tooltip/ResearchCenturionInspiration=<c val="FFFF80">백인대장</c>이 <c val="FFFF80">사기 고양</c> 능력을 사용하여, 주변의 아군 기간병과 크루세이더, 타격대의 전투 의지를 북돋아 이들의 이동속도와 공격력을 잠시 증가시킵니다.
+Button/Tooltip/ResearchDeployPsionicSuppressionField=<c val="FFFF80">베르쿠트</c>가 <c val="FFFF80">전자기 제압장</c>을 사용하여 적 유닛의 공격 사거리와 공격 속도를 감소시킵니다.
+Button/Tooltip/ResearchFragmentShrapnel=<c val="FFFF80">크루세이더</c>가 공격 대상 뒤 부채꼴 범위 안의 적 유닛에 <c val="FFFF80"><d ref="Effect,CrusaderShrapnelDamage,Amount"/></c>(경장갑 유닛 상대로는 <c val="FFFF80"><d ref="Effect,CrusaderShrapnelDamage,Amount+Effect,CrusaderShrapnelDamage,AttributeBonus[Light]"/></c>)의 피해를 줍니다.<n/>우모자 동력 보호막을 연구하면 <c val="FFFF80">크루세이더</c>가 추가로 타격한 적 유닛 1기마다 보호막을 <d ref="Effect,CrusaderShrapnelMU,VitalArray[Shields].Change"/>만큼 회복합니다.
+Button/Tooltip/ResearchHeraProtocol=<c val="FFFF80">제우스</c>가 <c val="FFFF80">헤라 프로토콜</c> 능력을 사용하여, 넓은 범위 안의 적에 포격을 난사하여 막대한 피해를 줍니다.
+Button/Tooltip/ResearchMaelstromRounds=<c val="FFFF80">아레스 자주포</c>가 <c val="FFFF80">소용돌이 포탄</c>을 사용하여 추가 사거리와 공격력을 얻습니다.
+Button/Tooltip/ResearchMaverickMissiles=<c val="FFFF80">아르테미스</c>가 지상 유닛을 <c val="FFFF80">매버릭 미사일 무기</c>로 공격합니다.
+Button/Tooltip/ResearchPersonalCloakingShadowAssassin=<c val="ffff8a">그림자 수호자</c>가 은폐 능력을 사용할 수 있습니다. 은폐 상태인 유닛은 적에게 보이지 않으며, 탐지기나 탐지 효과로만 볼 수 있습니다.
+Button/Tooltip/ResearchPraetoriaHangar=<c val="FFFF80">아퀼라</c>가 <c val="FFFF80">프리토리아</c> 전투기를 자신의 호위기로 배치합니다.
+Button/Tooltip/ResearchPsionicLockdown=<c val="FFFF80">그림자 수호자</c>가<c val="FFFF80">사이오닉 억제장</c>을 사용하여, 단일 적 유닛을 제압하여 무력화할 수 있습니다.
+Button/Tooltip/ResearchReconUAVOvercharge=<c val="FFFF80">정찰 드론</c>이 <c val="FFFF80">반응로 과부하</c> 능력을 사용하여, 적 유닛에 자폭하여 큰 피해를 줍니다.
+Button/Tooltip/ResearchSentryPostAccelerator=<c val="FFFF80">파수 초소</c>의 사거리가 1만큼 증가합니다. 우모자 동력 보호막을 연구하면 보호막을 가지는 동안 사거리가 추가로 1만큼 증가합니다.
+Button/Tooltip/ResearchShapedBlastWarhead=<c val="FFFF80">타격대</c>의 공격이 중장갑 유닛에 주는 피해량이 +<c val="FFFF80"><d ref="Effect,TheseusAntiTankMissilesDamageUpgraded,AttributeBonus[Armored]"/></c>만큼 증가합니다.
+Button/Tooltip/ResearchTacticalVisor=<c val="FFFF80">기간병</c>의 공격 사거리가 +<c val="FFFF80">1</c> 증가합니다.
+Button/Tooltip/ResearchUmojanPowerShields=우모자 동력 보호막을 사용하는 모든 유닛의 보호막에 이로운 효과를 추가합니다.<n/><n/>이 추가 효과는 유닛 유형에 따라 서로 다릅니다.
+Button/Tooltip/ResearchUmojanShieldsBattery=모든 우모자 유닛과 건물의 보호막이 전투에서 벗어나면 시간이 지남에 따라 서서히 회복됩니다.
+Button/Tooltip/ResearchVoidAssaulterPsionicLash=<c val="FFFF80">공허 습격자</c>가 <c val="FFFF80">사이오닉 채찍</c> 능력을 사용하여 대상 적 유닛에 즉시 막대한 피해를 줍니다.
+Button/Tooltip/ResearchZirconCruiseMissile=<c val="FFFF80">미사일 순양함</c>이 적 유닛에 <c val="FFFF80">지르콘 순항 미사일</c>을 발사하여, 막대한 피해를 줍니다.
+Button/Tooltip/SeekerMode=베르쿠트가 감시 모드에 들어갑니다.<n/>감시 모드에서는 시야와 탐지 거리, 그리고 능력 사거리가 +<d ref="Behavior,SeekerMode,Modification.SightBonus"/>만큼 증가하는 대신 이동이 불가능합니다.<n/>감시 모드인 베르쿠트 주변 반경 <d ref="Effect,SeekerModeSquadSightSearch,AreaArray[0].Radius"/> 이내의 모든 아군 원거리 공격 유닛은 +<d ref="Behavior,SeekerModeSquadSight,Modification.RangedWeaponRange"/>의 추가 사거리를 얻습니다.
+Button/Tooltip/SeekerModeOff=베르쿠트가 감시 모드를 해제하고 다시 이동합니다.
+Button/Tooltip/SentryPost=주 방어 구조물입니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/SentryPostAccelerator=<c val="ffff8a">파수 초소</c>의 사거리가 1만큼 증가합니다. 우모자 동력 보호막을 연구하면 보호막을 가지는 동안 사거리가 추가로 1만큼 증가합니다.
+Button/Tooltip/ShadowAssassin=저격수입니다. 업그레이드하면 은폐와 사이오닉 억제장을 사용할 수 있습니다. 특수전 사령부에서 생산한 순항 미사일을 유도할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/ShapedBlastWarheadUpgraded=<c val="FFFF80">타격대</c>의 공격이 중장갑 유닛에 주는 피해량이 +<c val="FFFF80"><d ref="Effect,TheseusAntiTankMissilesDamageUpgraded,AttributeBonus[Armored]"/></c>만큼 증가합니다.
+Button/Tooltip/SnipeOffShadowAssassin=그림자 수호자가 저격 태세를 해제합니다.
+Button/Tooltip/SnipeOnShadowAssassin=그림자 수호자가 저격 태세로 전환합니다.<n/><n/>공격 사거리가 +<d ref="Behavior,ShadowAssassinSnipe,Modification.RangedWeaponRange"/>만큼 증가하며, 기본 공격이 에너지를 소모하여 대상에 <d ref="Effect,ShadowAssassinSnipeDamage,Amount"/>의 고정 피해를 줍니다.<n/><n/><c val="f078ff">매 공격 시 에너지 <d ref="Effect,ShadowAssassinSnipeCost,VitalArray[Energy].Change*(-1)"/> 소모</c>
+Button/Tooltip/SpecOpsCommand=그림자 수호자를 생산하고 업그레이드합니다. 그림자 수호자가 사용할 수 있는 순항 미사일을 생산합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 그림자 수호자<n/>- 공허 습격자 (미래전 연구소)
+Button/Tooltip/StarStation=공중 유닛 생산 시설입니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 아테나<n/>- 아르테미스<n/>- 강습상륙함
+Button/Tooltip/Striker=강한 공격력과 긴 사거리를 가진 미사일로 무장한 대기갑 보병 입니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/TacticalCruiseMissile=지정한 적 유닛에 전술 순항 미사일을 발사합니다. 전술 순항 미사일은 <d ref="Effect,TacticalCruiseMissileCP,PeriodicPeriodArray[0]*Effect,TacticalCruiseMissileCP,PeriodCount"/>초 후 발사되어 대상 유닛을 향해 비행, 폭발하여 대상 유닛에 <d ref="Effect,TacticalCruiseMissileGroundDamage,Amount"/>의 피해, 주변 유닛에 <d ref="Effect,TacticalCruiseMissileGroundDamage,Amount*Effect,TacticalCruiseMissileGroundDamage,AreaArray[0].Fraction+1"/>의 피해를 줍니다. 비행하는 전술 순항 미사일은 적의 대공 공격으로 요격될 수 있습니다.
+Button/Tooltip/TacticalVisorUpgraded=<c val="FFFF80">기간병</c>의 공격 사거리가 +<c val="FFFF80">1</c> 증가했습니다.
+Button/Tooltip/TacticsAcademy=우모자의 보병 유닛을 업그레이드합니다.<n/><n/><c val="ffff8a">사용 가능:</c><n/>- 백인대장 (생활관)
+Button/Tooltip/TomahawkCruiseMissile=제우스가 대상 적 유닛에 순항 미사일을 발사하여 <d ref="Effect,TomahawkCruiseMissileDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/UmojanAirArmorUpgradeLevel1=우모자 공중 유닛의 방어력을 업그레이드합니다.
+Button/Tooltip/UmojanAirArmorUpgradeLevel2=우모자 공중 유닛의 방어력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/UmojanAirArmorUpgradeLevel3=우모자 공중 유닛의 방어력을 최대로 업그레이드합니다.
+Button/Tooltip/UmojanAirWeaponsUpgradeLevel1=우모자 공중 유닛의 공격력을 업그레이드합니다.
+Button/Tooltip/UmojanAirWeaponsUpgradeLevel2=우모자 공중 유닛의 공격력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/UmojanAirWeaponsUpgradeLevel3=우모자 공중 유닛의 공격력을 최대로 업그레이드합니다.
+Button/Tooltip/UmojanBuild=기본 건물의 목록입니다.
+Button/Tooltip/UmojanBuildAdvanced=고급 건물의 목록입니다.
+Button/Tooltip/UmojanGroundArmorUpgradeLevel1=우모자 지상 유닛의 방어력을 업그레이드합니다.
+Button/Tooltip/UmojanGroundArmorUpgradeLevel2=우모자 지상 유닛의 방어력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/UmojanGroundArmorUpgradeLevel3=우모자 지상 유닛의 방어력을 최대로 업그레이드합니다.
+Button/Tooltip/UmojanGroundWeaponsUpgradeLevel1=우모자 지상 유닛의 공격력을 업그레이드합니다.
+Button/Tooltip/UmojanGroundWeaponsUpgradeLevel2=우모자 지상 유닛의 공격력을 한 단계 더 업그레이드합니다.
+Button/Tooltip/UmojanGroundWeaponsUpgradeLevel3=우모자 지상 유닛의 공격력을 최대로 업그레이드합니다.
+Button/Tooltip/UmojanHeroicUnitsRegenerationAquila=<c val="FFFF80">아퀼라</c>가 <c val="FFFF80"><d ref="Unit,Aquila,LifeRegenDelay"/></c>초 동안 피해를 받지 않으면 체력을 초당 <c val="FFFF80"><d ref="Unit,Aquila,LifeRegenRate" precision="1"/></c>만큼 회복합니다.<n/><n/><c val="FFFF80">기본 지속 효과</c>
+Button/Tooltip/UmojanHeroicUnitsRegenerationVoidAssaulter=<c val="FFFF80">공허 습격자</c>가 <c val="FFFF80"><d ref="Unit,VoidAssaulter,LifeRegenDelay"/></c>초 동안 피해를 받지 않으면 체력을 초당 <c val="FFFF80"><d ref="Unit,VoidAssaulter,LifeRegenRate" precision="1"/></c>만큼 회복합니다.<n/><n/><c val="FFFF80">기본 지속 효과</c>
+Button/Tooltip/UmojanHeroicUnitsRegenerationZeus=<c val="FFFF80">제우스</c>가 <c val="FFFF80"><d ref="Unit,Zeus,LifeRegenDelay"/></c>초 동안 피해를 받지 않으면 체력을 초당 <c val="FFFF80"><d ref="Unit,Zeus,LifeRegenRate" precision="1"/></c>만큼 회복합니다.<n/><n/><c val="FFFF80">기본 지속 효과</c>
+Button/Tooltip/UmojanPowerShieldAmphibiousShip=<c val="80C0FF">보호막을 가지는 동안</c>, 강습상륙함의 이동 속도가 <c val="FFFF80"><d ref="Behavior,AmphibiousShipUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c>만큼 증가합니다.
+Button/Tooltip/UmojanPowerShieldAresArtillery=<c val="80C0FF">보호막을 가지는 동안</c>, 아레스 자주포의 공격 사거리가 <c val="FFFF80"><d ref="Behavior,AresArtilleryUmojanPowerShields,Modification.RangedWeaponRange" precision="1"/></c>만큼 증가합니다.
+Button/Tooltip/UmojanPowerShieldArtemis=<c val="80C0FF">보호막을 가지는 동안</c>, 아르테미스의 공격 속도가 <c val="FFFF80"><d ref="Behavior,ArtemisUmojanPowerShields,Modification.AdditiveAttackSpeedFactor*100"/>%</c>만큼 증가합니다.
+Button/Tooltip/UmojanPowerShieldAthena=<c val="80C0FF">보호막을 가지는 동안</c>, 아테나가 다음과 같은 추가 효과를 얻습니다.<n/><n/><c val="FFFF80">레인저 미사일 사용</c> : 레인저 미사일이 중장갑 유닛에 <c val="FFFF80"><d ref="Effect,RangerMissilesDamageShield,AttributeBonus[Armored]-Effect,RangerMissilesDamage,AttributeBonus[Armored]"/></c>의 추가 피해를 줍니다.<n/><n/><c val="FFFF80">빔펠 미사일 사용</c> : 빔펠 미사일의 공격 사거리가 <c val="FFFF80"><d ref="Behavior,AthenaUmojanPowerShieldsVympel,Modification.RangedWeaponRange" precision="1"/></c>만큼 증가합니다.
+Button/Tooltip/UmojanPowerShieldBerkut=<c val="80C0FF">보호막을 가지는 동안</c>, <c val="FFFF80">감시 모드</c>인 베르쿠트가 주변의 모든 아군 유닛의 체력을 초당 <c val="FFFF80"><d ref="Behavior,SeekerModeHealthRegen,Modification.VitalRegenArray[Life]" precision="1"/></c>만큼 회복합니다. 
+Button/Tooltip/UmojanPowerShieldCenturion=<c val="80C0FF">보호막을 가지는 동안</c>, 백인대장의 이동 속도가 <c val="FFFF80"><d ref="Behavior,CenturionUmojanPowerShield,Modification.AdditiveMoveSpeedFactor*100"/></c>%만큼 증가하며, 주변의 아군 <c val="FFFF80">기간병</c>과 <c val="FFFF80">크루세이더</c>, <c val="FFFF80">타격대</c>가 체력을 초당 <c val="FFFF80"><d ref="Behavior,CenturionHealthRegen,Modification.VitalRegenArray[Life]" precision="1"/></c>만큼 회복합니다. 
+Button/Tooltip/UmojanPowerShieldCrusader=<c val="80C0FF">보호막을 가지는 동안</c>, 크루세이더의 이동 속도가 <c val="FFFF80"><d ref="Behavior,CrusaderUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c>만큼 증가합니다.<n/><n/>또한, 크루세이더는 적을 공격할 때마다 보호막을 <c val="FFFF80"><d ref="Effect,DominatorGrenadesMU,VitalArray[Shields].Change"/></c>만큼 생성합니다.
+Button/Tooltip/UmojanPowerShieldDiamondback=<c val="80C0FF">보호막을 가지는 동안</c>, 10을 초과하는 피해를 받을 경우, 그 초과분에 대해 최대 <c val="FFFF80"><d ref="Behavior,HardenedShieldDiamondback,DamageResponse.ModifyAmount*(-1)+(Unit,Diamondback,ShieldArmorLevel)"/></c>의 피해량을 무시합니다.
+Button/Tooltip/UmojanPowerShieldReconUAV=<c val="80C0FF">보호막을 가지는 동안</c>, 정찰 드론의 이동 속도가 <c val="FFFF80"><d ref="Behavior,ReconUAVUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c>만큼 증가합니다.
+Button/Tooltip/UmojanPowerShieldShadowAssassin=<c val="80C0FF">보호막을 가지는 동안</c>, 그림자 수호자의 이동 속도가 <c val="FFFF80"><d ref="Behavior,ShadowAssassinUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c>만큼, 저격의 피해량이 <c val="FFFF80"><d ref="Effect,ShadowAssassinSnipeDamageShields,Amount-Effect,ShadowAssassinSnipeDamage,Amount"/></c>만큼 증가합니다.
+Button/Tooltip/UmojanPowerShieldStriker=<c val="80C0FF">보호막을 가지는 동안</c>, 타격대의 이동 속도가 <c val="FFFF80"><d ref="Behavior,StrikerUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c>만큼, 공격 사거리가 <c val="FFFF80"><d ref="Behavior,StrikerUmojanPowerShields,Modification.RangedWeaponRange" precision="1"/></c>만큼 증가합니다.
+Button/Tooltip/UmojanPowerShieldWarHound=<c val="80C0FF">보호막을 가지는 동안</c>, 투견의 공격 속도가 <c val="FFFF80"><d ref="Behavior,WarhoundUmojanPowerShields,Modification.AdditiveAttackSpeedFactor*100"/>%</c>만큼 증가합니다.
+Button/Tooltip/UmojanPowerShieldWarrior=<c val="80C0FF">보호막을 가지는 동안</c>, 기간병의 이동 속도가 <c val="FFFF80"><d ref="Behavior,WarriorUmojanPowerShields,Modification.AdditiveMoveSpeedFactor*100"/>%</c>, 공격 속도가 <c val="FFFF80"><d ref="Behavior,WarriorUmojanPowerShields,Modification.AdditiveAttackSpeedFactor*100"/>%</c> 증가합니다.
+Button/Tooltip/UmojanPowerShieldsUpgradeLevel1=모든 우모자 유닛과 구조물의 보호막을 업그레이드합니다.
+Button/Tooltip/UmojanPowerShieldsUpgradeLevel2=모든 우모자 유닛과 구조물의 보호막을 한 단계 더 업그레이드합니다.
+Button/Tooltip/UmojanPowerShieldsUpgradeLevel3=모든 우모자 유닛과 구조물의 보호막을 최대로 업그레이드합니다.
+Button/Tooltip/VespeneHarvesterUmojan=베스핀 처리장에 베스핀 채취기를 장착합니다.<n/><n/>베스핀 채취기가 장착된 베스핀 처리장에 대한 개척자의 채취량이 +<c val="80FF80">1</c>(풍부한 베스핀 간헐천의 경우 +<c val="8000FF">2</c>) 증가합니다.
+Button/Tooltip/VespenePlant=베스핀 가스 채취를 위해 베스핀 간헐천 위에 건설하는 구조물입니다.
+Button/Tooltip/VespenePlantRich=베스핀 가스 채취를 위해 베스핀 간헐천 위에 건설하는 구조물입니다.
+Button/Tooltip/VoidAssaulter=압도적인 사이오닉 능력을 지닌 특수 요원입니다. 은폐 능력이 있으며, 탐지 능력이 없는 적에게는 보이지 않습니다. 사이오닉 분열 폭풍을 사용할 수 있고 업그레이드하면 사이오닉 채찍을 휘두를 수 있습니다. 궤도 폭격을 유도할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/VoidAssaulterOrbitalStrike=<d ref="Effect,VoidAssaulterOrbitalStrikeCastingTime,InitialDelay"/>초 후 궤도에서 레이저 광선을 발사하여, <d ref="Effect,VoidAssaulterOrbitalStrikeDamage,Amount"/>(중장갑 유닛에는 <d ref="Effect,VoidAssaulterOrbitalStrikeDamage,AttributeBonus[Armored]+Effect,VoidAssaulterOrbitalStrikeDamage,Amount"/>)의 범위 피해를 줍니다.<n/><n/><c val="ffff8a">지상 및 공중 유닛 공격 가능</c><n/><c val="ffff8a">대상 지역 시야 필요함</c>
+Button/Tooltip/VoidAssaulterPsionicLash=대상 적 유닛에 즉시 <d ref="Effect,VoidAssaulterPsionicLashDamage,Amount"/>의 피해를 줍니다.
+Button/Tooltip/WarHoundUmojan=공중 중장갑 유닛을 상대로 큰 위력을 보여주는 다목적 기계입니다. 폭주 미사일은 공격 대상 유닛에 추가 피해를 줍니다. <n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/Warrior=다목적 보병입니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c>
+Button/Tooltip/WeaponsFreeShadowAssassin=선택한 유닛이 공격하도록 허용합니다. 사거리 안에 적이 들어오면 평소대로 그들과 교전을 벌이고 추적합니다.
+Button/Tooltip/Zeus=군대를 초토화할 만큼 강대한 보행형 공성 병기입니다. 순항 미사일을 발사하여 적을 타격할 수 있습니다. 업그레이드하면 포격을 난사하여 적 군대를 섬멸할 수 있습니다.<n/><n/><c val="#ColorAttackInfo">지상 및 공중 유닛 공격 가능</c><n/><c val="FFE303">탐지기</c>
+Button/Tooltip/ZirconCruiseMissile=미사일 순양함이 적 유닛에 지르콘 순항 미사일을 발사합니다.<n/>미사일은 조준 <d ref="Effect,ZirconCruiseMissileLaunchCP,PeriodCount*Effect,ZirconCruiseMissileLaunchCP,PeriodicPeriodArray[0]"/>초 후 대상에 발사되며, 대상이 지상 유닛이면 대상과 그 주위 유닛에 최대 <d ref="Effect,ZirconCruiseMissileDamage,Amount"/>의 피해를 주고, 대상이 공중 유닛이면 대상에 <d ref="Effect,ZirconCruiseMissileDamageAntiAir,Amount"/>의 피해를 줍니다.
+ConsoleSkin/Name/ConsoleTerran_Umojan=우모자
+DocInfo/DescLong=Umojan Protectorate Data Dependency for SC : Revolution Overdrive<n/><n/>Models Developed By : Comrade Mikhail<n/><n/>Special Thanks for Providing Models : ChonkyKat, DaveSpectre, WingedArchon, Gumba_54, ghostnova91, CerberusSC2, VastanX, arghzad
+DocInfo/DescShort=Melee Players
+DocInfo/Name=Umojan Protectorate Mod for SC : Revolution Overdrive
+Error/VespeneDroneTarget=베스핀 채취기가 없는 베스핀 처리장을 대상으로 해야 합니다.
+Race/Name/Umoj=우모자
+RequirementNode/Tooltip/CountUnitTacticalCruiseMissileUnitCompleteOnly=특수전 사령부에서 순항 미사일 장전
+RequirementNode/Tooltip/CountUpgradeActiveElectronicallyScannedArrayRadarCompleteOnly=기계공학 공장에서 능동 위상배열 레이더 연구
+RequirementNode/Tooltip/CountUpgradeAntiTankMissileCompleteOnly=기계공학 공장에서 대전차 미사일 연구
+RequirementNode/Tooltip/CountUpgradeAthenaJotunBoostersCompleteOnly2042770557=함대 지휘소에서 요툰 증폭기 연구
+RequirementNode/Tooltip/CountUpgradeCenturionInspirationCompleteOnly=전술 연구소에서 사기 고양 연구
+RequirementNode/Tooltip/CountUpgradeFragmentShrapnelCompleteOnly=전술 연구소에서 파편 유산탄 연구
+RequirementNode/Tooltip/CountUpgradeHeraProtocolCompleteOnly=미래전 연구소에서 헤라 프로토콜 연구
+RequirementNode/Tooltip/CountUpgradeMaelstromRoundsCompleteOnly=기계공학 공장에서 소용돌이 포탄 연구
+RequirementNode/Tooltip/CountUpgradeMaverickMissilesCompleteOnly=함대 지휘소에서 매버릭 미사일 포대 연구
+RequirementNode/Tooltip/CountUpgradePersonalCloakingShadowAssassinCompleteOnlyTechTreeCheat=특수전 사령부에서 개인 은폐 연구
+RequirementNode/Tooltip/CountUpgradePraetoriaHangarCompleteOnly=미래전 연구소에서 프리토리아 격납고 연구
+RequirementNode/Tooltip/CountUpgradePsionicLockdownCompleteOnly=특수전 사령부에서 사이오닉 억제장 연구
+RequirementNode/Tooltip/CountUpgradePsionicSuppressionFieldCompleteOnly=함대 지휘소에서 전자기 제압장 연구
+RequirementNode/Tooltip/CountUpgradeReconUAVOverchargeCompleteOnly=기계공학 공장에서 반응로 과부하 연구
+RequirementNode/Tooltip/CountUpgradeSentryPostAcceleratorCompleteOnly=발전소에서 파수 초소 가속기 연구
+RequirementNode/Tooltip/CountUpgradeShapedBlastWarheadCompleteOnly=전술 연구소에서 성형작약 탄두 연구
+RequirementNode/Tooltip/CountUpgradeTacticalVisorCompleteOnly=전술 연구소에서 전술 조준경 연구
+RequirementNode/Tooltip/CountUpgradeUmojanPowerShieldsCompleteOnly=발전소에서 우모자 동력 보호막 연구
+RequirementNode/Tooltip/CountUpgradeUmojanShieldsBatteryCompleteOnly=발전소에서 보호막 축전지 연구
+RequirementNode/Tooltip/CountUpgradeVoidAssaulterPsionicLashCompleteOnly=미래전 연구소에서 사이오닉 채찍 연구
+RequirementNode/Tooltip/CountUpgradeZirconCruiseMissilesCompleteOnly=함대 지휘소에서 지르콘 순항 미사일 연구
+RequirementNode/Tooltip/LTCountUnitAquilaQueuedOrBetter1=아퀼라 없음
+RequirementNode/Tooltip/LTCountUnitMaelstromRoundsUnitQueuedOrBetterAtUnit5=아레스 자주포에 장전한 소용돌이 포탄 5발 미만
+RequirementNode/Tooltip/LTCountUnitPraetoriaQueuedOrBetterAtUnit2=프리토리아 2기 미만 배치
+RequirementNode/Tooltip/LTCountUnitTacticalCruiseMissileUnitQueuedOrBetterAtUnit3=이 특수전 사령부에 장전한 순항 미사일 3기 미만
+RequirementNode/Tooltip/LTCountUnitVoidAssaulterQueuedOrBetter1=공허 습격자 없음
+RequirementNode/Tooltip/LTCountUnitVoidAssaulterQueuedOrBetter3=공허 습격자 3기 미만
+RequirementNode/Tooltip/LTCountUnitZeusQueuedOrBetter1=제우스 없음
+RequirementNode/Tooltip/NotCountUnitFutureWarfareLabQueuedOrBetter=미래전 연구소 없음
+RequirementNode/Tooltip/OrCountUnitEngineeringFactoryCompleteOnlyCountUnitFleetHeadquartersCompleteOnlyCountUnitSpecOpsCommandCompleteOnly=기계공학 공장 또는 함대 지휘소 또는 특수전 사령부
+UI/ResourceSupplyToolTip_Umoj=살아있는 유닛은 보급품이 필요합니다. 병참 기지를 건설하여 보급을 늘리십시오.
+Unit/Category/UmojanUnits=우모자
+Unit/LifeArmorName/UmojanBuildingPlating=우모자 건물 장갑
+Unit/LifeArmorName/UmojanInfantryArmor=우모자 보병 장갑
+Unit/LifeArmorName/UmojanShipPlating=우모자 우주선 장갑
+Unit/LifeArmorName/UmojanVehiclePlating=우모자 차량 장갑
+Unit/Name/AmphibiousShip=강습상륙함
+Unit/Name/Aquila=아퀼라
+Unit/Name/AresArtillery=아레스 자주포
+Unit/Name/ArmamentFacility=병기창
+Unit/Name/Arsenal=조병창
+Unit/Name/Artemis=아르테미스
+Unit/Name/Athena=아테나
+Unit/Name/AthenaWeapon=아테나
+Unit/Name/Berkut=베르쿠트
+Unit/Name/Centurion=백인대장
+Unit/Name/CommandPost=지휘소
+Unit/Name/Crusader=크루세이더
+Unit/Name/Diamondback=코브라
+Unit/Name/DominatorrGrenadesLMWeapon=지배자 유탄
+Unit/Name/EngineeringFactory=기계공학 공장
+Unit/Name/FleetHeadquarters=함대 지휘소
+Unit/Name/FutureWarfareLab=미래전 연구소
+Unit/Name/HaywireMissileWeapon=폭주 미사일
+Unit/Name/InfantryQuarter=생활관
+Unit/Name/LogisticsDepot=병참 기지
+Unit/Name/MissileCruiser=미사일 순양함
+Unit/Name/Pioneer=개척자
+Unit/Name/PowerPlant=발전소
+Unit/Name/Praetoria=프리토리아
+Unit/Name/ReconUAV=정찰 드론
+Unit/Name/RecoveryDevice=수복탑
+Unit/Name/SentryPost=파수 초소
+Unit/Name/SentryPostWeapon=파수 초소
+Unit/Name/ShadowAssassin=그림자 수호자
+Unit/Name/SpecOpsCommand=특수전 사령부
+Unit/Name/StarStation=우주 정거장
+Unit/Name/Striker=타격대
+Unit/Name/TacticsAcademy=전술 연구소
+Unit/Name/TheseusAntiTankMissilesUpgradeWeapon=테세우스 대전차 미사일 업그레이드
+Unit/Name/TheseusAntiTankMissilesWeapon=테세우스 대전차 미사일
+Unit/Name/VespenePlant=베스핀 처리장
+Unit/Name/VespenePlantRich=베스핀 처리장
+Unit/Name/VoidAssaulter=공허 습격자
+Unit/Name/WarHoundUmojan=투견
+Unit/Name/WarHoundUmojanAntiAirWeapon=투견
+Unit/Name/WarHoundUmojanWeapon=투견
+Unit/Name/Warrior=기간병
+Unit/Name/Zeus=제우스
+Unit/ShieldArmorName/UmojanPowerShields=우모자 동력 보호막
+Upgrade/Name/ActiveElectronicallyScannedArrayRadar=능동 위상배열 레이더
+Upgrade/Name/AntiTankMissile=대전차 미사일
+Upgrade/Name/AthenaJotunBoosters=요툰 증폭기
+Upgrade/Name/CenturionInspiration=사기 고양
+Upgrade/Name/FragmentShrapnel=파편 유산탄
+Upgrade/Name/HeraProtocol=헤라 프로토콜
+Upgrade/Name/MaelstromRounds=소용돌이 포탄
+Upgrade/Name/MaverickMissiles=매버릭 미사일 포대
+Upgrade/Name/PersonalCloakingShadowAssassin=개인 은폐
+Upgrade/Name/PraetoriaHangar=프리토리아 격납고
+Upgrade/Name/PsionicLockdown=사이오닉 억제장
+Upgrade/Name/PsionicSuppressionField=전자기 제압장
+Upgrade/Name/ReconUAVOvercharge=반응로 과부하
+Upgrade/Name/SentryPostAccelerator=파수 초소 가속기
+Upgrade/Name/ShapedBlastWarhead=성형작약 탄두
+Upgrade/Name/TacticalVisor=전술 조준경
+Upgrade/Name/UmojanAirArmorUpgrade=우모자 공중 장갑
+Upgrade/Name/UmojanAirArmorUpgradeLevel1=우모자 공중 장갑 1단계
+Upgrade/Name/UmojanAirArmorUpgradeLevel2=우모자 공중 장갑 2단계
+Upgrade/Name/UmojanAirArmorUpgradeLevel3=우모자 공중 장갑 3단계
+Upgrade/Name/UmojanAirWeaponsUpgrade=우모자 공중 무기
+Upgrade/Name/UmojanAirWeaponsUpgradeLevel1=우모자 공중 무기 1단계
+Upgrade/Name/UmojanAirWeaponsUpgradeLevel2=우모자 공중 무기 2단계
+Upgrade/Name/UmojanAirWeaponsUpgradeLevel3=우모자 공중 무기 3단계
+Upgrade/Name/UmojanGroundArmorUpgrade=우모자 지상 장갑
+Upgrade/Name/UmojanGroundArmorUpgradeLevel1=우모자 지상 장갑 1단계
+Upgrade/Name/UmojanGroundArmorUpgradeLevel2=우모자 지상 장갑 2단계
+Upgrade/Name/UmojanGroundArmorUpgradeLevel3=우모자 지상 장갑 3단계
+Upgrade/Name/UmojanGroundWeaponsUpgrade=우모자 지상 무기
+Upgrade/Name/UmojanGroundWeaponsUpgradeLevel1=우모자 지상 무기 1단계
+Upgrade/Name/UmojanGroundWeaponsUpgradeLevel2=우모자 지상 무기 2단계
+Upgrade/Name/UmojanGroundWeaponsUpgradeLevel3=우모자 지상 무기 3단계
+Upgrade/Name/UmojanPowerShields=우모자 동력 보호막
+Upgrade/Name/UmojanPowerShieldsUpgrade=우모자 동력 보호막
+Upgrade/Name/UmojanPowerShieldsUpgradeLevel1=우모자 동력 보호막 1단계
+Upgrade/Name/UmojanPowerShieldsUpgradeLevel2=우모자 동력 보호막 2단계
+Upgrade/Name/UmojanPowerShieldsUpgradeLevel3=우모자 동력 보호막 3단계
+Upgrade/Name/UmojanShieldsBattery=보호막 축전지
+Upgrade/Name/VoidAssaulterPsionicLash=사이오닉 채찍
+Upgrade/Name/ZirconCruiseMissiles=지르콘 순항 미사일
+Weapon/Name/AGR15AssaultRifle=AGR-15 돌격소총
+Weapon/Name/ArtemisHALOMissiles=다연장 미사일 포대
+Weapon/Name/CrusaderGrenades=지배자 유탄
+Weapon/Name/Diamondback=파쇄 레일건
+Weapon/Name/EnterpriseGun=엔터프라이즈 포
+Weapon/Name/GaussShockCannon=가우스 충격포
+Weapon/Name/MaverickMissiles=매버릭 미사일
+Weapon/Name/MeteorMissilePods=미티어 미사일 포대
+Weapon/Name/OdysseusMissileBarrage=오디세우스 미사일 포대
+Weapon/Name/PhoenixMissile=피닉스 유도탄
+Weapon/Name/Pioneer=융합 절단기
+Weapon/Name/RangerMissiles=레인저 미사일
+Weapon/Name/SentryPost=장거리 미사일
+Weapon/Name/ShadowAssassinSnipe=오퍼레이터 대물 저격총
+Weapon/Name/TheseusAntiTankMissiles=테세우스 대전차 미사일
+Weapon/Name/VoidAssaulter=IWS-9000 대물 저격총
+Weapon/Name/VympelMissiles=빔펠 미사일
+Weapon/Name/WarHoundUmojan=레일건
+Weapon/Name/WarHoundUmojanAntiAir=레일건
+Weapon/Name/WarHoundUmojanMelee=투견 근접
+Weapon/Name/WarriorGaussRifle=AR-47 가우스 소총
+Weapon/Name/Zeus=T-1000 포
+Weapon/Name/ZeusAntiAir=부란 대공 미사일
+e_cmdCantBuildOnThat_Umoj=활동 중인 베스핀 간헐천에 배치해야 합니다.
+e_cmdFoodUsageImpossible_Umoj=불가능한 요청<n/>보급품 한도에 도달했습니다.
+e_cmdMustBuildRefineryFirst_Umoj=베스핀 처리장을 먼저 건설해야 합니다.
+e_cmdNotEnoughFood_Umoj=보급품이 부족합니다.<n/>병참 기지를 더 건설하십시오.

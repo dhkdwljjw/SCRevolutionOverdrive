@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="ArbiterSCBWStasisField">
+        <Duration value="33"/>
+        <DisableValidatorArray value="TargetNotTacticalJumping"/>
+        <TechAliasArray value="_AbilityDisable"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArbiterSCBWStasisField@TimedLife">
+        <Duration value="33"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGas">
+        <InitialEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGasProtoss">
+        <InitialEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableRichVespeneGeyserGasZerg">
+        <InitialEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGas">
+        <InitialEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGasProtoss">
+        <InitialEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CarryHarvestableVespeneGeyserGasZerg">
+        <InitialEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DarkArchonSCBWMaelstrom">
+        <Duration value="11"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DefilerSCBWPlague">
+        <Duration value="37.5"/>
+        <Period value="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DevourerSCBWWeapon">
+        <Duration value="38"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FirebatSCBWStimpack">
+        <Duration value="18.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="FirebatSCBWWeapon@SuppressMovement">
+        <Duration value="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GhostSCBWCloak">
+        <Modification>
+            <VitalRegenArray index="Energy" value="-1.4765"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="GhostSCBWLockdown">
+        <Modification>
+            <BehaviorLinkDisableArray value="BarrierDamageResponse"/>
+        </Modification>
+        <Duration value="33"/>
+        <DisableValidatorArray value="TargetNotTacticalJumping"/>
+        <TechAliasArray value="_AbilityDisable"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGas">
+        <EmptyHarvestAmount value="0"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGasProtoss">
+        <EmptyHarvestAmount value="0"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableRichVespeneGeyserGasZerg">
+        <EmptyHarvestAmount value="0"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGas">
+        <EmptyHarvestAmount value="0"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGasProtoss">
+        <EmptyHarvestAmount value="0"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HarvestableVespeneGeyserGasZerg">
+        <EmptyHarvestAmount value="0"/>
+    </CBehaviorResource>
+    <CBehaviorSpawn id="HatcherySCBW@SpawnLarva">
+        <InfoArray index="0" Delay="14" Effect=""/>
+        <InfoArray>
+            <Unit value="LarvaSCBW"/>
+            <MaxCount value="19"/>
+            <Requirements value="HatcherySpawnMutantLarva"/>
+            <Delay value="0.25"/>
+            <Effect value="LarvaRelease"/>
+        </InfoArray>
+    </CBehaviorSpawn>
+    <CBehaviorBuff id="HighTemplarSCBWHallucination">
+        <Modification>
+            <StateFlags index="SuppressCloak" value="0"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals750">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="InterceptorSCBW@Return">
+        <DisableValidatorArray value="InterceptorSCBW@CarrierNotInterferenceMatrix"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InterceptorSCBW@ReturnHalt">
+        <DisableValidatorArray value="InterceptorSCBW@CarrierNotInterferenceMatrix"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InterceptorSCBW@ReturnSlow">
+        <DisableValidatorArray value="InterceptorSCBW@CarrierNotInterferenceMatrix"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MarineSCBWStimpack">
+        <Modification AttackSpeedMultiplier="1.75"/>
+        <Duration value="18.5"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="MineralFieldMinerals">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMinerals750">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque900">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="ObserverSCBW@Detector">
+        <Modification Detect="11"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="OverlordSCBW@Detector">
+        <Modification Detect="11"/>
+    </CBehaviorBuff>
+    <CBehaviorPowerSource id="PowerSource">
+        <CliffLevelFlags index="Higher" value="0"/>
+    </CBehaviorPowerSource>
+    <CBehaviorBuff id="QueenSCBWEnsnare">
+        <Duration value="20"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="QueenSCBWEnsnare@Attack">
+        <Duration value="20"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="QueenSCBWEnsnare@Movement">
+        <Duration value="20"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="QueenSCBWSpawnBroodlings@BroodlingFate">
+        <Duration value="112.5"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="RawRichVespeneGeyserGas">
+        <Capacity value="2500"/>
+        <Contents value="2500"/>
+        <EmptyHarvestAmount value="0"/>
+        <HarvestAmount value="8"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawVespeneGeyserGas">
+        <Capacity value="2500"/>
+        <Contents value="2500"/>
+        <HarvestAmount value="4"/>
+        <EmptyHarvestAmount value="0"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="ReaverSCBWWeapon@ScarabTimedLife">
+        <Duration value="5.625"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReaverSCBWWeapon@TrackTargetPosition">
+        <Duration value="5.625"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ReaverSCBWWeapon@UnloadStun">
+        <Duration value="1.575"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ScienceVesselSCBWDefensiveMatrix">
+        <Duration value="40"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ScourgeSCBWWeapon@ScanBuff">
+        <DisableValidatorArray value="CasterIsAttacking"/>
+        <Modification WeaponScanBonus="10"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SpiderMineSCBW@InitialStun">
+        <Duration value="2.375"/>
+        <DurationRandomMax value="0"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VultureSCBWWeapon@StrafingDisableWeapon">
+        <Duration value="0.0625">
+            <AccumulatorArray index="0" value="CasterAttackCooldownFinal"/>
+        </Duration>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="WraithSCBWCloak">
+        <Modification>
+            <VitalRegenArray index="Energy" value="-1.4765"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ZealotSCBWWeapon@SuppressMovement">
+        <Duration value="0.28"/>
+    </CBehaviorBuff>
+    <CBehaviorCreepSource id="ZergBuildingSCBW@CreepGrowthLarge">
+        <Period value="0.352"/>
+    </CBehaviorCreepSource>
+    <CBehaviorCreepSource id="ZergBuildingSCBW@CreepGrowthMedium">
+        <Period value="0.63"/>
+    </CBehaviorCreepSource>
+</Catalog>

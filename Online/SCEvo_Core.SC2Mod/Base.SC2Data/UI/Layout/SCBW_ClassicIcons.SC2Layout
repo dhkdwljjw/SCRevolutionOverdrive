@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Desc>
+    <Constant name="ClassicButtonIconColor" val="e2d9d9"/>
+    <Constant name="ClassicButtonIconColorDark" val="#StandardButtonIcon"/>
+    <Constant name="ClassicButtonIconColorDark_Prot" val="#StandardButtonIcon_Prot"/>
+    <Constant name="ClassicButtonIconColorDark_Terr" val="#StandardButtonIcon_Terr"/>
+    <Constant name="ClassicButtonIconColorDark_Zerg" val="#StandardButtonIcon_Zerg"/>
+    <Constant name="ClassicButtonIconColorDark_BWPr" val="#StandardButtonIcon_BWPr"/>
+    <Constant name="ClassicButtonIconColorDark_BWTe" val="#StandardButtonIcon_BWTe"/>
+    <Constant name="ClassicButtonIconColorDark_BWZe" val="#StandardButtonIcon_BWZe"/>
+    <Constant name="ClassicButtonIconColorDarker" val="50,75,120"/>
+    <Constant name="ClassicButtonIconColorDarker_Prot" val="70,105,171"/>
+    <Constant name="ClassicButtonIconColorDarker_Terr" val="123,191,147"/>
+    <Constant name="ClassicButtonIconColorDarker_Zerg" val="176,100,49"/>
+    <Constant name="ClassicButtonIconColorDarker_BWPr" val="70,105,171"/>
+    <Constant name="ClassicButtonIconColorDarker_BWTe" val="123,191,147"/>
+    <Constant name="ClassicButtonIconColorDarker_BWZe" val="176,100,49"/>
+    <Constant name="ClassicButtonIconColorEnergy" val="118,73,230"/>
+
+    <!-- efef0b -->
+    <!-- <Constant name="ClassicButtonIconColorDark" val="caca07"/> -->
+    <Constant name="ClassicButtonIconColor_Clicked" val="FFFFFF"/>
+    <Constant name="ClassicIconPath" val="Assets\Textures\ClassicIcons\"/>
+    <StateGroup name="ClassicIcon">
+        <DefaultState val="False"/>
+        <State name="True">
+            <When type="Property" frame="$this" operator="Equal" Text="#ClassicIconPath"/>
+        </State>
+        <State name="False"/>
+    </StateGroup>
+
+	<Frame type="EditBox" name="ListenerBoxTemplate">
+        <Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+        <Anchor side="Right" relative="$parent" pos="Max" offset="0"/>
+        <Width val="5"/>
+        <Height val="5"/>
+        <RenderType val="Offscreen"/>
+		<Alpha val="0"/>
+		<AcceptsMouse val="false"/>
+		<RejectsFocus val="true"/>
+        <Muted val="True"/>
+		<Style val="DebugTiny"/>
+		<Frame type="Label" name="Text">
+			<Visible val="false"/>
+			<Style val="DebugTiny"/>
+			<Alpha val="0"/>
+		</Frame>
+	</Frame>
+
+	<Frame type="EditBox" name="ClassicIconListenerBoxTemplate" template="SCBW_ClassicIcons/ListenerBoxTemplate">
+        <MaxCharacters val="29"/>
+        <Text val="{$parent/NormalImage/@Texture}"/>
+        <StateGroup name="ClassicIcon" template="SCBW_ClassicIcons/ClassicIcon"/>
+	</Frame>
+
+    <StateGroup name="ClassicIconState">
+        <DefaultState val="Highlight"/>
+        <State name="Normal">
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_commandcard_protossframe_highlighted.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_commandcard_terranframe_highlighted.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_commandcard_zergframe_highlighted.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_autocast_highlighted_war3.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_arcadecabinetpurple.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_cerberus.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_defaultprotoss.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_defaultterran.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_defaultzerg.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_forged.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_galactic.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_ihanrii.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_imperial.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_machined.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_mirasmarauders.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_nerazim.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_protohuman.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_purifier.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_simulant.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_specialforces.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_tyrador.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_highlighted_war3.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_commandcard_protossframe_superhighlighted.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_commandcard_terranframe_superhighlighted.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_commandcard_zergframe_superhighlighted.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_arcadecabinetpurple.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_cerberus.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_defaultprotoss.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_defaultterran.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_defaultzerg.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_forged.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_galactic.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_ihanrii.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_imperial.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_machined.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_mirasmarauders.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_nerazim.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_protohuman.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_purifier.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_simulant.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_specialforces.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_tyrador.dds" operator="NotEqual"/>
+            <When type="Property" frame="$this/GameButtonBorderImage" Texture="Assets\Textures\ui_console_commandbutton_superhighlighted_war3.dds" operator="NotEqual"/>
+        </State>
+        <State name="Highlight"/>
+    </StateGroup>
+
+    <StateGroup name="ClassicIconRacialTint">
+        <DefaultState val="Default"/>
+        <State name="ClassicTint">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="StateGroup" frame="DummyBox" ClassicIcon="True"/>
+            <When type="Property" frame="NormalImage" Desaturated="True"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="ffffff" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="128,128,128" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="77,77,77" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="118,73,235" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="118,73,230" operator="NotEqual"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DesaturationColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" Desaturated="True"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DesaturationColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" Desaturated="True"/>
+        </State>
+        <State name="Tint">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="StateGroup" frame="DummyBox" ClassicIcon="False"/>
+            <When type="Property" frame="NormalImage" Desaturated="True"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="ffffff" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="128,128,128" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="77,77,77" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="118,73,235" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="118,73,230" operator="NotEqual"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DesaturationColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" Desaturated="True"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DesaturationColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" Desaturated="True"/>
+        </State>
+        <State name="EnergyTint1">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="Property" frame="NormalImage" Desaturated="True"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="ffffff" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="128,128,128" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="77,77,77" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="118,73,235" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="118,73,230" operator="Equal"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DesaturationColor="#ClassicButtonIconColorEnergy"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" Desaturated="True"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DesaturationColor="#ClassicButtonIconColorEnergy"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" Desaturated="True"/>
+        </State>
+        <State name="EnergyTint2">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="Property" frame="NormalImage" Desaturated="True"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="ffffff" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="128,128,128" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="77,77,77" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="118,73,230" operator="NotEqual"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="118,73,235" operator="Equal"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DesaturationColor="#ClassicButtonIconColorEnergy"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" Desaturated="True"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DesaturationColor="#ClassicButtonIconColorEnergy"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" Desaturated="True"/>
+        </State>
+        <State name="Normal">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="StateGroup" frame="DummyBox" ClassicIcon="False"/>
+            <When type="Property" frame="NormalImage" Desaturated="False"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DesaturationColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" Desaturated="True"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DesaturationColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" Desaturated="True"/>
+        </State>
+        <State name="NormalActive">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="StateGroup" frame="DummyBox" ClassicIcon="False"/>
+            <When type="Property" frame="NormalImage" Desaturated="True"/>
+            <When type="Property" frame="NormalImage" DesaturationColor="ffffff"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DesaturationColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" Desaturated="True"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DesaturationColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" Desaturated="True"/>
+        </State>
+        <State name="Default"/>
+    </StateGroup>
+
+    <StateGroup name="ClassicIconTinting">
+        <DefaultState val="False"/>
+        <State name="EnergyTint">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="StateGroup" frame="DummyBox" ClassicIcon="True"/>
+            <When type="Property" frame="$ancestor[@type=CommandPanel]" Enabled="True"/>
+            <When type="Property" frame="NormalImage" Enabled="True"/>
+            <When type="StateGroup" ClassicIconRacialTint="Tint" operator="NotEqual"/>
+            <When type="StateGroup" ClassicIconRacialTint="ClassicTint" operator="NotEqual"/>
+            <When type="StateGroup" ClassicIconRacialTint="Normal" operator="NotEqual"/>
+            <When type="StateGroup" ClassicIconRacialTint="NormalActive" operator="NotEqual"/>
+            <When type="StateGroup" ClassicIconRacialTint="Default" operator="NotEqual"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" ColorAdjustMode="None"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" ColorAdjustMode="None"/>
+        </State>
+        <State name="TrueActiveCommand">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="StateGroup" frame="DummyBox" ClassicIcon="True"/>
+            <When type="StateGroup" ClassicIconState="Highlight"/>
+            <When type="Property" frame="$ancestor[@type=CommandPanel]" Enabled="True"/>
+            <When type="Property" frame="NormalImage" Enabled="True"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" ColorAdjustMode="Colorize"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" LightAdjustColor="###ClassicButtonIconColor"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DarkAdjustColor="###ClassicButtonIconColor_Clicked"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" ColorAdjustMode="Colorize"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" LightAdjustColor="###ClassicButtonIconColor"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DarkAdjustColor="###ClassicButtonIconColor_Clicked"/>
+        </State>
+        <State name="True">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="StateGroup" frame="DummyBox" ClassicIcon="True"/>
+            <When type="StateGroup" ClassicIconState="Normal"/>
+            <When type="Property" frame="$ancestor[@type=CommandPanel]" Enabled="True"/>
+            <When type="Property" frame="NormalImage" Enabled="True"/>
+            <When type="StateGroup" ClassicIconRacialTint="EnergyTint1" operator="NotEqual"/>
+            <When type="StateGroup" ClassicIconRacialTint="EnergyTint2" operator="NotEqual"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" ColorAdjustMode="Colorize"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" LightAdjustColor="###ClassicButtonIconColor"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DarkAdjustColor="###ClassicButtonIconColorDark"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" ColorAdjustMode="Colorize"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" LightAdjustColor="###ClassicButtonIconColor"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DarkAdjustColor="###ClassicButtonIconColorDark"/>
+        </State>
+        <State name="Disabled">
+            <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+            <When type="StateGroup" frame="DummyBox" ClassicIcon="True"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" ColorAdjustMode="Colorize"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" LightAdjustColor="128,128,128"/>
+            <Action type="SetProperty" frame="NormalImage_Classic" DarkAdjustColor="128,128,128"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" ColorAdjustMode="Colorize"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" LightAdjustColor="128,128,128"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" DarkAdjustColor="128,128,128"/>
+        </State>
+        <State name="False">
+            <Action type="SetProperty" frame="NormalImage_Classic" ColorAdjustMode="None"/>
+            <Action type="SetProperty" frame="HoverImage_Classic" ColorAdjustMode="None"/>
+        </State>
+    </StateGroup>
+
+    <Frame type="Image" name="NormalImage_ClassicTemplate">
+        <Anchor relative="$parent/NormalImage"/>
+        <Width val="{$parent/NormalImage/@Width}"/>
+        <Height val="{$parent/NormalImage/@Height}"/>
+        <Enabled val="{$parent/NormalImage/@Enabled}"/>
+        <LayerCount val="1"/>
+        <Texture val="{$parent/NormalImage/@Texture[0]}" layer="0"/>
+        <TextureType val="{$parent/NormalImage/@TextureType[0]}" layer="0"/>
+        <RenderPriority val="511"/>
+
+        <Visible val="False"/>
+
+        <StateGroup name="Visible">
+            <DefaultState val="Default"/>
+        
+            <State name="True">
+                <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                <When type="Property" frame="$parent" Hovering="False"/>
+                <When type="Property" frame="$parent/NormalImage" Texture="" index="0" operator="NotEqual"/>
+                <Action type="SetProperty" frame="$this" Visible="True"/>
+            </State>
+        
+            <State name="False">
+                <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                <When type="Property" frame="$parent" Hovering="False"/>
+                <When type="Property" frame="$parent/NormalImage" Texture="" index="0"/>
+                <Action type="SetProperty" frame="$this" Visible="False"/>
+            </State>
+
+            <State name="Default">
+                <Action type="SetState" frame="$this" group="ForceGroup" state="Default"/>
+            </State>
+        </StateGroup>
+
+        <StateGroup name="ForceGroup">
+            <DefaultState val="Default"/>
+            <State name="Set_0">
+                <Action type="SetProperty" frame="$parent/NormalImage" LayerAlpha="0" index="0"/>
+            </State>
+            <State name="Set_1">
+                <Action type="SetProperty" frame="$parent/NormalImage" LayerAlpha="0" index="0"/>
+            </State>
+            <State name="Default"/>
+        </StateGroup>
+
+        <Animation name="StateRepeat">
+            <Event event="OnShown" action="Reset,Play" frame="$this"/>
+            <Event event="OnHidden" action="Stop" frame="$this"/>
+            <Controller type="State" stateGroup="ForceGroup" end="Loop">
+                <Key type="Identifier" time="0" value="Set_0"/>
+                <Key type="Identifier" time="0" value="Set_1"/>
+            </Controller>
+        </Animation>
+
+    </Frame>
+
+    <Frame type="Image" name="HoverImage_ClassicTemplate">
+        <Anchor relative="$parent/HoverImage"/>
+        <Width val="{$parent/HoverImage/@Width}"/>
+        <Height val="{$parent/HoverImage/@Height}"/>
+        <Enabled val="{$parent/HoverImage/@Enabled}"/>
+        <LayerCount val="1"/>
+        <Texture val="{$parent/HoverImage/@Texture[0]}" layer="0"/>
+        <TextureType val="{$parent/HoverImage/@TextureType[0]}" layer="0"/>
+        <RenderPriority val="511"/>
+
+        <Visible val="False"/>
+        
+        <StateGroup name="Visible">
+            <DefaultState val="Default"/>
+        
+            <State name="True">
+                <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                <When type="Property" frame="$parent" Hovering="True"/>
+                <When type="Property" frame="$parent/HoverImage" Texture="" index="0" operator="NotEqual"/>
+                <Action type="SetProperty" frame="$this" Visible="True"/>
+            </State>
+            
+            <State name="False">
+                <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                <When type="Property" frame="$parent" Hovering="False"/>
+                <When type="Property" frame="$parent/HoverImage" Texture="" index="0"/>
+                <Action type="SetProperty" frame="$this" Visible="False"/>
+            </State>
+
+            <State name="Default">
+                <Action type="SetState" frame="$this" group="ForceGroup" state="Default"/>
+            </State>
+        </StateGroup>
+
+        <StateGroup name="ForceGroup">
+            <DefaultState val="Default"/>
+            <State name="Set_0">
+                <Action type="SetProperty" frame="$parent/HoverImage" LayerAlpha="0" index="0"/>
+            </State>
+            <State name="Set_1">
+                <Action type="SetProperty" frame="$parent/HoverImage" LayerAlpha="0" index="0"/>
+            </State>
+            <State name="Default"/>
+        </StateGroup>
+
+        <Animation name="StateRepeat">
+            <Event event="OnShown" action="Reset,Play" frame="$this"/>
+            <Event event="OnHidden" action="Stop" frame="$this"/>
+            <Controller type="State" stateGroup="ForceGroup" end="Loop">
+                <Key type="Identifier" time="0" value="Set_0"/>
+                <Key type="Identifier" time="0" value="Set_1"/>
+            </Controller>
+        </Animation>
+
+    </Frame>
+
+    <Frame type="InfoPanel" name="GameUI/UIContainer/ConsoleUIContainer/InfoPanel" file="GameUI">
+        <Frame type="UnitFrame" name="UnitFrame">
+            <StateGroup name="IsBWRace">
+                <DefaultState val="False"/>
+                <State name="BWPr">
+                    <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                    <When type="Property" frame="UnitRace" Text="BWPr"/>
+                </State>
+                <State name="BWTe">
+                    <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                    <When type="Property" frame="UnitRace" Text="BWTe"/>
+                </State>
+                <State name="BWZe">
+                    <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                    <When type="Property" frame="UnitRace" Text="BWZe"/>
+                </State>
+                <State name="False"/>
+            </StateGroup>
+        </Frame>
+    </Frame>
+
+    <Frame type="InfoPaneUnit" name="GameUI/UIContainer/ConsoleUIContainer/InfoPanel/InfoPaneUnit" file="GameUI">
+		<Frame type="CountdownLabel" name="IndexCounter">
+			<Anchor side="Top" relative="$parent" pos="Min" offset="0"/>
+			<Anchor side="Left" relative="$parent" pos="Min" offset="0"/>
+			<UseAlternateTime val="True"/>
+			<CountdownTime val="0"/>
+			<StartValue val="{$this/@CurrentValue}"/>
+			<TargetValue val="{Math/@ResultInt}"/>
+			<Style val="DebugTiny"/>
+			<CurrentValue val="0"/>
+			<Text val="0"/>
+			<Alpha val="0"/>
+
+			<Animation name="Counter">
+				<Event event="ItemAdded" action="Reset,Play" frame="$parent"/>
+				<Controller type="Counter" end="Pause" frame="$this">
+					<Key type="Curve" time="0.0" value="1.0"/>
+				</Controller>
+				<Controller type="Event" end="Stop" frame="$this">
+					<Key type="Event" time="0.0" event="CountdownLabelResetRequest"/>
+				</Controller>
+			</Animation>
+
+			<Animation name="Reset">
+                <Event event="OnHidden" action="Reset,Play" frame="$parent"/>
+				<Event event="ItemsCleared" action="Reset,Play" frame="$parent"/>
+                <Controller type="Property" end="Pause" frame="$this" property="CurrentValue">
+                    <Key type="Property" time="0.0" value="0"/>
+                </Controller>
+				<Controller type="Event" end="Stop" frame="$this">
+					<Key type="Event" time="0.001" event="CountdownLabelResetRequest"/>
+				</Controller>
+			</Animation>
+
+			<Frame type="MathFrame" name="Math">
+				<A val="{$parent/@StartValue}"/>
+				<B val="1"/>
+				<Operator val="Add"/>
+			</Frame>
+		</Frame>
+
+    </Frame>
+
+    <Frame type="EquipmentIcon" name="EquipmentIconTemplate" file="EquipmentIcon">
+        <LayerCount val="3"/>
+        <TextureType val="Normal" layer="2"/>
+
+        <Animation name="EquipmentVisible">
+            <Event event="OnShown" action="Reset,Play" frame="$parent"/>
+            <Controller type="Event" end="Stop" frame="$this">
+                <Key type="Event" time="0.0" event="ItemAdded"/>
+            </Controller>
+            <Controller type="Event" end="Stop" frame="$parent">
+                <Key type="Event" time="0.0" event="ItemAdded"/>
+            </Controller>
+        </Animation>
+
+        <!-- <StateGroup name="CooldownState">
+            <DefaultState val="NotActive"/>
+        
+            <State name="Active">
+                <When type="Property" frame="Test" Text="true" />
+                <Action type="SetProperty" LayerAlpha="50" index="2" />
+            </State>
+        
+            <State name="NotActive">
+                <When type="Property" frame="Test" Text="false"/>
+                <Action type="SetProperty" LayerAlpha="255" index="2" />
+            </State>
+        </StateGroup> -->
+        
+        <StateGroup name="ClassicIcon">
+            <DefaultState val="False"/>
+        
+            <State name="True">
+                <When type="StateGroup" frame="ClassicIconListenerBox" ClassicIcon="True"/>
+                <Action type="SetProperty" frame="$this" TextureCoords="-0.07,-0.07,1.07,1.07"/>
+            </State>
+        
+            <State name="False">
+                <Action type="SetProperty" frame="$this" TextureCoords="0,0,1,1"/>
+            </State>
+        </StateGroup>
+        
+        <!-- <StateGroup name="ClassicTint">
+            <DefaultState val="False"/>
+
+            <State name="True">
+                <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                <When type="StateGroup" frame="$this" ClassicIcon="False"/>
+                <Action type="SetProperty" frame="$this" DesaturationColor="###ClassicButtonIconColor"/>
+                <Action type="SetProperty" frame="$this" Desaturated="True"/>
+            </State>
+        
+            <State name="False"/>
+        </StateGroup> -->
+
+		<Frame type="CountdownLabel" name="EquipmentIndex">
+            <Anchor relative="$parent"/>
+			<UseAlternateTime val="True"/>
+			<CountdownTime val="0"/>
+			<StartValue val="{$this/@CurrentValue}"/>
+			<TargetValue val="{Math/@ResultInt}"/>
+			<Style val="DebugTiny"/>
+			<CurrentValue val="1"/>
+			<Text val="0"/>
+			<Alpha val="0"/>
+
+			<Animation name="Counter">
+				<Event event="ItemAdded" action="Reset,Play" frame="$parent"/>
+				<Controller type="Counter" end="Pause" frame="$this">
+					<Key type="Curve" time="0.0" value="1.0"/>
+				</Controller>
+				<Controller type="Event" end="Stop" frame="$this">
+					<Key type="Event" time="0.0" event="CountdownLabelResetRequest"/>
+				</Controller>
+			</Animation>
+
+			<Animation name="Reset">
+                <Event event="OnHidden" action="Reset,Play" frame="$parent/$parent"/>
+				<Event event="ItemsCleared" action="Reset,Play" frame="$parent"/>
+                <Controller type="Property" end="Pause" frame="$this" property="CurrentValue">
+                    <Key type="Property" time="0.0" value="0"/>
+                </Controller>
+				<Controller type="Event" end="Stop" frame="$this">
+					<Key type="Event" time="0.01" event="CountdownLabelResetRequest"/>
+				</Controller>
+			</Animation>
+
+			<Frame type="MathFrame" name="Math">
+				<A val="{$parent/$parent/$parent/IndexCounter/@CurrentValue}"/>
+				<B val="1"/>
+				<Operator val="Subtract"/>
+			</Frame>
+		</Frame>
+
+        <StateGroup name="ClassicIconIndex" template="SCBW_ClassicIconsPaths/ClassicIconIndexTemplate"/>
+        <StateGroup name="ClassicIconSwap" template="SCBW_ClassicIconsPaths/ClassicIconSwapTemplate"/>
+
+        <Frame type="EditBox" name="IconListener" template="SCBW_ClassicIcons/ListenerBoxTemplate">
+            <Text val="{$parent/@Texture}"/>
+        </Frame>
+
+        <Frame type="EditBox" name="ClassicIconListenerBox" template="SCBW_ClassicIcons/ListenerBoxTemplate">
+            <MaxCharacters val="29"/>
+            <Text val="{$parent/@Texture[2]}"/>
+            <StateGroup name="ClassicIcon" template="SCBW_ClassicIcons/ClassicIcon"/>
+        </Frame>
+
+        <Frame type="MathFrame" name="IconIndex">
+            <A val="-1"/>
+        </Frame>
+
+
+    </Frame>
+
+    <Frame type="Image" name="AlertItemTemplate/AlertIcon" file="AlertPanel">
+        <StateGroup name="ClassicIconTinting">
+            <DefaultState val="False"/>
+            <State name="True">
+                <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                <When type="StateGroup" frame="DummyBox" ClassicIcon="True"/>
+                <When type="Property" frame="$ancestor[@type=AlertPanel]" Enabled="true"/>
+                <Action type="SetProperty" frame="$this" Desaturated="False"/>
+                <Action type="SetProperty" frame="$this" ColorAdjustMode="Colorize"/>
+                <Action type="SetProperty" frame="$this" LightAdjustColor="###ClassicButtonIconColor"/>
+                <Action type="SetProperty" frame="$this" DarkAdjustColor="###ClassicButtonIconColorDark"/>
+            </State>
+            
+            <State name="False">
+                <Action type="SetProperty" frame="$this" ColorAdjustMode="None"/>
+                <Action type="SetProperty" frame="$this" Desaturated="True"/>
+            </State>
+        </StateGroup>
+
+        <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ListenerBoxTemplate">
+            <MaxCharacters val="29"/>
+            <Text val="{$parent/@Texture}"/>
+            <StateGroup name="ClassicIcon" template="SCBW_ClassicIcons/ClassicIcon"/>
+        </Frame>
+    </Frame>
+
+    <Frame type="QueueButton" name="QueueButtonTemplate">
+        <Frame type="Image" name="NormalImage">
+            <AdjustmentColor val="0,255,255,255"/>
+            <ColorAdjustMode val="None"/>
+
+            <Desaturated val="False"/>
+            <DesaturationColor val="###ClassicButtonIconColorDark"/>
+
+            <StateGroup name="ClassicIconTinting">
+                <DefaultState val="False"/>
+                <State name="True">
+                    <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                    <When type="Property" frame="$ancestor[@type=InfoPanel]" Enabled="True"/>
+                    <Action type="SendEvent" frame="$this" event="Adjust" on="Enter" undo="False"/>
+                </State>
+                <State name="Disabled">
+                    <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                    <When type="Property" frame="$ancestor[@type=InfoPanel]" Enabled="False"/>
+                    <Action type="SendEvent" frame="$this" event="Desaturate" on="Enter" undo="False"/>
+                </State>
+                <State name="False">
+                    <Action type="SendEvent" frame="$this" event="Stop" on="Enter" undo="False"/>
+                </State>
+            </StateGroup>
+
+            <Animation name="ColorAdjustment">
+                <Event event="Stop" action="Stop" frame="$this"/>
+                <Event event="Adjust" action="Reset,Play" frame="$this"/>
+                <Controller type="Property" end="Pause" frame="$this" property="ColorAdjustMode">
+                    <Key type="Property" time="0.0" value="Colorize"/>
+                </Controller>
+                <Controller type="AdjustmentColor" end="Pause" frame="$this">
+                    <Key type="Curve" time="0.0" value="###ClassicButtonIconColorDarker"/>
+                </Controller>
+                <Controller type="Desaturation" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.0" value="True"/>
+                </Controller>
+            </Animation>
+
+            <Animation name="Desaturated">
+                <Event event="Stop" action="Stop" frame="$this"/>
+                <Event event="Desaturate" action="Reset,Play" frame="$this"/>
+                <Controller type="Property" end="Pause" frame="$this" property="ColorAdjustMode">
+                    <Key type="Property" time="0.0" value="Colorize"/>
+                </Controller>
+                <Controller type="AdjustmentColor" end="Pause" frame="$this">
+                    <Key type="Curve" time="0.0" value="85,85,85"/>
+                </Controller>
+                <Controller type="Desaturation" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.0" value="True"/>
+                </Controller>
+            </Animation>
+
+            <Animation name="ClearAdjustment">
+                <Event event="Stop" action="Play" frame="$this"/>
+                <Controller type="Property" end="Pause" frame="$this" property="ColorAdjustMode">
+                    <Key type="Property" time="0.0" value="None"/>
+                </Controller>
+                <Controller type="AdjustmentColor" end="Pause" frame="$this">
+                    <Key type="Curve" time="0.0" value="0,255,255,255"/>
+                </Controller>
+                <Controller type="Desaturation" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.0" value="False"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+        <Frame type="Image" name="HoverImage">
+            <AdjustmentColor val="0,255,255,255"/>
+            <ColorAdjustMode val="None"/>
+
+            <Desaturated val="False"/>
+            <DesaturationColor val="###ClassicButtonIconColorDark"/>
+
+            <StateGroup name="ClassicIconTinting">
+                <DefaultState val="False"/>
+                <State name="True">
+                    <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                    <When type="Property" frame="$ancestor[@type=InfoPanel]" Enabled="True"/>
+                    <Action type="SendEvent" frame="$this" event="Adjust" on="Enter" undo="False"/>
+                </State>
+                <State name="Disabled">
+                    <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                    <When type="Property" frame="$ancestor[@type=InfoPanel]" Enabled="False"/>
+                    <Action type="SendEvent" frame="$this" event="Desaturate" on="Enter" undo="False"/>
+                </State>
+                <State name="False">
+                    <Action type="SendEvent" frame="$this" event="Stop" on="Enter" undo="False"/>
+                </State>
+            </StateGroup>
+
+            <Animation name="ColorAdjustment">
+                <Event event="Stop" action="Stop" frame="$this"/>
+                <Event event="Adjust" action="Reset,Play" frame="$this"/>
+                <Controller type="Property" end="Pause" frame="$this" property="ColorAdjustMode">
+                    <Key type="Property" time="0.0" value="Colorize"/>
+                </Controller>
+                <Controller type="AdjustmentColor" end="Pause" frame="$this">
+                    <Key type="Curve" time="0.0" value="###ClassicButtonIconColorDarker"/>
+                </Controller>
+                <Controller type="Desaturation" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.0" value="True"/>
+                </Controller>
+            </Animation>
+
+            <Animation name="Desaturated">
+                <Event event="Stop" action="Stop" frame="$this"/>
+                <Event event="Desaturate" action="Reset,Play" frame="$this"/>
+                <Controller type="Property" end="Pause" frame="$this" property="ColorAdjustMode">
+                    <Key type="Property" time="0.0" value="Colorize"/>
+                </Controller>
+                <Controller type="AdjustmentColor" end="Pause" frame="$this">
+                    <Key type="Curve" time="0.0" value="85,85,85"/>
+                </Controller>
+                <Controller type="Desaturation" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.0" value="True"/>
+                </Controller>
+            </Animation>
+
+            <Animation name="ClearAdjustment">
+                <Event event="Stop" action="Play" frame="$this"/>
+                <Controller type="Property" end="Pause" frame="$this" property="ColorAdjustMode">
+                    <Key type="Property" time="0.0" value="None"/>
+                </Controller>
+                <Controller type="AdjustmentColor" end="Pause" frame="$this">
+                    <Key type="Curve" time="0.0" value="0,255,255,255"/>
+                </Controller>
+                <Controller type="Desaturation" end="Pause" frame="$this">
+                    <Key type="Bool" time="0.0" value="False"/>
+                </Controller>
+            </Animation>
+        </Frame>
+
+
+    </Frame>
+
+    <!-- GAME UI -->
+    <Frame type="Frame" name="GameUI/UIContainer/ConsoleUIContainer/InfoPanel/InfoPaneQueue/QueuePanel" file="GameUI">
+        <Frame type="ActiveQueuePanel" name="ActiveQueuePanel00">
+            <Frame type="QueueButton" name="QueueButton" template="SCBW_ClassicIcons/QueueButtonTemplate"/>
+        </Frame>
+        <Frame type="ActiveQueuePanel" name="ActiveQueuePanel01">
+            <Frame type="QueueButton" name="QueueButton" template="SCBW_ClassicIcons/QueueButtonTemplate"/>
+        </Frame>
+        <Frame type="QueueButton" name="QueueButton00" template="SCBW_ClassicIcons/QueueButtonTemplate"/>
+        <Frame type="QueueButton" name="QueueButton01" template="SCBW_ClassicIcons/QueueButtonTemplate"/>
+        <Frame type="QueueButton" name="QueueButton02" template="SCBW_ClassicIcons/QueueButtonTemplate"/>
+        <Frame type="QueueButton" name="QueueButton03" template="SCBW_ClassicIcons/QueueButtonTemplate"/>
+        <Frame type="QueueButton" name="QueueButton04" template="SCBW_ClassicIcons/QueueButtonTemplate"/>
+        <Frame type="QueueButton" name="QueueButton05" template="SCBW_ClassicIcons/QueueButtonTemplate"/>
+    </Frame>
+
+    <Frame type="CommandPanel" name="GameUI/UIContainer/ConsoleUIContainer/CommandPanel" file="GameUI">
+        <Frame type="CommandButton" name="CommandButton00">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton01">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton02">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton03">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton04">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton05">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton06">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton07">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton08">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton09">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton10">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton11">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton12">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton13">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="CommandButton" name="CommandButton14">
+            <StateGroup name="ClassicIconRacialTint" template="SCBW_ClassicIcons/ClassicIconRacialTint"/>
+            <StateGroup name="ClassicIconState" template="SCBW_ClassicIcons/ClassicIconState"/>
+            <StateGroup name="ClassicIconTinting" template="SCBW_ClassicIcons/ClassicIconTinting"/>
+            <Frame type="Image" name="NormalImage_Classic" template="SCBW_ClassicIcons/NormalImage_ClassicTemplate"/>
+            <Frame type="Image" name="HoverImage_Classic" template="SCBW_ClassicIcons/HoverImage_ClassicTemplate"/>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate"/>
+        </Frame>
+        <Frame type="Image" name="CommandTargetImage">
+            <StateGroup name="ClassicIconRacialTint">
+                <DefaultState val="False"/>
+                <State name="True">
+                    <When type="StateGroup" frame="$ancestor[@name=UIContainer]" UseClassicIcons="True"/>
+                    <Action type="SetProperty" frame="$this" DesaturationColor="###ClassicButtonIconColorDark"/>
+                    <Action type="SetProperty" frame="$this" Desaturated="True"/>
+                </State>
+                <State name="False">
+                    
+                </State>
+            </StateGroup>
+        
+            <StateGroup name="ClassicIconTinting">
+                <DefaultState val="False"/>
+                <State name="True">
+                    <When type="StateGroup" frame="DummyBox" ClassicIcon="True"/>
+                    <When type="Property" frame="$parent" Enabled="true"/>
+                    <Action type="SetProperty" frame="$this" ColorAdjustMode="Colorize"/>
+                    <Action type="SetProperty" frame="$this" LightAdjustColor="###ClassicButtonIconColor"/>
+                    <Action type="SetProperty" frame="$this" DarkAdjustColor="###ClassicButtonIconColorDark"/>
+                </State>
+                <State name="False">
+                    <Action type="SetProperty" frame="$this" ColorAdjustMode="None"/>
+                </State>
+            </StateGroup>
+            <Frame type="EditBox" name="DummyBox" template="SCBW_ClassicIcons/ClassicIconListenerBoxTemplate">
+                <Text val="{$parent/@Texture}"/>
+            </Frame>
+        </Frame>
+    </Frame>
+
+    <Frame type="Frame" name="GameUI/UIContainer" file="GameUI">
+        <StateGroup name="UseClassicIcons">
+            <DefaultState val="False"/>
+            <State name="True">
+                <When type="AnimationState" frame="$this" UseClassicIcons="True"/>
+                <When type="Property" frame="$this/FullscreenUpperContainer/ObserverPreviewFrame" Visible="False"/>
+            </State>
+            <State name="False"/>
+        </StateGroup>
+    </Frame>
+</Desc>
